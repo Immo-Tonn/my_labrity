@@ -1,0 +1,59 @@
+[
+  {
+    "_id": "1",
+    "title": "Classic Massage",
+    "location": "60 minutes • 100 €",
+    "card": [
+      {
+        "subtitle": "Deep relaxation for the whole body",
+        "description": "Relieves muscle tension and helps the body regain new energy."
+      },
+      {
+        "subtitle": "Improves blood circulation",
+        "description": "Supports metabolism and activates the body's natural regeneration."
+      },
+      {
+        "subtitle": "Reduces stress and restores balance",
+        "description": "Brings body and mind back into harmony and creates a sense of inner well-being."
+      }
+    ]
+  },
+  {
+    "_id": "2",
+    "title": "Back and Neck Massage",
+    "location": "60 minutes • 100 €",
+    "card": [
+      {
+        "subtitle": "Relief from back and neck pain",
+        "description": "Targeted massage releases tension in heavily strained muscle groups."
+      },
+      {
+        "subtitle": "Relaxation after long sitting",
+        "description": "Ideal for people with office work or physical strain."
+      },
+      {
+        "subtitle": "Improves mobility and posture",
+        "description": "Relaxes tight muscles and supports healthy body posture."
+      }
+    ]
+  },
+  {
+    "_id": "3",
+    "title": "Aroma Massage",
+    "location": "60 minutes • 110 €",
+    "card": [
+      {
+        "subtitle": "Deep relaxation with essential oils",
+        "description": "Warm aromatic oils help relax both body and mind."
+      },
+      {
+        "subtitle": "Holistic well-being",
+        "description": "Calms the nervous system and restores new energy."
+      },
+      {
+        "subtitle": "Gentle regeneration",
+        "description": "Perfect for recovery after stressful days and intense workload."
+      }
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+/* HERO SECTION — Чистая версия без анимаций, свечений, бликов */
+
+/* Основной контейнер */
+.section_hero {
+  position: relative;
+  padding-top: 78px;
+  padding-bottom: 278px;
+  overflow: visible;
+}
+
+/* --- Удалены: ::before, ::after, свечения, виньетки, золотая дымка, маски --- */
+/* --- Файл теперь полностью безопасен и ничего не перекрывает --- */
+
+/* Адаптивные отступы */
+@media screen and (min-width: 480px) {
+  .section_hero {
+    padding-bottom: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section_hero {
+    padding-bottom: 475px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section_hero {
+    padding-bottom: 500px;
+  }
+}

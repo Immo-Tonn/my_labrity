@@ -1,0 +1,104 @@
+{
+  "_comment_metadataAdmin": "SEO для админ-панели — поменяй на название проекта",
+  "metadataAdmin": {
+    "title": "Адмін-панель — Назва проєкту",
+    "description": "Адміністративна панель для цього сайту"
+  },
+
+  "_comment_layout": "Логотип, подписи и текст для хедера/футера",
+  "layout": {
+    "_comment_logo_label": "Название бренда или твоё имя",
+    "logo": {
+      "label": "Company Name",
+      "_comment_logo_subtitle": "Твоя профессия или роль",
+      "preloaderSubtitle": "Спеціаліст"
+    },
+
+    "aria-label": {
+      "burger": "Відкрити меню",
+      "btnClose": "Закрити меню"
+    },
+
+    "titles": {
+      "_comment_services": "Заголовок блока услуг",
+      "services": "Наші послуги"
+    },
+
+    "_comment_footer": "Надпись в футере (бренд студии)",
+    "footer": {
+      "web": "Сайт створено Labrity"
+    }
+  },
+
+  "_comment_buttonsText": "Все кнопки на сайте. Можно менять тексты.",
+  "buttonsText": {
+    "v1": "Записатися",
+    "v2": "Записатися",
+    "v3": "Надіслати"
+  },
+
+  "_comment_contactsHref": "Куда ведёт кнопка 'Записатися' в Hero",
+  "btnContactsHref": "#contacts",
+
+  "_comment_socials": "Ссылки на соцсети — поставь '#' если нет данных",
+  "socials": [
+    {
+      "name": "telegram",
+      "path": "#",
+      "ariaLabel": "відкрити Telegram"
+    },
+    {
+      "name": "instagram",
+      "path": "#",
+      "ariaLabel": "відкрити Instagram"
+    },
+    {
+      "name": "facebook",
+      "path": "#",
+      "ariaLabel": "відкрити Facebook"
+    }
+  ],
+
+  "_comment_notifications": "Тексты уведомлений формы",
+  "notification": {
+    "error": {
+      "title": "Упс...",
+      "text": "Ваші дані не були надіслані. Спробуйте ще раз пізніше."
+    },
+    "success": {
+      "title": "Дякуємо!",
+      "text": "Ваш запит успішно надіслано. Ми зв’яжемося з вами найближчим часом."
+    }
+  },
+
+  "modal": {
+    "ariaLabel": "закрити модальне вікно"
+  },
+
+  "_comment_questionsSection": "Блок 'Вопросы, с которыми работаем'",
+  "questionsSection": {
+    "title": {
+      "label1": "Питання",
+      "label2": "з якими ми працюємо"
+    },
+    "description": "Ми допомагаємо вам розвиватися та підтримуємо у різних сферах життя.",
+    "ariaLabel": "наступний слайд"
+  },
+
+  "_comment_footerPolicy": "Ссылка на политику конфиденциальности",
+  "footerLabelPolicy": "Політика конфіденційності",
+  "footerLabelImpressum": "Impressum",
+  "_comment_footerLinks": "Ссылки на партнёров (можно менять)",
+  "footer": [
+    {
+      "name": "company1",
+      "path": "#",
+      "ariaLabel": "посилання на сайт партнера"
+    },
+    {
+      "name": "company2",
+      "path": "#",
+      "ariaLabel": "посилання на сайт партнера"
+    }
+  ]
+}

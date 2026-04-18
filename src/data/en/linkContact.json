@@ -1,0 +1,14 @@
+[
+  {
+    "name": "phone",
+    "label": "+49 176 12345678",
+    "href": "tel:+4917612345678",
+    "ariaLabel": "Phone icon"
+  },
+  {
+    "name": "mail",
+    "label": "contact@massage-studio.com",
+    "href": "mailto:contact@massage-studio.com",
+    "ariaLabel": "Email icon"
+  }
+]

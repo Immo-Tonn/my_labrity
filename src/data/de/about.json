@@ -1,0 +1,28 @@
+{
+  "titleText": "Ich bin zertifizierter Massagetherapeut für exklusive Entspannung und ganzheitliches Wohlbefinden.",
+  "image": "/images/desktop/about-desk.webp",
+  "alt": "Professioneller Massagetherapeut bei der Behandlung eines Kunden",
+
+  "services": [
+    {
+      "id": 1,
+      "description1": "Tiefe Entspannung. ",
+      "description2": "Meine Behandlungen helfen Ihnen, Stress abzubauen, Verspannungen zu lösen und neue Energie zu gewinnen."
+    },
+    {
+      "id": 2,
+      "description1": "Individuelle Massage. ",
+      "description2": "Jede Sitzung wird speziell auf Ihre Bedürfnisse abgestimmt, um maximale Wirkung und Erholung zu erzielen."
+    },
+    {
+      "id": 3,
+      "description1": "Professionelle Techniken. ",
+      "description2": "Durch moderne Massage- und Wellnessmethoden sorge ich für nachhaltige Entspannung und Regeneration."
+    },
+    {
+      "id": 4,
+      "description1": "Exklusive Atmosphäre. ",
+      "description2": "Ein ruhiger Raum, hochwertige Öle und eine entspannende Umgebung schaffen ein luxuriöses Erlebnis."
+    }
+  ]
+}

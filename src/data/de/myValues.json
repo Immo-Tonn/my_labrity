@@ -1,0 +1,23 @@
+{
+  "title": "Meine Prinzipien",
+  "values": [
+    {
+      "id": 1,
+      "name": "lock",
+      "subTitle": "Vertrauen & Diskretion",
+      "description": "Ihre Privatsphäre und Ihr Wohlbefinden stehen bei jeder Behandlung im Mittelpunkt. Alle Massagen finden in einer ruhigen und vertrauensvollen Atmosphäre statt."
+    },
+    {
+      "id": 2,
+      "name": "meeting",
+      "subTitle": "Individuelle Behandlung",
+      "description": "Jede Massage wird individuell auf Ihre Bedürfnisse abgestimmt. Ziel ist es, Verspannungen gezielt zu lösen und Körper sowie Geist wieder in Balance zu bringen."
+    },
+    {
+      "id": 3,
+      "name": "flower",
+      "subTitle": "Qualität & Entspannung",
+      "description": "Professionelle Techniken, hochwertige Massageöle und eine entspannende Umgebung sorgen für tiefe Regeneration und ein exklusives Massageerlebnis."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+[
+  {
+    "_id": "1",
+    "title": "Klassische Massage",
+    "location": "60 Minuten • 100 €",
+    "card": [
+      {
+        "subtitle": "Tiefe Entspannung für den gesamten Körper",
+        "description": "Löst Muskelverspannungen und hilft dem Körper, neue Energie zu gewinnen."
+      },
+      {
+        "subtitle": "Fördert die Durchblutung",
+        "description": "Unterstützt den Stoffwechsel und aktiviert die natürliche Regeneration."
+      },
+      {
+        "subtitle": "Reduziert Stress und bringt Balance",
+        "description": "Bringt Körper und Geist wieder ins Gleichgewicht und sorgt für inneres Wohlbefinden."
+      }
+    ]
+  },
+  {
+    "_id": "2",
+    "title": "Rücken- und Nackenmassage",
+    "location": "60 Minuten • 100 €",
+    "card": [
+      {
+        "subtitle": "Linderung von Rücken- und Nackenschmerzen",
+        "description": "Gezielte Massage löst Verspannungen in belasteten Muskelgruppen."
+      },
+      {
+        "subtitle": "Entspannung nach langem Sitzen",
+        "description": "Ideal für Menschen mit Büroarbeit oder körperlicher Belastung."
+      },
+      {
+        "subtitle": "Verbessert Beweglichkeit und Haltung",
+        "description": "Lockert verspannte Muskeln und unterstützt eine gesunde Körperhaltung."
+      }
+    ]
+  },
+  {
+    "_id": "3",
+    "title": "Aromamassage",
+    "location": "60 Minuten • 110 €",
+    "card": [
+      {
+        "subtitle": "Tiefe Entspannung mit ätherischen Ölen",
+        "description": "Warme aromatische Öle fördern die Entspannung von Körper und Geist."
+      },
+      {
+        "subtitle": "Ganzheitliches Wohlbefinden",
+        "description": "Wirkt beruhigend auf das Nervensystem und schenkt neue Energie."
+      },
+      {
+        "subtitle": "Sanfte Regeneration",
+        "description": "Perfekt zur Erholung nach stressigen Tagen und intensiver Belastung."
+      }
+    ]
+  }
+]

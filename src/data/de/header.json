@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "href": "#about",
+    "title": "Über mich"
+  },
+  {
+    "id": 2,
+    "href": "#services",
+    "title": "Leistungen"
+  },
+  {
+    "id": 3,
+    "href": "#contacts",
+    "title": "Kontakt"
+  }
+]
