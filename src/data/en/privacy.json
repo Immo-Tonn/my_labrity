@@ -1,0 +1,132 @@
+[
+  {
+    "_id": "1",
+    "title": "Controller",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "The controller responsible for this website is Labrity. The complete contact details will be provided in the legal notice of this website."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "2",
+    "title": "General information",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Protecting your personal data is important to us. We process personal data only when it is necessary for operating the website, communicating with you or handling your request."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "3",
+    "title": "Hosting via Vercel",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "This website is hosted via Vercel. When you visit the website, technical access data such as IP address, date, time, browser information and visited pages may be processed to provide the website securely and reliably."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "4",
+    "title": "Contact form",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "When you contact us through the contact form, we process the data you enter only to handle your request and communicate with you."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "5",
+    "title": "Forwarding to Telegram",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Requests from the contact form may be forwarded to Telegram so that we can respond to your message quickly. Please do not send highly sensitive data through the contact form."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "6",
+    "title": "Legal basis",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Depending on the purpose, processing is based on Art. 6(1)(b) GDPR for handling pre-contractual requests or on Art. 6(1)(f) GDPR due to our legitimate interest in the secure and functional operation of the website."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "7",
+    "title": "Cookies and analytics",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "We currently do not use analytics or marketing cookies. If cookies, tracking tools or a cookie banner are added later, this privacy policy will be updated accordingly."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "8",
+    "title": "Storage period",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Personal data is stored only for as long as necessary to handle your request or as required by legal retention obligations."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "9",
+    "title": "Your rights",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "You have the right to access, correction, deletion, restriction of processing, data portability and the right to object to the processing of your personal data."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "10",
+    "title": "Privacy contact",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "If you have any questions about data protection, you can contact us at any time using the contact details provided in the legal notice."
+          }
+        ]
+      }
+    ]
+  }
+]

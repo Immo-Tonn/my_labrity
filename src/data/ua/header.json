@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "href": "#about",
-    "title": "Про мене"
+    "href": "/#portfolio",
+    "title": "Портфоліо"
   },
   {
     "id": 2,
-    "href": "#services",
+    "href": "/#services",
     "title": "Послуги"
   },
   {
     "id": 3,
-    "href": "#contacts",
+    "href": "/contact",
     "title": "Контакти"
   }
 ]

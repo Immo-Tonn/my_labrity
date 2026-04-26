@@ -1,0 +1,132 @@
+[
+  {
+    "_id": "1",
+    "title": "Verantwortlicher",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Verantwortlich für diese Website ist Labrity. Die vollständigen Kontaktdaten werden im Impressum dieser Website angegeben."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "2",
+    "title": "Allgemeine Hinweise",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Der Schutz Ihrer persönlichen Daten ist uns wichtig. Wir verarbeiten personenbezogene Daten nur, soweit dies für den Betrieb der Website, die Kommunikation mit Ihnen oder die Bearbeitung Ihrer Anfrage erforderlich ist."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "3",
+    "title": "Hosting über Vercel",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Diese Website wird über Vercel gehostet. Beim Besuch der Website können technische Zugriffsdaten wie IP-Adresse, Datum, Uhrzeit, Browserinformationen und aufgerufene Seiten verarbeitet werden, um die Website sicher und zuverlässig bereitzustellen."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "4",
+    "title": "Kontaktformular",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Wenn Sie uns über das Kontaktformular kontaktieren, verarbeiten wir die von Ihnen eingegebenen Daten ausschließlich zur Bearbeitung Ihrer Anfrage und zur Kommunikation mit Ihnen."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "5",
+    "title": "Übermittlung an Telegram",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Anfragen aus dem Kontaktformular können an Telegram weitergeleitet werden, damit wir schnell auf Ihre Nachricht reagieren können. Bitte senden Sie über das Kontaktformular keine besonders sensiblen Daten."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "6",
+    "title": "Rechtsgrundlage",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Die Verarbeitung erfolgt je nach Zweck auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO zur Bearbeitung vorvertraglicher Anfragen oder auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO aufgrund unseres berechtigten Interesses an einem sicheren und funktionalen Betrieb der Website."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "7",
+    "title": "Cookies und Analyse",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Derzeit verwenden wir keine Analyse- oder Marketing-Cookies. Falls später Cookies, Tracking-Tools oder ein Cookie-Banner integriert werden, wird diese Datenschutzerklärung entsprechend aktualisiert."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "8",
+    "title": "Speicherdauer",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Personenbezogene Daten werden nur so lange gespeichert, wie es für die Bearbeitung Ihrer Anfrage erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "9",
+    "title": "Ihre Rechte",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie das Recht, der Verarbeitung Ihrer personenbezogenen Daten zu widersprechen."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "10",
+    "title": "Kontakt zum Datenschutz",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Bei Fragen zum Datenschutz können Sie uns jederzeit über die im Impressum angegebenen Kontaktdaten erreichen."
+          }
+        ]
+      }
+    ]
+  }
+]

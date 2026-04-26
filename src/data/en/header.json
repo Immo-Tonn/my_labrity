@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "href": "#about",
-    "title": "About"
+    "href": "/#portfolio",
+    "title": "Work"
   },
   {
     "id": 2,
-    "href": "#services",
+    "href": "/#services",
     "title": "Services"
   },
   {
     "id": 3,
-    "href": "#contacts",
+    "href": "/contact",
     "title": "Contact"
   }
 ]

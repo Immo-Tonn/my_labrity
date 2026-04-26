@@ -1,46 +1,30 @@
 {
-  "_comment_metadataAdmin": "SEO для админ-панели — поменяй на название проекта",
   "metadataAdmin": {
-    "title": "Admin-Panel — Projektname",
-    "description": "Adminbereich für diese Website"
+    "title": "Admin-Panel — Labrity",
+    "description": "Adminbereich für die Labrity Website"
   },
-
-  "_comment_layout": "Логотип, подписи и текст для хедера/футера",
   "layout": {
-    "_comment_logo_label": "Название бренда или твоё имя",
     "logo": {
-      "label": "Company Name",
-      "_comment_logo_subtitle": "Твоя профессия или роль",
-      "preloaderSubtitle": "Spezialist"
+      "label": "Labrity",
+      "preloaderSubtitle": "Premium Web Studio"
     },
-
     "aria-label": {
       "burger": "Menü öffnen",
       "btnClose": "Menü schließen"
     },
-
     "titles": {
-      "_comment_services": "Заголовок блока услуг",
       "services": "Unsere Leistungen"
     },
-
-    "_comment_footer": "Надпись в футере (бренд студии)",
     "footer": {
       "web": "Website von Labrity"
     }
   },
-
-  "_comment_buttonsText": "Все кнопки на сайте. Можно менять тексты.",
   "buttonsText": {
-    "v1": "Termin anfragen",
-    "v2": "Termin anfragen",
+    "v1": "Projekt starten",
+    "v2": "Portfolio ansehen",
     "v3": "Senden"
   },
-
-  "_comment_contactsHref": "Куда ведёт кнопка 'Записатися' в Hero",
-  "btnContactsHref": "#contacts",
-
-  "_comment_socials": "Ссылки на соцсети — поставь '#' если нет данных",
+  "btnContactsHref": "/contact",
   "socials": [
     {
       "name": "telegram",
@@ -58,8 +42,6 @@
       "ariaLabel": "Facebook öffnen"
     }
   ],
-
-  "_comment_notifications": "Тексты уведомлений формы",
   "notification": {
     "error": {
       "title": "Oops...",
@@ -70,26 +52,11 @@
       "text": "Ihre Anfrage wurde erfolgreich gesendet. Wir melden uns bald bei Ihnen."
     }
   },
-
   "modal": {
     "ariaLabel": "Modalfenster schließen"
   },
-
-  "_comment_questionsSection": "Блок 'Вопросы, с которыми работаем'",
-  "questionsSection": {
-    "title": {
-      "label1": "Fragen",
-      "label2": "mit denen wir arbeiten"
-    },
-    "description": "Wir helfen Ihnen, sich zu entwickeln und unterstützen Sie in verschiedenen Lebensbereichen.",
-    "ariaLabel": "nächste Folie"
-  },
-
-  "_comment_footerPolicy": "Ссылка на политику конфиденциальности",
   "footerLabelPolicy": "Datenschutz",
   "footerLabelImpressum": "Impressum",
-
-  "_comment_footerLinks": "Ссылки на партнёров (можно менять)",
   "footer": [
     {
       "name": "company1",

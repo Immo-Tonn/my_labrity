@@ -1,65 +1,47 @@
 {
-  "_comment_metadataAdmin": "SEO для админ-панели — поменяй на название проекта",
   "metadataAdmin": {
-    "title": "Admin Panel — Project Name",
-    "description": "Admin panel for this website"
+    "title": "Admin Panel — Labrity",
+    "description": "Admin area for the Labrity website"
   },
-
-  "_comment_layout": "Логотип, подписи и текст для хедера/футера",
   "layout": {
-    "_comment_logo_label": "Название бренда или твоё имя",
     "logo": {
-      "label": "Company Name",
-      "_comment_logo_subtitle": "Твоя профессия или роль",
-      "preloaderSubtitle": "Massage Specialist"
+      "label": "Labrity",
+      "preloaderSubtitle": "Premium Web Studio"
     },
-
     "aria-label": {
       "burger": "Open menu",
       "btnClose": "Close menu"
     },
-
     "titles": {
-      "_comment_services": "Заголовок блока услуг",
       "services": "Our Services"
     },
-
-    "_comment_footer": "Надпись в футере (бренд студии)",
     "footer": {
       "web": "Website by Labrity"
     }
   },
-
-  "_comment_buttonsText": "Все кнопки на сайте. Можно менять тексты.",
   "buttonsText": {
-    "v1": "Book appointment",
-    "v2": "Book appointment",
+    "v1": "Start Project",
+    "v2": "View Portfolio",
     "v3": "Send"
   },
-
-  "_comment_contactsHref": "Куда ведёт кнопка 'Записатися' в Hero",
-  "btnContactsHref": "#contacts",
-
-  "_comment_socials": "Ссылки на соцсети — поставь '#' если нет данных",
+  "btnContactsHref": "/contact",
   "socials": [
     {
       "name": "telegram",
       "path": "#",
-      "ariaLabel": "open telegram"
+      "ariaLabel": "Open Telegram"
     },
     {
       "name": "instagram",
       "path": "#",
-      "ariaLabel": "open instagram"
+      "ariaLabel": "Open Instagram"
     },
     {
       "name": "facebook",
       "path": "#",
-      "ariaLabel": "open facebook"
+      "ariaLabel": "Open Facebook"
     }
   ],
-
-  "_comment_notifications": "Тексты уведомлений формы",
   "notification": {
     "error": {
       "title": "Oops...",
@@ -67,38 +49,24 @@
     },
     "success": {
       "title": "Thank you!",
-      "text": "Your request was successfully submitted. We will contact you soon."
+      "text": "Your request has been sent successfully. We will contact you soon."
     }
   },
-
   "modal": {
-    "ariaLabel": "close modal window"
+    "ariaLabel": "Close modal window"
   },
-
-  "_comment_questionsSection": "Блок 'Вопросы, с которыми работаем'",
-  "questionsSection": {
-    "title": {
-      "label1": "Questions",
-      "label2": "We work with"
-    },
-    "description": "We help you grow and support you in different areas of life.",
-    "ariaLabel": "next slide"
-  },
-
-  "_comment_footerPolicy": "Ссылка на политику конфиденциальности",
   "footerLabelPolicy": "Privacy Policy",
-  "footerLabelImpressum": "Impressum",
-  "_comment_footerLinks": "Ссылки на партнёров (можно менять)",
+  "footerLabelImpressum": "Imprint",
   "footer": [
     {
       "name": "company1",
       "path": "#",
-      "ariaLabel": "link to partner site"
+      "ariaLabel": "Partner website link"
     },
     {
       "name": "company2",
       "path": "#",
-      "ariaLabel": "link to partner site"
+      "ariaLabel": "Partner website link"
     }
   ]
 }

@@ -10,7 +10,6 @@ import { BurgerMenu } from '@/components/ui/BurgerMenu';
 import { useLanguage } from '@/utils/LanguageContext';
 import { getData } from '@/utils/getData';
 
-// ✅ Тип вместо any
 type CommonData = {
   layout?: {
     'aria-label'?: {
@@ -43,7 +42,7 @@ export function Header() {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
 
-      setScrolled(currentScroll > 50);
+      setScrolled(currentScroll > 20);
 
       const scrollDifference = Math.abs(currentScroll - lastScroll.current);
 
@@ -80,24 +79,23 @@ export function Header() {
   return (
     <header
       className={classnames(
-        'fixed left-0 top-0 z-[50] w-full',
-        'border-b border-yellow-200 backdrop-blur-2xl transition-transform duration-300',
+        'fixed left-0 top-0 z-[50] w-full transition-transform duration-300',
+        'border-b border-[#18352b]/20',
         hideHeader ? '-translate-y-full' : 'translate-y-0',
-        scrolled ? 'bg-black/20 py-6 shadow-xl' : 'bg-black/10 py-5',
+        scrolled
+          ? 'bg-[#f8f6f1]/92 py-5 shadow-[0_10px_30px_rgba(0,0,0,0.04)] backdrop-blur-xl'
+          : 'bg-[#f8f6f1] py-5',
       )}
     >
-      <div className="container relative flex items-center justify-between xl:gap-[100px]">
-        {/* LOGO */}
-        <Logo path="header" onClick={closeMenu} />
+      <div className="container relative flex items-center justify-between gap-6 xl:gap-10">
+        <Logo path="header" onClick={closeMenu} className="shrink-0" />
 
-        {/* NAVIGATION */}
         <Navbar
           variant="header"
-          className="hidden transition-all duration-300 xl:flex"
+          className="hidden xl:flex xl:flex-1 xl:justify-center xl:text-[13px] xl:font-medium xl:uppercase xl:tracking-[0.22em] xl:text-[#18352b]"
         />
 
-        {/* LANGUAGE SWITCHER */}
-        <div className="relative hidden items-center font-montserrat text-[15px] tracking-[0.25em] xl:flex">
+        <div className="relative hidden items-center font-montserrat text-[13px] uppercase tracking-[0.22em] xl:flex">
           {languages.map((l, index) => (
             <div key={l} className="flex items-center">
               <button
@@ -105,31 +103,29 @@ export function Header() {
                 className={classnames(
                   'relative px-2 transition-colors duration-300',
                   lang === l
-                    ? 'font-semibold text-yellow-300'
-                    : 'text-yellow-200/80 hover:text-yellow-300',
+                    ? 'font-semibold text-[#18352b]'
+                    : 'text-[#18352b]/55 hover:text-[#18352b]',
                 )}
               >
                 {l.toUpperCase()}
               </button>
 
               {index < languages.length - 1 && (
-                <span className="mx-2 select-none text-yellow-200/50">|</span>
+                <span className="mx-1 select-none text-[#18352b]/30">|</span>
               )}
             </div>
           ))}
         </div>
 
-        {/* BURGER BUTTON */}
         <button
           onClick={openMenu}
           aria-label={common?.layout?.['aria-label']?.burger || 'menu'}
-          className="transition-all duration-300 hover:scale-125 active:scale-95 xl:hidden"
+          className="text-[#18352b] transition-all duration-300 hover:scale-110 active:scale-95 xl:hidden"
         >
-          <BurgerMenuIcon width={32} height={32} />
+          <BurgerMenuIcon width={30} height={30} />
         </button>
       </div>
 
-      {/* BURGER MENU */}
       {isOpen && <BurgerMenu isOpen={isOpen} onClose={closeMenu} />}
     </header>
   );

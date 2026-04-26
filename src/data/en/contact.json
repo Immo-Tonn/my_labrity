@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "kicker": "Contact",
+    "title": "Tell Us About Your Project",
+    "description": "Whether you need a new website, a rebrand or a digital presence — we would love to hear from you."
+  },
+  "sidebar": {
+    "kicker": "Labrity",
+    "title": "Let’s talk about your project.",
+    "description": "We create digital presences that feel premium, build trust and position your business clearly.",
+    "contacts": [
+      {
+        "label": "hello@labrity.com",
+        "href": "mailto:hello@labrity.com"
+      },
+      {
+        "label": "Instagram",
+        "href": "#"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "#"
+      }
+    ]
+  },
+  "form": {
+    "fields": [
+      {
+        "name": "firstName",
+        "label": "First Name",
+        "type": "text",
+        "placeholder": "Your first name"
+      },
+      {
+        "name": "lastName",
+        "label": "Last Name",
+        "type": "text",
+        "placeholder": "Your last name"
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "type": "email",
+        "placeholder": "name@example.com"
+      },
+      {
+        "name": "phone",
+        "label": "Phone / WhatsApp",
+        "type": "tel",
+        "placeholder": "+49 123 456789"
+      },
+      {
+        "name": "message",
+        "label": "Message",
+        "type": "textarea",
+        "placeholder": "Tell us a little about your project"
+      }
+    ],
+    "submitLabel": "Send Request",
+    "note": "We usually reply within 24–48 hours."
+  },
+  "errors": {
+    "firstNameRequired": "Please enter your first name.",
+    "firstNameMin": "At least 2 characters required.",
+    "firstNameMax": "Maximum 40 characters allowed.",
+    "firstNamePattern": "Please enter a valid first name.",
+    "lastNameRequired": "Please enter your last name.",
+    "lastNameMin": "At least 2 characters required.",
+    "lastNameMax": "Maximum 40 characters allowed.",
+    "lastNamePattern": "Please enter a valid last name.",
+    "emailRequired": "Please enter your email address.",
+    "emailPattern": "Please enter a valid email address.",
+    "phoneRequired": "Please enter your phone number.",
+    "phonePattern": "Please enter a valid phone number.",
+    "phoneMin": "At least 7 characters required.",
+    "phoneMax": "Maximum 20 characters allowed.",
+    "messageRequired": "Please enter a message.",
+    "messageMin": "At least 10 characters required.",
+    "messageMax": "Maximum 1000 characters allowed.",
+    "privacyRequired": "Please confirm the privacy policy."
+  },
+  "checkbox": {
+    "label": "I agree to the processing of my personal data in accordance with the ",
+    "linkLabel": "Privacy Policy",
+    "href": "/privacy-policy"
+  },
+  "successMessage": "Thank you! Your request has been sent successfully."
+}

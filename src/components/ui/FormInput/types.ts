@@ -1,7 +1,11 @@
-import { UseFormRegister, ValidationRule, FieldErrors } from 'react-hook-form';
+import { FieldErrors, UseFormRegister } from 'react-hook-form';
 
 export type FormData = {
-  [key: string]: string;
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+  checkbox: boolean;
 };
 
 export type FormInputProps = {
@@ -12,30 +16,30 @@ export type FormInputProps = {
 };
 
 export type FormInputsConfig = {
-  name: string;
+  name: 'name' | 'email' | 'phone' | 'message';
   label: string;
   placeholder?: string;
-  validation?: validationInput;
+  validation?: ValidationInput;
 };
 
-export type validationInput = {
-  required?: validationRequired;
-  pattern?: validationPattern;
-  minLength?: validationLength;
-  maxLength?: validationLength;
+export type ValidationInput = {
+  required?: ValidationRequired;
+  pattern?: ValidationPattern;
+  minLength?: ValidationLength;
+  maxLength?: ValidationLength;
 };
 
-export type validationRequired = {
+export type ValidationRequired = {
   value: boolean;
   message: string;
 };
 
-export type validationPattern = {
+export type ValidationPattern = {
   value: string;
   message: string;
 };
 
-export type validationLength = {
+export type ValidationLength = {
   value: number;
   message: string;
 };

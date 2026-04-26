@@ -35,7 +35,7 @@ export const Socials: React.FC<SocialsProps> = ({ className }) => {
 
   if (!data) return null;
 
-  const socialsClasses = classnames('flex gap-4 text-accent', className);
+  const socialsClasses = classnames('flex gap-4 text-[#18352b]', className);
 
   return (
     <ul className={socialsClasses}>

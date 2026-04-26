@@ -40,44 +40,40 @@ export const Footer: React.FC<FooterItemProps> = () => {
   if (!data) return null;
 
   const { footer } = data;
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative w-full overflow-hidden bg-[#1a130f] pb-[19px] pt-6 md:pb-6 xl:pt-8">
-      {/* GOLD SHIMMER LINE */}
-      <div className="absolute left-0 top-0 h-[2px] w-full overflow-hidden bg-[#8c6a1a]">
-        <div className="shimmer"></div>
-      </div>
-
+    <footer className="w-full border-t border-[#18352b]/10 bg-[#f8f6f1] py-6 md:py-7 xl:py-8">
       <div className="container">
-        <div className="flex flex-col xl:flex-row">
-          <Logo
-            path="footer"
-            className="xl:flex-auto smOnly:mb-6 smOnly:text-center mdOnly:mb-12"
-          />
+        <div className="flex flex-col gap-6 xl:flex-row xl:items-center xl:justify-between">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between xl:flex-1">
+            <Logo path="footer" className="text-[#18352b] smOnly:text-center" />
 
-          <div className="flex flex-col items-center md:flex-row-reverse md:justify-between xl:flex-row">
-            {/* DATENSCHUTZ + IMPRESSUM */}
-            <div className="flex items-baseline gap-3">
+            <p className="font-montserrat text-[12px] uppercase tracking-[0.14em] text-[#18352b]/45 smOnly:text-center">
+              © {currentYear} Labrity
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between xl:flex-1 xl:justify-end xl:gap-6">
+            <div className="flex items-center gap-3">
               <ModalPolicy variant="footer" nameBtn={data.footerLabelPolicy} />
 
-              <span className="text-borderCheckbox">|</span>
+              <span className="text-[#18352b]/20">|</span>
 
               <ModalImpressum nameBtn={data.footerLabelImpressum} />
             </div>
 
-            <div className="flex items-center gap-3 border-borderCheckbox/40 xl:ml-6 xl:border-l-[1px] xl:border-solid xl:pl-6 xl:pt-0">
-              {/* WEBSITE BY LABRITY */}
+            <div className="flex flex-wrap items-center justify-center gap-3 border-[#18352b]/10 md:gap-4 xl:border-l xl:pl-6">
               <a
                 href="https://labrity.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-montserrat text-white/70 transition hover:text-accent"
+                className="font-montserrat text-[12px] uppercase tracking-[0.14em] text-[#18352b]/55 transition duration-300 hover:text-[#18352b]"
               >
                 {data.layout.footer.web}
               </a>
 
-              {/* SOCIAL LINKS */}
-              <ul className="flex items-center gap-3 xl:gap-6">
+              <ul className="flex items-center gap-3 xl:gap-5">
                 {footer.map(item => (
                   <FooterItem
                     key={item.name}

@@ -18,7 +18,7 @@ export const SocialsItem: React.FC<SocialsItemProps> = ({
         aria-label={ariaL}
         target="_blank"
         rel="noopener noreferrer nofollow"
-        className="transition hover:text-hover focus-visible:text-pressed"
+        className="inline-flex transition duration-300 hover:-translate-y-1 hover:rotate-3 hover:scale-110 hover:text-black focus-visible:text-black"
       >
         {name === 'telegram' && <Telegram className="h-8 w-8" />}
         {name === 'instagram' && <Instagram className="h-8 w-8" />}

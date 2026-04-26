@@ -1,0 +1,54 @@
+[
+  {
+    "_id": "1",
+    "title": "Diensteanbieter",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Labrity\nInhaber: Andreas Tonn\nSessendrupweg 54\n48161 Münster\nDeutschland"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "2",
+    "title": "Kontaktmöglichkeiten",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "E-Mail-Adresse: tonn_andreas@web.de\nTelefon: +49 174 345 44 19"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "3",
+    "title": "Inhaltlich verantwortlich",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Verantwortlich für Inhalte gemäß § 18 Abs. 2 MStV:\nAndreas Tonn\nSessendrupweg 54\n48161 Münster"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "4",
+    "title": "Bildnachweise",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Auf dieser Website werden eigene Inhalte, Design-Elemente sowie gegebenenfalls lizenzfreie Bilder verwendet."
+          }
+        ]
+      }
+    ]
+  }
+]

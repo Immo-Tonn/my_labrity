@@ -9,19 +9,15 @@ export const NavbarLink: React.FC<NavbarLinkProps> = ({
   onClick,
 }) => {
   const linkClasses = classnames(
-    'transition font-montserrat text-[#e8d59c]',
-    'hover:text-[#ffe8a3]',
-    'active:text-[#fff3c6]',
-
-    // underline animation
-    'relative after:absolute after:left-0 after:-bottom-[5px] after:h-[1px] after:w-0 after:bg-[#ffe8a3] after:transition-all after:duration-300 hover:after:w-full',
-
-    // soft scale + glow
-    'hover:scale-[1.07] hover:drop-shadow-[0_0_8px_rgba(255,232,163,0.4)]',
-
+    'relative font-montserrat transition-all duration-300',
     {
-      'text-base': variant === 'header',
-      'text-sm': variant === 'mobile-menu',
+      // HEADER
+      'text-[15px] font-medium tracking-[0.02em] text-[#18352b]/75 hover:text-[#18352b] after:absolute after:left-0 after:-bottom-[6px] after:h-[1px] after:w-0 after:bg-[#18352b] after:transition-all after:duration-300 hover:after:w-full':
+        variant === 'header',
+
+      // MOBILE MENU
+      'text-[16px] font-medium tracking-[0.02em] text-[#18352b] after:absolute after:left-0 after:-bottom-[5px] after:h-[1px] after:w-0 after:bg-[#18352b] after:transition-all after:duration-300 hover:after:w-full':
+        variant === 'mobile-menu',
     },
   );
 

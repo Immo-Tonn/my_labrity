@@ -28,11 +28,10 @@ export const Navbar: React.FC<NavbarProps> = ({
   const NavbarClasses = classnames(
     'flex',
     {
-      'text-text font-montserrat text-sm flex-col gap-6':
+      'w-full flex-col items-start gap-6 font-montserrat text-sm':
         variant === 'mobile-menu',
 
-      'text-text font-montserrat text-lg tracking-wide gap-20':
-        variant === 'header',
+      'items-center gap-10 font-montserrat': variant === 'header',
     },
     className,
   );

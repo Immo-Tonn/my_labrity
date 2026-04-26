@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+
 import { Impressum } from '@/components/common/Impressum';
 import { classnames } from '@/utils/classnames';
 import { Modal } from '@/components/ui';
@@ -21,7 +22,8 @@ export const ModalImpressum: React.FC<ModalImpressumProps> = ({ nameBtn }) => {
   }, [isOpen]);
 
   const btnClasses = classnames(
-    'block cursor-pointer font-montserrat font-normal transition text-text hover:text-accent',
+    'block cursor-pointer font-montserrat font-normal not-italic transition duration-300',
+    'text-[12px] uppercase tracking-[0.14em] text-[#18352b]/55 hover:text-[#18352b]',
   );
 
   return (

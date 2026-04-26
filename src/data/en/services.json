@@ -1,58 +1,115 @@
 [
   {
     "_id": "1",
-    "title": "Classic Massage",
-    "location": "60 minutes • 100 €",
+    "title": "Digital Presence for Growing Businesses",
+    "location": "For freelancers, experts, studios and ambitious brands",
     "card": [
       {
-        "subtitle": "Deep relaxation for the whole body",
-        "description": "Relieves muscle tension and helps the body regain new energy."
+        "subtitle": "An image that feels bigger than your competition",
+        "description": "We build websites that create trust, communicate professionalism and position your business at a higher level instantly."
       },
       {
-        "subtitle": "Improves blood circulation",
-        "description": "Supports metabolism and activates the body's natural regeneration."
+        "subtitle": "Perfect for powerful first impressions",
+        "description": "Ideal for businesses that want to become visible online and communicate quality from the very first visit."
       },
       {
-        "subtitle": "Reduces stress and restores balance",
-        "description": "Brings body and mind back into harmony and creates a sense of inner well-being."
+        "subtitle": "More impact instead of more advertising",
+        "description": "A strong digital presence reduces hesitation, increases inquiries and elevates how your brand is perceived."
       }
     ]
   },
   {
     "_id": "2",
-    "title": "Back and Neck Massage",
-    "location": "60 minutes • 100 €",
+    "title": "Premium Websites for Established Companies",
+    "location": "For companies with ambition, growth and clear goals",
     "card": [
       {
-        "subtitle": "Relief from back and neck pain",
-        "description": "Targeted massage releases tension in heavily strained muscle groups."
+        "subtitle": "Credibility at the highest level",
+        "description": "Websites for businesses that want to look professional, build trust and strengthen their market position."
       },
       {
-        "subtitle": "Relaxation after long sitting",
-        "description": "Ideal for people with office work or physical strain."
+        "subtitle": "Digital authority instead of ordinary presence",
+        "description": "We create websites that do more than look modern — they communicate competence, stability and class."
       },
       {
-        "subtitle": "Improves mobility and posture",
-        "description": "Relaxes tight muscles and supports healthy body posture."
+        "subtitle": "For companies beyond average",
+        "description": "Ideal for businesses that want to appear online as strong as they are in real life."
       }
     ]
   },
   {
     "_id": "3",
-    "title": "Aroma Massage",
-    "location": "60 minutes • 110 €",
+    "title": "Brand Websites with Character",
+    "location": "For beauty, fashion, lifestyle, design and personal brands",
     "card": [
       {
-        "subtitle": "Deep relaxation with essential oils",
-        "description": "Warm aromatic oils help relax both body and mind."
+        "subtitle": "Recognizable instead of forgettable",
+        "description": "We create digital brand experiences with style, personality and visual strength."
       },
       {
-        "subtitle": "Holistic well-being",
-        "description": "Calms the nervous system and restores new energy."
+        "subtitle": "Luxury begins with perception",
+        "description": "A premium look instantly increases perceived value, trust and desire."
       },
       {
-        "subtitle": "Gentle regeneration",
-        "description": "Perfect for recovery after stressful days and intense workload."
+        "subtitle": "For brands that sell emotion",
+        "description": "Especially effective for industries where style, image and status influence buying decisions."
+      }
+    ]
+  },
+  {
+    "_id": "4",
+    "title": "Relaunch for the Next Level",
+    "location": "For businesses that outgrew their old website",
+    "card": [
+      {
+        "subtitle": "When your website makes you look smaller",
+        "description": "We transform outdated websites into modern, strong and trustworthy digital identities."
+      },
+      {
+        "subtitle": "More class. More clarity. More impact.",
+        "description": "A relaunch improves design, positioning and market perception at the same time."
+      },
+      {
+        "subtitle": "The right move before growth",
+        "description": "Perfect for businesses that feel their current website no longer matches their level."
+      }
+    ]
+  },
+  {
+    "_id": "5",
+    "title": "Visibility for Valuable Clients",
+    "location": "For businesses that want to be found intentionally",
+    "card": [
+      {
+        "subtitle": "Not just online — discoverable",
+        "description": "We build websites with clean structure, fast performance and strong SEO foundations."
+      },
+      {
+        "subtitle": "More reach with quality",
+        "description": "Visibility attracts the right people — not just more clicks, but better inquiries."
+      },
+      {
+        "subtitle": "Especially valuable for local businesses",
+        "description": "Ideal for companies that want to dominate their region with a stronger presence."
+      }
+    ]
+  },
+  {
+    "_id": "6",
+    "title": "Exclusive Solutions for Demanding Clients",
+    "location": "For premium brands, high-end services and elevated standards",
+    "card": [
+      {
+        "subtitle": "No template. No average.",
+        "description": "Tailored digital concepts for clients who do not want an ordinary website, but presence with substance and class."
+      },
+      {
+        "subtitle": "Quiet exclusivity over loud effects",
+        "description": "True premium quality is seen in precision, calmness, style and uncompromising execution."
+      },
+      {
+        "subtitle": "When your website should match your status",
+        "description": "For entrepreneurs and brands who intentionally communicate a higher level."
       }
     ]
   }

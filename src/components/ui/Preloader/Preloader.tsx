@@ -32,34 +32,34 @@ export const Preloader = () => {
   }, [lang]);
 
   useEffect(() => {
-    const fadeTimer = setTimeout(() => {
+    const fadeTimer = window.setTimeout(() => {
       setFade(true);
-    }, 1000);
+    }, 900);
 
-    const hideTimer = setTimeout(() => {
+    const hideTimer = window.setTimeout(() => {
       setShow(false);
-    }, 2500);
+    }, 1800);
 
     return () => {
-      clearTimeout(fadeTimer);
-      clearTimeout(hideTimer);
+      window.clearTimeout(fadeTimer);
+      window.clearTimeout(hideTimer);
     };
   }, []);
 
   if (!show || !data) return null;
 
-  const { logo } = data.layout;
+  const logoLabel = data.layout.logo.label || 'Labrity';
+  const subtitle = data.layout.logo.preloaderSubtitle || 'Premium Web Studio';
 
   return (
     <div className={`${s.wrapper} ${fade ? s.fadeOut : ''}`}>
       <div className={s.inner}>
-        <h1 className={s.logo}>{logo.label}</h1>
-
-        <div className={s.loader}>
-          <div className={s.orbit}>
-            <div className={s.spark}></div>
-          </div>
+        <div className={s.line} aria-hidden="true">
+          <span className={s.lineFill} />
         </div>
+
+        <h1 className={s.logo}>{logoLabel}</h1>
+        <p className={s.subtitle}>{subtitle}</p>
       </div>
     </div>
   );

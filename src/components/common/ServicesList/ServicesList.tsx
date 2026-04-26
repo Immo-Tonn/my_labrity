@@ -31,36 +31,110 @@ export function ServicesList() {
   if (!services || !common) return null;
 
   return (
-    <div className="flex flex-col gap-6 xl:gap-[60px] xl:pt-[68px]">
+    <div className="flex flex-col gap-6 md:gap-8 xl:gap-10 xl:pt-[68px]">
       {services.map(service => (
         <div
-          className="flex flex-col rounded-[20px] border border-white/40 bg-black/40 
-p-6 backdrop-blur-sm transition-transform duration-500 ease-out
-hover:-translate-y-[10px] hover:shadow-xl md:p-0 xl:flex-row xl:justify-between"
           key={service._id}
+          className="
+            group
+            flex
+            flex-col
+            border
+            border-[#e7e2d9]
+            bg-white
+            px-6
+            py-6
+            shadow-[0_12px_32px_rgba(0,0,0,0.035)]
+            transition-all
+            duration-500
+            ease-out
+            hover:-translate-y-[4px]
+            hover:shadow-[0_22px_50px_rgba(0,0,0,0.06)]
+            md:px-8
+            md:py-8
+            xl:flex-row
+            xl:px-0
+            xl:py-0
+          "
         >
-          <div className="flex flex-col border-b-[1px] border-accent/20 pb-8 md:flex-row md:items-center md:justify-between md:px-8 md:pt-8 xl:flex-col xl:items-start xl:border-none xl:pb-[52px] xl:pl-[80px] xl:pt-[68px] notXL:mb-8">
-            <div className="flex flex-col items-center pb-8 md:items-start xl:max-w-[303px]">
-              <h3 className="section-subtitle mb-4 font-tenor text-accent">
-                {service.title}
-              </h3>
-
-              <p className="text font-montserrat text-white/90">
+          <div
+            className="
+              flex
+              flex-col
+              border-b
+              border-[#e7e2d9]
+              pb-8
+              md:flex-row
+              md:items-center
+              md:justify-between
+              xl:w-[420px]
+              xl:shrink-0
+              xl:flex-col
+              xl:items-start
+              xl:border-b-0
+              xl:pb-[52px]
+              xl:pl-[80px]
+              xl:pr-10
+              xl:pt-[68px]
+            "
+          >
+            <div className="flex flex-col items-start pb-8 md:pb-0 xl:w-full xl:max-w-[330px]">
+              <p className="mb-3 font-montserrat text-[11px] uppercase tracking-[0.24em] text-[#18352b]/55 md:text-xs">
                 {service.location}
               </p>
+
+              <h3 className="font-tenor text-[34px] leading-[1.02] text-black transition-colors duration-300 group-hover:text-[#18352b] md:text-[40px] xl:text-[46px]">
+                {service.title}
+              </h3>
             </div>
 
             <Button
               tag="a"
               accent={false}
               href={common.btnContactsHref}
-              className="flex max-w-full justify-center font-normal md:max-w-[135px] xl:max-w-[147px]"
+              className="
+                flex
+                min-h-[56px]
+                max-w-full
+                justify-center
+                border
+                border-black
+                bg-black
+                px-8
+                font-montserrat
+                text-[14px]
+                font-semibold
+                uppercase
+                tracking-[0.08em]
+                text-white
+                transition
+                duration-300
+                hover:-translate-y-[1px]
+                hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]
+                md:max-w-[170px]
+                xl:max-w-[180px]
+              "
             >
               {common.buttonsText.v1}
             </Button>
           </div>
 
-          <ul className="flex flex-col gap-5 md:px-8 md:pb-8 xl:border-l-[1px] xl:border-accent/20 xl:pb-[52px] xl:pl-10 xl:pr-[80px] xl:pt-[68px]">
+          <ul
+            className="
+              flex
+              flex-col
+              gap-6
+              pt-8
+              md:pt-8
+              xl:flex-1
+              xl:border-l
+              xl:border-[#e7e2d9]
+              xl:pb-[52px]
+              xl:pl-10
+              xl:pr-[80px]
+              xl:pt-[68px]
+            "
+          >
             {service.card?.map((card, index) => (
               <ServiceItem key={index} card={card} />
             ))}

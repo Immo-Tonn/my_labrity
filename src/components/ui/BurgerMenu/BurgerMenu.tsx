@@ -24,7 +24,6 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClose }) => {
     loadData();
   }, [lang]);
 
-  // 🔥 ВОТ ЭТО ФИКС
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -58,7 +57,7 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClose }) => {
   if (!common) return null;
 
   return (
-    <div className="fixed inset-0 z-[999] bg-black/50 backdrop-blur-xl xl:hidden">
+    <div className="fixed inset-0 z-[999] bg-black/30 backdrop-blur-xl xl:hidden">
       <div
         ref={modalRef}
         className="
@@ -69,9 +68,9 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClose }) => {
           w-[260px]
           flex-col
           gap-6
-          rounded-bl-2xl bg-[#2a1f1a]
+          bg-[#f8f6f1]
           px-6 pb-6 pt-6
-          shadow-[0_10px_40px_rgba(232,213,156,0.15)]
+          shadow-[0_10px_40px_rgba(24,53,43,0.10)]
         "
       >
         <div className="flex items-center justify-between">
@@ -97,8 +96,8 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClose }) => {
               onClick={() => setLang(l as 'ua' | 'en' | 'de')}
               className={
                 lang === l
-                  ? 'font-semibold text-yellow-300'
-                  : 'text-yellow-200/80 hover:text-yellow-300'
+                  ? 'font-semibold text-[#18352b]'
+                  : 'text-[#18352b]/70 hover:text-[#18352b]'
               }
             >
               {l.toUpperCase()}

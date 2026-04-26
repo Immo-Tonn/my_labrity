@@ -12,7 +12,7 @@ import { getData } from '@/utils/getData';
 
 interface ContactsData {
   checkBox: {
-    name: string;
+    name: 'checkbox';
     ariaLabel: string;
     label: string;
     conditionsLink: string;
@@ -47,7 +47,7 @@ export const CheckBox: React.FC<CheckBoxProps> = ({
         )}
       >
         <input
-          type={contacts.checkBox.name}
+          type="checkbox"
           aria-label={contacts.checkBox.ariaLabel}
           {...register(contacts.checkBox.name, {
             required: true,

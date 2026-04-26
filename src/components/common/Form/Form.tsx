@@ -42,7 +42,7 @@ export const Form = () => {
   useEffect(() => {
     const loadData = async () => {
       const commonData = await getData('common', lang);
-      const contactsData = await getData('contacts', lang);
+      const contactsData = await getData('contact', lang);
 
       setCommon(commonData);
       setContacts(contactsData);
@@ -64,9 +64,9 @@ export const Form = () => {
     try {
       setIsLoading(true);
 
-      const message = `Ім'я: ${data.name} %0AТелефон: ${data.phone} %0A${
-        data.message ? `Повідомлення: ${data.message}` : ''
-      }`;
+      const message = `Name: ${data.name} %0AEmail: ${data.email} %0APhone: ${
+        data.phone
+      } %0A${data.message ? `Message: ${data.message}` : ''}`;
 
       await sendMessage(message);
 
