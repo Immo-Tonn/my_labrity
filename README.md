@@ -1,4 +1,4 @@
-# 💆 Massage Studio Landing Page
+🚀 Labrity Web Studio Website
 
 ![Next.js](https://img.shields.io/badge/Next.js-13-black?logo=next.js)
 ![React](https://img.shields.io/badge/React-18-blue?logo=react)
@@ -6,14 +6,15 @@
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-38BDF8?logo=tailwind-css)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-Modern **multilingual landing page** for a massage studio built with **Next.js,
-TypeScript and Tailwind CSS**.
+Современный многоязычный сайт веб-студии, разработанный на Next.js, TypeScript и
+Tailwind CSS.
 
-The website presents massage services, allows users to contact the studio
-through a form and includes required legal sections such as **Datenschutz** and
-**Impressum**.
+Проект представляет веб-студию Labrity и включает:
 
----
+- главную страницу (презентация студии)
+- портфолио
+- страницу контактов
+- форму с отправкой заявок в Telegram
 
 # 🌐 Live Demo
 
@@ -25,16 +26,12 @@ through a form and includes required legal sections such as **Datenschutz** and
 
 # ✨ Features
 
-✔ Multilingual website (DE / EN / UA)  
-✔ Responsive design (mobile / tablet / desktop)  
-✔ Contact form with validation  
-✔ Modern UI and smooth UX  
-✔ Datenschutz & Impressum modals  
-✔ Clean component architecture  
-✔ SEO-friendly structure  
-✔ Optimized performance
+✨ Возможности
 
----
+✔ Мультиязычность (DE / EN / UA) ✔ Полностью адаптивный дизайн ✔ Форма с
+валидацией и отправкой в Telegram ✔ Современный UI / UX ✔ Бургер-меню и
+переключение языка ✔ SEO-оптимизированная структура ✔ Чистая архитектура проекта
+✔ Высокая производительность
 
 # 🛠 Tech Stack
 
@@ -100,242 +97,129 @@ npm run start
 
 ---
 
-# 📁 Project Structure
+🛠 Технологии
 
-```
+Frontend
 
-|-- public -> static files
-|-- src -> source directory with the main application code
-  |-- actions -> asynchronous functions that are executed on the server
-  |-- app -> pages and routing
-    |-- / --> routing group for main UI
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
 
-  |-- components -> folder with reusable components
-    |-- common -> base sections/block components (accordion, form, slider, etc.)
-    |-- ui -> small reusable components (button, modal, etc.)
-      |-- NameComponent -> folders for each component
-        |-- NameComponent.tsx -> main component
-        |-- NameComponent.module.css -> file for special components styles
-        |-- index.ts -> file for re-export
-        |-- NameComponent.types.ts -> file for special components types (props)
-  |-- layout -> components that are used as a main template (header, footer)
-      |-- NameLayout -> folders for each component layout
-        |-- NameLayout.tsx -> main component layout
-        |-- NameLayout.module.css -> file for special components layout styles
-        |-- index.ts -> file for re-export
-        |-- NameLayout.types.ts -> file for special components layout types(props)
-  |-- sections -> folder with section components
-      |-- NameComponent -> folders for each component section
-        |-- NameComponent.tsx -> main component section
-        |-- NameComponent.module.css -> file for special section components styles
-        |-- index.ts -> file for re-export
-        |-- NameComponent.types.ts -> file for special section components types(props)
-  |-- data -> static data for the project (json)
-  |-- types -> folder with reusable type definitions
-  |-- utils -> additional reusable functions
+Интеграции
 
-```
+- Telegram Bot API (отправка заявок)
 
----
+Качество кода
 
-# 🌍 Localization
+- ESLint
+- Prettier
+- Husky (pre-commit hooks) 📁 Структура проекта (простое объяснение)
 
-The website supports multiple languages:
+src — основной код проекта
 
-- 🇩🇪 German
-- 🇬🇧 English
-- 🇺🇦 Ukrainian
+│ ├── app — страницы и роутинг (Next.js) │ └── (site) — основная часть сайта │
+├── page.tsx — главная страница │ └── contact — страница контактов │ ├──
+components — переиспользуемые компоненты │ ├── common — крупные блоки (например
+список услуг) │ └── ui — мелкие UI-компоненты (кнопки, модалки, меню) │ ├──
+layout — глобальные элементы сайта │ ├── Header — шапка сайта │ └── Footer —
+подвал сайта │ ├── api — работа с внешними сервисами │ └── telegram — отправка
+формы в Telegram │ ├── data — тексты сайта (по языкам, JSON) │ ├── utils —
+вспомогательные функции │ ├── getData — загрузка данных │ ├── classnames —
+работа с классами │ └── LanguageContext — переключение языка │ ├── types — общие
+типы TypeScript
 
-Content is loaded dynamically using:
+⸻
 
-```
+🌍 Локализация
+
+Сайт поддерживает 3 языка:
+
+🇩🇪 Немецкий 🇬🇧 Английский 🇺🇦 Украинский
+
+Контент загружается динамически через:
+
 utils/getData.ts
-```
 
----
+⸻
 
-# 📱 Responsive Design
+📱 Адаптивность
 
-The layout is optimized for:
+Сайт корректно отображается на:
 
-- mobile devices
-- tablets
-- desktops
+- мобильных устройствах
+- планшетах
+- десктопах
 
-Built with a **mobile-first approach** using Tailwind CSS.
+Используется подход mobile-first.
 
----
+⸻
 
-# 🧾 Legal
+🧾 Юридическая информация
 
-The website includes legally required pages for German websites:
+Сайт содержит:
 
-- Datenschutz
-- Impressum
+- Datenschutz (политика конфиденциальности)
+- Impressum (обязательная информация для Германии)
 
----
+⸻
 
-# 🧑‍💻 Author
+🧑‍💻 Автор
 
-Developed by **Labrity Web Studio**
+Разработано Labrity Web Studio
 
-🌐 https://labrity.com
+https://labrity.com 🤖 Интеграция формы через Telegram
 
----
+Форма отправляет заявки напрямую в Telegram-бота.
 
-# ⭐ Contributing
+⸻
 
-Pull requests are welcome.  
-For major changes please open an issue first.
+1. Создание бота
 
----
+1. Открыть Telegram
+1. Найти @BotFather
+1. Ввести:
 
-# 📄 License
-
-MIT License
-
-## 🤖 Тестирование формы через Telegram-бота
-
-Каждый разработчик может тестировать форму отправки сообщений через **своего
-Telegram-бота**.  
-Это нужно для того, чтобы тестовые сообщения **не отправлялись в основной бот
-проекта**.
-
-Следуйте инструкции ниже.
-
----
-
-### 1️⃣ Создание Telegram-бота
-
-1. Откройте **Telegram**
-2. Найдите **@BotFather**
-3. Запустите бота командой:
-
-```
 /start
-```
 
-4. Создайте нового бота:
+4. Создать бота:
 
-```
 /newbot
-```
 
-5. Введите:
+5. Получить BOT TOKEN
 
-- имя бота (например: `Test Bot`)
-- username бота (например: `massage_test_bot`)
+⸻
 
-После этого BotFather отправит вам **BOT TOKEN**, например:
+2. Получение Chat ID
 
-```
-123456789:AAExampleTokenExampleToken
-```
+Отправить сообщение боту и открыть:
 
-Сохраните этот токен — он понадобится для `.env`.
-
----
-
-### 2️⃣ Получение Chat ID
-
-1. Напишите **любое сообщение** вашему боту (например: `test`).
-
-2. Откройте в браузере:
-
-```
 https://api.telegram.org/botYOUR_BOT_TOKEN/getUpdates
-```
 
-Пример:
+Найти:
 
-```
-https://api.telegram.org/bot123456789:AAExampleTokenExampleToken/getUpdates
-```
+“id”: 123456789
 
-3. В ответе найдите поле:
+⸻
 
-```
-"chat": {
-"id": 123456789
-}
-```
+3. Создание файла .env.local
 
-Это число — ваш **CHAT_ID**.
+В корне проекта создать файл:
 
----
-
-### 3️⃣ Создание `.env.local`
-
-В **корне проекта** создайте файл:
-
-```
 .env.local
-```
 
-Добавьте туда данные вашего бота:
+Добавить:
 
-```
-TELEGRAM_BOT_TOKEN=your_bot_token
-TELEGRAM_CHAT_ID=your_chat_id
-```
+TELEGRAM_BOT_TOKEN=your_bot_token TELEGRAM_CHAT_ID=your_chat_id
 
-Пример:
+⸻
 
-```
-TELEGRAM_BOT_TOKEN=123456789:AAExampleTokenExampleToken
-TELEGRAM_CHAT_ID=123456789
-```
+4. Запуск
 
----
-
-### 4️⃣ Запуск проекта
-
-Запустите проект:
-
-```
 npm run dev
-```
 
-Откройте в браузере:
+Открыть:
 
-```
 http://localhost:3000
-```
 
-Теперь при отправке **контактной формы** сообщение будет приходить **в ваш
-Telegram-бот**.
-
----
-
-### ⚠️ Важно
-
-Файл `.env.local` **нельзя загружать в GitHub**.
-
-Проверьте, чтобы он был в `.gitignore`:
-
-```
-.env
-.env.local
-.env.*
-```
-
----
-
-### 🧪 Как выглядит сообщение
-
-После отправки формы вы должны получить сообщение примерно такого вида:
-
-```
-Новая заявка с сайта
-
-Имя: John Doe
-Телефон: +49 123456789
-Сообщение: Хочу записаться 
-```
-
----
-
-### 🚀 Продакшн
-
-В production версии сайта бот будет подключён к **общей Telegram-группе
-команды**, чтобы все участники могли получать заявки с сайта.
+Теперь заявки будут приходить в Telegram.

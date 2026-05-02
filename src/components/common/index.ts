@@ -1,9 +1,4 @@
-export * from './AboutList';
 export * from './Conditions';
-export * from './EducationItem';
-export * from './Form';
-export * from './QuestionsSlider';
-export * from './QuestionsSwiper';
+
 export * from './ServiceItem';
 export * from './ServicesList';
-export * from './ValueItem';
