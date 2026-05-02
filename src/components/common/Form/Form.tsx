@@ -9,7 +9,6 @@ import { sendMessage } from '@/api/telegram';
 import {
   FormInput,
   Button,
-  CheckBox,
   ModalError,
   ModalSuccess,
   Loader,
@@ -101,12 +100,6 @@ export const Form = () => {
             errors={errors}
           />
         ))}
-
-        <CheckBox
-          register={register}
-          errors={errors}
-          checkboxInput={checkboxInput}
-        />
 
         <Button
           tag="button"
