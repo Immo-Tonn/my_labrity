@@ -1,0 +1,72 @@
+{
+  "metadataAdmin": {
+    "title": "Admin-Panel — Labrity",
+    "description": "Adminbereich für die Labrity Website"
+  },
+  "layout": {
+    "logo": {
+      "label": "Labrity",
+      "preloaderSubtitle": "Premium Web Studio"
+    },
+    "aria-label": {
+      "burger": "Menü öffnen",
+      "btnClose": "Menü schließen"
+    },
+    "titles": {
+      "services": "Unsere Leistungen"
+    },
+    "footer": {
+      "web": "Website von Labrity"
+    }
+  },
+  "buttonsText": {
+    "v1": "Projekt starten",
+    "v2": "Portfolio ansehen",
+    "v3": "Senden"
+  },
+  "btnContactsHref": "/contact",
+  "socials": [
+    {
+      "name": "telegram",
+      "path": "#",
+      "ariaLabel": "Telegram öffnen"
+    },
+    {
+      "name": "instagram",
+      "path": "#",
+      "ariaLabel": "Instagram öffnen"
+    },
+    {
+      "name": "facebook",
+      "path": "#",
+      "ariaLabel": "Facebook öffnen"
+    }
+  ],
+  "notification": {
+    "error": {
+      "title": "Oops...",
+      "text": "Ihre Daten wurden nicht gesendet. Bitte versuchen Sie es später erneut."
+    },
+    "success": {
+      "title": "Vielen Dank!",
+      "text": "Ihre Anfrage wurde erfolgreich gesendet. Wir melden uns bald bei Ihnen."
+    }
+  },
+  "modal": {
+    "ariaLabel": "Modalfenster schließen"
+  },
+  "footerLabelPolicy": "Datenschutz",
+  "footerLabelImpressum": "Impressum",
+  "footer": [
+    {
+      "name": "company1",
+      "path": "#",
+      "ariaLabel": "Link zur Partnerseite"
+    },
+    {
+      "name": "company2",
+      "path": "#",
+      "ariaLabel": "Link zur Partnerseite"
+    }
+  ]
+}

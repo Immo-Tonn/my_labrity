@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "kicker": "Контакт",
+    "title": "Розкажіть нам про ваш проєкт",
+    "description": "Якщо вам потрібен новий сайт, ребрендинг або сильна цифрова присутність — будемо раді вашому зверненню."
+  },
+  "sidebar": {
+    "kicker": "Labrity",
+    "title": "Давайте поговоримо про ваш проєкт.",
+    "description": "Ми створюємо преміальні цифрові рішення, які викликають довіру та чітко позиціонують ваш бізнес.",
+    "contacts": [
+      {
+        "label": "hello@labrity.com",
+        "href": "mailto:hello@labrity.com"
+      },
+      {
+        "label": "Instagram",
+        "href": "#"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "#"
+      }
+    ]
+  },
+  "form": {
+    "fields": [
+      {
+        "name": "firstName",
+        "label": "Ім’я",
+        "type": "text",
+        "placeholder": "Ваше ім’я"
+      },
+      {
+        "name": "lastName",
+        "label": "Прізвище",
+        "type": "text",
+        "placeholder": "Ваше прізвище"
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "type": "email",
+        "placeholder": "name@example.com"
+      },
+      {
+        "name": "phone",
+        "label": "Телефон / WhatsApp",
+        "type": "tel",
+        "placeholder": "+49 123 456789"
+      },
+      {
+        "name": "message",
+        "label": "Повідомлення",
+        "type": "textarea",
+        "placeholder": "Коротко опишіть ваш проєкт"
+      }
+    ],
+    "submitLabel": "Надіслати запит",
+    "note": "Зазвичай ми відповідаємо протягом 24–48 годин."
+  },
+  "errors": {
+    "firstNameRequired": "Будь ласка, введіть ім’я.",
+    "firstNameMin": "Мінімум 2 символи.",
+    "firstNameMax": "Максимум 40 символів.",
+    "firstNamePattern": "Будь ласка, введіть коректне ім’я.",
+    "lastNameRequired": "Будь ласка, введіть прізвище.",
+    "lastNameMin": "Мінімум 2 символи.",
+    "lastNameMax": "Максимум 40 символів.",
+    "lastNamePattern": "Будь ласка, введіть коректне прізвище.",
+    "emailRequired": "Будь ласка, введіть email.",
+    "emailPattern": "Будь ласка, введіть коректний email.",
+    "phoneRequired": "Будь ласка, введіть номер телефону.",
+    "phonePattern": "Будь ласка, введіть коректний номер телефону.",
+    "phoneMin": "Мінімум 7 символів.",
+    "phoneMax": "Максимум 20 символів.",
+    "messageRequired": "Будь ласка, введіть повідомлення.",
+    "messageMin": "Мінімум 10 символів.",
+    "messageMax": "Максимум 1000 символів.",
+    "privacyRequired": "Будь ласка, підтвердіть політику конфіденційності."
+  },
+  "checkbox": {
+    "label": "Я погоджуюсь на обробку моїх персональних даних відповідно до ",
+    "linkLabel": "Політики конфіденційності",
+    "href": "/privacy-policy"
+  },
+  "successMessage": "Дякуємо! Ваш запит успішно надіслано."
+}

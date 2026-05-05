@@ -1,0 +1,72 @@
+{
+  "metadataAdmin": {
+    "title": "Адмін-панель — Labrity",
+    "description": "Адмін-зона сайту Labrity"
+  },
+  "layout": {
+    "logo": {
+      "label": "Labrity",
+      "preloaderSubtitle": "Premium Web Studio"
+    },
+    "aria-label": {
+      "burger": "Відкрити меню",
+      "btnClose": "Закрити меню"
+    },
+    "titles": {
+      "services": "Наші Послуги"
+    },
+    "footer": {
+      "web": "Сайт створено Labrity"
+    }
+  },
+  "buttonsText": {
+    "v1": "Розпочати проєкт",
+    "v2": "Переглянути портфоліо",
+    "v3": "Надіслати"
+  },
+  "btnContactsHref": "/contact",
+  "socials": [
+    {
+      "name": "telegram",
+      "path": "#",
+      "ariaLabel": "Відкрити Telegram"
+    },
+    {
+      "name": "instagram",
+      "path": "#",
+      "ariaLabel": "Відкрити Instagram"
+    },
+    {
+      "name": "facebook",
+      "path": "#",
+      "ariaLabel": "Відкрити Facebook"
+    }
+  ],
+  "notification": {
+    "error": {
+      "title": "Упс...",
+      "text": "Ваші дані не було надіслано. Спробуйте ще раз пізніше."
+    },
+    "success": {
+      "title": "Дякуємо!",
+      "text": "Ваш запит успішно надіслано. Ми зв’яжемося з вами найближчим часом."
+    }
+  },
+  "modal": {
+    "ariaLabel": "Закрити модальне вікно"
+  },
+  "footerLabelPolicy": "Політика конфіденційності",
+  "footerLabelImpressum": "Імпресум",
+  "footer": [
+    {
+      "name": "company1",
+      "path": "#",
+      "ariaLabel": "Посилання на сайт партнера"
+    },
+    {
+      "name": "company2",
+      "path": "#",
+      "ariaLabel": "Посилання на сайт партнера"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+[
+  {
+    "_id": "1",
+    "title": "Digital Presence for Growing Businesses",
+    "location": "For freelancers, experts, studios and ambitious brands",
+    "card": [
+      {
+        "subtitle": "An image that feels bigger than your competition",
+        "description": "We build websites that create trust, communicate professionalism and position your business at a higher level instantly."
+      },
+      {
+        "subtitle": "Perfect for powerful first impressions",
+        "description": "Ideal for businesses that want to become visible online and communicate quality from the very first visit."
+      },
+      {
+        "subtitle": "More impact instead of more advertising",
+        "description": "A strong digital presence reduces hesitation, increases inquiries and elevates how your brand is perceived."
+      }
+    ]
+  },
+  {
+    "_id": "2",
+    "title": "Premium Websites for Established Companies",
+    "location": "For companies with ambition, growth and clear goals",
+    "card": [
+      {
+        "subtitle": "Credibility at the highest level",
+        "description": "Websites for businesses that want to look professional, build trust and strengthen their market position."
+      },
+      {
+        "subtitle": "Digital authority instead of ordinary presence",
+        "description": "We create websites that do more than look modern — they communicate competence, stability and class."
+      },
+      {
+        "subtitle": "For companies beyond average",
+        "description": "Ideal for businesses that want to appear online as strong as they are in real life."
+      }
+    ]
+  },
+  {
+    "_id": "3",
+    "title": "Brand Websites with Character",
+    "location": "For beauty, fashion, lifestyle, design and personal brands",
+    "card": [
+      {
+        "subtitle": "Recognizable instead of forgettable",
+        "description": "We create digital brand experiences with style, personality and visual strength."
+      },
+      {
+        "subtitle": "Luxury begins with perception",
+        "description": "A premium look instantly increases perceived value, trust and desire."
+      },
+      {
+        "subtitle": "For brands that sell emotion",
+        "description": "Especially effective for industries where style, image and status influence buying decisions."
+      }
+    ]
+  },
+  {
+    "_id": "4",
+    "title": "Relaunch for the Next Level",
+    "location": "For businesses that outgrew their old website",
+    "card": [
+      {
+        "subtitle": "When your website makes you look smaller",
+        "description": "We transform outdated websites into modern, strong and trustworthy digital identities."
+      },
+      {
+        "subtitle": "More class. More clarity. More impact.",
+        "description": "A relaunch improves design, positioning and market perception at the same time."
+      },
+      {
+        "subtitle": "The right move before growth",
+        "description": "Perfect for businesses that feel their current website no longer matches their level."
+      }
+    ]
+  },
+  {
+    "_id": "5",
+    "title": "Visibility for Valuable Clients",
+    "location": "For businesses that want to be found intentionally",
+    "card": [
+      {
+        "subtitle": "Not just online — discoverable",
+        "description": "We build websites with clean structure, fast performance and strong SEO foundations."
+      },
+      {
+        "subtitle": "More reach with quality",
+        "description": "Visibility attracts the right people — not just more clicks, but better inquiries."
+      },
+      {
+        "subtitle": "Especially valuable for local businesses",
+        "description": "Ideal for companies that want to dominate their region with a stronger presence."
+      }
+    ]
+  },
+  {
+    "_id": "6",
+    "title": "Exclusive Solutions for Demanding Clients",
+    "location": "For premium brands, high-end services and elevated standards",
+    "card": [
+      {
+        "subtitle": "No template. No average.",
+        "description": "Tailored digital concepts for clients who do not want an ordinary website, but presence with substance and class."
+      },
+      {
+        "subtitle": "Quiet exclusivity over loud effects",
+        "description": "True premium quality is seen in precision, calmness, style and uncompromising execution."
+      },
+      {
+        "subtitle": "When your website should match your status",
+        "description": "For entrepreneurs and brands who intentionally communicate a higher level."
+      }
+    ]
+  }
+]

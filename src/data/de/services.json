@@ -1,0 +1,116 @@
+[
+  {
+    "_id": "1",
+    "title": "Digitale Präsenz für wachsende Unternehmen",
+    "location": "Für Selbstständige, Experten, Studios und ambitionierte Marken",
+    "card": [
+      {
+        "subtitle": "Ein Auftritt, der größer wirkt als Ihr Wettbewerb",
+        "description": "Wir entwickeln Websites, die Vertrauen schaffen, Professionalität ausstrahlen und Ihr Unternehmen sofort hochwertiger positionieren."
+      },
+      {
+        "subtitle": "Ideal für starke erste Eindrücke",
+        "description": "Perfekt für Unternehmen, die online sichtbar werden und schon beim ersten Besuch Kompetenz und Qualität vermitteln wollen."
+      },
+      {
+        "subtitle": "Mehr Wirkung statt mehr Werbung",
+        "description": "Ein überzeugender digitaler Auftritt reduziert Zweifel, steigert Anfragen und hebt Ihre Wahrnehmung deutlich an."
+      }
+    ]
+  },
+  {
+    "_id": "2",
+    "title": "Premium Websites für etablierte Unternehmen",
+    "location": "Für Firmen mit Anspruch, Wachstum und klaren Zielen",
+    "card": [
+      {
+        "subtitle": "Seriosität auf höchstem Niveau",
+        "description": "Websites für Unternehmen, die professionell auftreten, Vertrauen stärken und ihre Marktposition sichtbar unterstreichen möchten."
+      },
+      {
+        "subtitle": "Digitale Autorität statt gewöhnlicher Präsenz",
+        "description": "Wir gestalten Auftritte, die nicht nur modern aussehen, sondern Kompetenz, Stabilität und Klasse kommunizieren."
+      },
+      {
+        "subtitle": "Für Unternehmen, die weiter sind als der Durchschnitt",
+        "description": "Ideal für Anbieter, die online genauso stark wirken möchten wie im realen Geschäftsleben."
+      }
+    ]
+  },
+  {
+    "_id": "3",
+    "title": "Markenpräsenz mit Charakter",
+    "location": "Für Beauty, Fashion, Lifestyle, Design und Personal Brands",
+    "card": [
+      {
+        "subtitle": "Wiedererkennbar statt austauschbar",
+        "description": "Wir entwickeln digitale Markenauftritte mit Stil, Persönlichkeit und visueller Stärke."
+      },
+      {
+        "subtitle": "Luxus beginnt mit Wahrnehmung",
+        "description": "Ein hochwertiger Look erzeugt sofort mehr Wertgefühl, Vertrauen und Begehrlichkeit bei Ihrer Zielgruppe."
+      },
+      {
+        "subtitle": "Für Marken, die Emotionen verkaufen",
+        "description": "Besonders geeignet für Branchen, in denen Stil, Ästhetik und Status über Kaufentscheidungen mitentscheiden."
+      }
+    ]
+  },
+  {
+    "_id": "4",
+    "title": "Relaunch für ein höheres Niveau",
+    "location": "Für Unternehmen, die ihrem alten Auftritt entwachsen sind",
+    "card": [
+      {
+        "subtitle": "Wenn Ihre Website Sie klein wirken lässt",
+        "description": "Wir verwandeln veraltete Auftritte in moderne, starke und vertrauenswürdige digitale Markenbilder."
+      },
+      {
+        "subtitle": "Mehr Klasse. Mehr Klarheit. Mehr Wirkung.",
+        "description": "Ein Relaunch verbessert Design, Positionierung und Außenwirkung gleichzeitig."
+      },
+      {
+        "subtitle": "Der richtige Schritt vor dem nächsten Wachstum",
+        "description": "Ideal für Unternehmen, die spüren, dass ihr aktueller Online-Auftritt nicht mehr ihrem Niveau entspricht."
+      }
+    ]
+  },
+  {
+    "_id": "5",
+    "title": "Sichtbarkeit für wertvolle Kunden",
+    "location": "Für Unternehmen, die gezielt gefunden werden möchten",
+    "card": [
+      {
+        "subtitle": "Nicht nur online sein – gefunden werden",
+        "description": "Wir schaffen Websites mit sauberer Struktur, schneller Performance und klarer SEO-Basis."
+      },
+      {
+        "subtitle": "Mehr Reichweite mit Qualität",
+        "description": "Sichtbarkeit zieht die richtigen Menschen an – nicht nur mehr Klicks, sondern bessere Anfragen."
+      },
+      {
+        "subtitle": "Besonders wertvoll für lokale Anbieter",
+        "description": "Ideal für Unternehmen, die in ihrer Region dominanter, professioneller und präsenter wirken wollen."
+      }
+    ]
+  },
+  {
+    "_id": "6",
+    "title": "Exklusive Lösungen für anspruchsvolle Kunden",
+    "location": "Für besondere Marken, Premium-Dienstleister und hohe Standards",
+    "card": [
+      {
+        "subtitle": "Kein Template. Kein Durchschnitt.",
+        "description": "Individuelle digitale Konzepte für Kunden, die keine gewöhnliche Website wollen, sondern einen Auftritt mit Substanz und Klasse."
+      },
+      {
+        "subtitle": "Diskrete Exklusivität statt lauter Effekte",
+        "description": "Wahre Premium-Wirkung zeigt sich in Präzision, Ruhe, Stil und kompromissloser Qualität."
+      },
+      {
+        "subtitle": "Wenn Ihr Auftritt Ihrem Status entsprechen soll",
+        "description": "Für Unternehmer und Marken, die bewusst ein höheres Niveau kommunizieren möchten."
+      }
+    ]
+  }
+]

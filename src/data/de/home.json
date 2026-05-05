@@ -1,0 +1,116 @@
+{
+  "hero": {
+    "kicker": "Premium Web Studio",
+    "titleFirst": "Websites, die ",
+    "titleSecond": "uberzeugen und verkaufen",
+    "description": "Wir entwickeln moderne Websites für Unternehmen, Experten und Marken.",
+    "tagline": "Minimal. Modern. Effektiv.",
+    "primaryButton": "Kontakt",
+    "secondaryButton": "Portfolio"
+  },
+
+  "audience": {
+    "kicker": "Für wen wir arbeiten",
+    "title": "Für Selbstständige, Unternehmen und Marken mit Anspruch.",
+    "description": "Ob Einzelunternehmer, wachsendes Unternehmen oder etablierte Marke — wir entwickeln Websites für alle, die professioneller, stärker und überzeugender auftreten wollen.",
+    "items": [
+      {
+        "title": "Selbstständige",
+        "description": "Für alle, die professionell auftreten und Vertrauen aufbauen wollen."
+      },
+      {
+        "title": "Unternehmen",
+        "description": "Für Firmen, die klarer, stärker und hochwertiger wahrgenommen werden möchten."
+      },
+      {
+        "title": "Marken",
+        "description": "Für Brands, die Individualität, Stil und eine starke digitale Präsenz brauchen."
+      },
+      {
+        "title": "Individuelle Projekte",
+        "description": "Für besondere Konzepte, die mehr brauchen als eine gewöhnliche Website."
+      }
+    ]
+  },
+
+  "servicesSection": {
+    "kicker": "Leistungen",
+    "title": "Digitale Leistungen für Marken mit Anspruch",
+    "description": "Von starken Landingpages bis zu exklusiven Webauftritten entwickeln wir digitale Lösungen, die Vertrauen schaffen, Wirkung erzeugen und neue Kunden gewinnen."
+  },
+
+  "stats": {
+    "kicker": "Digitale Stärke",
+    "title": "Entwickelt für Sichtbarkeit, Vertrauen und Wachstum",
+    "description": "Wir verbinden Design, Struktur und klare Kommunikation zu einem digitalen Auftritt, der hochwertig wirkt und langfristig unterstützt.",
+    "items": [
+      {
+        "value": "100%",
+        "label": "Custom Design",
+        "description": "Jede Website wird individuell gestaltet — ohne generische Templates."
+      },
+      {
+        "value": "24/7",
+        "label": "Digitale Präsenz",
+        "description": "Ihr Unternehmen bleibt online sichtbar, erreichbar und professionell präsent."
+      },
+      {
+        "value": "360°",
+        "label": "Ganzheitlicher Blick",
+        "description": "Design, Struktur, Vertrauen und Nutzerführung werden zusammen gedacht."
+      }
+    ]
+  },
+
+  "portfolio": {
+    "kicker": "Portfolio",
+    "title": "Entdecken Sie unsere Arbeiten",
+    "description": "Ausgewählte Projekte, die zeigen, wie wir Ästhetik, Strategie und Performance zu einer digitalen Präsenz auf Premium-Niveau verbinden.",
+    "button": "Portfolio ansehen",
+    "items": [
+      {
+        "title": "Immo Tonn",
+        "description": "Hochwertige Immobilien-Website mit klarem Aufbau, professioneller Objektpräsentation und starkem Vertrauenseffekt für Kauf und Verkauf.",
+        "imageVariant": "first",
+        "image": "/images/projects/immo-tonn.png",
+        "href": "https://immo-tonn.de/"
+      },
+      {
+        "title": "TLSG Studio",
+        "description": "Moderner digitaler Auftritt für ein Musik- und Sounddesign-Studio mit Fokus auf Markenwirkung, Klarheit und kreativer Identität.",
+        "imageVariant": "second",
+        "image": "/images/projects/tlsg.png",
+        "href": "https://tlsglabel.com/"
+      },
+      {
+        "title": "Pizzeria",
+        "description": "Moderner Webauftritt für eine Pizzeria mit Fokus auf klare Struktur, visuelle Ästhetik und einfache Online-Bestellung. Projekt befindet sich aktuell noch in Entwicklung.",
+        "imageVariant": "first",
+        "image": "/images/projects/pizzeria.png",
+        "href": "https://pizzalanding-tetl.vercel.app/"
+      },
+      {
+        "title": "Massage Studio",
+        "description": "Beruhigende Website für ein Massage-Angebot mit klarer Nutzerführung, eleganter Service-Präsentation und vertrauensvoller Buchungsstruktur.",
+        "imageVariant": "first",
+        "image": "/images/projects/massage.png",
+        "href": "https://massage-landing-swart.vercel.app/#services"
+      },
+      {
+        "title": "BeautyTime",
+        "description": "Eleganter Online-Auftritt für einen Beauty-Salon in Köln mit Premium-Look, klarer Angebotsstruktur und starker lokaler Wirkung.",
+        "imageVariant": "second",
+        "image": "/images/projects/beautytime.png",
+        "href": "https://beautylanding1.vercel.app/de/index.html"
+      }
+    ]
+  },
+
+  "cta": {
+    "kicker": "Starten wir",
+    "title": "Bereit, gemeinsam etwas Starkes aufzubauen?",
+    "description": "Wir entwickeln Websites, die hochwertig aussehen, Vertrauen schaffen und Ihr Unternehmen digital klar positionieren.",
+    "primaryButton": "Projekt starten",
+    "secondaryButton": "Individuelles Angebot"
+  }
+}

@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .section-title {
+    @apply text-center text-lightLarge font-normal tracking-[0.5px] md:text-large xl:text-extraLarge;
+  }
+
+  .section-subtitle {
+    @apply text-2xl font-normal leading-8 tracking-[0.5px] md:text-medium xl:text-large xl:leading-[1.2] xl:tracking-[0.2px];
+  }
+
+  .text {
+    @apply text-sm leading-5 tracking-[0.2px] xl:text-base xl:leading-6;
+  }
+
+  .caption {
+    @apply text-xl leading-7 tracking-[0.5px] xl:text-2xl;
+  }
+
+  .info {
+    @apply text-sm leading-4 tracking-[0.2px];
+  }
+
+  .transition {
+    @apply transition-all duration-300 ease-out;
+  }
+}
+
+/* GLASS EFFECT */
+
+.glass {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+
+/* MARQUEE */
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 100s linear infinite;
+}
+
+.reverse .marquee-track {
+  animation-direction: reverse;
+}
+
+.marquee-word {
+  margin: 0 5px;
+  font-size: 52px;
+  font-family: var(--font-tenor);
+
+  white-space: nowrap;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+/* animation */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* GOLD SHIMMER ANIMATION */
+
+/* GOLD SHIMMER ANIMATION */
+
+.shimmer {
+  position: absolute;
+  left: -200px;
+  top: -2px;
+
+  width: 200px;
+  height: 6px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 215, 0, 0.4),
+    rgba(255, 215, 0, 1),
+    rgba(255, 215, 0, 0.4),
+    transparent
+  );
+
+  filter: blur(2px);
+
+  box-shadow:
+    0 0 12px rgba(255, 215, 0, 0.9),
+    0 0 30px rgba(255, 215, 0, 0.7),
+    0 0 60px rgba(255, 215, 0, 0.5);
+
+  animation: shimmerMove 2.8s linear infinite;
+}
+
+@keyframes shimmerMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(100vw + 200px));
+  }
+}
