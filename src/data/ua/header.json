@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "href": "/#portfolio",
+    "href": "/portfolio",
     "title": "Портфоліо"
   },
   {
     "id": 2,
-    "href": "/#services",
+    "href": "/services",
     "title": "Послуги"
   },
   {

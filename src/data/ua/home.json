@@ -72,24 +72,35 @@
         "title": "Immo Tonn",
         "description": "Преміальний сайт нерухомості з чіткою структурою, професійною подачею об'єктів та сильним ефектом довіри.",
         "imageVariant": "first",
+        "image": "/images/projects/immo-tonn.png",
         "href": "https://immo-tonn.de/"
       },
       {
         "title": "TLSG Studio",
         "description": "Сучасна цифрова присутність для музичної студії з фокусом на бренд, стиль і креативність.",
         "imageVariant": "second",
+        "image": "/images/projects/tlsg.png",
         "href": "https://tlsglabel.com/"
+      },
+      {
+        "title": "Піцерія",
+        "description": "Сучасний вебсайт для піцерії з акцентом на чітку структуру, візуальну привабливість та зручне оформлення замовлення. Проєкт наразі ще в розробці.",
+        "imageVariant": "first",
+        "image": "/images/projects/pizzeria.png",
+        "href": "https://pizzalanding-tetl.vercel.app/"
       },
       {
         "title": "Massage Studio",
         "description": "Спокійний сайт для масажних послуг з елегантною подачею та зручною структурою запису.",
         "imageVariant": "first",
+        "image": "/images/projects/massage.png",
         "href": "https://massage-landing-swart.vercel.app/#services"
       },
       {
         "title": "BeautyTime",
         "description": "Елегантний сайт для салону краси в Кельні з premium стилем та сильним локальним ефектом.",
         "imageVariant": "second",
+        "image": "/images/projects/beautytime.png",
         "href": "https://beautylanding1.vercel.app/de/index.html"
       }
     ]

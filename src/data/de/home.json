@@ -72,24 +72,35 @@
         "title": "Immo Tonn",
         "description": "Hochwertige Immobilien-Website mit klarem Aufbau, professioneller Objektpräsentation und starkem Vertrauenseffekt für Kauf und Verkauf.",
         "imageVariant": "first",
+        "image": "/images/projects/immo-tonn.png",
         "href": "https://immo-tonn.de/"
       },
       {
         "title": "TLSG Studio",
         "description": "Moderner digitaler Auftritt für ein Musik- und Sounddesign-Studio mit Fokus auf Markenwirkung, Klarheit und kreativer Identität.",
         "imageVariant": "second",
+        "image": "/images/projects/tlsg.png",
         "href": "https://tlsglabel.com/"
+      },
+      {
+        "title": "Pizzeria",
+        "description": "Moderner Webauftritt für eine Pizzeria mit Fokus auf klare Struktur, visuelle Ästhetik und einfache Online-Bestellung. Projekt befindet sich aktuell noch in Entwicklung.",
+        "imageVariant": "first",
+        "image": "/images/projects/pizzeria.png",
+        "href": "https://pizzalanding-tetl.vercel.app/"
       },
       {
         "title": "Massage Studio",
         "description": "Beruhigende Website für ein Massage-Angebot mit klarer Nutzerführung, eleganter Service-Präsentation und vertrauensvoller Buchungsstruktur.",
         "imageVariant": "first",
+        "image": "/images/projects/massage.png",
         "href": "https://massage-landing-swart.vercel.app/#services"
       },
       {
         "title": "BeautyTime",
         "description": "Eleganter Online-Auftritt für einen Beauty-Salon in Köln mit Premium-Look, klarer Angebotsstruktur und starker lokaler Wirkung.",
         "imageVariant": "second",
+        "image": "/images/projects/beautytime.png",
         "href": "https://beautylanding1.vercel.app/de/index.html"
       }
     ]
