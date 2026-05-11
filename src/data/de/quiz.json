@@ -1,0 +1,86 @@
+{
+  "quiz": {
+    "progress": "Frage",
+    "next": "Weiter",
+    "submit": "Senden",
+
+    "form": {
+      "title": "Kontaktdaten",
+
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "phone": "Telefonnummer",
+      "email": "E-Mail",
+
+      "success": "Anfrage erfolgreich gesendet",
+      "error": "Fehler beim Senden",
+
+      "required": "Pflichtfeld",
+      "invalidEmail": "Ungültige E-Mail-Adresse",
+      "invalidPhone": "Ungültige Telefonnummer"
+    },
+
+    "questions": [
+      {
+        "id": "websiteType",
+        "title": "Welche professionelle Website möchten Sie erstellen lassen?",
+        "options": [
+          "Landingpage",
+          "Unternehmenswebsite",
+          "Onlineshop",
+          "Individuelle Webentwicklung"
+        ]
+      },
+      {
+        "id": "clientType",
+        "title": "Für wen soll die Website erstellt werden?",
+        "options": [
+          "Privatperson",
+          "Freelancer / Selbstständig",
+          "Kleinunternehmen",
+          "Unternehmen / GmbH"
+        ]
+      },
+      {
+        "id": "content",
+        "title": "Verfügen Sie bereits über Inhalte für Ihre Website?",
+        "options": [
+          "Ja, alles vorhanden",
+          "Teilweise vorhanden",
+          "Content-Erstellung erforderlich"
+        ]
+      },
+      {
+        "id": "languages",
+        "title": "In welchen Sprachen soll Ihre Website verfügbar sein?",
+        "options": [
+          "1 Sprache",
+          "2 Sprachen",
+          "3+ Sprachen"
+        ]
+      },
+      {
+        "id": "design",
+        "title": "Benötigen Sie individuelles UX/UI Webdesign?",
+        "options": [
+          "Design vorhanden",
+          "Neues Design",
+          "Website Redesign"
+        ]
+      },
+      {
+        "id": "features",
+        "multiple": true,
+        "title": "Welche Funktionen soll Ihre Website enthalten?",
+        "options": [
+          "Kontaktformular",
+          "Terminbuchung",
+          "Preisrechner",
+          "CRM Integration",
+          "API Schnittstellen",
+          "Kundenportal"
+        ]
+      }
+    ]
+  }
+}

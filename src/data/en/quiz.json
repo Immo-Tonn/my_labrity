@@ -1,0 +1,86 @@
+{
+  "quiz": {
+    "progress": "Question",
+    "next": "Next",
+    "submit": "Send",
+
+    "form": {
+      "title": "Contact details",
+
+      "firstName": "First name",
+      "lastName": "Last name",
+      "phone": "Phone number",
+      "email": "Email",
+
+      "success": "Request sent successfully",
+      "error": "Failed to send request",
+
+      "required": "Required field",
+      "invalidEmail": "Invalid email address",
+      "invalidPhone": "Invalid phone number"
+    },
+
+    "questions": [
+      {
+        "id": "websiteType",
+        "title": "What type of professional website would you like to build?",
+        "options": [
+          "Landing page",
+          "Business website",
+          "Online store",
+          "Custom web development"
+        ]
+      },
+      {
+        "id": "clientType",
+        "title": "Who is this website for?",
+        "options": [
+          "Private person",
+          "Freelancer / Self-employed",
+          "Small business",
+          "Company / GmbH"
+        ]
+      },
+      {
+        "id": "content",
+        "title": "Do you already have content for your website?",
+        "options": [
+          "Everything is ready",
+          "Partially available",
+          "Need content creation"
+        ]
+      },
+      {
+        "id": "languages",
+        "title": "In which languages should your website be available?",
+        "options": [
+          "1 language",
+          "2 languages",
+          "3+ languages"
+        ]
+      },
+      {
+        "id": "design",
+        "title": "Do you need custom UX/UI design?",
+        "options": [
+          "Design ready",
+          "Need design",
+          "Website redesign"
+        ]
+      },
+      {
+        "id": "features",
+        "multiple": true,
+        "title": "What features should your website include?",
+        "options": [
+          "Contact form",
+          "Appointment booking",
+          "Price calculator",
+          "CRM Integration",
+          "API Integration",
+          "Client portal"
+        ]
+      }
+    ]
+  }
+}

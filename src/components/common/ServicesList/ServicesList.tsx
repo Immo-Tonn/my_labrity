@@ -10,7 +10,10 @@ import { getData } from '@/utils/getData';
 
 import type { Service } from './types';
 
+import { useQuiz } from '@/components/quiz/QuizProvider';
+
 export function ServicesList() {
+  const { openQuiz } = useQuiz();
   const { lang } = useLanguage();
 
   const [services, setServices] = useState<Service[]>([]);
@@ -90,8 +93,9 @@ export function ServicesList() {
 
             <Button
               tag="a"
+              onClick={openQuiz}
               accent={false}
-              href={common.btnContactsHref}
+              // href={common.btnContactsHref}
               className="
                 flex
                 min-h-[56px]

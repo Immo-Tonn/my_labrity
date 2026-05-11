@@ -2,6 +2,7 @@ import { LanguageProvider } from '@/utils/LanguageContext';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Montserrat, Tenor_Sans } from 'next/font/google';
+import QuizProvider from '@/components/quiz/QuizProvider';
 
 import { classnames } from '@/utils/classnames';
 import { Footer } from '@/layout/Footer';
@@ -55,11 +56,13 @@ export default function RootLayout({
         )}
       >
         <LanguageProvider>
+          <QuizProvider>
           <Header />
 
           <main className="flex-grow">{children}</main>
 
           <Footer name="" href="" ariaL="" />
+          </QuizProvider>
         </LanguageProvider>
       </body>
     </html>
