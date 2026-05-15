@@ -53,20 +53,12 @@
       {
         "id": "languages",
         "title": "In welchen Sprachen soll Ihre Website verfügbar sein?",
-        "options": [
-          "1 Sprache",
-          "2 Sprachen",
-          "3+ Sprachen"
-        ]
+        "options": ["1 Sprache", "2 Sprachen", "3+ Sprachen"]
       },
       {
         "id": "design",
         "title": "Benötigen Sie individuelles UX/UI Webdesign?",
-        "options": [
-          "Design vorhanden",
-          "Neues Design",
-          "Website Redesign"
-        ]
+        "options": ["Design vorhanden", "Neues Design", "Website Redesign"]
       },
       {
         "id": "features",

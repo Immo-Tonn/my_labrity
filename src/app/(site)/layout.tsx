@@ -57,11 +57,11 @@ export default function RootLayout({
       >
         <LanguageProvider>
           <QuizProvider>
-          <Header />
+            <Header />
 
-          <main className="flex-grow">{children}</main>
+            <main className="flex-grow">{children}</main>
 
-          <Footer name="" href="" ariaL="" />
+            <Footer name="" href="" ariaL="" />
           </QuizProvider>
         </LanguageProvider>
       </body>

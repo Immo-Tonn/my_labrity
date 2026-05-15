@@ -53,20 +53,12 @@
       {
         "id": "languages",
         "title": "In which languages should your website be available?",
-        "options": [
-          "1 language",
-          "2 languages",
-          "3+ languages"
-        ]
+        "options": ["1 language", "2 languages", "3+ languages"]
       },
       {
         "id": "design",
         "title": "Do you need custom UX/UI design?",
-        "options": [
-          "Design ready",
-          "Need design",
-          "Website redesign"
-        ]
+        "options": ["Design ready", "Need design", "Website redesign"]
       },
       {
         "id": "features",

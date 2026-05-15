@@ -29,9 +29,7 @@ export default function Quiz() {
   const [answers, setAnswers] = useState<QuizAnswers>({});
 
   if (completed) {
-    return (
-      <ContactForm quiz={quiz} answers={answers} />
-    );
+    return <ContactForm quiz={quiz} answers={answers} />;
   }
 
   const question = quiz.questions[step];
@@ -46,7 +44,7 @@ export default function Quiz() {
       });
 
       if (step < quiz.questions.length - 1) {
-        setTimeout(() => setStep((p) => p + 1), 150);
+        setTimeout(() => setStep(p => p + 1), 150);
       }
 
       return;
@@ -54,10 +52,10 @@ export default function Quiz() {
 
     const exists = current.includes(value);
 
-    setAnswers((prev) => ({
+    setAnswers(prev => ({
       ...prev,
       [question.id]: exists
-        ? current.filter((x) => x !== value)
+        ? current.filter(x => x !== value)
         : [...current, value],
     }));
   };
@@ -70,11 +68,7 @@ export default function Quiz() {
 
   return (
     <div className="p-8">
-
-      <button
-        onClick={closeQuiz}
-        className="absolute top-4 right-4"
-      >
+      <button onClick={closeQuiz} className="absolute right-4 top-4">
         ✕
       </button>
 
@@ -82,12 +76,9 @@ export default function Quiz() {
         {quiz.progress} {step + 1} / {quiz.questions.length}
       </p>
 
-      <h2 className="mb-8 text-3xl">
-        {question.title}
-      </h2>
+      <h2 className="mb-8 text-3xl">{question.title}</h2>
 
       <div className="grid gap-4">
-
         {question.options.map((option: string) => {
           const isSelected = selected.includes(option);
 
@@ -100,12 +91,12 @@ export default function Quiz() {
 
                 rounded-xl
                 border
-                p-4
-                text-left
-
-                transition-all duration-300
-
                 bg-white
+                p-4
+
+                text-left transition-all
+
+                duration-300
 
                 ${
                   isSelected
@@ -114,15 +105,14 @@ export default function Quiz() {
                 }
               `}
             >
-
               {/* 🔥 BASE DARK OVERLAY (как CTA button base) */}
               <span
                 className="
                   absolute inset-0
                   bg-black/5
                   opacity-0
-                  group-hover:opacity-100
-                  transition-opacity duration-300
+                  transition-opacity
+                  duration-300 group-hover:opacity-100
                 "
               />
 
@@ -141,12 +131,12 @@ export default function Quiz() {
 
                   opacity-0
 
-                  group-hover:opacity-100
                   group-hover:animate-[shine_1.1s_linear]
+                  group-hover:opacity-100
 
                   ${
                     isSelected
-                      ? 'opacity-100 animate-[shine_1.4s_linear_infinite]'
+                      ? 'animate-[shine_1.4s_linear_infinite] opacity-100'
                       : ''
                   }
 
@@ -155,14 +145,10 @@ export default function Quiz() {
               />
 
               {/* CONTENT */}
-              <span className="relative z-10">
-                {option}
-              </span>
-
+              <span className="relative z-10">{option}</span>
             </button>
           );
         })}
-
       </div>
 
       {step === quiz.questions.length - 1 && (
@@ -170,8 +156,8 @@ export default function Quiz() {
           onClick={finishQuiz}
           className="
             mt-8 w-full
-            border px-6 py-3
-            bg-black text-white
+            border bg-black px-6
+            py-3 text-white
           "
         >
           {quiz.next}
@@ -189,7 +175,6 @@ export default function Quiz() {
           }
         }
       `}</style>
-
     </div>
   );
 }

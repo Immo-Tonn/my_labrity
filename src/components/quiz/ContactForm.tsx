@@ -1,16 +1,10 @@
 'use client';
 
-import {
-  useEffect,
-  useState,
-} from 'react';
+import { useEffect, useState } from 'react';
 
 import { sendMessage } from '@/api/telegram';
 
-import {
-  ContactFormData,
-  QuizAnswers,
-} from './quiz.types';
+import { ContactFormData, QuizAnswers } from './quiz.types';
 
 import { useQuiz } from '@/components/quiz';
 
@@ -19,19 +13,14 @@ type Props = {
   answers: QuizAnswers;
 };
 
-export default function ContactForm({
-  quiz,
-  answers,
-}: Props) {
+export default function ContactForm({ quiz, answers }: Props) {
   const { closeQuiz } = useQuiz();
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
 
-  const [errors, setErrors] = useState<
-    Partial<ContactFormData>
-  >({});
+  const [errors, setErrors] = useState<Partial<ContactFormData>>({});
 
   const [form, setForm] = useState<ContactFormData>({
     firstName: '',
@@ -83,14 +72,9 @@ export default function ContactForm({
       .map((question: any, index: number) => {
         const selected = answers[question.id] || [];
 
-        const values = selected.length
-          ? selected.join('\n')
-          : '-';
+        const values = selected.length ? selected.join('\n') : '-';
 
-        return [
-          `${index + 1}. ${question.id}`,
-          values,
-        ].join('\n');
+        return [`${index + 1}. ${question.id}`, values].join('\n');
       })
       .join('\n\n');
   };
@@ -138,7 +122,7 @@ export default function ContactForm({
   const change =
     (field: keyof ContactFormData) =>
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      setForm((prev) => ({
+      setForm(prev => ({
         ...prev,
         [field]: e.target.value,
       }));
@@ -179,9 +163,7 @@ export default function ContactForm({
             placeholder={quiz.form.firstName}
             className={inputClass}
           />
-          {errors.firstName && (
-            <p className={errorClass}>{errors.firstName}</p>
-          )}
+          {errors.firstName && <p className={errorClass}>{errors.firstName}</p>}
         </div>
 
         <div>
@@ -191,9 +173,7 @@ export default function ContactForm({
             placeholder={quiz.form.lastName}
             className={inputClass}
           />
-          {errors.lastName && (
-            <p className={errorClass}>{errors.lastName}</p>
-          )}
+          {errors.lastName && <p className={errorClass}>{errors.lastName}</p>}
         </div>
 
         <div>
@@ -203,9 +183,7 @@ export default function ContactForm({
             placeholder={quiz.form.phone}
             className={inputClass}
           />
-          {errors.phone && (
-            <p className={errorClass}>{errors.phone}</p>
-          )}
+          {errors.phone && <p className={errorClass}>{errors.phone}</p>}
         </div>
 
         <div>
@@ -215,9 +193,7 @@ export default function ContactForm({
             placeholder={quiz.form.email}
             className={inputClass}
           />
-          {errors.email && (
-            <p className={errorClass}>{errors.email}</p>
-          )}
+          {errors.email && <p className={errorClass}>{errors.email}</p>}
         </div>
       </div>
 
