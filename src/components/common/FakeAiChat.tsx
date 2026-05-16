@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
+import ProjectCalculator from '@/components/common/ProjectCalculator';
 import { chatbotResponses } from '@/data/chatbotResponses';
 
 type Message = {
@@ -10,6 +11,7 @@ type Message = {
 };
 
 type Language = 'ru' | 'de';
+type ActiveMode = 'chat' | 'calculator';
 
 const detectLanguage = (message: string): Language => {
   return /[а-яё]/i.test(message) ? 'ru' : 'de';
@@ -51,14 +53,14 @@ const idleMessages = {
 
 const unknownResponses = {
   de: [
-    'Ich glaube, mein digitales Gehirn hat kurz geblinzelt 😄 Fragen Sie mich gerne zu Website, SEO, Preisen oder Kontakt.',
-    'Hmm, das habe ich nicht ganz verstanden 😄 Ich kann besser bei Fragen zu Websites, Landingpages oder SEO helfen.',
-    'Das klingt spannend, aber etwas geheimnisvoll 😄 Fragen Sie mich gerne zu Ihrem Website-Projekt.',
+    'Ich glaube, mein digitales Gehirn hat kurz geblinzelt 😄 Fragen Sie mich gerne zu Website, SEO, Preisen oder dem Projekt-Kalkulator.',
+    'Hmm, das habe ich nicht ganz verstanden 😄 Ich kann besser bei Fragen zu Websites, Landingpages, SEO oder Projektkosten helfen.',
+    'Das klingt spannend, aber etwas geheimnisvoll 😄 Für eine grobe Einschätzung können Sie den Projekt-Kalkulator nutzen.',
   ],
   ru: [
-    'Кажется, мой цифровой мозг на секунду задумался 😄 Спросите меня лучше про сайт, SEO, цены или контакт.',
-    'Я не совсем понял это сообщение 😄 Но я хорошо отвечаю на вопросы про сайты, лендинги и SEO.',
-    'Звучит загадочно 😄 Попробуйте спросить меня про ваш сайт или digital-проект.',
+    'Кажется, мой цифровой мозг на секунду задумался 😄 Спросите меня лучше про сайт, SEO, цену или калькулятор проекта.',
+    'Я не совсем понял это сообщение 😄 Но я хорошо отвечаю на вопросы про сайты, лендинги, SEO и примерную стоимость.',
+    'Звучит загадочно 😄 Для примерной оценки проекта можно использовать калькулятор.',
   ],
 };
 
@@ -68,13 +70,13 @@ const shortMessages = {
 };
 
 const longMessages = {
-  de: 'Das ist eine größere Frage 😄 Am besten schreiben Sie uns über das Kontaktformular, dann können wir gezielt antworten.',
-  ru: 'Это уже большой вопрос 😄 Лучше напишите нам через контактную форму, и мы ответим точнее.',
+  de: 'Das ist eine größere Frage 😄 Am besten nutzen Sie den Projekt-Kalkulator oder schreiben uns über das Kontaktformular.',
+  ru: 'Это уже большой вопрос 😄 Лучше пройти калькулятор проекта или написать нам через контактную форму.',
 };
 
 const ctaMessages = {
-  de: 'Wenn Sie möchten, können Sie direkt eine Anfrage über das Kontaktformular senden — dann kann das Team gezielt antworten.',
-  ru: 'Если хотите, можно сразу отправить заявку через контактную форму — так команда ответит точнее.',
+  de: 'Wenn Sie möchten, können Sie den Projekt-Kalkulator nutzen oder direkt eine Anfrage über das Kontaktformular senden.',
+  ru: 'Если хотите, можно пройти калькулятор проекта или сразу отправить заявку через контактную форму.',
 };
 
 const teaserMessages = [
@@ -85,6 +87,7 @@ const teaserMessages = [
 
 export default function FakeAiChat() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeMode, setActiveMode] = useState<ActiveMode>('chat');
   const [isTyping, setIsTyping] = useState(false);
   const [showTeaser, setShowTeaser] = useState(false);
 
@@ -132,7 +135,7 @@ export default function FakeAiChat() {
   }, [messages, isTyping]);
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen || activeMode !== 'chat') return;
     if (idleCountRef.current >= 3) return;
 
     if (idleTimerRef.current) {
@@ -158,7 +161,47 @@ export default function FakeAiChat() {
         window.clearTimeout(idleTimerRef.current);
       }
     };
-  }, [isOpen, messages]);
+  }, [isOpen, activeMode, messages]);
+
+  const getPriorityResponse = (message: string, language: Language) => {
+    const lower = message.toLowerCase();
+
+    if (
+      lower.includes('preis') ||
+      lower.includes('kosten') ||
+      lower.includes('kostet') ||
+      lower.includes('was kostet') ||
+      lower.includes('wie viel kostet') ||
+      lower.includes('angebot') ||
+      lower.includes('budget') ||
+      lower.includes('цена') ||
+      lower.includes('стоимость') ||
+      lower.includes('сколько стоит') ||
+      lower.includes('прайс') ||
+      lower.includes('бюджет')
+    ) {
+      return language === 'ru'
+        ? 'Стоимость зависит от объёма проекта, дизайна, количества страниц и функций. Для примерной оценки лучше пройти ✨ Projekt-Kalkulator или отправить заявку через контактную форму.'
+        : 'Die Kosten hängen vom Umfang, Design, der Seitenanzahl und den gewünschten Funktionen ab. Für eine grobe Einschätzung können Sie den ✨ Projekt-Kalkulator nutzen oder uns über das Kontaktformular schreiben.';
+    }
+
+    if (
+      lower.includes('dauer') ||
+      lower.includes('wie lange') ||
+      lower.includes('zeit') ||
+      lower.includes('wann fertig') ||
+      lower.includes('срок') ||
+      lower.includes('сколько времени') ||
+      lower.includes('как долго') ||
+      lower.includes('когда готово')
+    ) {
+      return language === 'ru'
+        ? 'Срок зависит от объёма проекта. Небольшой сайт можно сделать быстрее, а сложный проект с анимациями, SEO или базой данных требует больше времени.'
+        : 'Die Dauer hängt vom Projektumfang ab. Eine kleine Website kann schneller umgesetzt werden, ein größeres Projekt mit Animationen, SEO oder Datenbank braucht mehr Zeit.';
+    }
+
+    return null;
+  };
 
   const getFunnyResponse = (message: string, language: Language) => {
     const lower = message.toLowerCase();
@@ -280,6 +323,12 @@ export default function FakeAiChat() {
       return longMessages[language];
     }
 
+    const priorityResponse = getPriorityResponse(cleanMessage, language);
+
+    if (priorityResponse) {
+      return priorityResponse;
+    }
+
     const funnyResponse = getFunnyResponse(cleanMessage, language);
 
     if (funnyResponse) {
@@ -359,6 +408,15 @@ export default function FakeAiChat() {
     sendBotMessageWithDelay(botResponse);
   };
 
+  const openCalculator = () => {
+    setActiveMode('calculator');
+    setShowTeaser(false);
+  };
+
+  const backToChat = () => {
+    setActiveMode('chat');
+  };
+
   return (
     <>
       {showTeaser && !isOpen && (
@@ -380,10 +438,16 @@ export default function FakeAiChat() {
         <div className="fixed bottom-24 right-6 z-50 flex h-[520px] w-[350px] flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.18)]">
           <div className="flex items-start justify-between border-b border-neutral-200 bg-black px-5 py-4 text-white">
             <div>
-              <p className="font-semibold">Labrity Assistant</p>
+              <p className="font-semibold">
+                {activeMode === 'calculator'
+                  ? 'Labrity AI-Kalkulator'
+                  : 'Labrity Assistant'}
+              </p>
 
               <p className="text-sm text-white/70">
-                Online • Antworten auf kurze Fragen
+                {activeMode === 'calculator'
+                  ? 'AI • Projektanalyse'
+                  : 'Online • Antworten auf kurze Fragen'}
               </p>
             </div>
 
@@ -396,92 +460,111 @@ export default function FakeAiChat() {
             </button>
           </div>
 
-          <div className="flex flex-1 flex-col gap-3 overflow-y-auto px-4 py-4">
-            {messages.map((message, index) => (
-              <div
-                key={`${message.sender}-${index}`}
-                className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-6 ${
-                  message.sender === 'user'
-                    ? 'ml-auto bg-black text-white'
-                    : message.text === '👀👀👀'
-                      ? 'bg-neutral-100 px-5 py-4 text-[34px] leading-none text-black'
-                      : 'bg-neutral-100 text-black'
-                }`}
-              >
-                {message.text}
+          {activeMode === 'chat' ? (
+            <>
+              <div className="flex flex-1 flex-col overflow-y-auto px-4 py-4">
+                <div className="flex flex-col gap-3">
+                  {messages.map((message, index) => (
+                    <div
+                      key={`${message.sender}-${index}`}
+                      className={`max-w-[85%] whitespace-pre-line rounded-2xl px-4 py-3 text-sm leading-6 ${
+                        message.sender === 'user'
+                          ? 'ml-auto bg-black text-white'
+                          : message.text === '👀👀👀'
+                            ? 'bg-neutral-100 px-5 py-4 text-[34px] leading-none text-black'
+                            : 'bg-neutral-100 text-black'
+                      }`}
+                    >
+                      {message.text}
+                    </div>
+                  ))}
+
+                  {isTyping && (
+                    <div className="max-w-[85%] rounded-2xl bg-neutral-100 px-4 py-3 text-sm leading-6 text-black">
+                      <span className="inline-flex gap-1">
+                        <span className="animate-pulse">
+                          Assistant schreibt
+                        </span>
+                        <span className="animate-bounce">.</span>
+                        <span className="animate-bounce delay-100">.</span>
+                        <span className="animate-bounce delay-200">.</span>
+                      </span>
+                    </div>
+                  )}
+
+                  <div ref={messagesEndRef} />
+                </div>
               </div>
-            ))}
 
-            {isTyping && (
-              <div className="max-w-[85%] rounded-2xl bg-neutral-100 px-4 py-3 text-sm leading-6 text-black">
-                <span className="inline-flex gap-1">
-                  <span className="animate-pulse">Assistant schreibt</span>
-                  <span className="animate-bounce">.</span>
-                  <span className="animate-bounce delay-100">.</span>
-                  <span className="animate-bounce delay-200">.</span>
-                </span>
+              <div className="border-t border-neutral-200 p-3">
+                <div className="mb-3 flex flex-wrap gap-2">
+                  <button
+                    onClick={openCalculator}
+                    className="rounded-full border border-black bg-black px-3 py-1 text-xs text-white transition hover:opacity-90"
+                  >
+                    ✨ Projekt-Kalkulator
+                  </button>
+
+                  <button
+                    onClick={() =>
+                      handleSuggestedQuestion('Was kostet eine Website?')
+                    }
+                    className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-600 transition hover:border-black hover:text-black"
+                  >
+                    Preis
+                  </button>
+
+                  <button
+                    onClick={() => handleSuggestedQuestion('SEO')}
+                    className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-600 transition hover:border-black hover:text-black"
+                  >
+                    SEO
+                  </button>
+
+                  <button
+                    onClick={() => handleSuggestedQuestion('Portfolio')}
+                    className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-600 transition hover:border-black hover:text-black"
+                  >
+                    Portfolio
+                  </button>
+                </div>
+
+                <div className="flex gap-2">
+                  <input
+                    type="text"
+                    value={input}
+                    onChange={e => setInput(e.target.value)}
+                    onKeyDown={e => {
+                      if (e.key === 'Enter') {
+                        handleSend();
+                      }
+                    }}
+                    placeholder="Nachricht schreiben..."
+                    className="flex-1 rounded-xl border border-neutral-300 px-4 py-3 text-sm outline-none transition focus:border-black"
+                  />
+
+                  <button
+                    onClick={handleSend}
+                    disabled={isTyping}
+                    className="rounded-xl bg-black px-4 text-sm font-medium text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    Send
+                  </button>
+                </div>
               </div>
-            )}
-
-            <div ref={messagesEndRef} />
-          </div>
-
-          <div className="border-t border-neutral-200 p-3">
-            <div className="mb-3 flex flex-wrap gap-2">
+            </>
+          ) : (
+            <div className="flex flex-1 flex-col overflow-y-auto px-4 py-4">
               <button
-                onClick={() =>
-                  handleSuggestedQuestion('Was kostet eine Website?')
-                }
-                className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-600 transition hover:border-black hover:text-black"
+                onClick={backToChat}
+                className="mb-3 self-start rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs text-neutral-600 transition hover:border-black hover:text-black"
               >
-                Preis
+                ← Zurück zum Chat
               </button>
 
-              <button
-                onClick={() => handleSuggestedQuestion('SEO')}
-                className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-600 transition hover:border-black hover:text-black"
-              >
-                SEO
-              </button>
-
-              <button
-                onClick={() => handleSuggestedQuestion('Portfolio')}
-                className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-600 transition hover:border-black hover:text-black"
-              >
-                Portfolio
-              </button>
-
-              <button
-                onClick={() => handleSuggestedQuestion('Kontakt')}
-                className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-600 transition hover:border-black hover:text-black"
-              >
-                Kontakt
-              </button>
+              <ProjectCalculator />
             </div>
-
-            <div className="flex gap-2">
-              <input
-                type="text"
-                value={input}
-                onChange={e => setInput(e.target.value)}
-                onKeyDown={e => {
-                  if (e.key === 'Enter') {
-                    handleSend();
-                  }
-                }}
-                placeholder="Nachricht schreiben..."
-                className="flex-1 rounded-xl border border-neutral-300 px-4 py-3 text-sm outline-none transition focus:border-black"
-              />
-
-              <button
-                onClick={handleSend}
-                disabled={isTyping}
-                className="rounded-xl bg-black px-4 text-sm font-medium text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
-              >
-                Send
-              </button>
-            </div>
-          </div>
+          )}
         </div>
       )}
     </>
