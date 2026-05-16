@@ -106,6 +106,34 @@
     ]
   },
 
+  "faq": {
+    "kicker": "FAQ",
+    "title": "Häufig gestellte Fragen",
+    "description": "Antworten auf die wichtigsten Fragen rund um moderne Websites, Entwicklung und digitale Präsenz.",
+    "items": [
+      {
+        "question": "Wie viel kostet eine professionelle Website?",
+        "answer": "Die Kosten hängen vom Umfang, Design und den gewünschten Funktionen ab. Jede Website wird individuell geplant."
+      },
+      {
+        "question": "Wie lange dauert die Entwicklung einer Website?",
+        "answer": "Je nach Projektumfang dauert die Entwicklung in der Regel zwischen wenigen Tagen und mehreren Wochen."
+      },
+      {
+        "question": "Arbeiten Sie mit kleinen Unternehmen und Selbstständigen?",
+        "answer": "Ja. Wir entwickeln Websites sowohl für Selbstständige als auch für Unternehmen und Marken."
+      },
+      {
+        "question": "Ist die Website für Smartphones optimiert?",
+        "answer": "Ja. Alle Websites werden responsive entwickelt und funktionieren auf Smartphones, Tablets und Desktop-Geräten."
+      },
+      {
+        "question": "Entwickeln Sie Websites mit Next.js und React?",
+        "answer": "Ja. Wir arbeiten mit modernen Technologien wie Next.js, React und performanten Frontend-Lösungen."
+      }
+    ]
+  },
+
   "cta": {
     "kicker": "Starten wir",
     "title": "Bereit, gemeinsam etwas Starkes aufzubauen?",
