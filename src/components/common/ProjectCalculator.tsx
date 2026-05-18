@@ -2,8 +2,6 @@
 
 import { useMemo, useState } from 'react';
 
-import { sendMessage } from '@/api/telegram';
-
 type QuizAnswer = {
   label: string;
   value: string;
@@ -219,11 +217,7 @@ const quizQuestions: QuizQuestion[] = [
     answers: [
       { label: 'Kontaktformular', value: 'Kontaktformular', weight: 1 },
       { label: 'WhatsApp / Telefon', value: 'WhatsApp / Telefon', weight: 1 },
-      {
-        label: 'Formular + Email',
-        value: 'Formular + Email',
-        weight: 2,
-      },
+      { label: 'Formular + Email', value: 'Formular + Email', weight: 2 },
       { label: 'Buchung / Kalender', value: 'Buchung / Kalender', weight: 4 },
       { label: 'Nicht sicher', value: 'Nicht sicher', weight: 1 },
     ],
@@ -422,32 +416,36 @@ const quizQuestions: QuizQuestion[] = [
 const getEstimate = (score: number) => {
   if (score <= 20) {
     return {
-      title: 'Kleines Landingpage-Projekt',
+      title: 'Kompaktes Website-Projekt',
+      range: 'ca. 2.000€ – 3.500€',
       description:
-        'Das wirkt nach einem überschaubaren Website-Projekt mit klarer Struktur und eher einfachem Umfang.',
+        'Die AI erkennt ein eher kompaktes Website-Projekt mit überschaubarem Umfang, klarer Struktur und wenigen komplexen Funktionen.',
     };
   }
 
   if (score <= 42) {
     return {
-      title: 'Moderne Business-Website',
+      title: 'Professionelle Business-Website',
+      range: 'ca. 4.000€ – 7.000€',
       description:
-        'Das wirkt nach einer professionellen Website mit individuellem Design, mehreren Inhalten und wichtigen Grundfunktionen.',
+        'Die AI erkennt ein professionelles Website-Projekt mit individuellem Design, mehreren Inhalten, guter Struktur und wichtigen Grundfunktionen.',
     };
   }
 
   if (score <= 65) {
     return {
       title: 'Individuelles Premium-Projekt',
+      range: 'ca. 8.000€ – 14.000€',
       description:
-        'Das wirkt nach einem anspruchsvolleren Projekt mit Design, SEO, mehreren Seiten, Content-Arbeit oder erweiterten Funktionen.',
+        'Die AI erkennt ein anspruchsvolleres Premium-Projekt mit Design-Komplexität, SEO-Anforderungen, Content-Arbeit oder erweiterten Funktionen.',
     };
   }
 
   return {
-    title: 'Komplexe individuelle Lösung',
+    title: 'Komplexe individuelle Web-Lösung',
+    range: 'ab ca. 15.000€',
     description:
-      'Das wirkt nach einem größeren Projekt mit besonderen Funktionen, Shop, Login, Datenbank, Integrationen oder Premium-Design.',
+      'Die AI erkennt ein größeres individuelles Projekt mit Shop, Login, Datenbank, Integrationen, Premium-Design oder komplexerer technischer Architektur.',
   };
 };
 
@@ -456,9 +454,6 @@ export default function ProjectCalculator() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [score, setScore] = useState(0);
-  const [isPrepared, setIsPrepared] = useState(false);
-  const [isSending, setIsSending] = useState(false);
-  const [sendError, setSendError] = useState('');
 
   const currentQuestion = quizQuestions[step];
   const isFinished = step >= quizQuestions.length;
@@ -473,38 +468,6 @@ export default function ProjectCalculator() {
 
     setScore(prev => prev + answer.weight);
     setStep(prev => prev + 1);
-    setSendError('');
-  };
-
-  const handlePrepareRequest = async () => {
-    try {
-      setIsSending(true);
-      setSendError('');
-
-      const formattedAnswers = Object.entries(answers)
-        .map(([key, value]) => {
-          const question = quizQuestions.find(item => item.key === key);
-
-          return `${question?.label || key}: ${value}`;
-        })
-        .join('%0A');
-
-      const message =
-        `🤖 Neue AI-Projektanfrage von Labrity%0A%0A` +
-        `AI-Einschätzung: ${estimate.title}%0A` +
-        `Score: ${score}%0A%0A` +
-        `${formattedAnswers}`;
-
-      await sendMessage(message);
-
-      setIsPrepared(true);
-    } catch {
-      setSendError(
-        'Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut.',
-      );
-    } finally {
-      setIsSending(false);
-    }
   };
 
   const resetQuiz = () => {
@@ -512,9 +475,6 @@ export default function ProjectCalculator() {
     setStep(0);
     setAnswers({});
     setScore(0);
-    setIsPrepared(false);
-    setIsSending(false);
-    setSendError('');
   };
 
   if (!isStarted) {
@@ -535,7 +495,7 @@ export default function ProjectCalculator() {
           <div className="mb-3">
             <div className="mb-2 flex items-center justify-between gap-3">
               <p className="text-xs font-semibold text-black">
-                ✨ Projekt-Kalkulator
+                ✨ AI-Projektanalyse
               </p>
 
               <p className="text-[11px] text-neutral-400">
@@ -570,21 +530,43 @@ export default function ProjectCalculator() {
       ) : (
         <>
           <p className="mb-2 text-xs font-semibold text-black">
-            ✅ AI-Einschätzung abgeschlossen
+            ✅ AI-Marktanalyse abgeschlossen
           </p>
 
           <div className="mb-4 rounded-2xl border border-neutral-200 bg-white p-4">
             <p className="text-sm font-semibold text-black">{estimate.title}</p>
+
+            <p className="mt-2 text-2xl font-semibold text-black">
+              {estimate.range}
+            </p>
 
             <p className="mt-2 text-xs leading-5 text-neutral-600">
               {estimate.description}
             </p>
           </div>
 
+          <div className="mb-4 rounded-2xl border border-neutral-200 bg-white p-4">
+            <p className="mb-2 text-xs font-semibold text-black">
+              AI-basierte Marktanalyse
+            </p>
+
+            <p className="text-xs leading-5 text-neutral-600">
+              Diese Preisspanne wurde vom AI-Assistenten anhand typischer
+              Marktpreise deutscher Webstudios, Projektumfang,
+              Design-Komplexität, SEO-Anforderungen, Funktionen und moderner
+              Website-Standards eingeordnet.
+            </p>
+
+            <p className="mt-2 text-xs leading-5 text-neutral-500">
+              Die angezeigte Range ist eine grobe Markt-Orientierung und kein
+              finales Angebot von Labrity.
+            </p>
+          </div>
+
           <p className="mb-3 text-xs leading-5 text-neutral-500">
-            Diese Einschätzung wurde automatisch vom AI-Assistenten erstellt und
-            ist nur eine grobe Orientierung. Für ein genaues Angebot prüft das
-            Labrity-Team Ihre Antworten persönlich.
+            Für Ihre individuelle Labrity-Einschätzung, mögliche Rabatte und ein
+            konkretes Angebot können Sie uns direkt über das Kontaktformular
+            kontaktieren.
           </p>
 
           <div className="space-y-1 rounded-xl bg-white p-3 text-xs text-neutral-600">
@@ -599,50 +581,21 @@ export default function ProjectCalculator() {
             })}
           </div>
 
-          {!isPrepared ? (
-            <div className="mt-4 flex flex-col gap-2">
-              <button
-                onClick={handlePrepareRequest}
-                disabled={isSending}
-                className="rounded-xl bg-black px-4 py-3 text-sm font-medium text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
-              >
-                {isSending
-                  ? 'Anfrage wird gesendet...'
-                  : 'Anfrage an Labrity-Team senden'}
-              </button>
+          <div className="mt-4 flex flex-col gap-2">
+            <a
+              href="/contact"
+              className="rounded-xl bg-black px-4 py-3 text-center text-sm font-medium text-white transition hover:opacity-90"
+            >
+              Individuelle Labrity-Preise anfragen
+            </a>
 
-              <button
-                onClick={resetQuiz}
-                className="rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-600 transition hover:border-black hover:text-black"
-              >
-                Neu starten
-              </button>
-
-              {sendError && (
-                <p className="text-xs leading-5 text-red-600">{sendError}</p>
-              )}
-            </div>
-          ) : (
-            <div className="mt-4 rounded-xl border border-neutral-200 bg-white p-3">
-              <p className="text-sm font-semibold text-black">
-                AI-Anfrage gesendet ✅
-              </p>
-
-              <p className="mt-2 text-xs leading-5 text-neutral-600">
-                Ihre Anfrage wurde erfolgreich an das Labrity-Team gesendet. Der
-                AI-Assistent hat Ihre Angaben vorstrukturiert, damit unser Team
-                Ihr Projekt besser einschätzen kann. Wir prüfen alles persönlich
-                und melden uns mit einer passenden Rückmeldung.
-              </p>
-
-              <button
-                onClick={resetQuiz}
-                className="mt-3 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-600 transition hover:border-black hover:text-black"
-              >
-                Neue AI-Einschätzung starten
-              </button>
-            </div>
-          )}
+            <button
+              onClick={resetQuiz}
+              className="rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-600 transition hover:border-black hover:text-black"
+            >
+              Neue AI-Analyse starten
+            </button>
+          </div>
         </>
       )}
     </div>

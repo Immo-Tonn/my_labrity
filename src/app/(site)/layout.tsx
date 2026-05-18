@@ -8,6 +8,7 @@ import { Footer } from '@/layout/Footer';
 import { Header } from '@/layout/Header';
 import meta from '@/data/de/meta.json';
 import FakeAiChat from '@/components/common/FakeAiChat';
+import LiveActivity from '@/components/common/LiveActivity';
 
 const montserrat = Montserrat({
   subsets: ['cyrillic', 'latin'],
@@ -151,6 +152,8 @@ export default function RootLayout({
           <main className="flex-grow">{children}</main>
 
           <Footer name="" href="" ariaL="" />
+
+          <LiveActivity />
 
           <FakeAiChat />
         </LanguageProvider>

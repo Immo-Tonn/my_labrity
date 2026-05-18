@@ -24,7 +24,7 @@ const getRandomItem = (items: string[]) => {
 const repeatedMessageResponses = {
   de: [
     'Diese Nachricht kommt mir bekannt vor 😄 Testen Sie mich gerade?',
-    'Déjà-vu im Chat 😄 Ich glaube, das hatten wir schon.',
+    '😄 Ich glaube, das hatten wir schon.',
     'Noch einmal? 😄 Ich bin wach, versprochen.',
   ],
   ru: [
@@ -165,7 +165,23 @@ export default function FakeAiChat() {
 
   const getPriorityResponse = (message: string, language: Language) => {
     const lower = message.toLowerCase();
-
+    if (
+      lower.includes('website erstellen') ||
+      lower.includes('webseite erstellen') ||
+      lower.includes('homepage erstellen') ||
+      lower.includes('seite erstellen') ||
+      lower.includes('ich möchte eine website') ||
+      lower.includes('ich brauche eine website') ||
+      lower.includes('neue website') ||
+      lower.includes('сделать сайт') ||
+      lower.includes('создать сайт') ||
+      lower.includes('нужен сайт') ||
+      lower.includes('хочу сайт')
+    ) {
+      return language === 'ru'
+        ? 'Отлично 😊 Мы можем помочь с созданием сайта. Для примерной оценки проекта лучше пройти ✨ Projekt-Kalkulator или написать нам через контактную форму.'
+        : 'Sehr gerne 😊 Wir können Ihnen bei einer neuen Website helfen. Für eine erste Einschätzung können Sie den ✨ Projekt-Kalkulator nutzen oder uns über das Kontaktformular schreiben.';
+    }
     if (
       lower.includes('preis') ||
       lower.includes('kosten') ||
@@ -435,7 +451,7 @@ export default function FakeAiChat() {
       </button>
 
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-50 flex h-[520px] w-[350px] flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.18)]">
+        <div className="fixed bottom-20 left-4 right-4 z-50 flex h-[min(520px,calc(100dvh-120px))] flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.18)] md:bottom-24 md:left-auto md:right-6 md:w-[350px]">
           <div className="flex items-start justify-between border-b border-neutral-200 bg-black px-5 py-4 text-white">
             <div>
               <p className="font-semibold">
@@ -540,13 +556,13 @@ export default function FakeAiChat() {
                       }
                     }}
                     placeholder="Nachricht schreiben..."
-                    className="flex-1 rounded-xl border border-neutral-300 px-4 py-3 text-sm outline-none transition focus:border-black"
+                    className="min-w-0 flex-1 rounded-xl border border-neutral-300 px-4 py-3 text-base outline-none transition focus:border-black md:text-sm"
                   />
 
                   <button
                     onClick={handleSend}
                     disabled={isTyping}
-                    className="rounded-xl bg-black px-4 text-sm font-medium text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="shrink-0 rounded-xl bg-black px-4 text-sm font-medium text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     Send
                   </button>
