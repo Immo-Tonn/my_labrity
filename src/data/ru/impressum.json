@@ -1,0 +1,54 @@
+[
+  {
+    "_id": "1",
+    "title": "Поставщик услуг",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Labrity\nВладелец: Andreas Tonn\nSessendrupweg 54\n48161 Münster\nГермания"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "2",
+    "title": "Контактные данные",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "E-mail: tonn_andreas@web.de\nТелефон: +49 174 345 44 19"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "3",
+    "title": "Ответственный за контент",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "Ответственный за контент согласно § 18 Abs. 2 MStV:\nAndreas Tonn\nSessendrupweg 54\n48161 Münster\nГермания"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "4",
+    "title": "Источники изображений",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "На этом сайте используются собственные материалы, дизайнерские элементы и, при необходимости, бесплатные лицензионные изображения."
+          }
+        ]
+      }
+    ]
+  }
+]

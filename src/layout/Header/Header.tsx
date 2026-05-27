@@ -74,7 +74,7 @@ export function Header() {
     document.body.style.overflow = 'auto';
   };
 
-  const languages = ['ua', 'en', 'de'];
+  const languages = ['ua', 'en', 'de', 'ru'];
 
   return (
     <header
@@ -99,7 +99,7 @@ export function Header() {
           {languages.map((l, index) => (
             <div key={l} className="flex items-center">
               <button
-                onClick={() => setLang(l as 'ua' | 'en' | 'de')}
+                onClick={() => setLang(l as 'ua' | 'en' | 'de' | 'ru')}
                 className={classnames(
                   'relative px-2 transition-colors duration-300',
                   lang === l

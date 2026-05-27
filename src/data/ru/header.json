@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "href": "/portfolio",
+    "title": "Портфолио"
+  },
+  {
+    "id": 2,
+    "href": "/services",
+    "title": "Услуги"
+  },
+  {
+    "id": 3,
+    "href": "/contact",
+    "title": "Контакты"
+  }
+]

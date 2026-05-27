@@ -1,0 +1,72 @@
+{
+  "metadataAdmin": {
+    "title": "Админ-панель — Labrity",
+    "description": "Админ-зона сайта Labrity"
+  },
+  "layout": {
+    "logo": {
+      "label": "Labrity",
+      "preloaderSubtitle": "Premium Web Studio"
+    },
+    "aria-label": {
+      "burger": "Открыть меню",
+      "btnClose": "Закрыть меню"
+    },
+    "titles": {
+      "services": "Наши услуги"
+    },
+    "footer": {
+      "web": "Сайт создан Labrity"
+    }
+  },
+  "buttonsText": {
+    "v1": "Начать проект",
+    "v2": "Посмотреть портфолио",
+    "v3": "Отправить"
+  },
+  "btnContactsHref": "/contact",
+  "socials": [
+    {
+      "name": "telegram",
+      "path": "#",
+      "ariaLabel": "Открыть Telegram"
+    },
+    {
+      "name": "instagram",
+      "path": "#",
+      "ariaLabel": "Открыть Instagram"
+    },
+    {
+      "name": "facebook",
+      "path": "#",
+      "ariaLabel": "Открыть Facebook"
+    }
+  ],
+  "notification": {
+    "error": {
+      "title": "Упс...",
+      "text": "Ваши данные не были отправлены. Попробуйте ещё раз позже."
+    },
+    "success": {
+      "title": "Спасибо!",
+      "text": "Ваш запрос успешно отправлен. Мы свяжемся с вами в ближайшее время."
+    }
+  },
+  "modal": {
+    "ariaLabel": "Закрыть модальное окно"
+  },
+  "footerLabelPolicy": "Политика конфиденциальности",
+  "footerLabelImpressum": "Импрессум",
+  "footer": [
+    {
+      "name": "company1",
+      "path": "#",
+      "ariaLabel": "Ссылка на сайт партнёра"
+    },
+    {
+      "name": "company2",
+      "path": "#",
+      "ariaLabel": "Ссылка на сайт партнёра"
+    }
+  ]
+}
