@@ -1,4 +1,27 @@
 {
+  "seo": {
+    "title": "Labrity Web Studio – Professionelle Websites für Unternehmen in Deutschland",
+    "description": "Labrity Web Studio entwickelt moderne, responsive und SEO-optimierte Websites für Unternehmen, Selbstständige, Dienstleister und Marken in Deutschland.",
+    "keywords": [
+      "Labrity",
+      "Labrity Web Studio",
+      "Webdesign Deutschland",
+      "Website erstellen lassen",
+      "professionelle Website",
+      "Website für Unternehmen",
+      "Website für Selbstständige",
+      "moderne Website",
+      "SEO optimierte Website",
+      "responsive Webdesign",
+      "Next.js Website",
+      "React Website",
+      "Premium Webdesign"
+    ],
+    "openGraphTitle": "Labrity Web Studio – Moderne Websites für Unternehmen",
+    "openGraphDescription": "Professionelle Websites mit modernem Design, klarer Struktur, SEO-Optimierung und starker digitaler Präsenz.",
+    "siteName": "Labrity Web Studio",
+    "locale": "de_DE"
+  },
   "hero": {
     "kicker": "Premium Web Studio",
     "titleFirst": "Websites, die ",
@@ -8,7 +31,6 @@
     "primaryButton": "Kontakt",
     "secondaryButton": "Portfolio"
   },
-
   "audience": {
     "kicker": "Für wen wir arbeiten",
     "title": "Für Selbstständige, Unternehmen und Marken mit Anspruch.",
@@ -32,41 +54,92 @@
       }
     ]
   },
-
   "servicesSection": {
     "kicker": "Leistungen",
     "title": "Digitale Leistungen für Marken mit Anspruch",
     "description": "Von starken Landingpages bis zu exklusiven Webauftritten entwickeln wir digitale Lösungen, die Vertrauen schaffen, Wirkung erzeugen und neue Kunden gewinnen."
   },
-
   "stats": {
     "kicker": "Digitale Stärke",
-    "title": "Entwickelt für Sichtbarkeit, Vertrauen und Wachstum",
-    "description": "Wir verbinden Design, Struktur und klare Kommunikation zu einem digitalen Auftritt, der hochwertig wirkt und langfristig unterstützt.",
+    "title": "Sichtbarkeit, Vertrauen und Wachstum — in einem System",
+    "description": "Wir entwickeln Websites, bei denen individuelles Design, permanente Online-Verfügbarkeit und eine ganzheitliche Struktur gemeinsam für eine starke digitale Präsenz arbeiten.",
     "items": [
       {
         "value": "100%",
-        "label": "Custom Design",
-        "description": "Jede Website wird individuell gestaltet — ohne generische Templates."
+        "label": "Individuelles Design",
+        "description": "Jede Website wird passend zu Business, Zielgruppe und Positionierung entwickelt — ohne generische Templates."
       },
       {
         "value": "24/7",
-        "label": "Digitale Präsenz",
-        "description": "Ihr Unternehmen bleibt online sichtbar, erreichbar und professionell präsent."
+        "label": "Online-Verfügbarkeit",
+        "description": "Ihre Website arbeitet dauerhaft für Ihr Unternehmen und hilft Kunden, Sie jederzeit online zu finden."
       },
       {
         "value": "360°",
-        "label": "Ganzheitlicher Blick",
-        "description": "Design, Struktur, Vertrauen und Nutzerführung werden zusammen gedacht."
+        "label": "Ganzheitlicher Ansatz",
+        "description": "Struktur, Design, Vertrauen, SEO und Nutzerführung werden als ein zusammenhängendes System gedacht."
       }
     ]
   },
-
   "portfolio": {
     "kicker": "Portfolio",
     "title": "Entdecken Sie unsere Arbeiten",
     "description": "Ausgewählte Projekte, die zeigen, wie wir Ästhetik, Strategie und Performance zu einer digitalen Präsenz auf Premium-Niveau verbinden.",
     "button": "Portfolio ansehen",
+    "topTags": [
+      "SEO READY",
+      "AI VISIBILITY",
+      "HIGH-END FRONTEND"
+    ],
+    "seoBlock": [
+      {
+        "kicker": "SEO OPTIMIZATION",
+        "title": "Entwickelt für moderne Sichtbarkeit."
+      },
+      {
+        "kicker": "AI VISIBILITY",
+        "title": "Optimiert für GPT und KI-Suche."
+      },
+      {
+        "kicker": "PERFORMANCE",
+        "title": "Schnell. Modern. Hochwertig."
+      }
+    ],
+    "marquee": [
+      "SEO OPTIMIZATION",
+      "AI VISIBILITY",
+      "PREMIUM WEBDESIGN",
+      "MODERNE DIGITALE PRÄSENZ",
+      "RESPONSIVE EXPERIENCE",
+      "HIGH-END FRONTEND",
+      "MINIMAL. MODERN. EFFEKTIV."
+    ],
+    "projectLabel": "Website Project",
+    "projectButton": "Projekt ansehen",
+    "projectTags": [
+      "SEO READY",
+      "AI OPTIMIERT",
+      "RESPONSIVE"
+    ],
+    "categories": {
+      "Immo Tonn": "Immobilien",
+      "TLSG Studio": "Musikindustrie",
+      "Pizzeria": "Restaurant",
+      "Massage Studio": "Wellness & Spa",
+      "BeautyTime": "Beautyindustrie",
+      "Werkstatt": "Automobilindustrie"
+    },
+    "blackSection": {
+      "kicker": "In Entwicklung",
+      "title": "Neue Premium Projekte",
+      "description": "Weitere moderne Business-Websites, digitale Markenauftritte und exklusive Projekte befinden sich derzeit in Entwicklung.",
+      "tags": [
+        "Brand Websites",
+        "SEO Struktur",
+        "AI Visibility"
+      ],
+      "status": "Stay Tuned"
+    },
     "items": [
       {
         "title": "Immo Tonn",
@@ -102,10 +175,16 @@
         "imageVariant": "second",
         "image": "/images/projects/beautytime.png",
         "href": "https://beautylanding1.vercel.app/de/index.html"
+      },
+      {
+        "title": "Werkstatt",
+        "description": "Moderner Webauftritt für eine KFZ-Werkstatt mit Fokus auf Vertrauen, klare Kommunikation und professionelle Service-Präsentation.",
+        "imageVariant": "second",
+        "image": "/images/projects/werk.png",
+        "href": "https://auto-service-landing-five.vercel.app/de"
       }
     ]
   },
-
   "faq": {
     "kicker": "FAQ",
     "title": "Häufig gestellte Fragen",
@@ -133,12 +212,34 @@
       }
     ]
   },
-
   "cta": {
     "kicker": "Starten wir",
     "title": "Bereit, gemeinsam etwas Starkes aufzubauen?",
     "description": "Wir entwickeln Websites, die hochwertig aussehen, Vertrauen schaffen und Ihr Unternehmen digital klar positionieren.",
     "primaryButton": "Projekt starten",
     "secondaryButton": "Individuelles Angebot"
+  },
+  "processPreview": {
+    "kicker": "Ablauf",
+    "title": "Ein klarer Prozess für ein starkes Ergebnis.",
+    "description": "Wir führen Ihr Projekt Schritt für Schritt — von der ersten Idee über Struktur und Design bis zum fertigen digitalen Auftritt.",
+    "button": "Ablauf ansehen",
+    "items": [
+      {
+        "title": "Analyse"
+      },
+      {
+        "title": "Struktur"
+      },
+      {
+        "title": "Design"
+      },
+      {
+        "title": "Entwicklung"
+      },
+      {
+        "title": "Launch"
+      }
+    ]
   }
 }

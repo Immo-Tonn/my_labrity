@@ -1,0 +1,476 @@
+{
+  "startButton": "✨ Start Project Calculator",
+  "analysisTitle": "✨ AI Project Analysis",
+  "finishedTitle": "✅ AI Market Analysis Completed",
+  "marketAnalysisTitle": "AI-based market analysis",
+  "marketAnalysisText": "This price range was estimated by the AI assistant based on typical market prices of German web studios, project scope, design complexity, SEO requirements, functions and modern website standards.",
+  "marketAnalysisNote": "The displayed range is a rough market orientation and not a final offer from Labrity.",
+  "contactText": "For your individual Labrity estimate, possible discounts and a concrete offer, you can contact us directly through the contact form.",
+  "contactButton": "Request individual Labrity pricing",
+  "restartButton": "Start new AI analysis",
+
+  "estimates": {
+    "compact": {
+      "title": "Compact Website Project",
+      "range": "ca. 2.000€ – 3.500€",
+      "description": "The AI recognizes a rather compact website project with manageable scope, clear structure and few complex functions."
+    },
+    "business": {
+      "title": "Professional Business Website",
+      "range": "ca. 4.000€ – 7.000€",
+      "description": "The AI recognizes a professional website project with individual design, several content sections, good structure and important basic functions."
+    },
+    "premium": {
+      "title": "Individual Premium Project",
+      "range": "ca. 8.000€ – 14.000€",
+      "description": "The AI recognizes a more demanding premium project with design complexity, SEO requirements, content work or extended functions."
+    },
+    "complex": {
+      "title": "Complex Individual Web Solution",
+      "range": "ab ca. 15.000€",
+      "description": "The AI recognizes a larger individual project with shop, login, database, integrations, premium design or more complex technical architecture."
+    }
+  },
+
+  "questions": [
+    {
+      "key": "business",
+      "label": "Business",
+      "question": "What kind of business do you have?",
+      "answers": [
+        { "label": "Self-employed", "value": "Self-employed", "weight": 1 },
+        { "label": "Small company", "value": "Small company", "weight": 1 },
+        { "label": "Brand / Studio", "value": "Brand / Studio", "weight": 2 },
+        { "label": "Online shop", "value": "Online shop", "weight": 4 },
+        { "label": "Not started yet", "value": "Not started yet", "weight": 1 }
+      ]
+    },
+    {
+      "key": "websiteType",
+      "label": "Website type",
+      "question": "What kind of website do you need?",
+      "answers": [
+        { "label": "Landing page", "value": "Landing page", "weight": 1 },
+        { "label": "Company website", "value": "Company website", "weight": 2 },
+        {
+          "label": "Portfolio / Personal brand",
+          "value": "Portfolio / Personal brand",
+          "weight": 2
+        },
+        { "label": "Online shop", "value": "Online shop", "weight": 5 },
+        { "label": "Not sure yet", "value": "Not sure yet", "weight": 1 }
+      ]
+    },
+    {
+      "key": "mainGoal",
+      "label": "Goal",
+      "question": "What is the main goal of the website?",
+      "answers": [
+        { "label": "More inquiries", "value": "More inquiries", "weight": 1 },
+        {
+          "label": "Premium presence",
+          "value": "Premium presence",
+          "weight": 2
+        },
+        { "label": "Sell online", "value": "Sell online", "weight": 5 },
+        {
+          "label": "Show information",
+          "value": "Show information",
+          "weight": 1
+        },
+        { "label": "Not sure yet", "value": "Not sure yet", "weight": 1 }
+      ]
+    },
+    {
+      "key": "existingWebsite",
+      "label": "Current website",
+      "question": "Do you already have a website?",
+      "answers": [
+        { "label": "No", "value": "No", "weight": 1 },
+        {
+          "label": "Yes, but it is okay",
+          "value": "Yes, but it is okay",
+          "weight": 0
+        },
+        {
+          "label": "Yes, needs redesign",
+          "value": "Yes, needs redesign",
+          "weight": 2
+        },
+        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+      ]
+    },
+    {
+      "key": "pages",
+      "label": "Number of pages",
+      "question": "How large should the website be?",
+      "answers": [
+        { "label": "1 page", "value": "1 page", "weight": 0 },
+        { "label": "2–5 pages", "value": "2–5 pages", "weight": 1 },
+        { "label": "6–10 pages", "value": "6–10 pages", "weight": 3 },
+        {
+          "label": "More than 10 pages",
+          "value": "More than 10 pages",
+          "weight": 5
+        },
+        { "label": "Not sure yet", "value": "Not sure yet", "weight": 1 }
+      ]
+    },
+    {
+      "key": "design",
+      "label": "Design style",
+      "question": "How should the design look?",
+      "answers": [
+        { "label": "Simple & clean", "value": "Simple & clean", "weight": 0 },
+        {
+          "label": "Minimal & modern",
+          "value": "Minimal & modern",
+          "weight": 1
+        },
+        {
+          "label": "Modern with animations",
+          "value": "Modern with animations",
+          "weight": 3
+        },
+        {
+          "label": "Premium / creative",
+          "value": "Premium / creative",
+          "weight": 4
+        },
+        { "label": "Not sure yet", "value": "Not sure yet", "weight": 1 }
+      ]
+    },
+    {
+      "key": "animations",
+      "label": "Animations",
+      "question": "Do you need animations or visual effects?",
+      "answers": [
+        { "label": "No", "value": "No", "weight": 0 },
+        {
+          "label": "Small animations",
+          "value": "Small animations",
+          "weight": 1
+        },
+        {
+          "label": "Many modern effects",
+          "value": "Many modern effects",
+          "weight": 4
+        },
+        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+      ]
+    },
+    {
+      "key": "references",
+      "label": "References",
+      "question": "Do you have example websites or references?",
+      "answers": [
+        {
+          "label": "Yes, clear examples",
+          "value": "Yes, clear examples",
+          "weight": 0
+        },
+        { "label": "A few ideas", "value": "A few ideas", "weight": 1 },
+        {
+          "label": "No, need consultation",
+          "value": "No, need consultation",
+          "weight": 2
+        },
+        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+      ]
+    },
+    {
+      "key": "content",
+      "label": "Content",
+      "question": "Who provides texts, images and videos?",
+      "answers": [
+        {
+          "label": "Everything is ready",
+          "value": "Everything is ready",
+          "weight": 0
+        },
+        { "label": "Partly ready", "value": "Partly ready", "weight": 2 },
+        { "label": "We need support", "value": "We need support", "weight": 4 },
+        { "label": "Not sure yet", "value": "Not sure yet", "weight": 2 }
+      ]
+    },
+    {
+      "key": "copywriting",
+      "label": "Texts",
+      "question": "Do you need help with website texts?",
+      "answers": [
+        {
+          "label": "No, texts are ready",
+          "value": "No, texts are ready",
+          "weight": 0
+        },
+        {
+          "label": "Texts need improvement",
+          "value": "Texts need improvement",
+          "weight": 2
+        },
+        {
+          "label": "Create texts completely",
+          "value": "Create texts completely",
+          "weight": 4
+        },
+        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+      ]
+    },
+    {
+      "key": "media",
+      "label": "Media",
+      "question": "Do you need photos, videos or a hero video?",
+      "answers": [
+        { "label": "No", "value": "No", "weight": 0 },
+        { "label": "Photos", "value": "Photos", "weight": 1 },
+        { "label": "Photos + videos", "value": "Photos + videos", "weight": 3 },
+        {
+          "label": "Hero video / Premium look",
+          "value": "Hero video / Premium look",
+          "weight": 4
+        },
+        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+      ]
+    },
+    {
+      "key": "branding",
+      "label": "Branding",
+      "question": "Do you already have a logo, colors and branding?",
+      "answers": [
+        {
+          "label": "Everything exists",
+          "value": "Everything exists",
+          "weight": 0
+        },
+        { "label": "Only logo", "value": "Only logo", "weight": 1 },
+        {
+          "label": "Develop everything new",
+          "value": "Develop everything new",
+          "weight": 4
+        },
+        { "label": "Not sure yet", "value": "Not sure yet", "weight": 2 }
+      ]
+    },
+    {
+      "key": "forms",
+      "label": "Contact / Leads",
+      "question": "How should clients contact you?",
+      "answers": [
+        { "label": "Contact form", "value": "Contact form", "weight": 1 },
+        {
+          "label": "WhatsApp / Phone",
+          "value": "WhatsApp / Phone",
+          "weight": 1
+        },
+        { "label": "Form + Email", "value": "Form + Email", "weight": 2 },
+        {
+          "label": "Booking / Calendar",
+          "value": "Booking / Calendar",
+          "weight": 4
+        },
+        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+      ]
+    },
+    {
+      "key": "functions",
+      "label": "Functions",
+      "question": "Do you need special functions?",
+      "answers": [
+        {
+          "label": "No, simple website",
+          "value": "Simple website",
+          "weight": 0
+        },
+        { "label": "Contact form", "value": "Contact form", "weight": 1 },
+        { "label": "Booking system", "value": "Booking system", "weight": 4 },
+        {
+          "label": "Login / Database",
+          "value": "Login / Database",
+          "weight": 6
+        },
+        {
+          "label": "Online payment / Shop",
+          "value": "Online payment / Shop",
+          "weight": 7
+        }
+      ]
+    },
+    {
+      "key": "editable",
+      "label": "Editing",
+      "question": "Do you want to edit content yourself later?",
+      "answers": [
+        { "label": "No", "value": "No", "weight": 0 },
+        {
+          "label": "Yes, simple changes",
+          "value": "Yes, simple changes",
+          "weight": 2
+        },
+        {
+          "label": "Yes, CMS / Admin area",
+          "value": "Yes, CMS / Admin area",
+          "weight": 5
+        },
+        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+      ]
+    },
+    {
+      "key": "languages",
+      "label": "Languages",
+      "question": "Do you need multiple languages?",
+      "answers": [
+        { "label": "Only English", "value": "Only English", "weight": 0 },
+        {
+          "label": "German + English",
+          "value": "German + English",
+          "weight": 2
+        },
+        { "label": "3 languages", "value": "3 languages", "weight": 3 },
+        { "label": "Multilingual", "value": "Multilingual", "weight": 5 },
+        { "label": "Not sure yet", "value": "Not sure yet", "weight": 1 }
+      ]
+    },
+    {
+      "key": "seo",
+      "label": "SEO",
+      "question": "How important is SEO / Google?",
+      "answers": [
+        { "label": "Very important", "value": "Very important", "weight": 4 },
+        { "label": "Medium", "value": "Medium", "weight": 1 },
+        { "label": "Later", "value": "Later", "weight": 1 },
+        { "label": "Not important", "value": "Not important", "weight": 0 }
+      ]
+    },
+    {
+      "key": "localSeo",
+      "label": "Local SEO",
+      "question": "Is local visibility important?",
+      "answers": [
+        {
+          "label": "Yes, Google Maps / local",
+          "value": "Yes, Google Maps / local",
+          "weight": 2
+        },
+        { "label": "No", "value": "No", "weight": 0 },
+        { "label": "Maybe later", "value": "Maybe later", "weight": 1 },
+        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+      ]
+    },
+    {
+      "key": "integrations",
+      "label": "Integrations",
+      "question": "Do you need external integrations?",
+      "answers": [
+        { "label": "No", "value": "No", "weight": 0 },
+        {
+          "label": "Google Maps / WhatsApp",
+          "value": "Google Maps / WhatsApp",
+          "weight": 1
+        },
+        {
+          "label": "Newsletter / CRM",
+          "value": "Newsletter / CRM",
+          "weight": 3
+        },
+        {
+          "label": "API / special systems",
+          "value": "API / special systems",
+          "weight": 6
+        },
+        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+      ]
+    },
+    {
+      "key": "legal",
+      "label": "Legal",
+      "question": "Do you need imprint, privacy policy or cookie notice?",
+      "answers": [
+        {
+          "label": "Yes, please consider it",
+          "value": "Yes, please consider it",
+          "weight": 1
+        },
+        {
+          "label": "Already available",
+          "value": "Already available",
+          "weight": 0
+        },
+        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+      ]
+    },
+    {
+      "key": "domain",
+      "label": "Domain",
+      "question": "Do you already have domain and hosting?",
+      "answers": [
+        { "label": "Yes", "value": "Yes", "weight": 0 },
+        { "label": "Only domain", "value": "Only domain", "weight": 1 },
+        { "label": "No, need help", "value": "No, need help", "weight": 2 },
+        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+      ]
+    },
+    {
+      "key": "launch",
+      "label": "Launch",
+      "question": "Do you need help with launch / deployment?",
+      "answers": [
+        { "label": "Yes", "value": "Yes", "weight": 2 },
+        { "label": "No", "value": "No", "weight": 0 },
+        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+      ]
+    },
+    {
+      "key": "support",
+      "label": "Support",
+      "question": "Do you need support after launch?",
+      "answers": [
+        { "label": "No", "value": "No", "weight": 0 },
+        { "label": "Small changes", "value": "Small changes", "weight": 1 },
+        { "label": "Regular support", "value": "Regular support", "weight": 3 },
+        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+      ]
+    },
+    {
+      "key": "timeline",
+      "label": "Start",
+      "question": "When would you like to start?",
+      "answers": [
+        {
+          "label": "As soon as possible",
+          "value": "As soon as possible",
+          "weight": 3
+        },
+        {
+          "label": "Within one month",
+          "value": "Within one month",
+          "weight": 2
+        },
+        { "label": "In 2–3 months", "value": "In 2–3 months", "weight": 1 },
+        { "label": "Still open", "value": "Still open", "weight": 0 }
+      ]
+    },
+    {
+      "key": "decision",
+      "label": "Decision",
+      "question": "How far is your decision?",
+      "answers": [
+        {
+          "label": "I want to start soon",
+          "value": "I want to start soon",
+          "weight": 2
+        },
+        {
+          "label": "I compare offers",
+          "value": "I compare offers",
+          "weight": 1
+        },
+        {
+          "label": "I am only getting information",
+          "value": "I am only getting information",
+          "weight": 0
+        },
+        { "label": "Not sure yet", "value": "Not sure yet", "weight": 0 }
+      ]
+    }
+  ]
+}

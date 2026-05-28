@@ -26,6 +26,10 @@ type AudienceItem = {
   description: string;
 };
 
+type ProcessPreviewItem = {
+  title: string;
+};
+
 type HomeData = {
   hero: {
     kicker: string;
@@ -52,6 +56,13 @@ type HomeData = {
     title: string;
     description: string;
     items: StatItem[];
+  };
+  processPreview: {
+    kicker: string;
+    title: string;
+    description: string;
+    button: string;
+    items: ProcessPreviewItem[];
   };
   portfolio: {
     kicker: string;
@@ -171,28 +182,43 @@ const fallbackHomeData: HomeData = {
 
   stats: {
     kicker: 'Digitale Stärke',
-    title: 'Entwickelt für Sichtbarkeit, Vertrauen und Wachstum',
+    title: 'Sichtbarkeit, Vertrauen und Wachstum — in einem System',
     description:
-      'Wir verbinden Design, Struktur und klare Kommunikation zu einem digitalen Auftritt, der hochwertig wirkt und langfristig unterstützt.',
+      'Wir entwickeln Websites, bei denen individuelles Design, permanente Online-Verfügbarkeit und eine ganzheitliche Struktur gemeinsam für eine starke digitale Präsenz arbeiten.',
     items: [
       {
         value: '100%',
-        label: 'Custom Design',
+        label: 'Individuelles Design',
         description:
-          'Jede Website wird individuell gestaltet — ohne generische Templates.',
+          'Jede Website wird passend zu Business, Zielgruppe und Positionierung entwickelt — ohne generische Templates.',
       },
       {
         value: '24/7',
-        label: 'Digitale Präsenz',
+        label: 'Online-Verfügbarkeit',
         description:
-          'Ihr Unternehmen bleibt online sichtbar, erreichbar und professionell präsent.',
+          'Ihre Website arbeitet dauerhaft für Ihr Unternehmen und hilft Kunden, Sie jederzeit online zu finden.',
       },
       {
         value: '360°',
-        label: 'Ganzheitlicher Blick',
+        label: 'Ganzheitlicher Ansatz',
         description:
-          'Design, Struktur, Vertrauen und Nutzerführung werden zusammen gedacht.',
+          'Struktur, Design, Vertrauen, SEO und Nutzerführung werden als ein zusammenhängendes System gedacht.',
       },
+    ],
+  },
+
+  processPreview: {
+    kicker: 'Ablauf',
+    title: 'Ein klarer Prozess für ein starkes Ergebnis.',
+    description:
+      'Wir führen Ihr Projekt Schritt für Schritt — von der ersten Idee über Struktur und Design bis zum fertigen digitalen Auftritt.',
+    button: 'Ablauf ansehen',
+    items: [
+      { title: 'Analyse' },
+      { title: 'Struktur' },
+      { title: 'Design' },
+      { title: 'Entwicklung' },
+      { title: 'Launch' },
     ],
   },
 
@@ -283,6 +309,14 @@ export default function Home() {
               : fallbackHomeData.stats.items,
           },
 
+          processPreview: {
+            ...fallbackHomeData.processPreview,
+            ...(data?.processPreview || {}),
+            items: data?.processPreview?.items?.length
+              ? data.processPreview.items
+              : fallbackHomeData.processPreview.items,
+          },
+
           portfolio: {
             ...fallbackHomeData.portfolio,
             ...(data?.portfolio || {}),
@@ -341,7 +375,13 @@ export default function Home() {
                   {content.hero.kicker}
                 </p>
 
-                <h1 className="font-tenor text-[52px] leading-[0.94] text-black md:text-[78px] xl:text-[124px]">
+                <h1
+                  className={`font-tenor leading-[0.96] text-black ${
+                    lang === 'ru' || lang === 'ua'
+                      ? 'text-[42px] md:text-[62px] xl:text-[88px]'
+                      : 'text-[48px] md:text-[72px] xl:text-[108px]'
+                  }`}
+                >
                   {content.hero.titleFirst}
                   <br />
                   {content.hero.titleSecond}
@@ -452,13 +492,13 @@ export default function Home() {
               {content.stats.items.map((item, index) => (
                 <div
                   key={`${item.value}-${index}`}
-                  className="group border border-transparent px-4 py-6 text-center transition duration-300 hover:border-[#e7e2d9] hover:bg-white/50 hover:shadow-[0_16px_36px_rgba(0,0,0,0.04)]"
+                  className="px-4 py-6 text-center"
                 >
-                  <p className="font-tenor text-[56px] leading-none text-black transition duration-300 group-hover:-translate-y-[2px] md:text-[72px] xl:text-[96px]">
+                  <p className="font-tenor text-[56px] leading-none text-black md:text-[72px] xl:text-[96px]">
                     <AnimatedStat value={item.value} />
                   </p>
 
-                  <p className="mt-4 font-montserrat text-sm font-medium text-[#18352b] md:text-base">
+                  <p className="mt-4 font-montserrat text-sm font-medium text-black md:text-base">
                     {item.label}
                   </p>
 
@@ -467,6 +507,53 @@ export default function Home() {
                   </p>
                 </div>
               ))}
+            </div>
+          </section>
+
+          {/* PROCESS PREVIEW */}
+          <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[140px]">
+            <div className="grid gap-12 xl:grid-cols-[0.85fr_1.15fr] xl:items-end xl:gap-20">
+              <div>
+                <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
+                  {content.processPreview.kicker}
+                </p>
+
+                <h2 className="font-tenor text-[38px] leading-[1.02] text-black md:text-[56px] xl:text-[78px]">
+                  {content.processPreview.title}
+                </h2>
+
+                <p className="mt-6 max-w-[620px] font-montserrat text-sm leading-7 text-neutral-600 md:text-base xl:text-lg">
+                  {content.processPreview.description}
+                </p>
+
+                <Link
+                  href="/process"
+                  className="mt-9 inline-flex min-h-[56px] items-center justify-center border border-black bg-black px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-[1px] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
+                >
+                  {content.processPreview.button}
+                </Link>
+              </div>
+
+              <div className="border-y border-[#e7e2d9]">
+                {content.processPreview.items.map((item, index) => (
+                  <div
+                    key={`${item.title}-${index}`}
+                    className="flex items-center justify-between border-b border-[#e7e2d9] py-5 last:border-b-0"
+                  >
+                    <div className="flex items-center gap-5">
+                      <span className="font-tenor text-[34px] leading-none text-black/20 md:text-[46px]">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+
+                      <span className="font-montserrat text-[12px] font-medium uppercase tracking-[0.24em] text-black">
+                        {item.title}
+                      </span>
+                    </div>
+
+                    <span className="h-px w-10 bg-black/20" />
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
 

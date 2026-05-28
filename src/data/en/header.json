@@ -2,7 +2,7 @@
   {
     "id": 1,
     "href": "/portfolio",
-    "title": "Work"
+    "title": "Projects"
   },
   {
     "id": 2,
@@ -11,6 +11,11 @@
   },
   {
     "id": 3,
+    "href": "/process",
+    "title": "Process"
+  },
+  {
+    "id": 4,
     "href": "/contact",
     "title": "Contact"
   }

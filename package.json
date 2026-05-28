@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@portabletext/react": "^3.0.13",
-    "framer-motion": "^12.35.0",
+    "framer-motion": "^12.40.0",
     "i18next": "^25.8.14",
     "next": "^14.2.35",
     "react": "^18",

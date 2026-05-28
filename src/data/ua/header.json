@@ -2,7 +2,7 @@
   {
     "id": 1,
     "href": "/portfolio",
-    "title": "Портфоліо"
+    "title": "Проєкти"
   },
   {
     "id": 2,
@@ -11,7 +11,12 @@
   },
   {
     "id": 3,
+    "href": "/process",
+    "title": "Процес"
+  },
+  {
+    "id": 4,
     "href": "/contact",
-    "title": "Контакти"
+    "title": "Контакт"
   }
 ]
