@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 
 import { ServicesList } from '@/components/common/ServicesList';
+import { useQuiz } from '@/components/quiz';
 import { useLanguage } from '@/utils/LanguageContext';
 import { getData } from '@/utils/getData';
 
@@ -42,6 +43,7 @@ const fallbackServicesData: ServicesPageData = {
 
 export default function ServicesPage() {
   const { lang } = useLanguage();
+  const { openQuiz } = useQuiz();
   const [services, setServices] = useState<ServicesPageData | null>(null);
 
   useEffect(() => {
@@ -154,12 +156,13 @@ export default function ServicesPage() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:mt-10">
-            <Link
-              href="/contact"
+            <button
+              type="button"
+              onClick={openQuiz}
               className="inline-flex min-h-[56px] items-center justify-center border border-white bg-white px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-black transition duration-300 hover:-translate-y-[1px]"
             >
               {content.cta.primaryButton}
-            </Link>
+            </button>
 
             <Link
               href="/contact"

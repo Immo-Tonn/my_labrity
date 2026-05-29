@@ -3,6 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Montserrat, Tenor_Sans } from 'next/font/google';
 
+import QuizProvider from '@/components/quiz/QuizProvider';
 import { classnames } from '@/utils/classnames';
 import { Footer } from '@/layout/Footer';
 import { Header } from '@/layout/Header';
@@ -147,15 +148,17 @@ export default function RootLayout({
         />
 
         <LanguageProvider>
-          <Header />
+          <QuizProvider>
+            <Header />
 
-          <main className="flex-grow">{children}</main>
+            <main className="flex-grow">{children}</main>
 
-          <Footer name="" href="" ariaL="" />
+            <Footer name="" href="" ariaL="" />
 
-          <LiveActivity />
+            <LiveActivity />
 
-          <FakeAiChat />
+            <FakeAiChat />
+          </QuizProvider>
         </LanguageProvider>
       </body>
     </html>
