@@ -1,0 +1,95 @@
+
+{
+  "quiz": {
+    "progress": "Question",
+    "next": "Next",
+    "submit": "Send",
+
+    "form": {
+      "title": "Contact details",
+      "description": "Please fill in your contact details",
+
+      "firstName": "First name",
+      "lastName": "Last name",
+      "phone": "Phone number",
+      "email": "Email",
+
+      "success": "Request sent successfully",
+      "error": "Failed to send request",
+
+      "required": "Required field",
+      "invalidEmail": "Invalid email address",
+      "invalidPhone": "Invalid phone number"
+    },
+
+    "questions": [
+      {
+        "id": "websiteType",
+        "title": "What type of website do you need?",
+        "options": [
+          "Simple presentation website",
+          "Business website",
+          "Online store",
+          "Custom solution",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "clientType",
+        "title": "Who is this website for?",
+        "options": [
+          "Private person",
+          "Freelancer / Self-employed",
+          "Small business",
+          "Company",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "content",
+        "title": "Do you already have texts or images for the website?",
+        "options": [
+          "Yes, everything is ready",
+          "Partially ready",
+          "Need help with content",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "languages",
+        "title": "How many languages should the website support?",
+        "options": [
+          "One language",
+          "Two languages",
+          "Three or more languages",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "design",
+        "title": "Do you need help with the website design?",
+        "options": [
+          "Design already exists",
+          "Need a new design",
+          "Redesign existing website",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "features",
+        "multiple": true,
+        "title": "What features would you like on the website?",
+        "options": [
+          "Contact form",
+          "Online appointment booking",
+          "Price calculator",
+          "Customer management",
+          "Connection with other services",
+          "Client account area",
+          "Not sure"
+        ]
+      }
+    ]
+  }
+}
+
