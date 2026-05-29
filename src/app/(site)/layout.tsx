@@ -1,166 +1,192 @@
-import { LanguageProvider } from '@/utils/LanguageContext';
-import './globals.css';
-import type { Metadata } from 'next';
-import { Montserrat, Tenor_Sans } from 'next/font/google';
 
-import QuizProvider from '@/components/quiz/QuizProvider';
-import { classnames } from '@/utils/classnames';
-import { Footer } from '@/layout/Footer';
-import { Header } from '@/layout/Header';
-import meta from '@/data/de/meta.json';
-import FakeAiChat from '@/components/common/FakeAiChat';
-import LiveActivity from '@/components/common/LiveActivity';
 
-const montserrat = Montserrat({
-  subsets: ['cyrillic', 'latin'],
-  weight: ['400', '600'],
-  display: 'swap',
-  variable: '--font-montserrat',
-});
+'use client';
 
-const tenor = Tenor_Sans({
-  subsets: ['cyrillic', 'latin'],
-  weight: '400',
-  display: 'swap',
-  variable: '--font-tenor',
-});
+import { useState } from 'react';
 
-const NEXT_PUBLIC_URL = process.env.NEXT_PUBLIC_URL as string;
+import { useLanguage } from '@/utils/LanguageContext';
+import { QuizAnswers } from './quiz.types';
 
-const structuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
+import ContactForm from './ContactForm';
 
-  name: 'Labrity',
+import deQuiz from '@/data/de/quiz.json';
+import enQuiz from '@/data/en/quiz.json';
+import uaQuiz from '@/data/ua/quiz.json';
+import ruQuiz from '@/data/ru/quiz.json';
 
-  url: NEXT_PUBLIC_URL,
+type QuizLanguage = 'de' | 'en' | 'ua' | 'ru';
 
-  logo: `${NEXT_PUBLIC_URL}/meta/logo.png`,
-
-  description:
-    'Professionelle moderne Websites für Unternehmen, Selbstständige und Marken in Deutschland.',
-
-  areaServed: {
-    '@type': 'Country',
-    name: 'Germany',
-  },
-
-  knowsAbout: [
-    'Webdesign',
-    'Next.js',
-    'SEO',
-    'Landingpages',
-    'Business Websites',
-    'React Development',
-  ],
+const quizzes: Record<QuizLanguage, typeof deQuiz> = {
+  de: deQuiz,
+  en: enQuiz,
+  ua: uaQuiz,
+  ru: ruQuiz,
 };
 
-const faqStructuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
+const supportedQuizLanguages: QuizLanguage[] = ['de', 'en', 'ua', 'ru'];
 
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Wie viel kostet eine professionelle Website?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Die Kosten hängen vom Umfang, Design und den gewünschten Funktionen ab. Jede Website wird individuell geplant.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Wie lange dauert die Entwicklung einer Website?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Je nach Projektumfang dauert die Entwicklung in der Regel zwischen wenigen Tagen und mehreren Wochen.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Arbeiten Sie mit kleinen Unternehmen und Selbstständigen?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Ja. Wir entwickeln Websites sowohl für Selbstständige als auch für Unternehmen und Marken.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Ist die Website für Smartphones optimiert?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Ja. Alle Websites werden responsive entwickelt und funktionieren auf Smartphones, Tablets und Desktop-Geräten.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Entwickeln Sie Websites mit Next.js und React?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Ja. Wir arbeiten mit modernen Technologien wie Next.js, React und performanten Frontend-Lösungen.',
-      },
-    },
-  ],
-};
+export default function Quiz() {
+  const { lang } = useLanguage();
 
-const { title, description, manifest, openGraph, icons } = meta;
+  const quizLang: QuizLanguage = supportedQuizLanguages.includes(
+    lang as QuizLanguage,
+  )
+    ? (lang as QuizLanguage)
+    : 'de';
 
-export const metadata: Metadata = {
-  title,
-  description,
-  icons,
-  manifest,
-  alternates: {
-    canonical: NEXT_PUBLIC_URL,
-  },
-  openGraph: {
-    ...openGraph,
-    url: NEXT_PUBLIC_URL,
-  },
-};
+  const quiz = quizzes[quizLang].quiz;
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  const [step, setStep] = useState(0);
+  const [completed, setCompleted] = useState(false);
+  const [answers, setAnswers] = useState<QuizAnswers>({});
+
+  if (completed) {
+    return <ContactForm quiz={quiz} answers={answers} />;
+  }
+
+  const question = quiz.questions[step];
+  const selected = answers[question.id] || [];
+
+  const select = (value: string) => {
+    const current = answers[question.id] || [];
+
+    if (!question.multiple) {
+      setAnswers(prev => ({
+        ...prev,
+        [question.id]: [value],
+      }));
+
+      return;
+    }
+
+    const exists = current.includes(value);
+
+    setAnswers(prev => ({
+      ...prev,
+      [question.id]: exists
+        ? current.filter(item => item !== value)
+        : [...current, value],
+    }));
+  };
+
+  const nextStep = () => {
+    if (step === quiz.questions.length - 1) {
+      setCompleted(true);
+      return;
+    }
+
+    setStep(prev => prev + 1);
+  };
+
   return (
-    <html lang="de" className="!scroll-smooth">
-      <body
-        className={classnames(
-          montserrat.variable,
-          tenor.variable,
-          'flex min-h-screen flex-col overflow-x-hidden bg-mainBcg',
-        )}
+    <div className="p-8">
+      <p className="mb-4 text-sm text-black/60">
+        {quiz.progress} {step + 1} / {quiz.questions.length}
+      </p>
+
+      <h2 className="mb-6 text-2xl font-medium">{question.title}</h2>
+
+      <div className="grid gap-3">
+        {question.options.map((option: string) => {
+          const isSelected = selected.includes(option);
+
+          return (
+            <button
+              key={option}
+              onClick={() => select(option)}
+              className={`
+                group relative overflow-hidden
+                rounded-xl border bg-white
+                px-4 py-3
+                text-left
+                transition-all duration-300
+                ${
+                  isSelected
+                    ? 'border-black'
+                    : 'border-[#e7e2d9] hover:border-black'
+                }
+              `}
+            >
+              <span
+                className={`
+                  absolute inset-0
+                  bg-black/5
+                  transition-opacity
+                  duration-300
+                  ${
+                    isSelected
+                      ? 'opacity-100'
+                      : 'opacity-0 group-hover:opacity-100'
+                  }
+                `}
+              />
+
+              <span
+                className={`
+                  pointer-events-none
+                  absolute inset-0
+                  -translate-x-[120%]
+                  skew-x-[-20deg]
+                  bg-gradient-to-r
+                  from-transparent
+                  via-white/80
+                  to-transparent
+                  opacity-0
+                  group-hover:animate-[shine_1.1s_linear]
+                  group-hover:opacity-100
+                  ${
+                    isSelected
+                      ? 'animate-[shine_1.4s_linear_infinite] opacity-100'
+                      : ''
+                  }
+                `}
+              />
+
+              <span className="relative z-10">{option}</span>
+            </button>
+          );
+        })}
+      </div>
+
+      <button
+        onClick={nextStep}
+        disabled={selected.length === 0}
+        className="
+          mt-8 w-full
+          border bg-black
+          px-5 py-2.5
+          text-white
+          transition-opacity
+          disabled:cursor-not-allowed
+          disabled:opacity-40
+        "
       >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
-        />
+        {quiz.next}
+      </button>
 
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqStructuredData),
-          }}
-        />
+      <style jsx global>{`
+        @keyframes shine {
+          0% {
+            transform: translateX(-120%) skewX(-20deg);
+          }
 
-        <LanguageProvider>
-          <QuizProvider>
-            <Header />
-
-            <main className="flex-grow">{children}</main>
-
-            <Footer name="" href="" ariaL="" />
-
-            <LiveActivity />
-
-            <FakeAiChat />
-          </QuizProvider>
-        </LanguageProvider>
-      </body>
-    </html>
+          100% {
+            transform: translateX(220%) skewX(-20deg);
+          }
+        }
+      `}</style>
+    </div>
   );
 }
+
+
+
+
+
+
+
+    
+
+
+  
+         

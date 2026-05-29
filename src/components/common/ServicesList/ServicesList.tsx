@@ -11,7 +11,10 @@ import { getData } from '@/utils/getData';
 
 import type { Service } from './types';
 
+import { useQuiz } from '@/components/quiz/QuizProvider';
+
 export function ServicesList() {
+  const { openQuiz } = useQuiz();
   const { lang } = useLanguage();
   const { openQuiz } = useQuiz();
 
