@@ -1,8 +1,32 @@
 {
+  "seo": {
+    "title": "Labrity Web Studio – Professional Websites for Businesses in Germany",
+    "description": "Labrity Web Studio creates modern, responsive and SEO-optimized websites for companies, freelancers, service providers and brands in Germany.",
+    "keywords": [
+      "Labrity",
+      "Labrity Web Studio",
+      "web design Germany",
+      "professional website",
+      "website for businesses",
+      "website for freelancers",
+      "modern website",
+      "SEO optimized website",
+      "responsive web design",
+      "Next.js website",
+      "React website",
+      "premium web design",
+      "website development Germany"
+    ],
+    "openGraphTitle": "Labrity Web Studio – Modern Websites for Businesses",
+    "openGraphDescription": "Professional websites with modern design, clear structure, SEO optimization and a strong digital presence.",
+    "siteName": "Labrity Web Studio",
+    "locale": "en_US"
+  },
+
   "hero": {
     "kicker": "Premium Web Studio",
-    "titleFirst": "Websites,",
-    "titleSecond": "that sell",
+    "titleFirst": "Websites that",
+    "titleSecond": "convince and convert",
     "description": "We create modern websites for businesses, experts and brands.",
     "tagline": "Minimal. Modern. Effective.",
     "primaryButton": "Contact",
@@ -41,23 +65,47 @@
 
   "stats": {
     "kicker": "Digital Strength",
-    "title": "Built for Visibility, Trust and Growth",
-    "description": "We combine design, structure and clear communication into a digital presence that looks premium and supports long-term growth.",
+    "title": "Visibility, trust and growth — in one system",
+    "description": "We create websites where custom design, constant online availability and a complete structure work together to build a strong digital presence.",
     "items": [
       {
         "value": "100%",
         "label": "Custom Design",
-        "description": "Every website is individually created — no generic templates."
+        "description": "Every website is created around the business, audience and positioning — without generic templates."
       },
       {
         "value": "24/7",
-        "label": "Digital Presence",
-        "description": "Your business stays visible, reachable and professional online at all times."
+        "label": "Online Availability",
+        "description": "Your website works for your business continuously and helps clients find you at any time."
       },
       {
         "value": "360°",
-        "label": "Complete Strategy",
-        "description": "Design, trust, structure and user experience are developed together."
+        "label": "Complete Approach",
+        "description": "Structure, design, trust, SEO and the user journey are developed as one connected system."
+      }
+    ]
+  },
+
+  "processPreview": {
+    "kicker": "Process",
+    "title": "A clear process for a strong result.",
+    "description": "We guide your project step by step — from the first idea through structure and design to a finished digital presence.",
+    "button": "View Process",
+    "items": [
+      {
+        "title": "Analysis"
+      },
+      {
+        "title": "Structure"
+      },
+      {
+        "title": "Design"
+      },
+      {
+        "title": "Development"
+      },
+      {
+        "title": "Launch"
       }
     ]
   },
@@ -67,6 +115,56 @@
     "title": "Discover Our Work",
     "description": "Selected projects showing how we combine aesthetics, strategy and performance into a premium digital presence.",
     "button": "View Portfolio",
+
+    "topTags": ["SEO READY", "AI VISIBILITY", "HIGH-END FRONTEND"],
+
+    "seoBlock": [
+      {
+        "kicker": "SEO OPTIMIZATION",
+        "title": "Built for modern visibility."
+      },
+      {
+        "kicker": "AI VISIBILITY",
+        "title": "Optimized for GPT and AI search."
+      },
+      {
+        "kicker": "PERFORMANCE",
+        "title": "Fast. Modern. Premium."
+      }
+    ],
+
+    "marquee": [
+      "SEO OPTIMIZATION",
+      "AI VISIBILITY",
+      "PREMIUM WEBDESIGN",
+      "MODERN DIGITAL PRESENCE",
+      "RESPONSIVE EXPERIENCE",
+      "HIGH-END FRONTEND",
+      "MINIMAL. MODERN. EFFECTIVE."
+    ],
+
+    "projectLabel": "Website Project",
+    "projectButton": "View Project",
+
+    "projectTags": ["SEO READY", "AI OPTIMIZED", "RESPONSIVE"],
+
+    "categories": {
+      "Immo Tonn": "Real Estate",
+      "TLSG Studio": "Music Industry",
+      "Pizzeria": "Restaurant",
+      "Massage Studio": "Wellness & Spa",
+      "BeautyTime": "Beauty Industry",
+      "Werkstatt": "Automotive Industry"
+    },
+
+    "blackSection": {
+      "kicker": "In Development",
+      "title": "New Premium Projects",
+      "description": "More modern business websites, digital brand experiences and exclusive projects are currently in development.",
+      "tags": ["Brand Websites", "SEO Structure", "AI Visibility"],
+      "status": "Stay Tuned"
+    },
+
     "items": [
       {
         "title": "Immo Tonn",
@@ -102,6 +200,13 @@
         "imageVariant": "second",
         "image": "/images/projects/beautytime.png",
         "href": "https://beautylanding1.vercel.app/de/index.html"
+      },
+      {
+        "title": "Werkstatt",
+        "description": "Modern website for an automotive workshop focused on trust, clear communication and professional service presentation.",
+        "imageVariant": "second",
+        "image": "/images/projects/werk.png",
+        "href": "https://auto-service-landing-five.vercel.app/de"
       }
     ]
   },

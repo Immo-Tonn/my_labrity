@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "kicker": "Контакт",
+    "title": "Расскажите нам о вашем проекте",
+    "description": "Новый сайт, редизайн или полноценное цифровое присутствие — мы будем рады вашей заявке."
+  },
+  "sidebar": {
+    "kicker": "Labrity",
+    "title": "Давайте обсудим ваш проект.",
+    "description": "Мы создаём цифровые решения, которые выглядят дорого, вызывают доверие и помогают вашему бизнесу выделяться онлайн.",
+    "contacts": [
+      {
+        "label": "hello@labrity.com",
+        "href": "mailto:hello@labrity.com"
+      },
+      {
+        "label": "Instagram",
+        "href": "#"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "#"
+      }
+    ]
+  },
+  "form": {
+    "fields": [
+      {
+        "name": "firstName",
+        "label": "Имя",
+        "type": "text",
+        "placeholder": "Ваше имя"
+      },
+      {
+        "name": "lastName",
+        "label": "Фамилия",
+        "type": "text",
+        "placeholder": "Ваша фамилия"
+      },
+      {
+        "name": "email",
+        "label": "E-mail",
+        "type": "email",
+        "placeholder": "name@example.com"
+      },
+      {
+        "name": "phone",
+        "label": "Телефон / WhatsApp",
+        "type": "tel",
+        "placeholder": "+49 123 456789"
+      },
+      {
+        "name": "message",
+        "label": "Сообщение",
+        "type": "textarea",
+        "placeholder": "Кратко опишите ваш проект или запрос"
+      }
+    ],
+    "submitLabel": "Отправить заявку",
+    "note": "Обычно мы отвечаем в течение 24–48 часов."
+  },
+  "errors": {
+    "firstNameRequired": "Пожалуйста, введите ваше имя.",
+    "firstNameMin": "Минимум 2 символа.",
+    "firstNameMax": "Максимум 40 символов.",
+    "firstNamePattern": "Пожалуйста, введите корректное имя.",
+    "lastNameRequired": "Пожалуйста, введите вашу фамилию.",
+    "lastNameMin": "Минимум 2 символа.",
+    "lastNameMax": "Максимум 40 символов.",
+    "lastNamePattern": "Пожалуйста, введите корректную фамилию.",
+    "emailRequired": "Пожалуйста, введите ваш e-mail.",
+    "emailPattern": "Пожалуйста, введите корректный e-mail.",
+    "phoneRequired": "Пожалуйста, введите ваш номер телефона.",
+    "phonePattern": "Пожалуйста, введите корректный номер телефона.",
+    "phoneMin": "Минимум 7 символов.",
+    "phoneMax": "Максимум 20 символов.",
+    "messageRequired": "Пожалуйста, напишите сообщение.",
+    "messageMin": "Сообщение должно содержать минимум 10 символов.",
+    "messageMax": "Максимум 1000 символов.",
+    "privacyRequired": "Пожалуйста, подтвердите согласие с политикой конфиденциальности."
+  },
+  "checkbox": {
+    "label": "Я согласен/согласна на обработку моих персональных данных согласно ",
+    "linkLabel": "политике конфиденциальности",
+    "href": "/datenschutz"
+  },
+  "successMessage": "Спасибо! Ваша заявка успешно отправлена."
+}
