@@ -7,15 +7,41 @@ export default function QuizModal() {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-50">
-      <div className="absolute inset-0 bg-black/60" onClick={closeQuiz} />
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      {/* BACKDROP */}
+      <div
+        className="absolute inset-0 bg-black/60"
+        onClick={closeQuiz}
+      />
 
-      <div className="absolute right-0 top-0 h-full w-full overflow-auto bg-white md:w-[720px]">
-        <button onClick={closeQuiz} className="absolute right-4 top-4">
+      {/* MODAL */}
+      <div
+        className="
+          relative z-10
+          w-full max-w-[720px]
+
+          overflow-hidden
+          rounded-2xl
+
+          bg-white
+          shadow-2xl
+        "
+      >
+        {/* CLOSE */}
+        <button
+          onClick={closeQuiz}
+          className="
+            absolute right-4 top-4 z-20
+            text-2xl leading-none
+          "
+        >
           ✕
         </button>
 
-        <Quiz />
+        {/* SCROLL AREA */}
+        <div className="max-h-[90vh] overflow-auto">
+          <Quiz />
+        </div>
       </div>
     </div>
   );

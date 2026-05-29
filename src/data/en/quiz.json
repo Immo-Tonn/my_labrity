@@ -1,3 +1,4 @@
+
 {
   "quiz": {
     "progress": "Question",
@@ -6,6 +7,7 @@
 
     "form": {
       "title": "Contact details",
+      "description": "Please fill in your contact details",
 
       "firstName": "First name",
       "lastName": "Last name",
@@ -23,12 +25,13 @@
     "questions": [
       {
         "id": "websiteType",
-        "title": "What type of professional website would you like to build?",
+        "title": "What type of website do you need?",
         "options": [
-          "Landing page",
+          "Simple presentation website",
           "Business website",
           "Online store",
-          "Custom web development"
+          "Custom solution",
+          "Not sure"
         ]
       },
       {
@@ -38,41 +41,55 @@
           "Private person",
           "Freelancer / Self-employed",
           "Small business",
-          "Company / GmbH"
+          "Company",
+          "Not sure"
         ]
       },
       {
         "id": "content",
-        "title": "Do you already have content for your website?",
+        "title": "Do you already have texts or images for the website?",
         "options": [
-          "Everything is ready",
-          "Partially available",
-          "Need content creation"
+          "Yes, everything is ready",
+          "Partially ready",
+          "Need help with content",
+          "Not sure"
         ]
       },
       {
         "id": "languages",
-        "title": "In which languages should your website be available?",
-        "options": ["1 language", "2 languages", "3+ languages"]
+        "title": "How many languages should the website support?",
+        "options": [
+          "One language",
+          "Two languages",
+          "Three or more languages",
+          "Not sure"
+        ]
       },
       {
         "id": "design",
-        "title": "Do you need custom UX/UI design?",
-        "options": ["Design ready", "Need design", "Website redesign"]
+        "title": "Do you need help with the website design?",
+        "options": [
+          "Design already exists",
+          "Need a new design",
+          "Redesign existing website",
+          "Not sure"
+        ]
       },
       {
         "id": "features",
         "multiple": true,
-        "title": "What features should your website include?",
+        "title": "What features would you like on the website?",
         "options": [
           "Contact form",
-          "Appointment booking",
+          "Online appointment booking",
           "Price calculator",
-          "CRM Integration",
-          "API Integration",
-          "Client portal"
+          "Customer management",
+          "Connection with other services",
+          "Client account area",
+          "Not sure"
         ]
       }
     ]
   }
 }
+

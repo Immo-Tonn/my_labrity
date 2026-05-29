@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 import { useLanguage } from '@/utils/LanguageContext';
 import { QuizAnswers } from './quiz.types';
-import { useQuiz } from '@/components/quiz';
 
 import ContactForm from './ContactForm';
 
@@ -20,7 +19,6 @@ const quizzes = {
 
 export default function Quiz() {
   const { lang } = useLanguage();
-  const { closeQuiz } = useQuiz();
 
   const quiz = quizzes[lang].quiz;
 
@@ -34,22 +32,22 @@ export default function Quiz() {
 
   const question = quiz.questions[step];
 
+  const selected = answers[question.id] || [];
+
   const select = (value: string) => {
     const current = answers[question.id] || [];
 
+    // SINGLE CHOICE
     if (!question.multiple) {
-      setAnswers({
-        ...answers,
+      setAnswers(prev => ({
+        ...prev,
         [question.id]: [value],
-      });
-
-      if (step < quiz.questions.length - 1) {
-        setTimeout(() => setStep(p => p + 1), 150);
-      }
+      }));
 
       return;
     }
 
+    // MULTIPLE CHOICE
     const exists = current.includes(value);
 
     setAnswers(prev => ({
@@ -60,25 +58,26 @@ export default function Quiz() {
     }));
   };
 
-  const finishQuiz = () => {
-    setCompleted(true);
-  };
+  const nextStep = () => {
+    if (step === quiz.questions.length - 1) {
+      setCompleted(true);
+      return;
+    }
 
-  const selected = answers[question.id] || [];
+    setStep(prev => prev + 1);
+  };
 
   return (
     <div className="p-8">
-      <button onClick={closeQuiz} className="absolute right-4 top-4">
-        ✕
-      </button>
-
-      <p className="mb-4">
+      <p className="mb-4 text-sm text-black/60">
         {quiz.progress} {step + 1} / {quiz.questions.length}
       </p>
 
-      <h2 className="mb-8 text-3xl">{question.title}</h2>
+      <h2 className="mb-6 text-2xl font-medium">
+        {question.title}
+      </h2>
 
-      <div className="grid gap-4">
+      <div className="grid gap-3">
         {question.options.map((option: string) => {
           const isSelected = selected.includes(option);
 
@@ -88,15 +87,12 @@ export default function Quiz() {
               onClick={() => select(option)}
               className={`
                 group relative overflow-hidden
+                rounded-xl border bg-white
 
-                rounded-xl
-                border
-                bg-white
-                p-4
+                px-4 py-3
 
-                text-left transition-all
-
-                duration-300
+                text-left
+                transition-all duration-300
 
                 ${
                   isSelected
@@ -105,22 +101,26 @@ export default function Quiz() {
                 }
               `}
             >
-              {/* 🔥 BASE DARK OVERLAY (как CTA button base) */}
-              <span
-                className="
-                  absolute inset-0
-                  bg-black/5
-                  opacity-0
-                  transition-opacity
-                  duration-300 group-hover:opacity-100
-                "
-              />
-
-              {/* 🔥 SHIMMER (главный эффект) */}
+              {/* BASE OVERLAY */}
               <span
                 className={`
                   absolute inset-0
+                  bg-black/5
+                  transition-opacity
+                  duration-300
 
+                  ${
+                    isSelected
+                      ? 'opacity-100'
+                      : 'opacity-0 group-hover:opacity-100'
+                  }
+                `}
+              />
+
+              {/* SHIMMER */}
+              <span
+                className={`
+                  absolute inset-0
                   -translate-x-[120%]
                   skew-x-[-20deg]
 
@@ -130,6 +130,7 @@ export default function Quiz() {
                   to-transparent
 
                   opacity-0
+                  pointer-events-none
 
                   group-hover:animate-[shine_1.1s_linear]
                   group-hover:opacity-100
@@ -139,32 +140,37 @@ export default function Quiz() {
                       ? 'animate-[shine_1.4s_linear_infinite] opacity-100'
                       : ''
                   }
-
-                  pointer-events-none
                 `}
               />
 
               {/* CONTENT */}
-              <span className="relative z-10">{option}</span>
+              <span className="relative z-10">
+                {option}
+              </span>
             </button>
           );
         })}
       </div>
 
-      {step === quiz.questions.length - 1 && (
-        <button
-          onClick={finishQuiz}
-          className="
-            mt-8 w-full
-            border bg-black px-6
-            py-3 text-white
-          "
-        >
-          {quiz.next}
-        </button>
-      )}
+      <button
+        onClick={nextStep}
+        disabled={selected.length === 0}
+        className="
+          mt-8 w-full
+          border bg-black
 
-      {/* 🔥 ANIMATION */}
+          px-5 py-2.5
+
+          text-white
+          transition-opacity
+
+          disabled:cursor-not-allowed
+          disabled:opacity-40
+        "
+      >
+        {quiz.next}
+      </button>
+
       <style jsx global>{`
         @keyframes shine {
           0% {
