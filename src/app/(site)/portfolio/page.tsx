@@ -158,7 +158,7 @@ export default function PortfolioPage() {
               {content.kicker}
             </p>
 
-            <h1 className="max-w-[1050px] font-tenor text-[54px] leading-[0.95] tracking-[-0.045em] text-black md:text-[90px] xl:text-[126px]">
+            <h1 className="max-w-[1050px] break-words font-tenor text-[54px] leading-[0.95] tracking-[-0.045em] text-black md:text-[90px] xl:text-[126px]">
               {content.title}
             </h1>
           </div>
@@ -183,14 +183,14 @@ export default function PortfolioPage() {
 
         {/* SEO BLOCK */}
         <div className="mt-20 border-t border-[#e7e2d9] pt-10">
-          <div className="grid gap-10 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
             {content.seoBlock.map(item => (
-              <div key={item.kicker}>
-                <p className="font-montserrat text-[10px] uppercase tracking-[0.32em] text-neutral-500">
+              <div key={item.kicker} className="min-w-0">
+                <p className="break-words font-montserrat text-[10px] uppercase tracking-[0.32em] text-neutral-500">
                   {item.kicker}
                 </p>
 
-                <p className="mt-5 font-tenor text-[30px] leading-[1.05] text-black md:text-[42px]">
+                <p className="mt-5 hyphens-auto break-words font-tenor text-[30px] leading-[1.08] text-black md:text-[34px] xl:text-[40px]">
                   {item.title}
                 </p>
               </div>
@@ -305,7 +305,7 @@ export default function PortfolioPage() {
                       </a>
                     </div>
 
-                    <h2 className="font-tenor text-[44px] leading-[0.95] tracking-[-0.04em] text-black md:text-[70px] xl:text-[84px]">
+                    <h2 className="break-words font-tenor text-[44px] leading-[0.95] tracking-[-0.04em] text-black md:text-[70px] xl:text-[84px]">
                       {item.title}
                     </h2>
 
@@ -355,7 +355,7 @@ export default function PortfolioPage() {
                 {content.blackSection.kicker}
               </p>
 
-              <h2 className="font-tenor text-[58px] leading-[0.9] tracking-[-0.05em] md:text-[118px] xl:text-[138px]">
+              <h2 className="break-words font-tenor text-[58px] leading-[0.9] tracking-[-0.05em] md:text-[118px] xl:text-[138px]">
                 {content.blackSection.title}
               </h2>
             </div>

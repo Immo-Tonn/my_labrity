@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { BadgeCheck, Gem, PanelsTopLeft, Telescope } from 'lucide-react';
 
 import { Preloader } from '@/components/ui';
 import { useLanguage } from '@/utils/LanguageContext';
@@ -26,6 +27,12 @@ type AudienceItem = {
   description: string;
 };
 
+type DifferenceItem = {
+  title: string;
+  description: string;
+  icon: string;
+};
+
 type ProcessPreviewItem = {
   title: string;
 };
@@ -45,6 +52,12 @@ type HomeData = {
     title: string;
     description: string;
     items: AudienceItem[];
+  };
+  differences: {
+    kicker: string;
+    title: string;
+    description: string;
+    items: DifferenceItem[];
   };
   servicesSection: {
     kicker: string;
@@ -173,6 +186,35 @@ const fallbackHomeData: HomeData = {
     ],
   },
 
+  differences: {
+    kicker: 'WARUM LABRITY?',
+    title: 'Starke Websites für starke Marken.',
+    description: '',
+    items: [
+      {
+        title: 'Strategisch',
+        description: 'Wir denken mit — von der Idee bis zur Conversion.',
+        icon: '/images/home-icons/strategy.svg',
+      },
+      {
+        title: 'Minimalistisch',
+        description:
+          'Klares Design, das sich auf das Wesentliche konzentriert.',
+        icon: '/images/home-icons/minimalism.svg',
+      },
+      {
+        title: 'Maßgeschneidert',
+        description: 'Jedes Projekt ist einzigartig — wie dein Business.',
+        icon: '/images/home-icons/custom.svg',
+      },
+      {
+        title: 'Zuverlässig',
+        description: 'Termintreu, transparent und auf Augenhöhe.',
+        icon: '/images/home-icons/reliable.svg',
+      },
+    ],
+  },
+
   servicesSection: {
     kicker: 'Leistungen',
     title: 'Digitale Leistungen für Marken mit Anspruch',
@@ -270,6 +312,8 @@ const fallbackHomeData: HomeData = {
   },
 };
 
+const differenceIcons = [Telescope, PanelsTopLeft, Gem, BadgeCheck];
+
 export default function Home() {
   const { lang } = useLanguage();
   const [home, setHome] = useState<HomeData | null>(null);
@@ -294,6 +338,14 @@ export default function Home() {
             items: data?.audience?.items?.length
               ? data.audience.items
               : fallbackHomeData.audience.items,
+          },
+
+          differences: {
+            ...fallbackHomeData.differences,
+            ...(data?.differences || {}),
+            items: data?.differences?.items?.length
+              ? data.differences.items
+              : fallbackHomeData.differences.items,
           },
 
           servicesSection: {
@@ -469,6 +521,52 @@ export default function Home() {
                   </div>
                 ))}
               </div>
+            </div>
+          </section>
+
+          {/* DIFFERENCES */}
+          <section className="border-t border-[#e7e2d9] py-[88px] md:py-[108px] xl:py-[124px]">
+            <div className="mx-auto max-w-[860px] text-center">
+              <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
+                {content.differences.kicker}
+              </p>
+
+              <h2 className="font-tenor text-[34px] leading-[1.08] text-black md:text-[52px] xl:text-[62px]">
+                {content.differences.title}
+              </h2>
+            </div>
+
+            <div className="mx-auto mt-14 grid max-w-[1180px] gap-y-14 md:mt-16 md:grid-cols-2 md:gap-x-12 md:gap-y-16 xl:mt-20 xl:grid-cols-4 xl:gap-x-10">
+              {content.differences.items.map((item, index) => {
+                const Icon = differenceIcons[index] || Gem;
+
+                return (
+                  <article
+                    key={`${item.title}-${index}`}
+                    className="group relative flex min-h-[210px] flex-col items-center overflow-hidden px-4 py-2 text-center transition duration-500 hover:-translate-y-[4px]"
+                  >
+                    <span className="pointer-events-none absolute top-5 h-24 w-24 rounded-full bg-black/[0.025] opacity-0 blur-2xl transition duration-500 group-hover:opacity-100" />
+
+                    <div className="relative mb-6 flex h-[60px] items-center justify-center">
+                      <Icon
+                        size={44}
+                        strokeWidth={1.15}
+                        className="text-black/45 transition duration-500 group-hover:-translate-y-[3px] group-hover:text-black/75"
+                      />
+                    </div>
+
+                    <h3 className="font-tenor text-[24px] leading-[1.08] text-black md:text-[28px]">
+                      {item.title}
+                    </h3>
+
+                    <span className="mt-4 h-px w-8 bg-black/20 transition-all duration-500 group-hover:w-14 group-hover:bg-black/45" />
+
+                    <p className="mt-4 max-w-[250px] font-montserrat text-[14px] leading-7 text-neutral-500 transition duration-500 group-hover:text-neutral-600">
+                      {item.description}
+                    </p>
+                  </article>
+                );
+              })}
             </div>
           </section>
 
