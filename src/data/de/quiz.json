@@ -1,0 +1,95 @@
+
+{
+  "quiz": {
+    "progress": "Frage",
+    "next": "Weiter",
+    "submit": "Senden",
+
+    "form": {
+      "title": "Kontaktdaten",
+      "description": "Bitte geben Sie Ihre Kontaktdaten ein",
+
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "phone": "Telefonnummer",
+      "email": "E-Mail",
+
+      "success": "Anfrage erfolgreich gesendet",
+      "error": "Fehler beim Senden",
+
+      "required": "Pflichtfeld",
+      "invalidEmail": "Ungültige E-Mail-Adresse",
+      "invalidPhone": "Ungültige Telefonnummer"
+    },
+
+    "questions": [
+      {
+        "id": "websiteType",
+        "title": "Welche Art von Website benötigen Sie?",
+        "options": [
+          "Einfache Präsentationsseite",
+          "Unternehmenswebsite",
+          "Onlineshop",
+          "Individuelle Lösung",
+          "Nicht sicher"
+        ]
+      },
+      {
+        "id": "clientType",
+        "title": "Für wen wird die Website erstellt?",
+        "options": [
+          "Privatperson",
+          "Freelancer / Selbstständig",
+          "Kleinunternehmen",
+          "Unternehmen",
+          "Nicht sicher"
+        ]
+      },
+      {
+        "id": "content",
+        "title": "Haben Sie bereits Texte oder Bilder für die Website?",
+        "options": [
+          "Ja, alles vorhanden",
+          "Teilweise vorhanden",
+          "Benötige Unterstützung bei Inhalten",
+          "Nicht sicher"
+        ]
+      },
+      {
+        "id": "languages",
+        "title": "In wie vielen Sprachen soll die Website verfügbar sein?",
+        "options": [
+          "Nur eine Sprache",
+          "Zwei Sprachen",
+          "Drei oder mehr Sprachen",
+          "Nicht sicher"
+        ]
+      },
+      {
+        "id": "design",
+        "title": "Benötigen Sie Unterstützung beim Design der Website?",
+        "options": [
+          "Design bereits vorhanden",
+          "Neues Design erforderlich",
+          "Bestehende Website modernisieren",
+          "Nicht sicher"
+        ]
+      },
+      {
+        "id": "features",
+        "multiple": true,
+        "title": "Welche Funktionen soll die Website haben?",
+        "options": [
+          "Kontaktformular",
+          "Online-Terminbuchung",
+          "Preisrechner",
+          "Kundendaten verwalten",
+          "Verbindung mit anderen Systemen",
+          "Persönlicher Kundenbereich",
+          "Nicht sicher"
+        ]
+      }
+    ]
+  }
+}
+

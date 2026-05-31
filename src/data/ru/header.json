@@ -2,21 +2,21 @@
   {
     "id": 1,
     "href": "/portfolio",
-    "title": "Projekte"
+    "title": "Проекты"
   },
   {
     "id": 2,
     "href": "/services",
-    "title": "Leistungen"
+    "title": "Услуги"
   },
   {
     "id": 3,
     "href": "/process",
-    "title": "Ablauf"
+    "title": "Процесс"
   },
   {
     "id": 4,
     "href": "/contact",
-    "title": "Kontakt"
+    "title": "Контакт"
   }
 ]

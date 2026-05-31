@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { classnames } from '@/utils/classnames';
 import { Logo } from '@/components/ui/Logo';
 import { Navbar } from '@/components/ui/Navbar';
@@ -9,6 +9,8 @@ import { BurgerMenu } from '@/components/ui/BurgerMenu';
 
 import { useLanguage } from '@/utils/LanguageContext';
 import { getData } from '@/utils/getData';
+
+type Language = 'de' | 'en' | 'ua' | 'ru';
 
 type CommonData = {
   layout?: {
@@ -19,6 +21,33 @@ type CommonData = {
   };
 };
 
+const languages: {
+  code: Language;
+  short: string;
+  label: string;
+}[] = [
+  {
+    code: 'de',
+    short: 'DE',
+    label: 'Deutsch',
+  },
+  {
+    code: 'en',
+    short: 'EN',
+    label: 'English',
+  },
+  {
+    code: 'ua',
+    short: 'UA',
+    label: 'Українська',
+  },
+  {
+    code: 'ru',
+    short: 'RU',
+    label: 'Русский',
+  },
+];
+
 export function Header() {
   const { lang, setLang } = useLanguage();
 
@@ -26,13 +55,22 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [hideHeader, setHideHeader] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
 
   const lastScroll = useRef(0);
+  const languageRef = useRef<HTMLDivElement | null>(null);
+
+  const currentLanguage =
+    languages.find(language => language.code === lang) || languages[0];
 
   useEffect(() => {
     const loadData = async () => {
-      const data = await getData('common', lang);
-      setCommon(data);
+      try {
+        const data = await getData('common', lang);
+        setCommon(data);
+      } catch {
+        setCommon(null);
+      }
     };
 
     loadData();
@@ -64,6 +102,23 @@ export function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        languageRef.current &&
+        !languageRef.current.contains(event.target as Node)
+      ) {
+        setIsLanguageOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   const openMenu = () => {
     setIsOpen(true);
     document.body.style.overflow = 'hidden';
@@ -74,13 +129,16 @@ export function Header() {
     document.body.style.overflow = 'auto';
   };
 
-  const languages = ['ua', 'en', 'de'];
+  const handleLanguageChange = (newLang: Language) => {
+    setLang(newLang);
+    setIsLanguageOpen(false);
+  };
 
   return (
     <header
       className={classnames(
         'fixed left-0 top-0 z-[50] w-full transition-transform duration-300',
-        'border-b border-[#18352b]/20',
+        'border-b border-[#e7e2d9]',
         hideHeader ? '-translate-y-full' : 'translate-y-0',
         scrolled
           ? 'bg-[#f8f6f1]/92 py-5 shadow-[0_10px_30px_rgba(0,0,0,0.04)] backdrop-blur-xl'
@@ -92,35 +150,61 @@ export function Header() {
 
         <Navbar
           variant="header"
-          className="hidden xl:flex xl:flex-1 xl:justify-center xl:text-[13px] xl:font-medium xl:uppercase xl:tracking-[0.22em] xl:text-[#18352b]"
+          className="hidden xl:flex xl:flex-1 xl:justify-center xl:text-[13px] xl:font-medium xl:uppercase xl:tracking-[0.22em] xl:text-black"
         />
 
-        <div className="relative hidden items-center font-montserrat text-[13px] uppercase tracking-[0.22em] xl:flex">
-          {languages.map((l, index) => (
-            <div key={l} className="flex items-center">
-              <button
-                onClick={() => setLang(l as 'ua' | 'en' | 'de')}
-                className={classnames(
-                  'relative px-2 transition-colors duration-300',
-                  lang === l
-                    ? 'font-semibold text-[#18352b]'
-                    : 'text-[#18352b]/55 hover:text-[#18352b]',
-                )}
-              >
-                {l.toUpperCase()}
-              </button>
-
-              {index < languages.length - 1 && (
-                <span className="mx-1 select-none text-[#18352b]/30">|</span>
+        <div
+          ref={languageRef}
+          className="relative hidden items-center font-montserrat text-[12px] uppercase tracking-[0.22em] xl:flex"
+        >
+          <button
+            type="button"
+            onClick={() => setIsLanguageOpen(prev => !prev)}
+            aria-label="Change language"
+            aria-expanded={isLanguageOpen}
+            className="flex items-center gap-2 rounded-full border border-black/10 bg-white/35 px-4 py-2 text-black transition duration-300 hover:border-black/25 hover:bg-white/65"
+          >
+            <span className="text-neutral-500">LANG</span>
+            <span className="h-3 w-px bg-black/20" />
+            <span className="font-semibold text-black">
+              {currentLanguage.short}
+            </span>
+            <span
+              className={classnames(
+                'text-[10px] text-neutral-500 transition-transform duration-300',
+                isLanguageOpen ? 'rotate-180' : 'rotate-0',
               )}
+            >
+              ▾
+            </span>
+          </button>
+
+          {isLanguageOpen && (
+            <div className="absolute right-0 top-[calc(100%+10px)] min-w-[170px] overflow-hidden rounded-2xl border border-[#e7e2d9] bg-[#f8f6f1]/95 p-2 shadow-[0_18px_45px_rgba(0,0,0,0.10)] backdrop-blur-xl">
+              {languages.map(language => (
+                <button
+                  key={language.code}
+                  type="button"
+                  onClick={() => handleLanguageChange(language.code)}
+                  className={classnames(
+                    'flex w-full items-center justify-between rounded-xl px-3 py-2.5 text-left text-[12px] tracking-[0.12em] transition duration-300',
+                    lang === language.code
+                      ? 'bg-black text-white'
+                      : 'text-neutral-500 hover:bg-black/5 hover:text-black',
+                  )}
+                >
+                  <span>{language.label}</span>
+                  <span className="font-semibold">{language.short}</span>
+                </button>
+              ))}
             </div>
-          ))}
+          )}
         </div>
 
         <button
           onClick={openMenu}
           aria-label={common?.layout?.['aria-label']?.burger || 'menu'}
-          className="text-[#18352b] transition-all duration-300 hover:scale-110 active:scale-95 xl:hidden"
+          className="text-black transition-all duration-300 hover:scale-110 active:scale-95 xl:hidden"
         >
           <BurgerMenuIcon width={30} height={30} />
         </button>

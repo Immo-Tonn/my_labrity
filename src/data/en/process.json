@@ -1,0 +1,98 @@
+{
+  "hero": {
+    "kicker": "Process",
+    "title": "From the first idea to a finished digital presence.",
+    "description": "We guide your project step by step — with clear structure, modern design and a process that stays easy to understand."
+  },
+
+  "stepsSection": {
+    "kicker": "Our Process",
+    "title": "A clear workflow for a strong result.",
+    "description": "A good website project does not happen by accident. It needs analysis, structure, design, development and a clean launch.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Project Analysis",
+        "description": "We understand your business, your target audience, your goals and the desired effect of your website."
+      },
+      {
+        "number": "02",
+        "title": "Structure & Strategy",
+        "description": "We plan pages, content, user flow and a clean SEO foundation."
+      },
+      {
+        "number": "03",
+        "title": "Design Direction",
+        "description": "We develop a visual direction with style, clarity and a premium impression."
+      },
+      {
+        "number": "04",
+        "title": "Development",
+        "description": "We build the website in a modern, responsive and performance-focused way."
+      },
+      {
+        "number": "05",
+        "title": "Launch & Final Polish",
+        "description": "We check details, optimize the presentation and prepare the website for publication."
+      }
+    ]
+  },
+
+  "clientSection": {
+    "kicker": "Preparation",
+    "title": "What we need from you.",
+    "description": "You do not need to have everything perfectly prepared. For the start, a short description of your business, examples you like and existing materials are often enough.",
+    "items": [
+      {
+        "title": "Your Idea",
+        "description": "A short description of your company, your goals and the desired effect is enough for the beginning."
+      },
+      {
+        "title": "Examples",
+        "description": "Websites, colors or styles you like help us understand the right direction faster."
+      },
+      {
+        "title": "Materials",
+        "description": "You can provide texts, images, logo or content — if something is missing, we help with structure and wording."
+      }
+    ]
+  },
+
+  "resultSection": {
+    "kicker": "Result",
+    "title": "What you receive at the end.",
+    "description": "At the end, you receive a website that not only looks good, but is clearly structured, builds trust and presents your business professionally.",
+    "items": [
+      {
+        "title": "Responsive Website",
+        "description": "Your website works properly on smartphone, tablet and desktop."
+      },
+      {
+        "title": "Clear Structure",
+        "description": "Visitors quickly understand who you are, what you offer and how they can contact you."
+      },
+      {
+        "title": "Premium Design",
+        "description": "A high-quality visual presence strengthens trust and brand perception."
+      },
+      {
+        "title": "SEO Foundation",
+        "description": "The website receives a clean technical and content-based foundation for better visibility."
+      }
+    ]
+  },
+
+  "calmSection": {
+    "kicker": "No Random Decisions",
+    "title": "No chaos. No guessing.",
+    "description": "A good website project needs more than design — it needs a clear process. That is why we work step by step, so decisions stay understandable and the result is created with purpose."
+  },
+
+  "cta": {
+    "kicker": "Next Step",
+    "title": "Ready to start your project?",
+    "description": "Tell us briefly about your project — we will check which website solution fits your goal.",
+    "primaryButton": "Start Project",
+    "secondaryButton": "View Portfolio"
+  }
+}

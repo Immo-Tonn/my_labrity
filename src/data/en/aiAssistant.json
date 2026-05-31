@@ -1,0 +1,83 @@
+{
+  "header": {
+    "chatTitle": "Labrity Assistant",
+    "calculatorTitle": "Labrity AI Calculator",
+    "chatSubtitle": "Online • Answers to short questions",
+    "calculatorSubtitle": "AI • Project analysis",
+    "closeLabel": "Close Labrity assistant",
+    "openLabel": "Open Labrity assistant"
+  },
+
+  "initialMessage": "Hello 👋 How can I help you?",
+
+  "teaserMessages": [
+    "👋 Questions about websites or SEO?",
+    "AI Assistant online",
+    "Need a modern website?"
+  ],
+
+  "buttons": {
+    "calculator": "✨ Project Calculator",
+    "price": "Price",
+    "seo": "SEO",
+    "portfolio": "Portfolio",
+    "send": "Send",
+    "backToChat": "← Back to chat"
+  },
+
+  "input": {
+    "placeholder": "Write a message..."
+  },
+
+  "typing": "Assistant is typing",
+
+  "suggestedQuestions": {
+    "price": "How much does a website cost?",
+    "seo": "SEO",
+    "portfolio": "Portfolio"
+  },
+
+  "repeatedMessageResponses": [
+    "This message feels familiar 😄 Are you testing me?",
+    "😄 I think we already had this one.",
+    "Again? 😄 I am awake, I promise."
+  ],
+
+  "idleMessages": [
+    "👀👀👀",
+    "I am still here 👀 If you have questions about websites, SEO or projects, just write.",
+    "I am waiting very professionally in the background 😄",
+    "Still there? If you are thinking about a website project, I can help.",
+    "Small bot, big patience 😄"
+  ],
+
+  "unknownResponses": [
+    "I think my digital brain blinked for a second 😄 Feel free to ask me about websites, SEO, prices or the project calculator.",
+    "Hmm, I did not fully understand that 😄 I am better with questions about websites, landing pages, SEO or project costs.",
+    "That sounds interesting, but a little mysterious 😄 For a rough estimate, you can use the project calculator."
+  ],
+
+  "shortMessage": "Too short for my little bot brain 😄 Please write a little more clearly.",
+
+  "longMessage": "That is a bigger question 😄 It is best to use the project calculator or contact us through the contact form.",
+
+  "ctaMessage": "If you like, you can use the project calculator or send a request directly through the contact form.",
+
+  "priorityResponses": {
+    "website": "Of course 😊 We can help you with a new website. For a first estimate, you can use the ✨ Project Calculator or contact us through the contact form.",
+    "price": "The cost depends on the project scope, design, number of pages and required features. For a rough estimate, you can use the ✨ Project Calculator or contact us through the contact form.",
+    "duration": "The timeline depends on the project scope. A small website can be completed faster, while a larger project with animations, SEO or a database takes more time."
+  },
+
+  "funnyResponses": {
+    "stress": "😄 Sounds like project stress. Take a deep breath — a good website helps.",
+    "human": "Not yet 😄 But I already work quite well without sleep and coffee.",
+    "age": "My age is measured in commits 😄",
+    "bestDeveloper": "Of course, the Labrity team 😄 No discussion needed.",
+    "free": "😄 For free, I can only wish you a beautiful UI. For a real project, it is better to talk individually.",
+    "matrix": "Wake up, Neo... The website has you 👀",
+    "mood": "Very good 😄 Today nobody has asked for a website “like Apple, but for 50 euros” yet.",
+    "seoRepeat": "I think SEO is really important to you 😄",
+    "apple": "A website like Apple — classic 😄 The only important thing is that the budget is not like apple juice."
+  }
+}

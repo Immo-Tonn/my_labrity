@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui';
 import { ServiceItem } from '@/components/common';
+import { useQuiz } from '@/components/quiz';
 
 import { useLanguage } from '@/utils/LanguageContext';
 import { getData } from '@/utils/getData';
@@ -12,6 +13,7 @@ import type { Service } from './types';
 
 export function ServicesList() {
   const { lang } = useLanguage();
+  const { openQuiz } = useQuiz();
 
   const [services, setServices] = useState<Service[]>([]);
   const [common, setCommon] = useState<any>(null);
@@ -89,9 +91,9 @@ export function ServicesList() {
             </div>
 
             <Button
-              tag="a"
+              tag="button"
               accent={false}
-              href={common.btnContactsHref}
+              onClick={openQuiz}
               className="
                 flex
                 min-h-[56px]
