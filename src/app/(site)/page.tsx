@@ -479,7 +479,6 @@ export default function Home() {
               </div>
             </div>
           </section>
-
           {/* AUDIENCE */}
           <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[140px]">
             <div className="mx-auto max-w-[980px]">
@@ -501,21 +500,15 @@ export default function Home() {
                 {content.audience.items.map((item, index) => (
                   <div
                     key={`${item.title}-${index}`}
-                    className="flex min-h-[220px] flex-col justify-between border border-[#e7e2d9] bg-white px-4 py-8 text-center shadow-[0_10px_28px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:shadow-[0_18px_40px_rgba(0,0,0,0.05)] md:min-h-[230px] xl:min-h-[240px]"
+                    className="flex min-h-[230px] flex-col justify-between border border-[#e7e2d9] bg-white px-5 py-8 text-center shadow-[0_10px_28px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:shadow-[0_18px_40px_rgba(0,0,0,0.05)] md:min-h-[240px] xl:min-h-[250px]"
                   >
-                    <div className="flex min-h-[64px] items-center justify-center md:min-h-[68px] xl:min-h-[72px]">
-                      <h3
-                        className={`text-center font-tenor text-[22px] leading-[1.02] text-black md:text-[24px] xl:text-[26px] ${
-                          index === 3
-                            ? 'mx-auto whitespace-normal xl:max-w-[165px]'
-                            : 'whitespace-nowrap'
-                        }`}
-                      >
+                    <div className="flex min-h-[76px] items-center justify-center">
+                      <h3 className="mx-auto max-w-[210px] break-words text-center font-tenor text-[22px] leading-[1.08] text-black md:max-w-[230px] md:text-[24px] xl:max-w-[220px] xl:text-[26px]">
                         {item.title}
                       </h3>
                     </div>
 
-                    <p className="mt-4 text-center font-montserrat text-sm leading-6 text-neutral-600">
+                    <p className="mt-5 text-center font-montserrat text-sm leading-6 text-neutral-600">
                       {item.description}
                     </p>
                   </div>

@@ -183,7 +183,7 @@ export default function PortfolioPage() {
 
         {/* SEO BLOCK */}
         <div className="mt-20 border-t border-[#e7e2d9] pt-10">
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 gap-y-12 xl:grid-cols-3 xl:gap-x-16 xl:gap-y-0">
             {content.seoBlock.map(item => (
               <div key={item.kicker} className="min-w-0">
                 <p className="break-words font-montserrat text-[10px] uppercase tracking-[0.32em] text-neutral-500">
@@ -265,7 +265,6 @@ export default function PortfolioPage() {
                     )}
                   </div>
                 </a>
-
                 {/* CONTENT */}
                 <div className="flex flex-col justify-between p-6 md:p-9 xl:p-12">
                   <div>

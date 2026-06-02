@@ -57,6 +57,34 @@
     ]
   },
 
+  "differences": {
+    "kicker": "WHY LABRITY?",
+    "title": "Strong websites for strong brands.",
+    "description": "",
+    "items": [
+      {
+        "title": "Strategic",
+        "description": "We think through the path — from idea to result.",
+        "icon": "/images/home-icons/strategy.svg"
+      },
+      {
+        "title": "Minimal",
+        "description": "Clean design without unnecessary visual noise.",
+        "icon": "/images/home-icons/minimalism.svg"
+      },
+      {
+        "title": "Tailored",
+        "description": "Every project is created around your business.",
+        "icon": "/images/home-icons/custom.svg"
+      },
+      {
+        "title": "Reliable",
+        "description": "Transparent work, clear deadlines and communication.",
+        "icon": "/images/home-icons/reliable.svg"
+      }
+    ]
+  },
+
   "servicesSection": {
     "kicker": "Services",
     "title": "Digital Services for Ambitious Brands",

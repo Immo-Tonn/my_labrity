@@ -57,6 +57,34 @@
     ]
   },
 
+  "differences": {
+    "kicker": "ЧОМУ LABRITY?",
+    "title": "Сильні сайти для сильних брендів.",
+    "description": "",
+    "items": [
+      {
+        "title": "Стратегія",
+        "description": "Ми продумуємо шлях — від ідеї до результату.",
+        "icon": "/images/home-icons/strategy.svg"
+      },
+      {
+        "title": "Мінімалізм",
+        "description": "Чистий дизайн без зайвого візуального шуму.",
+        "icon": "/images/home-icons/minimalism.svg"
+      },
+      {
+        "title": "Індивідуально",
+        "description": "Кожен проєкт створюється під ваш бізнес.",
+        "icon": "/images/home-icons/custom.svg"
+      },
+      {
+        "title": "Надійність",
+        "description": "Прозора робота, строки й зрозуміла комунікація.",
+        "icon": "/images/home-icons/reliable.svg"
+      }
+    ]
+  },
+
   "servicesSection": {
     "kicker": "Послуги",
     "title": "Цифрові рішення для брендів з амбіціями",
