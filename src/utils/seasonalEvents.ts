@@ -207,6 +207,12 @@ export function shouldShowChristmasSnow(date = new Date()) {
   return isDateInRange(today, '12-15', '01-07');
 }
 
+export function shouldShowValentinesHearts(date = new Date()) {
+  const today = getMonthDay(date);
+
+  return isDateInRange(today, '02-14', '02-14');
+}
+
 export function getSeasonalEvent(
   lang: string,
   date = new Date(),

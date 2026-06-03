@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { BadgeCheck, Gem, PanelsTopLeft, Telescope } from 'lucide-react';
 
 import SeasonalSnow from '@/components/SeasonalSnow';
+import SeasonalHearts from '@/components/SeasonalHearts';
 import { Preloader } from '@/components/ui';
 import { useLanguage } from '@/utils/LanguageContext';
 import { getData } from '@/utils/getData';
@@ -413,12 +414,14 @@ export default function Home() {
 
     return () => clearTimeout(timer);
   }, []);
-
   return (
     <>
       <Preloader />
 
       <SeasonalSnow />
+
+      <SeasonalHearts />
+
       <main className="min-h-screen bg-[#f8f6f1]">
         <div className="container">
           {/* HERO */}
