@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { BadgeCheck, Gem, PanelsTopLeft, Telescope } from 'lucide-react';
 
+import SeasonalSnow from '@/components/SeasonalSnow';
 import { Preloader } from '@/components/ui';
 import { useLanguage } from '@/utils/LanguageContext';
 import { getData } from '@/utils/getData';
@@ -417,6 +418,7 @@ export default function Home() {
     <>
       <Preloader />
 
+      <SeasonalSnow />
       <main className="min-h-screen bg-[#f8f6f1]">
         <div className="container">
           {/* HERO */}
@@ -479,6 +481,7 @@ export default function Home() {
               </div>
             </div>
           </section>
+
           {/* AUDIENCE */}
           <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[140px]">
             <div className="mx-auto max-w-[980px]">

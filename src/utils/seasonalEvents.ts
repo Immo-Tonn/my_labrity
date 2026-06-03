@@ -204,7 +204,7 @@ function getDynamicSeasonalEvent(
 export function shouldShowChristmasSnow(date = new Date()) {
   const today = getMonthDay(date);
 
-  return isDateInRange(today, '12-24', '01-07');
+  return isDateInRange(today, '12-15', '01-07');
 }
 
 export function getSeasonalEvent(

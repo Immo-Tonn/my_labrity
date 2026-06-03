@@ -24,7 +24,6 @@ export const LanguageProvider = ({
   children: React.ReactNode;
 }) => {
   const [lang, setLangState] = useState<Language>(DEFAULT_LANGUAGE);
-  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     const savedLanguage = window.localStorage.getItem(STORAGE_KEY);
@@ -32,21 +31,12 @@ export const LanguageProvider = ({
     if (isValidLanguage(savedLanguage)) {
       setLangState(savedLanguage);
     }
-
-    setIsReady(true);
   }, []);
 
   const setLang = (newLang: Language) => {
     setLangState(newLang);
-
-    if (typeof window !== 'undefined') {
-      window.localStorage.setItem(STORAGE_KEY, newLang);
-    }
+    window.localStorage.setItem(STORAGE_KEY, newLang);
   };
-
-  if (!isReady) {
-    return null;
-  }
 
   return (
     <LanguageContext.Provider value={{ lang, setLang }}>
