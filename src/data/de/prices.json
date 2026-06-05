@@ -1,0 +1,293 @@
+{
+  "hero": {
+    "kicker": "Preise & Pakete",
+    "title": "Websites mit klarer Struktur, hochwertigem Design und transparenter Planung.",
+    "description": "Jedes Projekt ist individuell. Unsere Preise dienen als transparente Orientierung — der finale Umfang richtet sich nach Ziel, Struktur, Designanspruch und gewünschten Funktionen.",
+    "primaryButton": "Projekt anfragen",
+    "secondaryButton": "Pakete ansehen",
+    "note": "Professionelle Websites ab 999 €"
+  },
+  "priceFactors": {
+    "kicker": "Orientierung",
+    "title": "Was beeinflusst den Preis?",
+    "description": "Der Einstiegspreis gibt eine erste Orientierung. Der finale Umfang hängt davon ab, wie groß die Website wird, welche Funktionen gebraucht werden und wie individuell das Design ausgearbeitet werden soll.",
+    "items": [
+      {
+        "title": "Umfang",
+        "description": "Eine kompakte Landingpage ist schneller geplant als eine mehrseitige Unternehmenswebsite mit vielen Inhalten."
+      },
+      {
+        "title": "Funktionen",
+        "description": "Formulare, Mehrsprachigkeit, Buchungen, Shops oder besondere Bereiche verändern den technischen Aufwand."
+      },
+      {
+        "title": "Designanspruch",
+        "description": "Je individueller, hochwertiger und markenspezifischer der Auftritt sein soll, desto intensiver wird die Ausarbeitung."
+      }
+    ]
+  },
+  "packages": {
+    "kicker": "Festpreis-Projekte",
+    "title": "Klare Pakete für unterschiedliche Projektgrößen.",
+    "description": "Ob kompakte Landingpage, professionelle Unternehmenswebsite oder individuelle Plattform — jedes Paket bietet eine klare Basis und kann bei Bedarf erweitert werden.",
+    "items": [
+      {
+        "name": "Essential",
+        "badge": "",
+        "price": "ab 1.490 €",
+        "shortDescription": "Für Landingpages, Kampagnen und kompakte digitale Auftritte.",
+        "idealFor": "Ideal für Selbstständige, Experten, einzelne Leistungen oder Werbekampagnen.",
+        "features": [
+          "Strategische Seitenstruktur",
+          "Individuelles Design",
+          "Responsive Umsetzung",
+          "Kontaktformular",
+          "Basis-SEO",
+          "Launch-Vorbereitung"
+        ],
+        "button": "Anfragen"
+      },
+      {
+        "name": "Signature",
+        "badge": "Empfohlen",
+        "price": "ab 3.900 €",
+        "shortDescription": "Für Unternehmen, Dienstleister und Marken mit professionellem Anspruch.",
+        "idealFor": "Ideal für Unternehmen, Studios, lokale Marken, Agenturen und professionelle Dienstleister.",
+        "features": [
+          "4–7 Unterseiten",
+          "Individuelle UX-Struktur",
+          "Hochwertiges Webdesign",
+          "Responsive Entwicklung",
+          "Basis-SEO",
+          "Kontakt- und Anfrageformulare",
+          "Impressum & Datenschutz-Seiten",
+          "Launch & technische Prüfung"
+        ],
+        "button": "Projekt starten"
+      },
+      {
+        "name": "Prestige",
+        "badge": "",
+        "price": "ab 6.900 €",
+        "shortDescription": "Für Marken, die digital hochwertig, modern und unverwechselbar auftreten möchten.",
+        "idealFor": "Ideal für Premium-Marken, wachsende Unternehmen und individuelle Webauftritte mit besonderem Designanspruch.",
+        "features": [
+          "Erweiterte Seitenstruktur",
+          "Premium Designsystem",
+          "Animationen & Interaktionen",
+          "Mehrsprachigkeit möglich",
+          "SEO-Grundstruktur",
+          "Performance-Optimierung",
+          "Individuelle Beratung",
+          "Launch-Begleitung"
+        ],
+        "button": "Beratung anfragen"
+      },
+      {
+        "name": "Custom",
+        "badge": "",
+        "price": "ab 8.900 €",
+        "shortDescription": "Für Shops, Plattformen und individuelle digitale Lösungen.",
+        "idealFor": "Ideal für Online-Shops, Portale, Plattformen, Buchungssysteme oder komplexere Webanwendungen.",
+        "features": [
+          "Individuelle Funktionsplanung",
+          "Shop- oder Plattformstruktur",
+          "Benutzerführung",
+          "Zahlungs- oder Formularprozesse",
+          "Technische Architektur",
+          "Testing",
+          "Launch-Begleitung"
+        ],
+        "button": "Individuelles Angebot"
+      }
+    ]
+  },
+  "subscription": {
+    "kicker": "Website im Abo",
+    "title": "Professionell starten — ohne hohe Anfangsinvestition.",
+    "description": "Für Unternehmen, die einen hochwertigen Webauftritt möchten, aber die Investition lieber monatlich planen. Die Website wird professionell erstellt, betreut und kann später erweitert werden.",
+    "note": "Mindestlaufzeit: 24 Monate. Einrichtungskosten je nach Umfang.",
+    "items": [
+      {
+        "name": "Abo Start",
+        "price": "ab 149 € / Monat",
+        "setup": "Einrichtung ab 490 €",
+        "description": "Für kompakte Landingpages und kleine digitale Auftritte.",
+        "features": [
+          "1 Landing Page",
+          "Responsive Design",
+          "Kontaktformular",
+          "Basis-SEO",
+          "Technische Pflege",
+          "Kleine monatliche Anpassungen"
+        ]
+      },
+      {
+        "name": "Abo Business",
+        "price": "ab 249 € / Monat",
+        "setup": "Einrichtung ab 790 €",
+        "description": "Für kleine Unternehmen, Studios und lokale Dienstleister.",
+        "features": [
+          "Bis zu 5 Seiten",
+          "Individuelles Design",
+          "Kontaktformular",
+          "Basis-SEO",
+          "Technische Betreuung",
+          "Kleine Inhaltsänderungen"
+        ]
+      },
+      {
+        "name": "Abo Premium",
+        "price": "ab 399 € / Monat",
+        "setup": "Einrichtung ab 1.200 €",
+        "description": "Für Marken, die regelmäßig weiterentwickelt werden möchten.",
+        "features": [
+          "Bis zu 8 Seiten",
+          "Premium Design",
+          "Mehrsprachigkeit möglich",
+          "Monatliche Optimierungen",
+          "Priorisierter Support",
+          "Strategische Weiterentwicklung"
+        ]
+      }
+    ]
+  },
+  "redesign": {
+    "kicker": "Redesign & Optimierung",
+    "title": "Wenn Ihre aktuelle Website nicht mehr zu Ihrem Anspruch passt.",
+    "description": "Viele Unternehmen haben bereits eine Website — aber sie wirkt veraltet, unklar oder nicht überzeugend genug. Wir analysieren bestehende Auftritte und entwickeln daraus eine moderne, hochwertige und nutzerfreundliche Lösung.",
+    "price": "ab 2.400 €",
+    "features": [
+      "Analyse der bestehenden Website",
+      "Neue visuelle Richtung",
+      "Verbesserte Seitenstruktur",
+      "Modernes responsive Design",
+      "Optimierung von Inhalten",
+      "Technische Überarbeitung",
+      "Launch-Begleitung"
+    ],
+    "button": "Redesign anfragen"
+  },
+  "additionalServices": {
+    "kicker": "Zusätzliche Leistungen",
+    "title": "Flexible Bausteine für besondere Anforderungen.",
+    "description": "Nicht jedes Projekt braucht dieselben Leistungen. Je nach Ziel können zusätzliche Bausteine sinnvoll sein.",
+    "items": [
+      {
+        "name": "Website Audit",
+        "price": "ab 390 €",
+        "description": "Analyse von Design, Struktur, Nutzerführung, Mobile Experience und Optimierungspotenzial."
+      },
+      {
+        "name": "SEO-Basis Setup",
+        "price": "ab 690 €",
+        "description": "Technische und strukturelle SEO-Grundlage für bessere Sichtbarkeit."
+      },
+      {
+        "name": "Website Texte",
+        "price": "ab 390 €",
+        "description": "Klare, professionelle und überzeugende Texte für wichtige Website-Bereiche."
+      },
+      {
+        "name": "Mehrsprachigkeit",
+        "price": "ab 490 €",
+        "description": "Zusätzliche Sprachversionen für internationale oder mehrsprachige Zielgruppen."
+      },
+      {
+        "name": "Branding Light",
+        "price": "ab 890 €",
+        "description": "Farbrichtung, Schriftkombination, Moodboard und visuelle Basis für den Webauftritt."
+      },
+      {
+        "name": "Conversion Optimierung",
+        "price": "ab 790 €",
+        "description": "Optimierung von Nutzerführung, CTA-Bereichen, Formularen und Vertrauenselementen."
+      },
+      {
+        "name": "Website Rettung",
+        "price": "ab 290 €",
+        "description": "Für Websites, die technisch, visuell oder strukturell dringend überarbeitet werden müssen."
+      },
+      {
+        "name": "Kleine Änderungen",
+        "price": "ab 190 €",
+        "description": "Kleinere Anpassungen an bestehenden Seiten, Inhalten oder Sektionen."
+      }
+    ]
+  },
+  "care": {
+    "kicker": "Care & Betreuung",
+    "title": "Nach dem Launch bleibt Ihre Website in guten Händen.",
+    "description": "Auf Wunsch begleiten wir Ihre Website weiter — technisch, inhaltlich und strategisch.",
+    "items": [
+      {
+        "name": "Care Basic",
+        "price": "79 € / Monat",
+        "description": "Für kleine Websites, die technisch gepflegt bleiben sollen.",
+        "features": [
+          "Technische Kontrolle",
+          "Kleine Anpassungen",
+          "Basis-Support",
+          "Sicherheitsprüfung"
+        ]
+      },
+      {
+        "name": "Care Growth",
+        "price": "149 € / Monat",
+        "description": "Für Unternehmen, die ihre Website regelmäßig verbessern möchten.",
+        "features": [
+          "Regelmäßige Optimierungen",
+          "Content-Anpassungen",
+          "SEO-Basis-Check",
+          "Priorisierter Support"
+        ]
+      },
+      {
+        "name": "Care Premium",
+        "price": "299 € / Monat",
+        "description": "Für Marken, die ihre Website aktiv weiterentwickeln möchten.",
+        "features": [
+          "Neue Sektionen",
+          "Conversion-Ideen",
+          "Analyse & Empfehlungen",
+          "Priorisierte Umsetzung",
+          "Monatliche Beratung"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Häufige Fragen",
+    "title": "Transparenz vor dem Projektstart.",
+    "items": [
+      {
+        "question": "Warum gibt es keine festen Endpreise?",
+        "answer": "Weil jede Website andere Ziele, Inhalte und Funktionen hat. Die angegebenen Preise dienen als Orientierung. Nach einem kurzen Gespräch erhalten Sie ein individuelles Angebot."
+      },
+      {
+        "question": "Kann ich klein starten und später erweitern?",
+        "answer": "Ja. Viele Projekte starten mit einer klaren Landing Page oder kompakten Website und werden später erweitert."
+      },
+      {
+        "question": "Ist SEO enthalten?",
+        "answer": "Eine technische und strukturelle SEO-Basis ist enthalten. Erweiterte SEO-Strategie, Content-SEO und laufende Optimierung können zusätzlich gebucht werden."
+      },
+      {
+        "question": "Wie lange dauert ein Projekt?",
+        "answer": "Eine Landing Page dauert meist 1–3 Wochen. Eine Business Website meist 3–6 Wochen. Komplexe Projekte werden individuell geplant."
+      },
+      {
+        "question": "Bieten Sie Betreuung nach dem Launch an?",
+        "answer": "Ja. Dafür gibt es unsere Care-Pakete. So bleibt Ihre Website gepflegt, aktuell und entwicklungsfähig."
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Nächster Schritt",
+    "title": "Bereit, Ihr Projekt professionell zu starten?",
+    "description": "Erzählen Sie uns kurz von Ihrem Vorhaben — wir prüfen, welche Website-Lösung zu Ihrem Ziel, Ihrem Budget und Ihrer Marke passt.",
+    "primaryButton": "Projekt anfragen",
+    "secondaryButton": "Kontakt aufnehmen",
+    "note": "Kostenlose Ersteinschätzung. Transparent. Persönlich. Unverbindlich."
+  }
+}

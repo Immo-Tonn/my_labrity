@@ -1,0 +1,293 @@
+{
+  "hero": {
+    "kicker": "Prices & Packages",
+    "title": "Websites with clear structure, premium design and transparent planning.",
+    "description": "Every project is individual. Our prices serve as transparent orientation — the final scope depends on goals, structure, design level and required functionality.",
+    "primaryButton": "Start project",
+    "secondaryButton": "View packages",
+    "note": "Professional websites from €999"
+  },
+  "priceFactors": {
+    "kicker": "Orientation",
+    "title": "What influences the price?",
+    "description": "The starting price gives a first orientation. The final scope depends on how large the website will be, which functions are needed and how individually the design should be developed.",
+    "items": [
+      {
+        "title": "Scope",
+        "description": "A compact landing page is planned faster than a multi-page business website with many content sections."
+      },
+      {
+        "title": "Functions",
+        "description": "Forms, multilingual content, bookings, shops or special areas increase the technical effort."
+      },
+      {
+        "title": "Design level",
+        "description": "The more individual, premium and brand-specific the website should feel, the more intensive the design work becomes."
+      }
+    ]
+  },
+  "packages": {
+    "kicker": "Fixed-price projects",
+    "title": "Clear packages for different project sizes.",
+    "description": "Whether it is a compact landing page, a professional business website or a custom platform — every package provides a clear foundation and can be extended if needed.",
+    "items": [
+      {
+        "name": "Essential",
+        "badge": "",
+        "price": "from €1,490",
+        "shortDescription": "For landing pages, campaigns and compact digital presences.",
+        "idealFor": "Ideal for freelancers, experts, single services or marketing campaigns.",
+        "features": [
+          "Strategic page structure",
+          "Individual design",
+          "Responsive implementation",
+          "Contact form",
+          "Basic SEO",
+          "Launch preparation"
+        ],
+        "button": "Request package"
+      },
+      {
+        "name": "Signature",
+        "badge": "Recommended",
+        "price": "from €3,900",
+        "shortDescription": "For companies, service providers and brands with professional standards.",
+        "idealFor": "Ideal for companies, studios, local brands, agencies and professional service providers.",
+        "features": [
+          "4–7 subpages",
+          "Individual UX structure",
+          "High-quality web design",
+          "Responsive development",
+          "Basic SEO",
+          "Contact and inquiry forms",
+          "Legal pages preparation",
+          "Launch and technical check"
+        ],
+        "button": "Start project"
+      },
+      {
+        "name": "Prestige",
+        "badge": "",
+        "price": "from €6,900",
+        "shortDescription": "For brands that want to appear premium, modern and distinctive online.",
+        "idealFor": "Ideal for premium brands, growing companies and custom websites with a strong design focus.",
+        "features": [
+          "Extended page structure",
+          "Premium design system",
+          "Animations and interactions",
+          "Multilingual setup possible",
+          "SEO foundation",
+          "Performance optimization",
+          "Individual consulting",
+          "Launch support"
+        ],
+        "button": "Request consultation"
+      },
+      {
+        "name": "Custom",
+        "badge": "",
+        "price": "from €8,900",
+        "shortDescription": "For shops, platforms and individual digital solutions.",
+        "idealFor": "Ideal for online shops, portals, platforms, booking systems or more complex web applications.",
+        "features": [
+          "Individual feature planning",
+          "Shop or platform structure",
+          "User journey planning",
+          "Payment or form processes",
+          "Technical architecture",
+          "Testing",
+          "Launch support"
+        ],
+        "button": "Custom offer"
+      }
+    ]
+  },
+  "subscription": {
+    "kicker": "Website subscription",
+    "title": "Start professionally — without a high upfront investment.",
+    "description": "For businesses that want a high-quality website but prefer to plan the investment monthly. The website is professionally created, maintained and can be expanded later.",
+    "note": "Minimum term: 24 months. Setup costs depend on the project scope.",
+    "items": [
+      {
+        "name": "Abo Start",
+        "price": "from €149 / month",
+        "setup": "Setup from €490",
+        "description": "For compact landing pages and small digital presences.",
+        "features": [
+          "1 landing page",
+          "Responsive design",
+          "Contact form",
+          "Basic SEO",
+          "Technical maintenance",
+          "Small monthly adjustments"
+        ]
+      },
+      {
+        "name": "Abo Business",
+        "price": "from €249 / month",
+        "setup": "Setup from €790",
+        "description": "For small companies, studios and local service providers.",
+        "features": [
+          "Up to 5 pages",
+          "Individual design",
+          "Contact form",
+          "Basic SEO",
+          "Technical support",
+          "Small content updates"
+        ]
+      },
+      {
+        "name": "Abo Premium",
+        "price": "from €399 / month",
+        "setup": "Setup from €1,200",
+        "description": "For brands that want regular development and improvement.",
+        "features": [
+          "Up to 8 pages",
+          "Premium design",
+          "Multilingual setup possible",
+          "Monthly optimizations",
+          "Priority support",
+          "Strategic development"
+        ]
+      }
+    ]
+  },
+  "redesign": {
+    "kicker": "Redesign & Optimization",
+    "title": "When your current website no longer matches your standards.",
+    "description": "Many businesses already have a website — but it looks outdated, unclear or not convincing enough. We analyze existing websites and turn them into modern, high-quality and user-friendly digital presences.",
+    "price": "from €2,400",
+    "features": [
+      "Analysis of the existing website",
+      "New visual direction",
+      "Improved page structure",
+      "Modern responsive design",
+      "Content optimization",
+      "Technical revision",
+      "Launch support"
+    ],
+    "button": "Request redesign"
+  },
+  "additionalServices": {
+    "kicker": "Additional services",
+    "title": "Flexible modules for special requirements.",
+    "description": "Not every project needs the same services. Depending on your goals, additional modules may be useful.",
+    "items": [
+      {
+        "name": "Website Audit",
+        "price": "from €390",
+        "description": "Analysis of design, structure, user experience, mobile experience and optimization potential."
+      },
+      {
+        "name": "SEO Basic Setup",
+        "price": "from €690",
+        "description": "Technical and structural SEO foundation for better visibility."
+      },
+      {
+        "name": "Website Copy",
+        "price": "from €390",
+        "description": "Clear, professional and persuasive copy for important website sections."
+      },
+      {
+        "name": "Multilingual Setup",
+        "price": "from €490",
+        "description": "Additional language versions for international or multilingual target groups."
+      },
+      {
+        "name": "Branding Light",
+        "price": "from €890",
+        "description": "Color direction, font combination, moodboard and visual foundation for the website."
+      },
+      {
+        "name": "Conversion Optimization",
+        "price": "from €790",
+        "description": "Optimization of user flow, CTA areas, forms and trust elements."
+      },
+      {
+        "name": "Website Rescue",
+        "price": "from €290",
+        "description": "For websites that urgently need technical, visual or structural improvements."
+      },
+      {
+        "name": "Small Changes",
+        "price": "from €190",
+        "description": "Small adjustments to existing pages, content or sections."
+      }
+    ]
+  },
+  "care": {
+    "kicker": "Care & Support",
+    "title": "After launch, your website remains in good hands.",
+    "description": "If desired, we continue supporting your website — technically, visually and strategically.",
+    "items": [
+      {
+        "name": "Care Basic",
+        "price": "€79 / month",
+        "description": "For small websites that should remain technically maintained.",
+        "features": [
+          "Technical check",
+          "Small adjustments",
+          "Basic support",
+          "Security check"
+        ]
+      },
+      {
+        "name": "Care Growth",
+        "price": "€149 / month",
+        "description": "For businesses that want to improve their website regularly.",
+        "features": [
+          "Regular optimizations",
+          "Content adjustments",
+          "Basic SEO check",
+          "Priority support"
+        ]
+      },
+      {
+        "name": "Care Premium",
+        "price": "€299 / month",
+        "description": "For brands that want to actively develop their website further.",
+        "features": [
+          "New sections",
+          "Conversion ideas",
+          "Analysis and recommendations",
+          "Priority implementation",
+          "Monthly consultation"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "FAQ",
+    "title": "Transparency before the project starts.",
+    "items": [
+      {
+        "question": "Why are there no fixed final prices?",
+        "answer": "Because every website has different goals, content and functions. The prices shown are orientation values. After a short conversation, you receive an individual offer."
+      },
+      {
+        "question": "Can I start small and expand later?",
+        "answer": "Yes. Many projects start with a clear landing page or compact website and are expanded later."
+      },
+      {
+        "question": "Is SEO included?",
+        "answer": "A technical and structural SEO foundation is included. Extended SEO strategy, SEO content and ongoing optimization can be booked additionally."
+      },
+      {
+        "question": "How long does a project take?",
+        "answer": "A landing page usually takes 1–3 weeks. A business website usually takes 3–6 weeks. Complex projects are planned individually."
+      },
+      {
+        "question": "Do you offer support after launch?",
+        "answer": "Yes. Our care packages help keep your website maintained, current and ready for further development."
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Next step",
+    "title": "Ready to start your project professionally?",
+    "description": "Tell us briefly about your project — we will check which website solution fits your goals, budget and brand.",
+    "primaryButton": "Start project",
+    "secondaryButton": "Contact us",
+    "note": "Free initial assessment. Transparent. Personal. Non-binding."
+  }
+}
