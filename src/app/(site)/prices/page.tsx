@@ -135,10 +135,10 @@ const priceFactorIcons = [Target, Sparkles, ShieldCheck];
 function hasPricesData(data: Partial<PricesData>) {
   return Boolean(
     data?.hero &&
-      data?.priceFactors &&
-      data?.packages &&
-      data?.subscription &&
-      data?.cta,
+    data?.priceFactors &&
+    data?.packages &&
+    data?.subscription &&
+    data?.cta,
   );
 }
 
@@ -190,8 +190,7 @@ function QuizButton({
   className?: string;
 }) {
   const variants = {
-    dark:
-      'border-black bg-black text-white hover:-translate-y-[1px] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]',
+    dark: 'border-black bg-black text-white hover:-translate-y-[1px] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]',
     light: 'border-white bg-white text-black hover:-translate-y-[1px]',
     outlineDark:
       'border-black bg-transparent text-black hover:bg-black hover:text-white',
@@ -279,7 +278,7 @@ export default function PricesPage() {
                   delay: 0.18,
                   ease: heroEase,
                 }}
-                className="max-w-[1120px] font-tenor text-[48px] leading-[0.96] tracking-[-0.045em] text-black md:text-[84px] xl:text-[112px]"
+                className="2xl:text-[98px] max-w-[1040px] font-tenor text-[42px] leading-[1] tracking-[-0.04em] text-black md:text-[68px] xl:text-[88px]"
               >
                 {content.hero.title}
               </motion.h1>
@@ -408,11 +407,7 @@ export default function PricesPage() {
                     0{index + 1}
                   </p>
 
-                  <Icon
-                    size={38}
-                    strokeWidth={1.1}
-                    className="text-black/35"
-                  />
+                  <Icon size={38} strokeWidth={1.1} className="text-black/35" />
 
                   <div>
                     <h3 className="font-tenor text-[30px] leading-[1] tracking-[-0.03em] text-black md:text-[38px]">
@@ -738,10 +733,7 @@ export default function PricesPage() {
       {/* FAQ */}
       <section className="border-t border-[#e7e2d9] px-5 py-24 md:px-8 md:py-32">
         <div className="mx-auto max-w-[1300px]">
-          <SectionTitle
-            kicker={content.faq.kicker}
-            title={content.faq.title}
-          />
+          <SectionTitle kicker={content.faq.kicker} title={content.faq.title} />
 
           <div className="mt-14 divide-y divide-[#e7e2d9] border-y border-[#e7e2d9]">
             {content.faq.items.map(item => (
