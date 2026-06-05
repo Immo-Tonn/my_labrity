@@ -10,6 +10,7 @@ import { Header } from '@/layout/Header';
 import meta from '@/data/de/meta.json';
 import FakeAiChat from '@/components/common/FakeAiChat';
 import LiveActivity from '@/components/common/LiveActivity';
+import HtmlLang from '@/components/ui/HtmlLang';
 
 const montserrat = Montserrat({
   subsets: ['cyrillic', 'latin'],
@@ -25,7 +26,7 @@ const tenor = Tenor_Sans({
   variable: '--font-tenor',
 });
 
-const NEXT_PUBLIC_URL = process.env.NEXT_PUBLIC_URL as string;
+const NEXT_PUBLIC_URL = process.env.NEXT_PUBLIC_URL || 'https://labrity.com';
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -103,11 +104,12 @@ const faqStructuredData = {
   ],
 };
 
-const { title, description, manifest, openGraph, icons } = meta;
+const { title, description, keywords, manifest, openGraph, icons } = meta;
 
 export const metadata: Metadata = {
   title,
   description,
+  keywords,
   icons,
   manifest,
   alternates: {
@@ -116,6 +118,12 @@ export const metadata: Metadata = {
   openGraph: {
     ...openGraph,
     url: NEXT_PUBLIC_URL,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: openGraph.title,
+    description: openGraph.description,
+    images: openGraph.images.map((img) => img.url),
   },
 };
 
@@ -148,12 +156,14 @@ export default function RootLayout({
         />
 
         <LanguageProvider>
+          <HtmlLang />
+
           <QuizProvider>
             <Header />
 
-            <main className="flex-grow">{children}</main>
+            <div className="flex-grow">{children}</div>
 
-            <Footer name="" href="" ariaL="" />
+            <Footer />
 
             <LiveActivity />
 

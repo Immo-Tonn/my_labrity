@@ -1,24 +1,18 @@
 {
-  "_comment_title": "SEO title",
   "title": "Labrity – Professionelle Websites für Unternehmen & Selbstständige in Deutschland",
 
-  "_comment_description": "SEO description",
   "description": "Moderne Websites für kleine Unternehmen, Selbstständige und Dienstleister in Deutschland. Professionell, überzeugend und bereit für neue Kunden.",
 
-  "_comment_keywords": "SEO keywords",
   "keywords": "Labrity, Website erstellen lassen, professionelle Website, Website für Unternehmen, Website für Selbstständige, Webdesign Deutschland, Firmenwebsite, Homepage erstellen lassen",
 
-  "_comment_icons": "Favicons",
   "icons": [
     { "url": "/meta/favicon.ico" },
-    { "url": "/meta/favicon-16x16.png", "rel": "icon", "type": "image/png" },
-    { "url": "/meta/favicon-32x32.png", "rel": "icon", "type": "image/png" }
+    { "url": "/meta/favicon-16x16.png", "rel": "icon", "type": "image/png", "sizes": "16x16" },
+    { "url": "/meta/favicon-32x32.png", "rel": "icon", "type": "image/png", "sizes": "32x32" }
   ],
 
-  "_comment_manifest": "Manifest",
   "manifest": "/meta/site.webmanifest",
 
-  "_comment_openGraph": "Social preview",
   "openGraph": {
     "type": "website",
     "url": "https://labrity.com",

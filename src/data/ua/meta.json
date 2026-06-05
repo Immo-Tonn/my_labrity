@@ -1,24 +1,18 @@
 {
-  "_comment_title": "SEO title",
   "title": "Labrity – Професійні сайти для бізнесу та підприємців",
 
-  "_comment_description": "SEO description",
   "description": "Сучасні сайти для малого бізнесу, підприємців та сфери послуг у Німеччині. Професійно, переконливо та для нових клієнтів.",
 
-  "_comment_keywords": "SEO keywords",
   "keywords": "Labrity, створення сайту, професійний сайт, сайт для бізнесу, сайт для підприємців, вебдизайн Німеччина",
 
-  "_comment_icons": "Favicons",
   "icons": [
     { "url": "/meta/favicon.ico" },
-    { "url": "/meta/favicon-16x16.png", "rel": "icon", "type": "image/png" },
-    { "url": "/meta/favicon-32x32.png", "rel": "icon", "type": "image/png" }
+    { "url": "/meta/favicon-16x16.png", "rel": "icon", "type": "image/png", "sizes": "16x16" },
+    { "url": "/meta/favicon-32x32.png", "rel": "icon", "type": "image/png", "sizes": "32x32" }
   ],
 
-  "_comment_manifest": "Manifest",
   "manifest": "/meta/site.webmanifest",
 
-  "_comment_openGraph": "Social preview",
   "openGraph": {
     "type": "website",
     "url": "https://labrity.com",

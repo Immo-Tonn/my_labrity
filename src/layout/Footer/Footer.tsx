@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 
 import { Logo, ModalPolicy, FooterItem } from '@/components/ui';
 import { ModalImpressum } from '@/components/ui/ModalImpressum';
-import { FooterItemProps } from '@/components/ui/FooterItem/types';
 
 import { useLanguage } from '@/utils/LanguageContext';
 import { getData } from '@/utils/getData';
@@ -24,7 +23,7 @@ interface FooterData {
   }[];
 }
 
-export const Footer: React.FC<FooterItemProps> = () => {
+export const Footer: React.FC = () => {
   const { lang } = useLanguage();
   const [data, setData] = useState<FooterData | null>(null);
 
