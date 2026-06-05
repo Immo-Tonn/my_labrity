@@ -123,7 +123,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: openGraph.title,
     description: openGraph.description,
-    images: openGraph.images.map((img) => img.url),
+    images: openGraph.images.map(img => img.url),
   },
 };
 

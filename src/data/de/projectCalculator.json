@@ -39,10 +39,18 @@
       "question": "Welches Business haben Sie?",
       "answers": [
         { "label": "Selbstständig", "value": "Selbstständig", "weight": 1 },
-        { "label": "Kleines Unternehmen", "value": "Kleines Unternehmen", "weight": 1 },
+        {
+          "label": "Kleines Unternehmen",
+          "value": "Kleines Unternehmen",
+          "weight": 1
+        },
         { "label": "Marke / Studio", "value": "Marke / Studio", "weight": 2 },
         { "label": "Online-Shop", "value": "Online-Shop", "weight": 4 },
-        { "label": "Noch nicht gestartet", "value": "Noch nicht gestartet", "weight": 1 }
+        {
+          "label": "Noch nicht gestartet",
+          "value": "Noch nicht gestartet",
+          "weight": 1
+        }
       ]
     },
     {
@@ -52,9 +60,17 @@
       "answers": [
         { "label": "Landingpage", "value": "Landingpage", "weight": 1 },
         { "label": "Firmenwebsite", "value": "Firmenwebsite", "weight": 2 },
-        { "label": "Portfolio / Personal Brand", "value": "Portfolio / Personal Brand", "weight": 2 },
+        {
+          "label": "Portfolio / Personal Brand",
+          "value": "Portfolio / Personal Brand",
+          "weight": 2
+        },
         { "label": "Online-Shop", "value": "Online-Shop", "weight": 5 },
-        { "label": "Noch nicht sicher", "value": "Noch nicht sicher", "weight": 1 }
+        {
+          "label": "Noch nicht sicher",
+          "value": "Noch nicht sicher",
+          "weight": 1
+        }
       ]
     },
     {
@@ -63,10 +79,26 @@
       "question": "Was ist das wichtigste Ziel der Website?",
       "answers": [
         { "label": "Mehr Anfragen", "value": "Mehr Anfragen", "weight": 1 },
-        { "label": "Premium-Auftritt", "value": "Premium-Auftritt", "weight": 2 },
-        { "label": "Online verkaufen", "value": "Online verkaufen", "weight": 5 },
-        { "label": "Informationen zeigen", "value": "Informationen zeigen", "weight": 1 },
-        { "label": "Noch nicht sicher", "value": "Noch nicht sicher", "weight": 1 }
+        {
+          "label": "Premium-Auftritt",
+          "value": "Premium-Auftritt",
+          "weight": 2
+        },
+        {
+          "label": "Online verkaufen",
+          "value": "Online verkaufen",
+          "weight": 5
+        },
+        {
+          "label": "Informationen zeigen",
+          "value": "Informationen zeigen",
+          "weight": 1
+        },
+        {
+          "label": "Noch nicht sicher",
+          "value": "Noch nicht sicher",
+          "weight": 1
+        }
       ]
     },
     {
@@ -75,8 +107,16 @@
       "question": "Gibt es bereits eine Website?",
       "answers": [
         { "label": "Nein", "value": "Nein", "weight": 1 },
-        { "label": "Ja, aber sie ist okay", "value": "Ja, aber sie ist okay", "weight": 0 },
-        { "label": "Ja, braucht Redesign", "value": "Ja, braucht Redesign", "weight": 2 },
+        {
+          "label": "Ja, aber sie ist okay",
+          "value": "Ja, aber sie ist okay",
+          "weight": 0
+        },
+        {
+          "label": "Ja, braucht Redesign",
+          "value": "Ja, braucht Redesign",
+          "weight": 2
+        },
         { "label": "Nicht sicher", "value": "Nicht sicher", "weight": 1 }
       ]
     },
@@ -88,8 +128,16 @@
         { "label": "1 Seite", "value": "1 Seite", "weight": 0 },
         { "label": "2–5 Seiten", "value": "2–5 Seiten", "weight": 1 },
         { "label": "6–10 Seiten", "value": "6–10 Seiten", "weight": 3 },
-        { "label": "Mehr als 10 Seiten", "value": "Mehr als 10 Seiten", "weight": 5 },
-        { "label": "Noch nicht sicher", "value": "Noch nicht sicher", "weight": 1 }
+        {
+          "label": "Mehr als 10 Seiten",
+          "value": "Mehr als 10 Seiten",
+          "weight": 5
+        },
+        {
+          "label": "Noch nicht sicher",
+          "value": "Noch nicht sicher",
+          "weight": 1
+        }
       ]
     },
     {
@@ -97,11 +145,31 @@
       "label": "Design-Stil",
       "question": "Wie soll das Design aussehen?",
       "answers": [
-        { "label": "Einfach & sauber", "value": "Einfach & sauber", "weight": 0 },
-        { "label": "Minimal & modern", "value": "Minimal & modern", "weight": 1 },
-        { "label": "Modern mit Animationen", "value": "Modern mit Animationen", "weight": 3 },
-        { "label": "Premium / kreativ", "value": "Premium / kreativ", "weight": 4 },
-        { "label": "Noch nicht sicher", "value": "Noch nicht sicher", "weight": 1 }
+        {
+          "label": "Einfach & sauber",
+          "value": "Einfach & sauber",
+          "weight": 0
+        },
+        {
+          "label": "Minimal & modern",
+          "value": "Minimal & modern",
+          "weight": 1
+        },
+        {
+          "label": "Modern mit Animationen",
+          "value": "Modern mit Animationen",
+          "weight": 3
+        },
+        {
+          "label": "Premium / kreativ",
+          "value": "Premium / kreativ",
+          "weight": 4
+        },
+        {
+          "label": "Noch nicht sicher",
+          "value": "Noch nicht sicher",
+          "weight": 1
+        }
       ]
     },
     {
@@ -110,8 +178,16 @@
       "question": "Brauchen Sie Animationen oder visuelle Effekte?",
       "answers": [
         { "label": "Nein", "value": "Nein", "weight": 0 },
-        { "label": "Kleine Animationen", "value": "Kleine Animationen", "weight": 1 },
-        { "label": "Viele moderne Effekte", "value": "Viele moderne Effekte", "weight": 4 },
+        {
+          "label": "Kleine Animationen",
+          "value": "Kleine Animationen",
+          "weight": 1
+        },
+        {
+          "label": "Viele moderne Effekte",
+          "value": "Viele moderne Effekte",
+          "weight": 4
+        },
         { "label": "Nicht sicher", "value": "Nicht sicher", "weight": 1 }
       ]
     },
@@ -120,9 +196,17 @@
       "label": "Referenzen",
       "question": "Haben Sie Beispiel-Websites oder Referenzen?",
       "answers": [
-        { "label": "Ja, klare Beispiele", "value": "Ja, klare Beispiele", "weight": 0 },
+        {
+          "label": "Ja, klare Beispiele",
+          "value": "Ja, klare Beispiele",
+          "weight": 0
+        },
         { "label": "Ein paar Ideen", "value": "Ein paar Ideen", "weight": 1 },
-        { "label": "Nein, brauche Beratung", "value": "Nein, brauche Beratung", "weight": 2 },
+        {
+          "label": "Nein, brauche Beratung",
+          "value": "Nein, brauche Beratung",
+          "weight": 2
+        },
         { "label": "Nicht sicher", "value": "Nicht sicher", "weight": 1 }
       ]
     },
@@ -132,9 +216,21 @@
       "question": "Wer liefert Texte, Bilder und Videos?",
       "answers": [
         { "label": "Alles vorhanden", "value": "Alles vorhanden", "weight": 0 },
-        { "label": "Teilweise vorhanden", "value": "Teilweise vorhanden", "weight": 2 },
-        { "label": "Wir brauchen Unterstützung", "value": "Wir brauchen Unterstützung", "weight": 4 },
-        { "label": "Noch nicht sicher", "value": "Noch nicht sicher", "weight": 2 }
+        {
+          "label": "Teilweise vorhanden",
+          "value": "Teilweise vorhanden",
+          "weight": 2
+        },
+        {
+          "label": "Wir brauchen Unterstützung",
+          "value": "Wir brauchen Unterstützung",
+          "weight": 4
+        },
+        {
+          "label": "Noch nicht sicher",
+          "value": "Noch nicht sicher",
+          "weight": 2
+        }
       ]
     },
     {
@@ -142,9 +238,21 @@
       "label": "Texte",
       "question": "Brauchen Sie Hilfe bei Website-Texten?",
       "answers": [
-        { "label": "Nein, Texte sind fertig", "value": "Nein, Texte sind fertig", "weight": 0 },
-        { "label": "Texte müssen verbessert werden", "value": "Texte müssen verbessert werden", "weight": 2 },
-        { "label": "Texte komplett erstellen", "value": "Texte komplett erstellen", "weight": 4 },
+        {
+          "label": "Nein, Texte sind fertig",
+          "value": "Nein, Texte sind fertig",
+          "weight": 0
+        },
+        {
+          "label": "Texte müssen verbessert werden",
+          "value": "Texte müssen verbessert werden",
+          "weight": 2
+        },
+        {
+          "label": "Texte komplett erstellen",
+          "value": "Texte komplett erstellen",
+          "weight": 4
+        },
         { "label": "Nicht sicher", "value": "Nicht sicher", "weight": 1 }
       ]
     },
@@ -156,7 +264,11 @@
         { "label": "Nein", "value": "Nein", "weight": 0 },
         { "label": "Fotos", "value": "Fotos", "weight": 1 },
         { "label": "Fotos + Videos", "value": "Fotos + Videos", "weight": 3 },
-        { "label": "Hero-Video / Premium Look", "value": "Hero-Video / Premium Look", "weight": 4 },
+        {
+          "label": "Hero-Video / Premium Look",
+          "value": "Hero-Video / Premium Look",
+          "weight": 4
+        },
         { "label": "Nicht sicher", "value": "Nicht sicher", "weight": 1 }
       ]
     },
@@ -167,8 +279,16 @@
       "answers": [
         { "label": "Alles vorhanden", "value": "Alles vorhanden", "weight": 0 },
         { "label": "Nur Logo", "value": "Nur Logo", "weight": 1 },
-        { "label": "Alles neu entwickeln", "value": "Alles neu entwickeln", "weight": 4 },
-        { "label": "Noch nicht sicher", "value": "Noch nicht sicher", "weight": 2 }
+        {
+          "label": "Alles neu entwickeln",
+          "value": "Alles neu entwickeln",
+          "weight": 4
+        },
+        {
+          "label": "Noch nicht sicher",
+          "value": "Noch nicht sicher",
+          "weight": 2
+        }
       ]
     },
     {
@@ -177,9 +297,21 @@
       "question": "Wie sollen Kunden Sie kontaktieren?",
       "answers": [
         { "label": "Kontaktformular", "value": "Kontaktformular", "weight": 1 },
-        { "label": "WhatsApp / Telefon", "value": "WhatsApp / Telefon", "weight": 1 },
-        { "label": "Formular + Email", "value": "Formular + Email", "weight": 2 },
-        { "label": "Buchung / Kalender", "value": "Buchung / Kalender", "weight": 4 },
+        {
+          "label": "WhatsApp / Telefon",
+          "value": "WhatsApp / Telefon",
+          "weight": 1
+        },
+        {
+          "label": "Formular + Email",
+          "value": "Formular + Email",
+          "weight": 2
+        },
+        {
+          "label": "Buchung / Kalender",
+          "value": "Buchung / Kalender",
+          "weight": 4
+        },
         { "label": "Nicht sicher", "value": "Nicht sicher", "weight": 1 }
       ]
     },
@@ -188,11 +320,23 @@
       "label": "Funktionen",
       "question": "Brauchen Sie besondere Funktionen?",
       "answers": [
-        { "label": "Nein, einfache Website", "value": "Einfache Website", "weight": 0 },
+        {
+          "label": "Nein, einfache Website",
+          "value": "Einfache Website",
+          "weight": 0
+        },
         { "label": "Kontaktformular", "value": "Kontaktformular", "weight": 1 },
         { "label": "Buchungssystem", "value": "Buchungssystem", "weight": 4 },
-        { "label": "Login / Datenbank", "value": "Login / Datenbank", "weight": 6 },
-        { "label": "Online-Zahlung / Shop", "value": "Online-Zahlung / Shop", "weight": 7 }
+        {
+          "label": "Login / Datenbank",
+          "value": "Login / Datenbank",
+          "weight": 6
+        },
+        {
+          "label": "Online-Zahlung / Shop",
+          "value": "Online-Zahlung / Shop",
+          "weight": 7
+        }
       ]
     },
     {
@@ -201,8 +345,16 @@
       "question": "Möchten Sie Inhalte später selbst bearbeiten?",
       "answers": [
         { "label": "Nein", "value": "Nein", "weight": 0 },
-        { "label": "Ja, einfache Änderungen", "value": "Ja, einfache Änderungen", "weight": 2 },
-        { "label": "Ja, CMS / Adminbereich", "value": "Ja, CMS / Adminbereich", "weight": 5 },
+        {
+          "label": "Ja, einfache Änderungen",
+          "value": "Ja, einfache Änderungen",
+          "weight": 2
+        },
+        {
+          "label": "Ja, CMS / Adminbereich",
+          "value": "Ja, CMS / Adminbereich",
+          "weight": 5
+        },
         { "label": "Nicht sicher", "value": "Nicht sicher", "weight": 1 }
       ]
     },
@@ -212,10 +364,18 @@
       "question": "Brauchen Sie mehrere Sprachen?",
       "answers": [
         { "label": "Nur Deutsch", "value": "Nur Deutsch", "weight": 0 },
-        { "label": "Deutsch + Englisch", "value": "Deutsch + Englisch", "weight": 2 },
+        {
+          "label": "Deutsch + Englisch",
+          "value": "Deutsch + Englisch",
+          "weight": 2
+        },
         { "label": "3 Sprachen", "value": "3 Sprachen", "weight": 3 },
         { "label": "Mehrsprachig", "value": "Mehrsprachig", "weight": 5 },
-        { "label": "Noch nicht sicher", "value": "Noch nicht sicher", "weight": 1 }
+        {
+          "label": "Noch nicht sicher",
+          "value": "Noch nicht sicher",
+          "weight": 1
+        }
       ]
     },
     {
@@ -234,9 +394,17 @@
       "label": "Local SEO",
       "question": "Ist lokale Sichtbarkeit wichtig?",
       "answers": [
-        { "label": "Ja, Google Maps / lokal", "value": "Ja, Google Maps / lokal", "weight": 2 },
+        {
+          "label": "Ja, Google Maps / lokal",
+          "value": "Ja, Google Maps / lokal",
+          "weight": 2
+        },
         { "label": "Nein", "value": "Nein", "weight": 0 },
-        { "label": "Vielleicht später", "value": "Vielleicht später", "weight": 1 },
+        {
+          "label": "Vielleicht später",
+          "value": "Vielleicht später",
+          "weight": 1
+        },
         { "label": "Nicht sicher", "value": "Nicht sicher", "weight": 1 }
       ]
     },
@@ -246,9 +414,21 @@
       "question": "Brauchen Sie externe Integrationen?",
       "answers": [
         { "label": "Nein", "value": "Nein", "weight": 0 },
-        { "label": "Google Maps / WhatsApp", "value": "Google Maps / WhatsApp", "weight": 1 },
-        { "label": "Newsletter / CRM", "value": "Newsletter / CRM", "weight": 3 },
-        { "label": "API / spezielle Systeme", "value": "API / spezielle Systeme", "weight": 6 },
+        {
+          "label": "Google Maps / WhatsApp",
+          "value": "Google Maps / WhatsApp",
+          "weight": 1
+        },
+        {
+          "label": "Newsletter / CRM",
+          "value": "Newsletter / CRM",
+          "weight": 3
+        },
+        {
+          "label": "API / spezielle Systeme",
+          "value": "API / spezielle Systeme",
+          "weight": 6
+        },
         { "label": "Nicht sicher", "value": "Nicht sicher", "weight": 1 }
       ]
     },
@@ -257,7 +437,11 @@
       "label": "Rechtliches",
       "question": "Brauchen Sie Impressum, Datenschutz oder Cookie-Hinweis?",
       "answers": [
-        { "label": "Ja, bitte berücksichtigen", "value": "Ja, bitte berücksichtigen", "weight": 1 },
+        {
+          "label": "Ja, bitte berücksichtigen",
+          "value": "Ja, bitte berücksichtigen",
+          "weight": 1
+        },
         { "label": "Schon vorhanden", "value": "Schon vorhanden", "weight": 0 },
         { "label": "Nicht sicher", "value": "Nicht sicher", "weight": 1 }
       ]
@@ -269,7 +453,11 @@
       "answers": [
         { "label": "Ja", "value": "Ja", "weight": 0 },
         { "label": "Nur Domain", "value": "Nur Domain", "weight": 1 },
-        { "label": "Nein, brauchen Hilfe", "value": "Nein, brauchen Hilfe", "weight": 2 },
+        {
+          "label": "Nein, brauchen Hilfe",
+          "value": "Nein, brauchen Hilfe",
+          "weight": 2
+        },
         { "label": "Nicht sicher", "value": "Nicht sicher", "weight": 1 }
       ]
     },
@@ -289,8 +477,16 @@
       "question": "Brauchen Sie Unterstützung nach dem Launch?",
       "answers": [
         { "label": "Nein", "value": "Nein", "weight": 0 },
-        { "label": "Kleine Änderungen", "value": "Kleine Änderungen", "weight": 1 },
-        { "label": "Regelmäßige Betreuung", "value": "Regelmäßige Betreuung", "weight": 3 },
+        {
+          "label": "Kleine Änderungen",
+          "value": "Kleine Änderungen",
+          "weight": 1
+        },
+        {
+          "label": "Regelmäßige Betreuung",
+          "value": "Regelmäßige Betreuung",
+          "weight": 3
+        },
         { "label": "Nicht sicher", "value": "Nicht sicher", "weight": 1 }
       ]
     },
@@ -299,8 +495,16 @@
       "label": "Start",
       "question": "Wann möchten Sie starten?",
       "answers": [
-        { "label": "So schnell wie möglich", "value": "So schnell wie möglich", "weight": 3 },
-        { "label": "Innerhalb eines Monats", "value": "Innerhalb eines Monats", "weight": 2 },
+        {
+          "label": "So schnell wie möglich",
+          "value": "So schnell wie möglich",
+          "weight": 3
+        },
+        {
+          "label": "Innerhalb eines Monats",
+          "value": "Innerhalb eines Monats",
+          "weight": 2
+        },
         { "label": "In 2–3 Monaten", "value": "In 2–3 Monaten", "weight": 1 },
         { "label": "Noch offen", "value": "Noch offen", "weight": 0 }
       ]
@@ -310,10 +514,26 @@
       "label": "Entscheidung",
       "question": "Wie weit ist Ihre Entscheidung?",
       "answers": [
-        { "label": "Ich möchte bald starten", "value": "Ich möchte bald starten", "weight": 2 },
-        { "label": "Ich vergleiche Angebote", "value": "Ich vergleiche Angebote", "weight": 1 },
-        { "label": "Ich informiere mich nur", "value": "Ich informiere mich nur", "weight": 0 },
-        { "label": "Noch nicht sicher", "value": "Noch nicht sicher", "weight": 0 }
+        {
+          "label": "Ich möchte bald starten",
+          "value": "Ich möchte bald starten",
+          "weight": 2
+        },
+        {
+          "label": "Ich vergleiche Angebote",
+          "value": "Ich vergleiche Angebote",
+          "weight": 1
+        },
+        {
+          "label": "Ich informiere mich nur",
+          "value": "Ich informiere mich nur",
+          "weight": 0
+        },
+        {
+          "label": "Noch nicht sicher",
+          "value": "Noch nicht sicher",
+          "weight": 0
+        }
       ]
     }
   ]

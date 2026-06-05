@@ -7,8 +7,18 @@
 
   "icons": [
     { "url": "/meta/favicon.ico" },
-    { "url": "/meta/favicon-16x16.png", "rel": "icon", "type": "image/png", "sizes": "16x16" },
-    { "url": "/meta/favicon-32x32.png", "rel": "icon", "type": "image/png", "sizes": "32x32" }
+    {
+      "url": "/meta/favicon-16x16.png",
+      "rel": "icon",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "url": "/meta/favicon-32x32.png",
+      "rel": "icon",
+      "type": "image/png",
+      "sizes": "32x32"
+    }
   ],
 
   "manifest": "/meta/site.webmanifest",

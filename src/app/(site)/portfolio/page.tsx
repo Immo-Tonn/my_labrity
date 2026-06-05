@@ -267,7 +267,7 @@ export default function PortfolioPage() {
                 </a>
 
                 {/* CONTENT */}
-                <div className="min-w-0 flex flex-col justify-between p-6 md:p-9 xl:p-12">
+                <div className="flex min-w-0 flex-col justify-between p-6 md:p-9 xl:p-12">
                   <div>
                     <div className="mb-8 flex items-start justify-between gap-6">
                       <div>
