@@ -255,7 +255,14 @@ const fallbackHomeData: HomeData = {
         description:
           'Eleganter Online-Auftritt für einen Beauty-Salon mit Premium-Look, klarer Angebotsstruktur und starker lokaler Wirkung.',
         imageVariant: 'second',
-        href: 'https://beautylanding1.vercel.app/ru/index.html',
+        href: 'https://beautylanding1.vercel.app/de/index.html',
+      },
+      {
+        title: 'Werkstatt',
+        description:
+          'Moderner Webauftritt für eine KFZ-Werkstatt mit Fokus auf Vertrauen, klare Kommunikation und professionelle Service-Präsentation.',
+        imageVariant: 'second',
+        href: 'https://auto-service-landing-five.vercel.app/de',
       },
     ],
   },

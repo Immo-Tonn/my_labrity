@@ -183,14 +183,14 @@ export default function PortfolioPage() {
 
         {/* SEO BLOCK */}
         <div className="mt-20 border-t border-[#e7e2d9] pt-10">
-          <div className="grid gap-10 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-y-12 xl:grid-cols-3 xl:gap-x-16 xl:gap-y-0">
             {content.seoBlock.map(item => (
-              <div key={item.kicker}>
-                <p className="font-montserrat text-[10px] uppercase tracking-[0.32em] text-neutral-500">
+              <div key={item.kicker} className="min-w-0">
+                <p className="break-words font-montserrat text-[10px] uppercase tracking-[0.32em] text-neutral-500">
                   {item.kicker}
                 </p>
 
-                <p className="mt-5 font-tenor text-[30px] leading-[1.05] text-black md:text-[42px]">
+                <p className="mt-5 hyphens-auto break-words font-tenor text-[30px] leading-[1.08] text-black md:text-[34px] xl:text-[40px]">
                   {item.title}
                 </p>
               </div>
@@ -238,7 +238,7 @@ export default function PortfolioPage() {
               }}
               className="group overflow-hidden border border-[#e4ddd3] bg-[#fbfaf7] transition duration-500 hover:-translate-y-1 hover:border-black/20 hover:shadow-[0_28px_90px_rgba(0,0,0,0.08)]"
             >
-              <div className="grid md:min-h-[50vh] xl:grid-cols-[0.58fr_0.42fr]">
+              <div className="grid md:min-h-[50vh] lg:grid-cols-[0.58fr_0.42fr]">
                 {/* SCREENSHOT */}
                 <a
                   href={item.href}
@@ -246,7 +246,7 @@ export default function PortfolioPage() {
                   rel="noopener noreferrer"
                   className="relative flex min-h-[300px] items-center justify-center overflow-hidden bg-[#ede7dd] p-4 md:min-h-[430px] md:p-6 xl:min-h-[520px]"
                 >
-                  <div className="relative h-full min-h-[260px] w-full overflow-hidden border border-black/10 bg-[#f8f6f1] shadow-[0_20px_70px_rgba(0,0,0,0.10)] md:min-h-[370px] xl:min-h-[440px]">
+                  <div className="relative h-full min-h-[260px] w-full overflow-hidden border border-black/10 bg-[#f8f6f1] shadow-[0_20px_70px_rgba(0,0,0,0.10)] md:min-h-[478px] xl:min-h-[440px]">
                     {item.image ? (
                       <Image
                         src={item.image}
@@ -305,7 +305,7 @@ export default function PortfolioPage() {
                       </a>
                     </div>
 
-                    <h2 className="font-tenor text-[44px] leading-[0.95] tracking-[-0.04em] text-black md:text-[70px] xl:text-[84px]">
+                    <h2 className="font-tenor text-[44px] leading-[0.95] tracking-[-0.04em] text-black md:text-[70px] lg:text-[64px] xl:text-[84px]">
                       {item.title}
                     </h2>
 
