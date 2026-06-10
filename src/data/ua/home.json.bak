@@ -45,54 +45,6 @@
       "Рекомендація"
     ]
   },
-  "featuredProjects": {
-    "kicker": "Обрані проєкти",
-    "title": "Сайти, які викликають довіру.",
-    "scrollLabel": "Скрол",
-    "button": "Дивитися портфоліо",
-    "projectButton": "Дивитися портфоліо",
-    "ctaKicker": "Наступний проєкт",
-    "ctaTitle": "Наступний проєкт може бути вашим.",
-    "ctaDescription": "Розкажіть нам про вашу ідею — ми перетворимо її на сильну цифрову присутність.",
-    "ctaButton": "Запустити калькулятор проєкту",
-    "items": [
-      {
-        "title": "Immo Tonn",
-        "category": "Нерухомість",
-        "image": "/images/projects/immo-tonn.png"
-      },
-      {
-        "title": "TLSG Studio",
-        "category": "Музична індустрія",
-        "image": "/images/projects/tlsg.png"
-      },
-      {
-        "title": "Massage Studio",
-        "category": "Wellness & Spa",
-        "image": "/images/projects/massage.png"
-      },
-      {
-        "title": "Піцерія",
-        "category": "Ресторан",
-        "image": "/images/projects/pizzeria.png"
-      },
-      {
-        "title": "Допомога літнім людям",
-        "category": "Супровід літніх людей",
-        "image": "/images/projects/seniorenbegleitung.png"
-      },
-      {
-        "title": "BeautyTime",
-        "category": "Beauty-індустрія",
-        "image": "/images/projects/beautytime.png"
-      },
-      {
-        "title": "Автомайстерня",
-        "category": "Автомобільна індустрія",
-        "image": "/images/projects/werk.png"
-      }
-    ]
-  },
   "audience": {
     "kicker": "Для кого ми працюємо",
     "title": "Для підприємців, компаній і брендів з амбіціями.",

@@ -45,54 +45,6 @@
       "Empfehlung"
     ]
   },
-  "featuredProjects": {
-    "kicker": "Ausgewählte Projekte",
-    "title": "Websites, die Vertrauen schaffen.",
-    "scrollLabel": "Scroll",
-    "button": "Portfolio ansehen",
-    "projectButton": "Portfolio ansehen",
-    "ctaKicker": "Nächstes Projekt",
-    "ctaTitle": "Das nächste Projekt könnte Ihres sein.",
-    "ctaDescription": "Erzählen Sie uns von Ihrer Idee — wir entwickeln daraus einen starken digitalen Auftritt.",
-    "ctaButton": "Kalkulator starten",
-    "items": [
-      {
-        "title": "Immo Tonn",
-        "category": "Immobilien",
-        "image": "/images/projects/immo-tonn.png"
-      },
-      {
-        "title": "TLSG Studio",
-        "category": "Musikindustrie",
-        "image": "/images/projects/tlsg.png"
-      },
-      {
-        "title": "Massage Studio",
-        "category": "Wellness & Spa",
-        "image": "/images/projects/massage.png"
-      },
-      {
-        "title": "Pizzeria",
-        "category": "Restaurant",
-        "image": "/images/projects/pizzeria.png"
-      },
-      {
-        "title": "Alltagsbegleitung",
-        "category": "Seniorenbegleitung",
-        "image": "/images/projects/seniorenbegleitung.png"
-      },
-      {
-        "title": "BeautyTime",
-        "category": "Beautyindustrie",
-        "image": "/images/projects/beautytime.png"
-      },
-      {
-        "title": "Werkstatt",
-        "category": "Automobilindustrie",
-        "image": "/images/projects/werk.png"
-      }
-    ]
-  },
   "audience": {
     "kicker": "Für wen wir arbeiten",
     "title": "Für Selbstständige, Unternehmen und Marken mit Anspruch.",

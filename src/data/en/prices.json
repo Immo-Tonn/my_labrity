@@ -5,7 +5,25 @@
     "description": "Every project is individual. Our prices serve as transparent orientation — the final scope depends on goals, structure, design level and required functionality.",
     "primaryButton": "Start project",
     "secondaryButton": "View packages",
-    "note": "Professional websites from €999"
+    "note": "Professional websites from €1,000",
+    "stats": [
+      {
+        "value": "05",
+        "label": "Website packages"
+      },
+      {
+        "value": "24M",
+        "label": "Website subscription"
+      },
+      {
+        "value": "SEO",
+        "label": "Basic setup included"
+      },
+      {
+        "value": "100%",
+        "label": "Responsive design"
+      }
+    ]
   },
   "priceFactors": {
     "kicker": "Orientation",
@@ -27,91 +45,136 @@
     ]
   },
   "packages": {
-    "kicker": "Fixed-price projects",
-    "title": "Clear packages for different project sizes.",
-    "description": "Whether it is a compact landing page, a professional business website or a custom platform — every package provides a clear foundation and can be extended if needed.",
+    "kicker": "Website Packages",
+    "title": "Clear website solutions for different goals.",
+    "description": "Whether it is a landing page, a small business website, a professional business presence, a premium website or an online shop — our packages give you clear orientation. The final price depends on scope and requirements.",
     "items": [
       {
-        "name": "Essential",
+        "name": "Landing Page",
         "badge": "",
-        "price": "from €1,490",
-        "shortDescription": "For landing pages, campaigns and compact digital presences.",
-        "idealFor": "Ideal for freelancers, experts, single services or marketing campaigns.",
+        "price": "from €1,000",
+        "shortDescription": "For a single service, offer, campaign or a fast professional start.",
+        "idealFor": "Ideal for freelancers, experts, local offers, events, campaigns or individual services.",
         "features": [
-          "Strategic page structure",
+          "1 page with clear structure",
           "Individual design",
           "Responsive implementation",
           "Contact form",
           "Basic SEO",
           "Launch preparation"
         ],
-        "button": "Request package"
+        "suitableFor": "You want to become professionally visible quickly and present one specific offer clearly.",
+        "notSuitableFor": "You need several subpages, complex functions, a shop or a larger content structure.",
+        "duration": "approx. 4–6 weeks",
+        "support": "Launch support included",
+        "button": "Request landing page"
       },
       {
-        "name": "Signature",
-        "badge": "Recommended",
-        "price": "from €3,900",
-        "shortDescription": "For companies, service providers and brands with professional standards.",
-        "idealFor": "Ideal for companies, studios, local brands, agencies and professional service providers.",
+        "name": "Website for Small Businesses",
+        "badge": "",
+        "price": "from €1.900",
+        "shortDescription": "For small companies, studios and local service providers that want a professional online presence.",
+        "idealFor": "Ideal for small companies, practices, beauty studios, craftsmen, coaches, cafés or local service providers.",
         "features": [
-          "4–7 subpages",
+          "Up to 4 pages",
+          "Clear page structure",
+          "Individual web design",
+          "Responsive development",
+          "Contact form",
+          "Basic SEO",
+          "Legal pages preparation",
+          "Launch and technical check"
+        ],
+        "suitableFor": "You need a serious company website with the most important information, services and contact options.",
+        "notSuitableFor": "You are planning a larger website with many subpages, strong brand strategy or complex functions.",
+        "duration": "approx. 6–8 weeks",
+        "support": "Technical launch check",
+        "button": "Request website"
+      },
+      {
+        "name": "Business Website",
+        "badge": "Recommended",
+        "price": "from €4,900",
+        "shortDescription": "For companies, service providers and brands that want to build trust and generate inquiries online.",
+        "idealFor": "Ideal for companies, agencies, studios, real estate, consulting, medical, education and professional services.",
+        "features": [
+          "5–8 subpages",
           "Individual UX structure",
           "High-quality web design",
           "Responsive development",
           "Basic SEO",
           "Contact and inquiry forms",
-          "Legal pages preparation",
+          "Trust and reference sections",
           "Launch and technical check"
         ],
+        "suitableFor": "Your website should not only inform, but also sell professionally, build trust and attract new customers.",
+        "notSuitableFor": "You only need a very simple online business card or a single campaign page.",
+        "duration": "Timeline discussed individually",
+        "support": "Launch support included",
         "button": "Start project"
       },
       {
-        "name": "Prestige",
+        "name": "Premium Website",
         "badge": "",
-        "price": "from €6,900",
+        "price": "from €7,500",
         "shortDescription": "For brands that want to appear premium, modern and distinctive online.",
         "idealFor": "Ideal for premium brands, growing companies and custom websites with a strong design focus.",
         "features": [
           "Extended page structure",
           "Premium design system",
+          "Individual brand impact",
           "Animations and interactions",
           "Multilingual setup possible",
           "SEO foundation",
           "Performance optimization",
-          "Individual consulting",
-          "Launch support"
+          "Strategic consulting"
         ],
+        "suitableFor": "Your website should feel like a high-quality digital brand experience and clearly stand out from standard websites.",
+        "notSuitableFor": "You are looking for a very simple solution without strategy, special design or individual details.",
+        "duration": "Timeline discussed individually",
+        "support": "Launch guidance included",
         "button": "Request consultation"
       },
       {
-        "name": "Custom",
+        "name": "Online Shop / Platform",
         "badge": "",
         "price": "from €8,900",
-        "shortDescription": "For shops, platforms and individual digital solutions.",
-        "idealFor": "Ideal for online shops, portals, platforms, booking systems or more complex web applications.",
+        "shortDescription": "For shops, platforms, booking systems and individual digital solutions.",
+        "idealFor": "Ideal for online shops, portals, platforms, booking systems, member areas or more complex web applications.",
         "features": [
           "Individual feature planning",
           "Shop or platform structure",
-          "User journey planning",
+          "User guidance",
           "Payment or form processes",
           "Technical architecture",
           "Testing",
           "Launch support"
         ],
+        "suitableFor": "You need more than a classic website and are planning functions, processes, sales or special user areas.",
+        "notSuitableFor": "You only need a simple presentation page or a small company website without special technical functions.",
+        "duration": "Timeline discussed individually",
+        "support": "Technical support possible",
         "button": "Custom offer"
       }
     ]
   },
+  "customSolution": {
+    "kicker": "Custom Solution",
+    "title": "No package fits your project exactly?",
+    "description": "Not every project fits into a fixed package. If you need a special website, platform, booking solution, online shop, member area or individual functions, we create a personal offer tailored to your goals.",
+    "note": "Price according to scope and requirements. Together, we check which solution really makes sense.",
+    "button": "Request custom offer"
+  },
   "subscription": {
-    "kicker": "Website subscription",
-    "title": "Start professionally — without a high upfront investment.",
-    "description": "For businesses that want a high-quality website but prefer to plan the investment monthly. The website is professionally created, maintained and can be expanded later.",
-    "note": "Minimum term: 24 months. Setup costs depend on the project scope.",
+    "kicker": "Website Subscription",
+    "title": "Professional website with monthly payment and support.",
+    "description": "Ideal for businesses that do not want to pay the full project price at once. You pay a one-time setup fee and then a monthly amount including technical support and small adjustments.",
+    "note": "One-time setup + monthly payment. Minimum term: 24 months. After the term ends, the website belongs to you. Support can be continued if desired.",
     "items": [
       {
         "name": "Abo Start",
-        "price": "from €149 / month",
-        "setup": "Setup from €490",
+        "price": "from €99 / month",
+        "setup": "Setup from €290",
         "description": "For compact landing pages and small digital presences.",
         "features": [
           "1 landing page",
@@ -274,11 +337,15 @@
       },
       {
         "question": "How long does a project take?",
-        "answer": "A landing page usually takes 1–3 weeks. A business website usually takes 3–6 weeks. Complex projects are planned individually."
+        "answer": "A landing page usually takes approx. 4–6 weeks. A small business website usually takes approx. 6–8 weeks. For business websites, premium websites, shops and platforms, the timeline is discussed individually based on scope and requirements."
       },
       {
         "question": "Do you offer support after launch?",
         "answer": "Yes. Our care packages help keep your website maintained, current and ready for further development."
+      },
+      {
+        "question": "Do I own the website after the subscription?",
+        "answer": "Yes. After the minimum term ends, the website belongs to you. Technical support can be continued flexibly if desired."
       }
     ]
   },
@@ -289,5 +356,30 @@
     "primaryButton": "Start project",
     "secondaryButton": "Contact us",
     "note": "Free initial assessment. Transparent. Personal. Non-binding."
+  },
+  "meta": {
+    "title": "Prices & Packages | Labrity",
+    "description": "Transparent prices for professional websites, landing pages, redesigns, website subscriptions and ongoing support."
+  },
+  "ui": {
+    "suitableFor": "Suitable if",
+    "notSuitableFor": "Not suitable if",
+    "duration": "Duration",
+    "support": "Support",
+    "loading": "Loading prices"
+  },
+  "quizPreview": {
+    "kicker": "Project calculator",
+    "title": "Not sure which website package fits?",
+    "description": "Answer a few short questions. We will check which solution fits your goal, budget and project scope.",
+    "button": "Start project calculator",
+    "note": "Free. Personal. Non-binding.",
+    "steps": [
+      "Project type",
+      "Scope",
+      "Recommendation"
+    ],
+    "leftTitle": "3 short steps. One clear recommendation.",
+    "leftDescription": "Quickly check which website solution fits your project."
   }
 }

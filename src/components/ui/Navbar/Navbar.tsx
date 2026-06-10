@@ -8,21 +8,60 @@ import { NavbarLink } from './NavbarLink';
 import { useLanguage } from '@/utils/LanguageContext';
 import { getData } from '@/utils/getData';
 
+type NavLinkItem = {
+  title: string;
+  href: string;
+};
+
 export const Navbar: React.FC<NavbarProps> = ({
   variant,
   onClick,
   className,
 }) => {
   const { lang } = useLanguage();
-  const [navLinks, setNavLinks] = useState<any[]>([]);
+  const [navLinks, setNavLinks] = useState<NavLinkItem[]>([]);
 
   useEffect(() => {
+    let isMounted = true;
+
     const loadData = async () => {
-      const data = await getData('header', lang);
-      setNavLinks(data);
+      try {
+        const data = await getData('header', lang);
+
+        if (!isMounted) {
+          return;
+        }
+
+        if (Array.isArray(data)) {
+          setNavLinks(data);
+          return;
+        }
+
+        setNavLinks([]);
+      } catch {
+        if (!isMounted) {
+          return;
+        }
+
+        try {
+          const fallbackData = await getData('header', 'de');
+
+          if (isMounted && Array.isArray(fallbackData)) {
+            setNavLinks(fallbackData);
+          }
+        } catch {
+          if (isMounted) {
+            setNavLinks([]);
+          }
+        }
+      }
     };
 
     loadData();
+
+    return () => {
+      isMounted = false;
+    };
   }, [lang]);
 
   const NavbarClasses = classnames(
@@ -36,13 +75,15 @@ export const Navbar: React.FC<NavbarProps> = ({
     className,
   );
 
-  if (!navLinks.length) return null;
+  if (!navLinks.length) {
+    return null;
+  }
 
   return (
     <ul className={NavbarClasses}>
-      {navLinks.map((link, id) => (
+      {navLinks.map(link => (
         <NavbarLink
-          key={id}
+          key={`${link.href}-${link.title}`}
           title={link.title}
           href={link.href}
           variant={variant}

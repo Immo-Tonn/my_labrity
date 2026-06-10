@@ -1,11 +1,54 @@
 {
+  "meta": {
+    "title": "Preise & Pakete | Labrity",
+    "description": "Transparente Preise für professionelle Websites, Landingpages, Redesigns, Website im Abo und laufende Betreuung."
+  },
+  "ui": {
+    "suitableFor": "Passt, wenn",
+    "notSuitableFor": "Nicht passend, wenn",
+    "duration": "Dauer",
+    "support": "Support",
+    "loading": "Preise werden geladen"
+  },
+  "quizPreview": {
+    "kicker": "Projekt-Kalkulator",
+    "title": "Nicht sicher, welches Website-Paket passt?",
+    "description": "Beantworten Sie ein paar kurze Fragen. Wir prüfen, welche Lösung zu Ihrem Ziel, Budget und Umfang passt.",
+    "leftTitle": " Kurze Schritte. Eine klare Empfehlung.",
+    "leftDescription": "Schnell prüfen, welche Website-Lösung zu Ihrem Projekt passt.",
+    "button": "Projekt-Kalkulator starten",
+    "note": "Kostenlos. Persönlich. Unverbindlich.",
+    "steps": [
+      "Projektart",
+      "Umfang",
+      "Empfehlung"
+    ]
+  },
   "hero": {
     "kicker": "Preise & Pakete",
     "title": "Websites mit klarer Struktur, hochwertigem Design und transparenter Planung.",
     "description": "Jedes Projekt ist individuell. Unsere Preise dienen als transparente Orientierung — der finale Umfang richtet sich nach Ziel, Struktur, Designanspruch und gewünschten Funktionen.",
     "primaryButton": "Projekt anfragen",
     "secondaryButton": "Pakete ansehen",
-    "note": "Professionelle Websites ab 999 €"
+    "note": "Professionelle Websites ab 999 €",
+    "stats": [
+      {
+        "value": "05",
+        "label": "Website-Pakete"
+      },
+      {
+        "value": "24M",
+        "label": "Website im Abo"
+      },
+      {
+        "value": "SEO",
+        "label": "Basis inklusive"
+      },
+      {
+        "value": "100%",
+        "label": "Responsive Design"
+      }
+    ]
   },
   "priceFactors": {
     "kicker": "Orientierung",
@@ -27,68 +70,102 @@
     ]
   },
   "packages": {
-    "kicker": "Festpreis-Projekte",
-    "title": "Klare Pakete für unterschiedliche Projektgrößen.",
-    "description": "Ob kompakte Landingpage, professionelle Unternehmenswebsite oder individuelle Plattform — jedes Paket bietet eine klare Basis und kann bei Bedarf erweitert werden.",
+    "kicker": "Website-Pakete",
+    "title": "Klare Website-Lösungen für unterschiedliche Ziele.",
+    "description": "Ob Landingpage, kleine Firmenwebsite, Business-Auftritt, Premium-Website oder Shop — unsere Pakete geben Ihnen eine klare Orientierung. Der finale Preis richtet sich nach Umfang und Anforderungen.",
     "items": [
       {
-        "name": "Essential",
+        "name": "Landing Page",
         "badge": "",
-        "price": "ab 1.490 €",
-        "shortDescription": "Für Landingpages, Kampagnen und kompakte digitale Auftritte.",
-        "idealFor": "Ideal für Selbstständige, Experten, einzelne Leistungen oder Werbekampagnen.",
+        "price": "ab 999 €",
+        "shortDescription": "Für eine einzelne Leistung, ein Angebot, eine Kampagne oder einen schnellen professionellen Start.",
+        "idealFor": "Ideal für Selbstständige, Experten, lokale Angebote, Events, Kampagnen oder einzelne Dienstleistungen.",
         "features": [
-          "Strategische Seitenstruktur",
+          "1 Seite mit klarer Struktur",
           "Individuelles Design",
           "Responsive Umsetzung",
           "Kontaktformular",
           "Basis-SEO",
           "Launch-Vorbereitung"
         ],
-        "button": "Anfragen"
+        "suitableFor": "Sie möchten schnell professionell sichtbar werden und ein konkretes Angebot überzeugend präsentieren.",
+        "notSuitableFor": "Sie mehrere Unterseiten, komplexe Funktionen, einen Shop oder eine umfangreiche Content-Struktur brauchen.",
+        "duration": "ca. 4–6 Wochen",
+        "support": "Launch-Support inklusive",
+        "button": "Landingpage anfragen"
       },
       {
-        "name": "Signature",
-        "badge": "Empfohlen",
-        "price": "ab 3.900 €",
-        "shortDescription": "Für Unternehmen, Dienstleister und Marken mit professionellem Anspruch.",
-        "idealFor": "Ideal für Unternehmen, Studios, lokale Marken, Agenturen und professionelle Dienstleister.",
+        "name": "Website für kleine Unternehmen",
+        "badge": "",
+        "price": "ab 1.900 €",
+        "shortDescription": "Für kleine Unternehmen, Studios und lokale Dienstleister, die professionell auftreten möchten.",
+        "idealFor": "Ideal für kleine Firmen, Praxen, Beauty-Studios, Handwerker, Coaches, Cafés oder lokale Dienstleister.",
         "features": [
-          "4–7 Unterseiten",
+          "Bis zu 5 Seiten",
+          "Klare Seitenstruktur",
+          "Individuelles Webdesign",
+          "Responsive Entwicklung",
+          "Kontaktformular",
+          "Basis-SEO",
+          "Impressum & Datenschutz-Seiten",
+          "Launch & technische Prüfung"
+        ],
+        "suitableFor": "Sie brauchen eine seriöse Firmenwebsite mit den wichtigsten Informationen, Leistungen und Kontaktmöglichkeiten.",
+        "notSuitableFor": "Sie eine größere Website mit vielen Unterseiten, starker Markenstrategie oder komplexen Funktionen planen.",
+        "duration": "ca. 6–8 Wochen",
+        "support": "Technische Prüfung zum Launch",
+        "button": "Website anfragen"
+      },
+      {
+        "name": "Business Website",
+        "badge": "Empfohlen",
+        "price": "ab 4.900 €",
+        "shortDescription": "Für Unternehmen, Dienstleister und Marken, die online Vertrauen aufbauen und Anfragen gewinnen möchten.",
+        "idealFor": "Ideal für Unternehmen, Agenturen, Studios, Immobilien, Beratung, Medizin, Bildung und professionelle Dienstleistungen.",
+        "features": [
+          "5–8 Unterseiten",
           "Individuelle UX-Struktur",
           "Hochwertiges Webdesign",
           "Responsive Entwicklung",
           "Basis-SEO",
           "Kontakt- und Anfrageformulare",
-          "Impressum & Datenschutz-Seiten",
+          "Vertrauens- und Referenzbereiche",
           "Launch & technische Prüfung"
         ],
+        "suitableFor": "Ihre Website soll nicht nur informieren, sondern professionell verkaufen, Vertrauen schaffen und neue Kunden gewinnen.",
+        "notSuitableFor": "Sie nur eine sehr einfache Online-Visitenkarte oder eine einzelne Kampagnenseite benötigen.",
+        "duration": "Zeitraum wird individuell abgestimmt",
+        "support": "Launch-Support inklusive",
         "button": "Projekt starten"
       },
       {
-        "name": "Prestige",
+        "name": "Premium Website",
         "badge": "",
-        "price": "ab 6.900 €",
+        "price": "ab 7.500 €",
         "shortDescription": "Für Marken, die digital hochwertig, modern und unverwechselbar auftreten möchten.",
         "idealFor": "Ideal für Premium-Marken, wachsende Unternehmen und individuelle Webauftritte mit besonderem Designanspruch.",
         "features": [
           "Erweiterte Seitenstruktur",
           "Premium Designsystem",
+          "Individuelle Markenwirkung",
           "Animationen & Interaktionen",
           "Mehrsprachigkeit möglich",
           "SEO-Grundstruktur",
           "Performance-Optimierung",
-          "Individuelle Beratung",
-          "Launch-Begleitung"
+          "Strategische Beratung"
         ],
+        "suitableFor": "Ihre Website soll wie ein hochwertiges digitales Markenerlebnis wirken und sich klar von Standard-Websites abheben.",
+        "notSuitableFor": "Sie eine sehr einfache Lösung ohne Strategie, besondere Gestaltung oder individuelle Details suchen.",
+        "duration": "Zeitraum wird individuell abgestimmt",
+        "support": "Launch-Begleitung inklusive",
         "button": "Beratung anfragen"
       },
       {
-        "name": "Custom",
+        "name": "Online Shop / Plattform",
         "badge": "",
         "price": "ab 8.900 €",
-        "shortDescription": "Für Shops, Plattformen und individuelle digitale Lösungen.",
-        "idealFor": "Ideal für Online-Shops, Portale, Plattformen, Buchungssysteme oder komplexere Webanwendungen.",
+        "shortDescription": "Für Shops, Plattformen, Buchungssysteme und individuelle digitale Lösungen.",
+        "idealFor": "Ideal für Online-Shops, Portale, Plattformen, Buchungssysteme, Mitgliederbereiche oder komplexere Webanwendungen.",
         "features": [
           "Individuelle Funktionsplanung",
           "Shop- oder Plattformstruktur",
@@ -98,20 +175,31 @@
           "Testing",
           "Launch-Begleitung"
         ],
+        "suitableFor": "Sie brauchen mehr als eine klassische Website und planen Funktionen, Prozesse, Verkauf oder besondere Nutzerbereiche.",
+        "notSuitableFor": "Sie nur eine einfache Präsentationsseite oder eine kleine Firmenwebsite ohne technische Sonderfunktionen benötigen.",
+        "duration": "Zeitraum wird individuell abgestimmt",
+        "support": "Technische Begleitung möglich",
         "button": "Individuelles Angebot"
       }
     ]
   },
+  "customSolution": {
+    "kicker": "Individuelle Lösung",
+    "title": "Kein Paket passt genau zu Ihrem Projekt?",
+    "description": "Nicht jedes Projekt lässt sich in ein fertiges Paket einordnen. Wenn Sie eine besondere Website, Plattform, Buchungslösung, einen Shop, Mitgliederbereich oder individuelle Funktionen brauchen, erstellen wir ein persönliches Angebot passend zu Ihrem Ziel.",
+    "note": "Preis nach Umfang und Anforderungen. Wir prüfen gemeinsam, welche Lösung wirklich sinnvoll ist.",
+    "button": "Individuelles Angebot anfragen"
+  },
   "subscription": {
     "kicker": "Website im Abo",
-    "title": "Professionell starten — ohne hohe Anfangsinvestition.",
-    "description": "Für Unternehmen, die einen hochwertigen Webauftritt möchten, aber die Investition lieber monatlich planen. Die Website wird professionell erstellt, betreut und kann später erweitert werden.",
-    "note": "Mindestlaufzeit: 24 Monate. Einrichtungskosten je nach Umfang.",
+    "title": "Professioneller Webauftritt mit monatlicher Zahlung und Betreuung.",
+    "description": "Ideal für Unternehmen, die nicht den gesamten Projektpreis sofort zahlen möchten. Sie zahlen eine einmalige Einrichtung und anschließend einen monatlichen Betrag inklusive technischer Betreuung und kleiner Anpassungen.",
+    "note": "Einmalige Einrichtung + monatliche Zahlung. Mindestlaufzeit: 24 Monate. Nach Ablauf gehört die Website Ihnen. Die Betreuung kann auf Wunsch weitergeführt werden.",
     "items": [
       {
         "name": "Abo Start",
-        "price": "ab 149 € / Monat",
-        "setup": "Einrichtung ab 490 €",
+        "price": "ab 99 € / Monat",
+        "setup": "Einrichtung ab 290 €",
         "description": "Für kompakte Landingpages und kleine digitale Auftritte.",
         "features": [
           "1 Landing Page",
@@ -274,11 +362,15 @@
       },
       {
         "question": "Wie lange dauert ein Projekt?",
-        "answer": "Eine Landing Page dauert meist 1–3 Wochen. Eine Business Website meist 3–6 Wochen. Komplexe Projekte werden individuell geplant."
+        "answer": "Eine Landing Page dauert meist ca. 4–6 Wochen. Eine kleine Unternehmenswebsite meist ca. 6–8 Wochen. Für Business Websites, Premium Websites, Shops und Plattformen werden die Zeiträume individuell nach Umfang und Anforderungen abgestimmt."
       },
       {
         "question": "Bieten Sie Betreuung nach dem Launch an?",
         "answer": "Ja. Dafür gibt es unsere Care-Pakete. So bleibt Ihre Website gepflegt, aktuell und entwicklungsfähig."
+      },
+      {
+        "question": "Gehört mir die Website nach dem Abo?",
+        "answer": "Ja. Nach Ablauf der Mindestlaufzeit gehört die Website Ihnen. Die technische Betreuung kann auf Wunsch flexibel weitergeführt werden."
       }
     ]
   },

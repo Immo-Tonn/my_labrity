@@ -45,54 +45,6 @@
       "Recommendation"
     ]
   },
-  "featuredProjects": {
-    "kicker": "Selected Projects",
-    "title": "Websites that build trust.",
-    "scrollLabel": "Scroll",
-    "button": "View portfolio",
-    "projectButton": "View portfolio",
-    "ctaKicker": "Next Project",
-    "ctaTitle": "The next project could be yours.",
-    "ctaDescription": "Tell us about your idea — we will turn it into a strong digital presence.",
-    "ctaButton": "Start project calculator",
-    "items": [
-      {
-        "title": "Immo Tonn",
-        "category": "Real Estate",
-        "image": "/images/projects/immo-tonn.png"
-      },
-      {
-        "title": "TLSG Studio",
-        "category": "Music Industry",
-        "image": "/images/projects/tlsg.png"
-      },
-      {
-        "title": "Massage Studio",
-        "category": "Wellness & Spa",
-        "image": "/images/projects/massage.png"
-      },
-      {
-        "title": "Pizzeria",
-        "category": "Restaurant",
-        "image": "/images/projects/pizzeria.png"
-      },
-      {
-        "title": "Everyday Support",
-        "category": "Senior Assistance",
-        "image": "/images/projects/seniorenbegleitung.png"
-      },
-      {
-        "title": "BeautyTime",
-        "category": "Beauty Industry",
-        "image": "/images/projects/beautytime.png"
-      },
-      {
-        "title": "Workshop",
-        "category": "Automotive Industry",
-        "image": "/images/projects/werk.png"
-      }
-    ]
-  },
   "audience": {
     "kicker": "Who We Work With",
     "title": "For Freelancers, Companies and Premium Brands.",
