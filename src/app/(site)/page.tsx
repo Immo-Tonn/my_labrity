@@ -252,9 +252,10 @@ const fallbackHomeData: HomeData = {
       },
       {
         title: 'Alltagsbegleitung für Senioren',
-        description: 'Eine kleine und einfache Landingpage für eine selbstständige Alltagsbegleiterin. Das Projekt zeigt eine schnell realisierbare Website-Lösung für ein kleines Budget — klar, ruhig und auf direkte Kontaktaufnahme ausgerichtet.',
+        description:
+          'Eine kleine und einfache Landingpage für eine selbstständige Alltagsbegleiterin. Das Projekt zeigt eine schnell realisierbare Website-Lösung für ein kleines Budget — klar, ruhig und auf direkte Kontaktaufnahme ausgerichtet.',
         imageVariant: 'first',
-        href: 'https://pflege-landing-1.vercel.app/'
+        href: 'https://pflege-landing-1.vercel.app/',
       },
       {
         title: 'BeautyTime',

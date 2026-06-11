@@ -145,8 +145,8 @@ export default function PortfolioPage() {
   }
 
   const isSeniorProject = (title: string) =>
-  title.toLowerCase().includes('alltags') ||
-  title.toLowerCase().includes('senior');
+    title.toLowerCase().includes('alltags') ||
+    title.toLowerCase().includes('senior');
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#f8f6f1] text-black">
@@ -235,47 +235,47 @@ export default function PortfolioPage() {
             const seniorProject = isSeniorProject(item.title);
 
             return (
-            <motion.article
-              key={`${item.title}-${index}`}
-              initial={{ opacity: 0, y: 34 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.18 }}
-              transition={{
-                duration: 0.7,
-                delay: index * 0.04,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="group overflow-hidden border border-[#e4ddd3] bg-[#fbfaf7] transition duration-500 hover:-translate-y-1 hover:border-black/20 hover:shadow-[0_28px_90px_rgba(0,0,0,0.08)]"
-            >
-              <div className="grid md:min-h-[50vh] lg:grid-cols-[0.58fr_0.42fr]">
-                {/* SCREENSHOT */}
-                <a
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative flex min-h-[300px] items-center justify-center overflow-hidden bg-[#ede7dd] p-4 md:min-h-[430px] md:p-6 xl:min-h-[520px]"
-                >
-                  <div className="relative h-full min-h-[260px] w-full overflow-hidden border border-black/10 bg-[#f8f6f1] shadow-[0_20px_70px_rgba(0,0,0,0.10)] md:min-h-[478px] xl:min-h-[440px]">
-                    {item.image ? (
-                      <Image
-                        src={item.image}
-                        alt={`${item.title} Premium Website Projekt`}
-                        fill
-                        priority={index === 0}
-                        sizes="(max-width: 1280px) 100vw, 58vw"
-                        className="object-contain p-3 transition duration-700 group-hover:scale-[1.025] md:p-5"
-                      />
-                    ) : (
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="font-montserrat text-[10px] uppercase tracking-[0.32em] text-neutral-500">
-                          Coming Soon
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                </a>
+              <motion.article
+                key={`${item.title}-${index}`}
+                initial={{ opacity: 0, y: 34 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.18 }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.04,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="group overflow-hidden border border-[#e4ddd3] bg-[#fbfaf7] transition duration-500 hover:-translate-y-1 hover:border-black/20 hover:shadow-[0_28px_90px_rgba(0,0,0,0.08)]"
+              >
+                <div className="grid md:min-h-[50vh] lg:grid-cols-[0.58fr_0.42fr]">
+                  {/* SCREENSHOT */}
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative flex min-h-[300px] items-center justify-center overflow-hidden bg-[#ede7dd] p-4 md:min-h-[430px] md:p-6 xl:min-h-[520px]"
+                  >
+                    <div className="relative h-full min-h-[260px] w-full overflow-hidden border border-black/10 bg-[#f8f6f1] shadow-[0_20px_70px_rgba(0,0,0,0.10)] md:min-h-[478px] xl:min-h-[440px]">
+                      {item.image ? (
+                        <Image
+                          src={item.image}
+                          alt={`${item.title} Premium Website Projekt`}
+                          fill
+                          priority={index === 0}
+                          sizes="(max-width: 1280px) 100vw, 58vw"
+                          className="object-contain p-3 transition duration-700 group-hover:scale-[1.025] md:p-5"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <span className="font-montserrat text-[10px] uppercase tracking-[0.32em] text-neutral-500">
+                            Coming Soon
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </a>
 
-                {/* CONTENT */}
+                  {/* CONTENT */}
                   <div
                     className={`flex min-w-0 flex-col justify-between md:p-9 xl:p-12 ${
                       seniorProject ? 'p-5' : 'p-6'
@@ -367,7 +367,7 @@ export default function PortfolioPage() {
                     </div>
                   </div>
 
-                {/* <div className="flex min-w-0 flex-col justify-between p-6 md:p-9 xl:p-12">
+                  {/* <div className="flex min-w-0 flex-col justify-between p-6 md:p-9 xl:p-12">
                   <div>
                     <div className="mb-8 flex items-start justify-between gap-6">
                       <div>
@@ -437,8 +437,8 @@ export default function PortfolioPage() {
                     </a>
                   </div>
                 </div> */}
-              </div>
-            </motion.article>
+                </div>
+              </motion.article>
             );
           })}
         </div>
