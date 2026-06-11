@@ -154,7 +154,8 @@
       "Pizzeria": "Restaurant",
       "Massage Studio": "Wellness & Spa",
       "BeautyTime": "Beauty Industry",
-      "Werkstatt": "Automotive Industry"
+      "Werkstatt": "Automotive Industry",
+      "Senior Companion Support": "Senior support"
     },
 
     "blackSection": {
@@ -193,6 +194,13 @@
         "imageVariant": "first",
         "image": "/images/projects/massage.png",
         "href": "https://massage-landing-swart.vercel.app/#services"
+      },
+      {
+        "title": "Senior Companion Support",
+        "description": "A small and simple landing page for an independent senior companion. The project shows a quickly realizable website solution for a small budget — clear, calm and focused on direct contact.",
+        "imageVariant": "first",
+        "image": "/images/projects/seniorenbegleitung.png",
+        "href": "https://pflege-landing-1.vercel.app/"
       },
       {
         "title": "BeautyTime",

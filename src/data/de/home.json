@@ -119,7 +119,8 @@
       "Pizzeria": "Restaurant",
       "Massage Studio": "Wellness & Spa",
       "BeautyTime": "Beautyindustrie",
-      "Werkstatt": "Automobilindustrie"
+      "Werkstatt": "Automobilindustrie",
+      "Alltagsbegleitung für Senioren": "Seniorenbegleitung"
     },
     "blackSection": {
       "kicker": "In Entwicklung",
@@ -156,6 +157,13 @@
         "imageVariant": "first",
         "image": "/images/projects/massage.png",
         "href": "https://massage-landing-swart.vercel.app/#services"
+      },
+            {
+        "title": "Alltagsbegleitung für Senioren",
+        "description": "Eine kleine und einfache Landingpage für eine selbstständige Alltagsbegleiterin. Das Projekt zeigt eine schnell realisierbare Website-Lösung für ein kleines Budget — klar, ruhig und auf direkte Kontaktaufnahme ausgerichtet.",
+        "imageVariant": "first",
+        "image": "/images/projects/seniorenbegleitung.png",
+        "href": "https://pflege-landing-1.vercel.app/"
       },
       {
         "title": "BeautyTime",

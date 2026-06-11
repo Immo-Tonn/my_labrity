@@ -84,6 +84,7 @@ const fallbackPortfolioData: PortfolioData = {
     'Massage Studio': 'Wellness & Spa',
     BeautyTime: 'Beautyindustrie',
     Werkstatt: 'Automobilindustrie',
+    'Alltagsbegleitung für Senioren': 'Seniorenbegleitung',
   },
   blackSection: {
     kicker: 'In Entwicklung',
@@ -142,6 +143,10 @@ export default function PortfolioPage() {
   if (!content) {
     return <main className="min-h-screen bg-[#f8f6f1]" />;
   }
+
+  const isSeniorProject = (title: string) =>
+  title.toLowerCase().includes('alltags') ||
+  title.toLowerCase().includes('senior');
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#f8f6f1] text-black">
@@ -225,7 +230,11 @@ export default function PortfolioPage() {
       {/* PROJECTS */}
       <section className="mx-auto max-w-[1700px] px-5 pb-28 pt-16 md:px-8 md:pb-40 md:pt-24">
         <div className="space-y-10 md:space-y-14">
-          {content.items.map((item, index) => (
+          {/* {content.items.map((item, index) => ( */}
+          {content.items.map((item, index) => {
+            const seniorProject = isSeniorProject(item.title);
+
+            return (
             <motion.article
               key={`${item.title}-${index}`}
               initial={{ opacity: 0, y: 34 }}
@@ -267,7 +276,98 @@ export default function PortfolioPage() {
                 </a>
 
                 {/* CONTENT */}
-                <div className="flex min-w-0 flex-col justify-between p-6 md:p-9 xl:p-12">
+                  <div
+                    className={`flex min-w-0 flex-col justify-between md:p-9 xl:p-12 ${
+                      seniorProject ? 'p-5' : 'p-6'
+                    }`}
+                  >
+                    <div className="min-w-0">
+                      <div
+                        className={`flex items-start justify-between gap-6 ${
+                          seniorProject ? 'mb-6' : 'mb-8'
+                        }`}
+                      >
+                        <div className="min-w-0">
+                          <p className="break-words font-montserrat text-[10px] uppercase tracking-[0.34em] text-neutral-500">
+                            {String(index + 1).padStart(2, '0')} /{' '}
+                            {content.categories[item.title] ||
+                              content.projectLabel}
+                          </p>
+
+                          <p className="mt-3 break-words font-montserrat text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                            {content.projectLabel}
+                          </p>
+                        </div>
+
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${content.projectButton}: ${item.title}`}
+                          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#d9cfbe] transition duration-300 group-hover:border-black group-hover:bg-black group-hover:text-white"
+                        >
+                          <svg
+                            className="h-4 w-4"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M7 17L17 7M17 7H8M17 7V16"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+
+                      <h2
+                        className={`max-w-full font-tenor leading-[0.95] tracking-[-0.04em] text-black md:text-[70px] xl:text-[84px] ${
+                          seniorProject
+                            ? 'hyphens-auto text-[36px] [overflow-wrap:anywhere] sm:text-[44px]'
+                            : 'break-words text-[44px]'
+                        }`}
+                      >
+                        {item.title}
+                      </h2>
+
+                      <p
+                        className={`mt-7 max-w-[620px] font-montserrat text-[14px] leading-8 text-neutral-700 md:text-[16px] ${
+                          seniorProject
+                            ? '[overflow-wrap:anywhere]'
+                            : 'break-words'
+                        }`}
+                      >
+                        {item.description}
+                      </p>
+                    </div>
+
+                    <div className="mt-10 min-w-0">
+                      <div className="mb-8 flex flex-wrap items-center gap-4 font-montserrat text-[10px] uppercase tracking-[0.28em] text-neutral-500">
+                        {content.projectTags.map((tag, tagIndex) => (
+                          <div key={tag} className="flex items-center gap-4">
+                            {tagIndex > 0 && (
+                              <span className="h-1 w-1 rounded-full bg-neutral-400" />
+                            )}
+                            <span>{tag}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-4 font-montserrat text-[11px] uppercase tracking-[0.34em] text-neutral-600 transition duration-300 hover:text-black"
+                      >
+                        {content.projectButton}
+                        <span className="h-px w-12 bg-neutral-400 transition duration-300 group-hover:w-20 group-hover:bg-black" />
+                      </a>
+                    </div>
+                  </div>
+
+                {/* <div className="flex min-w-0 flex-col justify-between p-6 md:p-9 xl:p-12">
                   <div>
                     <div className="mb-8 flex items-start justify-between gap-6">
                       <div>
@@ -336,10 +436,11 @@ export default function PortfolioPage() {
                       <span className="h-px w-12 bg-neutral-400 transition duration-300 group-hover:w-20 group-hover:bg-black" />
                     </a>
                   </div>
-                </div>
+                </div> */}
               </div>
             </motion.article>
-          ))}
+            );
+          })}
         </div>
       </section>
 

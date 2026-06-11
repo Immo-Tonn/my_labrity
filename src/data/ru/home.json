@@ -155,7 +155,8 @@
       "Pizzeria": "Ресторан",
       "Massage Studio": "Wellness & Spa",
       "BeautyTime": "Beauty-индустрия",
-      "Werkstatt": "Автомобильная сфера"
+      "Werkstatt": "Автомобильная сфера",
+      "Сопровождение пожилых людей": "Помощь пожилым"
     },
 
     "blackSection": {
@@ -194,6 +195,13 @@
         "imageVariant": "first",
         "image": "/images/projects/massage.png",
         "href": "https://massage-landing-swart.vercel.app/#services"
+      },
+      {
+        "title": "Сопровождение пожилых людей",
+        "description": "Небольшой и простой лендинг для самостоятельной помощницы по сопровождению пожилых людей. Проект показывает быстро реализуемое решение для небольшого бюджета — спокойно, понятно и с акцентом на быстрый контакт.",
+        "imageVariant": "first",
+        "image": "/images/projects/seniorenbegleitung.png",
+        "href": "https://pflege-landing-1.vercel.app/"
       },
       {
         "title": "BeautyTime",

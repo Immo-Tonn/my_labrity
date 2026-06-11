@@ -251,6 +251,12 @@ const fallbackHomeData: HomeData = {
         href: 'https://massage-landing-swart.vercel.app/#services',
       },
       {
+        title: 'Alltagsbegleitung für Senioren',
+        description: 'Eine kleine und einfache Landingpage für eine selbstständige Alltagsbegleiterin. Das Projekt zeigt eine schnell realisierbare Website-Lösung für ein kleines Budget — klar, ruhig und auf direkte Kontaktaufnahme ausgerichtet.',
+        imageVariant: 'first',
+        href: 'https://pflege-landing-1.vercel.app/'
+      },
+      {
         title: 'BeautyTime',
         description:
           'Eleganter Online-Auftritt für einen Beauty-Salon mit Premium-Look, klarer Angebotsstruktur und starker lokaler Wirkung.',
