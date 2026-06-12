@@ -77,7 +77,7 @@ export default function Quiz() {
   };
 
   return (
-    <div className="p-8 h-full max-h-[85vh] overflow-y-auto">
+    <div className="h-full max-h-[85vh] overflow-y-auto p-8">
       <p className="mb-4 text-sm text-black/60">
         {quiz.progress} {step + 1} / {quiz.questions.length}
       </p>
