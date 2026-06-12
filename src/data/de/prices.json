@@ -18,11 +18,7 @@
     "leftDescription": "Schnell prüfen, welche Website-Lösung zu Ihrem Projekt passt.",
     "button": "Projekt-Kalkulator starten",
     "note": "Kostenlos. Persönlich. Unverbindlich.",
-    "steps": [
-      "Projektart",
-      "Umfang",
-      "Empfehlung"
-    ]
+    "steps": ["Projektart", "Umfang", "Empfehlung"]
   },
   "hero": {
     "kicker": "Preise & Pakete",

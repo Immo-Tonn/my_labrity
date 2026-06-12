@@ -374,11 +374,7 @@
     "description": "Answer a few short questions. We will check which solution fits your goal, budget and project scope.",
     "button": "Start project calculator",
     "note": "Free. Personal. Non-binding.",
-    "steps": [
-      "Project type",
-      "Scope",
-      "Recommendation"
-    ],
+    "steps": ["Project type", "Scope", "Recommendation"],
     "leftTitle": "3 short steps. One clear recommendation.",
     "leftDescription": "Quickly check which website solution fits your project."
   }

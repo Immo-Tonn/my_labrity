@@ -630,37 +630,40 @@ export default function PricesPage() {
             </motion.div>
 
             <motion.aside
-  initial={{ opacity: 0, y: 36 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.9, delay: 0.3, ease: heroEase }}
-  className="border border-[#e7e2d9] bg-white/35 shadow-[0_14px_36px_rgba(0,0,0,0.025)] 2xl:-translate-y-4"
->
-  <div className="px-7 py-8 md:px-9 md:py-10">
-    <p className="font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
-      {content.hero.kicker}
-    </p>
+              initial={{ opacity: 0, y: 36 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.3, ease: heroEase }}
+              className="2xl:-translate-y-4 border border-[#e7e2d9] bg-white/35 shadow-[0_14px_36px_rgba(0,0,0,0.025)]"
+            >
+              <div className="px-7 py-8 md:px-9 md:py-10">
+                <p className="font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+                  {content.hero.kicker}
+                </p>
 
-    <p className="mt-7 max-w-[820px] font-tenor text-[38px] leading-[1] tracking-[-0.04em] text-black md:text-[54px]">
-      {content.hero.note}
-    </p>
-  </div>
+                <p className="mt-7 max-w-[820px] font-tenor text-[38px] leading-[1] tracking-[-0.04em] text-black md:text-[54px]">
+                  {content.hero.note}
+                </p>
+              </div>
 
-  <div className="grid divide-y divide-[#e7e2d9] border-t border-[#e7e2d9] sm:grid-cols-2 sm:divide-x sm:divide-y-0 xl:grid-cols-4">
-    {(content.hero.stats ?? []).map(stat => (
-      <div key={`${stat.value}-${stat.label}`} className="px-7 py-7 md:px-9 md:py-9">
-        <p className="font-tenor text-[38px] leading-none tracking-[-0.04em] text-black">
-          {stat.value}
-        </p>
+              <div className="grid divide-y divide-[#e7e2d9] border-t border-[#e7e2d9] sm:grid-cols-2 sm:divide-x sm:divide-y-0 xl:grid-cols-4">
+                {(content.hero.stats ?? []).map(stat => (
+                  <div
+                    key={`${stat.value}-${stat.label}`}
+                    className="px-7 py-7 md:px-9 md:py-9"
+                  >
+                    <p className="font-tenor text-[38px] leading-none tracking-[-0.04em] text-black">
+                      {stat.value}
+                    </p>
 
-        <p className="mt-5 font-montserrat text-[10px] font-medium uppercase tracking-[0.24em] text-black/45">
-          {stat.label}
-        </p>
+                    <p className="mt-5 font-montserrat text-[10px] font-medium uppercase tracking-[0.24em] text-black/45">
+                      {stat.label}
+                    </p>
 
-        <div className="mt-7 h-px w-20 bg-black/20" />
-      </div>
-    ))}
-  </div>
-</motion.aside>
+                    <div className="mt-7 h-px w-20 bg-black/20" />
+                  </div>
+                ))}
+              </div>
+            </motion.aside>
           </div>
         </div>
       </section>

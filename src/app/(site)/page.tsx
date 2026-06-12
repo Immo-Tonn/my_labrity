@@ -69,7 +69,7 @@ type HomeData = {
     primaryButton: string;
     secondaryButton: string;
   };
-    quizPreview: {
+  quizPreview: {
     kicker: string;
     title: string;
     description: string;
@@ -79,8 +79,8 @@ type HomeData = {
     note: string;
     steps: string[];
   };
-    featuredProjects: FeaturedProjectsData;
-    audience: {
+  featuredProjects: FeaturedProjectsData;
+  audience: {
     kicker: string;
     title: string;
     description: string;
@@ -183,14 +183,14 @@ const fallbackHomeData: HomeData = {
     kicker: 'Premium Web Studio',
     titleFirst: 'Websites,',
     titleSecond: 'die verkaufen.',
-    description: 
+    description:
       'Wir entwickeln moderne Websites für Unternehmen, Experten und Marken.',
     tagline: 'Minimal. Modern. Effektiv.',
     primaryButton: 'Kontakt',
     secondaryButton: 'Portfolio',
   },
 
-    quizPreview: {
+  quizPreview: {
     kicker: 'Projekt-Kalkulator',
     title: 'Nicht sicher, welche Website zu Ihrem Projekt passt?',
     description:
@@ -256,33 +256,33 @@ const fallbackHomeData: HomeData = {
   audience: {
     kicker: 'Für wen wir arbeiten',
     title: 'Für Selbstständige, Unternehmen und Marken mit Anspruch.',
-    description: 
+    description:
       'Ob Einzelunternehmer, wachsendes Unternehmen oder etablierte Marke — wir entwickeln Websites für alle, die professioneller, stärker und überzeugender auftreten wollen.',
     items: [
       {
         title: 'Selbstständige',
-        description: 
+        description:
           'Für alle, die professionell auftreten und Vertrauen aufbauen wollen.',
       },
       {
         title: 'Unternehmen',
-        description: 
+        description:
           'Für Firmen, die klarer, stärker und hochwertiger wahrgenommen werden möchten.',
       },
       {
         title: 'Marken',
-        description: 
+        description:
           'Für Brands, die Individualität, Stil und eine starke digitale Präsenz brauchen.',
       },
       {
         title: 'Individuelle Projekte',
-        description: 
+        description:
           'Für besondere Konzepte, die mehr brauchen als eine gewöhnliche Website.',
       },
     ],
   },
 
-    differences: {
+  differences: {
     kicker: 'WARUM LABRITY?',
     title: 'Starke Websites für starke Marken.',
     description: '',
@@ -314,32 +314,32 @@ const fallbackHomeData: HomeData = {
   servicesSection: {
     kicker: 'Leistungen',
     title: 'Digitale Leistungen für Marken mit Anspruch',
-    description: 
+    description:
       'Von starken Landingpages bis zu exklusiven Webauftritten entwickeln wir digitale Lösungen, die Vertrauen schaffen, Wirkung erzeugen und neue Kunden gewinnen.',
   },
 
   stats: {
     kicker: 'Digitale Stärke',
     title: 'Sichtbarkeit, Vertrauen und Wachstum — in einem System',
-    description: 
+    description:
       'Wir entwickeln Websites, bei denen individuelles Design, permanente Online-Verfügbarkeit und eine ganzheitliche Struktur gemeinsam für eine starke digitale Präsenz arbeiten.',
     items: [
       {
         value: '100%',
         label: 'Individuelles Design',
-        description: 
+        description:
           'Jede Website wird passend zu Business, Zielgruppe und Positionierung entwickelt — ohne generische Templates.',
       },
       {
         value: '24/7',
         label: 'Online-Verfügbarkeit',
-        description: 
+        description:
           'Ihre Website arbeitet dauerhaft für Ihr Unternehmen und hilft Kunden, Sie jederzeit online zu finden.',
       },
       {
         value: '360°',
         label: 'Ganzheitlicher Ansatz',
-        description: 
+        description:
           'Struktur, Design, Vertrauen, SEO und Nutzerführung werden als ein zusammenhängendes System gedacht.',
       },
     ],
@@ -348,7 +348,7 @@ const fallbackHomeData: HomeData = {
   processPreview: {
     kicker: 'Ablauf',
     title: 'Ein klarer Prozess für ein starkes Ergebnis.',
-    description: 
+    description:
       'Wir führen Ihr Projekt Schritt für Schritt — von der ersten Idee über Struktur und Design bis zum fertigen digitalen Auftritt.',
     button: 'Ablauf ansehen',
     items: [
@@ -363,42 +363,49 @@ const fallbackHomeData: HomeData = {
   portfolio: {
     kicker: 'Portfolio',
     title: 'Entdecken Sie unsere Arbeiten',
-    description: 'Ausgewählte Projekte, die zeigen, wie wir Ästhetik, Strategie und Performance zu einer digitalen Präsenz auf Premium-Niveau verbinden.',
+    description:
+      'Ausgewählte Projekte, die zeigen, wie wir Ästhetik, Strategie und Performance zu einer digitalen Präsenz auf Premium-Niveau verbinden.',
     button: 'Portfolio ansehen',
     items: [
       {
         title: 'Immo Tonn',
-        description: 'Hochwertige Immobilien-Website mit klarem Aufbau, professioneller Objektpräsentation und starkem Vertrauenseffekt für Kauf und Verkauf.',
+        description:
+          'Hochwertige Immobilien-Website mit klarem Aufbau, professioneller Objektpräsentation und starkem Vertrauenseffekt für Kauf und Verkauf.',
         imageVariant: 'first',
         href: 'https://immo-tonn.de/',
       },
       {
         title: 'TLSG Studio',
-        description: 'Moderner digitaler Auftritt für ein Musik- und Sounddesign-Studio mit Fokus auf Markenwirkung, Klarheit und kreativer Identität.',
+        description:
+          'Moderner digitaler Auftritt für ein Musik- und Sounddesign-Studio mit Fokus auf Markenwirkung, Klarheit und kreativer Identität.',
         imageVariant: 'second',
         href: 'https://tlsglabel.com/',
       },
       {
         title: 'Massage Studio',
-        description: 'Beruhigende Website für ein Massage-Angebot mit klarer Nutzerführung, eleganter Service-Präsentation und vertrauensvoller Buchungsstruktur.',
+        description:
+          'Beruhigende Website für ein Massage-Angebot mit klarer Nutzerführung, eleganter Service-Präsentation und vertrauensvoller Buchungsstruktur.',
         imageVariant: 'first',
         href: 'https://massage-landing-swart.vercel.app/#services',
       },
       {
         title: 'Alltagsbegleitung für Senioren',
-        description: 'Eine kleine und einfache Landingpage für eine selbstständige Alltagsbegleiterin. Das Projekt zeigt eine schnell realisierbare Website-Lösung für ein kleines Budget — klar, ruhig und auf direkte Kontaktaufnahme ausgerichtet.',
+        description:
+          'Eine kleine und einfache Landingpage für eine selbstständige Alltagsbegleiterin. Das Projekt zeigt eine schnell realisierbare Website-Lösung für ein kleines Budget — klar, ruhig und auf direkte Kontaktaufnahme ausgerichtet.',
         imageVariant: 'first',
         href: 'https://pflege-landing-1.vercel.app/',
       },
       {
         title: 'BeautyTime',
-        description: 'Eleganter Online-Auftritt für einen Beauty-Salon mit Premium-Look, klarer Angebotsstruktur und starker lokaler Wirkung.',
+        description:
+          'Eleganter Online-Auftritt für einen Beauty-Salon mit Premium-Look, klarer Angebotsstruktur und starker lokaler Wirkung.',
         imageVariant: 'second',
         href: 'https://beautylanding1.vercel.app/de/index.html',
       },
       {
         title: 'Werkstatt',
-        description: 'Moderner Webauftritt für eine KFZ-Werkstatt mit Fokus auf Vertrauen, klare Kommunikation und professionelle Service-Präsentation.',
+        description:
+          'Moderner Webauftritt für eine KFZ-Werkstatt mit Fokus auf Vertrauen, klare Kommunikation und professionelle Service-Präsentation.',
         imageVariant: 'second',
         href: 'https://auto-service-landing-five.vercel.app/de',
       },
@@ -408,7 +415,8 @@ const fallbackHomeData: HomeData = {
   cta: {
     kicker: 'Starten wir',
     title: 'Bereit, gemeinsam etwas Starkes aufzubauen?',
-    description: 'Wir entwickeln Websites, die hochwertig aussehen, Vertrauen schaffen und Ihr Unternehmen digital klar positionieren.',
+    description:
+      'Wir entwickeln Websites, die hochwertig aussehen, Vertrauen schaffen und Ihr Unternehmen digital klar positionieren.',
     primaryButton: 'Projekt starten',
     secondaryButton: 'Individuelles Angebot',
   },
@@ -435,7 +443,7 @@ export default function Home() {
             ...(data?.hero || {}),
           },
 
-                    quizPreview: {
+          quizPreview: {
             ...fallbackHomeData.quizPreview,
             ...(data?.quizPreview || {}),
             steps: data?.quizPreview?.steps?.length
@@ -450,7 +458,6 @@ export default function Home() {
               ? data.featuredProjects.items
               : fallbackHomeData.featuredProjects.items,
           },
-
 
           audience: {
             ...fallbackHomeData.audience,
@@ -711,7 +718,6 @@ export default function Home() {
             </Link>
           </section>
 
-
           {/* AUDIENCE */}
           <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[140px]">
             <div className="mx-auto max-w-[980px]">
@@ -838,7 +844,7 @@ export default function Home() {
             </div>
           </section>
 
-                    {/* DIFFERENCES */}
+          {/* DIFFERENCES */}
           <section className="border-t border-[#e7e2d9] py-[88px] md:py-[108px] xl:py-[124px]">
             <div className="mx-auto max-w-[860px] text-center">
               <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
