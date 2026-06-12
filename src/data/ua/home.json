@@ -195,6 +195,13 @@
         "href": "https://massage-landing-swart.vercel.app/#services"
       },
       {
+        "title": "Супровід літніх людей",
+        "description": "Невеликий і простий лендинг для самостійної помічниці із супроводу літніх людей. Проєкт показує швидко реалізоване рішення для невеликого бюджету — спокійно, зрозуміло та з акцентом на швидкий контакт.",
+        "imageVariant": "first",
+        "image": "/images/projects/seniorenbegleitung.png",
+        "href": "https://pflege-landing-1.vercel.app/"
+      },
+      {
         "title": "BeautyTime",
         "description": "Елегантний сайт для салону краси в Кельні з premium стилем та сильним локальним ефектом.",
         "imageVariant": "second",

@@ -3,7 +3,11 @@
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { BadgeCheck, Gem, PanelsTopLeft, Telescope } from 'lucide-react';
 
+import SeasonalSnow from '@/components/SeasonalSnow';
+import SeasonalHearts from '@/components/SeasonalHearts';
+import { useQuiz } from '@/components/quiz';
 import { Preloader } from '@/components/ui';
 import { useLanguage } from '@/utils/LanguageContext';
 import { getData } from '@/utils/getData';
@@ -21,9 +25,34 @@ type ProjectItem = {
   href: string;
 };
 
+type FeaturedProjectItem = {
+  title: string;
+  category: string;
+  image: string;
+};
+
+type FeaturedProjectsData = {
+  kicker: string;
+  title: string;
+  scrollLabel: string;
+  button: string;
+  projectButton: string;
+  ctaKicker: string;
+  ctaTitle: string;
+  ctaDescription: string;
+  ctaButton: string;
+  items: FeaturedProjectItem[];
+};
+
 type AudienceItem = {
   title: string;
   description: string;
+};
+
+type DifferenceItem = {
+  title: string;
+  description: string;
+  icon: string;
 };
 
 type ProcessPreviewItem = {
@@ -40,11 +69,28 @@ type HomeData = {
     primaryButton: string;
     secondaryButton: string;
   };
-  audience: {
+    quizPreview: {
+    kicker: string;
+    title: string;
+    description: string;
+    leftTitle?: string;
+    leftDescription?: string;
+    button: string;
+    note: string;
+    steps: string[];
+  };
+    featuredProjects: FeaturedProjectsData;
+    audience: {
     kicker: string;
     title: string;
     description: string;
     items: AudienceItem[];
+  };
+  differences: {
+    kicker: string;
+    title: string;
+    description: string;
+    items: DifferenceItem[];
   };
   servicesSection: {
     kicker: string;
@@ -137,38 +183,130 @@ const fallbackHomeData: HomeData = {
     kicker: 'Premium Web Studio',
     titleFirst: 'Websites,',
     titleSecond: 'die verkaufen.',
-    description:
+    description: 
       'Wir entwickeln moderne Websites für Unternehmen, Experten und Marken.',
     tagline: 'Minimal. Modern. Effektiv.',
     primaryButton: 'Kontakt',
     secondaryButton: 'Portfolio',
   },
 
+    quizPreview: {
+    kicker: 'Projekt-Kalkulator',
+    title: 'Nicht sicher, welche Website zu Ihrem Projekt passt?',
+    description:
+      'Beantworten Sie ein paar kurze Fragen und erhalten Sie eine klarere Orientierung für Ihr Website-Projekt.',
+    leftTitle: 'Finden Sie das passende Website-Paket.',
+    leftDescription:
+      'Unser kurzer Projekt-Kalkulator hilft Ihnen, den passenden Umfang für Ihr Projekt besser einzuschätzen.',
+    button: 'Kalkulator starten',
+    note: '3 kurze Schritte. Eine klare Empfehlung.',
+    steps: ['Projektart', 'Umfang', 'Empfehlung'],
+  },
+
+  featuredProjects: {
+    kicker: 'Ausgewählte Projekte',
+    title: 'Websites, die Vertrauen schaffen.',
+    scrollLabel: 'Scroll',
+    button: 'Portfolio ansehen',
+    projectButton: 'Portfolio ansehen',
+    ctaKicker: 'Nächstes Projekt',
+    ctaTitle: 'Das nächste Projekt könnte Ihres sein.',
+    ctaDescription:
+      'Erzählen Sie uns von Ihrer Idee — wir entwickeln daraus einen starken digitalen Auftritt.',
+    ctaButton: 'Kalkulator starten',
+    items: [
+      {
+        title: 'Immo Tonn',
+        category: 'Immobilien',
+        image: '/images/projects/immo-tonn.png',
+      },
+      {
+        title: 'TLSG Studio',
+        category: 'Musikindustrie',
+        image: '/images/projects/tlsg.png',
+      },
+      {
+        title: 'Massage Studio',
+        category: 'Wellness & Spa',
+        image: '/images/projects/massage.png',
+      },
+      {
+        title: 'Pizzeria',
+        category: 'Restaurant',
+        image: '/images/projects/pizzeria.png',
+      },
+      {
+        title: 'Alltagsbegleitung',
+        category: 'Seniorenbegleitung',
+        image: '/images/projects/seniorenbegleitung.png',
+      },
+      {
+        title: 'BeautyTime',
+        category: 'Beautyindustrie',
+        image: '/images/projects/beautytime.png',
+      },
+      {
+        title: 'Werkstatt',
+        category: 'Automobilindustrie',
+        image: '/images/projects/werk.png',
+      },
+    ],
+  },
+
   audience: {
     kicker: 'Für wen wir arbeiten',
     title: 'Für Selbstständige, Unternehmen und Marken mit Anspruch.',
-    description:
+    description: 
       'Ob Einzelunternehmer, wachsendes Unternehmen oder etablierte Marke — wir entwickeln Websites für alle, die professioneller, stärker und überzeugender auftreten wollen.',
     items: [
       {
         title: 'Selbstständige',
-        description:
+        description: 
           'Für alle, die professionell auftreten und Vertrauen aufbauen wollen.',
       },
       {
         title: 'Unternehmen',
-        description:
+        description: 
           'Für Firmen, die klarer, stärker und hochwertiger wahrgenommen werden möchten.',
       },
       {
         title: 'Marken',
-        description:
+        description: 
           'Für Brands, die Individualität, Stil und eine starke digitale Präsenz brauchen.',
       },
       {
         title: 'Individuelle Projekte',
-        description:
+        description: 
           'Für besondere Konzepte, die mehr brauchen als eine gewöhnliche Website.',
+      },
+    ],
+  },
+
+    differences: {
+    kicker: 'WARUM LABRITY?',
+    title: 'Starke Websites für starke Marken.',
+    description: '',
+    items: [
+      {
+        title: 'Strategisch',
+        description: 'Wir denken mit — von der Idee bis zur Conversion.',
+        icon: '/images/home-icons/strategy.svg',
+      },
+      {
+        title: 'Minimalistisch',
+        description:
+          'Klares Design, das sich auf das Wesentliche konzentriert.',
+        icon: '/images/home-icons/minimalism.svg',
+      },
+      {
+        title: 'Maßgeschneidert',
+        description: 'Jedes Projekt ist einzigartig — wie dein Business.',
+        icon: '/images/home-icons/custom.svg',
+      },
+      {
+        title: 'Zuverlässig',
+        description: 'Termintreu, transparent und auf Augenhöhe.',
+        icon: '/images/home-icons/reliable.svg',
       },
     ],
   },
@@ -176,32 +314,32 @@ const fallbackHomeData: HomeData = {
   servicesSection: {
     kicker: 'Leistungen',
     title: 'Digitale Leistungen für Marken mit Anspruch',
-    description:
+    description: 
       'Von starken Landingpages bis zu exklusiven Webauftritten entwickeln wir digitale Lösungen, die Vertrauen schaffen, Wirkung erzeugen und neue Kunden gewinnen.',
   },
 
   stats: {
     kicker: 'Digitale Stärke',
     title: 'Sichtbarkeit, Vertrauen und Wachstum — in einem System',
-    description:
+    description: 
       'Wir entwickeln Websites, bei denen individuelles Design, permanente Online-Verfügbarkeit und eine ganzheitliche Struktur gemeinsam für eine starke digitale Präsenz arbeiten.',
     items: [
       {
         value: '100%',
         label: 'Individuelles Design',
-        description:
+        description: 
           'Jede Website wird passend zu Business, Zielgruppe und Positionierung entwickelt — ohne generische Templates.',
       },
       {
         value: '24/7',
         label: 'Online-Verfügbarkeit',
-        description:
+        description: 
           'Ihre Website arbeitet dauerhaft für Ihr Unternehmen und hilft Kunden, Sie jederzeit online zu finden.',
       },
       {
         value: '360°',
         label: 'Ganzheitlicher Ansatz',
-        description:
+        description: 
           'Struktur, Design, Vertrauen, SEO und Nutzerführung werden als ein zusammenhängendes System gedacht.',
       },
     ],
@@ -210,7 +348,7 @@ const fallbackHomeData: HomeData = {
   processPreview: {
     kicker: 'Ablauf',
     title: 'Ein klarer Prozess für ein starkes Ergebnis.',
-    description:
+    description: 
       'Wir führen Ihr Projekt Schritt für Schritt — von der ersten Idee über Struktur und Design bis zum fertigen digitalen Auftritt.',
     button: 'Ablauf ansehen',
     items: [
@@ -225,49 +363,42 @@ const fallbackHomeData: HomeData = {
   portfolio: {
     kicker: 'Portfolio',
     title: 'Entdecken Sie unsere Arbeiten',
-    description:
-      'Ausgewählte Projekte, die zeigen, wie wir Ästhetik, Strategie und Performance zu einer digitalen Präsenz auf Premium-Niveau verbinden.',
+    description: 'Ausgewählte Projekte, die zeigen, wie wir Ästhetik, Strategie und Performance zu einer digitalen Präsenz auf Premium-Niveau verbinden.',
     button: 'Portfolio ansehen',
     items: [
       {
         title: 'Immo Tonn',
-        description:
-          'Hochwertige Immobilien-Website mit klarem Aufbau, professioneller Objektpräsentation und starkem Vertrauenseffekt für Kauf und Verkauf.',
+        description: 'Hochwertige Immobilien-Website mit klarem Aufbau, professioneller Objektpräsentation und starkem Vertrauenseffekt für Kauf und Verkauf.',
         imageVariant: 'first',
         href: 'https://immo-tonn.de/',
       },
       {
         title: 'TLSG Studio',
-        description:
-          'Moderner digitaler Auftritt für ein Musik- und Sounddesign-Studio mit Fokus auf Markenwirkung, Klarheit und kreativer Identität.',
+        description: 'Moderner digitaler Auftritt für ein Musik- und Sounddesign-Studio mit Fokus auf Markenwirkung, Klarheit und kreativer Identität.',
         imageVariant: 'second',
         href: 'https://tlsglabel.com/',
       },
       {
         title: 'Massage Studio',
-        description:
-          'Beruhigende Website für ein Massage-Angebot mit klarer Nutzerführung, eleganter Service-Präsentation und vertrauensvoller Buchungsstruktur.',
+        description: 'Beruhigende Website für ein Massage-Angebot mit klarer Nutzerführung, eleganter Service-Präsentation und vertrauensvoller Buchungsstruktur.',
         imageVariant: 'first',
         href: 'https://massage-landing-swart.vercel.app/#services',
       },
       {
         title: 'Alltagsbegleitung für Senioren',
-        description:
-          'Eine kleine und einfache Landingpage für eine selbstständige Alltagsbegleiterin. Das Projekt zeigt eine schnell realisierbare Website-Lösung für ein kleines Budget — klar, ruhig und auf direkte Kontaktaufnahme ausgerichtet.',
+        description: 'Eine kleine und einfache Landingpage für eine selbstständige Alltagsbegleiterin. Das Projekt zeigt eine schnell realisierbare Website-Lösung für ein kleines Budget — klar, ruhig und auf direkte Kontaktaufnahme ausgerichtet.',
         imageVariant: 'first',
         href: 'https://pflege-landing-1.vercel.app/',
       },
       {
         title: 'BeautyTime',
-        description:
-          'Eleganter Online-Auftritt für einen Beauty-Salon mit Premium-Look, klarer Angebotsstruktur und starker lokaler Wirkung.',
+        description: 'Eleganter Online-Auftritt für einen Beauty-Salon mit Premium-Look, klarer Angebotsstruktur und starker lokaler Wirkung.',
         imageVariant: 'second',
         href: 'https://beautylanding1.vercel.app/de/index.html',
       },
       {
         title: 'Werkstatt',
-        description:
-          'Moderner Webauftritt für eine KFZ-Werkstatt mit Fokus auf Vertrauen, klare Kommunikation und professionelle Service-Präsentation.',
+        description: 'Moderner Webauftritt für eine KFZ-Werkstatt mit Fokus auf Vertrauen, klare Kommunikation und professionelle Service-Präsentation.',
         imageVariant: 'second',
         href: 'https://auto-service-landing-five.vercel.app/de',
       },
@@ -277,15 +408,17 @@ const fallbackHomeData: HomeData = {
   cta: {
     kicker: 'Starten wir',
     title: 'Bereit, gemeinsam etwas Starkes aufzubauen?',
-    description:
-      'Wir entwickeln Websites, die hochwertig aussehen, Vertrauen schaffen und Ihr Unternehmen digital klar positionieren.',
+    description: 'Wir entwickeln Websites, die hochwertig aussehen, Vertrauen schaffen und Ihr Unternehmen digital klar positionieren.',
     primaryButton: 'Projekt starten',
     secondaryButton: 'Individuelles Angebot',
   },
 };
 
+const differenceIcons = [Telescope, PanelsTopLeft, Gem, BadgeCheck];
+
 export default function Home() {
   const { lang } = useLanguage();
+  const { openQuiz } = useQuiz();
   const [home, setHome] = useState<HomeData | null>(null);
 
   useEffect(() => {
@@ -302,12 +435,37 @@ export default function Home() {
             ...(data?.hero || {}),
           },
 
+                    quizPreview: {
+            ...fallbackHomeData.quizPreview,
+            ...(data?.quizPreview || {}),
+            steps: data?.quizPreview?.steps?.length
+              ? data.quizPreview.steps
+              : fallbackHomeData.quizPreview.steps,
+          },
+
+          featuredProjects: {
+            ...fallbackHomeData.featuredProjects,
+            ...(data?.featuredProjects || {}),
+            items: data?.featuredProjects?.items?.length
+              ? data.featuredProjects.items
+              : fallbackHomeData.featuredProjects.items,
+          },
+
+
           audience: {
             ...fallbackHomeData.audience,
             ...(data?.audience || {}),
             items: data?.audience?.items?.length
               ? data.audience.items
               : fallbackHomeData.audience.items,
+          },
+
+          differences: {
+            ...fallbackHomeData.differences,
+            ...(data?.differences || {}),
+            items: data?.differences?.items?.length
+              ? data.differences.items
+              : fallbackHomeData.differences.items,
           },
 
           servicesSection: {
@@ -379,6 +537,10 @@ export default function Home() {
     <>
       <Preloader />
 
+      <SeasonalSnow />
+
+      <SeasonalHearts />
+
       <main className="min-h-screen bg-[#f8f6f1]">
         <div className="container">
           {/* HERO */}
@@ -442,6 +604,114 @@ export default function Home() {
             </div>
           </section>
 
+          {/* FEATURED PROJECTS */}
+          <section className="border-t border-[#e7e2d9] py-[64px] md:py-[82px] xl:py-[96px]">
+            <div className="mb-9 flex flex-col gap-6 md:mb-11 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
+                  {content.featuredProjects.kicker}
+                </p>
+
+                <h2 className="max-w-[760px] font-tenor text-[36px] leading-[1.02] text-black md:text-[52px] xl:text-[68px]">
+                  {content.featuredProjects.title}
+                </h2>
+              </div>
+
+              <div className="flex items-center gap-6">
+                <div className="flex items-center gap-3">
+                  <span className="font-montserrat text-[10px] uppercase tracking-[0.28em] text-neutral-400">
+                    {content.featuredProjects.scrollLabel}
+                  </span>
+
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[#d9cfbe] bg-[#f8f6f1] text-neutral-500">
+                    →
+                  </span>
+                </div>
+
+                <Link
+                  href="/portfolio"
+                  className="hidden w-fit items-center gap-4 font-montserrat text-[11px] font-medium uppercase tracking-[0.3em] text-neutral-600 transition duration-300 hover:text-black md:inline-flex"
+                >
+                  {content.featuredProjects.button}
+                  <span className="h-px w-12 bg-neutral-400 transition duration-300 hover:w-20 hover:bg-black" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="-mx-5 flex snap-x gap-4 overflow-x-auto scroll-smooth px-5 pb-5 md:-mx-8 md:gap-5 md:px-8 xl:mx-0 xl:gap-5 xl:px-0">
+              {content.featuredProjects.items.map((project, index) => (
+                <Link
+                  key={project.title}
+                  href="/portfolio"
+                  className="group w-[245px] shrink-0 snap-start overflow-hidden border border-[#e7e2d9] bg-white shadow-[0_14px_38px_rgba(0,0,0,0.035)] transition duration-500 hover:-translate-y-1 hover:border-black/20 hover:shadow-[0_22px_58px_rgba(0,0,0,0.075)] sm:w-[270px] md:w-[300px] xl:w-[315px]"
+                >
+                  <div className="relative bg-[#ede7dd] p-3">
+                    <div className="relative aspect-[4/3] overflow-hidden border border-black/10 bg-[#f8f6f1]">
+                      <Image
+                        src={project.image}
+                        alt={`${project.title} Website Projekt`}
+                        fill
+                        sizes="(max-width: 640px) 245px, (max-width: 768px) 270px, (max-width: 1280px) 300px, 315px"
+                        className="object-contain p-2 transition duration-700 group-hover:scale-[1.03]"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="px-5 py-5">
+                    <p className="font-montserrat text-[9px] uppercase tracking-[0.3em] text-neutral-400">
+                      {String(index + 1).padStart(2, '0')} / {project.category}
+                    </p>
+
+                    <h3 className="mt-4 font-tenor text-[27px] leading-none text-black md:text-[30px]">
+                      {project.title}
+                    </h3>
+
+                    <div className="mt-5 flex items-center gap-4 font-montserrat text-[10px] uppercase tracking-[0.28em] text-neutral-500">
+                      <span>{content.featuredProjects.projectButton}</span>
+                      <span className="h-px w-9 bg-neutral-400 transition duration-300 group-hover:w-14 group-hover:bg-black" />
+                    </div>
+                  </div>
+                </Link>
+              ))}
+
+              <button
+                type="button"
+                onClick={openQuiz}
+                className="group flex min-h-[300px] w-[245px] shrink-0 snap-start flex-col justify-between overflow-hidden bg-black px-5 py-6 text-left text-white shadow-[0_14px_38px_rgba(0,0,0,0.08)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_22px_58px_rgba(0,0,0,0.14)] sm:w-[270px] md:w-[300px] xl:w-[315px]"
+              >
+                <div>
+                  <p className="font-montserrat text-[9px] uppercase tracking-[0.3em] text-white/40">
+                    {content.featuredProjects.ctaKicker}
+                  </p>
+
+                  <h3 className="mt-6 max-w-[250px] font-tenor text-[32px] leading-[0.95] tracking-[-0.04em] text-white md:text-[36px]">
+                    {content.featuredProjects.ctaTitle}
+                  </h3>
+                </div>
+
+                <div>
+                  <p className="max-w-[250px] font-montserrat text-[13px] leading-6 text-white/60">
+                    {content.featuredProjects.ctaDescription}
+                  </p>
+
+                  <div className="mt-7 flex items-center gap-4 font-montserrat text-[10px] uppercase tracking-[0.28em] text-white/70">
+                    <span>{content.featuredProjects.ctaButton}</span>
+                    <span className="h-px w-10 bg-white/50 transition duration-300 group-hover:w-16 group-hover:bg-white" />
+                  </div>
+                </div>
+              </button>
+            </div>
+
+            <Link
+              href="/portfolio"
+              className="mt-6 inline-flex w-fit items-center gap-4 font-montserrat text-[11px] font-medium uppercase tracking-[0.3em] text-neutral-600 transition duration-300 hover:text-black md:hidden"
+            >
+              {content.featuredProjects.button}
+              <span className="h-px w-12 bg-neutral-400 transition duration-300 hover:w-20 hover:bg-black" />
+            </Link>
+          </section>
+
+
           {/* AUDIENCE */}
           <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[140px]">
             <div className="mx-auto max-w-[980px]">
@@ -483,6 +753,134 @@ export default function Home() {
                   </div>
                 ))}
               </div>
+            </div>
+          </section>
+
+          {/* PROJECT CALCULATOR */}
+          <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[130px]">
+            <div className="mx-auto max-w-[1500px]">
+              <div className="grid overflow-hidden border border-[#e7e2d9] bg-[#f8f6f1] shadow-[0_24px_70px_rgba(0,0,0,0.06)] xl:grid-cols-[0.85fr_1.15fr]">
+                <div className="relative overflow-hidden bg-[#111111] px-7 py-10 text-white md:px-10 md:py-14 xl:px-12 xl:py-16">
+                  <p className="font-tenor text-[24px] uppercase tracking-[-0.03em] text-white">
+                    LABRITY
+                  </p>
+
+                  <div className="mt-2 h-px w-10 bg-white/35" />
+
+                  <div className="mt-12">
+                    <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-white/35">
+                      {content.quizPreview.kicker}
+                    </p>
+
+                    <h2 className="max-w-[560px] font-tenor text-[44px] leading-[0.96] tracking-[-0.05em] text-white md:text-[64px]">
+                      {content.quizPreview.leftTitle ??
+                        content.quizPreview.title}
+                    </h2>
+
+                    <p className="mt-7 max-w-[560px] font-montserrat text-[15px] leading-8 text-white/65 md:text-[17px]">
+                      {content.quizPreview.leftDescription ??
+                        content.quizPreview.description}
+                    </p>
+                  </div>
+
+                  <div className="mt-12 border-t border-white/20 pt-7">
+                    <p className="font-montserrat text-[11px] uppercase tracking-[0.26em] text-white/35">
+                      {content.quizPreview.note}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col justify-between px-7 py-10 md:px-10 md:py-14 xl:px-12 xl:py-16">
+                  <div>
+                    <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+                      {content.quizPreview.kicker}
+                    </p>
+
+                    <h3 className="max-w-[760px] font-tenor text-[40px] leading-[1] tracking-[-0.04em] text-black md:text-[66px]">
+                      {content.quizPreview.title}
+                    </h3>
+
+                    <p className="mt-7 max-w-[720px] font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
+                      {content.quizPreview.description}
+                    </p>
+
+                    <div className="mt-10 divide-y divide-[#e7e2d9] border-y border-[#e7e2d9]">
+                      {content.quizPreview.steps.map((item, index) => (
+                        <div
+                          key={item}
+                          className="flex items-center justify-between gap-5 py-5"
+                        >
+                          <div className="flex items-center gap-5">
+                            <span className="font-tenor text-[34px] leading-none text-black/20">
+                              {String(index + 1).padStart(2, '0')}
+                            </span>
+
+                            <span className="font-montserrat text-[12px] font-medium uppercase tracking-[0.22em] text-black/70">
+                              {item}
+                            </span>
+                          </div>
+
+                          <span className="h-px w-10 bg-black/15" />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={openQuiz}
+                    className="mt-10 inline-flex min-h-[56px] w-full items-center justify-center border border-black bg-black px-8 text-center font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-[1px] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)] md:w-fit"
+                  >
+                    {content.quizPreview.button}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+                    {/* DIFFERENCES */}
+          <section className="border-t border-[#e7e2d9] py-[88px] md:py-[108px] xl:py-[124px]">
+            <div className="mx-auto max-w-[860px] text-center">
+              <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
+                {content.differences.kicker}
+              </p>
+
+              <h2 className="font-tenor text-[34px] leading-[1.08] text-black md:text-[52px] xl:text-[62px]">
+                {content.differences.title}
+              </h2>
+            </div>
+
+            <div className="mx-auto mt-14 grid max-w-[1180px] gap-y-14 md:mt-16 md:grid-cols-2 md:gap-x-12 md:gap-y-16 xl:mt-20 xl:grid-cols-4 xl:gap-x-10">
+              {content.differences.items.map((item, index) => {
+                const Icon = differenceIcons[index] || Gem;
+
+                return (
+                  <article
+                    key={`${item.title}-${index}`}
+                    className="group relative flex min-h-[210px] flex-col items-center overflow-hidden px-4 py-2 text-center transition duration-500 hover:-translate-y-[4px]"
+                  >
+                    <span className="pointer-events-none absolute top-5 h-24 w-24 rounded-full bg-black/[0.025] opacity-0 blur-2xl transition duration-500 group-hover:opacity-100" />
+
+                    <div className="relative mb-6 flex h-[60px] items-center justify-center">
+                      <Icon
+                        size={44}
+                        strokeWidth={1.15}
+                        className="text-black/45 transition duration-500 group-hover:-translate-y-[3px] group-hover:text-black/75"
+                      />
+                    </div>
+
+                    <h3 className="font-tenor text-[24px] leading-[1.08] text-black md:text-[28px]">
+                      {item.title}
+                    </h3>
+
+                    <span className="mt-4 h-px w-8 bg-black/20 transition-all duration-500 group-hover:w-14 group-hover:bg-black/45" />
+
+                    <p className="mt-4 max-w-[250px] font-montserrat text-[14px] leading-7 text-neutral-500 transition duration-500 group-hover:text-neutral-600">
+                      {item.description}
+                    </p>
+                  </article>
+                );
+              })}
             </div>
           </section>
 
