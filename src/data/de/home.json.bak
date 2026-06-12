@@ -39,54 +39,10 @@
     "leftDescription": "Schnell prüfen, welche Website-Lösung zu Ihrem Projekt passt.",
     "button": "Projekt-Kalkulator starten",
     "note": "Kostenlos. Persönlich. Unverbindlich.",
-    "steps": ["Projektart", "Umfang", "Empfehlung"]
-  },
-  "featuredProjects": {
-    "kicker": "Ausgewählte Projekte",
-    "title": "Websites, die Vertrauen schaffen.",
-    "scrollLabel": "Scroll",
-    "button": "Portfolio ansehen",
-    "projectButton": "Portfolio ansehen",
-    "ctaKicker": "Nächstes Projekt",
-    "ctaTitle": "Das nächste Projekt könnte Ihres sein.",
-    "ctaDescription": "Erzählen Sie uns von Ihrer Idee — wir entwickeln daraus einen starken digitalen Auftritt.",
-    "ctaButton": "Kalkulator starten",
-    "items": [
-      {
-        "title": "Immo Tonn",
-        "category": "Immobilien",
-        "image": "/images/projects/immo-tonn.png"
-      },
-      {
-        "title": "TLSG Studio",
-        "category": "Musikindustrie",
-        "image": "/images/projects/tlsg.png"
-      },
-      {
-        "title": "Massage Studio",
-        "category": "Wellness & Spa",
-        "image": "/images/projects/massage.png"
-      },
-      {
-        "title": "Pizzeria",
-        "category": "Restaurant",
-        "image": "/images/projects/pizzeria.png"
-      },
-      {
-        "title": "Alltagsbegleitung",
-        "category": "Seniorenbegleitung",
-        "image": "/images/projects/seniorenbegleitung.png"
-      },
-      {
-        "title": "BeautyTime",
-        "category": "Beautyindustrie",
-        "image": "/images/projects/beautytime.png"
-      },
-      {
-        "title": "Werkstatt",
-        "category": "Automobilindustrie",
-        "image": "/images/projects/werk.png"
-      }
+    "steps": [
+      "Projektart",
+      "Umfang",
+      "Empfehlung"
     ]
   },
   "audience": {
@@ -171,7 +127,11 @@
     "title": "Entdecken Sie unsere Arbeiten",
     "description": "Ausgewählte Projekte, die zeigen, wie wir Ästhetik, Strategie und Performance zu einer digitalen Präsenz auf Premium-Niveau verbinden.",
     "button": "Portfolio ansehen",
-    "topTags": ["SEO READY", "AI VISIBILITY", "HIGH-END FRONTEND"],
+    "topTags": [
+      "SEO READY",
+      "AI VISIBILITY",
+      "HIGH-END FRONTEND"
+    ],
     "seoBlock": [
       {
         "kicker": "SEO OPTIMIZATION",
@@ -197,7 +157,11 @@
     ],
     "projectLabel": "Website Project",
     "projectButton": "Projekt ansehen",
-    "projectTags": ["SEO READY", "AI OPTIMIERT", "RESPONSIVE"],
+    "projectTags": [
+      "SEO READY",
+      "AI OPTIMIERT",
+      "RESPONSIVE"
+    ],
     "categories": {
       "Immo Tonn": "Immobilien",
       "TLSG Studio": "Musikindustrie",
@@ -211,7 +175,11 @@
       "kicker": "In Entwicklung",
       "title": "Neue Premium Projekte",
       "description": "Weitere moderne Business-Websites, digitale Markenauftritte und exklusive Projekte befinden sich derzeit in Entwicklung.",
-      "tags": ["Brand Websites", "SEO Struktur", "AI Visibility"],
+      "tags": [
+        "Brand Websites",
+        "SEO Struktur",
+        "AI Visibility"
+      ],
       "status": "Stay Tuned"
     },
     "items": [

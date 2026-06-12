@@ -1,12 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ChangeEvent } from 'react';
 
 import { sendMessage } from '@/api/telegram';
+import { useQuiz } from '@/components/quiz';
 
 import { ContactFormData, QuizAnswers } from './quiz.types';
-
-import { useQuiz } from '@/components/quiz';
 
 type Props = {
   quiz: any;
@@ -71,10 +70,9 @@ export default function ContactForm({ quiz, answers }: Props) {
     return quiz.questions
       .map((question: any, index: number) => {
         const selected = answers[question.id] || [];
-
         const values = selected.length ? selected.join('\n') : '-';
 
-        return [`${index + 1}. ${question.id}`, values].join('\n');
+        return [`${index + 1}. ${question.title}`, values].join('\n');
       })
       .join('\n\n');
   };
@@ -121,107 +119,165 @@ export default function ContactForm({ quiz, answers }: Props) {
 
   const change =
     (field: keyof ContactFormData) =>
-    (e: React.ChangeEvent<HTMLInputElement>) => {
+    (event: ChangeEvent<HTMLInputElement>) => {
       setForm(prev => ({
         ...prev,
-        [field]: e.target.value,
+        [field]: event.target.value,
+      }));
+
+      setErrors(prev => ({
+        ...prev,
+        [field]: '',
       }));
     };
 
   const inputClass = `
     w-full
-    rounded-2xl
-    border
-    border-[#e7e2d9]
-    px-5
+    border-0
+    border-b
+    border-[#d8d1c6]
+    bg-transparent
+    px-0
     py-4
-    text-base
+    font-montserrat
+    text-[14px]
+    text-black
     outline-none
-    transition-all
+    transition
+    duration-300
+    placeholder:text-neutral-400
     focus:border-black
   `;
 
   const errorClass = `
     mt-2
-    text-sm
+    font-montserrat
+    text-[12px]
+    leading-5
     text-red-500
   `;
 
   return (
-    <div className="p-8">
-      <h2 className="mb-2 text-3xl">{quiz.form.title}</h2>
+    <div className="w-full">
+      <div className="mb-10">
+        <p className="mb-5 font-montserrat text-[11px] font-medium uppercase tracking-[0.32em] text-black/40">
+          {quiz.form.kicker || 'Kontakt'}
+        </p>
 
-      <p className="mb-8 text-sm text-gray-500">{quiz.form.description}</p>
+        <h2 className="max-w-[720px] font-tenor text-[38px] leading-[1] tracking-[-0.04em] text-black md:text-[56px]">
+          {quiz.form.title}
+        </h2>
 
-      <div className="grid gap-5">
+        <p className="mt-5 max-w-[620px] font-montserrat text-[14px] leading-7 text-neutral-500 md:text-[16px]">
+          {quiz.form.description}
+        </p>
+      </div>
+
+      <div className="grid gap-x-8 gap-y-5 md:grid-cols-2">
         <div>
+          <label className="font-montserrat text-[10px] font-medium uppercase tracking-[0.24em] text-black/35">
+            {quiz.form.firstName}
+          </label>
+
           <input
             value={form.firstName}
             onChange={change('firstName')}
             placeholder={quiz.form.firstName}
             className={inputClass}
           />
+
           {errors.firstName && <p className={errorClass}>{errors.firstName}</p>}
         </div>
 
         <div>
+          <label className="font-montserrat text-[10px] font-medium uppercase tracking-[0.24em] text-black/35">
+            {quiz.form.lastName}
+          </label>
+
           <input
             value={form.lastName}
             onChange={change('lastName')}
             placeholder={quiz.form.lastName}
             className={inputClass}
           />
+
           {errors.lastName && <p className={errorClass}>{errors.lastName}</p>}
         </div>
 
         <div>
+          <label className="font-montserrat text-[10px] font-medium uppercase tracking-[0.24em] text-black/35">
+            {quiz.form.phone}
+          </label>
+
           <input
             value={form.phone}
             onChange={change('phone')}
             placeholder={quiz.form.phone}
             className={inputClass}
           />
+
           {errors.phone && <p className={errorClass}>{errors.phone}</p>}
         </div>
 
         <div>
+          <label className="font-montserrat text-[10px] font-medium uppercase tracking-[0.24em] text-black/35">
+            {quiz.form.email}
+          </label>
+
           <input
             value={form.email}
             onChange={change('email')}
             placeholder={quiz.form.email}
             className={inputClass}
           />
+
           {errors.email && <p className={errorClass}>{errors.email}</p>}
         </div>
       </div>
 
       <button
-        disabled={loading || !!success}
+        type="button"
+        disabled={loading || Boolean(success)}
         onClick={submit}
         className="
-          mt-8
+          mt-10
+          inline-flex
+          min-h-[56px]
           w-full
-          rounded-2xl
+          items-center
+          justify-center
+          border
+          border-black
           bg-black
-          px-6
-          py-4
+          px-8
+          font-montserrat
+          text-[12px]
+          font-semibold
+          uppercase
+          tracking-[0.08em]
           text-white
           transition
-          hover:opacity-90
-          disabled:opacity-50
+          duration-300
+          hover:-translate-y-[1px]
+          hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]
+          disabled:cursor-not-allowed
+          disabled:border-black/20
+          disabled:bg-black/20
+          disabled:text-black/40
+          disabled:shadow-none
         "
       >
         {loading ? '...' : quiz.submit}
       </button>
 
       {success && (
-        <div className="mt-6 rounded-2xl bg-green-50 p-4 text-sm text-green-700">
+        <div className="mt-6 border border-green-200 bg-green-50 px-5 py-4 font-montserrat text-[13px] leading-6 text-green-700">
           {success}
         </div>
       )}
 
       {error && (
-        <div className="mt-6 rounded-2xl bg-red-50 p-4 text-sm text-red-700">
+        <div className="mt-6 border border-red-200 bg-red-50 px-5 py-4 font-montserrat text-[13px] leading-6 text-red-700">
           {error}
         </div>
       )}

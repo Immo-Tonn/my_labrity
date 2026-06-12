@@ -3,24 +3,20 @@
     "progress": "Frage",
     "next": "Weiter",
     "submit": "Senden",
-
     "form": {
+      "kicker": "Kontakt",
       "title": "Kontaktdaten",
       "description": "Bitte geben Sie Ihre Kontaktdaten ein",
-
       "firstName": "Vorname",
       "lastName": "Nachname",
       "phone": "Telefonnummer",
       "email": "E-Mail",
-
       "success": "Anfrage erfolgreich gesendet",
       "error": "Fehler beim Senden",
-
       "required": "Pflichtfeld",
       "invalidEmail": "Ungültige E-Mail-Adresse",
       "invalidPhone": "Ungültige Telefonnummer"
     },
-
     "questions": [
       {
         "id": "websiteType",
@@ -88,6 +84,13 @@
           "Nicht sicher"
         ]
       }
-    ]
+    ],
+    "modal": {
+      "kicker": "Projekt-Kalkulator",
+      "title": "Erzählen Sie uns kurz von Ihrem Projekt.",
+      "description": "Ein paar kurze Fragen helfen uns, Ihr Vorhaben besser einzuschätzen.",
+      "note": "Transparent. Persönlich. Unverbindlich.",
+      "close": "Quiz schließen"
+    }
   }
 }

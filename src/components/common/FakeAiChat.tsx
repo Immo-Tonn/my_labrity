@@ -193,6 +193,7 @@ const mergeAssistantData = (
       : fallbackAssistantData.unknownResponses,
   };
 };
+
 export default function FakeAiChat() {
   const { lang } = useLanguage();
 
@@ -381,6 +382,34 @@ export default function FakeAiChat() {
   const getFunnyResponse = (message: string) => {
     const lower = message.toLowerCase();
 
+    const arabicJokeTriggers = [
+      'كس اختكم',
+      'كس اختك',
+      'كسمك',
+      'كسمكم',
+      'kus okhtkom',
+      'kus okhtkum',
+      'kus ekhtak',
+      'kursokhtkum',
+      'kursokhtkom',
+      'kuss okhtak',
+      'kos omak',
+      'kos omkom',
+    ];
+
+    if (arabicJokeTriggers.some(trigger => lower.includes(trigger))) {
+      const arabicJokeResponses = [
+        'يا زلمة 😂 لا تبلّش معي... أنا بوت، بس مش سهل!',
+        'ههههه 😂 شو هالحكي؟ انت مفكرني ما بفهم عربي؟',
+        'عيب يا زلمة 😂 أنا AI محترم هون!',
+        '😂 du bist scharmut? لا لا، انت زبون VIP عند Labrity.',
+        'خلص خلص 😂 نرجع نحكي عن الموقع ولا بدك تكمل مشاكل؟',
+        'يا كبير 😂 أنا بوت، بس عندي كرامة رقمية.',
+      ];
+
+      return getRandomItem(arabicJokeResponses);
+    }
+
     if (
       lower.includes('scheiße') ||
       lower.includes('shit') ||
@@ -412,7 +441,6 @@ export default function FakeAiChat() {
     ) {
       return content.funnyResponses.age;
     }
-
     if (
       lower.includes('кто лучший разработчик') ||
       lower.includes('лучший разработчик') ||
@@ -589,6 +617,7 @@ export default function FakeAiChat() {
   const backToChat = () => {
     setActiveMode('chat');
   };
+
   return (
     <>
       {showTeaser && !isOpen && assistantData && (

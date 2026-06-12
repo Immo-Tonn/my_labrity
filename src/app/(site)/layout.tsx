@@ -151,7 +151,7 @@ export default function RootLayout({
           <QuizProvider>
             <Header />
 
-            <main className="flex-grow">{children}</main>
+            <div className="flex-grow">{children}</div>
 
             <Footer name="" href="" ariaL="" />
 

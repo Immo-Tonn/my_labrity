@@ -39,54 +39,10 @@
     "leftDescription": "Швидко перевірте, яке рішення для сайту підходить вашому проєкту.",
     "button": "Запустити калькулятор",
     "note": "Безкоштовно. Персонально. Без зобов’язань.",
-    "steps": ["Тип проєкту", "Обсяг", "Рекомендація"]
-  },
-  "featuredProjects": {
-    "kicker": "Обрані проєкти",
-    "title": "Сайти, які викликають довіру.",
-    "scrollLabel": "Скрол",
-    "button": "Дивитися портфоліо",
-    "projectButton": "Дивитися портфоліо",
-    "ctaKicker": "Наступний проєкт",
-    "ctaTitle": "Наступний проєкт може бути вашим.",
-    "ctaDescription": "Розкажіть нам про вашу ідею — ми перетворимо її на сильну цифрову присутність.",
-    "ctaButton": "Запустити калькулятор проєкту",
-    "items": [
-      {
-        "title": "Immo Tonn",
-        "category": "Нерухомість",
-        "image": "/images/projects/immo-tonn.png"
-      },
-      {
-        "title": "TLSG Studio",
-        "category": "Музична індустрія",
-        "image": "/images/projects/tlsg.png"
-      },
-      {
-        "title": "Massage Studio",
-        "category": "Wellness & Spa",
-        "image": "/images/projects/massage.png"
-      },
-      {
-        "title": "Піцерія",
-        "category": "Ресторан",
-        "image": "/images/projects/pizzeria.png"
-      },
-      {
-        "title": "Допомога літнім людям",
-        "category": "Супровід літніх людей",
-        "image": "/images/projects/seniorenbegleitung.png"
-      },
-      {
-        "title": "BeautyTime",
-        "category": "Beauty-індустрія",
-        "image": "/images/projects/beautytime.png"
-      },
-      {
-        "title": "Автомайстерня",
-        "category": "Автомобільна індустрія",
-        "image": "/images/projects/werk.png"
-      }
+    "steps": [
+      "Тип проєкту",
+      "Обсяг",
+      "Рекомендація"
     ]
   },
   "audience": {
@@ -194,7 +150,11 @@
     "title": "Перегляньте наші роботи",
     "description": "Обрані проєкти, що показують, як ми поєднуємо естетику, стратегію та ефективність у premium цифрову присутність.",
     "button": "Дивитися портфоліо",
-    "topTags": ["SEO READY", "AI VISIBILITY", "HIGH-END FRONTEND"],
+    "topTags": [
+      "SEO READY",
+      "AI VISIBILITY",
+      "HIGH-END FRONTEND"
+    ],
     "seoBlock": [
       {
         "kicker": "SEO ОПТИМІЗАЦІЯ",
@@ -220,7 +180,11 @@
     ],
     "projectLabel": "Вебсайт проєкт",
     "projectButton": "Дивитися проєкт",
-    "projectTags": ["SEO READY", "AI ОПТИМІЗОВАНО", "RESPONSIVE"],
+    "projectTags": [
+      "SEO READY",
+      "AI ОПТИМІЗОВАНО",
+      "RESPONSIVE"
+    ],
     "categories": {
       "Immo Tonn": "Нерухомість",
       "TLSG Studio": "Музична індустрія",
@@ -234,7 +198,11 @@
       "kicker": "У розробці",
       "title": "Нові Premium проєкти",
       "description": "Інші сучасні бізнес-сайти, цифрові образи брендів та ексклюзивні проєкти наразі знаходяться в розробці.",
-      "tags": ["Сайти для брендів", "SEO структура", "AI видимість"],
+      "tags": [
+        "Сайти для брендів",
+        "SEO структура",
+        "AI видимість"
+      ],
       "status": "Скоро"
     },
     "items": [
