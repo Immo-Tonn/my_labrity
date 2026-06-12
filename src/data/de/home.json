@@ -86,11 +86,7 @@
     "title": "Entdecken Sie unsere Arbeiten",
     "description": "Ausgewählte Projekte, die zeigen, wie wir Ästhetik, Strategie und Performance zu einer digitalen Präsenz auf Premium-Niveau verbinden.",
     "button": "Portfolio ansehen",
-    "topTags": [
-      "SEO READY",
-      "AI VISIBILITY",
-      "HIGH-END FRONTEND"
-    ],
+    "topTags": ["SEO READY", "AI VISIBILITY", "HIGH-END FRONTEND"],
     "seoBlock": [
       {
         "kicker": "SEO OPTIMIZATION",
@@ -116,11 +112,7 @@
     ],
     "projectLabel": "Website Project",
     "projectButton": "Projekt ansehen",
-    "projectTags": [
-      "SEO READY",
-      "AI OPTIMIERT",
-      "RESPONSIVE"
-    ],
+    "projectTags": ["SEO READY", "AI OPTIMIERT", "RESPONSIVE"],
     "categories": {
       "Immo Tonn": "Immobilien",
       "TLSG Studio": "Musikindustrie",
@@ -133,11 +125,7 @@
       "kicker": "In Entwicklung",
       "title": "Neue Premium Projekte",
       "description": "Weitere moderne Business-Websites, digitale Markenauftritte und exklusive Projekte befinden sich derzeit in Entwicklung.",
-      "tags": [
-        "Brand Websites",
-        "SEO Struktur",
-        "AI Visibility"
-      ],
+      "tags": ["Brand Websites", "SEO Struktur", "AI Visibility"],
       "status": "Stay Tuned"
     },
     "items": [

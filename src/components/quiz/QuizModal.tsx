@@ -9,10 +9,7 @@ export default function QuizModal() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* BACKDROP */}
-      <div
-        className="absolute inset-0 bg-black/60"
-        onClick={closeQuiz}
-      />
+      <div className="absolute inset-0 bg-black/60" onClick={closeQuiz} />
 
       {/* MODAL */}
       <div

@@ -77,100 +77,90 @@ export default function Quiz() {
   };
 
   return (
-    // 1. Добавляем ограничение по высоте (max-h-[85vh]) и делаем контейнер flex-колонкой
-    <div className="flex max-h-[85vh] flex-col p-8">
-      
-      {/* 2. Шапка: Прогресс и заголовок (не сжимаются) */}
-      <div className="shrink-0">
-        <p className="mb-4 text-sm text-black/60">
-          {quiz.progress} {step + 1} / {quiz.questions.length}
-        </p>
-        <h2 className="mb-6 text-2xl font-medium">{question.title}</h2>
-      </div>
+    <div className="p-8 h-full max-h-[85vh] overflow-y-auto">
+      <p className="mb-4 text-sm text-black/60">
+        {quiz.progress} {step + 1} / {quiz.questions.length}
+      </p>
 
-      {/* 3. Контейнер с вариантами ответов (занимает доступное место и скроллится) */}
-      <div className="flex-1 overflow-y-auto pr-2">
-        <div className="grid gap-3">
-          {question.options.map((option: string) => {
-            const isSelected = selected.includes(option);
+      <h2 className="mb-6 text-2xl font-medium">{question.title}</h2>
 
-            return (
-              <button
-                key={option}
-                onClick={() => select(option)}
+      <div className="grid gap-3">
+        {question.options.map((option: string) => {
+          const isSelected = selected.includes(option);
+
+          return (
+            <button
+              key={option}
+              onClick={() => select(option)}
+              className={`
+                group relative overflow-hidden
+                rounded-xl border bg-white
+                px-4 py-3
+                text-left
+                transition-all duration-300
+                ${
+                  isSelected
+                    ? 'border-black'
+                    : 'border-[#e7e2d9] hover:border-black'
+                }
+              `}
+            >
+              <span
                 className={`
-                  group relative overflow-hidden
-                  rounded-xl border bg-white
-                  px-4 py-3
-                  text-left
-                  transition-all duration-300
+                  absolute inset-0
+                  bg-black/5
+                  transition-opacity
+                  duration-300
                   ${
                     isSelected
-                      ? 'border-black'
-                      : 'border-[#e7e2d9] hover:border-black'
+                      ? 'opacity-100'
+                      : 'opacity-0 group-hover:opacity-100'
                   }
                 `}
-              >
-                <span
-                  className={`
-                    absolute inset-0
-                    bg-black/5
-                    transition-opacity
-                    duration-300
-                    ${
-                      isSelected
-                        ? 'opacity-100'
-                        : 'opacity-0 group-hover:opacity-100'
-                    }
-                  `}
-                />
+              />
 
-                <span
-                  className={`
-                    pointer-events-none
-                    absolute inset-0
-                    -translate-x-[120%]
-                    skew-x-[-20deg]
-                    bg-gradient-to-r
-                    from-transparent
-                    via-white/80
-                    to-transparent
-                    opacity-0
-                    group-hover:animate-[shine_1.1s_linear]
-                    group-hover:opacity-100
-                    ${
-                      isSelected
-                        ? 'animate-[shine_1.4s_linear_infinite] opacity-100'
-                        : ''
-                    }
-                  `}
-                />
+              <span
+                className={`
+                  pointer-events-none
+                  absolute inset-0
+                  -translate-x-[120%]
+                  skew-x-[-20deg]
+                  bg-gradient-to-r
+                  from-transparent
+                  via-white/80
+                  to-transparent
+                  opacity-0
+                  group-hover:animate-[shine_1.1s_linear]
+                  group-hover:opacity-100
+                  ${
+                    isSelected
+                      ? 'animate-[shine_1.4s_linear_infinite] opacity-100'
+                      : ''
+                  }
+                `}
+              />
 
-                <span className="relative z-10">{option}</span>
-              </button>
-            );
-          })}
-        </div>
+              <span className="relative z-10">{option}</span>
+            </button>
+          );
+        })}
       </div>
 
-      {/* 4. Кнопка "Далее" (прижата к низу, не скроллится вместе с ответами) */}
-      <div className="mt-6 shrink-0 pt-2">
-        <button
-          onClick={nextStep}
-          disabled={selected.length === 0}
-          className="
-            w-full
-            border bg-black
-            px-5 py-2.5
-            text-white
-            transition-opacity
-            disabled:cursor-not-allowed
-            disabled:opacity-40
-          "
-        >
-          {quiz.next}
-        </button>
-      </div>
+      <button
+        onClick={nextStep}
+        disabled={selected.length === 0}
+        className="
+          mt-8 w-full
+          border bg-black
+          px-5 py-2.5
+          text-white
+          transition-opacity
+          disabled:cursor-not-allowed
+          disabled:opacity-40
+        "
+      >
+        {quiz.next}
+      </button>
 
       <style jsx global>{`
         @keyframes shine {
@@ -185,4 +175,4 @@ export default function Quiz() {
       `}</style>
     </div>
   );
-  }
+}

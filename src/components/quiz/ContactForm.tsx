@@ -151,9 +151,7 @@ export default function ContactForm({ quiz, answers }: Props) {
     <div className="p-8">
       <h2 className="mb-2 text-3xl">{quiz.form.title}</h2>
 
-      <p className="mb-8 text-sm text-gray-500">
-       {quiz.form.description}
-      </p>
+      <p className="mb-8 text-sm text-gray-500">{quiz.form.description}</p>
 
       <div className="grid gap-5">
         <div>
