@@ -323,11 +323,16 @@ export default function PortfolioPage() {
                       </div>
 
                       <h2
-                        className={`max-w-full font-tenor leading-[0.95] tracking-[-0.04em] text-black md:text-[70px] xl:text-[84px] ${
-                          seniorProject
-                            ? 'hyphens-auto text-[36px] [overflow-wrap:anywhere] sm:text-[44px]'
-                            : 'break-words text-[44px]'
-                        }`}
+                        className={`
+                          max-w-full 
+                          font-tenor 
+                          leading-[0.95] 
+                          tracking-[-0.04em] 
+                          text-black 
+                          md:text-[70px] 
+                          lg:text-[64px] 
+                          xl:text-[74px] 
+                          ${'hyphens-auto text-[36px] [overflow-wrap:anywhere] sm:text-[44px]'}`}
                       >
                         {item.title}
                       </h2>

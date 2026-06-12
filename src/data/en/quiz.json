@@ -3,24 +3,20 @@
     "progress": "Question",
     "next": "Next",
     "submit": "Send",
-
     "form": {
+      "kicker": "Contact",
       "title": "Contact details",
       "description": "Please fill in your contact details",
-
       "firstName": "First name",
       "lastName": "Last name",
       "phone": "Phone number",
       "email": "Email",
-
       "success": "Request sent successfully",
       "error": "Failed to send request",
-
       "required": "Required field",
       "invalidEmail": "Invalid email address",
       "invalidPhone": "Invalid phone number"
     },
-
     "questions": [
       {
         "id": "websiteType",
@@ -88,6 +84,13 @@
           "Not sure"
         ]
       }
-    ]
+    ],
+    "modal": {
+      "kicker": "Project calculator",
+      "title": "Tell us briefly about your project.",
+      "description": "A few short questions help us understand your project better.",
+      "note": "Transparent. Personal. Non-binding.",
+      "close": "Close quiz"
+    }
   }
 }
