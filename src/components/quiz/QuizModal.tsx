@@ -53,7 +53,7 @@ export default function QuizModal() {
       />
 
       {/* MODAL */}
-      <div className="relative z-10 flex max-h-[92dvh] w-full max-w-[1180px] flex-col overflow-hidden border border-[#e7e2d9] bg-[#f8f6f1] shadow-[0_40px_110px_rgba(0,0,0,0.35)] xl:grid xl:grid-cols-[0.82fr_1.18fr]">
+      <div className="relative z-10 flex max-h-[92dvh] w-full max-w-[1180px] flex-col overflow-hidden border border-[#e7e2d9] bg-[#f8f6f1] shadow-[0_40px_110px_rgba(0,0,0,0.35)] lg:grid lg:h-[620px] lg:grid-cols-[0.82fr_1.18fr]">
         {/* CLOSE */}
         <button
           type="button"
