@@ -65,7 +65,7 @@ export default function QuizModal() {
         </button>
 
         {/* BRAND PANEL */}
-        <aside className="relative shrink-0 overflow-hidden bg-[#111111] px-6 py-7 text-white md:px-8 md:py-8 lg:flex lg:min-h-0 lg:h-full lg:flex-col lg:justify-between lg:px-10 lg:py-12">
+        <aside className="relative shrink-0 overflow-hidden bg-[#111111] px-6 py-7 text-white md:px-8 md:py-8 lg:flex lg:h-full lg:min-h-0 lg:flex-col lg:justify-between lg:px-10 lg:py-12">
           <div>
             <p className="font-tenor text-[20px] uppercase tracking-[-0.03em] text-white md:text-[22px] xl:text-[24px]">
               LABRITY
