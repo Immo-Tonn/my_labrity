@@ -53,19 +53,19 @@ export default function QuizModal() {
       />
 
       {/* MODAL */}
-      <div className="relative z-10 flex max-h-[92dvh] w-full max-w-[1180px] flex-col overflow-hidden border border-[#e7e2d9] bg-[#f8f6f1] shadow-[0_40px_110px_rgba(0,0,0,0.35)] lg:grid lg:h-[620px] lg:grid-cols-[0.82fr_1.18fr]">
+      <div className="relative z-10 flex max-h-[92dvh] w-full max-w-[1180px] flex-col overflow-hidden border border-[#e7e2d9] bg-[#f8f6f1] shadow-[0_40px_110px_rgba(0,0,0,0.35)] lg:grid lg:h-full lg:max-h-[620px] lg:grid-cols-[0.82fr_1.18fr]">
         {/* CLOSE */}
         <button
           type="button"
           onClick={closeQuiz}
           aria-label={modal.close}
-          className="absolute right-4 top-4 z-30 flex h-9 w-9 items-center justify-center border border-white/20 bg-black/30 font-montserrat text-[18px] leading-none text-white transition duration-300 hover:bg-white hover:text-black md:right-6 md:top-6 xl:h-10 xl:w-10 xl:border-black/10 xl:bg-[#f8f6f1]/80 xl:text-black xl:hover:bg-black xl:hover:text-white"
+          className="absolute right-4 top-4 z-30 flex h-9 w-9 items-center justify-center border border-white/20 bg-black/30 font-montserrat text-[18px] leading-none text-white transition duration-300 hover:bg-white hover:text-black md:right-6 md:top-6 lg:h-10 lg:w-10 xl:border-black/10 xl:bg-[#f8f6f1]/80 xl:text-black xl:hover:bg-black xl:hover:text-white"
         >
           ×
         </button>
 
         {/* BRAND PANEL */}
-        <aside className="relative shrink-0 overflow-hidden bg-[#111111] px-6 py-7 text-white md:px-8 md:py-8 xl:flex xl:min-h-[620px] xl:flex-col xl:justify-between xl:px-10 xl:py-12">
+        <aside className="relative shrink-0 overflow-hidden bg-[#111111] px-6 py-7 text-white md:px-8 md:py-8 lg:flex lg:min-h-0 lg:h-full lg:flex-col lg:justify-between lg:px-10 lg:py-12">
           <div>
             <p className="font-tenor text-[20px] uppercase tracking-[-0.03em] text-white md:text-[22px] xl:text-[24px]">
               LABRITY
