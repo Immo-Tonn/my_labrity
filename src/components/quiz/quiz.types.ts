@@ -5,6 +5,7 @@ export type ContactFormData = {
   lastName: string;
   phone: string;
   email: string;
+  privacy: boolean;
 };
 
 export type QuizQuestion = {

@@ -10,8 +10,12 @@
     "description": "We create digital presences that feel premium, build trust and position your business clearly.",
     "contacts": [
       {
-        "label": "hello@labrity.com",
-        "href": "mailto:hello@labrity.com"
+        "label": "labrity@web.de",
+        "href": "mailto:labrity@web.de"
+      },
+      {
+        "label": "tonn_andreas@web.de",
+        "href": "mailto:tonn_andreas@web.de"
       },
       {
         "label": "Instagram",
@@ -81,8 +85,7 @@
   },
   "checkbox": {
     "label": "I agree to the processing of my personal data in accordance with the ",
-    "linkLabel": "Privacy Policy",
-    "href": "/privacy-policy"
+    "linkLabel": "Privacy Policy"
   },
   "successMessage": "Thank you! Your request has been sent successfully."
 }

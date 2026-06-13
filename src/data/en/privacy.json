@@ -13,7 +13,7 @@
       {
         "children": [
           {
-            "text": "Labrity\nOwner: Andreas Tonn\nSessendrupweg 54\n48161 Münster\nGermany\nEmail: hello@labrity.com\nPhone: +49 174 345 44 19"
+            "text": "Labrity\nOwner: Andreas Tonn\nSessendrupweg 54\n48161 Münster\nGermany\nEmail: labrity@web.de, tonn_andreas@web.de\nPhone: +49 174 345 44 19"
           }
         ]
       }
@@ -80,6 +80,13 @@
       {
         "children": [
           {
+            "text": "We collect the same data when you use our project calculator (quiz) on the website. In addition to first name, last name, email address and phone number, your answers to the questions about your project are processed in order to better assess your request."
+          }
+        ]
+      },
+      {
+        "children": [
+          {
             "text": "This data is used exclusively to process your inquiry and to communicate with you. Your data will not be passed on to third parties unless this is necessary to handle your request or we are legally required to do so."
           }
         ]
@@ -100,7 +107,7 @@
       {
         "children": [
           {
-            "text": "To enable a fast response to your inquiries, messages submitted via the contact form are forwarded to Telegram using the Telegram Bot API. Telegram is operated by Telegram Messenger Inc. / Telegram FZ-LLC."
+            "text": "To enable a fast response to your inquiries, messages submitted via the contact form or the project calculator are forwarded to Telegram using the Telegram Bot API. Telegram is operated by Telegram Messenger Inc. / Telegram FZ-LLC."
           }
         ]
       },
@@ -114,7 +121,7 @@
       {
         "children": [
           {
-            "text": "For more information on Telegram's data practices, please see: telegram.org/privacy. The legal basis is Art. 6(1)(f) GDPR based on our legitimate interest in efficient and timely communication."
+            "text": "For more information on Telegram's data practices, please see: telegram.org/privacy. The legal basis is your explicit consent (Art. 6(1)(a) GDPR), given by confirming the privacy policy in the contact form or project calculator, supplemented by Art. 6(1)(f) GDPR based on our legitimate interest in efficient and timely communication. You may withdraw your consent at any time with effect for the future (see section 9)."
           }
         ]
       }
@@ -135,6 +142,13 @@
         "children": [
           {
             "text": "– Art. 6(1)(a) GDPR: consent of the data subject (e.g. agreement to this privacy policy in the contact form)\n– Art. 6(1)(b) GDPR: performance of a contract or pre-contractual measures\n– Art. 6(1)(f) GDPR: legitimate interests of the controller (secure website operation, responding to contact requests)"
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "To display the website in your preferred language and to temporarily store form data you have already entered, we use your browser's local storage and session storage. This data remains on your device and is not transmitted to us unless you submit a form. The legal basis for this is Art. 6(1)(f) GDPR (legitimate interest in a user-friendly presentation of the website)."
           }
         ]
       }
@@ -201,7 +215,7 @@
       {
         "children": [
           {
-            "text": "To exercise any of these rights, please contact us at: hello@labrity.com"
+            "text": "To exercise any of these rights, please contact us at: labrity@web.de, tonn_andreas@web.de"
           }
         ]
       }
@@ -241,7 +255,7 @@
       {
         "children": [
           {
-            "text": "Labrity – Andreas Tonn\nEmail: hello@labrity.com\nPhone: +49 174 345 44 19"
+            "text": "Labrity – Andreas Tonn\nEmail: labrity@web.de, tonn_andreas@web.de\nPhone: +49 174 345 44 19"
           }
         ]
       }

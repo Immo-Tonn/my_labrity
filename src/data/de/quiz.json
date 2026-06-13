@@ -15,7 +15,10 @@
       "error": "Fehler beim Senden",
       "required": "Pflichtfeld",
       "invalidEmail": "Ungültige E-Mail-Adresse",
-      "invalidPhone": "Ungültige Telefonnummer"
+      "invalidPhone": "Ungültige Telefonnummer",
+      "privacyLabel": "Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der ",
+      "privacyLinkLabel": "Datenschutzerklärung",
+      "privacyRequired": "Bitte bestätigen Sie die Datenschutzerklärung."
     },
     "questions": [
       {

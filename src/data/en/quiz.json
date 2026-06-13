@@ -15,7 +15,10 @@
       "error": "Failed to send request",
       "required": "Required field",
       "invalidEmail": "Invalid email address",
-      "invalidPhone": "Invalid phone number"
+      "invalidPhone": "Invalid phone number",
+      "privacyLabel": "I agree to the processing of my personal data in accordance with the ",
+      "privacyLinkLabel": "Privacy Policy",
+      "privacyRequired": "Please confirm the privacy policy."
     },
     "questions": [
       {

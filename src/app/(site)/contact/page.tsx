@@ -3,6 +3,7 @@
 import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from 'react';
 
 import { sendMessage } from '@/api/telegram';
+import { ModalPolicy } from '@/components/ui';
 import { useLanguage } from '@/utils/LanguageContext';
 import { getData } from '@/utils/getData';
 
@@ -58,7 +59,6 @@ type ContactData = {
   checkbox?: {
     label: string;
     linkLabel: string;
-    href: string;
   };
   successMessage?: string;
 };
@@ -88,8 +88,12 @@ const fallbackContactData: ContactData = {
       'Wir entwickeln digitale Auftritte, die hochwertig wirken, Vertrauen schaffen und Ihr Unternehmen klar positionieren.',
     contacts: [
       {
-        label: 'hello@labrity.com',
-        href: 'mailto:hello@labrity.com',
+        label: 'labrity@web.de',
+        href: 'mailto:labrity@web.de',
+      },
+      {
+        label: 'tonn_andreas@web.de',
+        href: 'mailto:tonn_andreas@web.de',
       },
       {
         label: 'Instagram',
@@ -161,7 +165,6 @@ const fallbackContactData: ContactData = {
     label:
       'Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der ',
     linkLabel: 'Datenschutzerklärung',
-    href: '/datenschutz',
   },
   successMessage: 'Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet.',
 };
@@ -469,12 +472,10 @@ export default function ContactPage() {
 
                     <span>
                       {content.checkbox?.label}
-                      <a
-                        href={content.checkbox?.href}
-                        className="underline underline-offset-4"
-                      >
-                        {content.checkbox?.linkLabel}
-                      </a>
+                      <ModalPolicy
+                        variant="form"
+                        nameBtn={content.checkbox?.linkLabel ?? ''}
+                      />
                     </span>
                   </label>
 

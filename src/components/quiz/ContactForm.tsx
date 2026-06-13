@@ -7,6 +7,7 @@ import { sendMessage } from '@/api/telegram';
 import { ContactFormData, QuizAnswers } from './quiz.types';
 
 import { useQuiz } from '@/components/quiz';
+import { ModalPolicy } from '@/components/ui';
 
 type Props = {
   quiz: any;
@@ -20,13 +21,16 @@ export default function ContactForm({ quiz, answers }: Props) {
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
 
-  const [errors, setErrors] = useState<Partial<ContactFormData>>({});
+  const [errors, setErrors] = useState<
+    Partial<Record<keyof ContactFormData, string>>
+  >({});
 
   const [form, setForm] = useState<ContactFormData>({
     firstName: '',
     lastName: '',
     phone: '',
     email: '',
+    privacy: false,
   });
 
   useEffect(() => {
@@ -40,7 +44,7 @@ export default function ContactForm({ quiz, answers }: Props) {
   }, [success, closeQuiz]);
 
   const validate = () => {
-    const nextErrors: Partial<ContactFormData> = {};
+    const nextErrors: Partial<Record<keyof ContactFormData, string>> = {};
 
     if (!form.firstName.trim()) {
       nextErrors.firstName = quiz.form.required;
@@ -60,6 +64,10 @@ export default function ContactForm({ quiz, answers }: Props) {
       nextErrors.phone = quiz.form.required;
     } else if (!/^\+?[0-9\s\-()]{7,}$/.test(form.phone)) {
       nextErrors.phone = quiz.form.invalidPhone;
+    }
+
+    if (!form.privacy) {
+      nextErrors.privacy = quiz.form.privacyRequired;
     }
 
     setErrors(nextErrors);
@@ -193,6 +201,27 @@ export default function ContactForm({ quiz, answers }: Props) {
           />
           {errors.email && <p className={errorClass}>{errors.email}</p>}
         </div>
+      </div>
+
+      <div className="mt-5">
+        <label className="flex items-start gap-3 text-sm leading-6 text-gray-600">
+          <input
+            type="checkbox"
+            checked={form.privacy}
+            onChange={e => {
+              setForm(prev => ({ ...prev, privacy: e.target.checked }));
+              setErrors(prev => ({ ...prev, privacy: undefined }));
+            }}
+            className="mt-1 h-4 w-4 border border-[#e7e2d9]"
+          />
+
+          <span>
+            {quiz.form.privacyLabel}
+            <ModalPolicy variant="form" nameBtn={quiz.form.privacyLinkLabel} />
+          </span>
+        </label>
+
+        {errors.privacy && <p className={errorClass}>{errors.privacy}</p>}
       </div>
 
       <button
