@@ -765,7 +765,7 @@ export default function Home() {
           {/* PROJECT CALCULATOR */}
           <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[130px]">
             <div className="mx-auto max-w-[1500px]">
-              <div className="grid overflow-hidden border border-[#e7e2d9] bg-[#f8f6f1] shadow-[0_24px_70px_rgba(0,0,0,0.06)] xl:grid-cols-[0.85fr_1.15fr]">
+              <div className="grid overflow-hidden border border-[#e7e2d9] bg-[#f8f6f1] shadow-[0_24px_70px_rgba(0,0,0,0.06)] lg:grid-cols-[0.85fr_1.15fr]">
                 <div className="relative overflow-hidden bg-[#111111] px-7 py-10 text-white md:px-10 md:py-14 xl:px-12 xl:py-16">
                   <p className="font-tenor text-[24px] uppercase tracking-[-0.03em] text-white">
                     LABRITY

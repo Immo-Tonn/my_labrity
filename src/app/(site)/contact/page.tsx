@@ -355,7 +355,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-[#f8f6f1] pt-[120px] md:pt-[140px] xl:pt-[170px]">
       <section className="container pb-[90px] md:pb-[110px] xl:pb-[140px]">
         <div className="overflow-hidden border border-[#e7e2d9] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.05)]">
-          <div className="grid xl:grid-cols-[0.9fr_1.1fr]">
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
             <div className="flex flex-col justify-between bg-[#151515] px-6 py-10 text-white md:px-10 md:py-14 xl:px-14 xl:py-16">
               <div>
                 <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.32em] text-white/45 md:text-xs">
