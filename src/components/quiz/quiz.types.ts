@@ -22,6 +22,7 @@ export type QuizDictionary = {
 
   form: {
     title: string;
+    description: string;
 
     firstName: string;
     lastName: string;
@@ -34,7 +35,34 @@ export type QuizDictionary = {
     required: string;
     invalidEmail: string;
     invalidPhone: string;
+
+    privacyLabel: string;
+    privacyLinkLabel: string;
+    privacyRequired: string;
+  };
+
+  result: {
+    title: string;
+    subtitle: string;
+
+    summaryTitle: string;
+
+    estimateTitle: string;
+    estimateNote: string;
+
+    nextTitle: string;
+    nextText: string;
+
+    close: string;
   };
 
   questions: QuizQuestion[];
+
+  modal?: {
+    kicker: string;
+    title: string;
+    description: string;
+    note: string;
+    close: string;
+  };
 };

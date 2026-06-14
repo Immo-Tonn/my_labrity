@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { sendMessage } from '@/api/telegram';
 
@@ -8,6 +8,8 @@ import { ContactFormData, QuizAnswers } from './quiz.types';
 
 import { useQuiz } from '@/components/quiz';
 import { ModalPolicy } from '@/components/ui';
+
+import QuizResult from './QuizResult';
 
 type Props = {
   quiz: any;
@@ -18,7 +20,7 @@ export default function ContactForm({ quiz, answers }: Props) {
   const { closeQuiz } = useQuiz();
 
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState('');
+  const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
 
   const [errors, setErrors] = useState<
@@ -33,15 +35,15 @@ export default function ContactForm({ quiz, answers }: Props) {
     privacy: false,
   });
 
-  useEffect(() => {
-    if (!success) return;
-
-    const timeout = setTimeout(() => {
-      closeQuiz();
-    }, 5000);
-
-    return () => clearTimeout(timeout);
-  }, [success, closeQuiz]);
+  if (submitted) {
+    return (
+      <QuizResult
+        quiz={quiz}
+        answers={answers}
+        form={form}
+      />
+    );
+  }
 
   const validate = () => {
     const nextErrors: Partial<Record<keyof ContactFormData, string>> = {};
@@ -119,7 +121,8 @@ export default function ContactForm({ quiz, answers }: Props) {
 
     try {
       await sendMessage(buildMessage());
-      setSuccess(quiz.form.success);
+
+      setSubmitted(true);
     } catch {
       setError(quiz.form.error);
     } finally {
@@ -134,6 +137,13 @@ export default function ContactForm({ quiz, answers }: Props) {
         ...prev,
         [field]: e.target.value,
       }));
+
+      if (errors[field]) {
+        setErrors(prev => ({
+          ...prev,
+          [field]: undefined,
+        }));
+      }
     };
 
   const inputClass = `
@@ -157,9 +167,13 @@ export default function ContactForm({ quiz, answers }: Props) {
 
   return (
     <div className="p-8">
-      <h2 className="mb-2 text-3xl">{quiz.form.title}</h2>
+      <h2 className="mb-2 text-3xl">
+        {quiz.form.title}
+      </h2>
 
-      <p className="mb-8 text-sm text-gray-500">{quiz.form.description}</p>
+      <p className="mb-8 text-sm text-gray-500">
+        {quiz.form.description}
+      </p>
 
       <div className="grid gap-5">
         <div>
@@ -169,7 +183,12 @@ export default function ContactForm({ quiz, answers }: Props) {
             placeholder={quiz.form.firstName}
             className={inputClass}
           />
-          {errors.firstName && <p className={errorClass}>{errors.firstName}</p>}
+
+          {errors.firstName && (
+            <p className={errorClass}>
+              {errors.firstName}
+            </p>
+          )}
         </div>
 
         <div>
@@ -179,7 +198,12 @@ export default function ContactForm({ quiz, answers }: Props) {
             placeholder={quiz.form.lastName}
             className={inputClass}
           />
-          {errors.lastName && <p className={errorClass}>{errors.lastName}</p>}
+
+          {errors.lastName && (
+            <p className={errorClass}>
+              {errors.lastName}
+            </p>
+          )}
         </div>
 
         <div>
@@ -189,7 +213,12 @@ export default function ContactForm({ quiz, answers }: Props) {
             placeholder={quiz.form.phone}
             className={inputClass}
           />
-          {errors.phone && <p className={errorClass}>{errors.phone}</p>}
+
+          {errors.phone && (
+            <p className={errorClass}>
+              {errors.phone}
+            </p>
+          )}
         </div>
 
         <div>
@@ -199,7 +228,12 @@ export default function ContactForm({ quiz, answers }: Props) {
             placeholder={quiz.form.email}
             className={inputClass}
           />
-          {errors.email && <p className={errorClass}>{errors.email}</p>}
+
+          {errors.email && (
+            <p className={errorClass}>
+              {errors.email}
+            </p>
+          )}
         </div>
       </div>
 
@@ -209,23 +243,37 @@ export default function ContactForm({ quiz, answers }: Props) {
             type="checkbox"
             checked={form.privacy}
             onChange={e => {
-              setForm(prev => ({ ...prev, privacy: e.target.checked }));
-              setErrors(prev => ({ ...prev, privacy: undefined }));
+              setForm(prev => ({
+                ...prev,
+                privacy: e.target.checked,
+              }));
+
+              setErrors(prev => ({
+                ...prev,
+                privacy: undefined,
+              }));
             }}
             className="mt-1 h-4 w-4 border border-[#e7e2d9]"
           />
 
           <span>
             {quiz.form.privacyLabel}
-            <ModalPolicy variant="form" nameBtn={quiz.form.privacyLinkLabel} />
+            <ModalPolicy
+              variant="form"
+              nameBtn={quiz.form.privacyLinkLabel}
+            />
           </span>
         </label>
 
-        {errors.privacy && <p className={errorClass}>{errors.privacy}</p>}
+        {errors.privacy && (
+          <p className={errorClass}>
+            {errors.privacy}
+          </p>
+        )}
       </div>
 
       <button
-        disabled={loading || !!success}
+        disabled={loading}
         onClick={submit}
         className="
           mt-8
@@ -242,12 +290,6 @@ export default function ContactForm({ quiz, answers }: Props) {
       >
         {loading ? '...' : quiz.submit}
       </button>
-
-      {success && (
-        <div className="mt-6 rounded-2xl bg-green-50 p-4 text-sm text-green-700">
-          {success}
-        </div>
-      )}
 
       {error && (
         <div className="mt-6 rounded-2xl bg-red-50 p-4 text-sm text-red-700">
