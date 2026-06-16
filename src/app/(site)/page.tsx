@@ -999,7 +999,7 @@ export default function Home() {
                 </Link>
 
                 <button
-                  type='button'
+                  type="button"
                   onClick={openQuiz}
                   className="inline-flex min-h-[56px] items-center justify-center border border-white bg-white px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-black transition duration-300 hover:-translate-y-[1px]"
                 >
