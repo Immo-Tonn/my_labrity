@@ -1,0 +1,267 @@
+{
+  "seo": {
+    "title": "Labrity Web Studio – Professional Websites for Businesses in Germany",
+    "description": "Labrity Web Studio creates modern, responsive and SEO-optimized websites for companies, freelancers, service providers and brands in Germany.",
+    "keywords": [
+      "Labrity",
+      "Labrity Web Studio",
+      "web design Germany",
+      "professional website",
+      "website for businesses",
+      "website for freelancers",
+      "modern website",
+      "SEO optimized website",
+      "responsive web design",
+      "Next.js website",
+      "React website",
+      "premium web design",
+      "website development Germany"
+    ],
+    "openGraphTitle": "Labrity Web Studio – Modern Websites for Businesses",
+    "openGraphDescription": "Professional websites with modern design, clear structure, SEO optimization and a strong digital presence.",
+    "siteName": "Labrity Web Studio",
+    "locale": "en_US"
+  },
+  "hero": {
+    "kicker": "Premium Web Studio",
+    "titleFirst": "Websites that",
+    "titleSecond": "convince and convert",
+    "description": "We create modern websites for businesses, experts and brands.",
+    "tagline": "Minimal. Modern. Effective.",
+    "primaryButton": "Contact",
+    "secondaryButton": "Portfolio"
+  },
+  "quizPreview": {
+    "kicker": "Project Calculator",
+    "title": "Not sure which website package fits?",
+    "description": "Answer a few short questions. We will check which solution fits your goal, budget and project scope.",
+    "leftTitle": "3 short steps. One clear recommendation.",
+    "leftDescription": "Quickly check which website solution fits your project.",
+    "button": "Start project calculator",
+    "note": "Free. Personal. No obligation.",
+    "steps": [
+      "Project type",
+      "Scope",
+      "Recommendation"
+    ]
+  },
+  "audience": {
+    "kicker": "Who We Work With",
+    "title": "For Freelancers, Companies and Premium Brands.",
+    "description": "Whether you are self-employed, a growing company or an established brand — we create websites for those who want to appear stronger, more professional and more convincing.",
+    "items": [
+      {
+        "title": "Freelancers",
+        "description": "For professionals who want to build trust and present themselves properly."
+      },
+      {
+        "title": "Companies",
+        "description": "For businesses that want to be seen as stronger, clearer and more premium."
+      },
+      {
+        "title": "Brands",
+        "description": "For brands that need individuality, style and a strong digital presence."
+      },
+      {
+        "title": "Custom Projects",
+        "description": "For special concepts that need more than an ordinary website."
+      }
+    ]
+  },
+  "differences": {
+    "kicker": "WHY LABRITY?",
+    "title": "Strong websites for strong brands.",
+    "description": "",
+    "items": [
+      {
+        "title": "Strategic",
+        "description": "We think through the path — from idea to result.",
+        "icon": "/images/home-icons/strategy.svg"
+      },
+      {
+        "title": "Minimal",
+        "description": "Clean design without unnecessary visual noise.",
+        "icon": "/images/home-icons/minimalism.svg"
+      },
+      {
+        "title": "Tailored",
+        "description": "Every project is created around your business.",
+        "icon": "/images/home-icons/custom.svg"
+      },
+      {
+        "title": "Reliable",
+        "description": "Transparent work, clear deadlines and communication.",
+        "icon": "/images/home-icons/reliable.svg"
+      }
+    ]
+  },
+  "servicesSection": {
+    "kicker": "Services",
+    "title": "Digital Services for Ambitious Brands",
+    "description": "From high-converting landing pages to exclusive websites, we create digital solutions that build trust, create impact and attract new clients."
+  },
+  "stats": {
+    "kicker": "Digital Strength",
+    "title": "Visibility, trust and growth — in one system",
+    "description": "We create websites where custom design, constant online availability and a complete structure work together to build a strong digital presence.",
+    "items": [
+      {
+        "value": "100%",
+        "label": "Custom Design",
+        "description": "Every website is created around the business, audience and positioning — without generic templates."
+      },
+      {
+        "value": "24/7",
+        "label": "Online Availability",
+        "description": "Your website works for your business continuously and helps clients find you at any time."
+      },
+      {
+        "value": "360°",
+        "label": "Complete Approach",
+        "description": "Structure, design, trust, SEO and the user journey are developed as one connected system."
+      }
+    ]
+  },
+  "processPreview": {
+    "kicker": "Process",
+    "title": "A clear process for a strong result.",
+    "description": "We guide your project step by step — from the first idea through structure and design to a finished digital presence.",
+    "button": "View Process",
+    "items": [
+      {
+        "title": "Analysis"
+      },
+      {
+        "title": "Structure"
+      },
+      {
+        "title": "Design"
+      },
+      {
+        "title": "Development"
+      },
+      {
+        "title": "Launch"
+      }
+    ]
+  },
+  "portfolio": {
+    "kicker": "Portfolio",
+    "title": "Discover Our Work",
+    "description": "Selected projects showing how we combine aesthetics, strategy and performance into a premium digital presence.",
+    "button": "View Portfolio",
+    "topTags": [
+      "SEO READY",
+      "AI VISIBILITY",
+      "HIGH-END FRONTEND"
+    ],
+    "seoBlock": [
+      {
+        "kicker": "SEO OPTIMIZATION",
+        "title": "Built for modern visibility."
+      },
+      {
+        "kicker": "AI VISIBILITY",
+        "title": "Optimized for GPT and AI search."
+      },
+      {
+        "kicker": "PERFORMANCE",
+        "title": "Fast. Modern. Premium."
+      }
+    ],
+    "marquee": [
+      "SEO OPTIMIZATION",
+      "AI VISIBILITY",
+      "PREMIUM WEBDESIGN",
+      "MODERN DIGITAL PRESENCE",
+      "RESPONSIVE EXPERIENCE",
+      "HIGH-END FRONTEND",
+      "MINIMAL. MODERN. EFFECTIVE."
+    ],
+    "projectLabel": "Website Project",
+    "projectButton": "View Project",
+    "projectTags": [
+      "SEO READY",
+      "AI OPTIMIZED",
+      "RESPONSIVE"
+    ],
+    "categories": {
+      "Immo Tonn": "Real Estate",
+      "TLSG Studio": "Music Industry",
+      "Pizzeria": "Restaurant",
+      "Massage Studio": "Wellness & Spa",
+      "BeautyTime": "Beauty Industry",
+      "Werkstatt": "Automotive Industry",
+      "Senior Companion Support": "Senior support"
+    },
+    "blackSection": {
+      "kicker": "In Development",
+      "title": "New Premium Projects",
+      "description": "More modern business websites, digital brand experiences and exclusive projects are currently in development.",
+      "tags": [
+        "Brand Websites",
+        "SEO Structure",
+        "AI Visibility"
+      ],
+      "status": "Stay Tuned"
+    },
+    "items": [
+      {
+        "title": "Immo Tonn",
+        "description": "Premium real estate website with clear structure, professional property presentation and strong trust effect for buying and selling.",
+        "imageVariant": "first",
+        "image": "/images/projects/immo-tonn.png",
+        "href": "https://immo-tonn.de/"
+      },
+      {
+        "title": "TLSG Studio",
+        "description": "Modern digital presence for a music and sound design studio focused on branding, clarity and creative identity.",
+        "imageVariant": "second",
+        "image": "/images/projects/tlsg.png",
+        "href": "https://tlsglabel.com/"
+      },
+      {
+        "title": "Pizzeria",
+        "description": "Modern website for a pizzeria focused on clean structure, visual appeal, and a simple ordering experience. The project is currently still in development.",
+        "imageVariant": "first",
+        "image": "/images/projects/pizzeria.png",
+        "href": "https://pizzalanding-tetl.vercel.app/"
+      },
+      {
+        "title": "Massage Studio",
+        "description": "Calming website for massage services with elegant presentation and trustworthy booking flow.",
+        "imageVariant": "first",
+        "image": "/images/projects/massage.png",
+        "href": "https://massage-landing-swart.vercel.app/#services"
+      },
+      {
+        "title": "Senior Companion Support",
+        "description": "A small and simple landing page for an independent senior companion. The project shows a quickly realizable website solution for a small budget — clear, calm and focused on direct contact.",
+        "imageVariant": "first",
+        "image": "/images/projects/seniorenbegleitung.png",
+        "href": "https://pflege-landing-1.vercel.app/"
+      },
+      {
+        "title": "BeautyTime",
+        "description": "Elegant online presence for a beauty salon in Cologne with premium look, clear offers and strong local impact.",
+        "imageVariant": "second",
+        "image": "/images/projects/beautytime.png",
+        "href": "https://beautylanding1.vercel.app/de/index.html"
+      },
+      {
+        "title": "Werkstatt",
+        "description": "Modern website for an automotive workshop focused on trust, clear communication and professional service presentation.",
+        "imageVariant": "second",
+        "image": "/images/projects/werk.png",
+        "href": "https://auto-service-landing-five.vercel.app/de"
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Let's Start",
+    "title": "Ready to Build Something Strong Together?",
+    "description": "We create websites that look premium, build trust and position your business clearly online.",
+    "primaryButton": "Start Project",
+    "secondaryButton": "Custom Offer"
+  }
+}
