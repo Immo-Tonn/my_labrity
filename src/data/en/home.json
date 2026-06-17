@@ -199,11 +199,11 @@
         "title": "Senior Companion Support",
         "description": "A small and simple landing page for an independent senior companion. The project shows a quickly realizable website solution for a small budget — clear, calm and focused on direct contact.",
         "imageVariant": "first",
-        "image": "/images/projects/seniorenbegleitung_1.png",
+        "image": "/images/projects/seniorenbegleitung.png",
         "href": "https://pflege-landing-1.vercel.app/"
       },
       {
-        "title": "BeautyTime",
+        "title": "Beauty Time",
         "description": "Elegant online presence for a beauty salon in Cologne with premium look, clear offers and strong local impact.",
         "imageVariant": "second",
         "image": "/images/projects/beautytime.png",

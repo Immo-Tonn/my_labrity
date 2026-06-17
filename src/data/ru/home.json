@@ -200,7 +200,7 @@
         "title": "Сопровождение пожилых людей",
         "description": "Небольшой и простой лендинг для самостоятельной помощницы по сопровождению пожилых людей. Проект показывает быстро реализуемое решение для небольшого бюджета — спокойно, понятно и с акцентом на быстрый контакт.",
         "imageVariant": "first",
-        "image": "/images/projects/seniorenbegleitung_1.png",
+        "image": "/images/projects/seniorenbegleitung.png",
         "href": "https://pflege-landing-1.vercel.app/"
       },
       {
