@@ -21,19 +21,21 @@
       "privacyRequired": "Please confirm the privacy policy."
     },
     "result": {
-  "title": "Thank You for Your Request",
+  "title": "Thank you for your request",
   "subtitle": "Your information has been successfully submitted.",
+  "contactTitle": "Contact Information",
 
-  "summaryTitle": "Project Summary",
+  "summaryTitle": "Your Project Request",
 
-  "estimateTitle": "Estimated Project Cost",
+  "estimateTitle": "Estimated Project Budget",
+  "estimateNote": "Based on the information provided, the estimated project scope starts from the amount shown below. The final quotation will be prepared after a detailed analysis of your requirements.",
 
-  "estimateNote": "This estimate is provided for initial guidance only and does not constitute a binding offer. The final project cost will be determined after a detailed consultation and project analysis.",
+  "nextTitle": "What happens next?",
 
-  "nextTitle": "What Happens Next?",
+  "nextText": "We will review your request and usually get back to you within 24 hours. After that, we will discuss your requirements in detail and prepare a personalized proposal.",
 
-  "nextText": "We will review your request and usually contact you within 24 hours. After discussing your requirements in detail, we will prepare a tailored proposal for your project.",
-
+  "downloadPdf": "Download PDF",
+  "estimateFrom": "from",
   "close": "Close Window"
 },
     "questions": [

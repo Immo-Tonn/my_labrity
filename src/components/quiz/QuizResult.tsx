@@ -2,6 +2,7 @@
 
 import { ContactFormData, QuizAnswers } from './quiz.types';
 import { calculateEstimate } from './estimate';
+import { generateQuizPdf } from './pdf';
 
 import { useQuiz } from '@/components/quiz';
 
@@ -23,6 +24,15 @@ export default function QuizResult({
   const formatPrice = (value: number) =>
     new Intl.NumberFormat('de-DE').format(value);
 
+  const downloadPdf = () => {
+    generateQuizPdf({
+      form,
+      answers,
+      estimate,
+      quiz,
+    });
+  };
+
   return (
     <div className="p-8">
       {/* HEADER */}
@@ -39,7 +49,7 @@ export default function QuizResult({
       {/* CONTACT */}
       <div className="mb-8 rounded-2xl border border-[#e7e2d9] bg-white p-6">
         <h3 className="mb-4 text-lg font-medium">
-          {quiz.result.summaryTitle}
+          {quiz.result.contactTitle}
         </h3>
 
         <div className="grid gap-2 text-sm text-gray-700">
@@ -99,8 +109,7 @@ export default function QuizResult({
         </p>
 
         <div className="mb-4 text-4xl font-semibold">
-          {formatPrice(estimate.min)} € –{' '}
-          {formatPrice(estimate.max)} €
+          {quiz.result.estimateFrom} {formatPrice(estimate)} €
         </div>
 
         <p className="text-sm leading-6 text-white/75">
@@ -119,23 +128,45 @@ export default function QuizResult({
         </p>
       </div>
 
-      {/* ACTION */}
-      <button
-        type="button"
-        onClick={closeQuiz}
-        className="
-          w-full
-          rounded-2xl
-          bg-black
-          px-6
-          py-4
-          text-white
-          transition
-          hover:opacity-90
-        "
-      >
-        {quiz.result.close}
-      </button>
+      {/* ACTIONS */}
+      <div className="flex flex-col gap-3">
+        <button
+          type="button"
+          onClick={downloadPdf}
+          className="
+            w-full
+            rounded-2xl
+            border
+            border-black
+            bg-white
+            px-6
+            py-4
+            text-black
+            transition
+            hover:bg-black
+            hover:text-white
+          "
+        >
+          {quiz.result.downloadPdf}
+        </button>
+
+        <button
+          type="button"
+          onClick={closeQuiz}
+          className="
+            w-full
+            rounded-2xl
+            bg-black
+            px-6
+            py-4
+            text-white
+            transition
+            hover:opacity-90
+          "
+        >
+          {quiz.result.close}
+        </button>
+      </div>
     </div>
   );
 }

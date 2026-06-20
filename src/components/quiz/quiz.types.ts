@@ -45,17 +45,25 @@ export type QuizDictionary = {
     title: string;
     subtitle: string;
 
+    pdfDate: string;
+    pdfIntro: string;
+
+    contactTitle: string;
+
     summaryTitle: string;
 
     estimateTitle: string;
     estimateNote: string;
-
+    estimateFrom: string;
     nextTitle: string;
     nextText: string;
 
+    pdfContactTitle: string;
+
+    downloadPdf: string;
+
     close: string;
   };
-
   questions: QuizQuestion[];
 
   modal?: {

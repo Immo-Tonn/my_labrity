@@ -20,20 +20,22 @@
       "privacyLinkLabel": "Datenschutzerklärung",
       "privacyRequired": "Bitte bestätigen Sie die Datenschutzerklärung."
     },
-    "result": {
+   "result": {
   "title": "Vielen Dank für Ihre Anfrage",
   "subtitle": "Ihre Angaben wurden erfolgreich übermittelt.",
+  "contactTitle": "Kontaktdaten",
 
   "summaryTitle": "Ihre Projektanfrage",
 
-  "estimateTitle": "Vorläufige Kostenschätzung",
-
-  "estimateNote": "Diese Einschätzung dient ausschließlich zur ersten Orientierung und stellt kein verbindliches Angebot dar. Der endgültige Aufwand wird nach einer detaillierten Projektanalyse festgelegt.",
+  "estimateTitle": "Empfohlenes Projektbudget",
+  "estimateNote": "Basierend auf Ihren Angaben liegt der voraussichtliche Projektumfang ab dem unten genannten Betrag. Die endgültige Kalkulation erfolgt nach einer detaillierten Analyse Ihrer Anforderungen.",
 
   "nextTitle": "Wie geht es weiter?",
 
   "nextText": "Wir prüfen Ihre Anfrage und melden uns in der Regel innerhalb von 24 Stunden bei Ihnen. Anschließend besprechen wir die Anforderungen im Detail und erstellen ein individuelles Angebot.",
 
+  "downloadPdf": "PDF herunterladen",
+  "estimateFrom": "ab",
   "close": "Fenster schließen"
 },
     "questions": [
