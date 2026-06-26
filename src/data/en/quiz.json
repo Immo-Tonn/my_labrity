@@ -20,6 +20,24 @@
       "privacyLinkLabel": "Privacy Policy",
       "privacyRequired": "Please confirm the privacy policy."
     },
+    "result": {
+  "title": "Thank you for your request",
+  "subtitle": "Your information has been successfully submitted.",
+  "contactTitle": "Contact Information",
+
+  "summaryTitle": "Your Project Request",
+
+  "estimateTitle": "Estimated Project Budget",
+  "estimateNote": "Based on the information provided, the estimated project scope starts from the amount shown below. The final quotation will be prepared after a detailed analysis of your requirements.",
+
+  "nextTitle": "What happens next?",
+
+  "nextText": "We will review your request and usually get back to you within 24 hours. After that, we will discuss your requirements in detail and prepare a personalized proposal.",
+
+  "downloadPdf": "Download PDF",
+  "estimateFrom": "from",
+  "close": "Close Window"
+},
     "questions": [
       {
         "id": "websiteType",
