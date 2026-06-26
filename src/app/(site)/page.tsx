@@ -720,7 +720,7 @@ export default function Home() {
 
           {/* AUDIENCE */}
           <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[140px]">
-            <div className="mx-auto max-w-[980px]">
+            <div className="mx-auto max-w-[1024px]">
               <div className="mx-auto max-w-[860px] text-center">
                 <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
                   {content.audience.kicker}
@@ -745,8 +745,8 @@ export default function Home() {
                       <h3
                         className={`text-center font-tenor text-[22px] leading-[1.02] text-black md:text-[24px] xl:text-[26px] ${
                           index === 3
-                            ? 'mx-auto whitespace-normal xl:max-w-[165px]'
-                            : 'whitespace-nowrap'
+                            // ? 'mx-auto whitespace-normal xl:max-w-[165px]'
+                            // : 'whitespace-nowrap'
                         }`}
                       >
                         {item.title}
@@ -765,8 +765,8 @@ export default function Home() {
           {/* PROJECT CALCULATOR */}
           <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[130px]">
             <div className="mx-auto max-w-[1500px]">
-              <div className="grid overflow-hidden border border-[#e7e2d9] bg-[#f8f6f1] shadow-[0_24px_70px_rgba(0,0,0,0.06)] lg:grid-cols-[0.85fr_1.15fr]">
-                <div className="relative overflow-hidden bg-[#111111] px-7 py-10 text-white md:px-10 md:py-14 xl:px-12 xl:py-16">
+              <div className="grid overflow-hidden border border-[#e7e2d9] bg-[#f8f6f1] shadow-[0_24px_70px_rgba(0,0,0,0.06)] lg:grid-cols-[1fr_1.1fr]">
+                <div className="relative overflow-hidden bg-[#111111] px-7 py-10 text-white md:px-6 md:py-14 xl:px-12 xl:py-16">
                   <p className="font-tenor text-[24px] uppercase tracking-[-0.03em] text-white">
                     LABRITY
                   </p>
