@@ -40,11 +40,7 @@
     "leftDescription": "Быстро проверьте, какое решение для сайта подходит вашему проекту.",
     "button": "Запустить калькулятор",
     "note": "Бесплатно. Персонально. Без обязательств.",
-    "steps": [
-      "Тип проекта",
-      "Объём",
-      "Рекомендация"
-    ]
+    "steps": ["Тип проекта", "Объём", "Рекомендация"]
   },
   "featuredProjects": {
     "kicker": "Избранные проекты",
@@ -199,11 +195,7 @@
     "title": "Посмотрите наши работы",
     "description": "Избранные проекты, которые показывают, как мы соединяем эстетику, стратегию и эффективность в сильное цифровое присутствие premium-уровня.",
     "button": "Смотреть портфолио",
-    "topTags": [
-      "SEO READY",
-      "AI VISIBILITY",
-      "HIGH-END FRONTEND"
-    ],
+    "topTags": ["SEO READY", "AI VISIBILITY", "HIGH-END FRONTEND"],
     "seoBlock": [
       {
         "kicker": "SEO OPTIMIZATION",
@@ -229,11 +221,7 @@
     ],
     "projectLabel": "Website Project",
     "projectButton": "Смотреть проект",
-    "projectTags": [
-      "SEO READY",
-      "AI ОПТИМИЗАЦИЯ",
-      "RESPONSIVE"
-    ],
+    "projectTags": ["SEO READY", "AI ОПТИМИЗАЦИЯ", "RESPONSIVE"],
     "categories": {
       "Immo Tonn": "Недвижимость",
       "TLSG Studio": "Музыкальная индустрия",
@@ -247,11 +235,7 @@
       "kicker": "В разработке",
       "title": "Новые premium-проекты",
       "description": "Другие современные бизнес-сайты, цифровые бренды и эксклюзивные проекты сейчас находятся в разработке.",
-      "tags": [
-        "Brand Websites",
-        "SEO структура",
-        "AI Visibility"
-      ],
+      "tags": ["Brand Websites", "SEO структура", "AI Visibility"],
       "status": "Скоро"
     },
     "items": [

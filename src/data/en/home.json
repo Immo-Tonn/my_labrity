@@ -39,11 +39,7 @@
     "leftDescription": "Quickly check which website solution fits your project.",
     "button": "Start project calculator",
     "note": "Free. Personal. No obligation.",
-    "steps": [
-      "Project type",
-      "Scope",
-      "Recommendation"
-    ]
+    "steps": ["Project type", "Scope", "Recommendation"]
   },
   "featuredProjects": {
     "kicker": "Selected Projects",
@@ -198,11 +194,7 @@
     "title": "Discover Our Work",
     "description": "Selected projects showing how we combine aesthetics, strategy and performance into a premium digital presence.",
     "button": "View Portfolio",
-    "topTags": [
-      "SEO READY",
-      "AI VISIBILITY",
-      "HIGH-END FRONTEND"
-    ],
+    "topTags": ["SEO READY", "AI VISIBILITY", "HIGH-END FRONTEND"],
     "seoBlock": [
       {
         "kicker": "SEO OPTIMIZATION",
@@ -228,11 +220,7 @@
     ],
     "projectLabel": "Website Project",
     "projectButton": "View Project",
-    "projectTags": [
-      "SEO READY",
-      "AI OPTIMIZED",
-      "RESPONSIVE"
-    ],
+    "projectTags": ["SEO READY", "AI OPTIMIZED", "RESPONSIVE"],
     "categories": {
       "Immo Tonn": "Real Estate",
       "TLSG Studio": "Music Industry",
@@ -246,11 +234,7 @@
       "kicker": "In Development",
       "title": "New Premium Projects",
       "description": "More modern business websites, digital brand experiences and exclusive projects are currently in development.",
-      "tags": [
-        "Brand Websites",
-        "SEO Structure",
-        "AI Visibility"
-      ],
+      "tags": ["Brand Websites", "SEO Structure", "AI Visibility"],
       "status": "Stay Tuned"
     },
     "items": [

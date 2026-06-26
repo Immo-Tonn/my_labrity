@@ -745,8 +745,8 @@ export default function Home() {
                       <h3
                         className={`text-center font-tenor text-[22px] leading-[1.02] text-black md:text-[24px] xl:text-[26px] ${
                           index === 3
-                            // ? 'mx-auto whitespace-normal xl:max-w-[165px]'
-                            // : 'whitespace-nowrap'
+                          // ? 'mx-auto whitespace-normal xl:max-w-[165px]'
+                          // : 'whitespace-nowrap'
                         }`}
                       >
                         {item.title}
