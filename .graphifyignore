@@ -1,0 +1,5 @@
+# Игнорируем сгенерированный код Prisma
+src/generated/
+node_modules/
+.next/
+dist/
