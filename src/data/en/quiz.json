@@ -23,6 +23,10 @@
     "result": {
       "title": "Thank you for your request",
       "subtitle": "Your information has been successfully submitted.",
+
+      "pdfDate": "Date:",
+      "pdfIntro": "This document provides an initial overview of your project based on the information you provided.",
+
       "contactTitle": "Contact Information",
 
       "summaryTitle": "Your Project Request",
@@ -33,6 +37,8 @@
       "nextTitle": "What happens next?",
 
       "nextText": "We will review your request and usually get back to you within 24 hours. After that, we will discuss your requirements in detail and prepare a personalized proposal.",
+
+      "pdfContactTitle": "Contact Us",
 
       "downloadPdf": "Download PDF",
       "estimateFrom": "from",

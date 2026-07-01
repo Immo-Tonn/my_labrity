@@ -87,13 +87,13 @@ export const generateQuizPdf = ({
 
   addText(quiz.result.title, 18);
 
-  addText(`${date}`, 11);
+  addText(`${quiz.result.pdfDate} ${date}`, 11);
 
   y += 5;
 
   // ================= INTRO =================
 
-  addText(quiz.result.subtitle, 12);
+  addText(quiz.result.pdfIntro, 12);
 
   y += 5;
 
@@ -165,7 +165,7 @@ export const generateQuizPdf = ({
 
   // ================= CONTACT =================
 
-  addText(quiz.result.contactTitle, 15);
+  addText(quiz.result.pdfContactTitle, 15);
 
   addText('E-Mail: labrity@web.de');
 
