@@ -1,140 +1,258 @@
 import { QuizAnswers } from './quiz.types';
 
+const websiteTypeMap: Record<string, string> = {
+  'Einfache Präsentationsseite': 'presentation',
+  'Simple presentation website': 'presentation',
+  'Простой презентационный сайт': 'presentation',
+  'Простий презентаційний сайт': 'presentation',
+
+  Unternehmenswebsite: 'business',
+  'Business website': 'business',
+  'Сайт для бизнеса': 'business',
+  'Сайт для бізнесу': 'business',
+
+  Onlineshop: 'shop',
+  'Online store': 'shop',
+  'Интернет-магазин': 'shop',
+  'Інтернет-магазин': 'shop',
+
+  'Individuelle Lösung': 'custom',
+  'Custom solution': 'custom',
+  'Индивидуальное решение': 'custom',
+  'Індивідуальне рішення': 'custom',
+
+  'Nicht sicher': 'unknown',
+  'Not sure': 'unknown',
+  'Не уверен': 'unknown',
+  'Не впевнений': 'unknown',
+};
+
+const clientTypeMap: Record<string, string> = {
+  Privatperson: 'private',
+  'Private person': 'private',
+  'Частное лицо': 'private',
+  'Приватна особа': 'private',
+
+  'Freelancer / Selbstständig': 'freelancer',
+  'Freelancer / Self-employed': 'freelancer',
+  'Фрилансер / Самозанятый': 'freelancer',
+  'Фрилансер / Самозайнятий': 'freelancer',
+
+  Kleinunternehmen: 'smallBusiness',
+  'Small business': 'smallBusiness',
+  'Малый бизнес': 'smallBusiness',
+  'Малий бізнес': 'smallBusiness',
+
+  Unternehmen: 'company',
+  Company: 'company',
+  Компания: 'company',
+  Компанія: 'company',
+
+  'Nicht sicher': 'unknown',
+  'Not sure': 'unknown',
+  'Не уверен': 'unknown',
+  'Не впевнений': 'unknown',
+};
+
+const contentMap: Record<string, string> = {
+  'Ja, alles vorhanden': 'ready',
+  'Yes, everything is ready': 'ready',
+  'Да, всё готово': 'ready',
+  'Так, усе готово': 'ready',
+
+  'Teilweise vorhanden': 'partial',
+  'Partially ready': 'partial',
+  'Частично готово': 'partial',
+  'Частково готово': 'partial',
+
+  'Benötige Unterstützung bei Inhalten': 'needHelp',
+  'Need help with content': 'needHelp',
+  'Нужна помощь с контентом': 'needHelp',
+  'Потрібна допомога з контентом': 'needHelp',
+
+  'Nicht sicher': 'unknown',
+  'Not sure': 'unknown',
+  'Не уверен': 'unknown',
+  'Не впевнений': 'unknown',
+};
+
+const languagesMap: Record<string, string> = {
+  'Nur eine Sprache': 'one',
+  'One language': 'one',
+  'Один язык': 'one',
+  'Одна мова': 'one',
+
+  'Zwei Sprachen': 'two',
+  'Two languages': 'two',
+  'Два языка': 'two',
+  'Дві мови': 'two',
+
+  'Drei oder mehr Sprachen': 'threePlus',
+  'Three or more languages': 'threePlus',
+  'Три и более языков': 'threePlus',
+  'Три або більше мов': 'threePlus',
+
+  'Nicht sicher': 'unknown',
+  'Not sure': 'unknown',
+  'Не уверен': 'unknown',
+  'Не впевнений': 'unknown',
+};
+
+const designMap: Record<string, string> = {
+  'Design bereits vorhanden': 'existing',
+  'Design already exists': 'existing',
+  'Дизайн уже есть': 'existing',
+  'Дизайн уже є': 'existing',
+
+  'Neues Design erforderlich': 'new',
+  'Need a new design': 'new',
+  'Нужен новый дизайн': 'new',
+  'Потрібен новий дизайн': 'new',
+
+  'Bestehende Website modernisieren': 'redesign',
+  'Redesign existing website': 'redesign',
+  'Обновление существующего сайта': 'redesign',
+  'Оновлення існуючого сайту': 'redesign',
+
+  'Nicht sicher': 'unknown',
+  'Not sure': 'unknown',
+  'Не уверен': 'unknown',
+  'Не впевнений': 'unknown',
+};
+
+const featureMap: Record<string, string> = {
+  Kontaktformular: 'contact',
+  'Contact form': 'contact',
+  'Контактная форма': 'contact',
+  'Контактна форма': 'contact',
+
+  'Online-Terminbuchung': 'booking',
+  'Online appointment booking': 'booking',
+  'Онлайн-запись': 'booking',
+  'Онлайн-запис': 'booking',
+
+  Preisrechner: 'calculator',
+  'Price calculator': 'calculator',
+  'Калькулятор стоимости': 'calculator',
+  'Калькулятор вартості': 'calculator',
+
+  'Kundendaten verwalten': 'crm',
+  'Customer management': 'crm',
+  'Управление клиентами': 'crm',
+  'Управління клієнтами': 'crm',
+
+  'Verbindung mit anderen Systemen': 'integrations',
+  'Connection with other services': 'integrations',
+  'Подключение сторонних сервисов': 'integrations',
+  'Підключення інших сервісів': 'integrations',
+
+  'Persönlicher Kundenbereich': 'account',
+  'Client account area': 'account',
+  'Личный кабинет клиента': 'account',
+  'Особистий кабінет клієнта': 'account',
+
+  'Nicht sicher': 'unknown',
+  'Not sure': 'unknown',
+  'Не уверен': 'unknown',
+  'Не впевнений': 'unknown',
+};
+
 export const calculateEstimate = (answers: QuizAnswers): number => {
   let total = 0;
 
-  const websiteType = answers.websiteType?.[0];
-  const clientType = answers.clientType?.[0];
-  const content = answers.content?.[0];
-  const languages = answers.languages?.[0];
-  const design = answers.design?.[0];
-  const features = answers.features || [];
+  const websiteType = websiteTypeMap[answers.websiteType?.[0] ?? ''];
+  const clientType = clientTypeMap[answers.clientType?.[0] ?? ''];
+  const content = contentMap[answers.content?.[0] ?? ''];
+  const languages = languagesMap[answers.languages?.[0] ?? ''];
+  const design = designMap[answers.design?.[0] ?? ''];
+  const features = (answers.features || []).map(
+    feature => featureMap[feature] ?? feature,
+  );
 
-  // WEBSITE TYPE (BASE)
+  // WEBSITE TYPE
   switch (websiteType) {
-    case 'Einfache Präsentationsseite':
+    case 'presentation':
       total += 999;
       break;
-
-    case 'Unternehmenswebsite':
+    case 'business':
       total += 1900;
       break;
-
-    case 'Onlineshop':
+    case 'shop':
+    case 'custom':
       total += 8900;
       break;
-
-    case 'Individuelle Lösung':
-      total += 8900;
-      break;
-
-    case 'Nicht sicher':
-      total += 999; // базовая стоимость
+    case 'unknown':
+      total += 999;
       break;
   }
 
   // CLIENT TYPE
   switch (clientType) {
-    case 'Freelancer / Selbstständig':
+    case 'freelancer':
       total += 300;
       break;
-
-    case 'Kleinunternehmen':
+    case 'smallBusiness':
       total += 700;
       break;
-
-    case 'Unternehmen':
+    case 'company':
       total += 1500;
-      break;
-
-    case 'Nicht sicher':
-    default:
-      total += 0;
       break;
   }
 
   // CONTENT
   switch (content) {
-    case 'Teilweise vorhanden':
+    case 'partial':
       total += 500;
       break;
-
-    case 'Benötige Unterstützung bei Inhalten':
+    case 'needHelp':
       total += 1200;
-      break;
-
-    case 'Nicht sicher':
-    default:
-      total += 0;
       break;
   }
 
   // LANGUAGES
   switch (languages) {
-    case 'Zwei Sprachen':
+    case 'two':
       total += 900;
       break;
-
-    case 'Drei oder mehr Sprachen':
+    case 'threePlus':
       total += 1800;
-      break;
-
-    case 'Nicht sicher':
-    default:
-      total += 0;
       break;
   }
 
   // DESIGN
   switch (design) {
-    case 'Neues Design erforderlich':
+    case 'new':
       total += 1500;
       break;
-
-    case 'Bestehende Website modernisieren':
+    case 'redesign':
       total += 900;
-      break;
-
-    case 'Nicht sicher':
-    default:
-      total += 0;
       break;
   }
 
   // FEATURES
   features.forEach(feature => {
     switch (feature) {
-      case 'Kontaktformular':
+      case 'contact':
         total += 200;
         break;
-
-      case 'Online-Terminbuchung':
+      case 'booking':
         total += 800;
         break;
-
-      case 'Preisrechner':
+      case 'calculator':
         total += 1500;
         break;
-
-      case 'Kundendaten verwalten':
+      case 'crm':
         total += 2000;
         break;
-
-      case 'Verbindung mit anderen Systemen':
+      case 'integrations':
         total += 2500;
         break;
-
-      case 'Persönlicher Kundenbereich':
+      case 'account':
         total += 3000;
-        break;
-
-      default:
-        total += 0;
         break;
     }
   });
 
-  // MINIMUM SAFETY
   if (total < 999) {
     total = 999;
   }
