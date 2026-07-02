@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BadgeCheck, Gem, PanelsTopLeft, Telescope } from 'lucide-react';
@@ -126,49 +126,55 @@ type HomeData = {
   };
 };
 
-function AnimatedStat({ value }: { value: string }) {
-  const [count, setCount] = useState(1);
+function useSyncedStatTick(targets: number[]) {
+  const [tick, setTick] = useState(1);
+  const maxTarget = Math.max(1, ...targets);
 
   useEffect(() => {
-    const target = Number(value.match(/\d+/)?.[0] || 1);
-
     let current = 1;
     let intervalId: number;
     let timeoutId: number;
 
-    const speed = 100;
-    const pause = 1800;
+    const speed = 140;
+    const pause = 2000;
 
     const startCounting = () => {
       intervalId = window.setInterval(() => {
         current += 1;
 
-        if (current >= target) {
-          current = target;
-          setCount(current);
+        if (current >= maxTarget) {
+          current = maxTarget;
+          setTick(current);
           window.clearInterval(intervalId);
 
           timeoutId = window.setTimeout(() => {
             current = 1;
-            setCount(current);
+            setTick(current);
             startCounting();
           }, pause);
 
           return;
         }
 
-        setCount(current);
+        setTick(current);
       }, speed);
     };
 
-    setCount(1);
+    setTick(1);
     startCounting();
 
     return () => {
       window.clearInterval(intervalId);
       window.clearTimeout(timeoutId);
     };
-  }, [value]);
+  }, [maxTarget]);
+
+  return tick;
+}
+
+function AnimatedStat({ value, tick }: { value: string; tick: number }) {
+  const target = Number(value.match(/\d+/)?.[0] || 1);
+  const count = Math.min(tick, target);
 
   if (value.includes('%')) return <>{count}%</>;
   if (value.includes('/')) return <>{count}/7</>;
@@ -428,6 +434,13 @@ export default function Home() {
   const { lang } = useLanguage();
   const { openQuiz } = useQuiz();
   const [home, setHome] = useState<HomeData | null>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.4;
+    }
+  }, []);
 
   useEffect(() => {
     const loadData = async () => {
@@ -519,6 +532,15 @@ export default function Home() {
 
   const content = useMemo(() => home ?? fallbackHomeData, [home]);
 
+  const statsTargets = useMemo(
+    () =>
+      content.stats.items.map(item =>
+        Number(item.value.match(/\d+/)?.[0] || 1),
+      ),
+    [content.stats.items],
+  );
+  const statsTick = useSyncedStatTick(statsTargets);
+
   useEffect(() => {
     const hash = window.location.hash;
 
@@ -549,9 +571,20 @@ export default function Home() {
       <SeasonalHearts />
 
       <main className="min-h-screen bg-[#f8f6f1]">
-        <div className="container">
-          {/* HERO */}
-          <section className="flex min-h-[calc(100vh-100px)] flex-col pb-[60px] pt-[150px] md:min-h-[calc(100vh-120px)] md:pb-[80px] md:pt-[165px] xl:min-h-screen xl:pb-[110px] xl:pt-[210px]">
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="pointer-events-none fixed inset-0 z-0 h-full w-full object-cover opacity-20"
+        >
+          <source src="/video/hero.mp4" type="video/mp4" />
+        </video>
+
+        {/* HERO */}
+        <section className="relative z-10 overflow-hidden">
+          <div className="container flex min-h-[calc(100vh-100px)] flex-col pb-[60px] pt-[150px] md:min-h-[calc(100vh-120px)] md:pb-[80px] md:pt-[165px] xl:min-h-screen xl:pb-[110px] xl:pt-[210px]">
             <div className="flex flex-1 flex-col gap-16 xl:flex-row xl:items-center xl:justify-between">
               <div className="w-full max-w-[700px]">
                 <p className="mb-6 font-montserrat text-[11px] uppercase tracking-[0.34em] text-neutral-400 md:text-xs">
@@ -609,8 +642,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
+        <div className="container relative z-10">
           {/* FEATURED PROJECTS */}
           <section className="border-t border-[#e7e2d9] py-[64px] md:py-[82px] xl:py-[96px]">
             <div className="mb-9 flex flex-col gap-6 md:mb-11 md:flex-row md:items-end md:justify-between">
@@ -913,7 +948,7 @@ export default function Home() {
                   className="px-4 py-6 text-center"
                 >
                   <p className="font-tenor text-[56px] leading-none text-black md:text-[72px] xl:text-[96px]">
-                    <AnimatedStat value={item.value} />
+                    <AnimatedStat value={item.value} tick={statsTick} />
                   </p>
 
                   <p className="mt-4 font-montserrat text-sm font-medium text-black md:text-base">
