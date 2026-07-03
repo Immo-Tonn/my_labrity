@@ -133,7 +133,7 @@ export const generateQuizPdf = ({
 
   const estimateText = `${quiz.result.estimateFrom} ${estimate.toLocaleString()} €`;
 
-  const estimateHeight = 20 + 15 + 20;
+  const estimateHeight = 55;
 
   ensureSpace(estimateHeight);
 
@@ -147,7 +147,21 @@ export const generateQuizPdf = ({
 
   addText(estimateText, 26);
 
-  y += 5;
+  addText(quiz.result.deploymentNote, 9);
+
+  y += 8;
+
+  // ================= LEGAL =================
+
+  const legalHeight = 40;
+
+  ensureSpace(legalHeight);
+
+  addText(quiz.result.legalTitle, 15);
+
+  addText(quiz.result.legalText, 11);
+
+  y += 6;
 
   // ================= NEXT STEP =================
 

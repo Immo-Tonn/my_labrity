@@ -172,60 +172,60 @@ export const calculateEstimate = (answers: QuizAnswers): number => {
   // WEBSITE TYPE
   switch (websiteType) {
     case 'presentation':
-      total += 999;
+      total += 400;
       break;
     case 'business':
-      total += 1900;
+      total += 1000;
       break;
     case 'shop':
     case 'custom':
-      total += 8900;
+      total += 1100;
       break;
     case 'unknown':
-      total += 999;
+      total += 400;
       break;
   }
 
   // CLIENT TYPE
   switch (clientType) {
     case 'freelancer':
-      total += 300;
+      total += 0;
       break;
     case 'smallBusiness':
-      total += 700;
+      total += 0;
       break;
     case 'company':
-      total += 1500;
+      total += 0;
       break;
   }
 
   // CONTENT
   switch (content) {
     case 'partial':
-      total += 500;
+      total += 50;
       break;
     case 'needHelp':
-      total += 1200;
+      total += 150;
       break;
   }
 
   // LANGUAGES
   switch (languages) {
     case 'two':
-      total += 900;
+      total += 150;
       break;
     case 'threePlus':
-      total += 1800;
+      total += 200;
       break;
   }
 
   // DESIGN
   switch (design) {
     case 'new':
-      total += 1500;
+      total += 300;
       break;
     case 'redesign':
-      total += 900;
+      total += 250;
       break;
   }
 
@@ -233,28 +233,28 @@ export const calculateEstimate = (answers: QuizAnswers): number => {
   features.forEach(feature => {
     switch (feature) {
       case 'contact':
-        total += 200;
+        total += 100;
         break;
       case 'booking':
-        total += 800;
+        total += 300;
         break;
       case 'calculator':
-        total += 1500;
+        total += 300;
         break;
-      case 'crm':
-        total += 2000;
-        break;
+      // case 'crm':
+      //   total += 2000;
+      //   break;
       case 'integrations':
-        total += 2500;
+        total += 200;
         break;
       case 'account':
-        total += 3000;
+        total += 1000;
         break;
     }
   });
 
-  if (total < 999) {
-    total = 999;
+  if (total < 400) {
+    total = 400;
   }
 
   return Math.round(total / 100) * 100;
