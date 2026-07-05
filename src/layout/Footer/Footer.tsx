@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 
-import { Logo, ModalPolicy, FooterItem } from '@/components/ui';
+import { Logo, FooterItem } from '@/components/ui';
 import { ModalImpressum } from '@/components/ui/ModalImpressum';
 
 import { useLanguage } from '@/utils/LanguageContext';
@@ -55,7 +56,12 @@ export const Footer: React.FC = () => {
 
           <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between xl:flex-1 xl:justify-end xl:gap-6">
             <div className="flex items-center gap-3">
-              <ModalPolicy variant="footer" nameBtn={data.footerLabelPolicy} />
+              <Link
+                href="/privacy"
+                className="text-[12px] uppercase tracking-[0.14em] text-[#18352b]/55 transition duration-300 hover:text-[#18352b] smOnly:mb-3"
+              >
+                {data.footerLabelPolicy}
+              </Link>
 
               <span className="text-[#18352b]/20">|</span>
 
