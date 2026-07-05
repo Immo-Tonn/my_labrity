@@ -548,7 +548,17 @@ export default function Home() {
 
       <SeasonalHearts />
 
-      <main className="min-h-screen bg-[#f8f6f1]">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="fixed inset-0 -z-10 h-full w-full object-cover"
+      >
+        <source src="/hero.mp4" type="video/mp4" />
+      </video>
+
+      <main className="relative min-h-screen">
         <div className="container">
           {/* HERO */}
           <section className="flex min-h-[calc(100vh-100px)] flex-col pb-[60px] pt-[150px] md:min-h-[calc(100vh-120px)] md:pb-[80px] md:pt-[165px] xl:min-h-screen xl:pb-[110px] xl:pt-[210px]">
