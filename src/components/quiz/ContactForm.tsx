@@ -232,7 +232,7 @@ export default function ContactForm({ quiz, answers }: Props) {
               href="/privacy"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-5 mr-auto mb-6 block cursor-pointer font-montserrat font-normal not-italic text-[12px] leading-4 tracking-[0.2px] text-accent transition duration-300 hover:text-hover sm:ml-[45px] sm:inline-block sm:relative sm:top-[-16px] md:static md:ml-5 md:block"
+              className="mb-6 ml-5 mr-auto block cursor-pointer font-montserrat text-[12px] font-normal not-italic leading-4 tracking-[0.2px] text-accent transition duration-300 hover:text-hover sm:relative sm:top-[-16px] sm:ml-[45px] sm:inline-block md:static md:ml-5 md:block"
             >
               {quiz.form.privacyLinkLabel}
             </Link>
