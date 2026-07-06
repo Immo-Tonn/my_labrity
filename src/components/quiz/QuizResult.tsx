@@ -12,11 +12,7 @@ type Props = {
   form: ContactFormData;
 };
 
-export default function QuizResult({
-  quiz,
-  answers,
-  form,
-}: Props) {
+export default function QuizResult({ quiz, answers, form }: Props) {
   const { closeQuiz } = useQuiz();
 
   const estimate = calculateEstimate(answers);
@@ -37,49 +33,37 @@ export default function QuizResult({
     <div className="p-8">
       {/* HEADER */}
       <div className="mb-10">
-        <h2 className="mb-3 text-3xl">
-          {quiz.result.title}
-        </h2>
+        <h2 className="mb-3 text-3xl">{quiz.result.title}</h2>
 
-        <p className="text-gray-600">
-          {quiz.result.subtitle}
-        </p>
+        <p className="text-gray-600">{quiz.result.subtitle}</p>
       </div>
 
       {/* CONTACT */}
       <div className="mb-8 rounded-2xl border border-[#e7e2d9] bg-white p-6">
-        <h3 className="mb-4 text-lg font-medium">
-          {quiz.result.contactTitle}
-        </h3>
+        <h3 className="mb-4 text-lg font-medium">{quiz.result.contactTitle}</h3>
 
         <div className="grid gap-2 text-sm text-gray-700">
           <p>
-            <strong>{quiz.form.firstName}:</strong>{' '}
-            {form.firstName}
+            <strong>{quiz.form.firstName}:</strong> {form.firstName}
           </p>
 
           <p>
-            <strong>{quiz.form.lastName}:</strong>{' '}
-            {form.lastName}
+            <strong>{quiz.form.lastName}:</strong> {form.lastName}
           </p>
 
           <p>
-            <strong>{quiz.form.phone}:</strong>{' '}
-            {form.phone}
+            <strong>{quiz.form.phone}:</strong> {form.phone}
           </p>
 
           <p>
-            <strong>{quiz.form.email}:</strong>{' '}
-            {form.email}
+            <strong>{quiz.form.email}:</strong> {form.email}
           </p>
         </div>
       </div>
 
       {/* ANSWERS */}
       <div className="mb-8 rounded-2xl border border-[#e7e2d9] bg-white p-6">
-        <h3 className="mb-5 text-lg font-medium">
-          {quiz.result.summaryTitle}
-        </h3>
+        <h3 className="mb-5 text-lg font-medium">{quiz.result.summaryTitle}</h3>
 
         <div className="grid gap-5">
           {quiz.questions.map((question: any) => {
@@ -87,14 +71,10 @@ export default function QuizResult({
 
             return (
               <div key={question.id}>
-                <p className="mb-2 font-medium">
-                  {question.title}
-                </p>
+                <p className="mb-2 font-medium">{question.title}</p>
 
                 <p className="text-sm text-gray-600">
-                  {selected.length
-                    ? selected.join(', ')
-                    : '-'}
+                  {selected.length ? selected.join(', ') : '-'}
                 </p>
               </div>
             );
@@ -115,13 +95,26 @@ export default function QuizResult({
         <p className="text-sm leading-6 text-white/75">
           {quiz.result.estimateNote}
         </p>
+
+        <p className="mt-4 text-xs leading-5 text-white/55">
+          {quiz.result.deploymentNote}
+        </p>
+      </div>
+
+      {/* LEGAL */}
+      <div className="mb-8 rounded-2xl border border-[#e7e2d9] bg-[#faf8f4] p-6">
+        <h3 className="mb-3 text-xl font-medium">
+          {quiz.result.legalTitle}
+        </h3>
+
+        <p className="leading-7 text-gray-700">
+          {quiz.result.legalText}
+        </p>
       </div>
 
       {/* NEXT STEPS */}
       <div className="mb-10 rounded-2xl border border-[#e7e2d9] bg-white p-6">
-        <h3 className="mb-3 text-lg font-medium">
-          {quiz.result.nextTitle}
-        </h3>
+        <h3 className="mb-3 text-lg font-medium">{quiz.result.nextTitle}</h3>
 
         <p className="text-sm leading-7 text-gray-600">
           {quiz.result.nextText}
