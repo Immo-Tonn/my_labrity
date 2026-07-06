@@ -389,11 +389,25 @@ const fallbackHomeData: HomeData = {
         href: 'https://massage-landing-swart.vercel.app/#services',
       },
       {
+        title: 'Alltagsbegleitung für Senioren',
+        description:
+          'Eine kleine und einfache Landingpage für eine selbstständige Alltagsbegleiterin. Das Projekt zeigt eine schnell realisierbare Website-Lösung für ein kleines Budget — klar, ruhig und auf direkte Kontaktaufnahme ausgerichtet.',
+        imageVariant: 'first',
+        href: 'https://pflege-landing-1.vercel.app/',
+      },
+      {
         title: 'BeautyTime',
         description:
           'Eleganter Online-Auftritt für einen Beauty-Salon mit Premium-Look, klarer Angebotsstruktur und starker lokaler Wirkung.',
         imageVariant: 'second',
-        href: 'https://beautylanding1.vercel.app/ru/index.html',
+        href: 'https://beautylanding1.vercel.app/de/index.html',
+      },
+      {
+        title: 'Werkstatt',
+        description:
+          'Moderner Webauftritt für eine KFZ-Werkstatt mit Fokus auf Vertrauen, klare Kommunikation und professionelle Service-Präsentation.',
+        imageVariant: 'second',
+        href: 'https://auto-service-landing-five.vercel.app/de',
       },
     ],
   },
@@ -525,6 +539,7 @@ export default function Home() {
 
     return () => clearTimeout(timer);
   }, []);
+
   return (
     <>
       <Preloader />
@@ -724,15 +739,21 @@ export default function Home() {
                 {content.audience.items.map((item, index) => (
                   <div
                     key={`${item.title}-${index}`}
-                    className="flex min-h-[230px] flex-col justify-between border border-[#e7e2d9] bg-white px-5 py-8 text-center shadow-[0_10px_28px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:shadow-[0_18px_40px_rgba(0,0,0,0.05)] md:min-h-[240px] xl:min-h-[250px]"
+                    className="flex min-h-[220px] flex-col justify-between border border-[#e7e2d9] bg-white px-4 py-8 text-center shadow-[0_10px_28px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:shadow-[0_18px_40px_rgba(0,0,0,0.05)] md:min-h-[230px] xl:min-h-[240px]"
                   >
-                    <div className="flex min-h-[76px] items-center justify-center">
-                      <h3 className="mx-auto max-w-[210px] break-words text-center font-tenor text-[22px] leading-[1.08] text-black md:max-w-[230px] md:text-[24px] xl:max-w-[220px] xl:text-[26px]">
+                    <div className="flex min-h-[64px] items-center justify-center md:min-h-[68px] xl:min-h-[72px]">
+                      <h3
+                        className={`text-center font-tenor text-[22px] leading-[1.02] text-black md:text-[24px] xl:text-[26px] ${
+                          index === 3
+                            ? 'mx-auto whitespace-normal xl:max-w-[165px]'
+                            : 'whitespace-nowrap'
+                        }`}
+                      >
                         {item.title}
                       </h3>
                     </div>
 
-                    <p className="mt-5 text-center font-montserrat text-sm leading-6 text-neutral-600">
+                    <p className="mt-4 text-center font-montserrat text-sm leading-6 text-neutral-600">
                       {item.description}
                     </p>
                   </div>
@@ -744,7 +765,7 @@ export default function Home() {
           {/* PROJECT CALCULATOR */}
           <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[130px]">
             <div className="mx-auto max-w-[1500px]">
-              <div className="grid overflow-hidden border border-[#e7e2d9] bg-[#f8f6f1] shadow-[0_24px_70px_rgba(0,0,0,0.06)] xl:grid-cols-[0.85fr_1.15fr]">
+              <div className="grid overflow-hidden border border-[#e7e2d9] bg-[#f8f6f1] shadow-[0_24px_70px_rgba(0,0,0,0.06)] lg:grid-cols-[0.85fr_1.15fr]">
                 <div className="relative overflow-hidden bg-[#111111] px-7 py-10 text-white md:px-10 md:py-14 xl:px-12 xl:py-16">
                   <p className="font-tenor text-[24px] uppercase tracking-[-0.03em] text-white">
                     LABRITY
@@ -822,6 +843,7 @@ export default function Home() {
               </div>
             </div>
           </section>
+
           {/* DIFFERENCES */}
           <section className="border-t border-[#e7e2d9] py-[88px] md:py-[108px] xl:py-[124px]">
             <div className="mx-auto max-w-[860px] text-center">

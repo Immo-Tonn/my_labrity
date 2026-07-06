@@ -1,11 +1,15 @@
 'use client';
 
-import { useEffect, useState, type ChangeEvent } from 'react';
+import { useState } from 'react';
 
 import { sendMessage } from '@/api/telegram';
-import { useQuiz } from '@/components/quiz';
 
 import { ContactFormData, QuizAnswers } from './quiz.types';
+
+import { useQuiz } from '@/components/quiz';
+import { ModalPolicy } from '@/components/ui';
+
+import QuizResult from './QuizResult';
 
 type Props = {
   quiz: any;
@@ -16,30 +20,33 @@ export default function ContactForm({ quiz, answers }: Props) {
   const { closeQuiz } = useQuiz();
 
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState('');
+  const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
 
-  const [errors, setErrors] = useState<Partial<ContactFormData>>({});
+  const [errors, setErrors] = useState<
+    Partial<Record<keyof ContactFormData, string>>
+  >({});
 
   const [form, setForm] = useState<ContactFormData>({
     firstName: '',
     lastName: '',
     phone: '',
     email: '',
+    privacy: false,
   });
 
-  useEffect(() => {
-    if (!success) return;
-
-    const timeout = setTimeout(() => {
-      closeQuiz();
-    }, 5000);
-
-    return () => clearTimeout(timeout);
-  }, [success, closeQuiz]);
+  if (submitted) {
+    return (
+      <QuizResult
+        quiz={quiz}
+        answers={answers}
+        form={form}
+      />
+    );
+  }
 
   const validate = () => {
-    const nextErrors: Partial<ContactFormData> = {};
+    const nextErrors: Partial<Record<keyof ContactFormData, string>> = {};
 
     if (!form.firstName.trim()) {
       nextErrors.firstName = quiz.form.required;
@@ -61,6 +68,10 @@ export default function ContactForm({ quiz, answers }: Props) {
       nextErrors.phone = quiz.form.invalidPhone;
     }
 
+    if (!form.privacy) {
+      nextErrors.privacy = quiz.form.privacyRequired;
+    }
+
     setErrors(nextErrors);
 
     return !Object.keys(nextErrors).length;
@@ -70,9 +81,10 @@ export default function ContactForm({ quiz, answers }: Props) {
     return quiz.questions
       .map((question: any, index: number) => {
         const selected = answers[question.id] || [];
+
         const values = selected.length ? selected.join('\n') : '-';
 
-        return [`${index + 1}. ${question.title}`, values].join('\n');
+        return [`${index + 1}. ${question.id}`, values].join('\n');
       })
       .join('\n\n');
   };
@@ -109,7 +121,8 @@ export default function ContactForm({ quiz, answers }: Props) {
 
     try {
       await sendMessage(buildMessage());
-      setSuccess(quiz.form.success);
+
+      setSubmitted(true);
     } catch {
       setError(quiz.form.error);
     } finally {
@@ -119,66 +132,51 @@ export default function ContactForm({ quiz, answers }: Props) {
 
   const change =
     (field: keyof ContactFormData) =>
-    (event: ChangeEvent<HTMLInputElement>) => {
+    (e: React.ChangeEvent<HTMLInputElement>) => {
       setForm(prev => ({
         ...prev,
-        [field]: event.target.value,
+        [field]: e.target.value,
       }));
 
-      setErrors(prev => ({
-        ...prev,
-        [field]: '',
-      }));
+      if (errors[field]) {
+        setErrors(prev => ({
+          ...prev,
+          [field]: undefined,
+        }));
+      }
     };
 
   const inputClass = `
     w-full
-    border-0
-    border-b
-    border-[#d8d1c6]
-    bg-transparent
-    px-0
+    rounded-2xl
+    border
+    border-[#e7e2d9]
+    px-5
     py-4
-    font-montserrat
-    text-[14px]
-    text-black
+    text-base
     outline-none
-    transition
-    duration-300
-    placeholder:text-neutral-400
+    transition-all
     focus:border-black
   `;
 
   const errorClass = `
     mt-2
-    font-montserrat
-    text-[12px]
-    leading-5
+    text-sm
     text-red-500
   `;
 
   return (
-    <div className="w-full">
-      <div className="mb-10">
-        <p className="mb-5 font-montserrat text-[11px] font-medium uppercase tracking-[0.32em] text-black/40">
-          {quiz.form.kicker || 'Kontakt'}
-        </p>
+    <div className="p-8">
+      <h2 className="mb-2 text-3xl">
+        {quiz.form.title}
+      </h2>
 
-        <h2 className="max-w-[720px] font-tenor text-[38px] leading-[1] tracking-[-0.04em] text-black md:text-[56px]">
-          {quiz.form.title}
-        </h2>
+      <p className="mb-8 text-sm text-gray-500">
+        {quiz.form.description}
+      </p>
 
-        <p className="mt-5 max-w-[620px] font-montserrat text-[14px] leading-7 text-neutral-500 md:text-[16px]">
-          {quiz.form.description}
-        </p>
-      </div>
-
-      <div className="grid gap-x-8 gap-y-5 md:grid-cols-2">
+      <div className="grid gap-5">
         <div>
-          <label className="font-montserrat text-[10px] font-medium uppercase tracking-[0.24em] text-black/35">
-            {quiz.form.firstName}
-          </label>
-
           <input
             value={form.firstName}
             onChange={change('firstName')}
@@ -186,14 +184,14 @@ export default function ContactForm({ quiz, answers }: Props) {
             className={inputClass}
           />
 
-          {errors.firstName && <p className={errorClass}>{errors.firstName}</p>}
+          {errors.firstName && (
+            <p className={errorClass}>
+              {errors.firstName}
+            </p>
+          )}
         </div>
 
         <div>
-          <label className="font-montserrat text-[10px] font-medium uppercase tracking-[0.24em] text-black/35">
-            {quiz.form.lastName}
-          </label>
-
           <input
             value={form.lastName}
             onChange={change('lastName')}
@@ -201,14 +199,14 @@ export default function ContactForm({ quiz, answers }: Props) {
             className={inputClass}
           />
 
-          {errors.lastName && <p className={errorClass}>{errors.lastName}</p>}
+          {errors.lastName && (
+            <p className={errorClass}>
+              {errors.lastName}
+            </p>
+          )}
         </div>
 
         <div>
-          <label className="font-montserrat text-[10px] font-medium uppercase tracking-[0.24em] text-black/35">
-            {quiz.form.phone}
-          </label>
-
           <input
             value={form.phone}
             onChange={change('phone')}
@@ -216,14 +214,14 @@ export default function ContactForm({ quiz, answers }: Props) {
             className={inputClass}
           />
 
-          {errors.phone && <p className={errorClass}>{errors.phone}</p>}
+          {errors.phone && (
+            <p className={errorClass}>
+              {errors.phone}
+            </p>
+          )}
         </div>
 
         <div>
-          <label className="font-montserrat text-[10px] font-medium uppercase tracking-[0.24em] text-black/35">
-            {quiz.form.email}
-          </label>
-
           <input
             value={form.email}
             onChange={change('email')}
@@ -231,53 +229,70 @@ export default function ContactForm({ quiz, answers }: Props) {
             className={inputClass}
           />
 
-          {errors.email && <p className={errorClass}>{errors.email}</p>}
+          {errors.email && (
+            <p className={errorClass}>
+              {errors.email}
+            </p>
+          )}
         </div>
       </div>
 
+      <div className="mt-5">
+        <label className="flex items-start gap-3 text-sm leading-6 text-gray-600">
+          <input
+            type="checkbox"
+            checked={form.privacy}
+            onChange={e => {
+              setForm(prev => ({
+                ...prev,
+                privacy: e.target.checked,
+              }));
+
+              setErrors(prev => ({
+                ...prev,
+                privacy: undefined,
+              }));
+            }}
+            className="mt-1 h-4 w-4 border border-[#e7e2d9]"
+          />
+
+          <span>
+            {quiz.form.privacyLabel}
+            <ModalPolicy
+              variant="form"
+              nameBtn={quiz.form.privacyLinkLabel}
+            />
+          </span>
+        </label>
+
+        {errors.privacy && (
+          <p className={errorClass}>
+            {errors.privacy}
+          </p>
+        )}
+      </div>
+
       <button
-        type="button"
-        disabled={loading || Boolean(success)}
+        disabled={loading}
         onClick={submit}
         className="
-          mt-10
-          inline-flex
-          min-h-[56px]
+          mt-8
           w-full
-          items-center
-          justify-center
-          border
-          border-black
+          rounded-2xl
           bg-black
-          px-8
-          font-montserrat
-          text-[12px]
-          font-semibold
-          uppercase
-          tracking-[0.08em]
+          px-6
+          py-4
           text-white
           transition
-          duration-300
-          hover:-translate-y-[1px]
-          hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]
-          disabled:cursor-not-allowed
-          disabled:border-black/20
-          disabled:bg-black/20
-          disabled:text-black/40
-          disabled:shadow-none
+          hover:opacity-90
+          disabled:opacity-50
         "
       >
         {loading ? '...' : quiz.submit}
       </button>
 
-      {success && (
-        <div className="mt-6 border border-green-200 bg-green-50 px-5 py-4 font-montserrat text-[13px] leading-6 text-green-700">
-          {success}
-        </div>
-      )}
-
       {error && (
-        <div className="mt-6 border border-red-200 bg-red-50 px-5 py-4 font-montserrat text-[13px] leading-6 text-red-700">
+        <div className="mt-6 rounded-2xl bg-red-50 p-4 text-sm text-red-700">
           {error}
         </div>
       )}

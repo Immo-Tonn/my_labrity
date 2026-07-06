@@ -10,8 +10,12 @@
     "description": "Wir entwickeln digitale Auftritte, die hochwertig wirken, Vertrauen schaffen und Ihr Unternehmen klar positionieren.",
     "contacts": [
       {
-        "label": "hello@labrity.com",
-        "href": "mailto:hello@labrity.com"
+        "label": "labrity@web.de",
+        "href": "mailto:labrity@web.de"
+      },
+      {
+        "label": "tonn_andreas@web.de",
+        "href": "mailto:tonn_andreas@web.de"
       },
       {
         "label": "Instagram",
@@ -81,8 +85,7 @@
   },
   "checkbox": {
     "label": "Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der ",
-    "linkLabel": "Datenschutzerklärung",
-    "href": "/datenschutz"
+    "linkLabel": "Datenschutzerklärung"
   },
   "successMessage": "Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet."
 }

@@ -10,8 +10,12 @@
     "description": "Ми створюємо преміальні цифрові рішення, які викликають довіру та чітко позиціонують ваш бізнес.",
     "contacts": [
       {
-        "label": "hello@labrity.com",
-        "href": "mailto:hello@labrity.com"
+        "label": "labrity@web.de",
+        "href": "mailto:labrity@web.de"
+      },
+      {
+        "label": "tonn_andreas@web.de",
+        "href": "mailto:tonn_andreas@web.de"
       },
       {
         "label": "Instagram",
@@ -81,8 +85,7 @@
   },
   "checkbox": {
     "label": "Я погоджуюсь на обробку моїх персональних даних відповідно до ",
-    "linkLabel": "Політики конфіденційності",
-    "href": "/privacy-policy"
+    "linkLabel": "Політики конфіденційності"
   },
   "successMessage": "Дякуємо! Ваш запит успішно надіслано."
 }

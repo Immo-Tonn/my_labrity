@@ -6,7 +6,14 @@
       {
         "children": [
           {
-            "text": "The controller responsible for this website is Labrity. The complete contact details will be provided in the legal notice of this website."
+            "text": "The controller responsible for the processing of personal data on this website within the meaning of the General Data Protection Regulation (GDPR) is:"
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "Labrity\nOwner: Andreas Tonn\nSessendrupweg 54\n48161 Münster\nGermany\nEmail: labrity@web.de, tonn_andreas@web.de\nPhone: +49 174 345 44 19"
           }
         ]
       }
@@ -14,12 +21,19 @@
   },
   {
     "_id": "2",
-    "title": "General information",
+    "title": "General Information",
     "description": [
       {
         "children": [
           {
-            "text": "Protecting your personal data is important to us. We process personal data only when it is necessary for operating the website, communicating with you or handling your request."
+            "text": "We take the protection of your personal data very seriously. We process personal data only to the extent necessary for operating this website, responding to your inquiries, and providing our services."
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "This privacy policy informs you about what data we collect, the purposes for which we process it, and what rights you have as a data subject under the GDPR."
           }
         ]
       }
@@ -32,7 +46,21 @@
       {
         "children": [
           {
-            "text": "This website is hosted via Vercel. When you visit the website, technical access data such as IP address, date, time, browser information and visited pages may be processed to provide the website securely and reliably."
+            "text": "This website is hosted by Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA. When you visit our website, Vercel automatically collects technical access data, including your IP address, browser type and version, operating system, referrer URL, date and time of access, and pages visited. This data is technically necessary to deliver the website securely and reliably."
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "This data may be transferred to the USA. Vercel has implemented Standard Contractual Clauses (SCCs) pursuant to Art. 46(2)(c) GDPR to ensure an adequate level of data protection for international transfers. For more information, please refer to Vercel's privacy policy at vercel.com/legal/privacy-policy."
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "The legal basis for this processing is Art. 6(1)(f) GDPR, based on our legitimate interest in the technically secure and stable operation of the website."
           }
         ]
       }
@@ -40,12 +68,33 @@
   },
   {
     "_id": "4",
-    "title": "Contact form",
+    "title": "Contact Form",
     "description": [
       {
         "children": [
           {
-            "text": "When you contact us through the contact form, we process the data you enter only to handle your request and communicate with you."
+            "text": "When you contact us via the contact form, we collect the following personal data: first name, last name, email address, phone number / WhatsApp, and the content of your message."
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "We collect the same data when you use our project calculator (quiz) on the website. In addition to first name, last name, email address and phone number, your answers to the questions about your project are processed in order to better assess your request."
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "This data is used exclusively to process your inquiry and to communicate with you. Your data will not be passed on to third parties unless this is necessary to handle your request or we are legally required to do so."
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "The legal basis is Art. 6(1)(b) GDPR where your inquiry relates to a pre-contractual or contractual matter, and Art. 6(1)(f) GDPR — based on our legitimate interest in responding to contact requests — in all other cases."
           }
         ]
       }
@@ -58,7 +107,21 @@
       {
         "children": [
           {
-            "text": "Requests from the contact form may be forwarded to Telegram so that we can respond to your message quickly. Please do not send highly sensitive data through the contact form."
+            "text": "To enable a fast response to your inquiries, messages submitted via the contact form or the project calculator are forwarded to Telegram using the Telegram Bot API. Telegram is operated by Telegram Messenger Inc. / Telegram FZ-LLC."
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "As part of this forwarding, your name, contact details, and message content are transmitted to Telegram's servers, which may be located outside the European Union. Telegram states that international data transfers rely on Standard Contractual Clauses. Please do not submit particularly sensitive personal data (e.g. health or financial information) through the contact form."
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "For more information on Telegram's data practices, please see: telegram.org/privacy. The legal basis is your explicit consent (Art. 6(1)(a) GDPR), given by confirming the privacy policy in the contact form or project calculator, supplemented by Art. 6(1)(f) GDPR based on our legitimate interest in efficient and timely communication. You may withdraw your consent at any time with effect for the future (see section 9)."
           }
         ]
       }
@@ -66,12 +129,26 @@
   },
   {
     "_id": "6",
-    "title": "Legal basis",
+    "title": "Legal Basis for Processing",
     "description": [
       {
         "children": [
           {
-            "text": "Depending on the purpose, processing is based on Art. 6(1)(b) GDPR for handling pre-contractual requests or on Art. 6(1)(f) GDPR due to our legitimate interest in the secure and functional operation of the website."
+            "text": "The processing of personal data on this website is based on the following legal grounds:"
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "– Art. 6(1)(a) GDPR: consent of the data subject (e.g. agreement to this privacy policy in the contact form)\n– Art. 6(1)(b) GDPR: performance of a contract or pre-contractual measures\n– Art. 6(1)(f) GDPR: legitimate interests of the controller (secure website operation, responding to contact requests)"
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "To display the website in your preferred language and to temporarily store form data you have already entered, we use your browser's local storage and session storage. This data remains on your device and is not transmitted to us unless you submit a form. The legal basis for this is Art. 6(1)(f) GDPR (legitimate interest in a user-friendly presentation of the website)."
           }
         ]
       }
@@ -79,12 +156,19 @@
   },
   {
     "_id": "7",
-    "title": "Cookies and analytics",
+    "title": "Cookies and Analytics",
     "description": [
       {
         "children": [
           {
-            "text": "We currently do not use analytics or marketing cookies. If cookies, tracking tools or a cookie banner are added later, this privacy policy will be updated accordingly."
+            "text": "We do not currently use analytics or marketing cookies, tracking pixels, or any third-party tracking tools. Only technically necessary data is processed when you visit our website."
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "Should we introduce cookies, a cookie consent banner, or web analytics tools (e.g. Google Analytics, Matomo) in the future, this privacy policy will be updated accordingly and, where required by law, your explicit consent will be obtained."
           }
         ]
       }
@@ -92,12 +176,19 @@
   },
   {
     "_id": "8",
-    "title": "Storage period",
+    "title": "Storage Period",
     "description": [
       {
         "children": [
           {
-            "text": "Personal data is stored only for as long as necessary to handle your request or as required by legal retention obligations."
+            "text": "Personal data is stored only for as long as necessary to fulfill the purpose for which it was collected, or as required by applicable statutory retention obligations."
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "Data from contact inquiries is deleted once your request has been fully resolved, unless statutory retention periods apply (e.g. under German commercial or tax law, up to 10 years). Technical access data collected by Vercel is processed and deleted in accordance with Vercel's own retention policy."
           }
         ]
       }
@@ -105,12 +196,26 @@
   },
   {
     "_id": "9",
-    "title": "Your rights",
+    "title": "Your Rights",
     "description": [
       {
         "children": [
           {
-            "text": "You have the right to access, correction, deletion, restriction of processing, data portability and the right to object to the processing of your personal data."
+            "text": "As a data subject, you have the following rights under the GDPR with regard to your personal data:"
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "– Right of access (Art. 15 GDPR)\n– Right to rectification of inaccurate data (Art. 16 GDPR)\n– Right to erasure / \"right to be forgotten\" (Art. 17 GDPR)\n– Right to restriction of processing (Art. 18 GDPR)\n– Right to data portability (Art. 20 GDPR)\n– Right to object to processing (Art. 21 GDPR)\n– Right to withdraw consent at any time without affecting the lawfulness of processing carried out prior to withdrawal (Art. 7(3) GDPR)"
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "To exercise any of these rights, please contact us at: labrity@web.de, tonn_andreas@web.de"
           }
         ]
       }
@@ -118,12 +223,39 @@
   },
   {
     "_id": "10",
-    "title": "Privacy contact",
+    "title": "Right to Lodge a Complaint",
     "description": [
       {
         "children": [
           {
-            "text": "If you have any questions about data protection, you can contact us at any time using the contact details provided in the legal notice."
+            "text": "Without prejudice to any other administrative or judicial remedy, you have the right to lodge a complaint with a supervisory authority if you believe that the processing of your personal data violates the GDPR (Art. 77 GDPR)."
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "The competent supervisory authority for Labrity is:\nLandesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW)\nKavalleriestraße 2–4\n40213 Düsseldorf\nGermany\nWebsite: ldi.nrw.de"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "11",
+    "title": "Privacy Contact",
+    "description": [
+      {
+        "children": [
+          {
+            "text": "For any questions about data protection, to exercise your rights, or to request the deletion of your data, please contact us directly:"
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "Labrity – Andreas Tonn\nEmail: labrity@web.de, tonn_andreas@web.de\nPhone: +49 174 345 44 19"
           }
         ]
       }

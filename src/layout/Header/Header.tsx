@@ -150,12 +150,12 @@ export function Header() {
 
         <Navbar
           variant="header"
-          className="hidden xl:flex xl:flex-1 xl:justify-center xl:text-[13px] xl:font-medium xl:uppercase xl:tracking-[0.22em] xl:text-black"
+          className="hidden lg:flex lg:flex-1 lg:justify-center lg:text-[13px] lg:font-medium lg:uppercase lg:tracking-[0.22em] lg:text-black"
         />
 
         <div
           ref={languageRef}
-          className="relative hidden items-center font-montserrat text-[12px] uppercase tracking-[0.22em] xl:flex"
+          className="relative hidden items-center font-montserrat text-[12px] uppercase tracking-[0.22em] lg:flex"
         >
           <button
             type="button"
@@ -204,7 +204,7 @@ export function Header() {
         <button
           onClick={openMenu}
           aria-label={common?.layout?.['aria-label']?.burger || 'menu'}
-          className="text-black transition-all duration-300 hover:scale-110 active:scale-95 xl:hidden"
+          className="text-black transition-all duration-300 hover:scale-110 active:scale-95 lg:hidden"
         >
           <BurgerMenuIcon width={30} height={30} />
         </button>

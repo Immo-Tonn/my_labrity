@@ -9,7 +9,7 @@ import { LogoProps } from './types';
 
 export const Logo: React.FC<LogoProps> = ({ onClick, className }) => {
   const logoClasses = classnames(
-    'relative block h-[52px] w-[220px] md:h-[58px] md:w-[250px] xl:h-[64px] xl:w-[290px]',
+    'relative block h-[52px] w-[220px] md:h-[58px] md:w-[250px] xl:h-[64px] lg:w-[200px] xl:w-[290px]',
     className,
   );
 

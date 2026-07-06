@@ -15,7 +15,33 @@
       "error": "Failed to send request",
       "required": "Required field",
       "invalidEmail": "Invalid email address",
-      "invalidPhone": "Invalid phone number"
+      "invalidPhone": "Invalid phone number",
+      "privacyLabel": "I agree to the processing of my personal data in accordance with the ",
+      "privacyLinkLabel": "Privacy Policy",
+      "privacyRequired": "Please confirm the privacy policy."
+    },
+    "result": {
+      "title": "Thank you for your request",
+      "subtitle": "Your information has been successfully submitted.",
+      "contactTitle": "Contact Information",
+
+      "summaryTitle": "Your Project Request",
+
+      "estimateTitle": "Estimated Project Budget",
+      "estimateNote": "Based on the information provided, the estimated project scope starts from the amount shown below. The final quotation will be prepared after a detailed analysis of your requirements.",
+
+      "nextTitle": "What happens next?",
+
+      "nextText": "We will review your request and usually get back to you within 24 hours. After that, we will discuss your requirements in detail and prepare a personalized proposal.",
+
+      "downloadPdf": "Download PDF",
+      "estimateFrom": "from",
+      "deploymentNote": "The estimated budget does not include deployment, hosting or possible third-party licensing costs.",
+
+"legalTitle": "Legal pages available on request",
+
+"legalText": "If required, we can also assist with preparing a Privacy Policy and Legal Notice (Imprint) in compliance with applicable regulations and integrate them into your website.",
+      "close": "Close Window"
     },
     "questions": [
       {
@@ -78,7 +104,6 @@
           "Contact form",
           "Online appointment booking",
           "Price calculator",
-          "Customer management",
           "Connection with other services",
           "Client account area",
           "Not sure"

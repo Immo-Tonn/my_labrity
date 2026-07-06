@@ -163,7 +163,7 @@ export default function PortfolioPage() {
               {content.kicker}
             </p>
 
-            <h1 className="max-w-[1050px] break-words font-tenor text-[54px] leading-[0.95] tracking-[-0.045em] text-black md:text-[90px] xl:text-[126px]">
+            <h1 className="max-w-[1050px] font-tenor text-[54px] leading-[0.95] tracking-[-0.045em] text-black md:text-[90px] xl:text-[126px]">
               {content.title}
             </h1>
           </div>
@@ -230,6 +230,7 @@ export default function PortfolioPage() {
       {/* PROJECTS */}
       <section className="mx-auto max-w-[1700px] px-5 pb-28 pt-16 md:px-8 md:pb-40 md:pt-24">
         <div className="space-y-10 md:space-y-14">
+          {/* {content.items.map((item, index) => ( */}
           {content.items.map((item, index) => {
             const seniorProject = isSeniorProject(item.title);
 
@@ -246,21 +247,15 @@ export default function PortfolioPage() {
                 }}
                 className="group overflow-hidden border border-[#e4ddd3] bg-[#fbfaf7] transition duration-500 hover:-translate-y-1 hover:border-black/20 hover:shadow-[0_28px_90px_rgba(0,0,0,0.08)]"
               >
-                <div className="grid min-w-0 md:min-h-[50vh] xl:grid-cols-[0.58fr_0.42fr]">
+                <div className="grid md:min-h-[50vh] lg:grid-cols-[0.58fr_0.42fr]">
                   {/* SCREENSHOT */}
                   <a
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`relative flex items-center justify-center overflow-hidden bg-[#ede7dd] p-4 md:min-h-[430px] md:p-6 xl:min-h-[520px] ${
-                      seniorProject ? 'min-h-[250px]' : 'min-h-[300px]'
-                    }`}
+                    className="relative flex min-h-[300px] items-center justify-center overflow-hidden bg-[#ede7dd] p-4 md:min-h-[430px] md:p-6 xl:min-h-[520px]"
                   >
-                    <div
-                      className={`relative h-full w-full overflow-hidden border border-black/10 bg-[#f8f6f1] shadow-[0_20px_70px_rgba(0,0,0,0.10)] md:min-h-[370px] xl:min-h-[440px] ${
-                        seniorProject ? 'min-h-[220px]' : 'min-h-[260px]'
-                      }`}
-                    >
+                    <div className="relative h-full min-h-[260px] w-full overflow-hidden border border-black/10 bg-[#f8f6f1] shadow-[0_20px_70px_rgba(0,0,0,0.10)] md:min-h-[478px] xl:min-h-[440px]">
                       {item.image ? (
                         <Image
                           src={item.image}
@@ -328,11 +323,16 @@ export default function PortfolioPage() {
                       </div>
 
                       <h2
-                        className={`max-w-full font-tenor leading-[0.95] tracking-[-0.04em] text-black md:text-[70px] xl:text-[84px] ${
-                          seniorProject
-                            ? 'hyphens-auto text-[36px] [overflow-wrap:anywhere] sm:text-[44px]'
-                            : 'break-words text-[44px]'
-                        }`}
+                        className={`
+                          max-w-full 
+                          font-tenor 
+                          leading-[0.95] 
+                          tracking-[-0.04em] 
+                          text-black 
+                          md:text-[70px] 
+                          lg:text-[64px] 
+                          xl:text-[74px] 
+                          ${'hyphens-auto text-[36px] [overflow-wrap:anywhere] sm:text-[44px]'}`}
                       >
                         {item.title}
                       </h2>
@@ -371,6 +371,77 @@ export default function PortfolioPage() {
                       </a>
                     </div>
                   </div>
+
+                  {/* <div className="flex min-w-0 flex-col justify-between p-6 md:p-9 xl:p-12">
+                  <div>
+                    <div className="mb-8 flex items-start justify-between gap-6">
+                      <div>
+                        <p className="font-montserrat text-[10px] uppercase tracking-[0.34em] text-neutral-500">
+                          {String(index + 1).padStart(2, '0')} /{' '}
+                          {content.categories[item.title] ||
+                            content.projectLabel}
+                        </p>
+
+                        <p className="mt-3 font-montserrat text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                          {content.projectLabel}
+                        </p>
+                      </div>
+
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${content.projectButton}: ${item.title}`}
+                        className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#d9cfbe] transition duration-300 group-hover:border-black group-hover:bg-black group-hover:text-white"
+                      >
+                        <svg
+                          className="h-4 w-4"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M7 17L17 7M17 7H8M17 7V16"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+
+                    <h2 className="font-tenor text-[44px] leading-[0.95] tracking-[-0.04em] text-black md:text-[70px] lg:text-[64px] xl:text-[84px]">
+                      {item.title}
+                    </h2>
+
+                    <p className="mt-7 max-w-[620px] font-montserrat text-[14px] leading-8 text-neutral-700 md:text-[16px]">
+                      {item.description}
+                    </p>
+                  </div>
+
+                  <div className="mt-10">
+                    <div className="mb-8 flex flex-wrap items-center gap-4 font-montserrat text-[10px] uppercase tracking-[0.28em] text-neutral-500">
+                      {content.projectTags.map((tag, tagIndex) => (
+                        <div key={tag} className="flex items-center gap-4">
+                          {tagIndex > 0 && (
+                            <span className="h-1 w-1 rounded-full bg-neutral-400" />
+                          )}
+                          <span>{tag}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-4 font-montserrat text-[11px] uppercase tracking-[0.34em] text-neutral-600 transition duration-300 hover:text-black"
+                    >
+                      {content.projectButton}
+                      <span className="h-px w-12 bg-neutral-400 transition duration-300 group-hover:w-20 group-hover:bg-black" />
+                    </a>
+                  </div>
+                </div> */}
                 </div>
               </motion.article>
             );
@@ -390,7 +461,7 @@ export default function PortfolioPage() {
                 {content.blackSection.kicker}
               </p>
 
-              <h2 className="break-words font-tenor text-[58px] leading-[0.9] tracking-[-0.05em] md:text-[118px] xl:text-[138px]">
+              <h2 className="font-tenor text-[58px] leading-[0.9] tracking-[-0.05em] md:text-[118px] xl:text-[138px]">
                 {content.blackSection.title}
               </h2>
             </div>

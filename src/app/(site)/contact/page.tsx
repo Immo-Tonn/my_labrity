@@ -3,6 +3,7 @@
 import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from 'react';
 
 import { sendMessage } from '@/api/telegram';
+import { ModalPolicy } from '@/components/ui';
 import { useLanguage } from '@/utils/LanguageContext';
 import { getData } from '@/utils/getData';
 
@@ -58,7 +59,6 @@ type ContactData = {
   checkbox?: {
     label: string;
     linkLabel: string;
-    href: string;
   };
   successMessage?: string;
 };
@@ -88,8 +88,12 @@ const fallbackContactData: ContactData = {
       'Wir entwickeln digitale Auftritte, die hochwertig wirken, Vertrauen schaffen und Ihr Unternehmen klar positionieren.',
     contacts: [
       {
-        label: 'hello@labrity.com',
-        href: 'mailto:hello@labrity.com',
+        label: 'labrity@web.de',
+        href: 'mailto:labrity@web.de',
+      },
+      {
+        label: 'tonn_andreas@web.de',
+        href: 'mailto:tonn_andreas@web.de',
       },
       {
         label: 'Instagram',
@@ -161,7 +165,6 @@ const fallbackContactData: ContactData = {
     label:
       'Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der ',
     linkLabel: 'Datenschutzerklärung',
-    href: '/datenschutz',
   },
   successMessage: 'Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet.',
 };
@@ -323,13 +326,13 @@ export default function ContactPage() {
     try {
       setIsLoading(true);
 
-      const message =
-        `New request from Labrity:%0A%0A` +
-        `First name: ${formData.firstName}%0A` +
-        `Last name: ${formData.lastName}%0A` +
-        `Email: ${formData.email}%0A` +
-        `Phone: ${formData.phone}%0A` +
-        `Message: ${formData.message}`;
+      const message = `📩 New request from Labrity
+
+👤 First name: ${formData.firstName}
+👤 Last name: ${formData.lastName}
+📧 Email: ${formData.email}
+📱 Phone: ${formData.phone}
+💬 Message: ${formData.message}`;
 
       await sendMessage(message);
 
@@ -355,7 +358,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-[#f8f6f1] pt-[120px] md:pt-[140px] xl:pt-[170px]">
       <section className="container pb-[90px] md:pb-[110px] xl:pb-[140px]">
         <div className="overflow-hidden border border-[#e7e2d9] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.05)]">
-          <div className="grid xl:grid-cols-[0.9fr_1.1fr]">
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
             <div className="flex flex-col justify-between bg-[#151515] px-6 py-10 text-white md:px-10 md:py-14 xl:px-14 xl:py-16">
               <div>
                 <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.32em] text-white/45 md:text-xs">
@@ -469,12 +472,10 @@ export default function ContactPage() {
 
                     <span>
                       {content.checkbox?.label}
-                      <a
-                        href={content.checkbox?.href}
-                        className="underline underline-offset-4"
-                      >
-                        {content.checkbox?.linkLabel}
-                      </a>
+                      <ModalPolicy
+                        variant="form"
+                        nameBtn={content.checkbox?.linkLabel ?? ''}
+                      />
                     </span>
                   </label>
 

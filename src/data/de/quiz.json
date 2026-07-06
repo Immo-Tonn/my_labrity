@@ -15,7 +15,33 @@
       "error": "Fehler beim Senden",
       "required": "Pflichtfeld",
       "invalidEmail": "Ungültige E-Mail-Adresse",
-      "invalidPhone": "Ungültige Telefonnummer"
+      "invalidPhone": "Ungültige Telefonnummer",
+      "privacyLabel": "Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der ",
+      "privacyLinkLabel": "Datenschutzerklärung",
+      "privacyRequired": "Bitte bestätigen Sie die Datenschutzerklärung."
+    },
+    "result": {
+      "title": "Vielen Dank für Ihre Anfrage",
+      "subtitle": "Ihre Angaben wurden erfolgreich übermittelt.",
+      "contactTitle": "Kontaktdaten",
+
+      "summaryTitle": "Ihre Projektanfrage",
+
+      "estimateTitle": "Empfohlenes Projektbudget",
+      "estimateNote": "Basierend auf Ihren Angaben liegt der voraussichtliche Projektumfang ab dem unten genannten Betrag. Die endgültige Kalkulation erfolgt nach einer detaillierten Analyse Ihrer Anforderungen.",
+
+      "nextTitle": "Wie geht es weiter?",
+
+      "nextText": "Wir prüfen Ihre Anfrage und melden uns in der Regel innerhalb von 24 Stunden bei Ihnen. Anschließend besprechen wir die Anforderungen im Detail und erstellen ein individuelles Angebot.",
+
+      "downloadPdf": "PDF herunterladen",
+      "estimateFrom": "ab",
+      "deploymentNote": "Die angegebene Kostenschätzung beinhaltet nicht die Bereitstellung (Deployment), das Hosting sowie ggf. anfallende externe Lizenz- oder Drittanbieterkosten.",
+
+"legalTitle": "Rechtliche Seiten auf Wunsch inklusive",
+
+"legalText": "Auf Wunsch unterstützen wir Sie ebenfalls bei der Erstellung eines DSGVO-konformen Impressums und einer Datenschutzerklärung. Gerne übernehmen wir die vollständige technische Einbindung in Ihre Website.",
+      "close": "Fenster schließen"
     },
     "questions": [
       {
@@ -78,7 +104,6 @@
           "Kontaktformular",
           "Online-Terminbuchung",
           "Preisrechner",
-          "Kundendaten verwalten",
           "Verbindung mit anderen Systemen",
           "Persönlicher Kundenbereich",
           "Nicht sicher"

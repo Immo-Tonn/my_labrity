@@ -1,24 +1,28 @@
 {
-  "_comment_title": "SEO title",
   "title": "Labrity – Professional Websites for Businesses & Freelancers",
 
-  "_comment_description": "SEO description",
   "description": "Modern websites for small businesses, freelancers and service providers in Germany. Professional, convincing and ready for new clients.",
 
-  "_comment_keywords": "SEO keywords",
   "keywords": "Labrity, professional website, business website, website for freelancers, web design Germany, modern websites",
 
-  "_comment_icons": "Favicons",
   "icons": [
     { "url": "/meta/favicon.ico" },
-    { "url": "/meta/favicon-16x16.png", "rel": "icon", "type": "image/png" },
-    { "url": "/meta/favicon-32x32.png", "rel": "icon", "type": "image/png" }
+    {
+      "url": "/meta/favicon-16x16.png",
+      "rel": "icon",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "url": "/meta/favicon-32x32.png",
+      "rel": "icon",
+      "type": "image/png",
+      "sizes": "32x32"
+    }
   ],
 
-  "_comment_manifest": "Manifest",
   "manifest": "/meta/site.webmanifest",
 
-  "_comment_openGraph": "Social preview",
   "openGraph": {
     "type": "website",
     "url": "https://labrity.com",
