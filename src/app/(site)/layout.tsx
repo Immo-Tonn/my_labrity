@@ -3,8 +3,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Montserrat, Tenor_Sans } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/next';
 
+import ConsentAnalytics from '@/components/common/ConsentAnalytics';
 import QuizProvider from '@/components/quiz/QuizProvider';
 import { classnames } from '@/utils/classnames';
 import { Footer } from '@/layout/Footer';
@@ -184,7 +184,7 @@ export default function RootLayout({
             <FakeAiChat />
           </QuizProvider>
         </LanguageProvider>
-        <Analytics />
+        <ConsentAnalytics />
       </body>
     </html>
   );
