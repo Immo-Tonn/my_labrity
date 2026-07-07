@@ -9,8 +9,6 @@ import { ContactFormData, QuizAnswers } from './quiz.types';
 
 import QuizResult from './QuizResult';
 
-import QuizResult from './QuizResult';
-
 type Props = {
   quiz: any;
   answers: QuizAnswers;
