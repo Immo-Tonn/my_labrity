@@ -55,12 +55,9 @@ export type QuizDictionary = {
     estimateTitle: string;
     estimateNote: string;
     estimateFrom: string;
-
     deploymentNote: string;
-
     legalTitle: string;
     legalText: string;
-
     nextTitle: string;
     nextText: string;
 

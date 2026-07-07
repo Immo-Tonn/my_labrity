@@ -1,258 +1,178 @@
-import { QuizAnswers } from './quiz.types';
+import { QuizAnswers, QuizQuestion } from './quiz.types';
 
-const websiteTypeMap: Record<string, string> = {
-  'Einfache Präsentationsseite': 'presentation',
-  'Simple presentation website': 'presentation',
-  'Простой презентационный сайт': 'presentation',
-  'Простий презентаційний сайт': 'presentation',
+const getSelectedIndex = (
+  questions: QuizQuestion[],
+  questionId: string,
+  value?: string,
+): number => {
+  if (!value) return -1;
 
-  Unternehmenswebsite: 'business',
-  'Business website': 'business',
-  'Сайт для бизнеса': 'business',
-  'Сайт для бізнесу': 'business',
+  const question = questions.find(q => q.id === questionId);
 
-  Onlineshop: 'shop',
-  'Online store': 'shop',
-  'Интернет-магазин': 'shop',
-  'Інтернет-магазин': 'shop',
-
-  'Individuelle Lösung': 'custom',
-  'Custom solution': 'custom',
-  'Индивидуальное решение': 'custom',
-  'Індивідуальне рішення': 'custom',
-
-  'Nicht sicher': 'unknown',
-  'Not sure': 'unknown',
-  'Не уверен': 'unknown',
-  'Не впевнений': 'unknown',
+  return question ? question.options.indexOf(value) : -1;
 };
 
-const clientTypeMap: Record<string, string> = {
-  Privatperson: 'private',
-  'Private person': 'private',
-  'Частное лицо': 'private',
-  'Приватна особа': 'private',
-
-  'Freelancer / Selbstständig': 'freelancer',
-  'Freelancer / Self-employed': 'freelancer',
-  'Фрилансер / Самозанятый': 'freelancer',
-  'Фрилансер / Самозайнятий': 'freelancer',
-
-  Kleinunternehmen: 'smallBusiness',
-  'Small business': 'smallBusiness',
-  'Малый бизнес': 'smallBusiness',
-  'Малий бізнес': 'smallBusiness',
-
-  Unternehmen: 'company',
-  Company: 'company',
-  Компания: 'company',
-  Компанія: 'company',
-
-  'Nicht sicher': 'unknown',
-  'Not sure': 'unknown',
-  'Не уверен': 'unknown',
-  'Не впевнений': 'unknown',
-};
-
-const contentMap: Record<string, string> = {
-  'Ja, alles vorhanden': 'ready',
-  'Yes, everything is ready': 'ready',
-  'Да, всё готово': 'ready',
-  'Так, усе готово': 'ready',
-
-  'Teilweise vorhanden': 'partial',
-  'Partially ready': 'partial',
-  'Частично готово': 'partial',
-  'Частково готово': 'partial',
-
-  'Benötige Unterstützung bei Inhalten': 'needHelp',
-  'Need help with content': 'needHelp',
-  'Нужна помощь с контентом': 'needHelp',
-  'Потрібна допомога з контентом': 'needHelp',
-
-  'Nicht sicher': 'unknown',
-  'Not sure': 'unknown',
-  'Не уверен': 'unknown',
-  'Не впевнений': 'unknown',
-};
-
-const languagesMap: Record<string, string> = {
-  'Nur eine Sprache': 'one',
-  'One language': 'one',
-  'Один язык': 'one',
-  'Одна мова': 'one',
-
-  'Zwei Sprachen': 'two',
-  'Two languages': 'two',
-  'Два языка': 'two',
-  'Дві мови': 'two',
-
-  'Drei oder mehr Sprachen': 'threePlus',
-  'Three or more languages': 'threePlus',
-  'Три и более языков': 'threePlus',
-  'Три або більше мов': 'threePlus',
-
-  'Nicht sicher': 'unknown',
-  'Not sure': 'unknown',
-  'Не уверен': 'unknown',
-  'Не впевнений': 'unknown',
-};
-
-const designMap: Record<string, string> = {
-  'Design bereits vorhanden': 'existing',
-  'Design already exists': 'existing',
-  'Дизайн уже есть': 'existing',
-  'Дизайн уже є': 'existing',
-
-  'Neues Design erforderlich': 'new',
-  'Need a new design': 'new',
-  'Нужен новый дизайн': 'new',
-  'Потрібен новий дизайн': 'new',
-
-  'Bestehende Website modernisieren': 'redesign',
-  'Redesign existing website': 'redesign',
-  'Обновление существующего сайта': 'redesign',
-  'Оновлення існуючого сайту': 'redesign',
-
-  'Nicht sicher': 'unknown',
-  'Not sure': 'unknown',
-  'Не уверен': 'unknown',
-  'Не впевнений': 'unknown',
-};
-
-const featureMap: Record<string, string> = {
-  Kontaktformular: 'contact',
-  'Contact form': 'contact',
-  'Контактная форма': 'contact',
-  'Контактна форма': 'contact',
-
-  'Online-Terminbuchung': 'booking',
-  'Online appointment booking': 'booking',
-  'Онлайн-запись': 'booking',
-  'Онлайн-запис': 'booking',
-
-  Preisrechner: 'calculator',
-  'Price calculator': 'calculator',
-  'Калькулятор стоимости': 'calculator',
-  'Калькулятор вартості': 'calculator',
-
-  'Kundendaten verwalten': 'crm',
-  'Customer management': 'crm',
-  'Управление клиентами': 'crm',
-  'Управління клієнтами': 'crm',
-
-  'Verbindung mit anderen Systemen': 'integrations',
-  'Connection with other services': 'integrations',
-  'Подключение сторонних сервисов': 'integrations',
-  'Підключення інших сервісів': 'integrations',
-
-  'Persönlicher Kundenbereich': 'account',
-  'Client account area': 'account',
-  'Личный кабинет клиента': 'account',
-  'Особистий кабінет клієнта': 'account',
-
-  'Nicht sicher': 'unknown',
-  'Not sure': 'unknown',
-  'Не уверен': 'unknown',
-  'Не впевнений': 'unknown',
-};
-
-export const calculateEstimate = (answers: QuizAnswers): number => {
+export const calculateEstimate = (
+  answers: QuizAnswers,
+  questions: QuizQuestion[],
+): number => {
   let total = 0;
 
-  const websiteType = websiteTypeMap[answers.websiteType?.[0] ?? ''];
-  const clientType = clientTypeMap[answers.clientType?.[0] ?? ''];
-  const content = contentMap[answers.content?.[0] ?? ''];
-  const languages = languagesMap[answers.languages?.[0] ?? ''];
-  const design = designMap[answers.design?.[0] ?? ''];
-  const features = (answers.features || []).map(
-    feature => featureMap[feature] ?? feature,
+  const websiteType = getSelectedIndex(
+    questions,
+    'websiteType',
+    answers.websiteType?.[0],
+  );
+  const clientType = getSelectedIndex(
+    questions,
+    'clientType',
+    answers.clientType?.[0],
+  );
+  const content = getSelectedIndex(questions, 'content', answers.content?.[0]);
+  const languages = getSelectedIndex(
+    questions,
+    'languages',
+    answers.languages?.[0],
+  );
+  const design = getSelectedIndex(questions, 'design', answers.design?.[0]);
+  const features = answers.features || [];
+  const featureIndexes = features.map(feature =>
+    getSelectedIndex(questions, 'features', feature),
   );
 
-  // WEBSITE TYPE
+  // WEBSITE TYPE (BASE)
+  // 0: Simple presentation website | 1: Business website | 2: Online store
+  // 3: Custom solution | 4: Not sure
   switch (websiteType) {
-    case 'presentation':
+    case 0:
       total += 400;
       break;
-    case 'business':
+
+    case 1:
       total += 1000;
       break;
-    case 'shop':
-    case 'custom':
+
+    case 2:
+    // total += 8900;
+    // break;
+
+    case 3:
       total += 1100;
       break;
-    case 'unknown':
-      total += 400;
+
+    case 4:
+      total += 400; // базовая стоимость
       break;
   }
 
   // CLIENT TYPE
+  // 0: Private person | 1: Freelancer / Self-employed | 2: Small business
+  // 3: Company | 4: Not sure
   switch (clientType) {
-    case 'freelancer':
+    case 1:
       total += 0;
       break;
-    case 'smallBusiness':
+
+    case 2:
       total += 0;
       break;
-    case 'company':
+
+    case 3:
       total += 0;
       break;
+
+    // default:
+    //   total += 0;
+    //   break;
   }
 
   // CONTENT
+  // 0: Yes, everything is ready | 1: Partially ready
+  // 2: Need help with content | 3: Not sure
   switch (content) {
-    case 'partial':
+    case 1:
       total += 50;
       break;
-    case 'needHelp':
+
+    case 2:
       total += 150;
       break;
+
+    // default:
+    //   total += 0;
+    //   break;
   }
 
   // LANGUAGES
+  // 0: One language | 1: Two languages | 2: Three or more languages | 3: Not sure
   switch (languages) {
-    case 'two':
+    case 1:
       total += 150;
       break;
-    case 'threePlus':
+
+    case 2:
       total += 200;
       break;
+
+    // default:
+    //   total += 0;
+    //   break;
   }
 
   // DESIGN
+  // 0: Design already exists | 1: Need a new design
+  // 2: Redesign existing website | 3: Not sure
   switch (design) {
-    case 'new':
+    case 1:
       total += 300;
       break;
-    case 'redesign':
+
+    case 2:
       total += 250;
       break;
+
+    // default:
+    //   total += 0;
+    //   break;
   }
 
   // FEATURES
-  features.forEach(feature => {
-    switch (feature) {
-      case 'contact':
+  // 0: Contact form | 1: Online appointment booking | 2: Price calculator
+  // 3: Customer management | 4: Connection with other services
+  // 5: Client account area | 6: Not sure
+  featureIndexes.forEach(featureIndex => {
+    switch (featureIndex) {
+      case 0:
         total += 100;
         break;
-      case 'booking':
+
+      case 1:
         total += 300;
         break;
-      case 'calculator':
+
+      case 2:
         total += 300;
         break;
-      // case 'crm':
+
+      // case 3:
       //   total += 2000;
       //   break;
-      case 'integrations':
+
+      case 4:
         total += 200;
         break;
-      case 'account':
+
+      case 5:
         total += 1000;
         break;
+
+      // default:
+      //   total += 0;
+      //   break;
     }
   });
 
+  // MINIMUM SAFETY
   if (total < 400) {
     total = 400;
   }

@@ -7,7 +7,6 @@ export * from './Loader';
 export * from './Logo';
 export * from './Modal';
 export * from './ModalError';
-export * from './ModalPolicy';
 export * from './ModalSuccess';
 export * from './Navbar';
 

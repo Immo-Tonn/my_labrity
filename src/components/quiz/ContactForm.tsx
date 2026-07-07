@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 import { sendMessage } from '@/api/telegram';
 
 import { ContactFormData, QuizAnswers } from './quiz.types';
 
-import { useQuiz } from '@/components/quiz';
-import { ModalPolicy } from '@/components/ui';
+import QuizResult from './QuizResult';
 
 import QuizResult from './QuizResult';
 
@@ -17,8 +17,6 @@ type Props = {
 };
 
 export default function ContactForm({ quiz, answers }: Props) {
-  const { closeQuiz } = useQuiz();
-
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
@@ -36,13 +34,7 @@ export default function ContactForm({ quiz, answers }: Props) {
   });
 
   if (submitted) {
-    return (
-      <QuizResult
-        quiz={quiz}
-        answers={answers}
-        form={form}
-      />
-    );
+    return <QuizResult quiz={quiz} answers={answers} form={form} />;
   }
 
   const validate = () => {
@@ -184,11 +176,7 @@ export default function ContactForm({ quiz, answers }: Props) {
             className={inputClass}
           />
 
-          {errors.firstName && (
-            <p className={errorClass}>
-              {errors.firstName}
-            </p>
-          )}
+          {errors.firstName && <p className={errorClass}>{errors.firstName}</p>}
         </div>
 
         <div>
@@ -199,11 +187,7 @@ export default function ContactForm({ quiz, answers }: Props) {
             className={inputClass}
           />
 
-          {errors.lastName && (
-            <p className={errorClass}>
-              {errors.lastName}
-            </p>
-          )}
+          {errors.lastName && <p className={errorClass}>{errors.lastName}</p>}
         </div>
 
         <div>
@@ -214,11 +198,7 @@ export default function ContactForm({ quiz, answers }: Props) {
             className={inputClass}
           />
 
-          {errors.phone && (
-            <p className={errorClass}>
-              {errors.phone}
-            </p>
-          )}
+          {errors.phone && <p className={errorClass}>{errors.phone}</p>}
         </div>
 
         <div>
@@ -229,11 +209,7 @@ export default function ContactForm({ quiz, answers }: Props) {
             className={inputClass}
           />
 
-          {errors.email && (
-            <p className={errorClass}>
-              {errors.email}
-            </p>
-          )}
+          {errors.email && <p className={errorClass}>{errors.email}</p>}
         </div>
       </div>
 
@@ -258,10 +234,14 @@ export default function ContactForm({ quiz, answers }: Props) {
 
           <span>
             {quiz.form.privacyLabel}
-            <ModalPolicy
-              variant="form"
-              nameBtn={quiz.form.privacyLinkLabel}
-            />
+            <Link
+              href="/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-6 ml-5 mr-auto block cursor-pointer font-montserrat text-[12px] font-normal not-italic leading-4 tracking-[0.2px] text-accent transition duration-300 hover:text-hover sm:relative sm:top-[-16px] sm:ml-[45px] sm:inline-block md:static md:ml-5 md:block"
+            >
+              {quiz.form.privacyLinkLabel}
+            </Link>
           </span>
         </label>
 

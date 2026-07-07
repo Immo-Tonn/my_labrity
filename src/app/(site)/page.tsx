@@ -126,20 +126,100 @@ type HomeData = {
   };
 };
 
-function AnimatedStat({ value }: { value: string }) {
+const STATS_STEP = 200;
+const STATS_PAUSE = 2000;
+
+const parseStatTarget = (value: string) => Number(value.match(/\d+/)?.[0] || 1);
+
+const formatStatValue = (value: string, count: number) => {
+  if (value.includes('%')) return `${count}%`;
+  if (value.includes('/')) return `${count}/7`;
+  if (value.includes('°')) return `${count}°`;
+  if (value.includes('+')) return `${count}+`;
+
+  return `${count}`;
+};
+
+// Leader/follower pair: the follower (24/7) finishes first and holds at its
+// max value until the leader (100%) also reaches its max, then both reset
+// together and the cycle restarts.
+function usePairedStatCounters(
+  leaderTarget: number,
+  followerTarget: number,
+): [number, number] {
+  const [leaderCount, setLeaderCount] = useState(1);
+  const [followerCount, setFollowerCount] = useState(1);
+
+  useEffect(() => {
+    let leader = 1;
+    let follower = 1;
+    let leaderInterval: number;
+    let followerInterval: number;
+    let timeoutId: number;
+
+    const startCycle = () => {
+      leader = 1;
+      follower = 1;
+      setLeaderCount(1);
+      setFollowerCount(1);
+
+      followerInterval = window.setInterval(() => {
+        follower += 1;
+
+        if (follower >= followerTarget) {
+          follower = followerTarget;
+          setFollowerCount(follower);
+          window.clearInterval(followerInterval);
+          return;
+        }
+
+        setFollowerCount(follower);
+      }, STATS_STEP);
+
+      leaderInterval = window.setInterval(() => {
+        leader += 1;
+
+        if (leader >= leaderTarget) {
+          leader = leaderTarget;
+          setLeaderCount(leader);
+          window.clearInterval(leaderInterval);
+          window.clearInterval(followerInterval);
+          setFollowerCount(followerTarget);
+
+          timeoutId = window.setTimeout(startCycle, STATS_PAUSE);
+
+          return;
+        }
+
+        setLeaderCount(leader);
+      }, STATS_STEP);
+    };
+
+    startCycle();
+
+    return () => {
+      window.clearInterval(leaderInterval);
+      window.clearInterval(followerInterval);
+      window.clearTimeout(timeoutId);
+    };
+  }, [leaderTarget, followerTarget]);
+
+  return [leaderCount, followerCount];
+}
+
+// Runs on its own independent loop, unrelated to the paired counters.
+function useSoloStatCounter(target: number): number {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
-    const target = Number(value.match(/\d+/)?.[0] || 1);
-
     let current = 1;
     let intervalId: number;
     let timeoutId: number;
 
-    const speed = 100;
-    const pause = 1800;
-
     const startCounting = () => {
+      current = 1;
+      setCount(1);
+
       intervalId = window.setInterval(() => {
         current += 1;
 
@@ -148,34 +228,55 @@ function AnimatedStat({ value }: { value: string }) {
           setCount(current);
           window.clearInterval(intervalId);
 
-          timeoutId = window.setTimeout(() => {
-            current = 1;
-            setCount(current);
-            startCounting();
-          }, pause);
+          timeoutId = window.setTimeout(startCounting, STATS_PAUSE);
 
           return;
         }
 
         setCount(current);
-      }, speed);
+      }, STATS_STEP);
     };
 
-    setCount(1);
     startCounting();
 
     return () => {
       window.clearInterval(intervalId);
       window.clearTimeout(timeoutId);
     };
-  }, [value]);
+  }, [target]);
 
-  if (value.includes('%')) return <>{count}%</>;
-  if (value.includes('/')) return <>{count}/7</>;
-  if (value.includes('°')) return <>{count}°</>;
-  if (value.includes('+')) return <>{count}+</>;
+  return count;
+}
 
-  return <>{count}</>;
+function StatsCounters({ items }: { items: StatItem[] }) {
+  const [leaderCount, followerCount] = usePairedStatCounters(
+    parseStatTarget(items[0]?.value ?? '1'),
+    parseStatTarget(items[1]?.value ?? '1'),
+  );
+
+  const soloCount = useSoloStatCounter(parseStatTarget(items[2]?.value ?? '1'));
+
+  const counts = [leaderCount, followerCount, soloCount];
+
+  return (
+    <>
+      {items.map((item, index) => (
+        <div key={`${item.value}-${index}`} className="px-4 py-6 text-center">
+          <p className="font-tenor text-[56px] leading-none text-black md:text-[72px] xl:text-[96px]">
+            {formatStatValue(item.value, counts[index] ?? 1)}
+          </p>
+
+          <p className="mt-4 font-montserrat text-sm font-medium text-black md:text-base">
+            {item.label}
+          </p>
+
+          <p className="mt-2 font-montserrat text-sm leading-6 text-neutral-500">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </>
+  );
 }
 
 const fallbackHomeData: HomeData = {
@@ -548,7 +649,17 @@ export default function Home() {
 
       <SeasonalHearts />
 
-      <main className="min-h-screen bg-[#f8f6f1]">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="fixed inset-0 -z-10 h-full w-full object-cover opacity-40"
+      >
+        <source src="/hero.mp4" type="video/mp4" />
+      </video>
+
+      <main className="relative min-h-screen">
         <div className="container">
           {/* HERO */}
           <section className="flex min-h-[calc(100vh-100px)] flex-col pb-[60px] pt-[150px] md:min-h-[calc(100vh-120px)] md:pb-[80px] md:pt-[165px] xl:min-h-screen xl:pb-[110px] xl:pt-[210px]">
@@ -720,7 +831,7 @@ export default function Home() {
 
           {/* AUDIENCE */}
           <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[140px]">
-            <div className="mx-auto max-w-[980px]">
+            <div className="mx-auto max-w-[1024px]">
               <div className="mx-auto max-w-[860px] text-center">
                 <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
                   {content.audience.kicker}
@@ -745,8 +856,8 @@ export default function Home() {
                       <h3
                         className={`text-center font-tenor text-[22px] leading-[1.02] text-black md:text-[24px] xl:text-[26px] ${
                           index === 3
-                            ? 'mx-auto whitespace-normal xl:max-w-[165px]'
-                            : 'whitespace-nowrap'
+                          // ? 'mx-auto whitespace-normal xl:max-w-[165px]'
+                          // : 'whitespace-nowrap'
                         }`}
                       >
                         {item.title}
@@ -765,8 +876,8 @@ export default function Home() {
           {/* PROJECT CALCULATOR */}
           <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[130px]">
             <div className="mx-auto max-w-[1500px]">
-              <div className="grid overflow-hidden border border-[#e7e2d9] bg-[#f8f6f1] shadow-[0_24px_70px_rgba(0,0,0,0.06)] lg:grid-cols-[0.85fr_1.15fr]">
-                <div className="relative overflow-hidden bg-[#111111] px-7 py-10 text-white md:px-10 md:py-14 xl:px-12 xl:py-16">
+              <div className="grid overflow-hidden border border-[#e7e2d9] bg-[#f8f6f1] shadow-[0_24px_70px_rgba(0,0,0,0.06)] lg:grid-cols-[1fr_1.1fr]">
+                <div className="relative overflow-hidden bg-[#111111] px-7 py-10 text-white md:px-6 md:py-14 xl:px-12 xl:py-16">
                   <p className="font-tenor text-[24px] uppercase tracking-[-0.03em] text-white">
                     LABRITY
                   </p>
@@ -907,24 +1018,7 @@ export default function Home() {
             </div>
 
             <div className="mt-14 grid gap-6 border-t border-[#e7e2d9] pt-10 md:mt-16 md:grid-cols-3 md:gap-6 md:pt-12 xl:mt-20 xl:gap-8 xl:pt-14">
-              {content.stats.items.map((item, index) => (
-                <div
-                  key={`${item.value}-${index}`}
-                  className="px-4 py-6 text-center"
-                >
-                  <p className="font-tenor text-[56px] leading-none text-black md:text-[72px] xl:text-[96px]">
-                    <AnimatedStat value={item.value} />
-                  </p>
-
-                  <p className="mt-4 font-montserrat text-sm font-medium text-black md:text-base">
-                    {item.label}
-                  </p>
-
-                  <p className="mt-2 font-montserrat text-sm leading-6 text-neutral-500">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
+              <StatsCounters items={content.stats.items} />
             </div>
           </section>
 

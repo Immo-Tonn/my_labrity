@@ -87,13 +87,13 @@ export const generateQuizPdf = ({
 
   addText(quiz.result.title, 18);
 
-  addText(`${date}`, 11);
+  addText(`${quiz.result.pdfDate} ${date}`, 11);
 
   y += 5;
 
   // ================= INTRO =================
 
-  addText(quiz.result.subtitle, 12);
+  addText(quiz.result.pdfIntro, 12);
 
   y += 5;
 
@@ -133,7 +133,7 @@ export const generateQuizPdf = ({
 
   const estimateText = `${quiz.result.estimateFrom} ${estimate.toLocaleString()} €`;
 
-  const estimateHeight = 55;
+  const estimateHeight = 20 + 15 + 20;
 
   ensureSpace(estimateHeight);
 
@@ -147,21 +147,7 @@ export const generateQuizPdf = ({
 
   addText(estimateText, 26);
 
-  addText(quiz.result.deploymentNote, 9);
-
-  y += 8;
-
-  // ================= LEGAL =================
-
-  const legalHeight = 40;
-
-  ensureSpace(legalHeight);
-
-  addText(quiz.result.legalTitle, 15);
-
-  addText(quiz.result.legalText, 11);
-
-  y += 6;
+  y += 5;
 
   // ================= NEXT STEP =================
 
@@ -179,15 +165,15 @@ export const generateQuizPdf = ({
 
   // ================= CONTACT =================
 
-  addText(quiz.result.contactTitle, 15);
+  addText(quiz.result.pdfContactTitle, 15);
 
   addText('E-Mail: labrity@web.de');
 
-  addText('Website: https://mylabrity.vercel.app');
+  addText('Website: https://www.labrity.com');
 
   // ================= FOOTER =================
 
-  const footer = 'LABRITY • labrity@web.de • https://mylabrity.vercel.app';
+  const footer = 'LABRITY • labrity@web.de • https://www.labrity.com';
 
   const pageCount = pdf.getNumberOfPages();
 

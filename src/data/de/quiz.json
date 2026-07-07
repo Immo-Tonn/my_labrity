@@ -23,6 +23,10 @@
     "result": {
       "title": "Vielen Dank für Ihre Anfrage",
       "subtitle": "Ihre Angaben wurden erfolgreich übermittelt.",
+
+      "pdfDate": "Datum:",
+      "pdfIntro": "Dieses Dokument enthält eine erste Übersicht Ihres Projekts auf Grundlage der von Ihnen gemachten Angaben.",
+
       "contactTitle": "Kontaktdaten",
 
       "summaryTitle": "Ihre Projektanfrage",
@@ -34,13 +38,10 @@
 
       "nextText": "Wir prüfen Ihre Anfrage und melden uns in der Regel innerhalb von 24 Stunden bei Ihnen. Anschließend besprechen wir die Anforderungen im Detail und erstellen ein individuelles Angebot.",
 
+      "pdfContactTitle": "Kontakt zu uns",
+
       "downloadPdf": "PDF herunterladen",
       "estimateFrom": "ab",
-      "deploymentNote": "Die angegebene Kostenschätzung beinhaltet nicht die Bereitstellung (Deployment), das Hosting sowie ggf. anfallende externe Lizenz- oder Drittanbieterkosten.",
-
-"legalTitle": "Rechtliche Seiten auf Wunsch inklusive",
-
-"legalText": "Auf Wunsch unterstützen wir Sie ebenfalls bei der Erstellung eines DSGVO-konformen Impressums und einer Datenschutzerklärung. Gerne übernehmen wir die vollständige technische Einbindung in Ihre Website.",
       "close": "Fenster schließen"
     },
     "questions": [

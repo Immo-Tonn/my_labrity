@@ -2,7 +2,6 @@
 
 import { ContactFormData, QuizAnswers } from './quiz.types';
 import { calculateEstimate } from './estimate';
-import { generateQuizPdf } from './pdf';
 
 import { useQuiz } from '@/components/quiz';
 
@@ -15,12 +14,14 @@ type Props = {
 export default function QuizResult({ quiz, answers, form }: Props) {
   const { closeQuiz } = useQuiz();
 
-  const estimate = calculateEstimate(answers);
+  const estimate = calculateEstimate(answers, quiz.questions);
 
   const formatPrice = (value: number) =>
     new Intl.NumberFormat('de-DE').format(value);
 
-  const downloadPdf = () => {
+  const downloadPdf = async () => {
+    const { generateQuizPdf } = await import('./pdf');
+
     generateQuizPdf({
       form,
       answers,
@@ -94,21 +95,6 @@ export default function QuizResult({ quiz, answers, form }: Props) {
 
         <p className="text-sm leading-6 text-white/75">
           {quiz.result.estimateNote}
-        </p>
-
-        <p className="mt-4 text-xs leading-5 text-white/55">
-          {quiz.result.deploymentNote}
-        </p>
-      </div>
-
-      {/* LEGAL */}
-      <div className="mb-8 rounded-2xl border border-[#e7e2d9] bg-[#faf8f4] p-6">
-        <h3 className="mb-3 text-xl font-medium">
-          {quiz.result.legalTitle}
-        </h3>
-
-        <p className="leading-7 text-gray-700">
-          {quiz.result.legalText}
         </p>
       </div>
 
