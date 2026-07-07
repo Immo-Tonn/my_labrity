@@ -9,6 +9,8 @@ import { ContactFormData, QuizAnswers } from './quiz.types';
 
 import QuizResult from './QuizResult';
 
+import QuizResult from './QuizResult';
+
 type Props = {
   quiz: any;
   answers: QuizAnswers;
@@ -157,9 +159,13 @@ export default function ContactForm({ quiz, answers }: Props) {
 
   return (
     <div className="p-8">
-      <h2 className="mb-2 text-3xl">{quiz.form.title}</h2>
+      <h2 className="mb-2 text-3xl">
+        {quiz.form.title}
+      </h2>
 
-      <p className="mb-8 text-sm text-gray-500">{quiz.form.description}</p>
+      <p className="mb-8 text-sm text-gray-500">
+        {quiz.form.description}
+      </p>
 
       <div className="grid gap-5">
         <div>
@@ -239,7 +245,11 @@ export default function ContactForm({ quiz, answers }: Props) {
           </span>
         </label>
 
-        {errors.privacy && <p className={errorClass}>{errors.privacy}</p>}
+        {errors.privacy && (
+          <p className={errorClass}>
+            {errors.privacy}
+          </p>
+        )}
       </div>
 
       <button

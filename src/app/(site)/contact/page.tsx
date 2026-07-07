@@ -326,13 +326,13 @@ export default function ContactPage() {
     try {
       setIsLoading(true);
 
-      const message =
-        `New request from Labrity:%0A%0A` +
-        `First name: ${formData.firstName}%0A` +
-        `Last name: ${formData.lastName}%0A` +
-        `Email: ${formData.email}%0A` +
-        `Phone: ${formData.phone}%0A` +
-        `Message: ${formData.message}`;
+      const message = `📩 New request from Labrity
+
+👤 First name: ${formData.firstName}
+👤 Last name: ${formData.lastName}
+📧 Email: ${formData.email}
+📱 Phone: ${formData.phone}
+💬 Message: ${formData.message}`;
 
       await sendMessage(message);
 
