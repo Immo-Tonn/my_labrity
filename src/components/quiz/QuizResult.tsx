@@ -14,7 +14,7 @@ type Props = {
 export default function QuizResult({ quiz, answers, form }: Props) {
   const { closeQuiz } = useQuiz();
 
-  const estimate = calculateEstimate(answers);
+  const estimate = calculateEstimate(answers, quiz.questions);
 
   const formatPrice = (value: number) =>
     new Intl.NumberFormat('de-DE').format(value);

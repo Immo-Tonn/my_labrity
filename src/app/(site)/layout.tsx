@@ -1,8 +1,9 @@
 import { LanguageProvider } from '@/utils/LanguageContext';
 import './globals.css';
 import type { Metadata } from 'next';
-import Script from 'next/script';
+// import Script from 'next/script';
 import { Montserrat, Tenor_Sans } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 
 import QuizProvider from '@/components/quiz/QuizProvider';
 import { classnames } from '@/utils/classnames';
@@ -142,7 +143,7 @@ export default function RootLayout({
           'flex min-h-screen flex-col overflow-x-hidden bg-mainBcg',
         )}
       >
-        <Script
+        {/* <Script
           src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"
           strategy="beforeInteractive"
         />
@@ -152,7 +153,7 @@ export default function RootLayout({
           src="https://web.cmp.usercentrics.eu/ui/loader.js"
           data-ruleset-id="HFXPFXoht5HmRs"
           strategy="beforeInteractive"
-        />
+        /> */}
 
         <script
           type="application/ld+json"
@@ -183,6 +184,7 @@ export default function RootLayout({
             <FakeAiChat />
           </QuizProvider>
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );

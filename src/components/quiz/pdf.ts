@@ -169,11 +169,11 @@ export const generateQuizPdf = ({
 
   addText('E-Mail: labrity@web.de');
 
-  addText('Website: https://mylabrity.vercel.app');
+  addText('Website: https://www.labrity.com');
 
   // ================= FOOTER =================
 
-  const footer = 'LABRITY • labrity@web.de • https://mylabrity.vercel.app';
+  const footer = 'LABRITY • labrity@web.de • https://www.labrity.com';
 
   const pageCount = pdf.getNumberOfPages();
 

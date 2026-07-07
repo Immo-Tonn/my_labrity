@@ -1,142 +1,180 @@
-import { QuizAnswers } from './quiz.types';
+import { QuizAnswers, QuizQuestion } from './quiz.types';
 
-export const calculateEstimate = (answers: QuizAnswers): number => {
+const getSelectedIndex = (
+  questions: QuizQuestion[],
+  questionId: string,
+  value?: string,
+): number => {
+  if (!value) return -1;
+
+  const question = questions.find(q => q.id === questionId);
+
+  return question ? question.options.indexOf(value) : -1;
+};
+
+export const calculateEstimate = (
+  answers: QuizAnswers,
+  questions: QuizQuestion[],
+): number => {
   let total = 0;
 
-  const websiteType = answers.websiteType?.[0];
-  const clientType = answers.clientType?.[0];
-  const content = answers.content?.[0];
-  const languages = answers.languages?.[0];
-  const design = answers.design?.[0];
+  const websiteType = getSelectedIndex(
+    questions,
+    'websiteType',
+    answers.websiteType?.[0],
+  );
+  const clientType = getSelectedIndex(
+    questions,
+    'clientType',
+    answers.clientType?.[0],
+  );
+  const content = getSelectedIndex(questions, 'content', answers.content?.[0]);
+  const languages = getSelectedIndex(
+    questions,
+    'languages',
+    answers.languages?.[0],
+  );
+  const design = getSelectedIndex(questions, 'design', answers.design?.[0]);
   const features = answers.features || [];
+  const featureIndexes = features.map(feature =>
+    getSelectedIndex(questions, 'features', feature),
+  );
 
   // WEBSITE TYPE (BASE)
+  // 0: Simple presentation website | 1: Business website | 2: Online store
+  // 3: Custom solution | 4: Not sure
   switch (websiteType) {
-    case 'Einfache Präsentationsseite':
-      total += 999;
+    case 0:
+      total += 400;
       break;
 
-    case 'Unternehmenswebsite':
-      total += 1900;
+    case 1:
+      total += 1000;
       break;
 
-    case 'Onlineshop':
-      total += 8900;
+    case 2:
+    // total += 8900;
+    // break;
+
+    case 3:
+      total += 1100;
       break;
 
-    case 'Individuelle Lösung':
-      total += 8900;
-      break;
-
-    case 'Nicht sicher':
-      total += 999; // базовая стоимость
+    case 4:
+      total += 400; // базовая стоимость
       break;
   }
 
   // CLIENT TYPE
+  // 0: Private person | 1: Freelancer / Self-employed | 2: Small business
+  // 3: Company | 4: Not sure
   switch (clientType) {
-    case 'Freelancer / Selbstständig':
-      total += 300;
-      break;
-
-    case 'Kleinunternehmen':
-      total += 700;
-      break;
-
-    case 'Unternehmen':
-      total += 1500;
-      break;
-
-    case 'Nicht sicher':
-    default:
+    case 1:
       total += 0;
       break;
+
+    case 2:
+      total += 0;
+      break;
+
+    case 3:
+      total += 0;
+      break;
+
+    // default:
+    //   total += 0;
+    //   break;
   }
 
   // CONTENT
+  // 0: Yes, everything is ready | 1: Partially ready
+  // 2: Need help with content | 3: Not sure
   switch (content) {
-    case 'Teilweise vorhanden':
-      total += 500;
+    case 1:
+      total += 50;
       break;
 
-    case 'Benötige Unterstützung bei Inhalten':
-      total += 1200;
+    case 2:
+      total += 150;
       break;
 
-    case 'Nicht sicher':
-    default:
-      total += 0;
-      break;
+    // default:
+    //   total += 0;
+    //   break;
   }
 
   // LANGUAGES
+  // 0: One language | 1: Two languages | 2: Three or more languages | 3: Not sure
   switch (languages) {
-    case 'Zwei Sprachen':
-      total += 900;
+    case 1:
+      total += 150;
       break;
 
-    case 'Drei oder mehr Sprachen':
-      total += 1800;
+    case 2:
+      total += 200;
       break;
 
-    case 'Nicht sicher':
-    default:
-      total += 0;
-      break;
+    // default:
+    //   total += 0;
+    //   break;
   }
 
   // DESIGN
+  // 0: Design already exists | 1: Need a new design
+  // 2: Redesign existing website | 3: Not sure
   switch (design) {
-    case 'Neues Design erforderlich':
-      total += 1500;
+    case 1:
+      total += 300;
       break;
 
-    case 'Bestehende Website modernisieren':
-      total += 900;
+    case 2:
+      total += 250;
       break;
 
-    case 'Nicht sicher':
-    default:
-      total += 0;
-      break;
+    // default:
+    //   total += 0;
+    //   break;
   }
 
   // FEATURES
-  features.forEach(feature => {
-    switch (feature) {
-      case 'Kontaktformular':
+  // 0: Contact form | 1: Online appointment booking | 2: Price calculator
+  // 3: Customer management | 4: Connection with other services
+  // 5: Client account area | 6: Not sure
+  featureIndexes.forEach(featureIndex => {
+    switch (featureIndex) {
+      case 0:
+        total += 100;
+        break;
+
+      case 1:
+        total += 300;
+        break;
+
+      case 2:
+        total += 300;
+        break;
+
+      // case 3:
+      //   total += 2000;
+      //   break;
+
+      case 4:
         total += 200;
         break;
 
-      case 'Online-Terminbuchung':
-        total += 800;
+      case 5:
+        total += 1000;
         break;
 
-      case 'Preisrechner':
-        total += 1500;
-        break;
-
-      case 'Kundendaten verwalten':
-        total += 2000;
-        break;
-
-      case 'Verbindung mit anderen Systemen':
-        total += 2500;
-        break;
-
-      case 'Persönlicher Kundenbereich':
-        total += 3000;
-        break;
-
-      default:
-        total += 0;
-        break;
+      // default:
+      //   total += 0;
+      //   break;
     }
   });
 
   // MINIMUM SAFETY
-  if (total < 999) {
-    total = 999;
+  if (total < 400) {
+    total = 400;
   }
 
   return Math.round(total / 100) * 100;
