@@ -151,7 +151,7 @@ export default function RootLayout({
         <Script
           id="usercentrics-cmp"
           src="https://web.cmp.usercentrics.eu/ui/loader.js"
-          data-ruleset-id="HFXPFXoht5HmRs"
+          data-settings-id="HFXPFXoht5HmRs"
           strategy="beforeInteractive"
         />
 
