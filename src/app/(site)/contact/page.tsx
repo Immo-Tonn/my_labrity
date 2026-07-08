@@ -1,9 +1,9 @@
 'use client';
 
 import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 
 import { sendMessage } from '@/api/telegram';
-import { ModalPolicy } from '@/components/ui';
 import { useLanguage } from '@/utils/LanguageContext';
 import { getData } from '@/utils/getData';
 
@@ -326,13 +326,13 @@ export default function ContactPage() {
     try {
       setIsLoading(true);
 
-      const message =
-        `New request from Labrity:%0A%0A` +
-        `First name: ${formData.firstName}%0A` +
-        `Last name: ${formData.lastName}%0A` +
-        `Email: ${formData.email}%0A` +
-        `Phone: ${formData.phone}%0A` +
-        `Message: ${formData.message}`;
+      const message = `📩 New request from Labrity
+
+👤 First name: ${formData.firstName}
+👤 Last name: ${formData.lastName}
+📧 Email: ${formData.email}
+📱 Phone: ${formData.phone}
+💬 Message: ${formData.message}`;
 
       await sendMessage(message);
 
@@ -472,10 +472,14 @@ export default function ContactPage() {
 
                     <span>
                       {content.checkbox?.label}
-                      <ModalPolicy
-                        variant="form"
-                        nameBtn={content.checkbox?.linkLabel ?? ''}
-                      />
+                      <Link
+                        href="/privacy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-black underline underline-offset-2 transition duration-300 hover:text-neutral-600"
+                      >
+                        {content.checkbox?.linkLabel ?? ''}
+                      </Link>
                     </span>
                   </label>
 

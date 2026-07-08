@@ -23,17 +23,73 @@
     "siteName": "Labrity Web Studio",
     "locale": "ru_RU"
   },
-
   "hero": {
     "kicker": "Premium Web Studio",
     "titleFirst": "Сайты, которые",
-    "titleSecond": "убеждают и приводят клиентов",
+    "titleSecond": "вызывают доверие и приносят прибыль",
     "description": "Мы создаём современные сайты для компаний, экспертов и брендов.",
     "tagline": "Минимально. Современно. Эффективно.",
     "primaryButton": "Контакт",
     "secondaryButton": "Портфолио"
   },
-
+  "quizPreview": {
+    "kicker": "Калькулятор проекта",
+    "title": "Не уверены, какой пакет сайта подходит?",
+    "description": "Ответьте на несколько коротких вопросов. Мы проверим, какое решение подходит под вашу цель, бюджет и объём проекта.",
+    "leftTitle": "3 коротких шага. Понятная рекомендация.",
+    "leftDescription": "Быстро проверьте, какое решение для сайта подходит вашему проекту.",
+    "button": "Запустить калькулятор",
+    "note": "Бесплатно. Персонально. Без обязательств.",
+    "steps": ["Тип проекта", "Объём", "Рекомендация"]
+  },
+  "featuredProjects": {
+    "kicker": "Избранные проекты",
+    "title": "Сайты, которые вызывают доверие.",
+    "scrollLabel": "Скролл",
+    "button": "Смотреть портфолио",
+    "projectButton": "Смотреть портфолио",
+    "ctaKicker": "Следующий проект",
+    "ctaTitle": "Следующий проект может быть вашим.",
+    "ctaDescription": "Расскажите нам о вашей идее — мы превратим её в сильное цифровое присутствие.",
+    "ctaButton": "Запустить калькулятор проекта",
+    "items": [
+      {
+        "title": "Immo Tonn",
+        "category": "Недвижимость",
+        "image": "/images/projects/immo-tonn.png"
+      },
+      {
+        "title": "TLSG Studio",
+        "category": "Музыкальная индустрия",
+        "image": "/images/projects/tlsg.png"
+      },
+      {
+        "title": "Massage Studio",
+        "category": "Wellness & Spa",
+        "image": "/images/projects/massage.png"
+      },
+      {
+        "title": "Пиццерия",
+        "category": "Ресторан",
+        "image": "/images/projects/pizzeria.png"
+      },
+      {
+        "title": "Помощь пожилым",
+        "category": "Сопровождение пожилых",
+        "image": "/images/projects/seniorenbegleitung.png"
+      },
+      {
+        "title": "BeautyTime",
+        "category": "Beauty-индустрия",
+        "image": "/images/projects/beautytime.png"
+      },
+      {
+        "title": "Автомастерская",
+        "category": "Автомобильная индустрия",
+        "image": "/images/projects/werk.png"
+      }
+    ]
+  },
   "audience": {
     "kicker": "Для кого мы работаем",
     "title": "Для предпринимателей, компаний и брендов с амбициями.",
@@ -57,13 +113,38 @@
       }
     ]
   },
-
+  "differences": {
+    "kicker": "ПОЧЕМУ LABRITY?",
+    "title": "Сильные сайты для сильных брендов.",
+    "description": "",
+    "items": [
+      {
+        "title": "Стратегия",
+        "description": "Мы продумываем путь — от идеи до результата.",
+        "icon": "/images/home-icons/strategy.svg"
+      },
+      {
+        "title": "Минимализм",
+        "description": "Чистый дизайн без лишнего визуального шума.",
+        "icon": "/images/home-icons/minimalism.svg"
+      },
+      {
+        "title": "Индивидуально",
+        "description": "Каждый проект создаётся под ваш бизнес.",
+        "icon": "/images/home-icons/custom.svg"
+      },
+      {
+        "title": "Надёжность",
+        "description": "Прозрачная работа, сроки и понятная коммуникация.",
+        "icon": "/images/home-icons/reliable.svg"
+      }
+    ]
+  },
   "servicesSection": {
     "kicker": "Услуги",
     "title": "Цифровые решения для брендов с амбициями",
     "description": "От сильных лендингов до эксклюзивных сайтов — мы создаём цифровые решения, которые вызывают доверие, формируют впечатление и помогают привлекать новых клиентов."
   },
-
   "stats": {
     "kicker": "Цифровая сила",
     "title": "Видимость, доверие и рост — в одной системе",
@@ -86,7 +167,6 @@
       }
     ]
   },
-
   "processPreview": {
     "kicker": "Процесс",
     "title": "Понятный процесс для сильного результата.",
@@ -110,15 +190,12 @@
       }
     ]
   },
-
   "portfolio": {
     "kicker": "Портфолио",
     "title": "Посмотрите наши работы",
     "description": "Избранные проекты, которые показывают, как мы соединяем эстетику, стратегию и эффективность в сильное цифровое присутствие premium-уровня.",
     "button": "Смотреть портфолио",
-
     "topTags": ["SEO READY", "AI VISIBILITY", "HIGH-END FRONTEND"],
-
     "seoBlock": [
       {
         "kicker": "SEO OPTIMIZATION",
@@ -133,7 +210,6 @@
         "title": "Быстро. Современно. Качественно."
       }
     ],
-
     "marquee": [
       "SEO OPTIMIZATION",
       "AI VISIBILITY",
@@ -143,12 +219,9 @@
       "HIGH-END FRONTEND",
       "МИНИМАЛЬНО. СОВРЕМЕННО. ЭФФЕКТИВНО."
     ],
-
     "projectLabel": "Website Project",
     "projectButton": "Смотреть проект",
-
     "projectTags": ["SEO READY", "AI ОПТИМИЗАЦИЯ", "RESPONSIVE"],
-
     "categories": {
       "Immo Tonn": "Недвижимость",
       "TLSG Studio": "Музыкальная индустрия",
@@ -158,7 +231,6 @@
       "Werkstatt": "Автомобильная сфера",
       "Сопровождение пожилых людей": "Помощь пожилым"
     },
-
     "blackSection": {
       "kicker": "В разработке",
       "title": "Новые premium-проекты",
@@ -166,7 +238,6 @@
       "tags": ["Brand Websites", "SEO структура", "AI Visibility"],
       "status": "Скоро"
     },
-
     "items": [
       {
         "title": "Immo Tonn",
@@ -219,7 +290,6 @@
       }
     ]
   },
-
   "faq": {
     "kicker": "FAQ",
     "title": "Частые вопросы",
@@ -247,7 +317,6 @@
       }
     ]
   },
-
   "cta": {
     "kicker": "Начнём",
     "title": "Готовы создать что-то сильное вместе?",

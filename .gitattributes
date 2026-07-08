@@ -1,0 +1,19 @@
+# Normalize line endings to LF (matches Prettier endOfLine: "lf")
+* text=auto eol=lf
+
+# Binary assets — never touch line endings
+*.ttf   binary
+*.otf   binary
+*.woff  binary
+*.woff2 binary
+*.eot   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.webp  binary
+*.avif  binary
+*.pdf   binary
+*.mp4   binary
+*.webm  binary

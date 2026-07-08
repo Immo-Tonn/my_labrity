@@ -161,14 +161,21 @@
       {
         "children": [
           {
-            "text": "Wir setzen derzeit keine Analyse- oder Marketing-Cookies, Tracking-Pixel oder Drittanbieter-Analyse-Tools ein. Beim Besuch unserer Website werden lediglich technisch notwendige Daten verarbeitet, die für den ordnungsgemäßen Betrieb der Website erforderlich sind."
+            "text": "Diese Website verwendet die Consent-Management-Plattform (CMP) von Usercentrics, um Ihre Einwilligung zum Einsatz von Cookies und vergleichbaren Technologien einzuholen und zu verwalten, bevor diese aktiv werden. Beim ersten Aufruf der Website wird Ihnen ein Cookie-Banner angezeigt, über das Sie der Nutzung optionaler Cookies zustimmen, sie ablehnen oder individuell anpassen können."
           }
         ]
       },
       {
         "children": [
           {
-            "text": "Sollten wir zu einem späteren Zeitpunkt Cookies, ein Cookie-Einwilligungsbanner oder Web-Analyse-Tools integrieren, wird diese Datenschutzerklärung entsprechend aktualisiert und — soweit gesetzlich erforderlich — Ihre ausdrückliche Einwilligung eingeholt."
+            "text": "Wir nutzen Vercel Analytics (Vercel Inc.), um anonymisierte, aggregierte Nutzungsstatistiken (z. B. Seitenaufrufe) zu erheben und die Website zu verbessern. Vercel Analytics wird erst geladen und aktiv, nachdem Sie der entsprechenden Kategorie im Cookie-Banner zugestimmt haben."
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "Ihre Auswahl wird lokal gespeichert und kann jederzeit über den Cookie-Banner geändert oder widerrufen werden. Rechtsgrundlage für den Einsatz optionaler Cookies ist Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO."
           }
         ]
       }

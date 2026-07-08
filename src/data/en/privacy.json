@@ -161,14 +161,21 @@
       {
         "children": [
           {
-            "text": "We do not currently use analytics or marketing cookies, tracking pixels, or any third-party tracking tools. Only technically necessary data is processed when you visit our website."
+            "text": "This website uses the Usercentrics Consent Management Platform (CMP) to obtain and manage your consent for cookies and similar technologies before they become active. On your first visit, a cookie banner is displayed where you can accept, decline, or individually customize the use of optional cookies."
           }
         ]
       },
       {
         "children": [
           {
-            "text": "Should we introduce cookies, a cookie consent banner, or web analytics tools (e.g. Google Analytics, Matomo) in the future, this privacy policy will be updated accordingly and, where required by law, your explicit consent will be obtained."
+            "text": "We use Vercel Analytics (Vercel Inc.) to collect anonymized, aggregated usage statistics (e.g. page views) in order to improve the website. Vercel Analytics is only loaded and activated after you have given consent to the corresponding category in the cookie banner."
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "Your choice is stored locally and can be changed or withdrawn at any time via the cookie banner. The legal basis for the use of optional cookies is your consent pursuant to Art. 6(1)(a) GDPR."
           }
         ]
       }

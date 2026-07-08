@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import Link from 'next/link';
 
 import { sendMessage } from '@/api/telegram';
 
 import { ContactFormData, QuizAnswers } from './quiz.types';
 
-import { useQuiz } from '@/components/quiz';
-import { ModalPolicy } from '@/components/ui';
+import QuizResult from './QuizResult';
 
 type Props = {
   quiz: any;
@@ -15,10 +15,8 @@ type Props = {
 };
 
 export default function ContactForm({ quiz, answers }: Props) {
-  const { closeQuiz } = useQuiz();
-
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState('');
+  const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
 
   const [errors, setErrors] = useState<
@@ -33,15 +31,9 @@ export default function ContactForm({ quiz, answers }: Props) {
     privacy: false,
   });
 
-  useEffect(() => {
-    if (!success) return;
-
-    const timeout = setTimeout(() => {
-      closeQuiz();
-    }, 5000);
-
-    return () => clearTimeout(timeout);
-  }, [success, closeQuiz]);
+  if (submitted) {
+    return <QuizResult quiz={quiz} answers={answers} form={form} />;
+  }
 
   const validate = () => {
     const nextErrors: Partial<Record<keyof ContactFormData, string>> = {};
@@ -119,7 +111,8 @@ export default function ContactForm({ quiz, answers }: Props) {
 
     try {
       await sendMessage(buildMessage());
-      setSuccess(quiz.form.success);
+
+      setSubmitted(true);
     } catch {
       setError(quiz.form.error);
     } finally {
@@ -134,6 +127,13 @@ export default function ContactForm({ quiz, answers }: Props) {
         ...prev,
         [field]: e.target.value,
       }));
+
+      if (errors[field]) {
+        setErrors(prev => ({
+          ...prev,
+          [field]: undefined,
+        }));
+      }
     };
 
   const inputClass = `
@@ -169,6 +169,7 @@ export default function ContactForm({ quiz, answers }: Props) {
             placeholder={quiz.form.firstName}
             className={inputClass}
           />
+
           {errors.firstName && <p className={errorClass}>{errors.firstName}</p>}
         </div>
 
@@ -179,6 +180,7 @@ export default function ContactForm({ quiz, answers }: Props) {
             placeholder={quiz.form.lastName}
             className={inputClass}
           />
+
           {errors.lastName && <p className={errorClass}>{errors.lastName}</p>}
         </div>
 
@@ -189,6 +191,7 @@ export default function ContactForm({ quiz, answers }: Props) {
             placeholder={quiz.form.phone}
             className={inputClass}
           />
+
           {errors.phone && <p className={errorClass}>{errors.phone}</p>}
         </div>
 
@@ -199,6 +202,7 @@ export default function ContactForm({ quiz, answers }: Props) {
             placeholder={quiz.form.email}
             className={inputClass}
           />
+
           {errors.email && <p className={errorClass}>{errors.email}</p>}
         </div>
       </div>
@@ -209,15 +213,29 @@ export default function ContactForm({ quiz, answers }: Props) {
             type="checkbox"
             checked={form.privacy}
             onChange={e => {
-              setForm(prev => ({ ...prev, privacy: e.target.checked }));
-              setErrors(prev => ({ ...prev, privacy: undefined }));
+              setForm(prev => ({
+                ...prev,
+                privacy: e.target.checked,
+              }));
+
+              setErrors(prev => ({
+                ...prev,
+                privacy: undefined,
+              }));
             }}
             className="mt-1 h-4 w-4 border border-[#e7e2d9]"
           />
 
           <span>
             {quiz.form.privacyLabel}
-            <ModalPolicy variant="form" nameBtn={quiz.form.privacyLinkLabel} />
+            <Link
+              href="/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-6 ml-5 mr-auto block cursor-pointer font-montserrat text-[12px] font-normal not-italic leading-4 tracking-[0.2px] text-accent transition duration-300 hover:text-hover sm:relative sm:top-[-16px] sm:ml-[45px] sm:inline-block md:static md:ml-5 md:block"
+            >
+              {quiz.form.privacyLinkLabel}
+            </Link>
           </span>
         </label>
 
@@ -225,7 +243,7 @@ export default function ContactForm({ quiz, answers }: Props) {
       </div>
 
       <button
-        disabled={loading || !!success}
+        disabled={loading}
         onClick={submit}
         className="
           mt-8
@@ -242,12 +260,6 @@ export default function ContactForm({ quiz, answers }: Props) {
       >
         {loading ? '...' : quiz.submit}
       </button>
-
-      {success && (
-        <div className="mt-6 rounded-2xl bg-green-50 p-4 text-sm text-green-700">
-          {success}
-        </div>
-      )}
 
       {error && (
         <div className="mt-6 rounded-2xl bg-red-50 p-4 text-sm text-red-700">

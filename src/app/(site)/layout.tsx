@@ -1,8 +1,10 @@
 import { LanguageProvider } from '@/utils/LanguageContext';
 import './globals.css';
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Montserrat, Tenor_Sans } from 'next/font/google';
 
+import ConsentAnalytics from '@/components/common/ConsentAnalytics';
 import QuizProvider from '@/components/quiz/QuizProvider';
 import { classnames } from '@/utils/classnames';
 import { Footer } from '@/layout/Footer';
@@ -141,6 +143,18 @@ export default function RootLayout({
           'flex min-h-screen flex-col overflow-x-hidden bg-mainBcg',
         )}
       >
+        <Script
+          src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"
+          strategy="beforeInteractive"
+        />
+
+        <Script
+          id="usercentrics-cmp"
+          src="https://web.cmp.usercentrics.eu/ui/loader.js"
+          data-ruleset-id="HFXPFXoht5HmRs"
+          strategy="beforeInteractive"
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -170,6 +184,7 @@ export default function RootLayout({
             <FakeAiChat />
           </QuizProvider>
         </LanguageProvider>
+        <ConsentAnalytics />
       </body>
     </html>
   );
