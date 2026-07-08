@@ -16,12 +16,21 @@ declare global {
 
 // Matches the Usercentrics service name/category configured in the CMP
 // dashboard for Vercel Analytics — update the regex if that name changes.
-const hasAnalyticsConsent = () =>
-  (window.UC_UI?.getServicesBaseInfo() ?? []).some(
-    service =>
-      /vercel|analytics|measurement/i.test(service.name) &&
-      service.consent.status,
-  );
+const hasAnalyticsConsent = () => {
+  try {
+    const services = window.UC_UI?.getServicesBaseInfo?.();
+
+    if (!Array.isArray(services)) return false;
+
+    return services.some(
+      service =>
+        /vercel|analytics|measurement/i.test(service.name) &&
+        service.consent.status,
+    );
+  } catch {
+    return false;
+  }
+};
 
 export default function ConsentAnalytics() {
   const [consented, setConsented] = useState(false);
