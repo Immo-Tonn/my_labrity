@@ -15,6 +15,7 @@ import {
   Gem,
   HelpCircle,
   PanelsTopLeft,
+  Palette,
   RefreshCcw,
   Rocket,
   ShieldCheck,
@@ -180,7 +181,14 @@ const fallbackData = fallbackPricesData as NormalizedPricesData;
 
 const heroEase = [0.22, 1, 0.36, 1] as const;
 
-const packageIcons = [PanelsTopLeft, BadgeCheck, Gem, Rocket, Sparkles];
+const packageIcons = [
+  Palette,
+  PanelsTopLeft,
+  BadgeCheck,
+  Gem,
+  Rocket,
+  Sparkles,
+];
 const priceFactorIcons = [Target, Sparkles, ShieldCheck];
 
 function hasPricesData(data: Partial<PricesData> | null | undefined) {
