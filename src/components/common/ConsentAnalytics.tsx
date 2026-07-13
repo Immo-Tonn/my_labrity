@@ -26,7 +26,12 @@ export default function ConsentAnalytics() {
   const [consented, setConsented] = useState(false);
 
   useEffect(() => {
-    const checkConsent = () => setConsented(hasAnalyticsConsent());
+    // Usercentrics dispatches UC_UI_CMP_EVENT synchronously and only writes
+    // the updated consent state to localStorage right after — reading it
+    // inside the handler itself picks up the stale value. Defer to the next
+    // tick so the write has landed by the time we read it.
+    const checkConsent = () =>
+      setTimeout(() => setConsented(hasAnalyticsConsent()), 0);
 
     checkConsent();
 
