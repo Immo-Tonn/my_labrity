@@ -1,32 +1,22 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 
-declare global {
-  interface Window {
-    UC_UI?: {
-      getServicesBaseInfo: () => Array<{
-        name: string;
-        consent: { status: boolean };
-      }>;
-    };
-  }
-}
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
-// Matches the Usercentrics service name/category configured in the CMP
-// dashboard for Vercel Analytics — update the regex if that name changes.
+// This Usercentrics account has no "services" configured — consent is
+// tracked purely via Google Consent Mode categories, so UC_UI.getServicesBaseInfo()
+// always returns {} even after consent is granted. Read the GCM signal
+// Usercentrics writes to localStorage instead.
 const hasAnalyticsConsent = () => {
   try {
-    const services = window.UC_UI?.getServicesBaseInfo?.();
+    const raw = localStorage.getItem('ucData');
+    if (!raw) return false;
 
-    if (!Array.isArray(services)) return false;
-
-    return services.some(
-      service =>
-        /vercel|analytics|measurement/i.test(service.name) &&
-        service.consent.status,
-    );
+    const { gcm } = JSON.parse(raw) as { gcm?: { analyticsStorage?: string } };
+    return gcm?.analyticsStorage === 'granted';
   } catch {
     return false;
   }
@@ -51,5 +41,25 @@ export default function ConsentAnalytics() {
 
   if (!consented) return null;
 
-  return <Analytics />;
+  return (
+    <>
+      <Analytics />
+      {GA_MEASUREMENT_ID && (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="ga-init" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            `}
+          </Script>
+        </>
+      )}
+    </>
+  );
 }
