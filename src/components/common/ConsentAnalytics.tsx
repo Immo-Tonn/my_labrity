@@ -1,33 +1,37 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 
-declare global {
-  interface Window {
-    UC_UI?: {
-      getServicesBaseInfo: () => Array<{
-        name: string;
-        consent: { status: boolean };
-      }>;
-    };
-  }
-}
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
-// Matches the Usercentrics service name/category configured in the CMP
-// dashboard for Vercel Analytics — update the regex if that name changes.
-const hasAnalyticsConsent = () =>
-  (window.UC_UI?.getServicesBaseInfo() ?? []).some(
-    service =>
-      /vercel|analytics|measurement/i.test(service.name) &&
-      service.consent.status,
-  );
+// This Usercentrics account has no "services" configured — consent is
+// tracked purely via Google Consent Mode categories, so UC_UI.getServicesBaseInfo()
+// always returns {} even after consent is granted. Read the GCM signal
+// Usercentrics writes to localStorage instead.
+const hasAnalyticsConsent = () => {
+  try {
+    const raw = localStorage.getItem('ucData');
+    if (!raw) return false;
+
+    const { gcm } = JSON.parse(raw) as { gcm?: { analyticsStorage?: string } };
+    return gcm?.analyticsStorage === 'granted';
+  } catch {
+    return false;
+  }
+};
 
 export default function ConsentAnalytics() {
   const [consented, setConsented] = useState(false);
 
   useEffect(() => {
-    const checkConsent = () => setConsented(hasAnalyticsConsent());
+    // Usercentrics dispatches UC_UI_CMP_EVENT synchronously and only writes
+    // the updated consent state to localStorage right after — reading it
+    // inside the handler itself picks up the stale value. Defer to the next
+    // tick so the write has landed by the time we read it.
+    const checkConsent = () =>
+      setTimeout(() => setConsented(hasAnalyticsConsent()), 0);
 
     checkConsent();
 
@@ -42,5 +46,25 @@ export default function ConsentAnalytics() {
 
   if (!consented) return null;
 
-  return <Analytics />;
+  return (
+    <>
+      <Analytics />;
+      {GA_MEASUREMENT_ID && (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="ga-init" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            `}
+          </Script>
+        </>
+      )}
+    </>
+  );
 }
