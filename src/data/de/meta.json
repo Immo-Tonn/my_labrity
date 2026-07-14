@@ -25,7 +25,7 @@
 
   "openGraph": {
     "type": "website",
-    "url": "https://labrity.com",
+    "url": "/",
 
     "title": "Labrity – Professionelle Websites für Unternehmen",
 
@@ -35,7 +35,7 @@
 
     "images": [
       {
-        "url": "https://labrity.com/meta/opengraph-image.jpg",
+        "url": "/meta/opengraph-image.jpg",
         "width": 1200,
         "height": 630,
         "alt": "Labrity – Moderne Websites für Unternehmen"
