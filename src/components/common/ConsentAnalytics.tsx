@@ -48,7 +48,7 @@ export default function ConsentAnalytics() {
 
   return (
     <>
-      <Analytics />;
+      <Analytics />
       {GA_MEASUREMENT_ID && (
         <>
           <Script
