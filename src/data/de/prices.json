@@ -29,7 +29,7 @@
     "note": "Professionelle Websites ab 999 €",
     "stats": [
       {
-        "value": "05",
+        "value": "06",
         "label": "Website-Pakete"
       },
       {
@@ -68,8 +68,28 @@
   "packages": {
     "kicker": "Website-Pakete",
     "title": "Klare Website-Lösungen für unterschiedliche Ziele.",
-    "description": "Ob Landingpage, kleine Firmenwebsite, Business-Auftritt, Premium-Website oder Shop — unsere Pakete geben Ihnen eine klare Orientierung. Der finale Preis richtet sich nach Umfang und Anforderungen.",
+    "description": "Ob Portfolio, Landingpage, kleine Firmenwebsite, Business-Auftritt, Premium-Website oder Shop — unsere Pakete geben Ihnen eine klare Orientierung. Der finale Preis richtet sich nach Umfang und Anforderungen.",
     "items": [
+      {
+        "name": "Portfolio",
+        "badge": "",
+        "price": "ab 400 €",
+        "shortDescription": "Für Kreative, Fotografen, Designer und Freelancer, die ihre Arbeiten übersichtlich und stilvoll präsentieren möchten.",
+        "idealFor": "Ideal für Fotografen, Designer, Künstler, Models, Architekten, Entwickler und andere Kreative, die ihre Projekte zeigen möchten.",
+        "features": [
+          "1 Seite mit Projektgalerie",
+          "Individuelles Design",
+          "Responsive Umsetzung",
+          "Kontaktformular",
+          "Basis-SEO",
+          "Launch-Vorbereitung"
+        ],
+        "suitableFor": "Sie möchten Ihre Arbeiten, Projekte oder Referenzen stilvoll präsentieren und schnell online sichtbar sein.",
+        "notSuitableFor": "Sie mehrere Unterseiten, komplexe Funktionen, einen Shop oder eine umfangreiche Content-Struktur brauchen.",
+        "duration": "ca. 2–4 Wochen",
+        "support": "Launch-Support inklusive",
+        "button": "Portfolio anfragen"
+      },
       {
         "name": "Landing Page",
         "badge": "",

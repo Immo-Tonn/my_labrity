@@ -13,6 +13,7 @@ import meta from '@/data/de/meta.json';
 import FakeAiChat from '@/components/common/FakeAiChat';
 import LiveActivity from '@/components/common/LiveActivity';
 import HtmlLang from '@/components/ui/HtmlLang';
+import { SITE_URL } from '@/utils/siteUrl';
 
 const montserrat = Montserrat({
   subsets: ['cyrillic', 'latin'],
@@ -28,17 +29,15 @@ const tenor = Tenor_Sans({
   variable: '--font-tenor',
 });
 
-const NEXT_PUBLIC_URL = process.env.NEXT_PUBLIC_URL || 'https://labrity.com';
-
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
 
   name: 'Labrity',
 
-  url: NEXT_PUBLIC_URL,
+  url: SITE_URL,
 
-  logo: `${NEXT_PUBLIC_URL}/meta/logo.png`,
+  logo: `${SITE_URL}/meta/logo.png`,
 
   description:
     'Professionelle moderne Websites für Unternehmen, Selbstständige und Marken in Deutschland.',
@@ -109,17 +108,15 @@ const faqStructuredData = {
 const { title, description, keywords, manifest, openGraph, icons } = meta;
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title,
   description,
   keywords,
   icons,
   manifest,
-  alternates: {
-    canonical: NEXT_PUBLIC_URL,
-  },
   openGraph: {
     ...openGraph,
-    url: NEXT_PUBLIC_URL,
+    url: SITE_URL,
   },
   twitter: {
     card: 'summary_large_image',

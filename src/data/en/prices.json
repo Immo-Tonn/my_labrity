@@ -8,7 +8,7 @@
     "note": "Professional websites from €1,000",
     "stats": [
       {
-        "value": "05",
+        "value": "06",
         "label": "Website packages"
       },
       {
@@ -47,8 +47,28 @@
   "packages": {
     "kicker": "Website Packages",
     "title": "Clear website solutions for different goals.",
-    "description": "Whether it is a landing page, a small business website, a professional business presence, a premium website or an online shop — our packages give you clear orientation. The final price depends on scope and requirements.",
+    "description": "Whether it is a portfolio, a landing page, a small business website, a professional business presence, a premium website or an online shop — our packages give you clear orientation. The final price depends on scope and requirements.",
     "items": [
+      {
+        "name": "Portfolio",
+        "badge": "",
+        "price": "from €400",
+        "shortDescription": "For creatives, photographers, designers and freelancers who want to present their work in a clear and stylish way.",
+        "idealFor": "Ideal for photographers, designers, artists, models, architects, developers and other creatives who want to showcase their projects.",
+        "features": [
+          "1 page with project gallery",
+          "Individual design",
+          "Responsive implementation",
+          "Contact form",
+          "Basic SEO",
+          "Launch preparation"
+        ],
+        "suitableFor": "You want to present your work, projects or references in a stylish way and become visible online quickly.",
+        "notSuitableFor": "You need several subpages, complex functions, a shop or a larger content structure.",
+        "duration": "approx. 2–4 weeks",
+        "support": "Launch support included",
+        "button": "Request portfolio"
+      },
       {
         "name": "Landing Page",
         "badge": "",
