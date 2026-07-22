@@ -1,15 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useEffect, useMemo, useState } from 'react';
-import Link from 'next/link';
-
-import { ServicesList } from '@/components/common/ServicesList';
 import { useQuiz } from '@/components/quiz';
-import { useLanguage } from '@/utils/LanguageContext';
-import { getData } from '@/utils/getData';
+import { ServicesList } from '@/components/common/ServicesList';
+import { LocalizedLink } from '@/components/ui/LocalizedLink';
 
-type ServicesPageData = {
+export type ServicesPageData = {
   servicesSection: {
     kicker: string;
     title: string;
@@ -24,55 +20,13 @@ type ServicesPageData = {
   };
 };
 
-const fallbackServicesData: ServicesPageData = {
-  servicesSection: {
-    kicker: 'Leistungen',
-    title: 'Digitale Leistungen für Marken mit Anspruch',
-    description:
-      'Von starken Landingpages bis zu exklusiven Webauftritten entwickeln wir digitale Lösungen, die Vertrauen schaffen, Wirkung erzeugen und neue Kunden gewinnen.',
-  },
-  cta: {
-    kicker: 'Starten wir',
-    title: 'Bereit, gemeinsam etwas Starkes aufzubauen?',
-    description:
-      'Wir entwickeln Websites, die hochwertig aussehen, Vertrauen schaffen und Ihr Unternehmen digital klar positionieren.',
-    primaryButton: 'Projekt starten',
-    secondaryButton: 'Individuelles Angebot',
-  },
-};
-
-export default function ServicesPageClient() {
-  const { lang } = useLanguage();
+export default function ServicesPageClient({
+  initialData,
+}: {
+  initialData: ServicesPageData;
+}) {
   const { openQuiz } = useQuiz();
-  const [services, setServices] = useState<ServicesPageData | null>(null);
-
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const data = await getData('home', lang);
-
-        setServices({
-          ...fallbackServicesData,
-
-          servicesSection: {
-            ...fallbackServicesData.servicesSection,
-            ...(data?.servicesSection || {}),
-          },
-
-          cta: {
-            ...fallbackServicesData.cta,
-            ...(data?.cta || {}),
-          },
-        });
-      } catch {
-        setServices(fallbackServicesData);
-      }
-    };
-
-    loadData();
-  }, [lang]);
-
-  const content = useMemo(() => services ?? fallbackServicesData, [services]);
+  const content = initialData;
 
   return (
     <main className="min-h-screen bg-[#f8f6f1] pt-[120px] md:pt-[140px] xl:pt-[170px]">
@@ -164,12 +118,12 @@ export default function ServicesPageClient() {
               {content.cta.primaryButton}
             </button>
 
-            <Link
+            <LocalizedLink
               href="/contact"
               className="inline-flex min-h-[56px] items-center justify-center border border-white/40 bg-transparent px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:border-white hover:bg-white hover:text-black"
             >
               {content.cta.secondaryButton}
-            </Link>
+            </LocalizedLink>
           </div>
         </div>
       </section>

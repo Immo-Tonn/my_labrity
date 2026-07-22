@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { classnames } from '@/utils/classnames';
+import { LocalizedLink } from '@/components/ui/LocalizedLink';
 import { NavbarLinkProps } from './types';
 
 export const NavbarLink: React.FC<NavbarLinkProps> = ({
@@ -23,9 +23,9 @@ export const NavbarLink: React.FC<NavbarLinkProps> = ({
 
   return (
     <li>
-      <Link href={href} onClick={onClick} className={linkClasses}>
+      <LocalizedLink href={href} onClick={onClick} className={linkClasses}>
         {title}
-      </Link>
+      </LocalizedLink>
     </li>
   );
 };

@@ -1,7 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
-import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { BadgeCheck, Gem, PanelsTopLeft, Telescope } from 'lucide-react';
 
@@ -9,8 +8,8 @@ import SeasonalSnow from '@/components/SeasonalSnow';
 import SeasonalHearts from '@/components/SeasonalHearts';
 import { useQuiz } from '@/components/quiz';
 import { Preloader } from '@/components/ui';
+import { LocalizedLink } from '@/components/ui/LocalizedLink';
 import { useLanguage } from '@/utils/LanguageContext';
-import { getData } from '@/utils/getData';
 
 type StatItem = {
   value: string;
@@ -59,7 +58,7 @@ type ProcessPreviewItem = {
   title: string;
 };
 
-type HomeData = {
+export type HomeData = {
   hero: {
     kicker: string;
     titleFirst: string;
@@ -279,346 +278,16 @@ function StatsCounters({ items }: { items: StatItem[] }) {
   );
 }
 
-const fallbackHomeData: HomeData = {
-  hero: {
-    kicker: 'Premium Web Studio',
-    titleFirst: 'Websites,',
-    titleSecond: 'die verkaufen.',
-    description:
-      'Wir entwickeln moderne Websites für Unternehmen, Experten und Marken.',
-    tagline: 'Minimal. Modern. Effektiv.',
-    primaryButton: 'Kontakt',
-    secondaryButton: 'Portfolio',
-  },
-
-  quizPreview: {
-    kicker: 'Projekt-Kalkulator',
-    title: 'Nicht sicher, welche Website zu Ihrem Projekt passt?',
-    description:
-      'Beantworten Sie ein paar kurze Fragen und erhalten Sie eine klarere Orientierung für Ihr Website-Projekt.',
-    leftTitle: 'Finden Sie das passende Website-Paket.',
-    leftDescription:
-      'Unser kurzer Projekt-Kalkulator hilft Ihnen, den passenden Umfang für Ihr Projekt besser einzuschätzen.',
-    button: 'Kalkulator starten',
-    note: '3 kurze Schritte. Eine klare Empfehlung.',
-    steps: ['Projektart', 'Umfang', 'Empfehlung'],
-  },
-
-  featuredProjects: {
-    kicker: 'Ausgewählte Projekte',
-    title: 'Websites, die Vertrauen schaffen.',
-    scrollLabel: 'Scroll',
-    button: 'Portfolio ansehen',
-    projectButton: 'Portfolio ansehen',
-    ctaKicker: 'Nächstes Projekt',
-    ctaTitle: 'Das nächste Projekt könnte Ihres sein.',
-    ctaDescription:
-      'Erzählen Sie uns von Ihrer Idee — wir entwickeln daraus einen starken digitalen Auftritt.',
-    ctaButton: 'Kalkulator starten',
-    items: [
-      {
-        title: 'Immo Tonn',
-        category: 'Immobilien',
-        image: '/images/projects/immo-tonn.png',
-      },
-      {
-        title: 'TLSG Studio',
-        category: 'Musikindustrie',
-        image: '/images/projects/tlsg.png',
-      },
-      {
-        title: 'Massage Studio',
-        category: 'Wellness & Spa',
-        image: '/images/projects/massage.png',
-      },
-      {
-        title: 'Pizzeria',
-        category: 'Restaurant',
-        image: '/images/projects/pizzeria.png',
-      },
-      {
-        title: 'Alltagsbegleitung',
-        category: 'Seniorenbegleitung',
-        image: '/images/projects/seniorenbegleitung.png',
-      },
-      {
-        title: 'BeautyTime',
-        category: 'Beautyindustrie',
-        image: '/images/projects/beautytime.png',
-      },
-      {
-        title: 'Werkstatt',
-        category: 'Automobilindustrie',
-        image: '/images/projects/werk.png',
-      },
-    ],
-  },
-
-  audience: {
-    kicker: 'Für wen wir arbeiten',
-    title: 'Für Selbstständige, Unternehmen und Marken mit Anspruch.',
-    description:
-      'Ob Einzelunternehmer, wachsendes Unternehmen oder etablierte Marke — wir entwickeln Websites für alle, die professioneller, stärker und überzeugender auftreten wollen.',
-    items: [
-      {
-        title: 'Selbstständige',
-        description:
-          'Für alle, die professionell auftreten und Vertrauen aufbauen wollen.',
-      },
-      {
-        title: 'Unternehmen',
-        description:
-          'Für Firmen, die klarer, stärker und hochwertiger wahrgenommen werden möchten.',
-      },
-      {
-        title: 'Marken',
-        description:
-          'Für Brands, die Individualität, Stil und eine starke digitale Präsenz brauchen.',
-      },
-      {
-        title: 'Individuelle Projekte',
-        description:
-          'Für besondere Konzepte, die mehr brauchen als eine gewöhnliche Website.',
-      },
-    ],
-  },
-
-  differences: {
-    kicker: 'WARUM LABRITY?',
-    title: 'Starke Websites für starke Marken.',
-    description: '',
-    items: [
-      {
-        title: 'Strategisch',
-        description: 'Wir denken mit — von der Idee bis zur Conversion.',
-        icon: '/images/home-icons/strategy.svg',
-      },
-      {
-        title: 'Minimalistisch',
-        description:
-          'Klares Design, das sich auf das Wesentliche konzentriert.',
-        icon: '/images/home-icons/minimalism.svg',
-      },
-      {
-        title: 'Maßgeschneidert',
-        description: 'Jedes Projekt ist einzigartig — wie dein Business.',
-        icon: '/images/home-icons/custom.svg',
-      },
-      {
-        title: 'Zuverlässig',
-        description: 'Termintreu, transparent und auf Augenhöhe.',
-        icon: '/images/home-icons/reliable.svg',
-      },
-    ],
-  },
-
-  servicesSection: {
-    kicker: 'Leistungen',
-    title: 'Digitale Leistungen für Marken mit Anspruch',
-    description:
-      'Von starken Landingpages bis zu exklusiven Webauftritten entwickeln wir digitale Lösungen, die Vertrauen schaffen, Wirkung erzeugen und neue Kunden gewinnen.',
-  },
-
-  stats: {
-    kicker: 'Digitale Stärke',
-    title: 'Sichtbarkeit, Vertrauen und Wachstum — in einem System',
-    description:
-      'Wir entwickeln Websites, bei denen individuelles Design, permanente Online-Verfügbarkeit und eine ganzheitliche Struktur gemeinsam für eine starke digitale Präsenz arbeiten.',
-    items: [
-      {
-        value: '100%',
-        label: 'Individuelles Design',
-        description:
-          'Jede Website wird passend zu Business, Zielgruppe und Positionierung entwickelt — ohne generische Templates.',
-      },
-      {
-        value: '24/7',
-        label: 'Online-Verfügbarkeit',
-        description:
-          'Ihre Website arbeitet dauerhaft für Ihr Unternehmen und hilft Kunden, Sie jederzeit online zu finden.',
-      },
-      {
-        value: '360°',
-        label: 'Ganzheitlicher Ansatz',
-        description:
-          'Struktur, Design, Vertrauen, SEO und Nutzerführung werden als ein zusammenhängendes System gedacht.',
-      },
-    ],
-  },
-
-  processPreview: {
-    kicker: 'Ablauf',
-    title: 'Ein klarer Prozess für ein starkes Ergebnis.',
-    description:
-      'Wir führen Ihr Projekt Schritt für Schritt — von der ersten Idee über Struktur und Design bis zum fertigen digitalen Auftritt.',
-    button: 'Ablauf ansehen',
-    items: [
-      { title: 'Analyse' },
-      { title: 'Struktur' },
-      { title: 'Design' },
-      { title: 'Entwicklung' },
-      { title: 'Launch' },
-    ],
-  },
-
-  portfolio: {
-    kicker: 'Portfolio',
-    title: 'Entdecken Sie unsere Arbeiten',
-    description:
-      'Ausgewählte Projekte, die zeigen, wie wir Ästhetik, Strategie und Performance zu einer digitalen Präsenz auf Premium-Niveau verbinden.',
-    button: 'Portfolio ansehen',
-    items: [
-      {
-        title: 'Immo Tonn',
-        description:
-          'Hochwertige Immobilien-Website mit klarem Aufbau, professioneller Objektpräsentation und starkem Vertrauenseffekt für Kauf und Verkauf.',
-        imageVariant: 'first',
-        href: 'https://immo-tonn.de/',
-      },
-      {
-        title: 'TLSG Studio',
-        description:
-          'Moderner digitaler Auftritt für ein Musik- und Sounddesign-Studio mit Fokus auf Markenwirkung, Klarheit und kreativer Identität.',
-        imageVariant: 'second',
-        href: 'https://tlsglabel.com/',
-      },
-      {
-        title: 'Massage Studio',
-        description:
-          'Beruhigende Website für ein Massage-Angebot mit klarer Nutzerführung, eleganter Service-Präsentation und vertrauensvoller Buchungsstruktur.',
-        imageVariant: 'first',
-        href: 'https://massage-landing-swart.vercel.app/#services',
-      },
-      {
-        title: 'Alltagsbegleitung für Senioren',
-        description:
-          'Eine kleine und einfache Landingpage für eine selbstständige Alltagsbegleiterin. Das Projekt zeigt eine schnell realisierbare Website-Lösung für ein kleines Budget — klar, ruhig und auf direkte Kontaktaufnahme ausgerichtet.',
-        imageVariant: 'first',
-        href: 'https://pflege-landing-1.vercel.app/',
-      },
-      {
-        title: 'BeautyTime',
-        description:
-          'Eleganter Online-Auftritt für einen Beauty-Salon mit Premium-Look, klarer Angebotsstruktur und starker lokaler Wirkung.',
-        imageVariant: 'second',
-        href: 'https://beautylanding1.vercel.app/de/index.html',
-      },
-      {
-        title: 'Werkstatt',
-        description:
-          'Moderner Webauftritt für eine KFZ-Werkstatt mit Fokus auf Vertrauen, klare Kommunikation und professionelle Service-Präsentation.',
-        imageVariant: 'second',
-        href: 'https://auto-service-landing-five.vercel.app/de',
-      },
-    ],
-  },
-
-  cta: {
-    kicker: 'Starten wir',
-    title: 'Bereit, gemeinsam etwas Starkes aufzubauen?',
-    description:
-      'Wir entwickeln Websites, die hochwertig aussehen, Vertrauen schaffen und Ihr Unternehmen digital klar positionieren.',
-    primaryButton: 'Projekt starten',
-    secondaryButton: 'Individuelles Angebot',
-  },
-};
-
 const differenceIcons = [Telescope, PanelsTopLeft, Gem, BadgeCheck];
 
-export default function HomePageClient() {
+export default function HomePageClient({
+  initialData,
+}: {
+  initialData: HomeData;
+}) {
   const { lang } = useLanguage();
   const { openQuiz } = useQuiz();
-  const [home, setHome] = useState<HomeData | null>(null);
-
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const data = await getData('home', lang);
-
-        setHome({
-          ...fallbackHomeData,
-          ...data,
-
-          hero: {
-            ...fallbackHomeData.hero,
-            ...(data?.hero || {}),
-          },
-
-          quizPreview: {
-            ...fallbackHomeData.quizPreview,
-            ...(data?.quizPreview || {}),
-            steps: data?.quizPreview?.steps?.length
-              ? data.quizPreview.steps
-              : fallbackHomeData.quizPreview.steps,
-          },
-
-          featuredProjects: {
-            ...fallbackHomeData.featuredProjects,
-            ...(data?.featuredProjects || {}),
-            items: data?.featuredProjects?.items?.length
-              ? data.featuredProjects.items
-              : fallbackHomeData.featuredProjects.items,
-          },
-
-          audience: {
-            ...fallbackHomeData.audience,
-            ...(data?.audience || {}),
-            items: data?.audience?.items?.length
-              ? data.audience.items
-              : fallbackHomeData.audience.items,
-          },
-
-          differences: {
-            ...fallbackHomeData.differences,
-            ...(data?.differences || {}),
-            items: data?.differences?.items?.length
-              ? data.differences.items
-              : fallbackHomeData.differences.items,
-          },
-
-          servicesSection: {
-            ...fallbackHomeData.servicesSection,
-            ...(data?.servicesSection || {}),
-          },
-
-          stats: {
-            ...fallbackHomeData.stats,
-            ...(data?.stats || {}),
-            items: data?.stats?.items?.length
-              ? data.stats.items
-              : fallbackHomeData.stats.items,
-          },
-
-          processPreview: {
-            ...fallbackHomeData.processPreview,
-            ...(data?.processPreview || {}),
-            items: data?.processPreview?.items?.length
-              ? data.processPreview.items
-              : fallbackHomeData.processPreview.items,
-          },
-
-          portfolio: {
-            ...fallbackHomeData.portfolio,
-            ...(data?.portfolio || {}),
-            items: data?.portfolio?.items?.length
-              ? data.portfolio.items
-              : fallbackHomeData.portfolio.items,
-          },
-
-          cta: {
-            ...fallbackHomeData.cta,
-            ...(data?.cta || {}),
-          },
-        });
-      } catch {
-        setHome(fallbackHomeData);
-      }
-    };
-
-    loadData();
-  }, [lang]);
-
-  const content = useMemo(() => home ?? fallbackHomeData, [home]);
+  const content = initialData;
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -690,19 +359,19 @@ export default function HomePageClient() {
                 </p>
 
                 <div className="mt-10 flex flex-wrap gap-4 md:mt-12">
-                  <Link
+                  <LocalizedLink
                     href="/contact"
                     className="inline-flex min-h-[56px] items-center justify-center border border-black bg-black px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-[1px] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
                   >
                     {content.hero.primaryButton}
-                  </Link>
+                  </LocalizedLink>
 
-                  <Link
+                  <LocalizedLink
                     href="/portfolio"
                     className="inline-flex min-h-[56px] items-center justify-center border border-black bg-white px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-black transition duration-300 hover:-translate-y-[1px] hover:bg-black hover:text-white"
                   >
                     {content.hero.secondaryButton}
-                  </Link>
+                  </LocalizedLink>
                 </div>
               </div>
 
@@ -746,19 +415,19 @@ export default function HomePageClient() {
                   </span>
                 </div>
 
-                <Link
+                <LocalizedLink
                   href="/portfolio"
                   className="hidden w-fit items-center gap-4 font-montserrat text-[11px] font-medium uppercase tracking-[0.3em] text-neutral-600 transition duration-300 hover:text-black md:inline-flex"
                 >
                   {content.featuredProjects.button}
                   <span className="h-px w-12 bg-neutral-400 transition duration-300 hover:w-20 hover:bg-black" />
-                </Link>
+                </LocalizedLink>
               </div>
             </div>
 
             <div className="-mx-5 flex snap-x gap-4 overflow-x-auto scroll-smooth px-5 pb-5 md:-mx-8 md:gap-5 md:px-8 xl:mx-0 xl:gap-5 xl:px-0">
               {content.featuredProjects.items.map((project, index) => (
-                <Link
+                <LocalizedLink
                   key={project.title}
                   href="/portfolio"
                   className="group w-[245px] shrink-0 snap-start overflow-hidden border border-[#e7e2d9] bg-white shadow-[0_14px_38px_rgba(0,0,0,0.035)] transition duration-500 hover:-translate-y-1 hover:border-black/20 hover:shadow-[0_22px_58px_rgba(0,0,0,0.075)] sm:w-[270px] md:w-[300px] xl:w-[315px]"
@@ -789,7 +458,7 @@ export default function HomePageClient() {
                       <span className="h-px w-9 bg-neutral-400 transition duration-300 group-hover:w-14 group-hover:bg-black" />
                     </div>
                   </div>
-                </Link>
+                </LocalizedLink>
               ))}
 
               <button
@@ -820,13 +489,13 @@ export default function HomePageClient() {
               </button>
             </div>
 
-            <Link
+            <LocalizedLink
               href="/portfolio"
               className="mt-6 inline-flex w-fit items-center gap-4 font-montserrat text-[11px] font-medium uppercase tracking-[0.3em] text-neutral-600 transition duration-300 hover:text-black md:hidden"
             >
               {content.featuredProjects.button}
               <span className="h-px w-12 bg-neutral-400 transition duration-300 hover:w-20 hover:bg-black" />
-            </Link>
+            </LocalizedLink>
           </section>
 
           {/* AUDIENCE */}
@@ -1038,12 +707,12 @@ export default function HomePageClient() {
                   {content.processPreview.description}
                 </p>
 
-                <Link
+                <LocalizedLink
                   href="/process"
                   className="mt-9 inline-flex min-h-[56px] items-center justify-center border border-black bg-black px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-[1px] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
                 >
                   {content.processPreview.button}
-                </Link>
+                </LocalizedLink>
               </div>
 
               <div className="border-y border-[#e7e2d9]">
@@ -1085,12 +754,12 @@ export default function HomePageClient() {
               </p>
 
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:mt-10">
-                <Link
+                <LocalizedLink
                   href="/contact"
                   className="inline-flex min-h-[56px] items-center justify-center border border-white bg-white px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-black transition duration-300 hover:-translate-y-[1px]"
                 >
                   {content.cta.primaryButton}
-                </Link>
+                </LocalizedLink>
 
                 <button
                   type="button"

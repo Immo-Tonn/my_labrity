@@ -1,11 +1,7 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-
-import { useLanguage } from '@/utils/LanguageContext';
-import { getData } from '@/utils/getData';
 
 type ProjectItem = {
   title: string;
@@ -28,7 +24,7 @@ type BlackSection = {
   status: string;
 };
 
-type PortfolioData = {
+export type PortfolioData = {
   kicker: string;
   title: string;
   description: string;
@@ -44,104 +40,12 @@ type PortfolioData = {
   items: ProjectItem[];
 };
 
-const fallbackPortfolioData: PortfolioData = {
-  kicker: 'Portfolio',
-  title: 'Entdecken Sie unsere Arbeiten',
-  description:
-    'Ausgewählte Projekte, die zeigen, wie wir Ästhetik, Strategie und Performance zu einer digitalen Präsenz auf Premium-Niveau verbinden.',
-  button: 'Portfolio ansehen',
-  topTags: ['SEO READY', 'AI VISIBILITY', 'HIGH-END FRONTEND'],
-  seoBlock: [
-    {
-      kicker: 'SEO OPTIMIZATION',
-      title: 'Entwickelt für moderne Sichtbarkeit.',
-    },
-    {
-      kicker: 'AI VISIBILITY',
-      title: 'Optimiert für GPT und KI-Suche.',
-    },
-    {
-      kicker: 'PERFORMANCE',
-      title: 'Schnell. Modern. Hochwertig.',
-    },
-  ],
-  marquee: [
-    'SEO OPTIMIZATION',
-    'AI VISIBILITY',
-    'PREMIUM WEBDESIGN',
-    'MODERNE DIGITALE PRÄSENZ',
-    'RESPONSIVE EXPERIENCE',
-    'HIGH-END FRONTEND',
-    'MINIMAL. MODERN. EFFEKTIV.',
-  ],
-  projectLabel: 'Website Project',
-  projectButton: 'Projekt ansehen',
-  projectTags: ['SEO READY', 'AI OPTIMIERT', 'RESPONSIVE'],
-  categories: {
-    'Immo Tonn': 'Immobilien',
-    'TLSG Studio': 'Musikindustrie',
-    Pizzeria: 'Restaurant',
-    'Massage Studio': 'Wellness & Spa',
-    BeautyTime: 'Beautyindustrie',
-    Werkstatt: 'Automobilindustrie',
-    'Alltagsbegleitung für Senioren': 'Seniorenbegleitung',
-  },
-  blackSection: {
-    kicker: 'In Entwicklung',
-    title: 'Neue Premium Projekte',
-    description:
-      'Weitere moderne Business-Websites, digitale Markenauftritte und exklusive Projekte befinden sich derzeit in Entwicklung.',
-    tags: ['Brand Websites', 'SEO Struktur', 'AI Visibility'],
-    status: 'Stay Tuned',
-  },
-  items: [],
-};
-
-export default function PortfolioPageClient() {
-  const { lang } = useLanguage();
-  const [portfolio, setPortfolio] = useState<PortfolioData | null>(null);
-
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const data = await getData('home', lang);
-        const portfolioData = data?.portfolio || {};
-
-        setPortfolio({
-          ...fallbackPortfolioData,
-          ...portfolioData,
-          topTags: portfolioData.topTags?.length
-            ? portfolioData.topTags
-            : fallbackPortfolioData.topTags,
-          seoBlock: portfolioData.seoBlock?.length
-            ? portfolioData.seoBlock
-            : fallbackPortfolioData.seoBlock,
-          marquee: portfolioData.marquee?.length
-            ? portfolioData.marquee
-            : fallbackPortfolioData.marquee,
-          projectTags: portfolioData.projectTags?.length
-            ? portfolioData.projectTags
-            : fallbackPortfolioData.projectTags,
-          categories:
-            portfolioData.categories || fallbackPortfolioData.categories,
-          blackSection:
-            portfolioData.blackSection || fallbackPortfolioData.blackSection,
-          items: portfolioData.items?.length
-            ? portfolioData.items
-            : fallbackPortfolioData.items,
-        });
-      } catch {
-        setPortfolio(fallbackPortfolioData);
-      }
-    };
-
-    loadData();
-  }, [lang]);
-
-  const content = useMemo(
-    () => portfolio ?? fallbackPortfolioData,
-    [portfolio],
-  );
+export default function PortfolioPageClient({
+  initialData,
+}: {
+  initialData: PortfolioData;
+}) {
+  const content = initialData;
 
   const isSeniorProject = (title: string) =>
     title.toLowerCase().includes('alltags') ||
@@ -229,7 +133,6 @@ export default function PortfolioPageClient() {
       {/* PROJECTS */}
       <section className="mx-auto max-w-[1700px] px-5 pb-28 pt-16 md:px-8 md:pb-40 md:pt-24">
         <div className="space-y-10 md:space-y-14">
-          {/* {content.items.map((item, index) => ( */}
           {content.items.map((item, index) => {
             const seniorProject = isSeniorProject(item.title);
 

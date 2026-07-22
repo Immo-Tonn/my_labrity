@@ -4,6 +4,7 @@ export * from './Button';
 export * from './FooterItem';
 export * from './FormInput';
 export * from './Loader';
+export * from './LocalizedLink';
 export * from './Logo';
 export * from './Modal';
 export * from './ModalError';

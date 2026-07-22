@@ -2,6 +2,7 @@ import { LanguageProvider } from '@/utils/LanguageContext';
 import './globals.css';
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { notFound } from 'next/navigation';
 import { Montserrat, Tenor_Sans } from 'next/font/google';
 
 import ConsentAnalytics from '@/components/common/ConsentAnalytics';
@@ -9,11 +10,16 @@ import QuizProvider from '@/components/quiz/QuizProvider';
 import { classnames } from '@/utils/classnames';
 import { Footer } from '@/layout/Footer';
 import { Header } from '@/layout/Header';
-import meta from '@/data/de/meta.json';
 import FakeAiChat from '@/components/common/FakeAiChat';
 import LiveActivity from '@/components/common/LiveActivity';
-import HtmlLang from '@/components/ui/HtmlLang';
 import { SITE_URL } from '@/utils/siteUrl';
+import { getData } from '@/utils/getData';
+import {
+  HREFLANG_CODES,
+  isLanguage,
+  LOCALES,
+  type Language,
+} from '@/utils/localizedPath';
 
 const montserrat = Montserrat({
   subsets: ['cyrillic', 'latin'],
@@ -105,34 +111,55 @@ const faqStructuredData = {
   ],
 };
 
-const { title, description, keywords, manifest, openGraph, icons } = meta;
+export async function generateStaticParams() {
+  return LOCALES.map(lang => ({ lang }));
+}
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title,
-  description,
-  keywords,
-  icons,
-  manifest,
-  openGraph: {
-    ...openGraph,
-    url: SITE_URL,
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: openGraph.title,
-    description: openGraph.description,
-    images: openGraph.images.map(img => img.url),
-  },
-};
+type LayoutParams = { lang: string };
 
-export default function RootLayout({
+export async function generateMetadata({
+  params,
+}: {
+  params: LayoutParams;
+}): Promise<Metadata> {
+  if (!isLanguage(params.lang)) notFound();
+
+  const meta = await getData('meta', params.lang);
+  const { title, description, keywords, manifest, openGraph, icons } = meta;
+
+  return {
+    metadataBase: new URL(SITE_URL),
+    title,
+    description,
+    keywords,
+    icons,
+    manifest,
+    openGraph: {
+      ...openGraph,
+      url: SITE_URL,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: openGraph.title,
+      description: openGraph.description,
+      images: openGraph.images.map((img: { url: string }) => img.url),
+    },
+  };
+}
+
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: LayoutParams;
 }>) {
+  if (!isLanguage(params.lang)) notFound();
+
+  const lang: Language = params.lang;
+
   return (
-    <html lang="de" className="!scroll-smooth">
+    <html lang={HREFLANG_CODES[lang]} className="!scroll-smooth">
       <body
         className={classnames(
           montserrat.variable,
@@ -148,7 +175,7 @@ export default function RootLayout({
         <Script
           id="usercentrics-cmp"
           src="https://web.cmp.usercentrics.eu/ui/loader.js"
-          data-settings-id="HFXPFXoht5HmRs"
+          data-ruleset-id="HFXPFXoht5HmRs"
           strategy="beforeInteractive"
         />
 
@@ -166,9 +193,7 @@ export default function RootLayout({
           }}
         />
 
-        <LanguageProvider>
-          <HtmlLang />
-
+        <LanguageProvider lang={lang}>
           <QuizProvider>
             <Header />
 

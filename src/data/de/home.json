@@ -31,6 +31,64 @@
     "primaryButton": "Kontakt",
     "secondaryButton": "Portfolio"
   },
+  "quizPreview": {
+    "kicker": "Projekt-Kalkulator",
+    "title": "Nicht sicher, welche Website zu Ihrem Projekt passt?",
+    "description": "Beantworten Sie ein paar kurze Fragen und erhalten Sie eine klarere Orientierung für Ihr Website-Projekt.",
+    "leftTitle": "Finden Sie das passende Website-Paket.",
+    "leftDescription": "Unser kurzer Projekt-Kalkulator hilft Ihnen, den passenden Umfang für Ihr Projekt besser einzuschätzen.",
+    "button": "Kalkulator starten",
+    "note": "3 kurze Schritte. Eine klare Empfehlung.",
+    "steps": ["Projektart", "Umfang", "Empfehlung"]
+  },
+  "featuredProjects": {
+    "kicker": "Ausgewählte Projekte",
+    "title": "Websites, die Vertrauen schaffen.",
+    "scrollLabel": "Scroll",
+    "button": "Portfolio ansehen",
+    "projectButton": "Portfolio ansehen",
+    "ctaKicker": "Nächstes Projekt",
+    "ctaTitle": "Das nächste Projekt könnte Ihres sein.",
+    "ctaDescription": "Erzählen Sie uns von Ihrer Idee — wir entwickeln daraus einen starken digitalen Auftritt.",
+    "ctaButton": "Kalkulator starten",
+    "items": [
+      {
+        "title": "Immo Tonn",
+        "category": "Immobilien",
+        "image": "/images/projects/immo-tonn.png"
+      },
+      {
+        "title": "TLSG Studio",
+        "category": "Musikindustrie",
+        "image": "/images/projects/tlsg.png"
+      },
+      {
+        "title": "Massage Studio",
+        "category": "Wellness & Spa",
+        "image": "/images/projects/massage.png"
+      },
+      {
+        "title": "Pizzeria",
+        "category": "Restaurant",
+        "image": "/images/projects/pizzeria.png"
+      },
+      {
+        "title": "Alltagsbegleitung",
+        "category": "Seniorenbegleitung",
+        "image": "/images/projects/seniorenbegleitung.png"
+      },
+      {
+        "title": "BeautyTime",
+        "category": "Beautyindustrie",
+        "image": "/images/projects/beautytime.png"
+      },
+      {
+        "title": "Werkstatt",
+        "category": "Automobilindustrie",
+        "image": "/images/projects/werk.png"
+      }
+    ]
+  },
   "audience": {
     "kicker": "Für wen wir arbeiten",
     "title": "Für Selbstständige, Unternehmen und Marken mit Anspruch.",
@@ -51,6 +109,33 @@
       {
         "title": "Individuelle Projekte",
         "description": "Für besondere Konzepte, die mehr brauchen als eine gewöhnliche Website."
+      }
+    ]
+  },
+  "differences": {
+    "kicker": "WARUM LABRITY?",
+    "title": "Starke Websites für starke Marken.",
+    "description": "",
+    "items": [
+      {
+        "title": "Strategisch",
+        "description": "Wir denken mit — von der Idee bis zur Conversion.",
+        "icon": "/images/home-icons/strategy.svg"
+      },
+      {
+        "title": "Minimalistisch",
+        "description": "Klares Design, das sich auf das Wesentliche konzentriert.",
+        "icon": "/images/home-icons/minimalism.svg"
+      },
+      {
+        "title": "Maßgeschneidert",
+        "description": "Jedes Projekt ist einzigartig — wie dein Business.",
+        "icon": "/images/home-icons/custom.svg"
+      },
+      {
+        "title": "Zuverlässig",
+        "description": "Termintreu, transparent und auf Augenhöhe.",
+        "icon": "/images/home-icons/reliable.svg"
       }
     ]
   },

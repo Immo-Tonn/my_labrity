@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 
 import { classnames } from '@/utils/classnames';
+import { LocalizedLink } from '@/components/ui/LocalizedLink';
 import { LogoProps } from './types';
 
 export const Logo: React.FC<LogoProps> = ({ onClick, className }) => {
@@ -14,7 +14,7 @@ export const Logo: React.FC<LogoProps> = ({ onClick, className }) => {
   );
 
   return (
-    <Link href="/" onClick={onClick} className={logoClasses}>
+    <LocalizedLink href="/" onClick={onClick} className={logoClasses}>
       <Image
         src="/images/logo-white.svg"
         alt="Labrity"
@@ -22,6 +22,6 @@ export const Logo: React.FC<LogoProps> = ({ onClick, className }) => {
         priority
         className="object-contain object-left"
       />
-    </Link>
+    </LocalizedLink>
   );
 };
