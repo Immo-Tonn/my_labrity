@@ -58,11 +58,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function ContactPage({
-  params,
-}: {
-  params: PageParams;
-}) {
+export default async function ContactPage({ params }: { params: PageParams }) {
   if (!isLanguage(params.lang)) notFound();
 
   const initialData: ContactData = await getData('contact', params.lang);

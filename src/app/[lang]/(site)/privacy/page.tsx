@@ -40,11 +40,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function PrivacyPage({
-  params,
-}: {
-  params: PageParams;
-}) {
+export default async function PrivacyPage({ params }: { params: PageParams }) {
   if (!isLanguage(params.lang)) notFound();
 
   const [common, privacy] = await Promise.all([

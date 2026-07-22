@@ -60,11 +60,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function ServicesPage({
-  params,
-}: {
-  params: PageParams;
-}) {
+export default async function ServicesPage({ params }: { params: PageParams }) {
   if (!isLanguage(params.lang)) notFound();
 
   const home = await getData('home', params.lang);

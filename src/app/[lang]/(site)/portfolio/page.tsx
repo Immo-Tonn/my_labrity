@@ -4,9 +4,7 @@ import { notFound } from 'next/navigation';
 import { getData } from '@/utils/getData';
 import { buildHreflangAlternates } from '@/utils/hreflangAlternates';
 import { isLanguage, withLocale, type Language } from '@/utils/localizedPath';
-import PortfolioPageClient, {
-  type PortfolioData,
-} from './PortfolioPageClient';
+import PortfolioPageClient, { type PortfolioData } from './PortfolioPageClient';
 
 const PATH = '/portfolio';
 

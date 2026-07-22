@@ -35,11 +35,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function PricesPage({
-  params,
-}: {
-  params: PageParams;
-}) {
+export default async function PricesPage({ params }: { params: PageParams }) {
   if (!isLanguage(params.lang)) notFound();
 
   const initialData: PricesData = await getData('prices', params.lang);

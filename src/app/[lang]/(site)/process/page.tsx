@@ -58,11 +58,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProcessPage({
-  params,
-}: {
-  params: PageParams;
-}) {
+export default async function ProcessPage({ params }: { params: PageParams }) {
   if (!isLanguage(params.lang)) notFound();
 
   const initialData: ProcessData = await getData('process', params.lang);
