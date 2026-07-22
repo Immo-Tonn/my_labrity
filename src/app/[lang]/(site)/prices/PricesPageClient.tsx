@@ -1,13 +1,6 @@
 'use client';
 
-import {
-  useEffect,
-  useMemo,
-  useState,
-  type ComponentType,
-  type ReactNode,
-} from 'react';
-import Link from 'next/link';
+import { type ComponentType, type ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import {
   BadgeCheck,
@@ -25,9 +18,7 @@ import {
 } from 'lucide-react';
 
 import { useQuiz } from '@/components/quiz';
-import { useLanguage } from '@/utils/LanguageContext';
-import { getData } from '@/utils/getData';
-import fallbackPricesData from '@/data/de/prices.json';
+import { LocalizedLink } from '@/components/ui/LocalizedLink';
 
 type PriceFactorItem = {
   title: string;
@@ -82,19 +73,19 @@ type FaqItem = {
   answer: string;
 };
 
-type PricesData = {
-  meta?: {
+export type PricesData = {
+  meta: {
     title: string;
     description: string;
   };
-  ui?: {
+  ui: {
     suitableFor: string;
     notSuitableFor: string;
     duration: string;
     support: string;
     loading: string;
   };
-  quizPreview?: {
+  quizPreview: {
     kicker: string;
     title: string;
     description: string;
@@ -171,14 +162,6 @@ type PricesData = {
   };
 };
 
-type NormalizedPricesData = PricesData & {
-  meta: NonNullable<PricesData['meta']>;
-  ui: NonNullable<PricesData['ui']>;
-  quizPreview: NonNullable<PricesData['quizPreview']>;
-};
-
-const fallbackData = fallbackPricesData as NormalizedPricesData;
-
 const heroEase = [0.22, 1, 0.36, 1] as const;
 
 const packageIcons = [
@@ -190,29 +173,6 @@ const packageIcons = [
   Sparkles,
 ];
 const priceFactorIcons = [Target, Sparkles, ShieldCheck];
-
-function hasPricesData(data: Partial<PricesData> | null | undefined) {
-  return Boolean(
-    data?.hero &&
-    data?.priceFactors &&
-    data?.packages &&
-    data?.subscription &&
-    data?.redesign &&
-    data?.additionalServices &&
-    data?.care &&
-    data?.faq &&
-    data?.cta,
-  );
-}
-
-function normalizePricesData(data: PricesData): NormalizedPricesData {
-  return {
-    ...data,
-    meta: data.meta ?? fallbackData.meta,
-    ui: data.ui ?? fallbackData.ui,
-    quizPreview: data.quizPreview ?? fallbackData.quizPreview,
-  };
-}
 
 function getSectionClasses(extraClasses = '') {
   return `border-t border-[#e7e2d9] px-5 py-20 md:px-8 md:py-28 ${extraClasses}`;
@@ -367,7 +327,7 @@ function PackageCard({
 }: {
   item: PackageItem;
   index: number;
-  ui: NormalizedPricesData['ui'];
+  ui: PricesData['ui'];
   onClick: () => void;
 }) {
   const Icon = packageIcons[index] || PanelsTopLeft;
@@ -509,44 +469,13 @@ function AdditionalServiceCard({ item }: { item: AdditionalServiceItem }) {
   );
 }
 
-export default function PricesPageClient() {
-  const { lang } = useLanguage();
+export default function PricesPageClient({
+  initialData,
+}: {
+  initialData: PricesData;
+}) {
   const { openQuiz } = useQuiz();
-
-  const [prices, setPrices] = useState<NormalizedPricesData | null>(null);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    async function loadPricesData() {
-      try {
-        const data = await getData('prices', lang);
-
-        if (!isMounted) {
-          return;
-        }
-
-        if (hasPricesData(data)) {
-          setPrices(normalizePricesData(data as PricesData));
-          return;
-        }
-
-        setPrices(fallbackData);
-      } catch {
-        if (isMounted) {
-          setPrices(fallbackData);
-        }
-      }
-    }
-
-    loadPricesData();
-
-    return () => {
-      isMounted = false;
-    };
-  }, [lang]);
-
-  const content = useMemo(() => prices ?? fallbackData, [prices]);
+  const content = initialData;
 
   return (
     <main className="min-h-screen bg-[#f8f6f1] text-black">
@@ -976,12 +905,12 @@ export default function PricesPageClient() {
               {content.cta.primaryButton}
             </ActionButton>
 
-            <Link
+            <LocalizedLink
               href="/contact"
               className="inline-flex min-h-[56px] items-center justify-center border border-white/40 bg-transparent px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:border-white hover:bg-white hover:text-black"
             >
               {content.cta.secondaryButton}
-            </Link>
+            </LocalizedLink>
           </div>
 
           <p className="mx-auto mt-8 max-w-[620px] font-montserrat text-[12px] leading-6 text-white/45">

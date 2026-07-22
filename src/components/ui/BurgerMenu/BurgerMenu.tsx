@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 import { Logo, Socials, Navbar } from '@/components/ui';
 import CloseIcon from '@/../public/icons/close-icon.svg';
@@ -8,8 +9,7 @@ import { IBurgerMenuProps } from './types';
 
 import { useLanguage } from '@/utils/LanguageContext';
 import { getData } from '@/utils/getData';
-
-type Language = 'de' | 'en' | 'ua' | 'ru';
+import { stripLocale, withLocale, type Language } from '@/utils/localizedPath';
 
 type CommonData = {
   layout?: {
@@ -48,7 +48,8 @@ const languages: {
 ];
 
 export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClose }) => {
-  const { lang, setLang } = useLanguage();
+  const { lang } = useLanguage();
+  const pathname = usePathname();
   const [common, setCommon] = useState<CommonData | null>(null);
 
   const modalRef = useRef<HTMLDivElement | null>(null);
@@ -104,8 +105,8 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClose }) => {
   };
 
   const handleLanguageChange = (newLang: Language) => {
-    setLang(newLang);
-    onClose();
+    const { path } = stripLocale(pathname);
+    window.location.href = withLocale(path, newLang);
   };
 
   return (

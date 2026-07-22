@@ -1,11 +1,10 @@
 'use client';
 
-import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from 'react';
-import Link from 'next/link';
+import { ChangeEvent, FormEvent, useState } from 'react';
 
 import { sendMessage } from '@/api/telegram';
 import { useLanguage } from '@/utils/LanguageContext';
-import { getData } from '@/utils/getData';
+import { LocalizedLink } from '@/components/ui/LocalizedLink';
 
 type ContactLink = {
   label: string;
@@ -19,7 +18,7 @@ type ContactField = {
   placeholder: string;
 };
 
-type ContactData = {
+export type ContactData = {
   hero: {
     kicker: string;
     title: string;
@@ -36,7 +35,7 @@ type ContactData = {
     submitLabel: string;
     note: string;
   };
-  errors?: {
+  errors: {
     firstNameRequired?: string;
     firstNameMin?: string;
     firstNameMax?: string;
@@ -56,11 +55,11 @@ type ContactData = {
     messageMax?: string;
     privacyRequired?: string;
   };
-  checkbox?: {
+  checkbox: {
     label: string;
     linkLabel: string;
   };
-  successMessage?: string;
+  successMessage: string;
 };
 
 type ContactFormState = {
@@ -74,101 +73,6 @@ type ContactFormState = {
 
 type ContactFormErrors = Partial<Record<keyof ContactFormState, string>>;
 
-const fallbackContactData: ContactData = {
-  hero: {
-    kicker: 'Kontakt',
-    title: 'Erzählen Sie uns von Ihrem Projekt',
-    description:
-      'Ob neue Website, Rebranding oder digitaler Auftritt — wir freuen uns auf Ihre Anfrage.',
-  },
-  sidebar: {
-    kicker: 'Labrity',
-    title: 'Lassen Sie uns über Ihr Projekt sprechen.',
-    description:
-      'Wir entwickeln digitale Auftritte, die hochwertig wirken, Vertrauen schaffen und Ihr Unternehmen klar positionieren.',
-    contacts: [
-      {
-        label: 'labrity@web.de',
-        href: 'mailto:labrity@web.de',
-      },
-      {
-        label: 'tonn_andreas@web.de',
-        href: 'mailto:tonn_andreas@web.de',
-      },
-      {
-        label: 'Instagram',
-        href: '#',
-      },
-      {
-        label: 'LinkedIn',
-        href: '#',
-      },
-    ],
-  },
-  form: {
-    fields: [
-      {
-        name: 'firstName',
-        label: 'Vorname',
-        type: 'text',
-        placeholder: 'Ihr Vorname',
-      },
-      {
-        name: 'lastName',
-        label: 'Nachname',
-        type: 'text',
-        placeholder: 'Ihr Nachname',
-      },
-      {
-        name: 'email',
-        label: 'E-Mail',
-        type: 'email',
-        placeholder: 'name@example.com',
-      },
-      {
-        name: 'phone',
-        label: 'Telefon / WhatsApp',
-        type: 'tel',
-        placeholder: '+49 123 456789',
-      },
-      {
-        name: 'message',
-        label: 'Nachricht',
-        type: 'textarea',
-        placeholder: 'Erzählen Sie uns kurz von Ihrem Projekt',
-      },
-    ],
-    submitLabel: 'Anfrage senden',
-    note: 'Wir antworten in der Regel innerhalb von 24–48 Stunden.',
-  },
-  errors: {
-    firstNameRequired: 'Bitte geben Sie Ihren Vornamen ein.',
-    firstNameMin: 'Mindestens 2 Zeichen erforderlich.',
-    firstNameMax: 'Maximal 40 Zeichen erlaubt.',
-    firstNamePattern: 'Bitte geben Sie einen gültigen Vornamen ein.',
-    lastNameRequired: 'Bitte geben Sie Ihren Nachnamen ein.',
-    lastNameMin: 'Mindestens 2 Zeichen erforderlich.',
-    lastNameMax: 'Maximal 40 Zeichen erlaubt.',
-    lastNamePattern: 'Bitte geben Sie einen gültigen Nachnamen ein.',
-    emailRequired: 'Bitte geben Sie Ihre E-Mail-Adresse ein.',
-    emailPattern: 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
-    phoneRequired: 'Bitte geben Sie Ihre Telefonnummer ein.',
-    phonePattern: 'Bitte geben Sie eine gültige Telefonnummer ein.',
-    phoneMin: 'Mindestens 7 Zeichen erforderlich.',
-    phoneMax: 'Maximal 20 Zeichen erlaubt.',
-    messageRequired: 'Bitte schreiben Sie eine Nachricht.',
-    messageMin: 'Die Nachricht muss mindestens 10 Zeichen enthalten.',
-    messageMax: 'Maximal 1000 Zeichen erlaubt.',
-    privacyRequired: 'Bitte bestätigen Sie die Datenschutzerklärung.',
-  },
-  checkbox: {
-    label:
-      'Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der ',
-    linkLabel: 'Datenschutzerklärung',
-  },
-  successMessage: 'Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet.',
-};
-
 const initialFormState: ContactFormState = {
   firstName: '',
   lastName: '',
@@ -178,60 +82,17 @@ const initialFormState: ContactFormState = {
   privacy: false,
 };
 
-export default function ContactPageClient() {
+export default function ContactPageClient({
+  initialData,
+}: {
+  initialData: ContactData;
+}) {
   const { lang } = useLanguage();
-  const [contact, setContact] = useState<ContactData | null>(null);
+  const content = initialData;
   const [formData, setFormData] = useState<ContactFormState>(initialFormState);
   const [formErrors, setFormErrors] = useState<ContactFormErrors>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const data = await getData('contact', lang);
-
-        setContact({
-          ...fallbackContactData,
-          ...data,
-          hero: {
-            ...fallbackContactData.hero,
-            ...(data?.hero || {}),
-          },
-          sidebar: {
-            ...fallbackContactData.sidebar,
-            ...(data?.sidebar || {}),
-            contacts: data?.sidebar?.contacts?.length
-              ? data.sidebar.contacts
-              : fallbackContactData.sidebar.contacts,
-          },
-          form: {
-            ...fallbackContactData.form,
-            ...(data?.form || {}),
-            fields: data?.form?.fields?.length
-              ? data.form.fields
-              : fallbackContactData.form.fields,
-          },
-          errors: {
-            ...fallbackContactData.errors,
-            ...(data?.errors || {}),
-          },
-          checkbox: {
-            ...fallbackContactData.checkbox,
-            ...(data?.checkbox || {}),
-          },
-          successMessage:
-            data?.successMessage || fallbackContactData.successMessage,
-        });
-      } catch {
-        setContact(fallbackContactData);
-      }
-    };
-
-    loadData();
-  }, [lang]);
-
-  const content = useMemo(() => contact ?? fallbackContactData, [contact]);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -472,14 +333,14 @@ export default function ContactPageClient() {
 
                     <span>
                       {content.checkbox?.label}
-                      <Link
+                      <LocalizedLink
                         href="/privacy"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-black underline underline-offset-2 transition duration-300 hover:text-neutral-600"
                       >
                         {content.checkbox?.linkLabel ?? ''}
-                      </Link>
+                      </LocalizedLink>
                     </span>
                   </label>
 

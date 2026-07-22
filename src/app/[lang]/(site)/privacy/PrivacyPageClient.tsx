@@ -1,10 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
-import { useLanguage } from '@/utils/LanguageContext';
-import { getData } from '@/utils/getData';
-
 type Condition = {
   _id: string;
   title: string;
@@ -15,40 +10,13 @@ type Condition = {
   }[];
 };
 
-const fallbackTitle: Record<string, string> = {
-  de: 'Datenschutz',
-  en: 'Privacy Policy',
-  ru: 'Политика конфиденциальности',
-  ua: 'Політика конфіденційності',
-};
-
-export default function PrivacyPage() {
-  const { lang } = useLanguage();
-  const [title, setTitle] = useState(fallbackTitle.de);
-  const [conditions, setConditions] = useState<Condition[]>([]);
-
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const [common, privacy] = await Promise.all([
-          getData('common', lang),
-          getData('privacy', lang),
-        ]);
-
-        setTitle(
-          common?.footerLabelPolicy || fallbackTitle[lang] || fallbackTitle.de,
-        );
-
-        setConditions(privacy ?? []);
-      } catch {
-        setTitle(fallbackTitle[lang] || fallbackTitle.de);
-        setConditions([]);
-      }
-    };
-
-    loadData();
-  }, [lang]);
-
+export default function PrivacyPageClient({
+  title,
+  conditions,
+}: {
+  title: string;
+  conditions: Condition[];
+}) {
   return (
     <main className="min-h-screen bg-[#f8f6f1] pt-[120px] md:pt-[140px] xl:pt-[170px]">
       <section className="container pb-[90px] md:pb-[110px] xl:pb-[140px]">

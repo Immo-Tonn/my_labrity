@@ -1,45 +1,24 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext } from 'react';
 
-type Language = 'de' | 'en' | 'ua' | 'ru';
+import type { Language } from './localizedPath';
 
 interface LanguageContextType {
   lang: Language;
-  setLang: (lang: Language) => void;
 }
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
-const DEFAULT_LANGUAGE: Language = 'de';
-const STORAGE_KEY = 'language';
-
-const isValidLanguage = (value: string | null): value is Language => {
-  return value === 'de' || value === 'en' || value === 'ua' || value === 'ru';
-};
-
 export const LanguageProvider = ({
+  lang,
   children,
 }: {
+  lang: Language;
   children: React.ReactNode;
 }) => {
-  const [lang, setLangState] = useState<Language>(DEFAULT_LANGUAGE);
-
-  useEffect(() => {
-    const savedLanguage = window.localStorage.getItem(STORAGE_KEY);
-
-    if (isValidLanguage(savedLanguage)) {
-      setLangState(savedLanguage);
-    }
-  }, []);
-
-  const setLang = (newLang: Language) => {
-    setLangState(newLang);
-    window.localStorage.setItem(STORAGE_KEY, newLang);
-  };
-
   return (
-    <LanguageContext.Provider value={{ lang, setLang }}>
+    <LanguageContext.Provider value={{ lang }}>
       {children}
     </LanguageContext.Provider>
   );

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { getData } from '@/utils/getData';
 import { useLanguage } from '@/utils/LanguageContext';
+import { withLocale } from '@/utils/localizedPath';
 
 type QuizAnswer = {
   label: string;
@@ -298,7 +299,7 @@ export default function ProjectCalculator() {
 
           <div className="mt-4 flex flex-col gap-2">
             <a
-              href="/contact"
+              href={withLocale('/contact', lang)}
               className="rounded-xl bg-black px-4 py-3 text-center text-sm font-medium text-white transition hover:opacity-90"
             >
               {content.contactButton}

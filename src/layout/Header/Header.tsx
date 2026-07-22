@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { classnames } from '@/utils/classnames';
 import { Logo } from '@/components/ui/Logo';
 import { Navbar } from '@/components/ui/Navbar';
@@ -9,8 +10,7 @@ import { BurgerMenu } from '@/components/ui/BurgerMenu';
 
 import { useLanguage } from '@/utils/LanguageContext';
 import { getData } from '@/utils/getData';
-
-type Language = 'de' | 'en' | 'ua' | 'ru';
+import { stripLocale, withLocale, type Language } from '@/utils/localizedPath';
 
 type CommonData = {
   layout?: {
@@ -49,7 +49,8 @@ const languages: {
 ];
 
 export function Header() {
-  const { lang, setLang } = useLanguage();
+  const { lang } = useLanguage();
+  const pathname = usePathname();
 
   const [common, setCommon] = useState<CommonData | null>(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -130,8 +131,8 @@ export function Header() {
   };
 
   const handleLanguageChange = (newLang: Language) => {
-    setLang(newLang);
-    setIsLanguageOpen(false);
+    const { path } = stripLocale(pathname);
+    window.location.href = withLocale(path, newLang);
   };
 
   return (

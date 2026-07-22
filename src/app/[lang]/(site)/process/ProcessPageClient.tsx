@@ -1,11 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useEffect, useMemo, useState } from 'react';
-import Link from 'next/link';
 
-import { useLanguage } from '@/utils/LanguageContext';
-import { getData } from '@/utils/getData';
+import { LocalizedLink } from '@/components/ui/LocalizedLink';
 
 type ProcessStep = {
   number: string;
@@ -18,7 +15,7 @@ type ProcessCard = {
   description: string;
 };
 
-type ProcessData = {
+export type ProcessData = {
   hero: {
     kicker: string;
     title: string;
@@ -56,182 +53,12 @@ type ProcessData = {
   };
 };
 
-const fallbackProcessData: ProcessData = {
-  hero: {
-    kicker: 'Ablauf',
-    title: 'Von der ersten Idee bis zum fertigen digitalen Auftritt.',
-    description:
-      'Wir begleiten Ihr Projekt Schritt für Schritt — mit klarer Struktur, modernem Design und einem Prozess, der verständlich bleibt.',
-  },
-  stepsSection: {
-    kicker: 'Unser Prozess',
-    title: 'Ein klarer Ablauf für ein starkes Ergebnis.',
-    description:
-      'Ein gutes Website-Projekt entsteht nicht zufällig. Es braucht Analyse, Struktur, Design, Entwicklung und einen sauberen Launch.',
-    items: [
-      {
-        number: '01',
-        title: 'Projektanalyse',
-        description:
-          'Wir verstehen Ihr Business, Ihre Zielgruppe, Ihre Ziele und die gewünschte Wirkung Ihrer Website.',
-      },
-      {
-        number: '02',
-        title: 'Struktur & Strategie',
-        description:
-          'Wir planen Seiten, Inhalte, Nutzerführung und eine saubere SEO-Basis.',
-      },
-      {
-        number: '03',
-        title: 'Designrichtung',
-        description:
-          'Wir entwickeln eine visuelle Richtung mit Stil, Klarheit und hochwertiger Wirkung.',
-      },
-      {
-        number: '04',
-        title: 'Entwicklung',
-        description:
-          'Wir setzen die Website modern, responsive und performant um.',
-      },
-      {
-        number: '05',
-        title: 'Launch & Feinschliff',
-        description:
-          'Wir prüfen Details, optimieren Darstellung und bereiten die Website für die Veröffentlichung vor.',
-      },
-    ],
-  },
-  clientSection: {
-    kicker: 'Vorbereitung',
-    title: 'Was wir von Ihnen brauchen.',
-    description:
-      'Sie müssen nicht alles perfekt vorbereitet haben. Für den Start reichen oft eine kurze Beschreibung Ihres Unternehmens, Beispiele, die Ihnen gefallen, und vorhandene Materialien.',
-    items: [
-      {
-        title: 'Ihre Idee',
-        description:
-          'Eine kurze Beschreibung Ihres Unternehmens, Ihrer Ziele und der gewünschten Wirkung reicht für den Anfang.',
-      },
-      {
-        title: 'Beispiele',
-        description:
-          'Websites, Farben oder Stile, die Ihnen gefallen, helfen uns, die richtige Richtung schneller zu verstehen.',
-      },
-      {
-        title: 'Materialien',
-        description:
-          'Texte, Bilder, Logo oder Inhalte können Sie bereitstellen — falls etwas fehlt, helfen wir bei Struktur und Formulierung.',
-      },
-    ],
-  },
-  resultSection: {
-    kicker: 'Ergebnis',
-    title: 'Was Sie am Ende erhalten.',
-    description:
-      'Am Ende entsteht eine Website, die nicht nur gut aussieht, sondern klar strukturiert ist, Vertrauen aufbaut und Ihr Unternehmen professionell präsentiert.',
-    items: [
-      {
-        title: 'Responsive Website',
-        description:
-          'Ihre Website funktioniert sauber auf Smartphone, Tablet und Desktop.',
-      },
-      {
-        title: 'Klare Struktur',
-        description:
-          'Besucher verstehen schnell, wer Sie sind, was Sie anbieten und wie sie Kontakt aufnehmen können.',
-      },
-      {
-        title: 'Premium Design',
-        description:
-          'Ein hochwertiger visueller Auftritt stärkt Vertrauen und Markenwahrnehmung.',
-      },
-      {
-        title: 'SEO Basis',
-        description:
-          'Die Website erhält eine saubere technische und inhaltliche Grundlage für bessere Sichtbarkeit.',
-      },
-    ],
-  },
-  calmSection: {
-    kicker: 'Keine Zufälle',
-    title: 'Kein Chaos. Kein Rätselraten.',
-    description:
-      'Ein gutes Website-Projekt braucht nicht nur Design, sondern einen klaren Ablauf. Deshalb arbeiten wir Schritt für Schritt, damit Entscheidungen verständlich bleiben und das Ergebnis gezielt entsteht.',
-  },
-  cta: {
-    kicker: 'Nächster Schritt',
-    title: 'Bereit, Ihr Projekt zu starten?',
-    description:
-      'Erzählen Sie uns kurz von Ihrem Projekt — wir prüfen, welche Website-Lösung zu Ihrem Ziel passt.',
-    primaryButton: 'Projekt starten',
-    secondaryButton: 'Kontakt aufnehmen',
-  },
-};
-
-export default function ProcessPageClient() {
-  const { lang } = useLanguage();
-  const [processData, setProcessData] = useState<ProcessData | null>(null);
-
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const data = await getData('process', lang);
-
-        setProcessData({
-          ...fallbackProcessData,
-          ...data,
-
-          hero: {
-            ...fallbackProcessData.hero,
-            ...(data?.hero || {}),
-          },
-
-          stepsSection: {
-            ...fallbackProcessData.stepsSection,
-            ...(data?.stepsSection || {}),
-            items: data?.stepsSection?.items?.length
-              ? data.stepsSection.items
-              : fallbackProcessData.stepsSection.items,
-          },
-
-          clientSection: {
-            ...fallbackProcessData.clientSection,
-            ...(data?.clientSection || {}),
-            items: data?.clientSection?.items?.length
-              ? data.clientSection.items
-              : fallbackProcessData.clientSection.items,
-          },
-
-          resultSection: {
-            ...fallbackProcessData.resultSection,
-            ...(data?.resultSection || {}),
-            items: data?.resultSection?.items?.length
-              ? data.resultSection.items
-              : fallbackProcessData.resultSection.items,
-          },
-
-          calmSection: {
-            ...fallbackProcessData.calmSection,
-            ...(data?.calmSection || {}),
-          },
-
-          cta: {
-            ...fallbackProcessData.cta,
-            ...(data?.cta || {}),
-          },
-        });
-      } catch {
-        setProcessData(fallbackProcessData);
-      }
-    };
-
-    loadData();
-  }, [lang]);
-
-  const content = useMemo(
-    () => processData ?? fallbackProcessData,
-    [processData],
-  );
+export default function ProcessPageClient({
+  initialData,
+}: {
+  initialData: ProcessData;
+}) {
+  const content = initialData;
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#f8f6f1] text-black">
@@ -477,19 +304,19 @@ export default function ProcessPageClient() {
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Link
+            <LocalizedLink
               href="/contact"
               className="inline-flex min-h-[56px] items-center justify-center border border-white bg-white px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-black transition duration-300 hover:-translate-y-[1px]"
             >
               {content.cta.primaryButton}
-            </Link>
+            </LocalizedLink>
 
-            <Link
+            <LocalizedLink
               href="/portfolio"
               className="inline-flex min-h-[56px] items-center justify-center border border-white/40 bg-transparent px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:border-white hover:bg-white hover:text-black"
             >
               {content.cta.secondaryButton}
-            </Link>
+            </LocalizedLink>
           </div>
         </div>
       </section>

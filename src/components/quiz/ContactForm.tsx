@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 
 import { sendMessage } from '@/api/telegram';
+import { LocalizedLink } from '@/components/ui/LocalizedLink';
 
 import { ContactFormData, QuizAnswers } from './quiz.types';
 
@@ -228,14 +228,14 @@ export default function ContactForm({ quiz, answers }: Props) {
 
           <span>
             {quiz.form.privacyLabel}
-            <Link
+            <LocalizedLink
               href="/privacy"
               target="_blank"
               rel="noopener noreferrer"
               className="mb-6 ml-5 mr-auto block cursor-pointer font-montserrat text-[12px] font-normal not-italic leading-4 tracking-[0.2px] text-accent transition duration-300 hover:text-hover sm:relative sm:top-[-16px] sm:ml-[45px] sm:inline-block md:static md:ml-5 md:block"
             >
               {quiz.form.privacyLinkLabel}
-            </Link>
+            </LocalizedLink>
           </span>
         </label>
 
