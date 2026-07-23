@@ -1,10 +1,11 @@
 'use client';
 
-import { type ComponentType, type ReactNode } from 'react';
+import { type ComponentType, type ReactNode, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   BadgeCheck,
   Check,
+  ChevronDown,
   Gem,
   HelpCircle,
   PanelsTopLeft,
@@ -332,6 +333,7 @@ function PackageCard({
 }) {
   const Icon = packageIcons[index] || PanelsTopLeft;
   const isRecommended = Boolean(item.badge);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <article
@@ -341,60 +343,81 @@ function PackageCard({
           : 'border-[#e7e2d9] bg-white/45 shadow-[0_14px_36px_rgba(0,0,0,0.03)] hover:bg-white/70'
       }`}
     >
-      <div className="mb-8 flex items-start justify-between gap-4">
-        <Icon size={42} strokeWidth={1.1} className="text-black/40" />
+      <button
+        type="button"
+        onClick={() => setIsOpen(prev => !prev)}
+        aria-expanded={isOpen}
+        className="flex w-full flex-col text-left md:pointer-events-none"
+      >
+        <div className="mb-8 flex items-start justify-between gap-4">
+          <Icon size={42} strokeWidth={1.1} className="text-black/40" />
 
-        {item.badge && (
-          <span className="bg-black px-3 py-1.5 font-montserrat text-[10px] font-semibold uppercase tracking-[0.18em] text-white">
-            {item.badge}
-          </span>
-        )}
-      </div>
-
-      <h3 className="max-w-[420px] break-words font-tenor text-[34px] leading-[1] tracking-[-0.035em] text-black">
-        {item.name}
-      </h3>
-
-      <p className="mt-5 font-montserrat text-[14px] leading-7 text-neutral-500">
-        {item.shortDescription}
-      </p>
-
-      <p className="mt-8 break-words font-tenor text-[40px] leading-none tracking-[-0.04em] text-black">
-        {item.price}
-      </p>
-
-      <p className="mt-6 border-t border-[#e7e2d9] pt-5 font-montserrat text-[13px] leading-6 text-neutral-500">
-        {item.idealFor}
-      </p>
-
-      <div className="mt-7">
-        <FeatureList items={item.features} />
-      </div>
-
-      {(item.suitableFor ||
-        item.notSuitableFor ||
-        item.duration ||
-        item.support) && (
-        <div className="mt-8 space-y-4 border-t border-[#e7e2d9] pt-6">
-          <InfoBlock label={ui.suitableFor} value={item.suitableFor} />
-          <InfoBlock label={ui.notSuitableFor} value={item.notSuitableFor} />
-
-          {(item.duration || item.support) && (
-            <div className="grid gap-3 pt-1 sm:grid-cols-2">
-              <InfoBlock label={ui.duration} value={item.duration} />
-              <InfoBlock label={ui.support} value={item.support} />
-            </div>
+          {item.badge && (
+            <span className="bg-black px-3 py-1.5 font-montserrat text-[10px] font-semibold uppercase tracking-[0.18em] text-white">
+              {item.badge}
+            </span>
           )}
         </div>
-      )}
 
-      <ActionButton
-        onClick={onClick}
-        variant={isRecommended ? 'dark' : 'outlineDark'}
-        className="mt-8 w-full"
+        <div className="flex items-start justify-between gap-4">
+          <h3 className="max-w-[420px] break-words font-tenor text-[34px] leading-[1] tracking-[-0.035em] text-black">
+            {item.name}
+          </h3>
+
+          <ChevronDown
+            size={22}
+            strokeWidth={1.4}
+            className={`mt-2 shrink-0 text-black/40 transition-transform duration-300 md:hidden ${
+              isOpen ? 'rotate-180' : ''
+            }`}
+          />
+        </div>
+      </button>
+
+      <div
+        className={`${isOpen ? 'flex flex-1 flex-col' : 'hidden'} md:flex md:flex-1 md:flex-col`}
       >
-        {item.button}
-      </ActionButton>
+        <p className="mt-5 font-montserrat text-[14px] leading-7 text-neutral-500">
+          {item.shortDescription}
+        </p>
+
+        <p className="mt-8 break-words font-tenor text-[40px] leading-none tracking-[-0.04em] text-black">
+          {item.price}
+        </p>
+
+        <p className="mt-6 border-t border-[#e7e2d9] pt-5 font-montserrat text-[13px] leading-6 text-neutral-500">
+          {item.idealFor}
+        </p>
+
+        <div className="mt-7">
+          <FeatureList items={item.features} />
+        </div>
+
+        {(item.suitableFor ||
+          item.notSuitableFor ||
+          item.duration ||
+          item.support) && (
+          <div className="mb-5 mt-8 space-y-4 border-t border-[#e7e2d9] pt-6">
+            <InfoBlock label={ui.suitableFor} value={item.suitableFor} />
+            <InfoBlock label={ui.notSuitableFor} value={item.notSuitableFor} />
+
+            {(item.duration || item.support) && (
+              <div className="grid gap-3 pt-1 sm:grid-cols-2">
+                <InfoBlock label={ui.duration} value={item.duration} />
+                <InfoBlock label={ui.support} value={item.support} />
+              </div>
+            )}
+          </div>
+        )}
+
+        <ActionButton
+          onClick={onClick}
+          variant={isRecommended ? 'dark' : 'outlineDark'}
+          className="mt-auto w-full"
+        >
+          {item.button}
+        </ActionButton>
+      </div>
     </article>
   );
 }
@@ -628,7 +651,7 @@ export default function PricesPageClient({
             description={content.packages.description}
           />
 
-          <div className="mt-14 grid auto-rows-fr grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] gap-4">
+          <div className="mt-14 grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] gap-4 md:auto-rows-fr">
             {content.packages.items.map((item, index) => (
               <PackageCard
                 key={item.name}
