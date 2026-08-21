@@ -33,12 +33,12 @@
   },
   "quizPreview": {
     "kicker": "Projekt-Kalkulator",
-    "title": "Nicht sicher, welche Website zu Ihrem Projekt passt?",
-    "description": "Beantworten Sie ein paar kurze Fragen und erhalten Sie eine klarere Orientierung für Ihr Website-Projekt.",
-    "leftTitle": "Finden Sie das passende Website-Paket.",
-    "leftDescription": "Unser kurzer Projekt-Kalkulator hilft Ihnen, den passenden Umfang für Ihr Projekt besser einzuschätzen.",
-    "button": "Kalkulator starten",
-    "note": "3 kurze Schritte. Eine klare Empfehlung.",
+    "title": "Nicht sicher, welches Website-Paket passt?",
+    "description": "Beantworten Sie ein paar kurze Fragen. Wir prüfen, welche Lösung zu Ihrem Ziel, Budget und Umfang passt.",
+    "leftTitle": "3 kurze Schritte. Eine klare Empfehlung.",
+    "leftDescription": "Schnell prüfen, welche Website-Lösung zu Ihrem Projekt passt.",
+    "button": "Projekt-Kalkulator starten",
+    "note": "Kostenlos. Persönlich. Unverbindlich.",
     "steps": ["Projektart", "Umfang", "Empfehlung"]
   },
   "featuredProjects": {

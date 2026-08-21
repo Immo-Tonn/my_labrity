@@ -108,7 +108,8 @@ export default function Quiz() {
   };
 
   return (
-    <div className="w-full">
+    // Вот сюда добавлены классы для прокрутки:
+    <div className="max-h-[85vh] w-full overflow-y-auto overflow-x-hidden pr-2">
       {/* PROGRESS */}
       <div className="mb-9">
         <div className="mb-4 flex items-center justify-between gap-4">
