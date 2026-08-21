@@ -91,6 +91,11 @@
         "title": "Reparatur für Laptops und Gadgets",
         "category": "Reparaturservice",
         "image": "/images/projects/techfix.png"
+      },
+      {
+        "title": "Website für Einzelunternehmer",
+        "category": "Einzelunternehmer",
+        "image": "/images/projects/privateD.png"
       }
     ]
   },
@@ -211,7 +216,8 @@
       "BeautyTime": "Beautyindustrie",
       "Werkstatt": "Automobilindustrie",
       "Alltagsbegleitung für Senioren": "Seniorenbegleitung",
-      "Reparatur für Laptops und Gadgets": "Reparaturservice"
+      "Reparatur für Laptops und Gadgets": "Reparaturservice",
+      "Website für Einzelunternehmer": "Einzelunternehmer"
     },
     "blackSection": {
       "kicker": "In Entwicklung",
@@ -276,6 +282,13 @@
         "imageVariant": "first",
         "image": "/images/projects/techfix.png",
         "href": "https://repair-eosin.vercel.app/"
+      },
+      {
+        "title": "Website für Einzelunternehmer",
+        "description": "Persönliche Website für einen Einzelunternehmer mit einem einprägsamen Auftritt, klarer Leistungsdarstellung und Fokus auf die persönliche Marke.",
+        "imageVariant": "second",
+        "image": "/images/projects/privateD.png",
+        "href": "https://www.gasterartur.com/"
       }
     ]
   },

@@ -91,6 +91,11 @@
         "title": "Laptop & Gadget Repair Shop",
         "category": "Repair Service",
         "image": "/images/projects/techfix.png"
+      },
+      {
+        "title": "Sole Proprietor Website",
+        "category": "Sole Proprietor",
+        "image": "/images/projects/privateD.png"
       }
     ]
   },
@@ -234,7 +239,8 @@
       "BeautyTime": "Beauty Industry",
       "Werkstatt": "Automotive Industry",
       "Senior Companion Support": "Senior support",
-      "Laptop & Gadget Repair Shop": "Repair Service"
+      "Laptop & Gadget Repair Shop": "Repair Service",
+      "Sole Proprietor Website": "Sole Proprietor"
     },
     "blackSection": {
       "kicker": "In Development",
@@ -299,6 +305,13 @@
         "imageVariant": "first",
         "image": "/images/projects/techfix.png",
         "href": "https://repair-eosin.vercel.app/"
+      },
+      {
+        "title": "Sole Proprietor Website",
+        "description": "Personal website for a sole proprietor with a bold, memorable visual identity, clear service overview and a strong personal brand focus.",
+        "imageVariant": "second",
+        "image": "/images/projects/privateD.png",
+        "href": "https://www.gasterartur.com/"
       }
     ]
   },

@@ -91,6 +91,11 @@
         "title": "Майстерня з ремонту ноутбуків та гаджетів",
         "category": "Ремонт техніки",
         "image": "/images/projects/techfix.png"
+      },
+      {
+        "title": "Сайт приватного підприємця",
+        "category": "Приватний підприємець",
+        "image": "/images/projects/privateD.png"
       }
     ]
   },
@@ -234,7 +239,8 @@
       "BeautyTime": "Beauty індустрія",
       "Werkstatt": "Автомобільна індустрія",
       "Супровід літніх людей": "Допомога літнім людям",
-      "Майстерня з ремонту ноутбуків та гаджетів": "Ремонт техніки"
+      "Майстерня з ремонту ноутбуків та гаджетів": "Ремонт техніки",
+      "Сайт приватного підприємця": "Приватний підприємець"
     },
     "blackSection": {
       "kicker": "У розробці",
@@ -299,6 +305,13 @@
         "imageVariant": "first",
         "image": "/images/projects/techfix.png",
         "href": "https://repair-eosin.vercel.app/"
+      },
+      {
+        "title": "Сайт приватного підприємця",
+        "description": "Особистий сайт для приватного підприємця з яскравим образом, чітким переліком послуг та акцентом на особистий бренд.",
+        "imageVariant": "second",
+        "image": "/images/projects/privateD.png",
+        "href": "https://www.gasterartur.com/"
       }
     ]
   },
