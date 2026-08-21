@@ -86,6 +86,11 @@
         "title": "Workshop",
         "category": "Automotive Industry",
         "image": "/images/projects/werk.png"
+      },
+      {
+        "title": "Laptop & Gadget Repair Shop",
+        "category": "Repair Service",
+        "image": "/images/projects/techfix.png"
       }
     ]
   },
@@ -228,7 +233,8 @@
       "Massage Studio": "Wellness & Spa",
       "BeautyTime": "Beauty Industry",
       "Werkstatt": "Automotive Industry",
-      "Senior Companion Support": "Senior support"
+      "Senior Companion Support": "Senior support",
+      "Laptop & Gadget Repair Shop": "Repair Service"
     },
     "blackSection": {
       "kicker": "In Development",
@@ -286,6 +292,13 @@
         "imageVariant": "second",
         "image": "/images/projects/werk.png",
         "href": "https://auto-service-landing-five.vercel.app/de"
+      },
+      {
+        "title": "Laptop & Gadget Repair Shop",
+        "description": "Modern website for a mobile device repair service with a clear service overview, transparent pricing and a trust-building design.",
+        "imageVariant": "first",
+        "image": "/images/projects/techfix.png",
+        "href": "https://repair-eosin.vercel.app/"
       }
     ]
   },

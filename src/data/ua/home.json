@@ -86,6 +86,11 @@
         "title": "Автомайстерня",
         "category": "Автомобільна індустрія",
         "image": "/images/projects/werk.png"
+      },
+      {
+        "title": "Майстерня з ремонту ноутбуків та гаджетів",
+        "category": "Ремонт техніки",
+        "image": "/images/projects/techfix.png"
       }
     ]
   },
@@ -228,7 +233,8 @@
       "Massage Studio": "Wellness & Spa",
       "BeautyTime": "Beauty індустрія",
       "Werkstatt": "Автомобільна індустрія",
-      "Супровід літніх людей": "Допомога літнім людям"
+      "Супровід літніх людей": "Допомога літнім людям",
+      "Майстерня з ремонту ноутбуків та гаджетів": "Ремонт техніки"
     },
     "blackSection": {
       "kicker": "У розробці",
@@ -286,6 +292,13 @@
         "imageVariant": "second",
         "image": "/images/projects/werk.png",
         "href": "https://auto-service-landing-five.vercel.app/de"
+      },
+      {
+        "title": "Майстерня з ремонту ноутбуків та гаджетів",
+        "description": "Сучасний сайт сервісного центру з ремонту цифрової техніки з чітким переліком послуг, прозорими цінами та акцентом на довіру клієнтів.",
+        "imageVariant": "first",
+        "image": "/images/projects/techfix.png",
+        "href": "https://repair-eosin.vercel.app/"
       }
     ]
   },

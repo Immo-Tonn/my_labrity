@@ -86,6 +86,11 @@
         "title": "Werkstatt",
         "category": "Automobilindustrie",
         "image": "/images/projects/werk.png"
+      },
+      {
+        "title": "Reparatur für Laptops und Gadgets",
+        "category": "Reparaturservice",
+        "image": "/images/projects/techfix.png"
       }
     ]
   },
@@ -205,7 +210,8 @@
       "Massage Studio": "Wellness & Spa",
       "BeautyTime": "Beautyindustrie",
       "Werkstatt": "Automobilindustrie",
-      "Alltagsbegleitung für Senioren": "Seniorenbegleitung"
+      "Alltagsbegleitung für Senioren": "Seniorenbegleitung",
+      "Reparatur für Laptops und Gadgets": "Reparaturservice"
     },
     "blackSection": {
       "kicker": "In Entwicklung",
@@ -263,6 +269,13 @@
         "imageVariant": "second",
         "image": "/images/projects/werk.png",
         "href": "https://auto-service-landing-five.vercel.app/de"
+      },
+      {
+        "title": "Reparatur für Laptops und Gadgets",
+        "description": "Moderner Webauftritt für einen Reparaturservice für Mobilgeräte mit klarer Leistungsübersicht, transparenten Preisen und vertrauensbildendem Design.",
+        "imageVariant": "first",
+        "image": "/images/projects/techfix.png",
+        "href": "https://repair-eosin.vercel.app/"
       }
     ]
   },
