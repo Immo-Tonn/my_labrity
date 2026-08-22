@@ -96,6 +96,11 @@
         "title": "Website für Einzelunternehmer",
         "category": "Einzelunternehmer",
         "image": "/images/projects/privateD.png"
+      },
+      {
+        "title": "Website für Logopädin",
+        "category": "Logopädie",
+        "image": "/images/projects/logoped.png"
       }
     ]
   },
@@ -217,7 +222,8 @@
       "Werkstatt": "Automobilindustrie",
       "Alltagsbegleitung für Senioren": "Seniorenbegleitung",
       "Reparatur für Laptops und Gadgets": "Reparaturservice",
-      "Website für Einzelunternehmer": "Einzelunternehmer"
+      "Website für Einzelunternehmer": "Einzelunternehmer",
+      "Website für Logopädin": "Logopädie"
     },
     "blackSection": {
       "kicker": "In Entwicklung",
@@ -289,6 +295,13 @@
         "imageVariant": "second",
         "image": "/images/projects/privateD.png",
         "href": "https://www.gasterartur.com/"
+      },
+      {
+        "title": "Website für Logopädin",
+        "description": "Website für eine Logopädin, die mit Kindern und Erwachsenen arbeitet: Diagnostik, Sprachkorrektur, Schulvorbereitung und Online-Beratung.",
+        "imageVariant": "first",
+        "image": "/images/projects/logoped.png",
+        "href": "https://logoped2-khaki.vercel.app/"
       }
     ]
   },

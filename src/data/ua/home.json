@@ -96,6 +96,11 @@
         "title": "Сайт приватного підприємця",
         "category": "Приватний підприємець",
         "image": "/images/projects/privateD.png"
+      },
+      {
+        "title": "Сайт логопеда",
+        "category": "Логопедія",
+        "image": "/images/projects/logoped.png"
       }
     ]
   },
@@ -240,7 +245,8 @@
       "Werkstatt": "Автомобільна індустрія",
       "Супровід літніх людей": "Допомога літнім людям",
       "Майстерня з ремонту ноутбуків та гаджетів": "Ремонт техніки",
-      "Сайт приватного підприємця": "Приватний підприємець"
+      "Сайт приватного підприємця": "Приватний підприємець",
+      "Сайт логопеда": "Логопедія"
     },
     "blackSection": {
       "kicker": "У розробці",
@@ -312,6 +318,13 @@
         "imageVariant": "second",
         "image": "/images/projects/privateD.png",
         "href": "https://www.gasterartur.com/"
+      },
+      {
+        "title": "Сайт логопеда",
+        "description": "Сайт логопеда для роботи з дітьми та дорослими: діагностика, корекція мовлення, підготовка до школи та онлайн-консультації.",
+        "imageVariant": "first",
+        "image": "/images/projects/logoped.png",
+        "href": "https://logoped2-khaki.vercel.app/"
       }
     ]
   },

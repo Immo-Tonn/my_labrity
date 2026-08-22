@@ -96,6 +96,11 @@
         "title": "Sole Proprietor Website",
         "category": "Sole Proprietor",
         "image": "/images/projects/privateD.png"
+      },
+      {
+        "title": "Speech Therapist Website",
+        "category": "Speech Therapy",
+        "image": "/images/projects/logoped.png"
       }
     ]
   },
@@ -240,7 +245,8 @@
       "Werkstatt": "Automotive Industry",
       "Senior Companion Support": "Senior support",
       "Laptop & Gadget Repair Shop": "Repair Service",
-      "Sole Proprietor Website": "Sole Proprietor"
+      "Sole Proprietor Website": "Sole Proprietor",
+      "Speech Therapist Website": "Speech Therapy"
     },
     "blackSection": {
       "kicker": "In Development",
@@ -312,6 +318,13 @@
         "imageVariant": "second",
         "image": "/images/projects/privateD.png",
         "href": "https://www.gasterartur.com/"
+      },
+      {
+        "title": "Speech Therapist Website",
+        "description": "Website for a speech-language pathologist working with children and adults: diagnostics, speech correction, school readiness prep and online sessions.",
+        "imageVariant": "first",
+        "image": "/images/projects/logoped.png",
+        "href": "https://logoped2-khaki.vercel.app/"
       }
     ]
   },
