@@ -101,6 +101,11 @@
         "title": "Website für Logopädin",
         "category": "Logopädie",
         "image": "/images/projects/logoped.png"
+      },
+      {
+        "title": "Juweliergeschäft und Werkstatt",
+        "category": "Schmuck",
+        "image": "/images/projects/Granat.png"
       }
     ]
   },
@@ -223,7 +228,8 @@
       "Alltagsbegleitung für Senioren": "Seniorenbegleitung",
       "Reparatur für Laptops und Gadgets": "Reparaturservice",
       "Website für Einzelunternehmer": "Einzelunternehmer",
-      "Website für Logopädin": "Logopädie"
+      "Website für Logopädin": "Logopädie",
+      "Juweliergeschäft und Werkstatt": "Schmuck"
     },
     "blackSection": {
       "kicker": "In Entwicklung",
@@ -302,6 +308,13 @@
         "imageVariant": "first",
         "image": "/images/projects/logoped.png",
         "href": "https://logoped2-khaki.vercel.app/"
+      },
+      {
+        "title": "Juweliergeschäft und Werkstatt",
+        "description": "Website eines Juwelierhauses mit Schmuckkatalog, Werkstattleistungen und einer hochwertigen Markenpräsentation.",
+        "imageVariant": "second",
+        "image": "/images/projects/Granat.png",
+        "href": "https://jewerly-indol.vercel.app/"
       }
     ]
   },

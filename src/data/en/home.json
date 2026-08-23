@@ -101,6 +101,11 @@
         "title": "Speech Therapist Website",
         "category": "Speech Therapy",
         "image": "/images/projects/logoped.png"
+      },
+      {
+        "title": "Jewelry Store & Workshop",
+        "category": "Jewelry",
+        "image": "/images/projects/Granat.png"
       }
     ]
   },
@@ -246,7 +251,8 @@
       "Senior Companion Support": "Senior support",
       "Laptop & Gadget Repair Shop": "Repair Service",
       "Sole Proprietor Website": "Sole Proprietor",
-      "Speech Therapist Website": "Speech Therapy"
+      "Speech Therapist Website": "Speech Therapy",
+      "Jewelry Store & Workshop": "Jewelry"
     },
     "blackSection": {
       "kicker": "In Development",
@@ -325,6 +331,13 @@
         "imageVariant": "first",
         "image": "/images/projects/logoped.png",
         "href": "https://logoped2-khaki.vercel.app/"
+      },
+      {
+        "title": "Jewelry Store & Workshop",
+        "description": "Website for a jewelry house with a product catalog, workshop services and a premium brand presentation.",
+        "imageVariant": "second",
+        "image": "/images/projects/Granat.png",
+        "href": "https://jewerly-indol.vercel.app/"
       }
     ]
   },
