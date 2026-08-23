@@ -33,12 +33,12 @@
   },
   "quizPreview": {
     "kicker": "Projekt-Kalkulator",
-    "title": "Nicht sicher, welche Website zu Ihrem Projekt passt?",
-    "description": "Beantworten Sie ein paar kurze Fragen und erhalten Sie eine klarere Orientierung für Ihr Website-Projekt.",
-    "leftTitle": "Finden Sie das passende Website-Paket.",
-    "leftDescription": "Unser kurzer Projekt-Kalkulator hilft Ihnen, den passenden Umfang für Ihr Projekt besser einzuschätzen.",
-    "button": "Kalkulator starten",
-    "note": "3 kurze Schritte. Eine klare Empfehlung.",
+    "title": "Nicht sicher, welches Website-Paket passt?",
+    "description": "Beantworten Sie ein paar kurze Fragen. Wir prüfen, welche Lösung zu Ihrem Ziel, Budget und Umfang passt.",
+    "leftTitle": "3 kurze Schritte. Eine klare Empfehlung.",
+    "leftDescription": "Schnell prüfen, welche Website-Lösung zu Ihrem Projekt passt.",
+    "button": "Projekt-Kalkulator starten",
+    "note": "Kostenlos. Persönlich. Unverbindlich.",
     "steps": ["Projektart", "Umfang", "Empfehlung"]
   },
   "featuredProjects": {
@@ -86,6 +86,26 @@
         "title": "Werkstatt",
         "category": "Automobilindustrie",
         "image": "/images/projects/werk.png"
+      },
+      {
+        "title": "Reparatur für Laptops und Gadgets",
+        "category": "Reparaturservice",
+        "image": "/images/projects/techfix.png"
+      },
+      {
+        "title": "Website für Einzelunternehmer",
+        "category": "Einzelunternehmer",
+        "image": "/images/projects/privateD.png"
+      },
+      {
+        "title": "Website für Logopädin",
+        "category": "Logopädie",
+        "image": "/images/projects/logoped.png"
+      },
+      {
+        "title": "Juweliergeschäft und Werkstatt",
+        "category": "Schmuck",
+        "image": "/images/projects/Granat.png"
       }
     ]
   },
@@ -205,7 +225,11 @@
       "Massage Studio": "Wellness & Spa",
       "BeautyTime": "Beautyindustrie",
       "Werkstatt": "Automobilindustrie",
-      "Alltagsbegleitung für Senioren": "Seniorenbegleitung"
+      "Alltagsbegleitung für Senioren": "Seniorenbegleitung",
+      "Reparatur für Laptops und Gadgets": "Reparaturservice",
+      "Website für Einzelunternehmer": "Einzelunternehmer",
+      "Website für Logopädin": "Logopädie",
+      "Juweliergeschäft und Werkstatt": "Schmuck"
     },
     "blackSection": {
       "kicker": "In Entwicklung",
@@ -263,6 +287,34 @@
         "imageVariant": "second",
         "image": "/images/projects/werk.png",
         "href": "https://auto-service-landing-five.vercel.app/de"
+      },
+      {
+        "title": "Reparatur für Laptops und Gadgets",
+        "description": "Moderner Webauftritt für einen Reparaturservice für Mobilgeräte mit klarer Leistungsübersicht, transparenten Preisen und vertrauensbildendem Design.",
+        "imageVariant": "first",
+        "image": "/images/projects/techfix.png",
+        "href": "https://repair-eosin.vercel.app/"
+      },
+      {
+        "title": "Website für Einzelunternehmer",
+        "description": "Persönliche Website für einen Einzelunternehmer mit einem einprägsamen Auftritt, klarer Leistungsdarstellung und Fokus auf die persönliche Marke.",
+        "imageVariant": "second",
+        "image": "/images/projects/privateD.png",
+        "href": "https://www.gasterartur.com/"
+      },
+      {
+        "title": "Website für Logopädin",
+        "description": "Website für eine Logopädin, die mit Kindern und Erwachsenen arbeitet: Diagnostik, Sprachkorrektur, Schulvorbereitung und Online-Beratung.",
+        "imageVariant": "first",
+        "image": "/images/projects/logoped.png",
+        "href": "https://logoped2-khaki.vercel.app/"
+      },
+      {
+        "title": "Juweliergeschäft und Werkstatt",
+        "description": "Website eines Juwelierhauses mit Schmuckkatalog, Werkstattleistungen und einer hochwertigen Markenpräsentation.",
+        "imageVariant": "second",
+        "image": "/images/projects/Granat.png",
+        "href": "https://jewerly-indol.vercel.app/"
       }
     ]
   },

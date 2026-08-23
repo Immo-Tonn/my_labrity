@@ -86,6 +86,26 @@
         "title": "Workshop",
         "category": "Automotive Industry",
         "image": "/images/projects/werk.png"
+      },
+      {
+        "title": "Laptop & Gadget Repair Shop",
+        "category": "Repair Service",
+        "image": "/images/projects/techfix.png"
+      },
+      {
+        "title": "Sole Proprietor Website",
+        "category": "Sole Proprietor",
+        "image": "/images/projects/privateD.png"
+      },
+      {
+        "title": "Speech Therapist Website",
+        "category": "Speech Therapy",
+        "image": "/images/projects/logoped.png"
+      },
+      {
+        "title": "Jewelry Store & Workshop",
+        "category": "Jewelry",
+        "image": "/images/projects/Granat.png"
       }
     ]
   },
@@ -228,7 +248,11 @@
       "Massage Studio": "Wellness & Spa",
       "BeautyTime": "Beauty Industry",
       "Werkstatt": "Automotive Industry",
-      "Senior Companion Support": "Senior support"
+      "Senior Companion Support": "Senior support",
+      "Laptop & Gadget Repair Shop": "Repair Service",
+      "Sole Proprietor Website": "Sole Proprietor",
+      "Speech Therapist Website": "Speech Therapy",
+      "Jewelry Store & Workshop": "Jewelry"
     },
     "blackSection": {
       "kicker": "In Development",
@@ -286,6 +310,34 @@
         "imageVariant": "second",
         "image": "/images/projects/werk.png",
         "href": "https://auto-service-landing-five.vercel.app/de"
+      },
+      {
+        "title": "Laptop & Gadget Repair Shop",
+        "description": "Modern website for a mobile device repair service with a clear service overview, transparent pricing and a trust-building design.",
+        "imageVariant": "first",
+        "image": "/images/projects/techfix.png",
+        "href": "https://repair-eosin.vercel.app/"
+      },
+      {
+        "title": "Sole Proprietor Website",
+        "description": "Personal website for a sole proprietor with a bold, memorable visual identity, clear service overview and a strong personal brand focus.",
+        "imageVariant": "second",
+        "image": "/images/projects/privateD.png",
+        "href": "https://www.gasterartur.com/"
+      },
+      {
+        "title": "Speech Therapist Website",
+        "description": "Website for a speech-language pathologist working with children and adults: diagnostics, speech correction, school readiness prep and online sessions.",
+        "imageVariant": "first",
+        "image": "/images/projects/logoped.png",
+        "href": "https://logoped2-khaki.vercel.app/"
+      },
+      {
+        "title": "Jewelry Store & Workshop",
+        "description": "Website for a jewelry house with a product catalog, workshop services and a premium brand presentation.",
+        "imageVariant": "second",
+        "image": "/images/projects/Granat.png",
+        "href": "https://jewerly-indol.vercel.app/"
       }
     ]
   },
