@@ -87,6 +87,26 @@
         "title": "Автомастерская",
         "category": "Автомобильная индустрия",
         "image": "/images/projects/werk.png"
+      },
+      {
+        "title": "Мастерская ремонта ноутбуков и гаджетов",
+        "category": "Ремонт техники",
+        "image": "/images/projects/techfix.png"
+      },
+      {
+        "title": "Сайт частного предпринимателя",
+        "category": "Частный предприниматель",
+        "image": "/images/projects/privateD.png"
+      },
+      {
+        "title": "Сайт логопеда",
+        "category": "Логопедия",
+        "image": "/images/projects/logoped.png"
+      },
+      {
+        "title": "Ювелирный магазин и мастерская",
+        "category": "Ювелирные украшения",
+        "image": "/images/projects/Granat.png"
       }
     ]
   },
@@ -229,7 +249,11 @@
       "Massage Studio": "Wellness & Spa",
       "BeautyTime": "Beauty-индустрия",
       "Werkstatt": "Автомобильная сфера",
-      "Сопровождение пожилых людей": "Помощь пожилым"
+      "Сопровождение пожилых людей": "Помощь пожилым",
+      "Мастерская ремонта ноутбуков и гаджетов": "Ремонт техники",
+      "Сайт частного предпринимателя": "Частный предприниматель",
+      "Сайт логопеда": "Логопедия",
+      "Ювелирный магазин и мастерская": "Ювелирные украшения"
     },
     "blackSection": {
       "kicker": "В разработке",
@@ -287,6 +311,34 @@
         "imageVariant": "second",
         "image": "/images/projects/werk.png",
         "href": "https://auto-service-landing-five.vercel.app/de"
+      },
+      {
+        "title": "Мастерская ремонта ноутбуков и гаджетов",
+        "description": "Современный сайт сервисного центра по ремонту цифровой техники с понятным перечнем услуг, прозрачными ценами и акцентом на доверие клиентов.",
+        "imageVariant": "first",
+        "image": "/images/projects/techfix.png",
+        "href": "https://repair-eosin.vercel.app/"
+      },
+      {
+        "title": "Сайт частного предпринимателя",
+        "description": "Персональный сайт для частного предпринимателя с ярким запоминающимся образом, чёткой подачей услуг и акцентом на личный бренд.",
+        "imageVariant": "second",
+        "image": "/images/projects/privateD.png",
+        "href": "https://www.gasterartur.com/"
+      },
+      {
+        "title": "Сайт логопеда",
+        "description": "Сайт логопеда для работы с детьми и взрослыми: диагностика, коррекция речи, подготовка к школе и онлайн-консультации.",
+        "imageVariant": "first",
+        "image": "/images/projects/logoped.png",
+        "href": "https://logoped2-khaki.vercel.app/"
+      },
+      {
+        "title": "Ювелирный магазин и мастерская",
+        "description": "Сайт ювелирного дома с каталогом украшений, услугами мастерской и премиальной подачей бренда.",
+        "imageVariant": "second",
+        "image": "/images/projects/Granat.png",
+        "href": "https://jewerly-indol.vercel.app/"
       }
     ]
   },
