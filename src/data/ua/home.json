@@ -106,6 +106,21 @@
         "title": "Ювелірний магазин і майстерня",
         "category": "Ювелірні прикраси",
         "image": "/images/projects/Granat.png"
+      },
+      {
+        "title": "Relax Massage Studio",
+        "category": "Wellness & Spa",
+        "image": "/images/projects/relax-massage.webp"
+      },
+      {
+        "title": "Premium Consulting",
+        "category": "Фінансовий консалтинг",
+        "image": "/images/projects/premium-consulting.webp"
+      },
+      {
+        "title": "FN Detailing",
+        "category": "Детейлінг",
+        "image": "/images/projects/auto-detailing.webp"
       }
     ]
   },
@@ -252,7 +267,10 @@
       "Майстерня з ремонту ноутбуків та гаджетів": "Ремонт техніки",
       "Сайт приватного підприємця": "Приватний підприємець",
       "Сайт логопеда": "Логопедія",
-      "Ювелірний магазин і майстерня": "Ювелірні прикраси"
+      "Ювелірний магазин і майстерня": "Ювелірні прикраси",
+      "Relax Massage Studio": "Wellness & Spa",
+      "Premium Consulting": "Фінансовий консалтинг",
+      "FN Detailing": "Детейлінг"
     },
     "blackSection": {
       "kicker": "У розробці",
@@ -338,6 +356,27 @@
         "imageVariant": "second",
         "image": "/images/projects/Granat.png",
         "href": "https://jewerly-indol.vercel.app/"
+      },
+      {
+        "title": "Relax Massage Studio",
+        "description": "Редакційний сайт для приватної масажної студії з великою типографікою, зрозумілим переліком послуг та прямим шляхом до запису.",
+        "imageVariant": "first",
+        "image": "/images/projects/relax-massage.webp",
+        "href": "https://massage-landing-six.vercel.app"
+      },
+      {
+        "title": "Premium Consulting",
+        "description": "Редакційний сайт для незалежного фінансового консалтингу з великою типографікою, зрозумілою структурою та прямим шляхом до першої консультації.",
+        "imageVariant": "second",
+        "image": "/images/projects/premium-consulting.webp",
+        "href": "https://premium-consulting-template.vercel.app/de"
+      },
+      {
+        "title": "FN Detailing",
+        "description": "Редакційний сайт для преміальної детейлінг-студії з великою типографікою, зрозумілою структурою послуг і прямим шляхом до запису.",
+        "imageVariant": "first",
+        "image": "/images/projects/auto-detailing.webp",
+        "href": "https://auto-detailing-website-tau.vercel.app"
       }
     ]
   },

@@ -376,7 +376,7 @@ export default function HomePageClient({
               </div>
 
               {/* HERO IMAGE */}
-              <div className="2xl:min-w-[950px] 2xl:max-w-[1300px] relative mx-auto w-full xl:mx-0 xl:w-[52vw] xl:min-w-[680px] xl:max-w-[900px]">
+              <div className="2xl:min-w-[950px] 2xl:max-w-[1300px] relative mx-auto w-full xl:mx-0 xl:w-[52vw] xl:min-w-[420px] xl:max-w-[900px]">
                 <div className="2xl:-translate-y-[70px] relative w-full -translate-y-[20px] xl:-translate-y-[55px]">
                   <Image
                     src="/images/hero/hero-devices.png"
