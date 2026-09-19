@@ -106,6 +106,21 @@
         "title": "Jewelry Store & Workshop",
         "category": "Jewelry",
         "image": "/images/projects/Granat.png"
+      },
+      {
+        "title": "Relax Massage Studio",
+        "category": "Wellness & Spa",
+        "image": "/images/projects/relax-massage.webp"
+      },
+      {
+        "title": "Premium Consulting",
+        "category": "Financial Consulting",
+        "image": "/images/projects/premium-consulting.webp"
+      },
+      {
+        "title": "FN Detailing",
+        "category": "Vehicle Detailing",
+        "image": "/images/projects/auto-detailing.webp"
       }
     ]
   },
@@ -252,7 +267,10 @@
       "Laptop & Gadget Repair Shop": "Repair Service",
       "Sole Proprietor Website": "Sole Proprietor",
       "Speech Therapist Website": "Speech Therapy",
-      "Jewelry Store & Workshop": "Jewelry"
+      "Jewelry Store & Workshop": "Jewelry",
+      "Relax Massage Studio": "Wellness & Spa",
+      "Premium Consulting": "Financial Consulting",
+      "FN Detailing": "Vehicle Detailing"
     },
     "blackSection": {
       "kicker": "In Development",
@@ -338,6 +356,27 @@
         "imageVariant": "second",
         "image": "/images/projects/Granat.png",
         "href": "https://jewerly-indol.vercel.app/"
+      },
+      {
+        "title": "Relax Massage Studio",
+        "description": "Editorial website for a private massage studio with bold typography, a clear overview of services and a direct path to booking.",
+        "imageVariant": "first",
+        "image": "/images/projects/relax-massage.webp",
+        "href": "https://massage-landing-six.vercel.app"
+      },
+      {
+        "title": "Premium Consulting",
+        "description": "Editorial website for an independent financial advisory with bold typography, a clear structure and a direct path to the first consultation.",
+        "imageVariant": "second",
+        "image": "/images/projects/premium-consulting.webp",
+        "href": "https://premium-consulting-template.vercel.app/de"
+      },
+      {
+        "title": "FN Detailing",
+        "description": "Editorial landing page for a premium vehicle detailing studio with bold typography, a clear service structure and a direct path to booking.",
+        "imageVariant": "first",
+        "image": "/images/projects/auto-detailing.webp",
+        "href": "https://auto-detailing-website-tau.vercel.app"
       }
     ]
   },

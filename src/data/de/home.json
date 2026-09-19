@@ -106,6 +106,21 @@
         "title": "Juweliergeschäft und Werkstatt",
         "category": "Schmuck",
         "image": "/images/projects/Granat.png"
+      },
+      {
+        "title": "Relax Massage Studio",
+        "category": "Wellness & Spa",
+        "image": "/images/projects/relax-massage.webp"
+      },
+      {
+        "title": "Premium Consulting",
+        "category": "Finanzberatung",
+        "image": "/images/projects/premium-consulting.webp"
+      },
+      {
+        "title": "FN Detailing",
+        "category": "Fahrzeugaufbereitung",
+        "image": "/images/projects/auto-detailing.webp"
       }
     ]
   },
@@ -229,7 +244,10 @@
       "Reparatur für Laptops und Gadgets": "Reparaturservice",
       "Website für Einzelunternehmer": "Einzelunternehmer",
       "Website für Logopädin": "Logopädie",
-      "Juweliergeschäft und Werkstatt": "Schmuck"
+      "Juweliergeschäft und Werkstatt": "Schmuck",
+      "Relax Massage Studio": "Wellness & Spa",
+      "Premium Consulting": "Finanzberatung",
+      "FN Detailing": "Fahrzeugaufbereitung"
     },
     "blackSection": {
       "kicker": "In Entwicklung",
@@ -315,6 +333,27 @@
         "imageVariant": "second",
         "image": "/images/projects/Granat.png",
         "href": "https://jewerly-indol.vercel.app/"
+      },
+      {
+        "title": "Relax Massage Studio",
+        "description": "Editorial gestaltete Website für ein privates Massagestudio mit großformatiger Typografie, klarer Leistungsübersicht und direktem Weg zur Terminanfrage.",
+        "imageVariant": "first",
+        "image": "/images/projects/relax-massage.webp",
+        "href": "https://massage-landing-six.vercel.app"
+      },
+      {
+        "title": "Premium Consulting",
+        "description": "Editorial gestaltete Website für unabhängige Finanzberatung mit großformatiger Typografie, klarer Struktur und direktem Weg zum Erstgespräch.",
+        "imageVariant": "second",
+        "image": "/images/projects/premium-consulting.webp",
+        "href": "https://premium-consulting-template.vercel.app/de"
+      },
+      {
+        "title": "FN Detailing",
+        "description": "Editorial gestaltete Website für ein Premium-Detailing-Studio mit kraftvoller Typografie, klarer Leistungsstruktur und direktem Weg zur Terminanfrage.",
+        "imageVariant": "first",
+        "image": "/images/projects/auto-detailing.webp",
+        "href": "https://auto-detailing-website-tau.vercel.app"
       }
     ]
   },
