@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "kicker": "Website Design & Build",
+    "title": "A website that convinces from day one.",
+    "description": "No website yet, or ready for a fresh start? We take you from the first idea to a finished, professional site."
+  },
+  "forWhom": {
+    "kicker": "Who it's for",
+    "title": "For anyone who isn't visible online yet.",
+    "description": "Freelancers, small teams or a brand-new venture — the starting point is usually the same: good work with no website to show it.",
+    "items": [
+      {
+        "title": "Freelancers & experts",
+        "description": "You do great work, but online you're hard to find — or you come across as less professional than you really are."
+      },
+      {
+        "title": "Small businesses",
+        "description": "Your business runs well, but you've never had a proper website — or it never grew past a simple digital business card."
+      },
+      {
+        "title": "New ventures",
+        "description": "You're launching something new and want a strong digital presence right from the start."
+      }
+    ]
+  },
+  "offerSection": {
+    "kicker": "What's included",
+    "title": "What goes into building your site.",
+    "description": "A good website is more than just design. We handle every step that gets you there.",
+    "items": [
+      {
+        "title": "Concept & structure",
+        "description": "We define which pages and content your website actually needs — and the order that builds trust."
+      },
+      {
+        "title": "Design & build",
+        "description": "Your website takes shape with a clear layout, a premium feel, and a structure that works on every device."
+      },
+      {
+        "title": "Launch & handover",
+        "description": "After the final polish, we launch together — you get a website that's ready to go from day one."
+      }
+    ]
+  },
+  "approachStatement": {
+    "kicker": "Our approach",
+    "title": "No templates. No half measures.",
+    "description": "We don't build off-the-shelf websites. Every project starts with your business — not with a builder tool."
+  },
+  "proofSection": {
+    "kicker": "Reference",
+    "title": "What that looks like in practice.",
+    "description": "A premium real-estate website with a clear structure and professional property presentation — an example of a new digital presence building trust from day one.",
+    "projectLabel": "Immo Tonn",
+    "linkLabel": "View portfolio"
+  },
+  "disambiguation": {
+    "kicker": "Looking for something more specific?",
+    "title": "One of these pages might fit better.",
+    "items": [
+      {
+        "label": "Mainly focused on how it looks?",
+        "linkLabel": "More on Webdesign",
+        "href": "/webdesign"
+      },
+      {
+        "label": "Already have a website you want to renew?",
+        "linkLabel": "More on Relaunch",
+        "href": "/website-relaunch"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Common questions",
+    "title": "What you'd want to know beforehand.",
+    "items": [
+      {
+        "question": "What does it cost to have a website built?",
+        "answer": "That depends on the scope of your project. You'll find a full overview of our packages and pricing on our prices page."
+      },
+      {
+        "question": "How long does it take?",
+        "answer": "Usually a few weeks, depending on scope and how quickly we align on details. You can see the exact process on our process page."
+      },
+      {
+        "question": "Do I already need texts and images ready?",
+        "answer": "No. It helps, but it isn't required — if something's missing, we help with structure and content."
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Next step",
+    "title": "Ready for your new website?",
+    "description": "Tell us a little about your project — we'll tell you how we'd approach it.",
+    "primaryButton": "Start a project",
+    "secondaryButton": "See pricing",
+    "backToServicesLabel": "View all services",
+    "processLinkLabel": "More on our process"
+  },
+  "images": {
+    "heroAlt": "Real project from the Labrity portfolio: real estate website with a clear structure (Immo Tonn)"
+  },
+  "breadcrumbParentLabel": "Services"
+}

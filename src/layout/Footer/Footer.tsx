@@ -69,7 +69,7 @@ export const Footer: React.FC = () => {
 
             <div className="flex flex-wrap items-center justify-center gap-3 border-[#18352b]/10 md:gap-4 xl:border-l xl:pl-6">
               <a
-                href="https://labrity.com"
+                href="https://www.labrity.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-montserrat text-[12px] uppercase tracking-[0.14em] text-[#18352b]/55 transition duration-300 hover:text-[#18352b]"

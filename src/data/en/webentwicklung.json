@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "kicker": "Web Development",
+    "title": "Web development that holds up.",
+    "description": "Good design needs a solid foundation. We build websites that load fast, run reliably, and can grow with your business."
+  },
+  "coreSection": {
+    "kicker": "What's part of it",
+    "title": "The technical side of a good website.",
+    "description": "Design is what you see. Whether a website actually works well is decided underneath it.",
+    "items": [
+      {
+        "title": "Performance",
+        "description": "Fast load times and a clean technical build — noticeable to visitors, measurable to Google."
+      },
+      {
+        "title": "Responsive build",
+        "description": "Your website works reliably on phone, tablet and desktop, without compromising any single view."
+      },
+      {
+        "title": "SEO structure",
+        "description": "A technically clean foundation — from page structure to load time — as a basis for search visibility."
+      }
+    ]
+  },
+  "forWhomSection": {
+    "kicker": "Who it's for",
+    "title": "For businesses with technical expectations.",
+    "description": "Especially relevant for companies that already have a brand presence and are looking for a dependable technical partner to build it."
+  },
+  "approachStatement": {
+    "kicker": "Our approach",
+    "title": "Solid, not complicated.",
+    "description": "A website doesn't need to be complicated to work well. We favour a clean, modern technical foundation over unnecessary complexity."
+  },
+  "disambiguation": {
+    "kicker": "Looking for something more specific?",
+    "title": "One of these pages might fit better.",
+    "items": [
+      {
+        "label": "Mainly focused on how it looks?",
+        "linkLabel": "More on Webdesign",
+        "href": "/webdesign"
+      },
+      {
+        "label": "Don't have a website yet?",
+        "linkLabel": "More on Website creation",
+        "href": "/website-erstellen-lassen"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Common questions",
+    "title": "What you'd want to know beforehand.",
+    "items": [
+      {
+        "question": "Why does the technical foundation matter for SEO?",
+        "answer": "Search engines factor in load time and a clean structure, among other things. A solid technical build is part of the basis for visibility — not the whole picture."
+      },
+      {
+        "question": "Can my website be extended later?",
+        "answer": "We build websites so they can grow with your business, rather than hitting a wall at the first change."
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Next step",
+    "title": "Ready for a solid foundation?",
+    "description": "Tell us a little about your project — we'll tell you what makes technical sense.",
+    "primaryButton": "Discuss your project",
+    "secondaryButton": "View services",
+    "backToServicesLabel": "View all services"
+  },
+  "images": {
+    "heroAlt": "Real project from the Labrity portfolio: structured auto workshop website (Werkstatt)"
+  },
+  "breadcrumbParentLabel": "Services"
+}

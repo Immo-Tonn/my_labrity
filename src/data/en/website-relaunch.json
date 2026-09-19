@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "kicker": "Website Relaunch",
+    "title": "A relaunch — without unnecessary risk.",
+    "description": "Your website is showing its age, but the idea of a relaunch raises concerns about your existing visibility? We approach it in a structured, careful way."
+  },
+  "signsSection": {
+    "kicker": "How to tell",
+    "title": "When a relaunch is worth it.",
+    "description": "It's usually not one single thing, but an overall impression that shifts over time.",
+    "items": [
+      {
+        "title": "Outdated design",
+        "description": "The website no longer looks like the level your business actually operates at today."
+      },
+      {
+        "title": "Technical weaknesses",
+        "description": "Slow load times or a confusing structure cost you enquiries, often without it being obvious."
+      },
+      {
+        "title": "Fading impact",
+        "description": "The website no longer conveys the competence and credibility you show in person."
+      }
+    ]
+  },
+  "riskSection": {
+    "kicker": "How we approach it",
+    "title": "A relaunch that minimises risk.",
+    "description": "A relaunch changes an existing website — one that's often already been found by Google. So we take every step deliberately and transparently, without promises no one could honestly make.",
+    "items": [
+      {
+        "title": "Analysis of the current site",
+        "description": "We look at what works on your current website and what doesn't, before we change anything."
+      },
+      {
+        "title": "Careful redirects",
+        "description": "Important URLs aren't simply abandoned during migration — they're deliberately redirected."
+      },
+      {
+        "title": "Preserving what works",
+        "description": "Pages that already bring results are factored in deliberately rather than just replaced."
+      }
+    ]
+  },
+  "disclaimerStatement": {
+    "kicker": "To be honest",
+    "title": "No guarantees. But a considered process.",
+    "description": "No one can honestly promise that existing Google rankings will carry over one-to-one after a relaunch. What we can promise is a process that deliberately reduces SEO risk instead of ignoring it."
+  },
+  "disambiguation": {
+    "kicker": "Looking for something more specific?",
+    "title": "One of these pages might fit better.",
+    "items": [
+      {
+        "label": "Don't have a website yet?",
+        "linkLabel": "More on Website creation",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Mainly interested in the technical side?",
+        "linkLabel": "More on Webentwicklung",
+        "href": "/webentwicklung"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Common questions",
+    "title": "What you'd want to know beforehand.",
+    "items": [
+      {
+        "question": "When is a website relaunch worth it?",
+        "answer": "Usually when design, technology or structure no longer match your business's current level — or when enquiries are noticeably declining."
+      },
+      {
+        "question": "Will I lose my Google rankings during a relaunch?",
+        "answer": "A relaunch inherently carries SEO risk. We work with careful redirects and preserve important URLs to reduce that risk — but no one can honestly guarantee unchanged rankings."
+      },
+      {
+        "question": "What happens to my old URLs?",
+        "answer": "Important existing URLs are analysed and, where it makes sense, deliberately redirected to the new structure instead of simply disappearing."
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Next step",
+    "title": "Ready to renew your website?",
+    "description": "Show us your current website — we'll tell you what a relaunch could look like for you.",
+    "primaryButton": "Get your site analysed",
+    "secondaryButton": "See portfolio",
+    "backToServicesLabel": "View all services"
+  },
+  "images": {
+    "heroAlt": "Real project from the Labrity portfolio: bold, premium detailing studio website (FN Detailing)"
+  },
+  "breadcrumbParentLabel": "Services"
+}

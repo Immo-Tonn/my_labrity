@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 
 import { getData } from '@/utils/getData';
 import { buildHreflangAlternates } from '@/utils/hreflangAlternates';
+import { buildOpenGraph } from '@/utils/openGraph';
 import { isLanguage, withLocale } from '@/utils/localizedPath';
 import PricesPageClient, { type PricesData } from './PricesPageClient';
 
@@ -27,11 +28,12 @@ export async function generateMetadata({
       canonical,
       languages: buildHreflangAlternates(PATH),
     },
-    openGraph: {
-      url: canonical,
-      title: prices.meta.title,
-      description: prices.meta.description,
-    },
+    openGraph: await buildOpenGraph(
+      params.lang,
+      canonical,
+      prices.meta.title,
+      prices.meta.description,
+    ),
   };
 }
 
@@ -40,5 +42,29 @@ export default async function PricesPage({ params }: { params: PageParams }) {
 
   const initialData: PricesData = await getData('prices', params.lang);
 
-  return <PricesPageClient initialData={initialData} />;
+  // FAQPage schema built directly from the FAQ block actually rendered below
+  // (PricesPageClient), so the structured data can never drift from what a
+  // visitor sees — this is the only page with a real, visible FAQ.
+  const faqStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: initialData.faq.items.map(item => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
+      <PricesPageClient initialData={initialData} />
+    </>
+  );
 }

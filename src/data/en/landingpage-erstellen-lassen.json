@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "kicker": "Landing Page",
+    "title": "Landing pages built for one goal — not ten.",
+    "description": "A campaign, an offer or a launch doesn't need a whole website — it needs a single page with one clear action."
+  },
+  "whenSection": {
+    "kicker": "When it makes sense",
+    "title": "When a landing page is the right choice.",
+    "description": "Whenever one message needs to be the whole focus — without the distraction of a full website.",
+    "items": [
+      {
+        "title": "Ad campaigns",
+        "description": "Visitors coming from ads land directly on the matching message, instead of clicking through a whole website first."
+      },
+      {
+        "title": "Offers & promotions",
+        "description": "A time-limited offer gets its own focused page instead of a paragraph on the homepage."
+      },
+      {
+        "title": "Product or project launch",
+        "description": "A new venture needs a first digital presence fast — without waiting for a full website."
+      }
+    ]
+  },
+  "principlesSection": {
+    "kicker": "What makes a good landing page",
+    "title": "Clear. Focused. Live fast.",
+    "description": "A landing page works differently from a company website — and that's exactly its strength.",
+    "items": [
+      {
+        "title": "One action",
+        "description": "A single, clear goal — enquire, book, download — instead of many equally-weighted options."
+      },
+      {
+        "title": "Clear structure",
+        "description": "Every section consistently leads toward that one intended action."
+      },
+      {
+        "title": "Fast launch",
+        "description": "Less scope means your page can go live noticeably faster than a full website."
+      }
+    ]
+  },
+  "proofSection": {
+    "kicker": "Reference",
+    "title": "What that looks like in practice.",
+    "description": "An example from our work: an editorially designed page for a massage studio, where one strong image takes center stage.",
+    "projectLabel": "Relax Massage Studio",
+    "linkLabel": "View portfolio"
+  },
+  "disambiguation": {
+    "kicker": "Looking for something more specific?",
+    "title": "One of these pages might fit better.",
+    "items": [
+      {
+        "label": "Need a full company presence?",
+        "linkLabel": "More on Website creation",
+        "href": "/website-erstellen-lassen"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Common questions",
+    "title": "What you'd want to know beforehand.",
+    "items": [
+      {
+        "question": "What's the difference between a landing page and a website?",
+        "answer": "A website represents your whole business. A landing page pursues a single, concrete goal — a campaign or an offer, for example."
+      },
+      {
+        "question": "How fast can a landing page go live?",
+        "answer": "Since the scope is much smaller than a full website, a landing page usually launches noticeably faster."
+      },
+      {
+        "question": "Do I need a separate landing page for every campaign?",
+        "answer": "It depends on the goal. For different audiences or offers, a dedicated page per campaign usually gives more clarity than one shared page."
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Next step",
+    "title": "Ready for a focused page?",
+    "description": "Tell us a little about your campaign or offer — we'll tell you what the landing page could look like.",
+    "primaryButton": "Request a landing page",
+    "secondaryButton": "Explore website design & build",
+    "backToServicesLabel": "View all services"
+  },
+  "images": {
+    "heroAlt": "Real project from the Labrity portfolio: focused, editorially designed massage studio website (Relax Massage Studio)"
+  },
+  "breadcrumbParentLabel": "Services"
+}

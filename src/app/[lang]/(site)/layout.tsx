@@ -14,10 +14,12 @@ import FakeAiChat from '@/components/common/FakeAiChat';
 import LiveActivity from '@/components/common/LiveActivity';
 import { SITE_URL } from '@/utils/siteUrl';
 import { getData } from '@/utils/getData';
+import { buildOpenGraph } from '@/utils/openGraph';
 import {
   HREFLANG_CODES,
   isLanguage,
   LOCALES,
+  withLocale,
   type Language,
 } from '@/utils/localizedPath';
 
@@ -35,81 +37,48 @@ const tenor = Tenor_Sans({
   variable: '--font-tenor',
 });
 
-const structuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
+// Organization + WebSite, linked via stable @id so they read as one graph.
+// FAQPage schema deliberately lives on /prices (the only page with a real,
+// visible FAQ block) instead of here, so it always matches what's on screen —
+// see prices/page.tsx.
+function buildStructuredData(lang: Language, description: string) {
+  const organizationId = `${SITE_URL}/#organization`;
+  const websiteId = `${SITE_URL}/#website`;
 
-  name: 'Labrity',
-
-  url: SITE_URL,
-
-  logo: `${SITE_URL}/meta/logo.png`,
-
-  description:
-    'Professionelle moderne Websites für Unternehmen, Selbstständige und Marken in Deutschland.',
-
-  areaServed: {
-    '@type': 'Country',
-    name: 'Germany',
-  },
-
-  knowsAbout: [
-    'Webdesign',
-    'Next.js',
-    'SEO',
-    'Landingpages',
-    'Business Websites',
-    'React Development',
-  ],
-};
-
-const faqStructuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Wie viel kostet eine professionelle Website?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Die Kosten hängen vom Umfang, Design und den gewünschten Funktionen ab. Jede Website wird individuell geplant.',
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': organizationId,
+        name: 'Labrity',
+        url: SITE_URL,
+        logo: `${SITE_URL}/images/logo-white.svg`,
+        description,
+        areaServed: {
+          '@type': 'Country',
+          name: 'Germany',
+        },
+        knowsAbout: [
+          'Webdesign',
+          'Next.js',
+          'SEO',
+          'Landingpages',
+          'Business Websites',
+          'React Development',
+        ],
       },
-    },
-    {
-      '@type': 'Question',
-      name: 'Wie lange dauert die Entwicklung einer Website?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Je nach Projektumfang dauert die Entwicklung in der Regel zwischen wenigen Tagen und mehreren Wochen.',
+      {
+        '@type': 'WebSite',
+        '@id': websiteId,
+        name: 'Labrity',
+        url: SITE_URL,
+        inLanguage: HREFLANG_CODES[lang],
+        publisher: { '@id': organizationId },
       },
-    },
-    {
-      '@type': 'Question',
-      name: 'Arbeiten Sie mit kleinen Unternehmen und Selbstständigen?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Ja. Wir entwickeln Websites sowohl für Selbstständige als auch für Unternehmen und Marken.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Ist die Website für Smartphones optimiert?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Ja. Alle Websites werden responsive entwickelt und funktionieren auf Smartphones, Tablets und Desktop-Geräten.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Entwickeln Sie Websites mit Next.js und React?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Ja. Wir arbeiten mit modernen Technologien wie Next.js, React und performanten Frontend-Lösungen.',
-      },
-    },
-  ],
-};
+    ],
+  };
+}
 
 export async function generateStaticParams() {
   return LOCALES.map(lang => ({ lang }));
@@ -126,6 +95,7 @@ export async function generateMetadata({
 
   const meta = await getData('meta', params.lang);
   const { title, description, keywords, manifest, openGraph, icons } = meta;
+  const canonical = withLocale('/', params.lang);
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -134,10 +104,12 @@ export async function generateMetadata({
     keywords,
     icons,
     manifest,
-    openGraph: {
-      ...openGraph,
-      url: SITE_URL,
-    },
+    openGraph: await buildOpenGraph(
+      params.lang,
+      canonical,
+      openGraph.title,
+      openGraph.description,
+    ),
     twitter: {
       card: 'summary_large_image',
       title: openGraph.title,
@@ -157,6 +129,8 @@ export default async function RootLayout({
   if (!isLanguage(params.lang)) notFound();
 
   const lang: Language = params.lang;
+  const meta = await getData('meta', lang);
+  const structuredData = buildStructuredData(lang, meta.description);
 
   return (
     <html lang={HREFLANG_CODES[lang]} className="!scroll-smooth">
@@ -183,13 +157,6 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData),
-          }}
-        />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqStructuredData),
           }}
         />
 

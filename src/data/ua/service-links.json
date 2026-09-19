@@ -1,0 +1,36 @@
+{
+  "kicker": "Спеціалізовані сторінки послуг",
+  "title": "Детальніше про окремі послуги.",
+  "items": [
+    {
+      "title": "Розробка сайту",
+      "description": "Від першої ідеї до готового професійного сайту.",
+      "href": "/website-erstellen-lassen",
+      "linkLabel": "Детальніше"
+    },
+    {
+      "title": "Webdesign",
+      "description": "Візуальний образ, який формує довіру і робить бренд впізнаваним.",
+      "href": "/webdesign",
+      "linkLabel": "Детальніше"
+    },
+    {
+      "title": "Webentwicklung",
+      "description": "Технічно надійна основа — швидка, стабільна і готова зростати разом із бізнесом.",
+      "href": "/webentwicklung",
+      "linkLabel": "Детальніше"
+    },
+    {
+      "title": "Website Relaunch",
+      "description": "Для тих, хто переріс свій поточний сайт.",
+      "href": "/website-relaunch",
+      "linkLabel": "Детальніше"
+    },
+    {
+      "title": "Landingpage",
+      "description": "Сфокусована сторінка під кампанію, пропозицію чи швидкий старт.",
+      "href": "/landingpage-erstellen-lassen",
+      "linkLabel": "Детальніше"
+    }
+  ]
+}
