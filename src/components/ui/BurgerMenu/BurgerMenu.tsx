@@ -10,6 +10,7 @@ import { IBurgerMenuProps } from './types';
 import { useLanguage } from '@/utils/LanguageContext';
 import { getData } from '@/utils/getData';
 import { stripLocale, withLocale, type Language } from '@/utils/localizedPath';
+import useFocusTrap from '@/utils/useFocusTrap';
 
 type CommonData = {
   layout?: {
@@ -53,6 +54,8 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClose }) => {
   const [common, setCommon] = useState<CommonData | null>(null);
 
   const modalRef = useRef<HTMLDivElement | null>(null);
+
+  useFocusTrap(modalRef, isOpen, { initialFocus: 'first' });
 
   useEffect(() => {
     const loadData = async () => {

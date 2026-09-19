@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import { classnames } from '@/utils/classnames';
 import CloseIcon from '@/../public/icons/close-icon.svg';
@@ -9,6 +9,7 @@ import { ModalProps } from './types';
 
 import { useLanguage } from '@/utils/LanguageContext';
 import { getData } from '@/utils/getData';
+import useFocusTrap from '@/utils/useFocusTrap';
 
 interface CommonData {
   modal: {
@@ -19,6 +20,9 @@ interface CommonData {
 export const Modal = ({ onClose, children, className }: ModalProps) => {
   const { lang } = useLanguage();
   const [data, setData] = useState<CommonData | null>(null);
+  const modalRef = useRef<HTMLDivElement | null>(null);
+
+  useFocusTrap(modalRef, true, { initialFocus: 'first' });
 
   useEffect(() => {
     const loadData = async () => {
@@ -60,7 +64,7 @@ export const Modal = ({ onClose, children, className }: ModalProps) => {
       onClick={onBackDropClick}
       className="bg-backdrop fixed inset-0 z-[2000] flex items-center justify-center overscroll-none backdrop-blur-2xl"
     >
-      <div className={modalClasses}>
+      <div ref={modalRef} className={modalClasses}>
         <button
           type="button"
           aria-label={ariaLabel}
