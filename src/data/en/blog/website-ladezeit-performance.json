@@ -1,0 +1,89 @@
+{
+  "slug": "website-ladezeit-performance",
+  "meta": {
+    "title": "Website Load Time: Why Performance Matters for Users and Businesses | Labrity",
+    "description": "What Core Web Vitals actually measure, why Google uses them as a signal, and what it practically means for your website — based on web.dev and Google Search Central."
+  },
+  "breadcrumbLabel": "Load Time & Performance",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Knowledge",
+    "title": "Website load time: why performance matters for users and businesses",
+    "intro": "Load time isn't a purely technical detail for developers — it's one of the few website properties that visitors feel directly and Google measures directly."
+  },
+  "keyTakeaway": {
+    "title": "In short",
+    "text": "Google evaluates load time, interactivity and visual stability through what it calls Core Web Vitals (LCP, INP, CLS). Google treats these as a ranking signal — one of many, not the decisive one. Content relevance still matters more, but between otherwise comparable pages, performance can tip the balance."
+  },
+  "sections": [
+    {
+      "heading": "What Core Web Vitals actually measure",
+      "level": "h2",
+      "paragraphs": [
+        "Core Web Vitals are three concrete, measurable values Google uses to assess a website's user experience:"
+      ],
+      "checklist": [
+        "Largest Contentful Paint (LCP) — how fast the largest visible element on the page loads. Under 2.5 seconds is considered good.",
+        "Interaction to Next Paint (INP) — how quickly the page responds to a user interaction. Under 200 milliseconds is considered good.",
+        "Cumulative Layout Shift (CLS) — how much content shifts unexpectedly while the page loads. Under 0.1 is considered good."
+      ]
+    },
+    {
+      "heading": "Why this is something visitors actually feel",
+      "level": "h2",
+      "paragraphs": [
+        "These values aren't abstract technical metrics — they describe exactly what a visitor experiences as \"slow\" or \"janky\": waiting for content, a delayed response after clicking, a button shifting right before you meant to tap it.",
+        "That last point is often underestimated: a layout that keeps shifting while it loads causes visitors to accidentally tap the wrong element — an ad instead of the intended button, the wrong menu item instead of the contact page. That doesn't just cost patience — in the worst case, it costs you an enquiry outright."
+      ]
+    },
+    {
+      "heading": "How Google actually uses these values",
+      "level": "h2",
+      "paragraphs": [
+        "Google doesn't measure Core Web Vitals in a lab — it uses real visitor data from the Chrome User Experience Report (CrUX). A page is considered \"good\" when at least 75 percent of real visits meet the thresholds above.",
+        "Core Web Vitals are part of what Google calls page-experience signals and are a confirmed ranking factor. The important context: content relevance remains the stronger signal. Performance matters most where several pages are otherwise similarly relevant — that's where it can tip the scale."
+      ]
+    },
+    {
+      "heading": "Why performance matters even without Google in the picture",
+      "level": "h2",
+      "paragraphs": [
+        "Even setting the ranking signal aside entirely, a simple point remains: a slow website directly costs you visitors. Someone who clicks an ad or a search result and then waits several seconds for a responsive page will often just leave — before ever seeing what you actually offer.",
+        "Performance is therefore both an SEO topic and a pure conversion topic: a faster website loses fewer visitors on the way to the actual action, regardless of how they found you."
+      ]
+    },
+    {
+      "heading": "What this means practically for your business",
+      "level": "h2",
+      "paragraphs": [
+        "You don't need to understand the technical details yourself to ask an important question: does whoever builds your website actually pay attention to load time, image optimisation and technical structure — or is performance an afterthought? That question is worth asking in the very first conversation with any agency or freelancer.",
+        "A simple, free first check: Google offers PageSpeed Insights, a public tool that shows the current Core Web Vitals values for any website — a good starting point to assess your own site objectively rather than relying on a subjective feeling."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "web.dev — Understanding Core Web Vitals and Google Search results",
+      "url": "https://web.dev/articles/vitals"
+    },
+    {
+      "label": "Google Search Central — Page Experience",
+      "url": "https://developers.google.com/search/docs/appearance/page-experience"
+    }
+  ],
+  "relatedService": {
+    "label": "Want to know how technically solid your website really is?",
+    "description": "Tell us about your project — we'll tell you what makes technical sense.",
+    "linkLabel": "More on Web Development",
+    "href": "/webentwicklung"
+  },
+  "secondaryLink": null,
+  "relatedArticles": [
+    "website-veraltet-anzeichen",
+    "website-erstellen-lassen-kosten"
+  ],
+  "images": {
+    "coverAlt": "A stopwatch with red light trails in motion in front of a concrete wall with a red-lit passage, symbolising speed."
+  }
+}

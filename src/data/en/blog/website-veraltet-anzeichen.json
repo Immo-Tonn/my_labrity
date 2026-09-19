@@ -1,0 +1,91 @@
+{
+  "slug": "website-veraltet-anzeichen",
+  "meta": {
+    "title": "How to Tell If Your Website Is Outdated: 7 Concrete Signs | Labrity",
+    "description": "Seven clear, checkable signals that show whether your website is technically or visually out of date — a self-check you can do in minutes."
+  },
+  "breadcrumbLabel": "Spotting an Outdated Site",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Knowledge",
+    "title": "How to tell if your website is outdated: 7 concrete signs",
+    "intro": "\"Outdated\" isn't a feeling — it's something you can pin down to specific points. These seven signs can be checked yourself in a few minutes, no technical background required."
+  },
+  "keyTakeaway": null,
+  "sections": [
+    {
+      "heading": "1. It doesn't feel like \"the real site\" on a phone",
+      "level": "h2",
+      "paragraphs": [
+        "Most visitors arrive on mobile devices today. If text is tiny on a phone, horizontal scrolling is needed, or buttons are hard to tap, that's not a minor detail — it's the first thing new customers see of you.",
+        "A simple test: open your own website on your phone and try, without zooming, to read the key content and find a way to contact you. If that's awkward, it's probably just as awkward for your visitors."
+      ]
+    },
+    {
+      "heading": "2. Load time feels noticeably slow",
+      "level": "h2",
+      "paragraphs": [
+        "If you notice yourself waiting for content to appear on your own website, that's a technical warning sign, regardless of how the design looks. Common causes include uncompressed images, an outdated technical foundation, or hosting that can't keep up with today's requirements."
+      ]
+    },
+    {
+      "heading": "3. The design visibly follows an older trend",
+      "level": "h2",
+      "paragraphs": [
+        "Certain visual patterns can be dated at a glance — small stacked text blocks, outdated font pairings, playful gradients without a clear structure. Design is subjective, but \"dated\" is objectively recognisable the moment you place it next to a current website.",
+        "A useful comparison: look at two or three websites from companies you personally consider modern and trustworthy. The difference in first impression is usually immediate, even without a design background."
+      ]
+    },
+    {
+      "heading": "4. Content is visibly outdated",
+      "level": "h2",
+      "paragraphs": [
+        "A legal notice with the wrong year, services that no longer exist, or a \"recent\" project from a different era — all of this signals to visitors that the site isn't maintained, even if the business itself is active."
+      ]
+    },
+    {
+      "heading": "5. The structure doesn't explain itself",
+      "level": "h2",
+      "paragraphs": [
+        "If visitors need several clicks to figure out what you actually offer or how to contact you, that's a structural problem, independent of the visual design. A good rule of thumb: the most important information should be clear within seconds on the homepage, not after several clicks through a menu."
+      ]
+    },
+    {
+      "heading": "6. There's no clear call to action",
+      "level": "h2",
+      "paragraphs": [
+        "A modern website leads visitors toward a clear next step — enquire, book, get in touch. If that step is missing or buried, the site loses impact regardless of how it looks."
+      ]
+    },
+    {
+      "heading": "7. You wouldn't want to show it to anyone yourself",
+      "level": "h2",
+      "paragraphs": [
+        "That's not a technical criterion, but an honest one: if you hesitate to show your own website to potential customers, that's often the clearest signal of all."
+      ]
+    },
+    {
+      "heading": "What this means for you",
+      "level": "h2",
+      "paragraphs": [
+        "One or two of these points usually aren't reason enough for a full relaunch — targeted adjustments are often enough. But if several apply at once, that's a clear signal the website no longer matches your business's current level.",
+        "One thing worth noting: a relaunch doesn't automatically mean starting from zero. Existing content, images and structural ideas can often be carried over sensibly — the actual relaunch then focuses mainly on design, technology, and how that content is presented."
+      ]
+    }
+  ],
+  "relatedService": {
+    "label": "Several of these apply to you?",
+    "description": "Show us your current website — we'll tell you what a relaunch could look like.",
+    "linkLabel": "More on Website Relaunch",
+    "href": "/website-relaunch"
+  },
+  "secondaryLink": null,
+  "relatedArticles": [
+    "website-relaunch-seo-verluste-vermeiden",
+    "redirects-website-relaunch"
+  ],
+  "images": {
+    "coverAlt": "A laptop screen split in two: a clean, modern website design on the left, a dusty, cobweb-covered page on the right."
+  }
+}

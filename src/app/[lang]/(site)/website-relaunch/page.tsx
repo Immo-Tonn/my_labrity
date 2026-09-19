@@ -71,7 +71,10 @@ export default async function WebsiteRelaunchPage({
   );
 
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: initialData.breadcrumbParentLabel, url: withLocale('/services', params.lang) },
+    {
+      name: initialData.breadcrumbParentLabel,
+      url: withLocale('/services', params.lang),
+    },
     { name: initialData.hero.kicker, url: withLocale(PATH, params.lang) },
   ]);
 

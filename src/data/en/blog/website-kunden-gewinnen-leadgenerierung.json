@@ -1,0 +1,103 @@
+{
+  "slug": "website-kunden-gewinnen-leadgenerierung",
+  "meta": {
+    "title": "Winning Customers Through Your Website: How Lead Generation Really Works | Labrity",
+    "description": "How a website contributes to customer acquisition and lead generation: structure, trust signals, calls to action and the conversion path — without false promises."
+  },
+  "breadcrumbLabel": "Customer acquisition & lead generation",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Knowledge",
+    "title": "Winning customers through your website: how lead generation really works",
+    "intro": "A website that actually brings in new customers isn't the result of a single trick — it's the interplay of several factors: clear positioning, trust, a coherent path to getting in touch, and ongoing optimisation. Understanding these dynamics lets you assess customer acquisition through your own website realistically, instead of relying on blanket promises."
+  },
+  "keyTakeaway": {
+    "title": "In short",
+    "text": "Lead generation through a website isn't luck or a one-off project — it's the result of clear structure: visible positioning, credible trust signals, and a contact path without unnecessary friction."
+  },
+  "sections": [
+    {
+      "heading": "What lead generation through a website actually means",
+      "level": "h2",
+      "paragraphs": [
+        "Lead generation describes the process of turning website visitors into concrete enquiries or contacts — whether through a form, a callback request, a booking, or a direct message. The website itself becomes an active channel for customer acquisition, not just a digital business card.",
+        "One distinction matters here: traffic alone — visitor numbers — is not the same as customer acquisition. What counts is how many of those visitors actually turn into an enquiry. That shift from visit to contact is the real core of lead generation."
+      ]
+    },
+    {
+      "heading": "Clear positioning as the foundation of customer acquisition",
+      "level": "h2",
+      "paragraphs": [
+        "Before a website can win any customers at all, it needs to answer within a few seconds: who is this offer for, and what problem does it solve? Websites that try to address every possible audience at once often lose exactly the clarity a decision requires.",
+        "A sharply defined positioning may feel limiting at first glance, but in practice it increases the likelihood that the right visitors feel addressed and take the next step."
+      ]
+    },
+    {
+      "heading": "Trust signals: the underestimated factor in customer acquisition",
+      "level": "h2",
+      "paragraphs": [
+        "Before someone submits an enquiry, they unconsciously check: does this business seem credible and competent? References, real project examples, a coherent presentation of services, and an overall professional impression are trust signals that directly affect conversion rate.",
+        "Without these signals, even well-positioned offers often lose visitors right before they'd make contact — not because the offer itself is a bad fit, but because uncertainty creeps in about the provider's credibility."
+      ]
+    },
+    {
+      "heading": "The conversion path: from interest to enquiry",
+      "level": "h2",
+      "paragraphs": [
+        "Every website has a path — deliberate or not — that a visitor follows before submitting an enquiry. If that path is too long, too unclear, or loaded with too many form fields, a significant share of interest gets lost before it ever becomes a lead.",
+        "A clear call to action placed at the right point in the content, along with a low-friction contact method — a short form, a direct phone link, or an appointment booking — typically increases the number of actual enquiries, without changing anything about the offer itself."
+      ]
+    },
+    {
+      "heading": "Landing pages as a targeted lead generation tool",
+      "level": "h2",
+      "paragraphs": [
+        "While a main website usually serves several topics and audiences at once, a dedicated landing page can be tailored to exactly one campaign, one offer, or one audience. That focus is one of the main reasons landing pages are often more effective than a general subpage of the main site for targeted customer acquisition."
+      ]
+    },
+    {
+      "heading": "Why customer acquisition through a website is an ongoing process",
+      "level": "h2",
+      "paragraphs": [
+        "A website is rarely fully optimised for lead generation at launch. Only real visitor data reveals exactly where interest is being lost along the conversion path. Regularly reviewing that data and adjusting individual elements — the wording of a call to action, a form's position, a form's length — improves customer acquisition step by step, rather than guessing once and hoping it works."
+      ]
+    }
+  ],
+  "faq": {
+    "kicker": "Common questions",
+    "title": "What businesses often ask about lead generation",
+    "items": [
+      {
+        "question": "Is an existing website enough, or do I need a separate landing page?",
+        "answer": "It depends on the goal: for a targeted campaign with a clear offer, a dedicated landing page is usually more effective; for general customer acquisition, a well-structured main website is often sufficient."
+      },
+      {
+        "question": "How many form fields make sense?",
+        "answer": "As few as possible — every additional required field tends to reduce the number of completed enquiries. Only truly necessary information should be requested upfront."
+      },
+      {
+        "question": "Does lead generation through a website make sense for every industry?",
+        "answer": "Generally yes, whenever customers research online before deciding — which is true for most industries. The specific implementation, however, differs depending on the offer and audience."
+      }
+    ]
+  },
+  "sources": null,
+  "relatedService": {
+    "label": "Website for more customer enquiries?",
+    "description": "We design websites and landing pages with the goal of turning visitors into real enquiries.",
+    "linkLabel": "More on Landing Page Creation",
+    "href": "/landingpage-erstellen-lassen"
+  },
+  "secondaryLink": {
+    "label": "Get a website built",
+    "href": "/website-erstellen-lassen"
+  },
+  "relatedArticles": [
+    "landingpage-oder-website",
+    "website-erstellen-lassen-kosten"
+  ],
+  "images": {
+    "coverAlt": "A large magnet pulling a red ball away from a group of grey balls, symbolising lead generation."
+  }
+}

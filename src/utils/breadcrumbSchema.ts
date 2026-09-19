@@ -1,8 +1,6 @@
 import { SITE_URL } from './siteUrl';
 
-export function buildBreadcrumbSchema(
-  items: { name: string; url: string }[],
-) {
+export function buildBreadcrumbSchema(items: { name: string; url: string }[]) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

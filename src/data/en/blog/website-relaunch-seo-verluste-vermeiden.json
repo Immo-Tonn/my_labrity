@@ -1,0 +1,104 @@
+{
+  "slug": "website-relaunch-seo-verluste-vermeiden",
+  "meta": {
+    "title": "Website Relaunch Without SEO Losses: What Businesses Should Watch For | Labrity",
+    "description": "A relaunch carries real SEO risk. Here's how to avoid the most common mistakes — based on Google's own documentation on site moves."
+  },
+  "breadcrumbLabel": "Relaunch & SEO",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Knowledge",
+    "title": "Website relaunch without SEO losses: what businesses should watch for",
+    "intro": "A relaunch changes a website Google already knows and has ranked. That's exactly what makes it risky — but the risks are well documented, and the right preparation reduces them considerably."
+  },
+  "keyTakeaway": {
+    "title": "In short",
+    "text": "According to Google's own documentation on site moves, 301 redirects themselves don't cause a loss of link value. Real SEO losses almost always come from missing or incorrect redirects, removed content, or a fundamentally changed URL structure — not from the relaunch itself."
+  },
+  "sections": [
+    {
+      "heading": "Why a relaunch is a risk in the first place",
+      "level": "h2",
+      "paragraphs": [
+        "Every URL already indexed by Google has built up a certain \"status\" — it's been crawled, evaluated, and possibly ranked for specific queries. If the URL structure changes during a relaunch, content disappears, or internal linking is rebuilt from scratch, Google essentially has to re-establish that status.",
+        "That's not inherently a problem — Google is designed to handle site moves. It only becomes an issue when the transition is handled carelessly — for instance, when nobody on the project ever asks what should actually happen to the existing URLs.",
+        "Smaller businesses in particular tend to overlook this, because a relaunch is mostly seen as a design or technical project. From an SEO perspective, though, it's primarily a migration project, with everything that entails."
+      ]
+    },
+    {
+      "heading": "What Google actually says about redirects",
+      "level": "h2",
+      "paragraphs": [
+        "Google Search Central's official documentation on redirects states that permanent redirects (301 or 308) don't cause a loss of PageRank. In other words: a correctly set redirect from an old to a new URL is technically not a threat to your visibility.",
+        "Google also recommends keeping redirect chains as short as possible — ideally pointing directly to the final destination rather than through several intermediate steps — and keeping redirects in place for at least a year after a move, so search engines and inbound links from across the web have enough time to adjust to the new structure.",
+        "Also important: from Google's perspective, a site move is only considered complete once Googlebot has visited every URL on both the old and new site at least once. Depending on the size of the site, that can take varying amounts of time — there's no fixed schedule for it."
+      ]
+    },
+    {
+      "heading": "The mistakes that actually cause losses",
+      "level": "h2",
+      "paragraphs": [
+        "The relaunch itself isn't the problem — these mistakes are the ones that, in practice, most often lead to visible drops:"
+      ],
+      "checklist": [
+        "URLs change but no redirects are set up",
+        "Pages with existing traffic are simply removed instead of reworked",
+        "Internal linking is rebuilt entirely without accounting for important existing pages",
+        "Titles, headings and content change so much that the new page serves a different topic than the old one",
+        "Old and new versions run in parallel, so Google crawls both and finds duplicate content"
+      ]
+    },
+    {
+      "heading": "What a clean relaunch process actually looks like",
+      "level": "h2",
+      "paragraphs": [
+        "Before any technical work begins, there's an analysis: which existing URLs currently bring visibility or traffic? These pages deserve special attention — not because they're untouchable, but because losing them without a redirect is the single most common cause of visible drops.",
+        "Next, every old URL that changes gets a targeted 301 redirect to the most relevant new URL — not a blanket redirect to the homepage. After launch, Google needs time to recrawl every URL; per Google Search Central, how long that takes depends on the size of the site and how fast crawling can happen, not on a fixed schedule.",
+        "It also helps to treat the relaunch not as a one-off cut but to actively monitor the weeks after — for example through Search Console — to catch early on whether redirects are working or whether specific pages are unexpectedly losing visibility."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Google Search Central — Redirects and Google Search",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/301-redirects"
+    },
+    {
+      "label": "Google Search Central — Site Moves and Migrations",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes"
+    }
+  ],
+  "faq": {
+    "kicker": "Common questions",
+    "title": "What you'd want to know beforehand",
+    "items": [
+      {
+        "question": "Will I definitely lose rankings during a relaunch?",
+        "answer": "No, not automatically. A relaunch carries risk, but according to Google, correctly set redirects don't themselves cause a loss of link value. The risk comes from poor preparation, not the relaunch itself."
+      },
+      {
+        "question": "How long should old URLs keep redirecting?",
+        "answer": "Google recommends keeping redirects active for at least a year, giving search engines and external links enough time to adjust to the new structure."
+      },
+      {
+        "question": "Do I need to carry over every old page?",
+        "answer": "Not every old page has to stay unchanged — but every page with existing visibility should be handled deliberately: either reworked and kept, or redirected to the most relevant new page."
+      }
+    ]
+  },
+  "relatedService": {
+    "label": "Is your website showing its age?",
+    "description": "Show us your current website — we'll tell you what a relaunch could look like for you.",
+    "linkLabel": "More on Website Relaunch",
+    "href": "/website-relaunch"
+  },
+  "secondaryLink": null,
+  "relatedArticles": [
+    "redirects-website-relaunch",
+    "website-veraltet-anzeichen"
+  ],
+  "images": {
+    "coverAlt": "A broken concrete wall with a red-lit opening revealing a view of mountains and water, symbolising a transition."
+  }
+}

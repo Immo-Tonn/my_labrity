@@ -1,0 +1,75 @@
+{
+  "slug": "website-briefing-checkliste",
+  "meta": {
+    "title": "Website-Briefing: Was vor dem ersten Gespräch vorbereitet sein sollte | Labrity",
+    "description": "Eine praktische Checkliste, mit der Sie sich auf das erste Gespräch mit einer Agentur oder einem Freelancer vorbereiten — ohne dass alles bereits perfekt sein muss."
+  },
+  "breadcrumbLabel": "Briefing-Checkliste",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Wissen",
+    "title": "Website-Briefing: Was vor dem ersten Gespräch vorbereitet sein sollte",
+    "intro": "Sie müssen nicht alles fertig haben, bevor Sie das erste Gespräch führen. Aber ein paar Antworten im Vorfeld sparen beiden Seiten Zeit — und führen schneller zu einem passenden Angebot."
+  },
+  "keyTakeaway": null,
+  "sections": [
+    {
+      "heading": "Warum ein Briefing überhaupt hilft",
+      "level": "h2",
+      "paragraphs": [
+        "Ein Briefing ist kein formelles Dokument, das Sie perfekt ausfüllen müssen — es ist ein Werkzeug, das Ziele, Zielgruppe und Umfang klärt, bevor Zeit in ein unpassendes Angebot investiert wird. Je klarer diese Punkte im Vorfeld sind, desto passgenauer kann eine Agentur oder ein Freelancer tatsächlich reagieren.",
+        "Ohne ein zumindest grobes Briefing besteht das Risiko, dass beide Seiten aneinander vorbeireden: Sie beschreiben ein grobes Gefühl, die Agentur kalkuliert auf Basis von Annahmen, und am Ende passt das Angebot weder preislich noch inhaltlich zu dem, was Sie eigentlich gebraucht hätten."
+      ]
+    },
+    {
+      "heading": "Die Checkliste",
+      "level": "h2",
+      "paragraphs": [
+        "Sie müssen nicht jeden Punkt vollständig beantworten können — aber je mehr davon zumindest grob geklärt sind, desto konkreter wird das erste Gespräch."
+      ],
+      "checklist": [
+        "Ziel: Was soll die Website konkret erreichen — mehr Anfragen, ein professionelleres Auftreten, ein Relaunch eines bestehenden Auftritts?",
+        "Zielgruppe: Wer soll auf der Website landen, und was wissen diese Personen bereits über Ihr Angebot?",
+        "Umfang: Wie viele Themenbereiche/Seiten braucht es realistisch — reicht eine kompakte Seite, oder ist es ein umfangreicheres Projekt?",
+        "Inhalte: Gibt es bereits Texte, Bilder oder ein Logo, oder muss das mitentwickelt werden?",
+        "Referenzen: Gibt es Websites, die Ihnen gefallen — nicht zum Kopieren, sondern um Ihren Geschmack zu zeigen?",
+        "Zeitrahmen: Gibt es einen konkreten Termin, an dem die Website online sein sollte?",
+        "Budget: Selbst eine grobe Größenordnung hilft, ein passendes Angebot statt eines unpassenden zu bekommen."
+      ]
+    },
+    {
+      "heading": "Was Sie NICHT vorher fertig haben müssen",
+      "level": "h2",
+      "paragraphs": [
+        "Ein fertiges Konzept, fertige Texte oder ein fertiges Design sind keine Voraussetzung für das erste Gespräch. Ein gutes Briefing-Gespräch hilft gerade dabei, aus vagen Vorstellungen eine konkrete Struktur zu entwickeln — dafür ist es da.",
+        "Viele Unternehmen zögern das erste Gespräch hinaus, weil sie glauben, erst \"vorzeigbar\" sein zu müssen. In der Praxis ist genau das Gegenteil hilfreicher: Je früher eine Agentur oder ein Freelancer versteht, wo Sie inhaltlich stehen, desto realistischer wird das Angebot — statt auf Basis falscher Annahmen kalkuliert zu werden."
+      ]
+    },
+    {
+      "heading": "Fragen, die Sie selbst stellen sollten",
+      "level": "h2",
+      "paragraphs": [
+        "Ein Briefing läuft in beide Richtungen. Fragen Sie ruhig zurück: Wie läuft der Prozess konkret ab? Wie viele Überarbeitungsrunden sind eingeplant? Wer liefert am Ende was — Texte, Bilder, technische Umsetzung?",
+        "Ein weiterer nützlicher Punkt: Fragen Sie, wie Kommunikation während des Projekts abläuft — feste Termine, laufender Austausch, ein zentraler Ansprechpartner? Das beeinflusst maßgeblich, wie reibungslos die Zusammenarbeit später tatsächlich verläuft."
+      ]
+    }
+  ],
+  "relatedService": {
+    "label": "Bereit für das erste Gespräch?",
+    "description": "Erzählen Sie uns kurz von Ihrem Vorhaben — den Rest klären wir gemeinsam.",
+    "linkLabel": "Projekt starten",
+    "href": "/website-erstellen-lassen"
+  },
+  "secondaryLink": {
+    "label": "Wie unser Ablauf konkret aussieht",
+    "href": "/process"
+  },
+  "relatedArticles": [
+    "freelancer-oder-webagentur",
+    "website-erstellen-lassen-kosten"
+  ],
+  "images": {
+    "coverAlt": "Reihe von Marmortafeln mit Icons für Recherche, Idee, Design, Code und Start, verbunden durch eine rote Lichtlinie."
+  }
+}

@@ -6,9 +6,7 @@ import { buildHreflangAlternates } from '@/utils/hreflangAlternates';
 import { buildOpenGraph } from '@/utils/openGraph';
 import { buildBreadcrumbSchema } from '@/utils/breadcrumbSchema';
 import { isLanguage, withLocale, type Language } from '@/utils/localizedPath';
-import WebdesignPageClient, {
-  type WebdesignData,
-} from './WebdesignPageClient';
+import WebdesignPageClient, { type WebdesignData } from './WebdesignPageClient';
 
 const PATH = '/webdesign';
 
@@ -68,7 +66,10 @@ export default async function WebdesignPage({
   const initialData: WebdesignData = await getData('webdesign', params.lang);
 
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: initialData.breadcrumbParentLabel, url: withLocale('/services', params.lang) },
+    {
+      name: initialData.breadcrumbParentLabel,
+      url: withLocale('/services', params.lang),
+    },
     { name: initialData.hero.kicker, url: withLocale(PATH, params.lang) },
   ]);
 

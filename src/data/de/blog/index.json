@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "kicker": "Blog",
+    "title": "Wissen für Ihre Website-Entscheidung.",
+    "description": "Keine Trends, keine Listicles — klare Antworten auf reale Fragen, die vor, während und nach einem Website-Projekt entstehen."
+  },
+  "articles": [
+    "website-erstellen-lassen-kosten",
+    "website-relaunch-seo-verluste-vermeiden",
+    "freelancer-oder-webagentur",
+    "website-veraltet-anzeichen",
+    "landingpage-oder-website",
+    "website-ladezeit-performance",
+    "website-briefing-checkliste",
+    "redirects-website-relaunch",
+    "landingpage-dauer-launch",
+    "webdesign-beauty-wellness",
+    "website-kunden-gewinnen-leadgenerierung"
+  ],
+  "heroAlt": "Aufgeklappter Laptop auf einer Marmorplatte mit Blick auf Meer und Berge bei Sonnenuntergang, akzentuiert durch ein rotes Glaselement.",
+  "editorialAlt": "Offener Laptop auf einem dunklen Schreibtisch mit Notizbuch, Kaffeetasse und rotem Ahornzweig, im Hintergrund die Kölner Skyline."
+}
