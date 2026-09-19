@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, MotionConfig } from 'framer-motion';
 import Image from 'next/image';
 
 type ProjectItem = {
@@ -52,6 +52,10 @@ export default function PortfolioPageClient({
     title.toLowerCase().includes('senior');
 
   return (
+    // reducedMotion="user" makes framer-motion automatically shorten/skip
+    // these transform/opacity animations for visitors with
+    // prefers-reduced-motion enabled, and leaves everyone else unchanged.
+    <MotionConfig reducedMotion="user">
     <main className="min-h-screen overflow-hidden bg-[#f8f6f1] text-black">
       {/* HERO */}
       <section className="relative mx-auto max-w-[1700px] px-5 pb-16 pt-[125px] md:px-8 md:pb-24 md:pt-[165px]">
@@ -354,7 +358,14 @@ export default function PortfolioPageClient({
             animation-duration: 24s;
           }
         }
+
+        @media (prefers-reduced-motion: reduce) {
+          .marquee-track {
+            animation: none;
+          }
+        }
       `}</style>
     </main>
+    </MotionConfig>
   );
 }

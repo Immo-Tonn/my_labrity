@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { BadgeCheck, Gem, PanelsTopLeft, Telescope } from 'lucide-react';
 
@@ -288,6 +288,31 @@ export default function HomePageClient({
   const { lang } = useLanguage();
   const { openQuiz } = useQuiz();
   const content = initialData;
+  const heroVideoRef = useRef<HTMLVideoElement | null>(null);
+
+  // Respect prefers-reduced-motion: the decorative background video only
+  // plays for visitors who haven't asked for reduced motion. Autoplay is
+  // driven entirely from here (not the `autoPlay` attribute) so a
+  // reduced-motion visitor never sees the video start moving at all.
+  useEffect(() => {
+    const video = heroVideoRef.current;
+    if (!video) return;
+
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    const syncPlayback = () => {
+      if (mediaQuery.matches) {
+        video.pause();
+      } else {
+        video.play().catch(() => {});
+      }
+    };
+
+    syncPlayback();
+    mediaQuery.addEventListener('change', syncPlayback);
+
+    return () => mediaQuery.removeEventListener('change', syncPlayback);
+  }, []);
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -319,7 +344,7 @@ export default function HomePageClient({
       <SeasonalHearts />
 
       <video
-        autoPlay
+        ref={heroVideoRef}
         loop
         muted
         playsInline

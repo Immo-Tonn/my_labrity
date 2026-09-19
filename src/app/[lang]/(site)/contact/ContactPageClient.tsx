@@ -1,6 +1,6 @@
 'use client';
 
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useRef, useState } from 'react';
 
 import { sendMessage } from '@/api/telegram';
 import { useLanguage } from '@/utils/LanguageContext';
@@ -93,6 +93,10 @@ export default function ContactPageClient({
   const [formErrors, setFormErrors] = useState<ContactFormErrors>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  // Guards against a second submit firing before React has re-rendered the
+  // button as disabled (rapid double-click/double-tap) — isLoading itself
+  // only updates on the next render, which isn't synchronous enough.
+  const isSubmittingRef = useRef(false);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -179,10 +183,14 @@ export default function ContactPageClient({
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (isSubmittingRef.current) return;
+
     const validationErrors = validateForm();
     setFormErrors(validationErrors);
 
     if (Object.keys(validationErrors).length > 0) return;
+
+    isSubmittingRef.current = true;
 
     try {
       setIsLoading(true);
@@ -212,6 +220,7 @@ export default function ContactPageClient({
       }));
     } finally {
       setIsLoading(false);
+      isSubmittingRef.current = false;
     }
   };
 

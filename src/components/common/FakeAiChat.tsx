@@ -685,7 +685,7 @@ export default function FakeAiChat() {
                   {messages.map((message, index) => (
                     <div
                       key={`${message.sender}-${index}`}
-                      className={`max-w-[85%] whitespace-pre-line rounded-2xl px-4 py-3 text-sm leading-6 ${
+                      className={`max-w-[85%] whitespace-pre-line break-words rounded-2xl px-4 py-3 text-sm leading-6 ${
                         message.sender === 'user'
                           ? 'ml-auto bg-black text-white'
                           : message.text === '👀👀👀'
