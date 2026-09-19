@@ -215,6 +215,7 @@ export default function FakeAiChat() {
   const idleTimerRef = useRef<number | null>(null);
   const idleCountRef = useRef(0);
   const userMessagesCountRef = useRef(0);
+  const pendingTimeoutsRef = useRef<Set<number>>(new Set());
 
   const content = assistantData ?? fallbackAssistantData;
 
@@ -254,6 +255,15 @@ export default function FakeAiChat() {
     idleCountRef.current = 0;
     userMessagesCountRef.current = 0;
   }, [lang]);
+
+  useEffect(() => {
+    const pendingTimeouts = pendingTimeoutsRef.current;
+
+    return () => {
+      pendingTimeouts.forEach(id => window.clearTimeout(id));
+      pendingTimeouts.clear();
+    };
+  }, []);
 
   useEffect(() => {
     if (!assistantData) return;
@@ -552,7 +562,9 @@ export default function FakeAiChat() {
   const sendBotMessageWithDelay = (text: string) => {
     setIsTyping(true);
 
-    window.setTimeout(() => {
+    const timeoutId = window.setTimeout(() => {
+      pendingTimeoutsRef.current.delete(timeoutId);
+
       setMessages(prev => [
         ...prev,
         {
@@ -563,6 +575,8 @@ export default function FakeAiChat() {
 
       setIsTyping(false);
     }, 700);
+
+    pendingTimeoutsRef.current.add(timeoutId);
   };
 
   const handleSend = () => {
@@ -585,9 +599,12 @@ export default function FakeAiChat() {
     sendBotMessageWithDelay(botResponse);
 
     if (userMessagesCountRef.current === 4) {
-      window.setTimeout(() => {
+      const ctaTimeoutId = window.setTimeout(() => {
+        pendingTimeoutsRef.current.delete(ctaTimeoutId);
         sendBotMessageWithDelay(content.ctaMessage);
       }, 1400);
+
+      pendingTimeoutsRef.current.add(ctaTimeoutId);
     }
   };
 
