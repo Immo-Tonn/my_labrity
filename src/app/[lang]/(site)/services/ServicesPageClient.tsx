@@ -108,7 +108,10 @@ export default function ServicesPageClient({
         </motion.div>
 
         <div className="mt-16 md:mt-20 xl:mt-24">
-          <ServicesList services={content.services} buttonLabel={content.buttonLabel} />
+          <ServicesList
+            services={content.services}
+            buttonLabel={content.buttonLabel}
+          />
         </div>
 
         {/* NEW: links to the 5 dedicated service pages — added alongside the
@@ -143,7 +146,7 @@ export default function ServicesPageClient({
                   <ArrowUpRight
                     size={16}
                     strokeWidth={1.6}
-                    className="transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
+                    className="transition-transform duration-300 group-hover:-translate-y-[2px] group-hover:translate-x-[2px]"
                   />
                 </div>
               </LocalizedLink>

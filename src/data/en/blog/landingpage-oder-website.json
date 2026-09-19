@@ -1,0 +1,83 @@
+{
+  "slug": "landingpage-oder-website",
+  "meta": {
+    "title": "Landing Page or Website: What Do You Actually Need? | Labrity",
+    "description": "The difference between a landing page and a full website, explained objectively — with concrete use cases for both."
+  },
+  "breadcrumbLabel": "Landing Page vs. Website",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Knowledge",
+    "title": "Landing page or website: what do you actually need?",
+    "intro": "The two terms are often used interchangeably, even though they serve different purposes. The difference isn't scope — it's goal."
+  },
+  "keyTakeaway": {
+    "title": "In short",
+    "text": "A website represents your entire business and is built to last. A landing page pursues a single, often time-limited goal — a campaign or an offer. Both have their place, but rarely the same one."
+  },
+  "sections": [
+    {
+      "heading": "What a website is meant to do",
+      "level": "h2",
+      "paragraphs": [
+        "A website is the complete digital representation of your business: who you are, what you offer, how to reach you, what references exist. It's built to last over a long period and to serve several different visitor interests at once.",
+        "That breadth is both its strength and its limit: a website can answer many different questions, but it can't deliver one perfectly tailored message for every single ad campaign without becoming cluttered."
+      ]
+    },
+    {
+      "heading": "What a landing page is meant to do",
+      "level": "h2",
+      "paragraphs": [
+        "A landing page pursues exactly one goal — a signup, an enquiry, an offer. It's deliberately built without distraction: no extensive menu, no ten equally-weighted options, just a clear path to a single action. It's typically tied to a specific campaign, a time-limited offer, or a product launch.",
+        "That focus isn't a downside — it's the whole point: someone arriving from an ad should see exactly the message that matches the ad, instead of having to navigate a general website to find the offer they were looking for."
+      ]
+    },
+    {
+      "heading": "Typical use cases for a website",
+      "level": "h2",
+      "paragraphs": [
+        "You run an established business with several services. Customers should be able to inform themselves, compare, and decide which area is relevant to them. You need a structure that holds up over months and years and can grow with the business."
+      ]
+    },
+    {
+      "heading": "Typical use cases for a landing page",
+      "level": "h2",
+      "paragraphs": [
+        "You're running ads for a specific offer and want visitors to land directly on the matching message. You're launching something new and still small, and need a fast, first digital presence. You're testing an offer for a limited time and don't want to build a permanent structure around it."
+      ]
+    },
+    {
+      "heading": "What if both apply?",
+      "level": "h2",
+      "paragraphs": [
+        "Often the right answer isn't \"either-or\": an established business can have a full website as its foundation and use dedicated landing pages for individual campaigns on top of it. The website remains the permanent base; the landing page handles the short-term, focused task.",
+        "In practice, this combination works particularly well for seasonal offers, product launches, or time-limited marketing campaigns: the main website stays unchanged while one or more landing pages exist in parallel for the specific campaign."
+      ]
+    },
+    {
+      "heading": "How to tell which one you need right now",
+      "level": "h2",
+      "paragraphs": [
+        "A simple guiding question helps: should this page represent your business as a whole, or should it trigger exactly one action? In the first case, a website is the right choice; in the second, a landing page. If you're unsure, it helps to look at your concrete goal for the coming weeks rather than trying to make one permanent decision for all time."
+      ]
+    }
+  ],
+  "relatedService": {
+    "label": "Planning a specific campaign?",
+    "description": "Tell us about your plans — we'll tell you what the landing page could look like.",
+    "linkLabel": "More on Landing Pages",
+    "href": "/landingpage-erstellen-lassen"
+  },
+  "secondaryLink": {
+    "label": "Need a full website instead?",
+    "href": "/website-erstellen-lassen"
+  },
+  "relatedArticles": [
+    "landingpage-dauer-launch",
+    "website-erstellen-lassen-kosten"
+  ],
+  "images": {
+    "coverAlt": "A single focused landing page panel next to a multi-page website composition, set against a sunset."
+  }
+}

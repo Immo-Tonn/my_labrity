@@ -1,0 +1,85 @@
+{
+  "slug": "webdesign-beauty-wellness",
+  "meta": {
+    "title": "Webdesign für Beauty- und Wellness-Marken: Worauf es wirklich ankommt | Labrity",
+    "description": "Was eine Website für Beauty-, Massage- oder Wellness-Anbieter tatsächlich leisten muss — jenseits schöner Bilder: Vertrauen, Buchungsklarheit und Atmosphäre."
+  },
+  "breadcrumbLabel": "Webdesign für Beauty & Wellness",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Wissen",
+    "title": "Webdesign für Beauty- und Wellness-Marken: Worauf es wirklich ankommt",
+    "intro": "Bei Beauty- und Wellness-Anbietern entscheidet die Website oft schon vor dem ersten Kontakt, ob ein potenzieller Kunde Vertrauen fasst. Gutes Webdesign in diesem Bereich ist deshalb weniger eine Frage von hübschen Fotos als von Klarheit, Atmosphäre und einem reibungslosen Weg zur Buchung."
+  },
+  "keyTakeaway": {
+    "title": "Kurz gesagt",
+    "text": "Bei Beauty- und Wellness-Websites entscheidet nicht das aufwendigste Design, sondern die Kombination aus glaubwürdiger Atmosphäre, klarer Leistungsdarstellung und einem Buchungsweg ohne unnötige Hürden."
+  },
+  "sections": [
+    {
+      "heading": "Warum diese Branche andere Anforderungen hat als klassisches B2B",
+      "level": "h2",
+      "paragraphs": [
+        "Wer eine Massage, eine Kosmetikbehandlung oder ein Wellness-Angebot bucht, trifft eine sehr persönliche Entscheidung — oft verbunden mit Fragen zu Hygiene, Atmosphäre und dem eigenen Wohlbefinden. Anders als bei vielen B2B-Angeboten reicht hier eine sachliche Aufzählung von Leistungen nicht aus; die Website muss auch ein Gefühl vermitteln, wie der Besuch vor Ort sein wird.",
+        "Das bedeutet nicht, dass Fakten weniger wichtig sind — im Gegenteil: Öffnungszeiten, Preise (wo transparent kommunizierbar), Lage und Ansprechpartner müssen weiterhin leicht auffindbar sein. Atmosphäre und Klarheit schließen sich nicht aus, sie ergänzen sich."
+      ]
+    },
+    {
+      "heading": "Bildsprache: authentisch statt generisch",
+      "level": "h2",
+      "paragraphs": [
+        "Austauschbare Stockfotos von lächelnden Models sind in dieser Branche besonders riskant, weil Kunden intuitiv spüren, wenn ein Raum oder eine Behandlung nicht echt aussieht. Echte, gut fotografierte Eindrücke vom tatsächlichen Ort — Empfangsbereich, Behandlungsraum, Details wie Handtücher oder Beleuchtung — schaffen deutlich mehr Vertrauen als perfekte, aber offensichtlich fremde Bilder.",
+        "Wenn zum Start noch keine hochwertige eigene Fotografie vorliegt, ist eine reduzierte, hochwertige Umsetzung mit wenigen echten Bildern einer Seite voller generischer Stockfotos in aller Regel vorzuziehen."
+      ]
+    },
+    {
+      "heading": "Der Buchungsweg ist der eigentliche Test",
+      "level": "h2",
+      "paragraphs": [
+        "Egal wie ansprechend eine Seite gestaltet ist — wenn der Weg von \"ich bin interessiert\" zu \"ich habe einen Termin\" zu viele Schritte oder unklare Kontaktwege enthält, verliert die Seite Anfragen. Ein klar erkennbarer, immer erreichbarer Weg zur Terminvereinbarung oder Kontaktaufnahme ist für diese Branche besonders wichtig, weil Entscheidungen hier oft spontan getroffen werden.",
+        "Das kann eine direkte Buchungsfunktion sein, ein Telefonlink, ein WhatsApp-Kontakt oder ein einfaches Formular — wichtig ist, dass die Option zur konkreten Zielgruppe passt und nicht mehr Hürden aufbaut als nötig."
+      ]
+    },
+    {
+      "heading": "Ein reales Beispiel zur Einordnung",
+      "level": "h2",
+      "paragraphs": [
+        "Bei unserem Projekt für Relax Massage Studio stand genau diese Kombination im Zentrum: eine ruhige, vertrauenswürdige visuelle Gestaltung, die zum eigentlichen Angebot passt, verbunden mit einem klaren, leicht auffindbaren Weg zur Kontaktaufnahme. Das Projekt zeigt beispielhaft, wie sich Atmosphäre und Funktionalität in diesem Bereich verbinden lassen — ohne dass daraus eine pauschale Erfolgsaussage für jedes Beauty- oder Wellness-Projekt abgeleitet werden sollte."
+      ]
+    }
+  ],
+  "faq": {
+    "kicker": "Häufige Fragen",
+    "title": "Was Beauty- und Wellness-Anbieter oft fragen",
+    "items": [
+      {
+        "question": "Brauche ich unbedingt eine Online-Buchungsfunktion?",
+        "answer": "Nicht zwingend — entscheidend ist, dass der gewählte Kontaktweg für Ihre Zielgruppe einfach und ohne unnötige Hürden nutzbar ist, sei es Buchungstool, Telefon oder Formular."
+      },
+      {
+        "question": "Wie wichtig sind eigene Fotos wirklich?",
+        "answer": "Sehr wichtig für Vertrauen und Wiedererkennung — aber lieber wenige echte, gut gemachte Bilder als viele austauschbare Stockfotos."
+      },
+      {
+        "question": "Sollte ich Preise auf der Website nennen?",
+        "answer": "Wo möglich, schafft transparente Preisangabe Vertrauen und reduziert Rückfragen — die konkrete Entscheidung hängt aber von Ihrem Geschäftsmodell und Ihrer Positionierung ab."
+      }
+    ]
+  },
+  "sources": null,
+  "relatedService": {
+    "label": "Website für Ihr Beauty- oder Wellness-Angebot?",
+    "description": "Wir gestalten Websites, die Atmosphäre und Buchungsklarheit gleichzeitig ernst nehmen.",
+    "linkLabel": "Mehr zum Webdesign",
+    "href": "/webdesign"
+  },
+  "secondaryLink": null,
+  "relatedArticles": [
+    "freelancer-oder-webagentur",
+    "website-erstellen-lassen-kosten"
+  ],
+  "images": {
+    "coverAlt": "Frau mit geschlossenen Augen und Handtuch an einem Spa-Bereich mit Blick auf das Meer bei Sonnenuntergang."
+  }
+}

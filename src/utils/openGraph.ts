@@ -40,9 +40,7 @@ export async function buildOpenGraph(
     description,
     siteName: 'Labrity',
     locale: OG_LOCALE[lang],
-    alternateLocale: ALL_LOCALES.filter(l => l !== lang).map(
-      l => OG_LOCALE[l],
-    ),
+    alternateLocale: ALL_LOCALES.filter(l => l !== lang).map(l => OG_LOCALE[l]),
     images,
   };
 }

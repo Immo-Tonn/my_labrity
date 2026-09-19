@@ -1,0 +1,91 @@
+{
+  "slug": "freelancer-oder-webagentur",
+  "meta": {
+    "title": "Freelancer or Web Agency: What Fits Your Website Project Better? | Labrity",
+    "description": "An objective comparison of the real pros and cons of both options — no blanket verdict, just concrete criteria for your decision."
+  },
+  "breadcrumbLabel": "Freelancer vs. Agency",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Knowledge",
+    "title": "Freelancer or web agency: what fits my website project better?",
+    "intro": "There's no blanket right answer — only the right answer for your specific project. Here are the actual differences, without tilting the scale in either direction."
+  },
+  "keyTakeaway": null,
+  "sections": [
+    {
+      "heading": "The core difference",
+      "level": "h2",
+      "paragraphs": [
+        "A freelancer is a single person handling design, technical work and often project management themselves. An agency splits these tasks across several people — design, development, copy and project management are usually separate roles. Nearly every practical pro and con of both models flows from this one difference.",
+        "It's worth noting: the size of a provider alone says nothing about the quality of the work. There are excellent solo professionals and mediocre teams, just as there are excellent teams and mediocre solo professionals. The decision should be less about \"better or worse\" and more about \"what fits my specific situation\"."
+      ]
+    },
+    {
+      "heading": "Where freelancers have the advantage",
+      "level": "h2",
+      "paragraphs": [
+        "Direct contact: throughout the project, you talk to the same person who's actually doing the work — not a project manager relaying information.",
+        "Cost: freelancers typically carry lower fixed costs than agencies, allowing them to price a comparable result lower.",
+        "Flexibility: decisions and adjustments can often happen faster, since less internal coordination is needed."
+      ]
+    },
+    {
+      "heading": "Where freelancers hit limits",
+      "level": "h2",
+      "paragraphs": [
+        "Dependency on one person: if the freelancer becomes unavailable — illness, another project, a capacity limit — your project can stall with no one to simply step in.",
+        "Limited bandwidth: a single person can't be equally strong in every area (design, technical work, SEO, copy). For very specific requirements, that can be a limiting factor.",
+        "Capacity on larger projects: tight deadlines with a lot of parallel work are harder for one person to manage than for a team."
+      ]
+    },
+    {
+      "heading": "Where agencies have the advantage",
+      "level": "h2",
+      "paragraphs": [
+        "Distributed knowledge: if one person is unavailable, project knowledge stays within the team — dependency on a single individual goes away.",
+        "Multiple specializations at once: design, development and copy can be handled in parallel by different people, each with their own focus.",
+        "Structured process: larger teams often bring established workflows for planning, feedback and quality assurance."
+      ]
+    },
+    {
+      "heading": "Where agencies hit limits",
+      "level": "h2",
+      "paragraphs": [
+        "Higher price: more people involved usually means higher cost for a comparable result.",
+        "Less direct contact: communication often runs through a project manager rather than directly with the person actually designing or building.",
+        "Less short-term flexibility: more internal coordination can mean spontaneous changes take longer."
+      ]
+    },
+    {
+      "heading": "A third option: small, specialized studios",
+      "level": "h2",
+      "paragraphs": [
+        "Between the classic solo freelancer and the large agency, a growing number of smaller studios operate a fixed core of two to a few people who bring in additional specialists as a project requires. For clients, this often blends both worlds — a fixed, direct point of contact, but without full dependency on exactly one person and without the overhead of a large structure.",
+        "This isn't a substitute for the underlying trade-off, but a reminder that the choice is rarely binary — it's worth asking directly in conversation how a provider actually works, rather than going by the label \"freelancer\" or \"agency\" alone."
+      ]
+    },
+    {
+      "heading": "What should actually guide your decision",
+      "level": "h2",
+      "paragraphs": [
+        "The question isn't \"freelancer or agency is better\" — it's: how large and complex is your project, and how much do you value redundancy versus direct, personal contact? For a small, clearly scoped project with a limited budget, a freelancer is often the more pragmatic choice. For a project with several parallel requirements — design, custom technical work, structure, ongoing support — the range a team offers can make the difference."
+      ]
+    }
+  ],
+  "relatedService": {
+    "label": "Don't have a website yet?",
+    "description": "Tell us about your project — we'll tell you how we'd approach it.",
+    "linkLabel": "More on Website Design & Build",
+    "href": "/website-erstellen-lassen"
+  },
+  "secondaryLink": null,
+  "relatedArticles": [
+    "website-erstellen-lassen-kosten",
+    "website-briefing-checkliste"
+  ],
+  "images": {
+    "coverAlt": "A small home-office desk set against a large agency conference room, separated by a red glass panel."
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "slug": "website-briefing-checkliste",
+  "meta": {
+    "title": "Website Briefing: What to Prepare Before Your First Call | Labrity",
+    "description": "A practical checklist to prepare for a first call with an agency or freelancer — without needing everything to be perfect first."
+  },
+  "breadcrumbLabel": "Briefing Checklist",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Knowledge",
+    "title": "Website briefing: what to prepare before your first call",
+    "intro": "You don't need to have everything ready before your first conversation. But a few answers in advance save both sides time — and lead faster to a quote that actually fits."
+  },
+  "keyTakeaway": null,
+  "sections": [
+    {
+      "heading": "Why a briefing helps at all",
+      "level": "h2",
+      "paragraphs": [
+        "A briefing isn't a formal document you need to fill out perfectly — it's a tool that clarifies goals, audience and scope before time gets spent on a quote that doesn't fit. The clearer these points are upfront, the more precisely an agency or freelancer can actually respond.",
+        "Without at least a rough briefing, both sides risk talking past each other: you describe a general feeling, the agency calculates based on assumptions, and the resulting quote matches neither the price nor the content of what you actually needed."
+      ]
+    },
+    {
+      "heading": "The checklist",
+      "level": "h2",
+      "paragraphs": [
+        "You don't need a complete answer to every point — but the more of these are at least roughly clarified, the more concrete the first conversation becomes."
+      ],
+      "checklist": [
+        "Goal: what should the website actually achieve — more enquiries, a more professional presence, a relaunch of an existing site?",
+        "Audience: who should land on the website, and what do they already know about your offer?",
+        "Scope: how many topic areas or pages does this realistically need — is a compact site enough, or is it a larger project?",
+        "Content: do you already have copy, images or a logo, or does that need to be developed too?",
+        "References: are there websites you like — not to copy, but to show your taste?",
+        "Timeline: is there a concrete date the website needs to be live?",
+        "Budget: even a rough order of magnitude helps get a quote that actually fits instead of one that doesn't."
+      ]
+    },
+    {
+      "heading": "What you do NOT need ready in advance",
+      "level": "h2",
+      "paragraphs": [
+        "A finished concept, finished copy or a finished design are not prerequisites for the first conversation. A good briefing conversation exists precisely to turn vague ideas into a concrete structure — that's its purpose.",
+        "Many businesses delay the first call because they feel they need to be \"presentable\" first. In practice, the opposite is more useful: the earlier an agency or freelancer understands where you actually stand, the more realistic the quote — instead of being calculated on false assumptions."
+      ]
+    },
+    {
+      "heading": "Questions you should ask yourself",
+      "level": "h2",
+      "paragraphs": [
+        "A briefing runs both ways. Feel free to ask back: how does the process actually work? How many revision rounds are planned? Who ultimately delivers what — copy, images, technical implementation?",
+        "Another useful point: ask how communication works during the project — fixed check-ins, ongoing exchange, a single point of contact? That significantly shapes how smoothly the collaboration actually plays out later."
+      ]
+    }
+  ],
+  "relatedService": {
+    "label": "Ready for the first conversation?",
+    "description": "Tell us briefly about your project — we'll figure out the rest together.",
+    "linkLabel": "Start a project",
+    "href": "/website-erstellen-lassen"
+  },
+  "secondaryLink": {
+    "label": "See how our process actually works",
+    "href": "/process"
+  },
+  "relatedArticles": [
+    "freelancer-oder-webagentur",
+    "website-erstellen-lassen-kosten"
+  ],
+  "images": {
+    "coverAlt": "A row of marble panels with icons for research, idea, design, code and launch, connected by a red line of light."
+  }
+}

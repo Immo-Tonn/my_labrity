@@ -1,0 +1,104 @@
+{
+  "slug": "website-relaunch-seo-verluste-vermeiden",
+  "meta": {
+    "title": "Website Relaunch ohne SEO-Verluste: Worauf Unternehmen achten sollten | Labrity",
+    "description": "Ein Relaunch birgt reale SEO-Risiken. So lassen sich die häufigsten Fehler vermeiden — basierend auf der offiziellen Google-Dokumentation zu Site-Umzügen."
+  },
+  "breadcrumbLabel": "Relaunch & SEO",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Wissen",
+    "title": "Website Relaunch ohne SEO-Verluste: Worauf Unternehmen achten sollten",
+    "intro": "Ein Relaunch verändert eine Website, die Google bereits kennt und einordnet. Genau das macht ihn riskant — aber die Risiken sind bekannt, dokumentiert und lassen sich mit der richtigen Vorbereitung deutlich verringern."
+  },
+  "keyTakeaway": {
+    "title": "Kurz gesagt",
+    "text": "Laut Googles eigener Dokumentation zu Site-Umzügen verursachen 301-Weiterleitungen selbst keinen Verlust an Linkwert. Die eigentlichen SEO-Verluste entstehen fast immer durch fehlende oder falsch gesetzte Weiterleitungen, entfernte Inhalte oder eine grundlegend veränderte URL-Struktur — nicht durch den Relaunch als solchen."
+  },
+  "sections": [
+    {
+      "heading": "Warum ein Relaunch überhaupt ein SEO-Risiko ist",
+      "level": "h2",
+      "paragraphs": [
+        "Jede URL, die bereits von Google indexiert ist, hat einen gewissen \"Status\" aufgebaut — sie wurde gecrawlt, bewertet und möglicherweise für bestimmte Suchanfragen eingestuft. Ändert sich beim Relaunch die URL-Struktur, verschwinden Inhalte oder wird die interne Verlinkung grundlegend neu aufgebaut, muss Google diesen Status im Grunde neu ermitteln.",
+        "Das ist an sich kein Problem — Google ist darauf ausgelegt, mit Site-Umzügen umzugehen. Problematisch wird es nur, wenn dieser Übergang unsauber gemacht wird — etwa wenn niemand im Projekt die Frage stellt, was mit den bestehenden URLs überhaupt passieren soll.",
+        "Gerade bei kleineren Unternehmen wird dieser Punkt häufig übersehen, weil der Relaunch primär als Design- oder Technikprojekt verstanden wird. Aus SEO-Sicht ist er aber vor allem ein Migrationsprojekt — mit allem, was dazugehört."
+      ]
+    },
+    {
+      "heading": "Was Google zu Weiterleitungen tatsächlich sagt",
+      "level": "h2",
+      "paragraphs": [
+        "Google Search Central hält in der offiziellen Dokumentation zu Weiterleitungen fest, dass permanente Weiterleitungen (301 oder 308) keinen Verlust an PageRank verursachen. Das bedeutet: Eine korrekt gesetzte Weiterleitung von einer alten auf eine neue URL ist technisch keine Bedrohung für Ihre Sichtbarkeit.",
+        "Google empfiehlt außerdem, Weiterleitungsketten möglichst kurz zu halten — im Idealfall direkt auf das finale Ziel, nicht über mehrere Zwischenschritte. Und: Weiterleitungen sollten nach einem Umzug mindestens ein Jahr lang bestehen bleiben, damit Suchmaschinen und eingehende Links aus dem Web genug Zeit haben, sich auf die neue Struktur einzustellen.",
+        "Ebenfalls wichtig: Ein Site-Umzug gilt aus Googles Sicht erst dann als abgeschlossen, wenn der Googlebot jede URL sowohl der alten als auch der neuen Seite mindestens einmal besucht hat. Das kann je nach Größe der Website unterschiedlich lange dauern — es gibt dafür keine feste Zeitspanne."
+      ]
+    },
+    {
+      "heading": "Die häufigsten Fehler, die tatsächlich zu Verlusten führen",
+      "level": "h2",
+      "paragraphs": [
+        "Nicht der Relaunch selbst ist das Problem — folgende Fehler sind es, die in der Praxis am häufigsten zu sichtbaren Rückgängen führen:"
+      ],
+      "checklist": [
+        "URLs ändern sich, aber es werden keine Weiterleitungen gesetzt",
+        "Seiten mit bestehendem Traffic werden beim Relaunch einfach entfernt statt überarbeitet",
+        "Die interne Verlinkung wird komplett neu aufgebaut, ohne wichtige bestehende Seiten zu berücksichtigen",
+        "Titel, Überschriften und Inhalte ändern sich so stark, dass die neue Seite ein anderes Thema bedient als die alte",
+        "Die alte und neue Version laufen parallel online, wodurch Google beide Versionen crawlt und Inhalte doppelt vorfindet"
+      ]
+    },
+    {
+      "heading": "Was ein sauberer Relaunch-Prozess konkret bedeutet",
+      "level": "h2",
+      "paragraphs": [
+        "Vor jeder technischen Umsetzung steht eine Analyse: Welche bestehenden URLs bringen aktuell Sichtbarkeit oder Traffic? Diese Seiten verdienen besondere Aufmerksamkeit — nicht, weil sie unantastbar sind, sondern weil ihr Wegfall ohne Weiterleitung der häufigste Grund für sichtbare Rückgänge ist.",
+        "Anschließend wird für jede alte URL, die sich ändert, eine gezielte 301-Weiterleitung auf die passende neue URL gesetzt — nicht pauschal auf die Startseite, sondern auf die inhaltlich passendste neue Seite. Nach dem Launch braucht Google Zeit, jede URL neu zu crawlen; laut Google Search Central hängt diese Dauer von der Größe der Website und der möglichen Crawling-Geschwindigkeit ab, nicht von einem festen Zeitplan.",
+        "Sinnvoll ist außerdem, den Relaunch nicht als einmaligen Schnitt zu behandeln, sondern die ersten Wochen danach aktiv zu beobachten — etwa über die Search Console, um frühzeitig zu erkennen, ob Weiterleitungen greifen oder ob bestimmte Seiten unerwartet an Sichtbarkeit verlieren."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Google Search Central — Redirects and Google Search",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/301-redirects"
+    },
+    {
+      "label": "Google Search Central — Site Moves and Migrations",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes"
+    }
+  ],
+  "faq": {
+    "kicker": "Häufige Fragen",
+    "title": "Was Sie vorher wissen möchten",
+    "items": [
+      {
+        "question": "Verliere ich bei einem Relaunch garantiert Rankings?",
+        "answer": "Nein, nicht automatisch. Ein Relaunch birgt Risiken, aber laut Google verursachen korrekt gesetzte Weiterleitungen selbst keinen Verlust an Linkwert. Die Risiken entstehen durch fehlende Vorbereitung, nicht durch den Relaunch an sich."
+      },
+      {
+        "question": "Wie lange sollten alte URLs weiterleiten?",
+        "answer": "Google empfiehlt, Weiterleitungen mindestens ein Jahr lang aktiv zu halten, damit Suchmaschinen und externe Links genug Zeit haben, sich auf die neue Struktur einzustellen."
+      },
+      {
+        "question": "Muss ich alle alten Seiten übernehmen?",
+        "answer": "Nicht jede alte Seite muss unverändert bleiben — aber jede Seite mit bestehender Sichtbarkeit sollte bewusst behandelt werden: entweder überarbeitet und weitergeführt, oder gezielt auf eine passende neue Seite weitergeleitet."
+      }
+    ]
+  },
+  "relatedService": {
+    "label": "Ihre Website ist in die Jahre gekommen?",
+    "description": "Zeigen Sie uns Ihre bestehende Website — wir sagen Ihnen, wie ein Relaunch bei Ihnen aussehen könnte.",
+    "linkLabel": "Mehr zum Website Relaunch",
+    "href": "/website-relaunch"
+  },
+  "secondaryLink": null,
+  "relatedArticles": [
+    "redirects-website-relaunch",
+    "website-veraltet-anzeichen"
+  ],
+  "images": {
+    "coverAlt": "Durchbrochene Betonwand mit rotem Lichtdurchgang, der den Blick auf Berge und Wasser freigibt – Sinnbild für einen Übergang."
+  }
+}

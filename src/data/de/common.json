@@ -68,5 +68,12 @@
       "path": "#",
       "ariaLabel": "Link zur Partnerseite"
     }
-  ]
+  ],
+  "blogUi": {
+    "breadcrumbParent": "Blog",
+    "readLabel": "Lesen",
+    "sourcesLabel": "Quellen",
+    "moreArticlesLabel": "Weiterlesen",
+    "allArticlesLabel": "Alle Artikel ansehen"
+  }
 }

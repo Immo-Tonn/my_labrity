@@ -1,0 +1,90 @@
+{
+  "slug": "redirects-website-relaunch",
+  "meta": {
+    "title": "Redirects During a Website Relaunch: What Businesses Should Know About 301s | Labrity",
+    "description": "301 redirects explained in plain terms for business owners: what they do, why they matter during a relaunch, and what Google Search Central says about them."
+  },
+  "breadcrumbLabel": "301 Redirects",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Knowledge",
+    "title": "Redirects during a website relaunch: what businesses should know about 301s",
+    "intro": "\"301 redirect\" sounds like a developer topic. For you as a business owner, though, it's mainly one thing: the single most important lever for not losing anything your website has already earned during a relaunch."
+  },
+  "keyTakeaway": {
+    "title": "In short",
+    "text": "A 301 redirect tells Google and visitors: \"This page has permanently moved, here's the new address.\" According to Google Search Central, that itself causes no loss of visibility — the risk arises when this redirect is missing."
+  },
+  "sections": [
+    {
+      "heading": "What a redirect does, in plain terms",
+      "level": "h2",
+      "paragraphs": [
+        "Imagine your shop moves to a new street. A redirect is like a sign at the old address: \"We've moved — this way.\" Without that sign, customers (and Google) hit a locked door and don't know where to go next.",
+        "Technically, that's exactly what happens: when someone opens the old URL of your website, they're automatically redirected to the new URL without noticing. Visitors typically don't even realise a redirect happened in the background — they simply land directly on the correct, current page."
+      ]
+    },
+    {
+      "heading": "Why this matters so much during a relaunch",
+      "level": "h2",
+      "paragraphs": [
+        "Google has already crawled and, to some extent, ranked your existing website. If URLs change during a relaunch without redirects in place, Google's next visit finds an empty spot where a page used to be. From Google's perspective, that's not \"the same page at a new address\" — it's simply: gone.",
+        "For real visitors opening an old link from an email, a bookmark, or another article, the path without a redirect ends in an error page instead of your offer. Especially with older but still-effective marketing materials — printed material listing a specific web address, for instance — that can directly mean lost enquiries."
+      ]
+    },
+    {
+      "heading": "What Google Search Central officially says",
+      "level": "h2",
+      "paragraphs": [
+        "According to Google Search Central's official documentation, permanent redirects (301 or 308) themselves don't cause a loss of link value. The recommendation is also to keep redirect chains short — pointing directly to the final new page rather than through several intermediate steps — and to keep redirects active for at least a year after a move."
+      ]
+    },
+    {
+      "heading": "What this means for you as a business owner — without developer jargon",
+      "level": "h2",
+      "paragraphs": [
+        "You don't need to know yourself how a 301 redirect is technically set up. But for any relaunch project, you should get a clear answer to this question: \"What happens to our existing pages and links?\" If that's answered with \"we'll take care of it\" without getting specific, it's worth pushing further.",
+        "A good question to ask any agency or freelancer: \"Can you show me which of our current page addresses will redirect to which new address?\" A serious answer to that is concrete — not just a general promise."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Google Search Central — Redirects and Google Search",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/301-redirects"
+    }
+  ],
+  "faq": {
+    "kicker": "Common questions",
+    "title": "What you'd want to know beforehand",
+    "items": [
+      {
+        "question": "Do I need a separate redirect for every old page?",
+        "answer": "Ideally yes — every old URL should redirect specifically to the most relevant new URL, not as a blanket redirect to the homepage."
+      },
+      {
+        "question": "Is a redirect something I can set up myself?",
+        "answer": "Technically it's usually a server-side configuration. In practice, the agency or developer implementing the relaunch handles it — what matters is that it's planned for at all."
+      },
+      {
+        "question": "What if I want to remove a page entirely, with no replacement?",
+        "answer": "Then that URL should be removed deliberately and in a controlled way rather than simply vanishing — when in doubt, a redirect to the closest matching existing page is worthwhile."
+      }
+    ]
+  },
+  "relatedService": {
+    "label": "Planning a relaunch?",
+    "description": "We approach your relaunch in a structured way — including the question of what happens to your existing pages.",
+    "linkLabel": "More on Website Relaunch",
+    "href": "/website-relaunch"
+  },
+  "secondaryLink": null,
+  "relatedArticles": [
+    "website-relaunch-seo-verluste-vermeiden",
+    "website-veraltet-anzeichen"
+  ],
+  "images": {
+    "coverAlt": "A shield-shaped marble sculpture facing a view of a city and mountains, next to a stepped composition of stone and red glass."
+  }
+}

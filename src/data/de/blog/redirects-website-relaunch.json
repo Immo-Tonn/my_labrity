@@ -1,0 +1,90 @@
+{
+  "slug": "redirects-website-relaunch",
+  "meta": {
+    "title": "Redirects beim Website Relaunch: Was Unternehmen über 301-Weiterleitungen wissen sollten | Labrity",
+    "description": "301-Weiterleitungen einfach erklärt für Unternehmer: was sie tun, warum sie beim Relaunch wichtig sind, und was laut Google Search Central dabei zu beachten ist."
+  },
+  "breadcrumbLabel": "301-Weiterleitungen",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Wissen",
+    "title": "Redirects beim Website Relaunch: Was Unternehmen über 301-Weiterleitungen wissen sollten",
+    "intro": "\"301-Redirect\" klingt nach einem Entwickler-Thema. Für Sie als Unternehmer ist es aber vor allem eines: der wichtigste einzelne Hebel, um bei einem Relaunch nichts von dem zu verlieren, was Ihre Website bereits erreicht hat."
+  },
+  "keyTakeaway": {
+    "title": "Kurz gesagt",
+    "text": "Ein 301-Redirect sagt Google und Besuchern: \"Diese Seite ist dauerhaft umgezogen, hier ist die neue Adresse.\" Laut Google Search Central verursacht das selbst keinen Verlust an Sichtbarkeit — das Risiko entsteht, wenn diese Weiterleitung fehlt."
+  },
+  "sections": [
+    {
+      "heading": "Was ein Redirect in einfachen Worten macht",
+      "level": "h2",
+      "paragraphs": [
+        "Stellen Sie sich vor, Ihr Geschäft zieht in eine neue Straße um. Ein Redirect ist wie ein Schild an der alten Adresse: \"Wir sind umgezogen — hier entlang.\" Ohne dieses Schild stehen Kunden (und Google) vor einer verschlossenen Tür und wissen nicht, wo es weitergeht.",
+        "Technisch passiert genau das: Wenn jemand die alte URL Ihrer Website aufruft, wird er automatisch, ohne es zu merken, zur neuen URL weitergeleitet. Der Besucher bemerkt in der Regel gar nicht, dass im Hintergrund eine Weiterleitung stattgefunden hat — er landet einfach direkt auf der richtigen, aktuellen Seite."
+      ]
+    },
+    {
+      "heading": "Warum das beim Relaunch so wichtig ist",
+      "level": "h2",
+      "paragraphs": [
+        "Google hat Ihre bisherige Website bereits gecrawlt und in gewissem Umfang eingeordnet. Ändern sich beim Relaunch URLs, ohne dass Weiterleitungen gesetzt werden, sieht Google beim nächsten Besuch nur eine leere Stelle, wo vorher eine Seite war. Aus Google-Sicht ist das nicht \"dieselbe Seite an neuer Adresse\", sondern schlicht: verschwunden.",
+        "Auch für echte Besucher, die einen alten Link aus einer E-Mail, einem Lesezeichen oder einem anderen Artikel öffnen, endet der Weg ohne Redirect in einer Fehlerseite statt bei Ihrem Angebot. Gerade bei älteren, aber weiterhin gut funktionierenden Marketingmaßnahmen — etwa gedrucktem Material mit einer bestimmten Internetadresse — kann das direkt verlorene Anfragen bedeuten."
+      ]
+    },
+    {
+      "heading": "Was Google Search Central offiziell dazu sagt",
+      "level": "h2",
+      "paragraphs": [
+        "Laut der offiziellen Dokumentation von Google Search Central verursachen permanente Weiterleitungen (301 oder 308) selbst keinen Verlust an Linkwert. Die Empfehlung lautet außerdem, Weiterleitungsketten kurz zu halten — direkt zur finalen neuen Seite, nicht über mehrere Zwischenstationen — und Weiterleitungen nach einem Umzug mindestens ein Jahr lang aktiv zu lassen."
+      ]
+    },
+    {
+      "heading": "Was das für Sie als Unternehmer bedeutet — ohne Entwickler-Sprache",
+      "level": "h2",
+      "paragraphs": [
+        "Sie müssen nicht selbst wissen, wie ein 301-Redirect technisch eingerichtet wird. Aber Sie sollten bei jedem Relaunch-Projekt eine klare Antwort auf diese Frage bekommen: \"Was passiert mit unseren bestehenden Seiten und Links?\" Wenn diese Frage mit \"darum kümmern wir uns\" beantwortet wird, ohne konkret zu werden, lohnt sich Nachfragen.",
+        "Eine gute Gegenfrage an jede Agentur oder jeden Freelancer: \"Können Sie mir zeigen, welche unserer aktuellen Seiten-Adressen auf welche neue Adresse weiterleiten werden?\" Eine seriöse Antwort darauf ist konkret — nicht nur ein allgemeines Versprechen."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Google Search Central — Redirects and Google Search",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/301-redirects"
+    }
+  ],
+  "faq": {
+    "kicker": "Häufige Fragen",
+    "title": "Was Sie vorher wissen möchten",
+    "items": [
+      {
+        "question": "Brauche ich für jede alte Seite eine eigene Weiterleitung?",
+        "answer": "Im Idealfall ja — jede alte URL sollte gezielt auf die inhaltlich passendste neue URL weiterleiten, nicht pauschal auf die Startseite."
+      },
+      {
+        "question": "Ist ein Redirect etwas, das ich selbst einrichten kann?",
+        "answer": "Technisch ist es meist eine serverseitige Konfiguration. In der Praxis übernimmt das die Agentur oder der Entwickler, der den Relaunch umsetzt — wichtig ist, dass es überhaupt eingeplant wird."
+      },
+      {
+        "question": "Was, wenn ich eine Seite einfach entfernen will, ohne Ersatz?",
+        "answer": "Dann sollte diese URL bewusst und kontrolliert entfernt werden, statt einfach zu verschwinden — im Zweifel lohnt sich eine Weiterleitung auf die nächstpassende bestehende Seite."
+      }
+    ]
+  },
+  "relatedService": {
+    "label": "Planen Sie einen Relaunch?",
+    "description": "Wir gehen Ihren Relaunch strukturiert an — inklusive der Frage, was mit bestehenden Seiten passiert.",
+    "linkLabel": "Mehr zum Website Relaunch",
+    "href": "/website-relaunch"
+  },
+  "secondaryLink": null,
+  "relatedArticles": [
+    "website-relaunch-seo-verluste-vermeiden",
+    "website-veraltet-anzeichen"
+  ],
+  "images": {
+    "coverAlt": "Schildförmige Marmorskulptur vor einer Aussicht auf Stadt und Berge, daneben eine gestufte Komposition aus Stein und rotem Glas."
+  }
+}

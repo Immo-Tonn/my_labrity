@@ -1,0 +1,116 @@
+{
+  "slug": "website-erstellen-lassen-kosten",
+  "meta": {
+    "title": "Website Design & Build: What Does a Professional Website Really Cost? | Labrity",
+    "description": "Realistic price ranges for freelancers and agencies, what actually drives the cost, and how to compare quotes that look completely different."
+  },
+  "breadcrumbLabel": "Website Costs",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Knowledge",
+    "title": "What does a professional website really cost?",
+    "intro": "The honest answer: it depends. But there are real price ranges, real cost drivers, and a few questions that help you judge a quote — before you even sit down for a call."
+  },
+  "keyTakeaway": {
+    "title": "In short",
+    "text": "A solid business website in Germany typically falls between €2,000 (a simple freelancer solution) and €15,000 (a full agency project with concept, design, development and an SEO foundation). The real difference rarely comes from the website itself — it comes from scope, how custom it is, and how much work happens before design even starts."
+  },
+  "sections": [
+    {
+      "heading": "Why there's no single right number",
+      "level": "h2",
+      "paragraphs": [
+        "A website isn't an off-the-shelf product — it's a combination of concept work, design, technical implementation and, depending on scope, content. Two five-page websites can differ by thousands of euros if one is a standard template and the other a custom concept with its own structure.",
+        "That's why \"what does a website cost\" is the wrong first question — the more useful one is: what does this website actually need to achieve for my business? A site that mainly acts as a digital business card has different requirements than one meant to actively bring in new customers.",
+        "Timing matters too: a business going online for the first time usually starts from zero — structure, copy, visual language all need to be built from scratch. A relaunch of an existing site can build on what's already there, which shifts effort elsewhere rather than removing it."
+      ]
+    },
+    {
+      "heading": "Realistic price ranges",
+      "level": "h2",
+      "paragraphs": [
+        "Based on multiple independent observations of the German web design market, rough figures emerge — they vary by region, experience and project scope, but give a realistic first orientation before you request actual quotes."
+      ]
+    },
+    {
+      "heading": "Freelancers",
+      "level": "h3",
+      "paragraphs": [
+        "Simple business-card sites with a handful of pages often run between €1,000 and €5,000. A solid, more custom business website usually falls between €2,000 and €8,000. Freelancers typically carry lower fixed costs than agencies, which is why a comparable result often costs less."
+      ]
+    },
+    {
+      "heading": "Agencies",
+      "level": "h3",
+      "paragraphs": [
+        "Agencies typically quote between €3,500 and €18,000, depending on how many people are involved (concept, design, development, copy, project management) and how thoroughly SEO fundamentals, structural planning and technical implementation are considered. Larger projects with custom functionality or multilingual structure often sit at the upper end of this range or beyond."
+      ]
+    },
+    {
+      "heading": "What actually drives the price",
+      "level": "h2",
+      "paragraphs": [
+        "The single biggest cost driver is rarely the design itself — it's the amount of groundwork. Two projects with a similar page count can differ substantially in effort depending on how much is already prepared and how many decisions still need to be made during the project."
+      ],
+      "checklist": [
+        "Number of pages and how custom each one is",
+        "Whether content (copy, images) already exists or needs to be developed",
+        "Custom functionality (e.g. booking, calculators, multilingual structure)",
+        "How much structural and SEO planning happens before design starts",
+        "Number of feedback and revision rounds"
+      ]
+    },
+    {
+      "heading": "What a quote is actually made of",
+      "level": "h2",
+      "paragraphs": [
+        "A serious quote is rarely a single flat number without a breakdown. In practice, most projects split roughly into four phases: concept and structure (clarifying audience, layout, content), the actual design and development work, content creation or coordination, and finally launch, testing and handover.",
+        "How much weight each phase carries depends heavily on the project. For a compact site with existing content, the concept phase is often a small share of total effort. For a more complex project without any prepared structure, that exact phase can end up being the largest share of both time and cost."
+      ]
+    },
+    {
+      "heading": "How to compare quotes properly",
+      "level": "h2",
+      "paragraphs": [
+        "Two quotes at different price points tell you little if you don't know what's actually included. Ask directly: Is the structure/concept phase included? How many revision rounds are planned? Is a technical SEO foundation part of the quote, or an add-on? Who delivers the copy — you or the agency?",
+        "These four questions usually explain most of the price gap between two seemingly comparable quotes. A lower price isn't automatically a red flag — it often just means certain work isn't included, which you'd then handle yourself or source separately."
+      ]
+    }
+  ],
+  "faq": {
+    "kicker": "Common questions",
+    "title": "What you'd want to know beforehand",
+    "items": [
+      {
+        "question": "Is a cheaper quote automatically worse?",
+        "answer": "Not automatically — but check what's missing. A lower price often means less concept work, fewer revision rounds, or that copy and images have to come entirely from you."
+      },
+      {
+        "question": "Is a pricier solution worth it for a small business?",
+        "answer": "Depends on the goal. If the website is the first point of contact for new customers, a well-thought-out structure usually pays off. For a pure business-card presence, a simpler solution is often enough."
+      },
+      {
+        "question": "What about ongoing costs after launch?",
+        "answer": "Budget for ongoing hosting, domain and possibly maintenance costs — typically a low double-digit to mid-range amount per month, depending on scope."
+      }
+    ]
+  },
+  "relatedService": {
+    "label": "Planning a new website?",
+    "description": "Tell us about your project — we'll tell you what actually makes sense for you.",
+    "linkLabel": "More on Website Design & Build",
+    "href": "/website-erstellen-lassen"
+  },
+  "secondaryLink": {
+    "label": "See our own pricing",
+    "href": "/prices"
+  },
+  "relatedArticles": [
+    "freelancer-oder-webagentur",
+    "website-briefing-checkliste"
+  ],
+  "images": {
+    "coverAlt": "Rising columns of marble, steel and red glass on a desk next to a calculator, symbolising increasing cost."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "kicker": "Blog",
+    "title": "Knowledge for your website decision.",
+    "description": "No trends, no listicles — clear answers to real questions that come up before, during, and after a website project."
+  },
+  "articles": [
+    "website-erstellen-lassen-kosten",
+    "website-relaunch-seo-verluste-vermeiden",
+    "freelancer-oder-webagentur",
+    "website-veraltet-anzeichen",
+    "landingpage-oder-website",
+    "website-ladezeit-performance",
+    "website-briefing-checkliste",
+    "redirects-website-relaunch",
+    "landingpage-dauer-launch",
+    "webdesign-beauty-wellness",
+    "website-kunden-gewinnen-leadgenerierung"
+  ],
+  "heroAlt": "An open laptop on a marble table overlooking the sea and mountains at sunset, accented by a red glass element.",
+  "editorialAlt": "An open laptop on a dark desk with a notebook, coffee mug and a red maple branch, the Cologne skyline visible in the background."
+}

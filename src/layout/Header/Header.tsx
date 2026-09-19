@@ -138,7 +138,7 @@ export function Header() {
   return (
     <header
       className={classnames(
-        'fixed left-0 top-0 z-[50] w-full transition-transform duration-300',
+        'fixed inset-x-0 top-0 z-[50] transition-transform duration-300',
         'border-b border-[#e7e2d9]',
         hideHeader ? '-translate-y-full' : 'translate-y-0',
         scrolled

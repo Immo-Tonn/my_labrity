@@ -1,0 +1,91 @@
+{
+  "slug": "website-veraltet-anzeichen",
+  "meta": {
+    "title": "Woran erkennt man eine veraltete Website? 7 konkrete Anzeichen | Labrity",
+    "description": "Sieben klare, überprüfbare Signale, die zeigen, ob Ihre Website technisch oder gestalterisch nicht mehr zeitgemäß ist — zum Selbst-Check."
+  },
+  "breadcrumbLabel": "Veraltete Website erkennen",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Wissen",
+    "title": "Woran erkennt man eine veraltete Website? 7 konkrete Anzeichen",
+    "intro": "\"Veraltet\" ist kein Gefühl, sondern etwas, das sich an konkreten Punkten festmachen lässt. Diese sieben Anzeichen lassen sich innerhalb weniger Minuten selbst überprüfen — ohne technisches Vorwissen."
+  },
+  "keyTakeaway": null,
+  "sections": [
+    {
+      "heading": "1. Die Website wirkt auf dem Smartphone nicht wie \"die eigentliche\" Seite",
+      "level": "h2",
+      "paragraphs": [
+        "Ein Großteil der Besucher kommt heute über mobile Geräte. Wenn Texte auf dem Smartphone winzig sind, horizontal gescrollt werden muss oder Buttons kaum treffbar sind, ist das kein Detail — es ist das erste, was neue Kunden von Ihnen sehen.",
+        "Ein einfacher Test: Öffnen Sie Ihre eigene Website auf dem Smartphone und versuchen Sie, ohne zu zoomen, den wichtigsten Inhalt zu lesen und einen Kontaktweg zu finden. Wenn das umständlich ist, geht es Ihren Besuchern vermutlich genauso."
+      ]
+    },
+    {
+      "heading": "2. Die Ladezeit fühlt sich spürbar langsam an",
+      "level": "h2",
+      "paragraphs": [
+        "Wenn Sie beim Öffnen Ihrer eigenen Website merklich warten müssen, bevor Inhalte erscheinen, ist das ein technisches Warnsignal — unabhängig davon, wie das Design aussieht. Häufige Ursachen sind unkomprimierte Bilder, veraltete technische Grundlagen oder ein Hosting, das mit den heutigen Anforderungen nicht mehr mithält."
+      ]
+    },
+    {
+      "heading": "3. Das Design folgt sichtbar einem älteren Trend",
+      "level": "h2",
+      "paragraphs": [
+        "Bestimmte visuelle Muster lassen sich zeitlich einordnen — kleine, gestapelte Textblöcke, veraltete Schriftarten-Kombinationen, verspielte Farbverläufe ohne klare Struktur. Design ist Geschmackssache, aber \"aus der Zeit gefallen\" ist objektiv erkennbar, sobald man es neben eine aktuelle Website stellt.",
+        "Ein guter Vergleichspunkt: Schauen Sie sich zwei oder drei Websites von Unternehmen an, die Sie selbst als modern und vertrauenswürdig empfinden. Der Unterschied im ersten Eindruck ist meist unmittelbar spürbar, auch ohne Design-Hintergrund."
+      ]
+    },
+    {
+      "heading": "4. Inhalte sind erkennbar veraltet",
+      "level": "h2",
+      "paragraphs": [
+        "Ein Impressum mit falscher Jahreszahl, Leistungen, die es längst nicht mehr gibt, oder ein \"aktuelles\" Projekt aus einer anderen Zeit — das signalisiert Besuchern, dass die Website nicht gepflegt wird, selbst wenn das Unternehmen selbst aktiv ist."
+      ]
+    },
+    {
+      "heading": "5. Die Struktur erklärt sich nicht selbst",
+      "level": "h2",
+      "paragraphs": [
+        "Wenn Besucher mehrere Klicks brauchen, um herauszufinden, was Sie eigentlich anbieten oder wie sie Kontakt aufnehmen können, ist das ein Strukturproblem — unabhängig vom visuellen Design. Eine gute Faustregel: Die wichtigste Information sollte innerhalb weniger Sekunden auf der Startseite erkennbar sein, nicht erst nach mehreren Klicks durch das Menü."
+      ]
+    },
+    {
+      "heading": "6. Es fehlt eine klare Handlung",
+      "level": "h2",
+      "paragraphs": [
+        "Eine zeitgemäße Website führt Besucher zu einer klaren nächsten Handlung — anfragen, buchen, Kontakt aufnehmen. Wenn diese Handlung fehlt oder untergeht, verliert die Website an Wirkung, unabhängig vom Erscheinungsbild."
+      ]
+    },
+    {
+      "heading": "7. Sie selbst würden die Seite niemandem zeigen wollen",
+      "level": "h2",
+      "paragraphs": [
+        "Das ist kein technisches Kriterium, aber ein ehrliches: Wenn Sie zögern, potenziellen Kunden Ihre eigene Website zu zeigen, ist das oft das deutlichste aller Signale."
+      ]
+    },
+    {
+      "heading": "Was das für Sie bedeutet",
+      "level": "h2",
+      "paragraphs": [
+        "Ein oder zwei dieser Punkte sind meist kein Grund für einen kompletten Relaunch — oft reichen gezielte Anpassungen. Treffen jedoch mehrere davon gleichzeitig zu, ist das ein klares Signal, dass die Website nicht mehr zum aktuellen Niveau des Unternehmens passt.",
+        "Wichtig dabei: Ein Relaunch bedeutet nicht zwangsläufig, bei null anzufangen. Oft lassen sich vorhandene Inhalte, Bilder und Struktur-Ideen sinnvoll übernehmen — der eigentliche Relaunch betrifft dann vor allem Design, Technik und die Art, wie diese Inhalte präsentiert werden."
+      ]
+    }
+  ],
+  "relatedService": {
+    "label": "Mehrere Punkte treffen bei Ihnen zu?",
+    "description": "Zeigen Sie uns Ihre bestehende Website — wir sagen Ihnen, wie ein Relaunch aussehen könnte.",
+    "linkLabel": "Mehr zum Website Relaunch",
+    "href": "/website-relaunch"
+  },
+  "secondaryLink": null,
+  "relatedArticles": [
+    "website-relaunch-seo-verluste-vermeiden",
+    "redirects-website-relaunch"
+  ],
+  "images": {
+    "coverAlt": "Laptop-Bildschirm im Split-Screen: links ein modernes, klares Website-Design, rechts eine verstaubte, mit Spinnweben überzogene Seite."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "kicker": "Блог",
+    "title": "Знания для вашего решения о сайте.",
+    "description": "Без трендов и списков ради списков — понятные ответы на реальные вопросы, которые возникают до, во время и после проекта по созданию сайта."
+  },
+  "articles": [
+    "website-erstellen-lassen-kosten",
+    "website-relaunch-seo-verluste-vermeiden",
+    "freelancer-oder-webagentur",
+    "website-veraltet-anzeichen",
+    "landingpage-oder-website",
+    "website-ladezeit-performance",
+    "website-briefing-checkliste",
+    "redirects-website-relaunch",
+    "landingpage-dauer-launch",
+    "webdesign-beauty-wellness",
+    "website-kunden-gewinnen-leadgenerierung"
+  ],
+  "heroAlt": "Открытый ноутбук на мраморном столе с видом на море и горы на закате, с акцентом из красного стекла.",
+  "editorialAlt": "Открытый ноутбук на тёмном столе с блокнотом, чашкой кофе и веткой красного клёна, на фоне силуэта Кёльна."
+}

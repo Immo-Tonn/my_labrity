@@ -68,5 +68,12 @@
       "path": "#",
       "ariaLabel": "Partner website link"
     }
-  ]
+  ],
+  "blogUi": {
+    "breadcrumbParent": "Blog",
+    "readLabel": "Read",
+    "sourcesLabel": "Sources",
+    "moreArticlesLabel": "Keep reading",
+    "allArticlesLabel": "View all articles"
+  }
 }

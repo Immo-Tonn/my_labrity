@@ -1,0 +1,89 @@
+{
+  "slug": "website-ladezeit-performance",
+  "meta": {
+    "title": "Website-Ladezeit: Warum Performance für Nutzer und Unternehmen wichtig ist | Labrity",
+    "description": "Was Core Web Vitals tatsächlich messen, warum Google sie als Signal nutzt, und was das für Ihre Website praktisch bedeutet — auf Basis von web.dev und Google Search Central."
+  },
+  "breadcrumbLabel": "Ladezeit & Performance",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Wissen",
+    "title": "Website-Ladezeit: Warum Performance für Nutzer und Unternehmen wichtig ist",
+    "intro": "Ladezeit ist kein rein technisches Detail für Entwickler — es ist eine der wenigen Website-Eigenschaften, die sowohl Besucher direkt spüren als auch Google direkt misst."
+  },
+  "keyTakeaway": {
+    "title": "Kurz gesagt",
+    "text": "Google bewertet Ladezeit, Interaktivität und visuelle Stabilität über die sogenannten Core Web Vitals (LCP, INP, CLS). Laut Google gelten diese Werte als Rankingsignal — allerdings als einer von vielen, nicht als der entscheidende Faktor. Inhaltliche Relevanz bleibt wichtiger, aber bei ansonsten vergleichbaren Seiten kann Performance den Unterschied machen."
+  },
+  "sections": [
+    {
+      "heading": "Was Core Web Vitals tatsächlich messen",
+      "level": "h2",
+      "paragraphs": [
+        "Core Web Vitals sind drei konkrete, messbare Werte, die Google zur Bewertung der Nutzererfahrung einer Website nutzt:"
+      ],
+      "checklist": [
+        "Largest Contentful Paint (LCP) — wie schnell das größte sichtbare Element der Seite lädt. Als guter Wert gilt unter 2,5 Sekunden.",
+        "Interaction to Next Paint (INP) — wie schnell die Seite auf eine Nutzerinteraktion reagiert. Als guter Wert gelten unter 200 Millisekunden.",
+        "Cumulative Layout Shift (CLS) — wie stark sich Inhalte unerwartet verschieben, während die Seite lädt. Als guter Wert gilt ein Wert unter 0,1."
+      ]
+    },
+    {
+      "heading": "Warum das für Besucher spürbar ist",
+      "level": "h2",
+      "paragraphs": [
+        "Diese Werte sind keine abstrakten technischen Kennzahlen — sie beschreiben exakt das, was ein Besucher als \"langsam\" oder \"ruckelig\" empfindet: das Warten auf Inhalte, das verzögerte Reagieren beim Klicken, das Verrutschen eines Buttons, kurz bevor man draufklicken wollte.",
+        "Gerade der letzte Punkt wird häufig unterschätzt: Ein Layout, das sich während des Ladens noch verschiebt, führt dazu, dass Besucher versehentlich auf das falsche Element klicken — eine Werbung statt den gewünschten Button, ein falscher Menüpunkt statt der Kontaktseite. Das kostet nicht nur Geduld, sondern im schlimmsten Fall direkt eine Anfrage."
+      ]
+    },
+    {
+      "heading": "Wie Google diese Werte tatsächlich nutzt",
+      "level": "h2",
+      "paragraphs": [
+        "Google misst Core Web Vitals nicht im Labor, sondern anhand realer Besucherdaten aus dem Chrome User Experience Report (CrUX). Eine Seite gilt als \"gut\" bewertet, wenn mindestens 75 Prozent der echten Besuche die genannten Schwellenwerte einhalten.",
+        "Core Web Vitals sind Teil der sogenannten Page-Experience-Signale und laut Google ein bestätigter Rankingfaktor. Wichtig ist die Einordnung: Inhaltliche Relevanz bleibt das stärkere Signal. Performance wirkt vor allem dort, wo mehrere Seiten inhaltlich ähnlich gut sind — dort kann sie den Unterschied machen."
+      ]
+    },
+    {
+      "heading": "Warum Performance auch ohne Google-Bezug wichtig ist",
+      "level": "h2",
+      "paragraphs": [
+        "Selbst wenn man das Rankingsignal komplett außer Acht lässt, bleibt ein einfacher Punkt: Eine langsame Website kostet direkt Besucher. Jemand, der auf eine Anzeige oder einen Suchtreffer klickt und dann mehrere Sekunden auf eine reagierende Seite wartet, springt in vielen Fällen einfach ab — bevor er überhaupt Ihr Angebot gesehen hat.",
+        "Performance ist damit gleichzeitig ein SEO-Thema und ein reines Conversion-Thema: Eine schnellere Website verliert weniger Besucher auf dem Weg zur eigentlichen Handlung, unabhängig davon, wie sie gefunden wurde."
+      ]
+    },
+    {
+      "heading": "Was das für Ihr Unternehmen praktisch bedeutet",
+      "level": "h2",
+      "paragraphs": [
+        "Sie müssen die technischen Details nicht selbst verstehen, um eine wichtige Frage zu stellen: Wird bei der Umsetzung Ihrer Website überhaupt auf Ladezeit, Bildoptimierung und technische Struktur geachtet — oder ist Performance ein nachträglicher Gedanke? Diese Frage lohnt sich bereits im Erstgespräch mit jeder Agentur oder jedem Freelancer.",
+        "Ein einfacher, kostenloser erster Check: Google bietet mit PageSpeed Insights ein öffentliches Werkzeug an, mit dem sich die aktuellen Core-Web-Vitals-Werte jeder Website direkt einsehen lassen — ein guter Ausgangspunkt, um die eigene Website objektiv einzuschätzen, statt sich nur auf ein subjektives Gefühl zu verlassen."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "web.dev — Understanding Core Web Vitals and Google Search results",
+      "url": "https://web.dev/articles/vitals"
+    },
+    {
+      "label": "Google Search Central — Page Experience",
+      "url": "https://developers.google.com/search/docs/appearance/page-experience"
+    }
+  ],
+  "relatedService": {
+    "label": "Sie möchten wissen, wie technisch solide Ihre Website ist?",
+    "description": "Erzählen Sie uns von Ihrem Projekt — wir sagen Ihnen, was technisch sinnvoll ist.",
+    "linkLabel": "Mehr zu Webentwicklung",
+    "href": "/webentwicklung"
+  },
+  "secondaryLink": null,
+  "relatedArticles": [
+    "website-veraltet-anzeichen",
+    "website-erstellen-lassen-kosten"
+  ],
+  "images": {
+    "coverAlt": "Stoppuhr mit roten Lichtstreifen in Bewegung vor einer Betonwand mit rot erleuchtetem Durchgang – Sinnbild für Geschwindigkeit."
+  }
+}
