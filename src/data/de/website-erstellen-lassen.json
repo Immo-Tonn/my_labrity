@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "kicker": "Website erstellen lassen",
+    "title": "Eine Website, die von Anfang an überzeugt.",
+    "description": "Sie haben noch keine Website oder möchten ganz neu starten? Wir begleiten Sie von der ersten Idee bis zum fertigen, professionellen Auftritt."
+  },
+  "forWhom": {
+    "kicker": "Für wen",
+    "title": "Für alle, die online noch nicht sichtbar sind.",
+    "description": "Ob Selbstständige, kleine Teams oder ein neues Vorhaben — der Ausgangspunkt ist meist derselbe: gute Arbeit, aber keine Website, die das zeigt.",
+    "items": [
+      {
+        "title": "Selbstständige & Experten",
+        "description": "Sie leisten gute Arbeit, sind im Netz aber kaum zu finden — oder wirken dort weniger professionell, als Sie tatsächlich sind."
+      },
+      {
+        "title": "Kleine Unternehmen",
+        "description": "Ihr Geschäft läuft, aber eine eigene Website fehlt bisher oder ist nie über eine einfache Visitenkarte hinausgewachsen."
+      },
+      {
+        "title": "Neue Vorhaben",
+        "description": "Sie starten etwas Neues und möchten von Anfang an mit einem starken digitalen Auftritt erscheinen."
+      }
+    ]
+  },
+  "offerSection": {
+    "kicker": "Leistungsumfang",
+    "title": "Was zur Erstellung dazugehört.",
+    "description": "Eine gute Website besteht aus mehr als nur Design. Wir übernehmen jeden Schritt, der dazugehört.",
+    "items": [
+      {
+        "title": "Konzept & Struktur",
+        "description": "Wir legen fest, welche Seiten und Inhalte Ihre Website wirklich braucht — und in welcher Reihenfolge sie Vertrauen aufbauen."
+      },
+      {
+        "title": "Design & Umsetzung",
+        "description": "Ihre Website entsteht mit klarem Layout, hochwertiger Optik und einer Struktur, die auf jedem Gerät funktioniert."
+      },
+      {
+        "title": "Launch & Übergabe",
+        "description": "Nach dem letzten Feinschliff gehen wir gemeinsam live — Sie erhalten eine Website, die sofort einsatzbereit ist."
+      }
+    ]
+  },
+  "approachStatement": {
+    "kicker": "Unser Ansatz",
+    "title": "Keine Vorlage. Keine halbe Lösung.",
+    "description": "Wir bauen keine Websites von der Stange. Jedes Projekt beginnt bei Ihrem Unternehmen — nicht bei einem Baukasten."
+  },
+  "proofSection": {
+    "kicker": "Referenz",
+    "title": "So sieht das in der Praxis aus.",
+    "description": "Eine hochwertige Immobilien-Website mit klarem Aufbau und professioneller Objektpräsentation — ein Beispiel dafür, wie ein neuer digitaler Auftritt von Anfang an Vertrauen schafft.",
+    "projectLabel": "Immo Tonn",
+    "linkLabel": "Portfolio ansehen"
+  },
+  "disambiguation": {
+    "kicker": "Sie suchen etwas Konkreteres?",
+    "title": "Vielleicht passt eine dieser Seiten besser.",
+    "items": [
+      {
+        "label": "Ihnen geht es vor allem um den visuellen Auftritt?",
+        "linkLabel": "Mehr zu Webdesign",
+        "href": "/webdesign"
+      },
+      {
+        "label": "Sie haben bereits eine Website und möchten sie erneuern?",
+        "linkLabel": "Mehr zum Relaunch",
+        "href": "/website-relaunch"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Häufige Fragen",
+    "title": "Was Sie vorher wissen möchten.",
+    "items": [
+      {
+        "question": "Was kostet es, eine Website erstellen zu lassen?",
+        "answer": "Das hängt vom Umfang Ihres Projekts ab. Eine genaue Übersicht unserer Pakete und Preise finden Sie auf unserer Preisseite."
+      },
+      {
+        "question": "Wie lange dauert die Erstellung?",
+        "answer": "Je nach Umfang und Abstimmung meist einige Wochen. Den genauen Ablauf zeigen wir Ihnen auf unserer Ablauf-Seite."
+      },
+      {
+        "question": "Muss ich bereits Texte und Bilder haben?",
+        "answer": "Nein. Vieles hilft uns, ist aber kein Muss — fehlt etwas, unterstützen wir Sie bei Struktur und Inhalten."
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Nächster Schritt",
+    "title": "Bereit für Ihre neue Website?",
+    "description": "Erzählen Sie uns kurz von Ihrem Vorhaben — wir sagen Ihnen, wie wir es umsetzen würden.",
+    "primaryButton": "Projekt starten",
+    "secondaryButton": "Preise ansehen",
+    "backToServicesLabel": "Alle Leistungen ansehen",
+    "processLinkLabel": "Mehr zum Ablauf"
+  },
+  "images": {
+    "heroAlt": "Reales Projekt aus dem Labrity Portfolio: Immobilien-Website mit klarer Struktur (Immo Tonn)"
+  },
+  "breadcrumbParentLabel": "Leistungen"
+}

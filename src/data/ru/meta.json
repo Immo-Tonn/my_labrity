@@ -1,12 +1,11 @@
 {
   "title": "Labrity — профессиональные сайты для компаний и предпринимателей в Германии",
-
   "description": "Современные сайты для малого бизнеса, предпринимателей и специалистов в Германии. Профессионально, убедительно и готово к привлечению новых клиентов.",
-
   "keywords": "Labrity, заказать сайт, профессиональный сайт, сайт для бизнеса, сайт для предпринимателей, веб-дизайн Германия, сайт компании, создание сайта в Германии",
-
   "icons": [
-    { "url": "/meta/favicon.ico" },
+    {
+      "url": "/meta/favicon.ico"
+    },
     {
       "url": "/meta/favicon-16x16.png",
       "rel": "icon",
@@ -20,22 +19,16 @@
       "sizes": "32x32"
     }
   ],
-
   "manifest": "/meta/site.webmanifest",
-
   "openGraph": {
     "type": "website",
-    "url": "https://labrity.com",
-
+    "url": "/",
     "title": "Labrity — профессиональные сайты для бизнеса",
-
     "description": "Современные сайты для малого бизнеса, предпринимателей и специалистов в Германии.",
-
     "siteName": "Labrity",
-
     "images": [
       {
-        "url": "https://labrity.com/meta/opengraph-image.jpg",
+        "url": "/meta/opengraph-image.jpg",
         "width": 1200,
         "height": 630,
         "alt": "Labrity — современные сайты для бизнеса"

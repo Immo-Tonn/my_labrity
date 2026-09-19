@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "kicker": "Website Relaunch",
+    "title": "Ein Relaunch – ohne unnötige Risiken.",
+    "description": "Ihre Website ist in die Jahre gekommen, aber der Gedanke an einen Relaunch macht Sorgen um Ihre bestehende Sichtbarkeit? Wir gehen dabei strukturiert und vorsichtig vor."
+  },
+  "signsSection": {
+    "kicker": "Woran Sie es merken",
+    "title": "Wann sich ein Relaunch lohnt.",
+    "description": "Meist ist es keine einzelne Sache, sondern ein Gesamteindruck, der sich über die Zeit verändert.",
+    "items": [
+      {
+        "title": "Veraltetes Design",
+        "description": "Die Website sieht nicht mehr nach dem Niveau aus, auf dem Ihr Unternehmen heute tatsächlich arbeitet."
+      },
+      {
+        "title": "Technische Schwächen",
+        "description": "Lange Ladezeiten oder eine unübersichtliche Struktur kosten Sie Anfragen, ohne dass es offensichtlich ist."
+      },
+      {
+        "title": "Sinkende Wirkung",
+        "description": "Die Website vermittelt nicht mehr die Kompetenz und Seriosität, die Sie im Gespräch mit Kunden ausstrahlen."
+      }
+    ]
+  },
+  "riskSection": {
+    "kicker": "Wie wir vorgehen",
+    "title": "Ein Relaunch, der Risiken minimiert.",
+    "description": "Ein Relaunch verändert eine bestehende, oft schon gefundene Website. Deshalb gehen wir jeden Schritt bewusst und nachvollziehbar an — ohne Versprechen, die niemand seriös geben kann.",
+    "items": [
+      {
+        "title": "Analyse der bestehenden Seite",
+        "description": "Wir sehen uns an, was an Ihrer aktuellen Website funktioniert und was nicht, bevor wir etwas verändern."
+      },
+      {
+        "title": "Sorgfältige Umleitungen",
+        "description": "Wichtige URLs werden bei der Migration nicht einfach aufgegeben, sondern gezielt weitergeleitet."
+      },
+      {
+        "title": "Erhalt wichtiger Inhalte",
+        "description": "Seiten, die bereits Ergebnisse bringen, werden bewusst berücksichtigt statt einfach ersetzt."
+      }
+    ]
+  },
+  "disclaimerStatement": {
+    "kicker": "Ehrlich gesagt",
+    "title": "Keine Garantien. Aber ein durchdachtes Vorgehen.",
+    "description": "Niemand kann seriös versichern, dass sich bestehende Google-Rankings nach einem Relaunch eins zu eins halten. Was wir zusichern können, ist ein Vorgehen, das SEO-Risiken bewusst reduziert, statt sie zu ignorieren."
+  },
+  "disambiguation": {
+    "kicker": "Sie suchen etwas Konkreteres?",
+    "title": "Vielleicht passt eine dieser Seiten besser.",
+    "items": [
+      {
+        "label": "Sie haben noch gar keine Website?",
+        "linkLabel": "Mehr zu Website erstellen lassen",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Ihnen geht es vor allem um die Technik dahinter?",
+        "linkLabel": "Mehr zu Webentwicklung",
+        "href": "/webentwicklung"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Häufige Fragen",
+    "title": "Was Sie vorher wissen möchten.",
+    "items": [
+      {
+        "question": "Wann lohnt sich ein Website Relaunch?",
+        "answer": "Meist dann, wenn Design, Technik oder Struktur nicht mehr zum aktuellen Niveau Ihres Unternehmens passen — oder wenn Anfragen spürbar zurückgehen."
+      },
+      {
+        "question": "Verliere ich beim Relaunch meine Google-Rankings?",
+        "answer": "Ein Relaunch birgt grundsätzlich SEO-Risiken. Wir arbeiten mit sorgfältigen Umleitungen und dem Erhalt wichtiger URLs, um diese Risiken zu verringern — eine Garantie für unveränderte Rankings kann dabei aber niemand seriös geben."
+      },
+      {
+        "question": "Was passiert mit meinen alten URLs?",
+        "answer": "Wichtige bestehende URLs werden analysiert und, wo sinnvoll, gezielt auf die neue Struktur umgeleitet, statt einfach zu verschwinden."
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Nächster Schritt",
+    "title": "Bereit, Ihre Website zu erneuern?",
+    "description": "Zeigen Sie uns kurz Ihre bestehende Website — wir sagen Ihnen, wie ein Relaunch bei Ihnen aussehen könnte.",
+    "primaryButton": "Website analysieren lassen",
+    "secondaryButton": "Portfolio ansehen",
+    "backToServicesLabel": "Alle Leistungen ansehen"
+  },
+  "images": {
+    "heroAlt": "Reales Projekt aus dem Labrity Portfolio: kraftvoller, hochwertiger Auftritt eines Detailing-Studios (FN Detailing)"
+  },
+  "breadcrumbParentLabel": "Leistungen"
+}

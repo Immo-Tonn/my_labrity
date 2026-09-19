@@ -15,10 +15,16 @@ const PAGES: {
 }[] = [
   { path: '/', changeFrequency: 'weekly', priority: 1 },
   { path: '/services', changeFrequency: 'weekly', priority: 0.9 },
+  { path: '/website-erstellen-lassen', changeFrequency: 'weekly', priority: 0.9 },
+  { path: '/webdesign', changeFrequency: 'weekly', priority: 0.9 },
+  { path: '/webentwicklung', changeFrequency: 'weekly', priority: 0.9 },
+  { path: '/website-relaunch', changeFrequency: 'weekly', priority: 0.9 },
+  { path: '/landingpage-erstellen-lassen', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/portfolio', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/prices', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/process', changeFrequency: 'weekly', priority: 0.8 },
   { path: '/contact', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/privacy', changeFrequency: 'yearly', priority: 0.3 },
 ];
 
 function buildLanguageAlternates(path: string) {
@@ -32,12 +38,13 @@ function buildLanguageAlternates(path: string) {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
+  // No `lastModified` field: we don't track real per-page change dates, and
+  // a timestamp that's just "now" on every build/request is worse than no
+  // signal at all — it tells crawlers everything changed today regardless
+  // of whether it actually did.
   return PAGES.flatMap(({ path, changeFrequency, priority }) =>
     LOCALES.map((lang: Language) => ({
       url: `${SITE_URL}${withLocale(path, lang)}`,
-      lastModified,
       changeFrequency,
       priority,
       alternates: {

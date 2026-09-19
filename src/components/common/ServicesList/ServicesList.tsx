@@ -1,36 +1,20 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import { Button } from '@/components/ui';
 import { ServiceItem } from '@/components/common';
 import { useQuiz } from '@/components/quiz';
 
-import { useLanguage } from '@/utils/LanguageContext';
-import { getData } from '@/utils/getData';
-
 import type { Service } from './types';
 
-export function ServicesList() {
-  const { lang } = useLanguage();
+export type ServicesListProps = {
+  services: Service[];
+  buttonLabel: string;
+};
+
+export function ServicesList({ services, buttonLabel }: ServicesListProps) {
   const { openQuiz } = useQuiz();
-
-  const [services, setServices] = useState<Service[]>([]);
-  const [common, setCommon] = useState<any>(null);
-
-  useEffect(() => {
-    const loadData = async () => {
-      const servicesData = await getData('services', lang);
-      const commonData = await getData('common', lang);
-
-      setServices(servicesData);
-      setCommon(commonData);
-    };
-
-    loadData();
-  }, [lang]);
-
-  if (!services || !common) return null;
 
   return (
     <div className="flex flex-col gap-6 md:gap-8 xl:gap-10 xl:pt-[68px]">
@@ -117,7 +101,7 @@ export function ServicesList() {
                 xl:max-w-[180px]
               "
             >
-              {common.buttonsText.v1}
+              {buttonLabel}
             </Button>
           </div>
 

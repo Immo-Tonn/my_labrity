@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 
 import { getData } from '@/utils/getData';
 import { buildHreflangAlternates } from '@/utils/hreflangAlternates';
+import { buildOpenGraph } from '@/utils/openGraph';
 import { isLanguage, withLocale, type Language } from '@/utils/localizedPath';
 import ProcessPageClient, { type ProcessData } from './ProcessPageClient';
 
@@ -50,11 +51,7 @@ export async function generateMetadata({
       canonical,
       languages: buildHreflangAlternates(PATH),
     },
-    openGraph: {
-      url: canonical,
-      title,
-      description,
-    },
+    openGraph: await buildOpenGraph(params.lang, canonical, title, description),
   };
 }
 

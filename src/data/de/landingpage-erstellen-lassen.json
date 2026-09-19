@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "kicker": "Landingpage erstellen lassen",
+    "title": "Landingpages, die ein Ziel verfolgen – nicht zehn.",
+    "description": "Für eine Kampagne, ein Angebot oder einen Launch reicht keine ganze Website — sondern eine einzelne Seite mit einer klaren Handlung."
+  },
+  "whenSection": {
+    "kicker": "Wann sinnvoll",
+    "title": "Wann eine Landingpage die richtige Wahl ist.",
+    "description": "Immer dann, wenn eine Botschaft im Mittelpunkt stehen soll — ohne Ablenkung durch eine ganze Website.",
+    "items": [
+      {
+        "title": "Werbekampagne",
+        "description": "Besucher aus Anzeigen landen direkt bei der passenden Botschaft, ohne sich erst durch eine Website klicken zu müssen."
+      },
+      {
+        "title": "Angebot oder Aktion",
+        "description": "Ein zeitlich begrenztes Angebot bekommt eine eigene, fokussierte Seite statt einen Absatz auf der Homepage."
+      },
+      {
+        "title": "Produkt- oder Projektstart",
+        "description": "Ein neues Vorhaben braucht schnell eine erste digitale Präsenz — ohne auf eine komplette Website zu warten."
+      }
+    ]
+  },
+  "principlesSection": {
+    "kicker": "Was eine gute Landingpage ausmacht",
+    "title": "Klar. Fokussiert. Schnell online.",
+    "description": "Eine Landingpage funktioniert anders als eine Unternehmenswebsite — und genau das ist ihre Stärke.",
+    "items": [
+      {
+        "title": "Eine Handlung",
+        "description": "Ein einziges, klares Ziel — anfragen, buchen, herunterladen — statt vieler gleichrangiger Optionen."
+      },
+      {
+        "title": "Klare Struktur",
+        "description": "Jeder Abschnitt führt konsequent auf die eine gewünschte Handlung hin."
+      },
+      {
+        "title": "Schneller Launch",
+        "description": "Weniger Umfang bedeutet: Ihre Seite kann deutlich schneller online gehen als eine vollständige Website."
+      }
+    ]
+  },
+  "proofSection": {
+    "kicker": "Referenz",
+    "title": "So sieht das in der Praxis aus.",
+    "description": "Ein Beispiel aus unserer Arbeit: eine editorial gestaltete Seite für ein Massagestudio, bei der ein einzelnes starkes Bild im Mittelpunkt steht.",
+    "projectLabel": "Relax Massage Studio",
+    "linkLabel": "Portfolio ansehen"
+  },
+  "disambiguation": {
+    "kicker": "Sie suchen etwas Konkreteres?",
+    "title": "Vielleicht passt eine dieser Seiten besser.",
+    "items": [
+      {
+        "label": "Sie brauchen einen vollständigen Unternehmensauftritt?",
+        "linkLabel": "Mehr zu Website erstellen lassen",
+        "href": "/website-erstellen-lassen"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Häufige Fragen",
+    "title": "Was Sie vorher wissen möchten.",
+    "items": [
+      {
+        "question": "Was ist der Unterschied zwischen einer Landingpage und einer Website?",
+        "answer": "Eine Website stellt Ihr gesamtes Unternehmen dar. Eine Landingpage verfolgt ein einziges, konkretes Ziel — etwa eine Kampagne oder ein Angebot."
+      },
+      {
+        "question": "Wie schnell kann eine Landingpage online gehen?",
+        "answer": "Da der Umfang deutlich kleiner ist als bei einer vollständigen Website, geht eine Landingpage in der Regel spürbar schneller live."
+      },
+      {
+        "question": "Brauche ich für jede Kampagne eine eigene Landingpage?",
+        "answer": "Das hängt vom Ziel ab. Bei unterschiedlichen Zielgruppen oder Angeboten ergibt eine eigene Seite pro Kampagne meist mehr Klarheit als eine gemeinsame."
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Nächster Schritt",
+    "title": "Bereit für eine fokussierte Seite?",
+    "description": "Erzählen Sie uns kurz von Ihrer Kampagne oder Ihrem Angebot — wir sagen Ihnen, wie die Landingpage aussehen könnte.",
+    "primaryButton": "Landingpage anfragen",
+    "secondaryButton": "Zur Website-Erstellung",
+    "backToServicesLabel": "Alle Leistungen ansehen"
+  },
+  "images": {
+    "heroAlt": "Reales Projekt aus dem Labrity Portfolio: fokussierter, editorial gestalteter Auftritt für ein Massagestudio (Relax Massage Studio)"
+  },
+  "breadcrumbParentLabel": "Leistungen"
+}

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 
 import { getData } from '@/utils/getData';
 import { buildHreflangAlternates } from '@/utils/hreflangAlternates';
+import { buildOpenGraph } from '@/utils/openGraph';
 import { isLanguage, withLocale } from '@/utils/localizedPath';
 import HomePageClient, { type HomeData } from './HomePageClient';
 
@@ -18,15 +19,19 @@ export async function generateMetadata({
   if (!isLanguage(params.lang)) notFound();
 
   const canonical = withLocale(PATH, params.lang);
+  const meta = await getData('meta', params.lang);
 
   return {
     alternates: {
       canonical,
       languages: buildHreflangAlternates(PATH),
     },
-    openGraph: {
-      url: canonical,
-    },
+    openGraph: await buildOpenGraph(
+      params.lang,
+      canonical,
+      meta.openGraph.title,
+      meta.openGraph.description,
+    ),
   };
 }
 

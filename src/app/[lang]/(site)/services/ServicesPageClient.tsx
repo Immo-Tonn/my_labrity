@@ -1,15 +1,31 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
 import { useQuiz } from '@/components/quiz';
 import { ServicesList } from '@/components/common/ServicesList';
+import type { Service } from '@/components/common/ServicesList/types';
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
+
+type ServiceLinkItem = {
+  title: string;
+  description: string;
+  href: string;
+  linkLabel: string;
+};
 
 export type ServicesPageData = {
   servicesSection: {
     kicker: string;
     title: string;
     description: string;
+  };
+  services: Service[];
+  buttonLabel: string;
+  serviceLinks: {
+    kicker: string;
+    title: string;
+    items: ServiceLinkItem[];
   };
   cta: {
     kicker: string;
@@ -92,7 +108,47 @@ export default function ServicesPageClient({
         </motion.div>
 
         <div className="mt-16 md:mt-20 xl:mt-24">
-          <ServicesList />
+          <ServicesList services={content.services} buttonLabel={content.buttonLabel} />
+        </div>
+
+        {/* NEW: links to the 5 dedicated service pages — added alongside the
+            existing content above, never replacing it. */}
+        <div className="mt-20 border-t border-[#e7e2d9] pt-16 md:mt-24 md:pt-20 xl:mt-28 xl:pt-24">
+          <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400 md:text-xs">
+            {content.serviceLinks.kicker}
+          </p>
+
+          <h2 className="max-w-[820px] font-tenor text-[30px] leading-[1.05] text-black md:text-[46px] xl:text-[56px]">
+            {content.serviceLinks.title}
+          </h2>
+
+          <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {content.serviceLinks.items.map(item => (
+              <LocalizedLink
+                key={item.href}
+                href={item.href}
+                className="group flex flex-col justify-between border border-[#e7e2d9] bg-white p-7 shadow-[0_12px_32px_rgba(0,0,0,0.035)] transition-all duration-500 ease-out hover:-translate-y-[4px] hover:shadow-[0_22px_50px_rgba(0,0,0,0.06)] md:p-8"
+              >
+                <div>
+                  <h3 className="font-tenor text-[26px] leading-[1.05] text-black transition-colors duration-300 group-hover:text-[#18352b] md:text-[30px]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 font-montserrat text-sm leading-6 text-neutral-600">
+                    {item.description}
+                  </p>
+                </div>
+
+                <div className="mt-6 flex items-center gap-2 font-montserrat text-[13px] font-semibold uppercase tracking-[0.08em] text-black">
+                  {item.linkLabel}
+                  <ArrowUpRight
+                    size={16}
+                    strokeWidth={1.6}
+                    className="transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
+                  />
+                </div>
+              </LocalizedLink>
+            ))}
+          </div>
         </div>
 
         {/* FINAL CTA */}

@@ -63,10 +63,18 @@ export async function generateMetadata({
 export default async function ServicesPage({ params }: { params: PageParams }) {
   if (!isLanguage(params.lang)) notFound();
 
-  const home = await getData('home', params.lang);
+  const [home, serviceLinks, services, common] = await Promise.all([
+    getData('home', params.lang),
+    getData('service-links', params.lang),
+    getData('services', params.lang),
+    getData('common', params.lang),
+  ]);
 
   const initialData: ServicesPageData = {
     servicesSection: home.servicesSection,
+    services,
+    buttonLabel: common.buttonsText.v1,
+    serviceLinks,
     cta: home.cta,
   };
 

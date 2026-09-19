@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "kicker": "Webdesign",
+    "title": "Webdesign that makes your brand seen.",
+    "description": "Before anyone reads your copy, they see your website. Good webdesign decides in seconds whether trust is built — or not."
+  },
+  "principlesSection": {
+    "kicker": "What good webdesign does",
+    "title": "Design that does more than just look good.",
+    "description": "For us, webdesign isn't decoration. It's meant to achieve something specific.",
+    "items": [
+      {
+        "title": "Clarity",
+        "description": "Visitors understand at a glance who you are, what you offer, and what to do next."
+      },
+      {
+        "title": "Recognisability",
+        "description": "Typography, colour and imagery come together into a presence that fits you and stays memorable."
+      },
+      {
+        "title": "Trust through design",
+        "description": "A considered layout feels premium — before a single word is read."
+      }
+    ]
+  },
+  "industriesSection": {
+    "kicker": "Especially effective for",
+    "title": "Industries where design makes the difference.",
+    "description": "Wherever perception drives trust, strong design pays off the most — beauty and wellness, lifestyle brands, and premium services among them.",
+    "items": [
+      {
+        "title": "Beauty & wellness",
+        "description": "A premium look instantly raises perceived value and trust with your audience."
+      },
+      {
+        "title": "Personal brands & studios",
+        "description": "A distinctive visual style makes you recognisable — instead of interchangeable."
+      }
+    ]
+  },
+  "approachStatement": {
+    "kicker": "Our approach",
+    "title": "Design with intent, not by accident.",
+    "description": "Every decision — spacing, type size, colour — has a reason behind it. Nothing feels arbitrary."
+  },
+  "proofSection": {
+    "kicker": "Reference",
+    "title": "What that looks like in practice.",
+    "description": "An example from our work: a stylish, editorially designed website for a music label with a strong visual identity.",
+    "projectLabel": "TLSG Studio",
+    "linkLabel": "View portfolio"
+  },
+  "disambiguation": {
+    "kicker": "Looking for something more specific?",
+    "title": "One of these pages might fit better.",
+    "items": [
+      {
+        "label": "Don't have a website yet?",
+        "linkLabel": "More on Website creation",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Mainly interested in the technical side?",
+        "linkLabel": "More on Webentwicklung",
+        "href": "/webentwicklung"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Common questions",
+    "title": "What you'd want to know beforehand.",
+    "items": [
+      {
+        "question": "What's the difference between webdesign and web development?",
+        "answer": "Webdesign is the visual side — layout, typography, imagery. Web development is the technical build behind it. Both go into every project we do."
+      },
+      {
+        "question": "Do I get several design directions to choose from?",
+        "answer": "We develop one considered design direction that fits your brand, then refine the details together with you."
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Next step",
+    "title": "Ready for a presence that works?",
+    "description": "Tell us a little about your brand — we'll show you how we'd bring it to life visually.",
+    "primaryButton": "Discuss your project",
+    "secondaryButton": "See portfolio",
+    "backToServicesLabel": "View all services"
+  },
+  "images": {
+    "heroAlt": "Real project from the Labrity portfolio: stylish, editorially designed website for a music label (TLSG Studio)"
+  },
+  "breadcrumbParentLabel": "Services"
+}

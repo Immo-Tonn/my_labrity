@@ -1,0 +1,36 @@
+{
+  "kicker": "Specialised Service Pages",
+  "title": "More detail on individual services.",
+  "items": [
+    {
+      "title": "Website Design & Build",
+      "description": "From the first idea to a finished, professional site.",
+      "href": "/website-erstellen-lassen",
+      "linkLabel": "Learn more"
+    },
+    {
+      "title": "Webdesign",
+      "description": "A visual presence that builds trust and makes your brand recognisable.",
+      "href": "/webdesign",
+      "linkLabel": "Learn more"
+    },
+    {
+      "title": "Web Development",
+      "description": "A technically solid foundation — fast, reliable, and built to grow with you.",
+      "href": "/webentwicklung",
+      "linkLabel": "Learn more"
+    },
+    {
+      "title": "Website Relaunch",
+      "description": "For businesses that have outgrown their current website.",
+      "href": "/website-relaunch",
+      "linkLabel": "Learn more"
+    },
+    {
+      "title": "Landing Pages",
+      "description": "A focused page for a campaign, an offer, or a fast start.",
+      "href": "/landingpage-erstellen-lassen",
+      "linkLabel": "Learn more"
+    }
+  ]
+}

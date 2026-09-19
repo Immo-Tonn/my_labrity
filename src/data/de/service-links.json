@@ -1,0 +1,36 @@
+{
+  "kicker": "Spezialisierte Leistungsseiten",
+  "title": "Mehr Details zu einzelnen Leistungen.",
+  "items": [
+    {
+      "title": "Website erstellen lassen",
+      "description": "Von der ersten Idee bis zum fertigen, professionellen Auftritt.",
+      "href": "/website-erstellen-lassen",
+      "linkLabel": "Mehr erfahren"
+    },
+    {
+      "title": "Webdesign",
+      "description": "Ein visueller Auftritt, der Vertrauen schafft und Ihre Marke erkennbar macht.",
+      "href": "/webdesign",
+      "linkLabel": "Mehr erfahren"
+    },
+    {
+      "title": "Webentwicklung",
+      "description": "Eine technisch solide Basis — schnell, zuverlässig und darauf ausgelegt, mitzuwachsen.",
+      "href": "/webentwicklung",
+      "linkLabel": "Mehr erfahren"
+    },
+    {
+      "title": "Website Relaunch",
+      "description": "Für Unternehmen, die ihrer bestehenden Website entwachsen sind.",
+      "href": "/website-relaunch",
+      "linkLabel": "Mehr erfahren"
+    },
+    {
+      "title": "Landingpage erstellen lassen",
+      "description": "Eine fokussierte Seite für eine Kampagne, ein Angebot oder einen schnellen Start.",
+      "href": "/landingpage-erstellen-lassen",
+      "linkLabel": "Mehr erfahren"
+    }
+  ]
+}
