@@ -100,5 +100,26 @@
   "images": {
     "heroAlt": "Reales Projekt aus dem Labrity Portfolio: Immobilien-Website mit klarer Struktur (Immo Tonn)"
   },
-  "breadcrumbParentLabel": "Leistungen"
+  "breadcrumbParentLabel": "Leistungen",
+  "relatedArticles": {
+    "kicker": "Weiterlesen",
+    "title": "Mehr dazu im Blog.",
+    "items": [
+      {
+        "label": "Was kostet eine professionelle Website wirklich?",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      },
+      {
+        "label": "Website-Briefing: Was vor dem ersten Gespräch vorbereitet sein sollte",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/website-briefing-checkliste"
+      },
+      {
+        "label": "Freelancer oder Webagentur: Was passt besser zu meinem Website-Projekt?",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/freelancer-oder-webagentur"
+      }
+    ]
+  }
 }

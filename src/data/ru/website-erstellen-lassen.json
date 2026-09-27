@@ -100,5 +100,26 @@
   "images": {
     "heroAlt": "Реальный проект из портфолио Labrity: сайт по недвижимости с чёткой структурой (Immo Tonn)"
   },
-  "breadcrumbParentLabel": "Услуги"
+  "breadcrumbParentLabel": "Услуги",
+  "relatedArticles": {
+    "kicker": "Читайте также",
+    "title": "Подробнее в блоге.",
+    "items": [
+      {
+        "label": "Сколько реально стоит профессиональный сайт?",
+        "linkLabel": "Читать статью",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      },
+      {
+        "label": "Бриф на сайт: что стоит подготовить перед первым разговором",
+        "linkLabel": "Читать статью",
+        "href": "/blog/website-briefing-checkliste"
+      },
+      {
+        "label": "Фрилансер или веб-студия: что лучше подойдёт моему проекту?",
+        "linkLabel": "Читать статью",
+        "href": "/blog/freelancer-oder-webagentur"
+      }
+    ]
+  }
 }

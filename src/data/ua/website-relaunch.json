@@ -92,5 +92,26 @@
   "images": {
     "heroAlt": "Реальний проєкт з портфоліо Labrity: потужний преміальний сайт студії детейлінгу (FN Detailing)"
   },
-  "breadcrumbParentLabel": "Послуги"
+  "breadcrumbParentLabel": "Послуги",
+  "relatedArticles": {
+    "kicker": "Читайте також",
+    "title": "Детальніше в блозі.",
+    "items": [
+      {
+        "label": "Оновлення сайту без втрати SEO: на що варто звернути увагу",
+        "linkLabel": "Читати статтю",
+        "href": "/blog/website-relaunch-seo-verluste-vermeiden"
+      },
+      {
+        "label": "Редиректи під час оновлення сайту: що бізнесу потрібно знати про 301-редиректи",
+        "linkLabel": "Читати статтю",
+        "href": "/blog/redirects-website-relaunch"
+      },
+      {
+        "label": "Як зрозуміти, що сайт застарів? 7 конкретних ознак",
+        "linkLabel": "Читати статтю",
+        "href": "/blog/website-veraltet-anzeichen"
+      }
+    ]
+  }
 }

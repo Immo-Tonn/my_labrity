@@ -91,5 +91,16 @@
   "images": {
     "heroAlt": "Real project from the Labrity portfolio: stylish, editorially designed website for a music label (TLSG Studio)"
   },
-  "breadcrumbParentLabel": "Services"
+  "breadcrumbParentLabel": "Services",
+  "relatedArticles": {
+    "kicker": "Further reading",
+    "title": "More on this in our blog.",
+    "items": [
+      {
+        "label": "Web design for beauty and wellness brands: what really matters",
+        "linkLabel": "Read article",
+        "href": "/blog/webdesign-beauty-wellness"
+      }
+    ]
+  }
 }

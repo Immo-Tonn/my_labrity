@@ -91,5 +91,16 @@
   "images": {
     "heroAlt": "Реальний проєкт з портфоліо Labrity: стильний editorial-сайт для музичного лейблу (TLSG Studio)"
   },
-  "breadcrumbParentLabel": "Послуги"
+  "breadcrumbParentLabel": "Послуги",
+  "relatedArticles": {
+    "kicker": "Читайте також",
+    "title": "Детальніше в блозі.",
+    "items": [
+      {
+        "label": "Веб-дизайн для beauty- і wellness-брендів: що дійсно важливо",
+        "linkLabel": "Читати статтю",
+        "href": "/blog/webdesign-beauty-wellness"
+      }
+    ]
+  }
 }

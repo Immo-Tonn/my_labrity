@@ -26,7 +26,7 @@
     "kicker": "Premium Web Studio",
     "titleFirst": "Сайти, що",
     "titleSecond": "переконують і приводять клієнтів",
-    "description": "Ми створюємо сучасні сайти для бізнесу, експертів і брендів.",
+    "description": "Ми створюємо сучасні сайти для бізнесу, експертів і брендів — з Мюнстера для клієнтів по всій Німеччині.",
     "tagline": "Мінімалізм. Сучасність. Ефективність.",
     "primaryButton": "Контакт",
     "secondaryButton": "Портфоліо"
@@ -198,7 +198,8 @@
       "Ювелірний магазин і майстерня": "Ювелірні прикраси",
       "Relax Massage Studio": "Wellness & Spa",
       "Premium Consulting": "Фінансовий консалтинг",
-      "FN Detailing": "Детейлінг"
+      "FN Detailing": "Детейлінг",
+      "Beauty Salon Landing": "Краса та Wellness"
     },
     "blackSection": {
       "kicker": "У розробці",
@@ -305,6 +306,13 @@
         "imageVariant": "first",
         "image": "/images/projects/auto-detailing.webp",
         "href": "https://auto-detailing-website-tau.vercel.app"
+      },
+      {
+        "title": "Beauty Salon Landing",
+        "description": "Концептуальний багатомовний сайт для beauty-студії з виразною editorial/Y2K-естетикою, великою типографікою, світлою і темною темою та інтерактивними скрол-анімаціями.",
+        "imageVariant": "second",
+        "image": "/images/projects/beauty-salon-landing.webp",
+        "href": "https://beauty-salon-landing-gray.vercel.app/de"
       }
     ]
   },

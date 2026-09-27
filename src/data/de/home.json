@@ -26,7 +26,7 @@
     "kicker": "Premium Web Studio",
     "titleFirst": "Websites, die ",
     "titleSecond": "überzeugen und verkaufen",
-    "description": "Wir entwickeln moderne Websites für Unternehmen, Experten und Marken.",
+    "description": "Wir entwickeln moderne Websites für Unternehmen, Experten und Marken – von Münster aus für Kunden deutschlandweit.",
     "tagline": "Minimal. Modern. Effektiv.",
     "primaryButton": "Kontakt",
     "secondaryButton": "Portfolio"
@@ -175,7 +175,8 @@
       "Juweliergeschäft und Werkstatt": "Schmuck",
       "Relax Massage Studio": "Wellness & Spa",
       "Premium Consulting": "Finanzberatung",
-      "FN Detailing": "Fahrzeugaufbereitung"
+      "FN Detailing": "Fahrzeugaufbereitung",
+      "Beauty Salon Landing": "Beauty & Wellness"
     },
     "blackSection": {
       "kicker": "In Entwicklung",
@@ -282,6 +283,13 @@
         "imageVariant": "first",
         "image": "/images/projects/auto-detailing.webp",
         "href": "https://auto-detailing-website-tau.vercel.app"
+      },
+      {
+        "title": "Beauty Salon Landing",
+        "description": "Konzeptioneller, mehrsprachiger Auftritt für ein Beauty-Studio mit ausdrucksstarker Editorial/Y2K-Ästhetik, großformatiger Typografie, hellem und dunklem Theme sowie interaktiven Scroll-Animationen.",
+        "imageVariant": "second",
+        "image": "/images/projects/beauty-salon-landing.webp",
+        "href": "https://beauty-salon-landing-gray.vercel.app/de"
       }
     ]
   },

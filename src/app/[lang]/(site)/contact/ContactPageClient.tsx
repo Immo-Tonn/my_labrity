@@ -28,6 +28,7 @@ export type ContactData = {
     kicker: string;
     title: string;
     description: string;
+    locationNote?: string;
     contacts: ContactLink[];
   };
   form: {
@@ -242,19 +243,31 @@ export default function ContactPageClient({
                 <p className="text-white/68 mt-6 max-w-[420px] font-montserrat text-sm leading-7 md:text-base">
                   {content.sidebar.description}
                 </p>
+
+                {content.sidebar.locationNote && (
+                  <p className="mt-5 max-w-[420px] font-montserrat text-[13px] leading-7 text-white/50 md:text-sm">
+                    {content.sidebar.locationNote}
+                  </p>
+                )}
               </div>
 
               <div className="border-white/12 mt-12 border-t pt-6">
                 <div className="text-white/62 flex flex-wrap gap-x-6 gap-y-3 font-montserrat text-[12px] uppercase tracking-[0.16em] md:text-[13px]">
-                  {content.sidebar.contacts.map((item, index) => (
-                    <a
-                      key={`${item.label}-${index}`}
-                      href={item.href}
-                      className="transition duration-300 hover:text-white"
-                    >
-                      {item.label}
-                    </a>
-                  ))}
+                  {content.sidebar.contacts.map((item, index) => {
+                    const isExternal = item.href.startsWith('http');
+
+                    return (
+                      <a
+                        key={`${item.label}-${index}`}
+                        href={item.href}
+                        target={isExternal ? '_blank' : undefined}
+                        rel={isExternal ? 'noopener noreferrer' : undefined}
+                        className="transition duration-300 hover:text-white"
+                      >
+                        {item.label}
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
             </div>
