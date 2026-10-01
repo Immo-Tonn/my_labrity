@@ -92,5 +92,26 @@
   "images": {
     "heroAlt": "Real project from the Labrity portfolio: bold, premium detailing studio website (FN Detailing)"
   },
-  "breadcrumbParentLabel": "Services"
+  "breadcrumbParentLabel": "Services",
+  "relatedArticles": {
+    "kicker": "Further reading",
+    "title": "More on this in our blog.",
+    "items": [
+      {
+        "label": "Website relaunch without SEO losses: what businesses should watch for",
+        "linkLabel": "Read article",
+        "href": "/blog/website-relaunch-seo-verluste-vermeiden"
+      },
+      {
+        "label": "Redirects during a website relaunch: what businesses should know about 301s",
+        "linkLabel": "Read article",
+        "href": "/blog/redirects-website-relaunch"
+      },
+      {
+        "label": "How to tell if your website is outdated: 7 concrete signs",
+        "linkLabel": "Read article",
+        "href": "/blog/website-veraltet-anzeichen"
+      }
+    ]
+  }
 }

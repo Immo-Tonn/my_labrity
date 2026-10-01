@@ -19,13 +19,18 @@
       },
       {
         "label": "Instagram",
-        "href": "#"
+        "href": "https://www.instagram.com/labrity_it/"
+      },
+      {
+        "label": "Facebook",
+        "href": "https://www.facebook.com/share/1Wo19A6T3M/"
       },
       {
         "label": "LinkedIn",
         "href": "#"
       }
-    ]
+    ],
+    "locationNote": "Labrity базується в Мюнстері та працює з компаніями по всій землі Північний Рейн-Вестфалія, а також по всій Німеччині. Консультація та робота відбуваються зручно онлайн."
   },
   "form": {
     "fields": [

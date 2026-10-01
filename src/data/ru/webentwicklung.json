@@ -74,5 +74,16 @@
   "images": {
     "heroAlt": "Реальный проект из портфолио Labrity: структурированный сайт автосервиса (Werkstatt)"
   },
-  "breadcrumbParentLabel": "Услуги"
+  "breadcrumbParentLabel": "Услуги",
+  "relatedArticles": {
+    "kicker": "Читайте также",
+    "title": "Подробнее в блоге.",
+    "items": [
+      {
+        "label": "Скорость загрузки сайта: почему производительность важна для пользователей и бизнеса",
+        "linkLabel": "Читать статью",
+        "href": "/blog/website-ladezeit-performance"
+      }
+    ]
+  }
 }

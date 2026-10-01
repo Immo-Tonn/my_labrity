@@ -25,6 +25,7 @@ export type ServicesPageData = {
   serviceLinks: {
     kicker: string;
     title: string;
+    description?: string;
     items: ServiceLinkItem[];
   };
   cta: {
@@ -124,6 +125,12 @@ export default function ServicesPageClient({
           <h2 className="max-w-[820px] font-tenor text-[30px] leading-[1.05] text-black md:text-[46px] xl:text-[56px]">
             {content.serviceLinks.title}
           </h2>
+
+          {content.serviceLinks.description && (
+            <p className="mt-5 max-w-[680px] font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
+              {content.serviceLinks.description}
+            </p>
+          )}
 
           <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {content.serviceLinks.items.map(item => (

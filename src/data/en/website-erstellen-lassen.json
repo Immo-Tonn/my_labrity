@@ -100,5 +100,26 @@
   "images": {
     "heroAlt": "Real project from the Labrity portfolio: real estate website with a clear structure (Immo Tonn)"
   },
-  "breadcrumbParentLabel": "Services"
+  "breadcrumbParentLabel": "Services",
+  "relatedArticles": {
+    "kicker": "Further reading",
+    "title": "More on this in our blog.",
+    "items": [
+      {
+        "label": "What does a professional website really cost?",
+        "linkLabel": "Read article",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      },
+      {
+        "label": "Website briefing: what to prepare before your first call",
+        "linkLabel": "Read article",
+        "href": "/blog/website-briefing-checkliste"
+      },
+      {
+        "label": "Freelancer or web agency: what fits my website project better?",
+        "linkLabel": "Read article",
+        "href": "/blog/freelancer-oder-webagentur"
+      }
+    ]
+  }
 }

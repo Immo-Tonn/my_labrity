@@ -89,5 +89,21 @@
   "images": {
     "heroAlt": "Реальный проект из портфолио Labrity: сфокусированный editorial-сайт массажной студии (Relax Massage Studio)"
   },
-  "breadcrumbParentLabel": "Услуги"
+  "breadcrumbParentLabel": "Услуги",
+  "relatedArticles": {
+    "kicker": "Читайте также",
+    "title": "Подробнее в блоге.",
+    "items": [
+      {
+        "label": "Лендинг или сайт: что вам реально нужно?",
+        "linkLabel": "Читать статью",
+        "href": "/blog/landingpage-oder-website"
+      },
+      {
+        "label": "Сколько времени занимает лендинг до запуска?",
+        "linkLabel": "Читать статью",
+        "href": "/blog/landingpage-dauer-launch"
+      }
+    ]
+  }
 }

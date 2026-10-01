@@ -6,7 +6,7 @@ import { HelpCircle, ArrowUpRight } from 'lucide-react';
 
 import { Breadcrumbs } from '@/components/common/Breadcrumbs';
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
-import { BLOG_COVER_IMAGES } from '@/utils/blogImages';
+import { BLOG_COVER_IMAGES, BLOG_HERO_IMAGE } from '@/utils/blogImages';
 
 type Section = {
   heading: string;
@@ -53,7 +53,7 @@ export default function BlogArticlePageClient({
   initialData: BlogArticleData;
 }) {
   const content = initialData;
-  const cover = BLOG_COVER_IMAGES[content.slug];
+  const cover = BLOG_COVER_IMAGES[content.slug] ?? BLOG_HERO_IMAGE;
   const isPortraitCover = cover.height > cover.width;
 
   const faqStructuredData = content.faq

@@ -26,7 +26,7 @@
     "kicker": "Premium Web Studio",
     "titleFirst": "Websites that",
     "titleSecond": "convince and convert",
-    "description": "We create modern websites for businesses, experts and brands.",
+    "description": "We create modern websites for businesses, experts and brands – based in Münster, working with clients across Germany.",
     "tagline": "Minimal. Modern. Effective.",
     "primaryButton": "Contact",
     "secondaryButton": "Portfolio"
@@ -198,7 +198,8 @@
       "Jewelry Store & Workshop": "Jewelry",
       "Relax Massage Studio": "Wellness & Spa",
       "Premium Consulting": "Financial Consulting",
-      "FN Detailing": "Vehicle Detailing"
+      "FN Detailing": "Vehicle Detailing",
+      "Beauty Salon Landing": "Beauty & Wellness"
     },
     "blackSection": {
       "kicker": "In Development",
@@ -305,6 +306,13 @@
         "imageVariant": "first",
         "image": "/images/projects/auto-detailing.webp",
         "href": "https://auto-detailing-website-tau.vercel.app"
+      },
+      {
+        "title": "Beauty Salon Landing",
+        "description": "Concept multilingual website for a beauty studio with an expressive editorial/Y2K aesthetic, large-scale typography, a light and dark theme, and interactive scroll animations.",
+        "imageVariant": "second",
+        "image": "/images/projects/beauty-salon-landing.webp",
+        "href": "https://beauty-salon-landing-gray.vercel.app/de"
       }
     ]
   },

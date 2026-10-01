@@ -59,9 +59,12 @@ function buildStructuredData(lang: Language, description: string) {
           '@type': 'Country',
           name: 'Germany',
         },
-        // Only reliably-verified official profiles — see the SEO/entity
-        // audit for why Facebook/LinkedIn aren't listed here yet.
-        sameAs: ['https://www.instagram.com/labrity_it/'],
+        // Only reliably-verified official profiles — LinkedIn isn't listed
+        // here because no official Labrity LinkedIn profile is confirmed yet.
+        sameAs: [
+          'https://www.instagram.com/labrity_it/',
+          'https://www.facebook.com/share/1Wo19A6T3M/',
+        ],
         knowsAbout: [
           'Webdesign',
           'Next.js',

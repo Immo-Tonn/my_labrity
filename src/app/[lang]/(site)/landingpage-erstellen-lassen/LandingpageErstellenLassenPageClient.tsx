@@ -10,6 +10,7 @@ import { LocalizedLink } from '@/components/ui/LocalizedLink';
 type Item = { title: string; description: string };
 type FaqItem = { question: string; answer: string };
 type DisambiguationItem = { label: string; linkLabel: string; href: string };
+type RelatedArticleItem = { label: string; linkLabel: string; href: string };
 
 export type LandingpageErstellenLassenData = {
   breadcrumbParentLabel: string;
@@ -40,6 +41,11 @@ export type LandingpageErstellenLassenData = {
     items: DisambiguationItem[];
   };
   faq: { kicker: string; title: string; items: FaqItem[] };
+  relatedArticles?: {
+    kicker: string;
+    title: string;
+    items: RelatedArticleItem[];
+  };
   cta: {
     kicker: string;
     title: string;
@@ -261,6 +267,37 @@ export default function LandingpageErstellenLassenPageClient({
           </div>
         </div>
       </section>
+
+      {/* RELATED ARTICLES */}
+      {content.relatedArticles && (
+        <section className="border-t border-[#e7e2d9] py-16 md:py-20">
+          <div className="mx-auto max-w-[1100px] px-5 md:px-8">
+            <p className="mb-3 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+              {content.relatedArticles.kicker}
+            </p>
+            <h2 className="mb-8 font-tenor text-[26px] leading-[1.1] text-black md:text-[34px]">
+              {content.relatedArticles.title}
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              {content.relatedArticles.items.map(item => (
+                <LocalizedLink
+                  key={item.href}
+                  href={item.href}
+                  className="group flex flex-col items-start gap-3 border border-[#e7e2d9] bg-white/40 px-6 py-5 transition duration-300 hover:bg-white/70 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+                >
+                  <span className="font-montserrat text-[14px] leading-6 text-neutral-600">
+                    {item.label}
+                  </span>
+                  <span className="inline-flex shrink-0 items-center gap-1 font-montserrat text-[13px] font-semibold uppercase tracking-[0.06em] text-black">
+                    {item.linkLabel}
+                    <ArrowUpRight size={14} strokeWidth={1.8} />
+                  </span>
+                </LocalizedLink>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="px-5 py-24 md:px-8 md:py-32">

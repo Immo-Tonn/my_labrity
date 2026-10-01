@@ -89,5 +89,21 @@
   "images": {
     "heroAlt": "Real project from the Labrity portfolio: focused, editorially designed massage studio website (Relax Massage Studio)"
   },
-  "breadcrumbParentLabel": "Services"
+  "breadcrumbParentLabel": "Services",
+  "relatedArticles": {
+    "kicker": "Further reading",
+    "title": "More on this in our blog.",
+    "items": [
+      {
+        "label": "Landing page or website: what do you actually need?",
+        "linkLabel": "Read article",
+        "href": "/blog/landingpage-oder-website"
+      },
+      {
+        "label": "How long does a landing page take until launch?",
+        "linkLabel": "Read article",
+        "href": "/blog/landingpage-dauer-launch"
+      }
+    ]
+  }
 }

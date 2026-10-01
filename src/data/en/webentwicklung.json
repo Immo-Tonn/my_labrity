@@ -74,5 +74,16 @@
   "images": {
     "heroAlt": "Real project from the Labrity portfolio: structured auto workshop website (Werkstatt)"
   },
-  "breadcrumbParentLabel": "Services"
+  "breadcrumbParentLabel": "Services",
+  "relatedArticles": {
+    "kicker": "Further reading",
+    "title": "More on this in our blog.",
+    "items": [
+      {
+        "label": "Website load time: why performance matters for users and businesses",
+        "linkLabel": "Read article",
+        "href": "/blog/website-ladezeit-performance"
+      }
+    ]
+  }
 }
