@@ -12,7 +12,7 @@
 | 3 | `audit/03-performance-assets` | 02 | Видео и картинки, кэш-заголовки, noindex для `*.vercel.app` |
 | 4 | `audit/04-ux-conversion` | 03 | Hero/CTA, форма, контраст, фокус, skip-link, Preloader |
 | 5 | `audit/05-content-i18n-pricing` | 04 | Языки, цены, title/description, статья про стоимость |
-| 6 | `audit/06-hero-real-project-mockup` | 05 | Hero: реальные скриншоты Immo Tonn вместо AI-мокапа (откат = revert одного коммита) |
+| — | `audit/06-hero-real-project-mockup` | 05 | **Не сливать.** Эксперимент с мокапом Immo Tonn; владелец выбрал прежнюю картинку, в ветке 07 коммит откачен |
 | 7 | `audit/07-docs-seo-playbook` | 06 | Эта документация |
 
 ## Проверки перед каждым merge
@@ -36,5 +36,5 @@
 - Реальные отзывы с разрешением.
 - Ссылки Telegram и LinkedIn.
 - Юридическая проверка Impressum и Datenschutz (Needs legal review), включая USt-IdNr.
-- Решение по hero-мокапу: оставить как иллюстрацию или заменить реальным скриншотом.
+- Hero-мокап: оставлена прежняя AI-иллюстрация (вымышленные сайты «Luxury Villa Rentals», «Creative Studio»); при желании заменить реальным проектом (попытка с Immo Tonn лежит в ветке 06).
 - Всплывающие «заказы» (LiveActivity): это имитация активности, юридический риск по UWG; рекомендуется заменить нейтральным текстом.
