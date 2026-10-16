@@ -8,31 +8,31 @@ import { buildOpenGraph } from '@/utils/openGraph';
 import { isLanguage, withLocale, type Language } from '@/utils/localizedPath';
 
 // Prepared page: only confirmed facts (see about.json). It stays out of the
-// sitemap, navigation and footer, and is set to noindex until the owner has
+// navigation and footer (no internal link yet), until the owner has
 // supplied real "about" content (photo, background, references, ...).
 
 const PATH = '/ueber-uns';
 
 const META: Record<Language, { title: string; description: string }> = {
   de: {
-    title: 'Über Labrity | Labrity',
+    title: 'Über Labrity: Websites, Web-Apps, CRM & iOS-Apps aus Münster',
     description:
-      'Labrity ist ein Web Studio mit Sitz in Münster und arbeitet mit Unternehmen in Nordrhein-Westfalen und deutschlandweit.',
+      'Labrity aus Münster entwickelt Websites, Webanwendungen, SaaS-Plattformen, CRM-Systeme und iOS-Apps für Unternehmen in NRW und deutschlandweit.',
   },
   en: {
-    title: 'About Labrity | Labrity',
+    title: 'About Labrity: Websites, Web Apps, CRM & iOS Apps from Münster',
     description:
-      'Labrity is a web studio based in Münster, working with businesses in North Rhine-Westphalia and across Germany.',
+      'Labrity from Münster builds websites, web applications, SaaS platforms, CRM systems and iOS apps for businesses in North Rhine-Westphalia and across Germany.',
   },
   ru: {
-    title: 'О Labrity | Labrity',
+    title: 'О Labrity: сайты, веб-приложения, CRM и iOS-приложения',
     description:
-      'Labrity — веб-студия из Мюнстера, работающая с компаниями в Северном Рейне — Вестфалии и по всей Германии.',
+      'Labrity из Мюнстера разрабатывает сайты, веб-приложения, SaaS-платформы, CRM-системы и iOS-приложения для компаний в NRW и по всей Германии.',
   },
   ua: {
-    title: 'Про Labrity | Labrity',
+    title: 'Про Labrity: сайти, вебзастосунки, CRM та iOS-застосунки',
     description:
-      'Labrity — веб-студія з Мюнстера, що працює з компаніями в Північному Рейні — Вестфалії та по всій Німеччині.',
+      'Labrity з Мюнстера розробляє сайти, вебзастосунки, SaaS-платформи, CRM-системи та iOS-застосунки для компаній у NRW та по всій Німеччині.',
   },
 };
 
@@ -40,6 +40,11 @@ type AboutData = {
   title: string;
   intro: string;
   sections: { title: string; text: string }[];
+  capabilities: {
+    title: string;
+    intro: string;
+    items: { title: string; text: string }[];
+  };
   services: { title: string; items: { label: string; href: string }[] };
   contactLabel: string;
 };
@@ -59,7 +64,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    robots: { index: false, follow: true },
+    robots: { index: true, follow: true },
     alternates: {
       canonical,
       languages: buildHreflangAlternates(PATH),
@@ -87,6 +92,28 @@ export default async function AboutPage({ params }: { params: PageParams }) {
           </p>
 
           <div className="mt-10 max-w-[820px]">
+            <section className="mb-10">
+              <h2 className="font-tenor text-2xl font-semibold text-[#18352b] md:text-3xl">
+                {about.capabilities.title}
+              </h2>
+              <p className="mt-3 font-montserrat text-sm leading-7 text-[#18352b]/75">
+                {about.capabilities.intro}
+              </p>
+
+              <div className="mt-6 grid gap-6 md:grid-cols-2">
+                {about.capabilities.items.map(item => (
+                  <article key={item.title}>
+                    <h3 className="font-tenor text-lg font-semibold text-[#18352b]">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 font-montserrat text-sm leading-7 text-[#18352b]/75">
+                      {item.text}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </section>
+
             {about.sections.map(section => (
               <section key={section.title} className="mb-8">
                 <h2 className="font-tenor text-xl font-semibold text-[#18352b]">
