@@ -8,11 +8,12 @@
 |---|---|---|---|
 | 0 | PR #18 → #19 → #20 → #21 → #22 | main | Уже открытая цепочка (портфолио, техника, SEO, блог, local SEO). **#21 сливать только вместе с #22** (в #22 исправлена вёрстка hero-видео). |
 | 1 | `audit/01-ssr-navigation-metadata` | #22 | Навигация и футер в серверном HTML, OG/Twitter, sitemap, lowercase-редирект, `seo:smoke` |
-| 2 | `audit/02-trust-legal-pages` | 01 | Честный помощник-чат + калькулятор, `/impressum`, `/ueber-uns` (noindex), метки «концепт» |
+| 2 | `audit/02-trust-legal-pages` | 01 | Честный помощник-чат + калькулятор, `/impressum`, `/ueber-uns` (в индексе и sitemap, без ссылки в меню/футере), метки «концепт» |
 | 3 | `audit/03-performance-assets` | 02 | Видео и картинки, кэш-заголовки, noindex для `*.vercel.app` |
 | 4 | `audit/04-ux-conversion` | 03 | Hero/CTA, форма, контраст, фокус, skip-link, Preloader |
 | 5 | `audit/05-content-i18n-pricing` | 04 | Языки, цены, title/description, статья про стоимость |
-| 6 | `audit/07-docs-seo-playbook` | 05 | Эта документация |
+| 6 | `audit/06-hero-real-project-mockup` | 05 | Hero: реальные скриншоты Immo Tonn вместо AI-мокапа (откат = revert одного коммита) |
+| 7 | `audit/07-docs-seo-playbook` | 06 | Эта документация |
 
 ## Проверки перед каждым merge
 
@@ -30,7 +31,7 @@
 ## Нужны данные владельца
 
 - Какие проекты портфолио реальные клиентские, какие концепты.
-- Факты и фото для «Über uns» (страница пока noindex).
+- Факты и фото для «Über uns» (страница без ссылок в меню; перед добавлением ссылки проверить тексты).
 - Телефон/WhatsApp/Calendly: только если реально есть.
 - Реальные отзывы с разрешением.
 - Ссылки Telegram и LinkedIn.
