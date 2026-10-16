@@ -3,12 +3,14 @@ import React from 'react';
 import { Logo, LocalizedLink } from '@/components/ui';
 
 interface FooterProps {
+  links: { href: string; label: string }[];
   webLabel: string;
   policyLabel: string;
   impressumLabel: string;
 }
 
 export const Footer: React.FC<FooterProps> = ({
+  links,
   webLabel,
   policyLabel,
   impressumLabel,
@@ -30,6 +32,21 @@ export const Footer: React.FC<FooterProps> = ({
           </div>
 
           <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between xl:flex-1 xl:justify-end xl:gap-6">
+            <nav
+              aria-label="Footer"
+              className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1"
+            >
+              {links.map(item => (
+                <LocalizedLink
+                  key={item.href}
+                  href={item.href}
+                  className={`${linkClasses} inline-flex min-h-[44px] items-center`}
+                >
+                  {item.label}
+                </LocalizedLink>
+              ))}
+            </nav>
+
             <div className="flex items-center gap-3">
               <LocalizedLink
                 href="/privacy"

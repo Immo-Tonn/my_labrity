@@ -57,6 +57,11 @@
         "label": "Sie brauchen einen vollständigen Unternehmensauftritt?",
         "linkLabel": "Mehr zu Website erstellen lassen",
         "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Interessiert an Preisen und Paketen?",
+        "linkLabel": "Preise & Pakete ansehen",
+        "href": "/prices"
       }
     ]
   },
@@ -103,6 +108,11 @@
         "label": "Wie lange dauert eine Landingpage bis zum Launch?",
         "linkLabel": "Artikel lesen",
         "href": "/blog/landingpage-dauer-launch"
+      },
+      {
+        "label": "Kunden gewinnen über die Website: Wie Leadgenerierung wirklich funktioniert",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/website-kunden-gewinnen-leadgenerierung"
       }
     ]
   }

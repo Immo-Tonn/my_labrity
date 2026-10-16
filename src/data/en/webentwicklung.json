@@ -51,6 +51,16 @@
         "label": "Do you need more than a website, such as online booking or time tracking?",
         "linkLabel": "More about web apps",
         "href": "/web-apps"
+      },
+      {
+        "label": "Interested in prices and packages?",
+        "linkLabel": "View prices & packages",
+        "href": "/prices"
+      },
+      {
+        "label": "What does this look like in practice?",
+        "linkLabel": "See projects",
+        "href": "/portfolio"
       }
     ]
   },

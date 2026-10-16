@@ -60,6 +60,11 @@
         "label": "Mainly interested in the technical side?",
         "linkLabel": "More on web development",
         "href": "/webentwicklung"
+      },
+      {
+        "label": "Interested in prices and packages?",
+        "linkLabel": "View prices & packages",
+        "href": "/prices"
       }
     ]
   },

@@ -74,7 +74,10 @@
     "linkLabel": "More on Web Design",
     "href": "/webdesign"
   },
-  "secondaryLink": null,
+  "secondaryLink": {
+    "label": "Beauty projects from our portfolio",
+    "href": "/portfolio"
+  },
   "relatedArticles": [
     "freelancer-oder-webagentur",
     "website-erstellen-lassen-kosten"

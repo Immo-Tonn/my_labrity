@@ -191,6 +191,17 @@ export default async function RootLayout({
             </div>
 
             <Footer
+              links={[
+                ...navLinks
+                  .filter((item: { href: string; title: string }) =>
+                    ['/services', '/prices', '/blog'].includes(item.href),
+                  )
+                  .map((item: { href: string; title: string }) => ({
+                    href: item.href,
+                    label: item.title,
+                  })),
+                { href: '/web-apps', label: common.footerLabelWebApps },
+              ]}
               webLabel={common.layout.footer.web}
               policyLabel={common.footerLabelPolicy}
               impressumLabel={common.footerLabelImpressum}

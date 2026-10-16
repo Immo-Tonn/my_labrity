@@ -78,7 +78,10 @@
     "linkLabel": "Детальніше про веброзробку",
     "href": "/webentwicklung"
   },
-  "secondaryLink": null,
+  "secondaryLink": {
+    "label": "Сайт застарів? Про редизайн",
+    "href": "/website-relaunch"
+  },
   "relatedArticles": [
     "website-veraltet-anzeichen",
     "website-erstellen-lassen-kosten"

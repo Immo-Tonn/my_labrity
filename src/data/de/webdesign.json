@@ -63,6 +63,11 @@
         "label": "Ihnen geht es vor allem um die Technik dahinter?",
         "linkLabel": "Mehr zu Webentwicklung",
         "href": "/webentwicklung"
+      },
+      {
+        "label": "Interessiert an Preisen und Paketen?",
+        "linkLabel": "Preise & Pakete ansehen",
+        "href": "/prices"
       }
     ]
   },

@@ -78,7 +78,10 @@
     "linkLabel": "Mehr zu Webentwicklung",
     "href": "/webentwicklung"
   },
-  "secondaryLink": null,
+  "secondaryLink": {
+    "label": "Website veraltet? Zum Relaunch",
+    "href": "/website-relaunch"
+  },
   "relatedArticles": [
     "website-veraltet-anzeichen",
     "website-erstellen-lassen-kosten"

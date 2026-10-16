@@ -74,7 +74,10 @@
     "linkLabel": "Детальніше про веб-дизайн",
     "href": "/webdesign"
   },
-  "secondaryLink": null,
+  "secondaryLink": {
+    "label": "Beauty-проєкти з нашого портфоліо",
+    "href": "/portfolio"
+  },
   "relatedArticles": [
     "freelancer-oder-webagentur",
     "website-erstellen-lassen-kosten"

@@ -57,6 +57,11 @@
         "label": "Потрібен повноцінний сайт компанії?",
         "linkLabel": "Більше про розробку сайту",
         "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Цікавлять ціни та пакети?",
+        "linkLabel": "Переглянути ціни та пакети",
+        "href": "/prices"
       }
     ]
   },
@@ -103,6 +108,11 @@
         "label": "Скільки часу займає лендінг до запуску?",
         "linkLabel": "Читати статтю",
         "href": "/blog/landingpage-dauer-launch"
+      },
+      {
+        "label": "Залучення клієнтів через сайт: як насправді працює лідогенерація",
+        "linkLabel": "Читати статтю",
+        "href": "/blog/website-kunden-gewinnen-leadgenerierung"
       }
     ]
   }

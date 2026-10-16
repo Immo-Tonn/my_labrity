@@ -64,5 +64,6 @@
     "sourcesLabel": "Sources",
     "moreArticlesLabel": "Keep reading",
     "allArticlesLabel": "View all articles"
-  }
+  },
+  "footerLabelWebApps": "Web apps"
 }

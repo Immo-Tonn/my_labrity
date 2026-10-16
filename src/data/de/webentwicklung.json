@@ -51,6 +51,16 @@
         "label": "Brauchen Sie mehr als eine Website, etwa Online-Buchung oder Zeiterfassung?",
         "linkLabel": "Mehr zu Web-Apps",
         "href": "/web-apps"
+      },
+      {
+        "label": "Interessiert an Preisen und Paketen?",
+        "linkLabel": "Preise & Pakete ansehen",
+        "href": "/prices"
+      },
+      {
+        "label": "Wie sieht das in der Praxis aus?",
+        "linkLabel": "Projekte ansehen",
+        "href": "/portfolio"
       }
     ]
   },
