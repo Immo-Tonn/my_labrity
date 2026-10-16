@@ -1,27 +1,4 @@
 {
-  "seo": {
-    "title": "Labrity Web Studio – Professional Websites for Businesses in Germany",
-    "description": "Labrity Web Studio creates modern, responsive and SEO-optimized websites for companies, freelancers, service providers and brands in Germany.",
-    "keywords": [
-      "Labrity",
-      "Labrity Web Studio",
-      "web design Germany",
-      "professional website",
-      "website for businesses",
-      "website for freelancers",
-      "modern website",
-      "SEO optimized website",
-      "responsive web design",
-      "Next.js website",
-      "React website",
-      "premium web design",
-      "website development Germany"
-    ],
-    "openGraphTitle": "Labrity Web Studio – Modern Websites for Businesses",
-    "openGraphDescription": "Professional websites with modern design, clear structure, SEO optimization and a strong digital presence.",
-    "siteName": "Labrity Web Studio",
-    "locale": "en_US"
-  },
   "hero": {
     "kicker": "Premium Web Studio",
     "titleFirst": "Websites that",
