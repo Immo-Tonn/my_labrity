@@ -206,5 +206,38 @@
     "caption": "Illustration: example of an interface. These are not real customer data.",
     "alt1": "Illustration: appointment calendar on a laptop and online booking on a smartphone",
     "alt2": "Illustration: dashboard with appointments, employees and revenue on a laptop"
+  },
+  "costOfWaiting": {
+    "kicker": "Everyday life without a system",
+    "title": "What waiting costs you.",
+    "description": "It rarely shows up as one big bill, but as many small losses, day after day.",
+    "items": [
+      {
+        "title": "Missed calls",
+        "description": "If you cannot pick up the phone, in the worst case the appointment goes to a competitor. Online booking works even when you are in the middle of a job."
+      },
+      {
+        "title": "Double-booked appointments",
+        "description": "Two customers at the same time cost trust and nerves. A calendar with conflict checks prevents that before it happens."
+      },
+      {
+        "title": "Office work in the evening",
+        "description": "Copying appointments, comparing lists, rewriting invoices: time you need for your business or for yourself."
+      },
+      {
+        "title": "Knowledge only in someone's head",
+        "description": "When someone is out or the team changes, the overview is gone. Shared data makes you less dependent on individuals."
+      },
+      {
+        "title": "No clear numbers",
+        "description": "Without reporting it stays unclear which services pay off and when capacity is free."
+      }
+    ],
+    "note": "These are not guarantees but typical friction losses that suitable software can noticeably reduce."
+  },
+  "interest": {
+    "title": "A solution like this for your business?",
+    "description": "Our own platform for booking and management is in development. Anyone who registers now will be informed first once it is available. Non-binding.",
+    "button": "Register your interest"
   }
 }

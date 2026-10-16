@@ -23,6 +23,14 @@ export type WebAppsData = {
     items: UseCase[];
   };
   visual: { caption: string; alt1: string; alt2: string };
+  costOfWaiting: {
+    kicker: string;
+    title: string;
+    description: string;
+    items: Item[];
+    note: string;
+  };
+  interest: { title: string; description: string; button: string };
   experience: { kicker: string; title: string; description: string };
   process: { kicker: string; title: string; items: Item[] };
   clarify: {
@@ -255,6 +263,59 @@ export default function WebAppsPageClient({
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* COST OF WAITING */}
+      <section className="border-t border-[#e7e2d9] py-24 md:py-32">
+        <div className="mx-auto max-w-[1500px] px-5 md:px-8">
+          <div className="max-w-[860px]">
+            <p className={kicker}>{content.costOfWaiting.kicker}</p>
+            <h2 className="font-tenor text-[34px] leading-[1.05] tracking-[-0.03em] text-black md:text-[56px]">
+              {content.costOfWaiting.title}
+            </h2>
+            <p className="mt-6 font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
+              {content.costOfWaiting.description}
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {content.costOfWaiting.items.map((item, index) => (
+              <div
+                key={item.title}
+                className="border border-[#e7e2d9] bg-white/55 p-7"
+              >
+                <span className="font-montserrat text-xs tracking-[0.28em] text-neutral-500">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <h3 className="mt-4 font-tenor text-[24px] leading-[1.1] text-black">
+                  {item.title}
+                </h3>
+                <p className="mt-3 font-montserrat text-[14px] leading-7 text-neutral-500">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-8 max-w-[760px] border-l border-black pl-5 font-montserrat text-[13px] leading-7 text-neutral-500">
+            {content.costOfWaiting.note}
+          </p>
+
+          <div className="mt-10 bg-[#111111] px-6 py-10 text-white md:px-10 md:py-12">
+            <h3 className="font-tenor text-[28px] leading-[1.05] md:text-[40px]">
+              {content.interest.title}
+            </h3>
+            <p className="mt-4 max-w-[760px] font-montserrat text-[15px] leading-8 text-white/70 md:text-[17px]">
+              {content.interest.description}
+            </p>
+            <LocalizedLink
+              href="/contact"
+              className="mt-8 inline-flex min-h-[56px] items-center justify-center border border-white bg-white px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-black transition duration-300 hover:-translate-y-[1px]"
+            >
+              {content.interest.button}
+            </LocalizedLink>
           </div>
         </div>
       </section>

@@ -206,5 +206,38 @@
     "caption": "Illustration: beispielhafte Darstellung einer Oberfläche. Es sind keine echten Kundendaten.",
     "alt1": "Illustration: Terminkalender am Laptop und Online-Terminbuchung auf dem Smartphone",
     "alt2": "Illustration: Dashboard mit Terminen, Mitarbeitern und Umsatz auf dem Laptop"
+  },
+  "costOfWaiting": {
+    "kicker": "Der Alltag ohne System",
+    "title": "Was Ihnen das Warten kostet.",
+    "description": "Es zeigt sich selten in einer großen Rechnung, sondern in vielen kleinen Verlusten, Tag für Tag.",
+    "items": [
+      {
+        "title": "Verpasste Anrufe",
+        "description": "Wer gerade nicht ans Telefon geht, verliert im schlechtesten Fall den Termin an den Wettbewerber. Online-Buchung funktioniert auch, wenn Sie mitten in der Arbeit stecken."
+      },
+      {
+        "title": "Doppelt vergebene Termine",
+        "description": "Zwei Kunden zur selben Zeit kosten Vertrauen und Nerven. Ein Kalender mit Konfliktprüfung verhindert das, bevor es passiert."
+      },
+      {
+        "title": "Büroarbeit am Abend",
+        "description": "Termine übertragen, Listen abgleichen, Rechnungen nachschreiben: Zeit, die Sie für Ihr Geschäft oder für sich brauchen."
+      },
+      {
+        "title": "Wissen nur im Kopf",
+        "description": "Fällt jemand aus oder wechselt das Team, fehlt der Überblick. Gemeinsame Daten machen Sie unabhängiger von Einzelnen."
+      },
+      {
+        "title": "Keine klaren Zahlen",
+        "description": "Ohne Auswertung bleibt offen, welche Leistungen sich lohnen und wann Kapazität frei ist."
+      }
+    ],
+    "note": "Das sind keine Garantien, sondern typische Reibungsverluste, die passende Software spürbar verringern kann."
+  },
+  "interest": {
+    "title": "Eine solche Lösung für Ihren Betrieb?",
+    "description": "Unsere eigene Plattform für Terminbuchung und Verwaltung ist in Entwicklung. Wer sich jetzt meldet, wird zuerst informiert, sobald sie verfügbar ist. Unverbindlich.",
+    "button": "Jetzt Interesse anmelden"
   }
 }
