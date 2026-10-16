@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
 import { Logo, Socials, Navbar } from '@/components/ui';
@@ -8,18 +8,8 @@ import CloseIcon from '@/../public/icons/close-icon.svg';
 import { IBurgerMenuProps } from './types';
 
 import { useLanguage } from '@/utils/LanguageContext';
-import { getData } from '@/utils/getData';
 import { stripLocale, withLocale, type Language } from '@/utils/localizedPath';
 import useFocusTrap from '@/utils/useFocusTrap';
-
-type CommonData = {
-  layout?: {
-    'aria-label'?: {
-      burger?: string;
-      btnClose?: string;
-    };
-  };
-};
 
 const languages: {
   code: Language;
@@ -48,27 +38,19 @@ const languages: {
   },
 ];
 
-export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClose }) => {
+export const BurgerMenu: React.FC<IBurgerMenuProps> = ({
+  isOpen,
+  onClose,
+  navLinks,
+  socials,
+  closeLabel,
+}) => {
   const { lang } = useLanguage();
   const pathname = usePathname();
-  const [common, setCommon] = useState<CommonData | null>(null);
 
   const modalRef = useRef<HTMLDivElement | null>(null);
 
   useFocusTrap(modalRef, isOpen, { initialFocus: 'first' });
-
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const data = await getData('common', lang);
-        setCommon(data);
-      } catch {
-        setCommon(null);
-      }
-    };
-
-    loadData();
-  }, [lang]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -136,9 +118,7 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClose }) => {
 
           <button
             onClick={onClose}
-            aria-label={
-              common?.layout?.['aria-label']?.btnClose || 'close menu'
-            }
+            aria-label={closeLabel}
             className="text-black transition hover:scale-110"
           >
             <CloseIcon width={24} height={24} />
@@ -146,7 +126,11 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClose }) => {
         </div>
 
         <nav>
-          <Navbar variant="mobile-menu" onClick={handleLinkClick} />
+          <Navbar
+            variant="mobile-menu"
+            navLinks={navLinks}
+            onClick={handleLinkClick}
+          />
         </nav>
 
         <div className="border-y border-[#e7e2d9] py-4">
@@ -178,7 +162,7 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, onClose }) => {
         </div>
 
         <div>
-          <Socials />
+          <Socials socials={socials} />
         </div>
       </div>
     </div>

@@ -12,7 +12,23 @@ const PREFIXED_LOCALES = ['en', 'ua', 'ru'];
 const explicitDefaultLocaleRe = /^\/de(?=\/|$)/;
 
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const { pathname: rawPathname } = request.nextUrl;
+
+  // All routes are lowercase. A mixed-case URL (/Services, /EN/prices) would
+  // otherwise resolve to a duplicate 200 page, so it is redirected to its
+  // lowercase form (query string is preserved by cloning nextUrl). If the
+  // lowercase path also carries an explicit "/de" prefix, that prefix is
+  // dropped in the same redirect to avoid a second hop.
+  const pathname = rawPathname.toLowerCase();
+
+  if (pathname !== rawPathname) {
+    const url = request.nextUrl.clone();
+    url.pathname = explicitDefaultLocaleRe.test(pathname)
+      ? pathname.replace(explicitDefaultLocaleRe, '') || '/'
+      : pathname;
+
+    return NextResponse.redirect(url, 308);
+  }
 
   const firstSegment = pathname.split('/')[1];
 

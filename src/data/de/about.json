@@ -1,0 +1,44 @@
+{
+  "title": "Über Labrity",
+  "intro": "Labrity ist ein Web Studio mit Sitz in Münster. Inhaber ist Andreas Tonn.",
+  "sections": [
+    {
+      "title": "Wo wir arbeiten",
+      "text": "Labrity ist in Münster ansässig und arbeitet mit Unternehmen im gesamten Nordrhein-Westfalen sowie deutschlandweit zusammen. Beratung und Umsetzung erfolgen unkompliziert online."
+    },
+    {
+      "title": "Unser Ansatz",
+      "text": "Jede Website wird passend zu Business, Zielgruppe und Positionierung entwickelt — ohne generische Templates. Struktur, Design, Vertrauen, SEO und Nutzerführung werden als ein zusammenhängendes System gedacht."
+    },
+    {
+      "title": "Technologie und Sprachen",
+      "text": "Wir arbeiten mit modernen Technologien wie Next.js und React. Diese Website ist auf Deutsch, Englisch, Russisch und Ukrainisch verfügbar."
+    }
+  ],
+  "services": {
+    "title": "Was wir anbieten",
+    "items": [
+      {
+        "label": "Website erstellen lassen",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Webdesign",
+        "href": "/webdesign"
+      },
+      {
+        "label": "Webentwicklung",
+        "href": "/webentwicklung"
+      },
+      {
+        "label": "Website Relaunch",
+        "href": "/website-relaunch"
+      },
+      {
+        "label": "Landingpage erstellen lassen",
+        "href": "/landingpage-erstellen-lassen"
+      }
+    ]
+  },
+  "contactLabel": "Zum Kontaktformular"
+}

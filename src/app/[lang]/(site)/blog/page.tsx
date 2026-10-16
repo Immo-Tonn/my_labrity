@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getData } from '@/utils/getData';
 import { buildHreflangAlternates } from '@/utils/hreflangAlternates';
 import { buildOpenGraph } from '@/utils/openGraph';
+import { buildTwitter } from '@/utils/twitter';
 import { isLanguage, withLocale, type Language } from '@/utils/localizedPath';
 import BlogIndexPageClient, {
   type BlogIndexData,
@@ -55,6 +56,7 @@ export async function generateMetadata({
       languages: buildHreflangAlternates(PATH),
     },
     openGraph: await buildOpenGraph(params.lang, canonical, title, description),
+    twitter: await buildTwitter(params.lang, title, description),
   };
 }
 

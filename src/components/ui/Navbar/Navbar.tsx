@@ -1,76 +1,21 @@
-'use client';
-
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { classnames } from '@/utils/classnames';
 import { NavbarProps } from './types';
 import { NavbarLink } from './NavbarLink';
 
-import { useLanguage } from '@/utils/LanguageContext';
-import { getData } from '@/utils/getData';
-
-type NavLinkItem = {
-  title: string;
-  href: string;
-};
-
 export const Navbar: React.FC<NavbarProps> = ({
   variant,
+  navLinks,
   onClick,
   className,
 }) => {
-  const { lang } = useLanguage();
-  const [navLinks, setNavLinks] = useState<NavLinkItem[]>([]);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    const loadData = async () => {
-      try {
-        const data = await getData('header', lang);
-
-        if (!isMounted) {
-          return;
-        }
-
-        if (Array.isArray(data)) {
-          setNavLinks(data);
-          return;
-        }
-
-        setNavLinks([]);
-      } catch {
-        if (!isMounted) {
-          return;
-        }
-
-        try {
-          const fallbackData = await getData('header', 'de');
-
-          if (isMounted && Array.isArray(fallbackData)) {
-            setNavLinks(fallbackData);
-          }
-        } catch {
-          if (isMounted) {
-            setNavLinks([]);
-          }
-        }
-      }
-    };
-
-    loadData();
-
-    return () => {
-      isMounted = false;
-    };
-  }, [lang]);
-
   const NavbarClasses = classnames(
     'flex',
     {
       'w-full flex-col items-start gap-6 font-montserrat text-sm':
         variant === 'mobile-menu',
 
-      'items-center gap-10 font-montserrat': variant === 'header',
+      'items-center gap-8 font-montserrat xl:gap-10': variant === 'header',
     },
     className,
   );
@@ -79,14 +24,18 @@ export const Navbar: React.FC<NavbarProps> = ({
     return null;
   }
 
+  // The last item (/contact) is the primary call to action.
+  const ctaIndex = navLinks.length - 1;
+
   return (
     <ul className={NavbarClasses}>
-      {navLinks.map(link => (
+      {navLinks.map((link, index) => (
         <NavbarLink
           key={`${link.href}-${link.title}`}
           title={link.title}
           href={link.href}
           variant={variant}
+          isCta={index === ctaIndex}
           onClick={onClick}
         />
       ))}

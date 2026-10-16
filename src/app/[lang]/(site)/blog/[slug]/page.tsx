@@ -3,7 +3,9 @@ import { notFound } from 'next/navigation';
 
 import { getData } from '@/utils/getData';
 import { buildHreflangAlternates } from '@/utils/hreflangAlternates';
+import { BLOG_SLUGS } from '@/data/blogSlugs';
 import { buildOpenGraph } from '@/utils/openGraph';
+import { buildTwitter } from '@/utils/twitter';
 import { buildBreadcrumbSchema } from '@/utils/breadcrumbSchema';
 import { buildArticleSchema } from '@/utils/articleSchema';
 import { isLanguage, withLocale, type Language } from '@/utils/localizedPath';
@@ -11,25 +13,11 @@ import BlogArticlePageClient, {
   type BlogArticleData,
 } from './BlogArticlePageClient';
 
-const SLUGS = [
-  'website-erstellen-lassen-kosten',
-  'website-relaunch-seo-verluste-vermeiden',
-  'freelancer-oder-webagentur',
-  'website-veraltet-anzeichen',
-  'landingpage-oder-website',
-  'website-ladezeit-performance',
-  'website-briefing-checkliste',
-  'redirects-website-relaunch',
-  'landingpage-dauer-launch',
-  'webdesign-beauty-wellness',
-  'website-kunden-gewinnen-leadgenerierung',
-];
-
 type PageParams = { lang: string; slug: string };
 
 export async function generateStaticParams() {
   const LOCALES: Language[] = ['de', 'en', 'ru', 'ua'];
-  return LOCALES.flatMap(lang => SLUGS.map(slug => ({ lang, slug })));
+  return LOCALES.flatMap(lang => BLOG_SLUGS.map(slug => ({ lang, slug })));
 }
 
 export async function generateMetadata({
@@ -38,7 +26,7 @@ export async function generateMetadata({
   params: PageParams;
 }): Promise<Metadata> {
   if (!isLanguage(params.lang)) notFound();
-  if (!SLUGS.includes(params.slug)) notFound();
+  if (!(BLOG_SLUGS as readonly string[]).includes(params.slug)) notFound();
 
   const article: BlogArticleData = await getData(
     `blog/${params.slug}`,
@@ -60,6 +48,11 @@ export async function generateMetadata({
       article.meta.title,
       article.meta.description,
     ),
+    twitter: await buildTwitter(
+      params.lang,
+      article.meta.title,
+      article.meta.description,
+    ),
   };
 }
 
@@ -69,7 +62,7 @@ export default async function BlogArticlePage({
   params: PageParams;
 }) {
   if (!isLanguage(params.lang)) notFound();
-  if (!SLUGS.includes(params.slug)) notFound();
+  if (!(BLOG_SLUGS as readonly string[]).includes(params.slug)) notFound();
 
   const [initialDataRaw, common] = await Promise.all([
     getData(`blog/${params.slug}`, params.lang),

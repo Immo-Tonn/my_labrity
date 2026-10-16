@@ -1,28 +1,4 @@
 {
-  "seo": {
-    "title": "Labrity Web Studio — профессиональные сайты для бизнеса в Германии",
-    "description": "Labrity Web Studio создаёт современные, адаптивные и SEO-оптимизированные сайты для компаний, предпринимателей, специалистов и брендов в Германии.",
-    "keywords": [
-      "Labrity",
-      "Labrity Web Studio",
-      "веб-дизайн Германия",
-      "создать сайт в Германии",
-      "заказать сайт",
-      "профессиональный сайт",
-      "сайт для бизнеса",
-      "сайт для предпринимателей",
-      "современный сайт",
-      "SEO оптимизация сайта",
-      "адаптивный веб-дизайн",
-      "сайт на Next.js",
-      "сайт на React",
-      "премиальный веб-дизайн"
-    ],
-    "openGraphTitle": "Labrity Web Studio — современные сайты для бизнеса",
-    "openGraphDescription": "Профессиональные сайты с современным дизайном, понятной структурой, SEO-оптимизацией и сильным цифровым присутствием.",
-    "siteName": "Labrity Web Studio",
-    "locale": "ru_RU"
-  },
   "hero": {
     "kicker": "Premium Web Studio",
     "titleFirst": "Сайты, которые",
@@ -183,6 +159,7 @@
       "МИНИМАЛЬНО. СОВРЕМЕННО. ЭФФЕКТИВНО."
     ],
     "projectLabel": "Website Project",
+    "conceptLabel": "Концептуальный проект",
     "projectButton": "Смотреть проект",
     "projectTags": ["SEO READY", "AI ОПТИМИЗАЦИЯ", "RESPONSIVE"],
     "categories": {
@@ -299,7 +276,8 @@
         "description": "Редакционный сайт для независимого финансового консалтинга с крупной типографикой, понятной структурой и прямым путём к первой консультации.",
         "imageVariant": "second",
         "image": "/images/projects/premium-consulting.webp",
-        "href": "https://premium-consulting-template.vercel.app/de"
+        "href": "https://premium-consulting-template.vercel.app/de",
+        "kind": "concept"
       },
       {
         "title": "FN Detailing",
@@ -313,7 +291,8 @@
         "description": "Концептуальный многоязычный сайт для beauty-студии с выразительной editorial/Y2K-эстетикой, крупной типографикой, светлой и тёмной темой и интерактивными скролл-анимациями.",
         "imageVariant": "second",
         "image": "/images/projects/beauty-salon-landing.webp",
-        "href": "https://beauty-salon-landing-gray.vercel.app/de"
+        "href": "https://beauty-salon-landing-gray.vercel.app/de",
+        "kind": "concept"
       }
     ]
   },
