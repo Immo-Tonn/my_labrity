@@ -52,10 +52,15 @@ export default async function Home({ params }: { params: PageParams }) {
     featuredProjects: {
       ...homeData.featuredProjects,
       items: homeData.portfolio.items.map(
-        (item: { title: string; image?: string }) => ({
+        (item: {
+          title: string;
+          image?: string;
+          kind?: 'client' | 'concept';
+        }) => ({
           title: item.title,
           category: homeData.portfolio.categories[item.title] ?? '',
           image: item.image ?? '',
+          kind: item.kind,
         }),
       ),
     },

@@ -182,6 +182,7 @@
       "MINIMAL. MODERN. EFFECTIVE."
     ],
     "projectLabel": "Website Project",
+    "conceptLabel": "Concept project",
     "projectButton": "View Project",
     "projectTags": ["SEO READY", "AI OPTIMIZED", "RESPONSIVE"],
     "categories": {
@@ -298,7 +299,8 @@
         "description": "Editorial website for an independent financial advisory with bold typography, a clear structure and a direct path to the first consultation.",
         "imageVariant": "second",
         "image": "/images/projects/premium-consulting.webp",
-        "href": "https://premium-consulting-template.vercel.app/de"
+        "href": "https://premium-consulting-template.vercel.app/de",
+        "kind": "concept"
       },
       {
         "title": "FN Detailing",
@@ -312,7 +314,8 @@
         "description": "Concept multilingual website for a beauty studio with an expressive editorial/Y2K aesthetic, large-scale typography, a light and dark theme, and interactive scroll animations.",
         "imageVariant": "second",
         "image": "/images/projects/beauty-salon-landing.webp",
-        "href": "https://beauty-salon-landing-gray.vercel.app/de"
+        "href": "https://beauty-salon-landing-gray.vercel.app/de",
+        "kind": "concept"
       }
     ]
   },

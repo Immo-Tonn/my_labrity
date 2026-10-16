@@ -22,12 +22,14 @@ type ProjectItem = {
   description: string;
   imageVariant: 'first' | 'second';
   href: string;
+  kind?: 'client' | 'concept';
 };
 
 type FeaturedProjectItem = {
   title: string;
   category: string;
   image: string;
+  kind?: 'client' | 'concept';
 };
 
 type FeaturedProjectsData = {
@@ -114,6 +116,7 @@ export type HomeData = {
     title: string;
     description: string;
     button: string;
+    conceptLabel: string;
     items: ProjectItem[];
   };
   cta: {
@@ -477,6 +480,12 @@ export default function HomePageClient({
                     <h3 className="mt-4 font-tenor text-[27px] leading-none text-black md:text-[30px]">
                       {project.title}
                     </h3>
+
+                    {project.kind === 'concept' && (
+                      <p className="mt-3 inline-block border border-neutral-400 px-2 py-1 font-montserrat text-[9px] uppercase tracking-[0.2em] text-neutral-600">
+                        {content.portfolio.conceptLabel}
+                      </p>
+                    )}
 
                     <div className="mt-5 flex items-center gap-4 font-montserrat text-[10px] uppercase tracking-[0.28em] text-neutral-500">
                       <span>{content.featuredProjects.projectButton}</span>

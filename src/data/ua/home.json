@@ -182,6 +182,7 @@
       "МІНІМАЛІЗМ. СУЧАСНІСТЬ. ЕФЕКТИВНІСТЬ."
     ],
     "projectLabel": "Вебсайт проєкт",
+    "conceptLabel": "Концептуальний проєкт",
     "projectButton": "Дивитися проєкт",
     "projectTags": ["SEO READY", "AI ОПТИМІЗОВАНО", "RESPONSIVE"],
     "categories": {
@@ -298,7 +299,8 @@
         "description": "Редакційний сайт для незалежного фінансового консалтингу з великою типографікою, зрозумілою структурою та прямим шляхом до першої консультації.",
         "imageVariant": "second",
         "image": "/images/projects/premium-consulting.webp",
-        "href": "https://premium-consulting-template.vercel.app/de"
+        "href": "https://premium-consulting-template.vercel.app/de",
+        "kind": "concept"
       },
       {
         "title": "FN Detailing",
@@ -312,7 +314,8 @@
         "description": "Концептуальний багатомовний сайт для beauty-студії з виразною editorial/Y2K-естетикою, великою типографікою, світлою і темною темою та інтерактивними скрол-анімаціями.",
         "imageVariant": "second",
         "image": "/images/projects/beauty-salon-landing.webp",
-        "href": "https://beauty-salon-landing-gray.vercel.app/de"
+        "href": "https://beauty-salon-landing-gray.vercel.app/de",
+        "kind": "concept"
       }
     ]
   },
