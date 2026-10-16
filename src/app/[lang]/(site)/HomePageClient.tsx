@@ -104,6 +104,14 @@ export type HomeData = {
     description: string;
     items: StatItem[];
   };
+  platformTeaser: {
+    kicker: string;
+    title: string;
+    description: string;
+    bullets: string[];
+    more: string;
+    interest: string;
+  };
   processPreview: {
     kicker: string;
     title: string;
@@ -786,6 +794,45 @@ export default function HomePageClient({
                     <span className="h-px w-10 bg-black/20" />
                   </div>
                 ))}
+              </div>
+            </div>
+          </section>
+
+          {/* PLATFORM TEASER */}
+          <section className="border-t border-[#e7e2d9] py-[70px] md:py-[90px] xl:py-[110px]">
+            <div className="grid gap-10 border border-[#e7e2d9] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[1fr_1fr] xl:items-center xl:p-14">
+              <div>
+                <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-500">
+                  {content.platformTeaser.kicker}
+                </p>
+                <h2 className="font-tenor text-[34px] leading-[1.04] text-black md:text-[48px] xl:text-[60px]">
+                  {content.platformTeaser.title}
+                </h2>
+                <p className="mt-5 font-montserrat text-sm leading-7 text-neutral-600 md:text-base">
+                  {content.platformTeaser.description}
+                </p>
+              </div>
+
+              <div>
+                <ul className="space-y-3 border-l border-black pl-5 font-montserrat text-[15px] leading-7 text-black">
+                  {content.platformTeaser.bullets.map(item => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+                <div className="mt-8 flex flex-wrap items-center gap-4">
+                  <LocalizedLink
+                    href="/web-apps"
+                    className="inline-flex min-h-[56px] items-center justify-center border border-black bg-black px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-[1px]"
+                  >
+                    {content.platformTeaser.more}
+                  </LocalizedLink>
+                  <LocalizedLink
+                    href="/contact"
+                    className="inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-black/70 underline underline-offset-4 transition duration-300 hover:text-black"
+                  >
+                    {content.platformTeaser.interest}
+                  </LocalizedLink>
+                </div>
               </div>
             </div>
           </section>

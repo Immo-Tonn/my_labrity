@@ -329,5 +329,17 @@
         "title": "Launch"
       }
     ]
+  },
+  "platformTeaser": {
+    "kicker": "In Entwicklung",
+    "title": "Terminbuchung und Verwaltung für Ihren Betrieb.",
+    "description": "Kunden buchen online, Ihr Team arbeitet in einem Kalender, Aufträge und Rechnungen laufen an einem Ort. Wir entwickeln die Plattform selbst. Melden Sie sich, um zuerst informiert zu werden.",
+    "bullets": [
+      "Online-Terminbuchung rund um die Uhr",
+      "Kalender ohne Doppelbuchungen",
+      "Kunden, Aufträge und Rechnungen an einem Ort"
+    ],
+    "more": "Mehr erfahren",
+    "interest": "Interesse anmelden"
   }
 }

@@ -302,5 +302,17 @@
     "description": "We create websites that look premium, build trust and position your business clearly online.",
     "primaryButton": "Start Project",
     "secondaryButton": "Custom Offer"
+  },
+  "platformTeaser": {
+    "kicker": "In development",
+    "title": "Booking and management for your business.",
+    "description": "Customers book online, your team works in one calendar, jobs and invoices run in one place. We are building the platform ourselves. Register to be informed first.",
+    "bullets": [
+      "Online booking around the clock",
+      "A calendar without double bookings",
+      "Customers, jobs and invoices in one place"
+    ],
+    "more": "Learn more",
+    "interest": "Register your interest"
   }
 }
