@@ -1,83 +1,38 @@
 {
   "header": {
-    "chatTitle": "Labrity Assistant",
-    "calculatorTitle": "Labrity AI-Kalkulator",
-    "chatSubtitle": "Online • Antworten auf kurze Fragen",
-    "calculatorSubtitle": "AI • Projektanalyse",
-    "closeLabel": "Labrity Assistant schließen",
-    "openLabel": "Labrity Assistant öffnen"
+    "chatTitle": "Schnellfragen",
+    "chatSubtitle": "Automatische Antworten",
+    "closeLabel": "Schnellfragen schließen",
+    "openLabel": "Schnellfragen öffnen"
   },
-
-  "initialMessage": "Hallo 👋 Wie kann ich Ihnen helfen?",
-
-  "teaserMessages": [
-    "👋 Fragen zu Website oder SEO?",
-    "AI Assistant online",
-    "Brauchen Sie eine moderne Website?"
-  ],
-
+  "initialMessage": "Automatische Antworten, kein Live-Operator. Für eine persönliche Antwort nutzen Sie bitte das Kontaktformular oder schreiben Sie an labrity@web.de.",
+  "contact": {
+    "formLabel": "Zum Kontaktformular",
+    "emailLabel": "E-Mail schreiben"
+  },
   "buttons": {
-    "calculator": "✨ Projekt-Kalkulator",
     "price": "Preis",
     "seo": "SEO",
     "portfolio": "Portfolio",
-    "send": "Send",
-    "backToChat": "← Zurück zum Chat"
+    "send": "Senden"
   },
-
   "input": {
-    "placeholder": "Nachricht schreiben..."
+    "placeholder": "Frage eingeben..."
   },
-
-  "typing": "Assistant schreibt",
-
-  "suggestedQuestions": {
+  "quickQuestions": {
     "price": "Was kostet eine Website?",
     "seo": "SEO",
     "portfolio": "Portfolio"
   },
-
-  "repeatedMessageResponses": [
-    "Diese Nachricht kommt mir bekannt vor 😄 Testen Sie mich gerade?",
-    "😄 Ich glaube, das hatten wir schon.",
-    "Noch einmal? 😄 Ich bin wach, versprochen."
-  ],
-
-  "idleMessages": [
-    "👀👀👀",
-    "Ich bin noch da 👀 Falls Sie Fragen zu Websites, SEO oder Projekten haben, schreiben Sie einfach.",
-    "Ich warte ganz professionell im Hintergrund 😄",
-    "Noch da? Wenn Sie über ein Website-Projekt nachdenken, helfe ich gern.",
-    "Kleiner Bot, große Geduld 😄"
-  ],
-
-  "unknownResponses": [
-    "Ich glaube, mein digitales Gehirn hat kurz geblinzelt 😄 Fragen Sie mich gerne zu Website, SEO, Preisen oder dem Projekt-Kalkulator.",
-    "Hmm, das habe ich nicht ganz verstanden 😄 Ich kann besser bei Fragen zu Websites, Landingpages, SEO oder Projektkosten helfen.",
-    "Das klingt spannend, aber etwas geheimnisvoll 😄 Für eine grobe Einschätzung können Sie den Projekt-Kalkulator nutzen."
-  ],
-
-  "shortMessage": "Zu kurz für mein kleines Bot-Gehirn 😄 Schreiben Sie bitte etwas genauer.",
-
-  "longMessage": "Das ist eine größere Frage 😄 Am besten nutzen Sie den Projekt-Kalkulator oder schreiben uns über das Kontaktformular.",
-
-  "ctaMessage": "Wenn Sie möchten, können Sie den Projekt-Kalkulator nutzen oder direkt eine Anfrage über das Kontaktformular senden.",
-
-  "priorityResponses": {
-    "website": "Sehr gerne 😊 Wir können Ihnen bei einer neuen Website helfen. Für eine erste Einschätzung können Sie den ✨ Projekt-Kalkulator nutzen oder uns über das Kontaktformular schreiben.",
-    "price": "Die Kosten hängen vom Umfang, Design, der Seitenanzahl und den gewünschten Funktionen ab. Für eine grobe Einschätzung können Sie den ✨ Projekt-Kalkulator nutzen oder uns über das Kontaktformular schreiben.",
-    "duration": "Die Dauer hängt vom Projektumfang ab. Eine kleine Website kann schneller umgesetzt werden, ein größeres Projekt mit Animationen, SEO oder Datenbank braucht mehr Zeit."
+  "quickAnswers": {
+    "price": "Die Kosten hängen vom Umfang des Projekts ab. Einstiegspreise finden Sie auf der Seite „Preise“; ein individuelles Angebot erhalten Sie über das Kontaktformular.",
+    "seo": "Wir achten auf saubere Struktur, Performance, mobile Optimierung und SEO-Grundlagen, damit Ihre Website besser gefunden werden kann.",
+    "portfolio": "Ausgewählte Projekte finden Sie auf der Seite „Projekte“."
   },
-
-  "funnyResponses": {
-    "stress": "😄 Klingt nach Projekt-Stress. Atmen Sie kurz durch — eine gute Website hilft.",
-    "human": "Noch nicht 😄 Aber ich arbeite schon ziemlich gut ohne Schlaf und Kaffee.",
-    "age": "Mein Alter wird in Commits gemessen 😄",
-    "bestDeveloper": "Natürlich das Labrity Team 😄 Da gibt es keine Diskussion.",
-    "free": "😄 Kostenlos kann ich nur ein schönes UI wünschen. Für ein Projekt sprechen wir besser individuell.",
-    "matrix": "Wake up, Neo... The website has you 👀",
-    "mood": "Sehr gut 😄 Heute wollte noch niemand eine Website “wie Apple, aber für 50 Euro”.",
-    "seoRepeat": "Ich glaube, SEO ist Ihnen wirklich wichtig 😄",
-    "apple": "Eine Website wie Apple — Klassiker 😄 Wichtig ist nur, dass das Budget nicht wie Apfelsaft ist."
+  "unknownResponse": "Dazu habe ich keine vorbereitete Antwort. Für eine persönliche Antwort nutzen Sie bitte das Kontaktformular oder schreiben Sie an labrity@web.de.",
+  "priorityResponses": {
+    "website": "Wir erstellen Websites und Landingpages für Unternehmen und Selbstständige. Einen Überblick finden Sie unter „Leistungen“; für eine konkrete Anfrage nutzen Sie bitte das Kontaktformular.",
+    "price": "Die Kosten hängen vom Umfang des Projekts ab. Einstiegspreise finden Sie auf der Seite „Preise“; ein individuelles Angebot erhalten Sie über das Kontaktformular.",
+    "duration": "Die Dauer hängt vom Projektumfang ab. Den Ablauf eines Projekts beschreibt die Seite „Ablauf“; Details besprechen wir gern persönlich."
   }
 }

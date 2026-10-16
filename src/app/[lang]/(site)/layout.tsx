@@ -11,7 +11,6 @@ import { classnames } from '@/utils/classnames';
 import { Footer } from '@/layout/Footer';
 import { Header } from '@/layout/Header';
 import FakeAiChat from '@/components/common/FakeAiChat';
-import LiveActivity from '@/components/common/LiveActivity';
 import { SITE_URL } from '@/utils/siteUrl';
 import { getData } from '@/utils/getData';
 import { buildOpenGraph } from '@/utils/openGraph';
@@ -173,8 +172,6 @@ export default async function RootLayout({
             <div className="flex-grow">{children}</div>
 
             <Footer />
-
-            <LiveActivity />
 
             <FakeAiChat />
           </QuizProvider>
