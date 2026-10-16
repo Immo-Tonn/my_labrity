@@ -3,7 +3,9 @@
     "chatTitle": "Schnellfragen",
     "chatSubtitle": "Automatische Antworten",
     "closeLabel": "Schnellfragen schließen",
-    "openLabel": "Schnellfragen öffnen"
+    "openLabel": "Schnellfragen öffnen",
+    "calculatorTitle": "Projektrechner",
+    "calculatorSubtitle": "Unverbindliche Orientierung, kein Festpreisangebot."
   },
   "initialMessage": "Automatische Antworten, kein Live-Operator. Für eine persönliche Antwort nutzen Sie bitte das Kontaktformular oder schreiben Sie an labrity@web.de.",
   "contact": {
@@ -14,7 +16,9 @@
     "price": "Preis",
     "seo": "SEO",
     "portfolio": "Portfolio",
-    "send": "Senden"
+    "send": "Senden",
+    "calculator": "Projektrechner",
+    "backToChat": "Zurück zum Chat"
   },
   "input": {
     "placeholder": "Frage eingeben..."

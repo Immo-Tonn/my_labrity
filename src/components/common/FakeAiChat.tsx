@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
+import ProjectCalculator from '@/components/common/ProjectCalculator';
 import { chatbotResponses } from '@/data/chatbotResponses';
 import { getData } from '@/utils/getData';
 import { useLanguage } from '@/utils/LanguageContext';
@@ -25,13 +26,15 @@ type AssistantData = {
     chatSubtitle: string;
     closeLabel: string;
     openLabel: string;
+    calculatorTitle: string;
+    calculatorSubtitle: string;
   };
   initialMessage: string;
   contact: {
     formLabel: string;
     emailLabel: string;
   };
-  buttons: Record<QuickKey | 'send', string>;
+  buttons: Record<QuickKey | 'send' | 'calculator' | 'backToChat', string>;
   input: {
     placeholder: string;
   };
@@ -44,6 +47,8 @@ type AssistantData = {
     duration: string;
   };
 };
+
+type ActiveMode = 'chat' | 'calculator';
 
 const CONTACT_EMAIL = 'labrity@web.de';
 
@@ -113,6 +118,7 @@ export default function FakeAiChat() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
+  const [activeMode, setActiveMode] = useState<ActiveMode>('chat');
 
   const panelRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -124,6 +130,7 @@ export default function FakeAiChat() {
     let cancelled = false;
 
     setInput('');
+    setActiveMode('chat');
     setMessages([]);
     setContent(null);
 
@@ -146,7 +153,7 @@ export default function FakeAiChat() {
   useEffect(() => {
     if (!isOpen) return;
 
-    inputRef.current?.focus();
+    if (activeMode === 'chat') inputRef.current?.focus();
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -157,7 +164,7 @@ export default function FakeAiChat() {
     document.addEventListener('keydown', handleKeyDown);
 
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen]);
+  }, [isOpen, activeMode]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -216,6 +223,8 @@ export default function FakeAiChat() {
     setIsOpen(false);
   };
 
+  const isCalculator = activeMode === 'calculator';
+
   const quickKeys: QuickKey[] = ['price', 'seo', 'portfolio'];
 
   return (
@@ -254,9 +263,15 @@ export default function FakeAiChat() {
         >
           <div className="flex items-start justify-between border-b border-neutral-200 bg-black px-5 py-4 text-white">
             <div>
-              <p className="font-semibold">{content.header.chatTitle}</p>
+              <p className="font-semibold">
+                {isCalculator
+                  ? content.header.calculatorTitle
+                  : content.header.chatTitle}
+              </p>
               <p className="text-sm text-white/70">
-                {content.header.chatSubtitle}
+                {isCalculator
+                  ? content.header.calculatorSubtitle
+                  : content.header.chatSubtitle}
               </p>
             </div>
 
@@ -270,83 +285,106 @@ export default function FakeAiChat() {
             </button>
           </div>
 
-          <div
-            role="log"
-            aria-live="polite"
-            className="flex flex-1 flex-col overflow-y-auto px-4 py-4"
-          >
-            <div className="flex flex-col gap-3">
-              {messages.map((message, index) => (
-                <div
-                  key={`${message.sender}-${index}`}
-                  className={`max-w-[85%] whitespace-pre-line break-words rounded-2xl px-4 py-3 text-sm leading-6 ${
-                    message.sender === 'user'
-                      ? 'ml-auto bg-black text-white'
-                      : 'bg-neutral-100 text-black'
-                  }`}
-                >
-                  {message.text}
-                </div>
-              ))}
-
-              <div ref={messagesEndRef} />
-            </div>
-          </div>
-
-          <div className="border-t border-neutral-200 p-3">
-            <div className="mb-3 flex flex-wrap gap-2">
-              <Link
-                href={withLocale('/contact', lang)}
-                onClick={closePanel}
-                className="rounded-full border border-black bg-black px-3 py-1 text-xs text-white transition hover:opacity-90"
-              >
-                {content.contact.formLabel}
-              </Link>
-
-              <a
-                href={`mailto:${CONTACT_EMAIL}`}
-                className="rounded-full border border-black px-3 py-1 text-xs text-black transition hover:bg-black hover:text-white"
-              >
-                {content.contact.emailLabel}
-              </a>
-
-              {quickKeys.map(key => (
-                <button
-                  key={key}
-                  type="button"
-                  onClick={() => handleQuickQuestion(key)}
-                  className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-600 transition hover:border-black hover:text-black"
-                >
-                  {content.buttons[key]}
-                </button>
-              ))}
-            </div>
-
-            <div className="flex gap-2">
-              <input
-                ref={inputRef}
-                type="text"
-                value={input}
-                onChange={e => setInput(e.target.value)}
-                onKeyDown={e => {
-                  if (e.key === 'Enter') {
-                    handleSend();
-                  }
-                }}
-                aria-label={content.input.placeholder}
-                placeholder={content.input.placeholder}
-                className="min-w-0 flex-1 rounded-xl border border-neutral-300 px-4 py-3 text-base outline-none transition focus:border-black md:text-sm"
-              />
-
+          {isCalculator ? (
+            <div className="flex flex-1 flex-col overflow-y-auto px-4 py-4">
               <button
                 type="button"
-                onClick={handleSend}
-                className="shrink-0 rounded-xl bg-black px-4 text-sm font-medium text-white transition hover:opacity-90"
+                onClick={() => setActiveMode('chat')}
+                className="mb-3 self-start rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-600 transition hover:border-black hover:text-black"
               >
-                {content.buttons.send}
+                ← {content.buttons.backToChat}
               </button>
+              <ProjectCalculator />
             </div>
-          </div>
+          ) : (
+            <>
+              <div
+                role="log"
+                aria-live="polite"
+                className="flex flex-1 flex-col overflow-y-auto px-4 py-4"
+              >
+                <div className="flex flex-col gap-3">
+                  {messages.map((message, index) => (
+                    <div
+                      key={`${message.sender}-${index}`}
+                      className={`max-w-[85%] whitespace-pre-line break-words rounded-2xl px-4 py-3 text-sm leading-6 ${
+                        message.sender === 'user'
+                          ? 'ml-auto bg-black text-white'
+                          : 'bg-neutral-100 text-black'
+                      }`}
+                    >
+                      {message.text}
+                    </div>
+                  ))}
+
+                  <div ref={messagesEndRef} />
+                </div>
+              </div>
+
+              <div className="border-t border-neutral-200 p-3">
+                <div className="mb-3 flex flex-wrap gap-2">
+                  <Link
+                    href={withLocale('/contact', lang)}
+                    onClick={closePanel}
+                    className="rounded-full border border-black bg-black px-3 py-1 text-xs text-white transition hover:opacity-90"
+                  >
+                    {content.contact.formLabel}
+                  </Link>
+
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className="rounded-full border border-black px-3 py-1 text-xs text-black transition hover:bg-black hover:text-white"
+                  >
+                    {content.contact.emailLabel}
+                  </a>
+
+                  <button
+                    type="button"
+                    onClick={() => setActiveMode('calculator')}
+                    className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-600 transition hover:border-black hover:text-black"
+                  >
+                    {content.buttons.calculator}
+                  </button>
+
+                  {quickKeys.map(key => (
+                    <button
+                      key={key}
+                      type="button"
+                      onClick={() => handleQuickQuestion(key)}
+                      className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-600 transition hover:border-black hover:text-black"
+                    >
+                      {content.buttons[key]}
+                    </button>
+                  ))}
+                </div>
+
+                <div className="flex gap-2">
+                  <input
+                    ref={inputRef}
+                    type="text"
+                    value={input}
+                    onChange={e => setInput(e.target.value)}
+                    onKeyDown={e => {
+                      if (e.key === 'Enter') {
+                        handleSend();
+                      }
+                    }}
+                    aria-label={content.input.placeholder}
+                    placeholder={content.input.placeholder}
+                    className="min-w-0 flex-1 rounded-xl border border-neutral-300 px-4 py-3 text-base outline-none transition focus:border-black md:text-sm"
+                  />
+
+                  <button
+                    type="button"
+                    onClick={handleSend}
+                    className="shrink-0 rounded-xl bg-black px-4 text-sm font-medium text-white transition hover:opacity-90"
+                  >
+                    {content.buttons.send}
+                  </button>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       )}
     </>

@@ -3,7 +3,9 @@
     "chatTitle": "Quick questions",
     "chatSubtitle": "Automatic answers",
     "closeLabel": "Close quick questions",
-    "openLabel": "Open quick questions"
+    "openLabel": "Open quick questions",
+    "calculatorTitle": "Project calculator",
+    "calculatorSubtitle": "Non-binding orientation, not a fixed-price offer."
   },
   "initialMessage": "Automatic answers, not a live operator. For a personal reply, please use the contact form or write to labrity@web.de.",
   "contact": {
@@ -14,7 +16,9 @@
     "price": "Price",
     "seo": "SEO",
     "portfolio": "Portfolio",
-    "send": "Send"
+    "send": "Send",
+    "calculator": "Project calculator",
+    "backToChat": "Back to chat"
   },
   "input": {
     "placeholder": "Type your question..."
