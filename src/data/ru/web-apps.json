@@ -186,6 +186,11 @@
     "title": "Больше в блоге.",
     "items": [
       {
+        "label": "Как программа для записи и управления помогает малому бизнесу.",
+        "linkLabel": "Читать статью",
+        "href": "/blog/terminbuchung-verwaltung-software-kleine-betriebe"
+      },
+      {
         "label": "Сколько реально стоит профессиональный сайт?",
         "linkLabel": "Читать статью",
         "href": "/blog/website-erstellen-lassen-kosten"

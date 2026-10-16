@@ -186,6 +186,11 @@
     "title": "Mehr dazu im Blog.",
     "items": [
       {
+        "label": "Wie Buchungs- und Verwaltungssoftware kleinen Betrieben hilft.",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/terminbuchung-verwaltung-software-kleine-betriebe"
+      },
+      {
         "label": "Was kostet eine professionelle Website wirklich?",
         "linkLabel": "Artikel lesen",
         "href": "/blog/website-erstellen-lassen-kosten"

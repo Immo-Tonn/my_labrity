@@ -1,0 +1,176 @@
+{
+  "slug": "terminbuchung-verwaltung-software-kleine-betriebe",
+  "meta": {
+    "title": "Booking & Management Software for Small Businesses | Labrity",
+    "description": "How online booking and management software saves small businesses time, what it should offer and how to recognise a suitable solution."
+  },
+  "breadcrumbLabel": "Software for small businesses",
+  "publishedDate": "2026-10-16",
+  "updatedDate": "2026-10-16",
+  "hero": {
+    "kicker": "Knowledge",
+    "title": "How booking and management software helps small businesses.",
+    "intro": "Appointments by phone, jobs on paper slips, customers in a spreadsheet: that is how everyday work looks in many small businesses. This article shows what modern software can take over, what to look for when choosing, and where we ourselves come in."
+  },
+  "keyTakeaway": {
+    "title": "In short",
+    "text": "A good solution brings booking, calendar, customer data, jobs and invoices into one place. Customers book themselves, the team sees the same information, and double bookings are caught before they happen. What matters is that the software fits your workflow, not the other way round."
+  },
+  "sections": [
+    {
+      "heading": "Where small businesses lose time every day",
+      "level": "h2",
+      "paragraphs": [
+        "Many businesses organise themselves with whatever is at hand: phone, messages, notebook, spreadsheets. That works while things are quiet. With more customers, typical problems appear: appointments are double-booked, follow-up questions cost time, and nobody has an overview of what is open.",
+        "It is especially annoying that the same information is often maintained several times: in the calendar, in the customer list, on the job slip and later again in the invoice."
+      ]
+    },
+    {
+      "heading": "What good booking and management software does",
+      "level": "h2",
+      "paragraphs": [
+        "A suitable solution takes routine work off your hands. The most important building blocks:"
+      ]
+    },
+    {
+      "heading": "Online appointment booking",
+      "level": "h3",
+      "paragraphs": [
+        "Customers choose the service and a free time themselves, even outside opening hours. Good systems take working hours, holidays and closures, buffer times and the availability of individual employees into account, so only truly free times are offered."
+      ]
+    },
+    {
+      "heading": "A calendar that prevents double bookings",
+      "level": "h3",
+      "paragraphs": [
+        "All appointments come together in one calendar. Overlaps are detected before an appointment is saved, and moving or cancelling is quick."
+      ]
+    },
+    {
+      "heading": "Customers and jobs in one place",
+      "level": "h3",
+      "paragraphs": [
+        "Contacts, appointment history, requests and jobs are linked. Whoever calls is found right away with their history instead of being searched for across different lists."
+      ]
+    },
+    {
+      "heading": "Employees, resources and permissions",
+      "level": "h3",
+      "paragraphs": [
+        "The team has its own logins. Not everyone needs to see everything: access rights and privacy can be set so that, for example, financial data is visible to management only."
+      ]
+    },
+    {
+      "heading": "Waiting list, quote and invoice",
+      "level": "h3",
+      "paragraphs": [
+        "When an appointment becomes free, a waiting list helps fill it. Requests can be carried on to quotes, jobs and invoices without retyping data."
+      ]
+    },
+    {
+      "heading": "Overview and reporting",
+      "level": "h3",
+      "paragraphs": [
+        "An overview shows what is due today and how appointments, revenue and open items develop, as a basis for decisions instead of gut feeling."
+      ]
+    },
+    {
+      "heading": "Everyday examples",
+      "level": "h2",
+      "paragraphs": [
+        "These are example scenarios, not client reports:",
+        "A hair salon lets clients book online and sees the workload per employee in the calendar. A car workshop accepts appointment requests for inspection or repair and keeps jobs and status in view. A small studio manages customers, services and appointments with separate logins for team and management."
+      ]
+    },
+    {
+      "heading": "Standard software or a custom solution?",
+      "level": "h2",
+      "paragraphs": [
+        "Standard software is quick to set up and often sufficient for typical workflows. It reaches its limits when your workflow deviates from the norm, when you pay for features you do not use, or when the connection to your website is inflexible. A custom solution fits more precisely, but needs planning and a budget. Which option makes sense depends on scope and your workflow."
+      ]
+    },
+    {
+      "heading": "Our own platform in development",
+      "level": "h2",
+      "paragraphs": [
+        "Labrity is developing such a platform itself for service businesses such as workshops, salons and studios. It is still in development and not generally available at the moment. The following building blocks are already implemented and being tested:"
+      ],
+      "checklist": [
+        "A public booking page that can also be embedded as a button in your own website",
+        "Calendar with conflict checks, buffer times and availability based on working hours, holidays and business closures",
+        "Management of customers, employees and services",
+        "Waiting list and an inbox for booking events",
+        "Flow from request through quote and job to invoice",
+        "Roles, permissions and separate visibility for sensitive data",
+        "Interface in German, English, Ukrainian and Russian"
+      ]
+    },
+    {
+      "heading": "What is still missing",
+      "level": "h3",
+      "paragraphs": [
+        "Further features such as e-mail notifications, calendar synchronisation and online payment are planned but not yet implemented. If you are interested in the solution, get in touch: we will keep you updated on progress. We give no commitment on features, dates or prices until they are settled."
+      ]
+    },
+    {
+      "heading": "What to watch for regarding data protection and hosting",
+      "level": "h2",
+      "paragraphs": [
+        "As soon as customer data is stored, GDPR matters: which data is collected, where is it stored, who has access? Ask every provider about this, including us. This article does not replace legal advice."
+      ]
+    },
+    {
+      "heading": "Questions before you decide",
+      "level": "h2",
+      "paragraphs": [
+        "These points help you choose between standard software and a custom solution:"
+      ],
+      "checklist": [
+        "Which workflows should really be made easier?",
+        "Who on the team needs which access?",
+        "Does the solution need to be integrated into your existing website?",
+        "Which data is stored and where?",
+        "Who looks after the solution after launch?"
+      ]
+    }
+  ],
+  "faq": {
+    "kicker": "Frequently asked questions",
+    "title": "What businesses often want to know.",
+    "items": [
+      {
+        "question": "Does a small business need booking software at all?",
+        "answer": "If appointments currently run by phone and notes and there are few of them, that can be enough. With several employees, many requests or double bookings, a solution is worthwhile."
+      },
+      {
+        "question": "Can online booking be integrated into my existing website?",
+        "answer": "Often yes, for example as a button or a separate area. What fits technically we clarify after looking at your website."
+      },
+      {
+        "question": "Is your platform already available?",
+        "answer": "No, it is still in development. You can register your interest and we will inform you about progress."
+      },
+      {
+        "question": "Do you also build a custom solution for my business?",
+        "answer": "Yes, as a web app by arrangement. The price depends on features and scope and is quoted individually."
+      }
+    ]
+  },
+  "relatedService": {
+    "label": "A web app for your business?",
+    "description": "Online calendar, time tracking or management: tell us about your workflow.",
+    "linkLabel": "More about web apps",
+    "href": "/web-apps"
+  },
+  "secondaryLink": {
+    "label": "All services at a glance",
+    "href": "/services"
+  },
+  "relatedArticles": [
+    "website-briefing-checkliste",
+    "website-erstellen-lassen-kosten"
+  ],
+  "images": {
+    "coverAlt": "An open laptop on a marble table overlooking the sea and mountains at sunset, accented by a red glass element."
+  }
+}

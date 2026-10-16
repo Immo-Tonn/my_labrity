@@ -186,6 +186,11 @@
     "title": "More on this in the blog.",
     "items": [
       {
+        "label": "How booking and management software helps small businesses.",
+        "linkLabel": "Read article",
+        "href": "/blog/terminbuchung-verwaltung-software-kleine-betriebe"
+      },
+      {
         "label": "What does a professional website really cost?",
         "linkLabel": "Read article",
         "href": "/blog/website-erstellen-lassen-kosten"

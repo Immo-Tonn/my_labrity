@@ -186,6 +186,11 @@
     "title": "Більше в блозі.",
     "items": [
       {
+        "label": "Як програма для запису й керування допомагає малому бізнесу.",
+        "linkLabel": "Читати статтю",
+        "href": "/blog/terminbuchung-verwaltung-software-kleine-betriebe"
+      },
+      {
         "label": "Скільки насправді коштує професійний сайт?",
         "linkLabel": "Читати статтю",
         "href": "/blog/website-erstellen-lassen-kosten"
