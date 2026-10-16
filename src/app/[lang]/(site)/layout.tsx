@@ -136,7 +136,6 @@ export default async function RootLayout({
 
   const lang: Language = params.lang;
   const meta = await getData('meta', lang);
-  const common = await getData('common', lang);
   const structuredData = buildStructuredData(lang, meta.description);
 
   // Navigation + footer copy are loaded on the server so the first HTML
