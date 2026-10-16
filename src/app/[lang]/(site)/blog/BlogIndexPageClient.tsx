@@ -74,7 +74,7 @@ export default function BlogIndexPageClient({
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-[1180px]"
         >
-          <p className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/45 md:text-[13px]">
+          <p className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/60 md:text-[13px]">
             {content.hero.kicker}
           </p>
           <h1 className="font-tenor text-[42px] leading-[1] tracking-[-0.04em] text-black md:text-[72px] xl:text-[96px]">

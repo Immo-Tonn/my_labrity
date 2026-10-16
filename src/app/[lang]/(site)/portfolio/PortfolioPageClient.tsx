@@ -9,6 +9,7 @@ type ProjectItem = {
   imageVariant: 'first' | 'second';
   href: string;
   image?: string;
+  kind?: 'client' | 'concept';
 };
 
 type SeoBlockItem = {
@@ -33,6 +34,7 @@ export type PortfolioData = {
   seoBlock: SeoBlockItem[];
   marquee: string[];
   projectLabel: string;
+  conceptLabel: string;
   projectButton: string;
   projectTags: string[];
   categories: Record<string, string>;
@@ -66,7 +68,7 @@ export default function PortfolioPageClient({
             className="grid gap-12 xl:grid-cols-[1.1fr_0.7fr] xl:items-end"
           >
             <div>
-              <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.34em] text-neutral-500">
+              <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.34em] text-neutral-500">
                 {content.kicker}
               </p>
 
@@ -80,7 +82,7 @@ export default function PortfolioPageClient({
                 {content.description}
               </p>
 
-              <div className="mt-8 flex flex-wrap items-center gap-4 font-montserrat text-[10px] uppercase tracking-[0.28em] text-neutral-500">
+              <div className="mt-8 flex flex-wrap items-center gap-4 font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-500">
                 {content.topTags.map((tag, tagIndex) => (
                   <div key={tag} className="flex items-center gap-4">
                     {tagIndex > 0 && (
@@ -98,7 +100,7 @@ export default function PortfolioPageClient({
             <div className="grid grid-cols-1 gap-y-12 xl:grid-cols-3 xl:gap-x-16 xl:gap-y-0">
               {content.seoBlock.map(item => (
                 <div key={item.kicker} className="min-w-0">
-                  <p className="break-words font-montserrat text-[10px] uppercase tracking-[0.32em] text-neutral-500">
+                  <p className="break-words font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-500">
                     {item.kicker}
                   </p>
 
@@ -123,7 +125,7 @@ export default function PortfolioPageClient({
                   {content.marquee.map(text => (
                     <span
                       key={text}
-                      className="whitespace-nowrap font-montserrat text-[11px] uppercase tracking-[0.34em] text-neutral-500 md:text-[12px]"
+                      className="whitespace-nowrap font-montserrat text-xs uppercase tracking-[0.34em] text-neutral-500"
                     >
                       {text}
                     </span>
@@ -173,7 +175,7 @@ export default function PortfolioPageClient({
                           />
                         ) : (
                           <div className="absolute inset-0 flex items-center justify-center">
-                            <span className="font-montserrat text-[10px] uppercase tracking-[0.32em] text-neutral-500">
+                            <span className="font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-500">
                               Coming Soon
                             </span>
                           </div>
@@ -194,15 +196,21 @@ export default function PortfolioPageClient({
                           }`}
                         >
                           <div className="min-w-0">
-                            <p className="break-words font-montserrat text-[10px] uppercase tracking-[0.34em] text-neutral-500">
+                            <p className="break-words font-montserrat text-xs uppercase tracking-[0.34em] text-neutral-500">
                               {String(index + 1).padStart(2, '0')} /{' '}
                               {content.categories[item.title] ||
                                 content.projectLabel}
                             </p>
 
-                            <p className="mt-3 break-words font-montserrat text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                            <p className="mt-3 break-words font-montserrat text-xs uppercase tracking-[0.3em] text-neutral-500">
                               {content.projectLabel}
                             </p>
+
+                            {item.kind === 'concept' && (
+                              <p className="mt-3 inline-block border border-neutral-400 px-2 py-1 font-montserrat text-[10px] uppercase tracking-[0.2em] text-neutral-600">
+                                {content.conceptLabel}
+                              </p>
+                            )}
                           </div>
 
                           <a
@@ -255,7 +263,7 @@ export default function PortfolioPageClient({
                       </div>
 
                       <div className="mt-10 min-w-0">
-                        <div className="mb-8 flex flex-wrap items-center gap-4 font-montserrat text-[10px] uppercase tracking-[0.28em] text-neutral-500">
+                        <div className="mb-8 flex flex-wrap items-center gap-4 font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-500">
                           {content.projectTags.map((tag, tagIndex) => (
                             <div key={tag} className="flex items-center gap-4">
                               {tagIndex > 0 && (
@@ -270,7 +278,7 @@ export default function PortfolioPageClient({
                           href={item.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-4 font-montserrat text-[11px] uppercase tracking-[0.34em] text-neutral-600 transition duration-300 hover:text-black"
+                          className="inline-flex items-center gap-4 font-montserrat text-xs uppercase tracking-[0.34em] text-neutral-600 transition duration-300 hover:text-black"
                         >
                           {content.projectButton}
                           <span className="h-px w-12 bg-neutral-400 transition duration-300 group-hover:w-20 group-hover:bg-black" />
@@ -292,7 +300,7 @@ export default function PortfolioPageClient({
           <div className="relative mx-auto max-w-[1650px] px-5 md:px-8">
             <div className="grid gap-16 xl:grid-cols-[1fr_0.8fr] xl:items-end">
               <div>
-                <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.34em] text-white/45">
+                <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.34em] text-white/60">
                   {content.blackSection.kicker}
                 </p>
 
@@ -306,7 +314,7 @@ export default function PortfolioPageClient({
                   {content.blackSection.description}
                 </p>
 
-                <div className="mt-10 flex flex-wrap items-center gap-4 font-montserrat text-[10px] uppercase tracking-[0.28em] text-white/55">
+                <div className="mt-10 flex flex-wrap items-center gap-4 font-montserrat text-xs uppercase tracking-[0.28em] text-white/60">
                   {content.blackSection.tags.map((tag, tagIndex) => (
                     <div key={tag} className="flex items-center gap-4">
                       {tagIndex > 0 && (
@@ -320,7 +328,7 @@ export default function PortfolioPageClient({
                 <div className="mt-12 flex items-center gap-4">
                   <div className="h-2 w-2 rounded-full bg-white" />
 
-                  <span className="font-montserrat text-[11px] uppercase tracking-[0.34em] text-white/55">
+                  <span className="font-montserrat text-xs uppercase tracking-[0.34em] text-white/60">
                     {content.blackSection.status}
                   </span>
                 </div>

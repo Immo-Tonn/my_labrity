@@ -121,3 +121,84 @@
     transform: translateX(calc(100vw + 200px));
   }
 }
+
+/* ACCESSIBILITY */
+
+/* Visible keyboard focus for every interactive element. The dark ring plus a
+   light halo stays visible on both the off-white and the black sections. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[role='button']:focus-visible,
+[tabindex]:not([tabindex='-1']):focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.85);
+}
+
+/* Skip link: off-screen until it receives keyboard focus. */
+.skip-link {
+  position: fixed;
+  left: 16px;
+  top: -100px;
+  z-index: 10000;
+  padding: 12px 20px;
+  background: #111111;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+#main-content:focus {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:root {
+    scroll-behavior: auto !important;
+  }
+
+  .marquee-track,
+  .shimmer {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Long Russian/Ukrainian words ("предпринимателей", "структурой") are wider
+   than a 375px column at the base heading sizes and caused horizontal
+   scrolling. Cap heading sizes on narrow screens for those two languages. */
+@media (max-width: 479.98px) {
+  html:lang(ru) h1,
+  html:lang(uk) h1 {
+    font-size: clamp(30px, 9.6vw, 38px);
+  }
+
+  html:lang(ru) h2,
+  html:lang(uk) h2 {
+    font-size: clamp(28px, 8.4vw, 34px);
+  }
+
+  /* Last-resort safety net: never let a single long word widen the page. */
+  html:lang(ru) .font-tenor,
+  html:lang(uk) .font-tenor {
+    overflow-wrap: anywhere;
+  }
+}

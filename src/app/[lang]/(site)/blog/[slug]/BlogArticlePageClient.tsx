@@ -92,7 +92,7 @@ export default function BlogArticlePageClient({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/45 md:text-[13px]">
+          <p className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/60 md:text-[13px]">
             {content.hero.kicker}
           </p>
           <h1 className="max-w-[900px] font-tenor text-[36px] leading-[1.05] tracking-[-0.03em] text-black md:text-[58px] xl:text-[68px]">
@@ -142,7 +142,7 @@ export default function BlogArticlePageClient({
       {content.keyTakeaway && (
         <section className="px-5 md:px-8">
           <div className="mx-auto max-w-[1300px] border-l-2 border-[#D5292F] bg-white/50 px-6 py-6 md:px-8 md:py-7">
-            <p className="mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.24em] text-black/50">
+            <p className="mb-2 font-montserrat text-xs font-semibold uppercase tracking-[0.24em] text-black/60">
               {content.keyTakeaway.title}
             </p>
             <p className="max-w-[820px] font-montserrat text-[15px] leading-7 text-black/80 md:text-[16px]">
@@ -201,7 +201,7 @@ export default function BlogArticlePageClient({
               {/* SOURCES */}
               {content.sources && content.sources.length > 0 && (
                 <div className="border-t border-[#e7e2d9] pt-8">
-                  <p className="mb-3 font-montserrat text-[11px] font-semibold uppercase tracking-[0.24em] text-black/40">
+                  <p className="mb-3 font-montserrat text-xs font-semibold uppercase tracking-[0.24em] text-black/60">
                     {content.ui.sourcesLabel}
                   </p>
                   <ul className="space-y-2">
@@ -230,7 +230,7 @@ export default function BlogArticlePageClient({
         <section className="border-t border-[#e7e2d9] py-16 md:py-24">
           <div className="mx-auto max-w-[1300px] px-5 md:px-8">
             <div className="mx-auto max-w-[780px]">
-              <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+              <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
                 {content.faq.kicker}
               </p>
               <h2 className="font-tenor text-[30px] leading-[1.05] tracking-[-0.02em] text-black md:text-[42px]">
@@ -240,7 +240,7 @@ export default function BlogArticlePageClient({
               <div className="mt-10 divide-y divide-[#e7e2d9] border-y border-[#e7e2d9]">
                 {content.faq.items.map(item => (
                   <details key={item.question} className="group py-6">
-                    <summary className="flex cursor-pointer list-none items-start justify-between gap-6">
+                    <summary className="flex min-h-[44px] cursor-pointer list-none items-start justify-between gap-6">
                       <span className="font-tenor text-[19px] leading-[1.15] tracking-[-0.01em] text-black md:text-[24px]">
                         {item.question}
                       </span>
@@ -293,7 +293,7 @@ export default function BlogArticlePageClient({
       {content.relatedArticles.length > 0 && (
         <section className="border-t border-[#e7e2d9] py-16 md:py-20">
           <div className="mx-auto max-w-[1300px] px-5 md:px-8">
-            <p className="mb-6 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+            <p className="mb-6 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
               {content.ui.moreArticlesLabel}
             </p>
             <div className="grid gap-4 md:grid-cols-2">
@@ -317,7 +317,7 @@ export default function BlogArticlePageClient({
 
             <LocalizedLink
               href="/blog"
-              className="mt-8 inline-block font-montserrat text-[12px] uppercase tracking-[0.14em] text-black/50 underline-offset-4 transition duration-300 hover:text-black hover:underline"
+              className="mt-8 inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-black/60 underline-offset-4 transition duration-300 hover:text-black hover:underline"
             >
               {content.ui.allArticlesLabel}
             </LocalizedLink>

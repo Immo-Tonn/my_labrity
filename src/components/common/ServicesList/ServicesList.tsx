@@ -65,7 +65,7 @@ export function ServicesList({ services, buttonLabel }: ServicesListProps) {
             "
           >
             <div className="flex flex-col items-start pb-8 md:pb-0 xl:w-full xl:max-w-[330px]">
-              <p className="mb-3 font-montserrat text-[11px] uppercase tracking-[0.24em] text-[#18352b]/55 md:text-xs">
+              <p className="mb-3 font-montserrat text-xs uppercase tracking-[0.24em] text-[#18352b]/75">
                 {service.location}
               </p>
 

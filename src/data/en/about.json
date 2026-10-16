@@ -1,0 +1,44 @@
+{
+  "title": "About Labrity",
+  "intro": "Labrity is a web studio based in Münster, Germany. The owner is Andreas Tonn.",
+  "sections": [
+    {
+      "title": "Where we work",
+      "text": "Labrity is based in Münster and works with businesses across North Rhine-Westphalia and throughout Germany. Consultation and implementation take place conveniently online."
+    },
+    {
+      "title": "Our approach",
+      "text": "Every website is created around the business, audience and positioning — without generic templates. Structure, design, trust, SEO and the user journey are developed as one connected system."
+    },
+    {
+      "title": "Technology and languages",
+      "text": "We work with modern technologies such as Next.js and React. This website is available in German, English, Russian and Ukrainian."
+    }
+  ],
+  "services": {
+    "title": "What we offer",
+    "items": [
+      {
+        "label": "Website Design & Build",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Web design",
+        "href": "/webdesign"
+      },
+      {
+        "label": "Web development",
+        "href": "/webentwicklung"
+      },
+      {
+        "label": "Website relaunch",
+        "href": "/website-relaunch"
+      },
+      {
+        "label": "Landing pages",
+        "href": "/landingpage-erstellen-lassen"
+      }
+    ]
+  },
+  "contactLabel": "Go to contact form"
+}

@@ -1,4 +1,5 @@
 {
+  "skipLink": "Перейти до вмісту",
   "metadataAdmin": {
     "title": "Адмін-панель — Labrity",
     "description": "Адмін-зона сайту Labrity"
@@ -57,18 +58,6 @@
   },
   "footerLabelPolicy": "Політика конфіденційності",
   "footerLabelImpressum": "Імпресум",
-  "footer": [
-    {
-      "name": "company1",
-      "path": "#",
-      "ariaLabel": "Посилання на сайт партнера"
-    },
-    {
-      "name": "company2",
-      "path": "#",
-      "ariaLabel": "Посилання на сайт партнера"
-    }
-  ],
   "blogUi": {
     "breadcrumbParent": "Блог",
     "readLabel": "Читати",

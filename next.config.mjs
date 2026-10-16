@@ -5,6 +5,12 @@ const nextConfig = {
   swcMinify: false,
   poweredByHeader: false,
 
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    // Optimized variants are cached for 30 days (default is 60 seconds).
+    minimumCacheTTL: 60 * 60 * 24 * 30,
+  },
+
   webpack: config => {
     config.module.rules.push({
       test: /\.svg$/,
@@ -37,6 +43,26 @@ const nextConfig = {
               'camera=(), microphone=(), geolocation=(), payment=(), usb=()',
           },
         ],
+      },
+      // Files in /public have no content hash in their name, so they are
+      // cached for a week (not immutable) and revalidated in the background.
+      ...['/hero.mp4', '/hero-poster.webp', '/images/:path*', '/icons/:path*', '/fonts/:path*'].map(
+        source => ({
+          source,
+          headers: [
+            {
+              key: 'Cache-Control',
+              value: 'public, max-age=604800, stale-while-revalidate=86400',
+            },
+          ],
+        }),
+      ),
+      // Keep Vercel preview/deployment hosts (*.vercel.app) out of search
+      // indexes; the production domains are not matched.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: '(.*\\.)?vercel\\.app' }],
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
       },
     ];
   },

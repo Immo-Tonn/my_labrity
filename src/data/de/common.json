@@ -1,4 +1,5 @@
 {
+  "skipLink": "Zum Inhalt springen",
   "metadataAdmin": {
     "title": "Admin-Panel — Labrity",
     "description": "Adminbereich für die Labrity Website"
@@ -57,18 +58,6 @@
   },
   "footerLabelPolicy": "Datenschutz",
   "footerLabelImpressum": "Impressum",
-  "footer": [
-    {
-      "name": "company1",
-      "path": "#",
-      "ariaLabel": "Link zur Partnerseite"
-    },
-    {
-      "name": "company2",
-      "path": "#",
-      "ariaLabel": "Link zur Partnerseite"
-    }
-  ],
   "blogUi": {
     "breadcrumbParent": "Blog",
     "readLabel": "Lesen",

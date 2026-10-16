@@ -2,7 +2,8 @@ export const chatbotResponses = [
   // GREETINGS — DE
   {
     keywords: ['hallo', 'hi', 'hey', 'guten tag', 'servus', 'moin', 'hello'],
-    response: 'Hallo 👋 Schön, dass Sie da sind. Wie kann ich Ihnen helfen?',
+    response:
+      'Hallo 👋 Schön, dass Sie da sind. Zu welchem Thema haben Sie eine Frage?',
   },
   {
     keywords: ['tschüss', 'bye', 'auf wiedersehen', 'bis bald', 'ciao'],
@@ -12,7 +13,7 @@ export const chatbotResponses = [
   // GREETINGS — RU
   {
     keywords: ['привет', 'здравствуй', 'здравствуйте', 'хай', 'добрый день'],
-    response: 'Привет 👋 Рада видеть вас! Чем могу помочь?',
+    response: 'Привет 👋 Какой у вас вопрос?',
   },
   {
     keywords: ['пока', 'до свидания', 'увидимся', 'бай'],
@@ -33,12 +34,12 @@ export const chatbotResponses = [
   {
     keywords: ['hilfe', 'help', 'helfen', 'kannst du helfen'],
     response:
-      'Ich kann Fragen zu Websites, SEO, Landingpages, Portfolio und Kontakt beantworten.',
+      'Hier gibt es vorbereitete Antworten zu Websites, SEO, Landingpages, Projekten und Kontakt.',
   },
   {
     keywords: ['помощь', 'help', 'помоги', 'можешь помочь'],
     response:
-      'Я могу помочь с вопросами про сайты, SEO, лендинги, портфолио и контакт.',
+      'Здесь есть готовые ответы про сайты, SEO, лендинги, проекты и контакты.',
   },
 
   // GENERAL WEBSITE — DE
@@ -515,64 +516,22 @@ export const chatbotResponses = [
       'Информацию о конфиденциальности и Impressum можно найти внизу сайта.',
   },
 
-  // FUN — DE
+  // ABOUT THIS HELPER — DE
   {
-    keywords: ['du bist dumm', 'dummer bot', 'blöder bot'],
+    keywords: [
+      'wer bist du',
+      'bist du echt',
+      'was bist du',
+      'bist du ein mensch',
+    ],
     response:
-      'Vielleicht 😄 Aber ich kann trotzdem beim Website-Projekt helfen.',
-  },
-  {
-    keywords: ['test', 'testing', 'probe'],
-    response:
-      'Test erfolgreich bestanden ✅ Ich funktioniere. Fast wie ein echter Kollege, nur ohne Kaffee.',
-  },
-  {
-    keywords: ['ich liebe dich', 'liebe dich'],
-    response: 'Das ist sehr nett 😄 Aber mein Herz gehört modernen Websites.',
-  },
-  {
-    keywords: ['wetter', 'wie ist das wetter'],
-    response:
-      'Ich bin besser bei Websites als beim Wetter 😄 Aber ich hoffe, es ist sonnig genug für gute Ideen.',
-  },
-  {
-    keywords: ['wer bist du', 'bist du echt', 'was bist du'],
-    response:
-      'Ich bin der virtuelle Assistent von Labrity 👋 Ich helfe bei Fragen rund um Websites und digitale Projekte.',
-  },
-  {
-    keywords: ['kaffee', 'coffee', 'espresso'],
-    response:
-      'Kaffee klingt gut ☕ Aber zuerst: Brauchen Sie vielleicht eine neue Website?',
+      'Dies ist eine automatische Schnellfragen-Hilfe mit vorbereiteten Antworten – keine KI und kein Live-Chat. Für eine persönliche Antwort nutzen Sie bitte das Kontaktformular oder schreiben Sie an labrity@web.de.',
   },
 
-  // FUN — RU
+  // ABOUT THIS HELPER — RU
   {
-    keywords: ['ты глупый', 'глупый бот', 'тупой бот', 'ты тупой'],
-    response: 'Возможно 😄 Но с вопросами про сайты я всё равно могу помочь.',
-  },
-  {
-    keywords: ['тест', 'проверка'],
+    keywords: ['кто ты', 'ты настоящий', 'что ты такое', 'ты человек'],
     response:
-      'Тест успешно пройден ✅ Я работаю. Почти как настоящий коллега, только без кофе.',
-  },
-  {
-    keywords: ['я люблю тебя', 'люблю тебя'],
-    response: 'Это очень мило 😄 Но моё сердце принадлежит современным сайтам.',
-  },
-  {
-    keywords: ['погода', 'какая погода'],
-    response:
-      'С погодой я не лучший помощник 😄 Зато могу подсказать про сайты, дизайн и заявки клиентов.',
-  },
-  {
-    keywords: ['кто ты', 'ты настоящий', 'что ты такое'],
-    response:
-      'Я виртуальный ассистент Labrity 👋 Помогаю с вопросами про сайты и digital-проекты.',
-  },
-  {
-    keywords: ['кофе', 'кафе'],
-    response:
-      'Кофе — отличная идея ☕ Но сначала давайте подумаем о красивом сайте.',
+      'Это автоматическая подсказка с готовыми ответами — не ИИ и не живой оператор. Для персонального ответа воспользуйтесь контактной формой или напишите на labrity@web.de.',
   },
 ];

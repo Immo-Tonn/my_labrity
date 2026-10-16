@@ -1,35 +1,12 @@
 {
-  "seo": {
-    "title": "Labrity Web Studio – Professional Websites for Businesses in Germany",
-    "description": "Labrity Web Studio creates modern, responsive and SEO-optimized websites for companies, freelancers, service providers and brands in Germany.",
-    "keywords": [
-      "Labrity",
-      "Labrity Web Studio",
-      "web design Germany",
-      "professional website",
-      "website for businesses",
-      "website for freelancers",
-      "modern website",
-      "SEO optimized website",
-      "responsive web design",
-      "Next.js website",
-      "React website",
-      "premium web design",
-      "website development Germany"
-    ],
-    "openGraphTitle": "Labrity Web Studio – Modern Websites for Businesses",
-    "openGraphDescription": "Professional websites with modern design, clear structure, SEO optimization and a strong digital presence.",
-    "siteName": "Labrity Web Studio",
-    "locale": "en_US"
-  },
   "hero": {
     "kicker": "Premium Web Studio",
     "titleFirst": "Websites that",
     "titleSecond": "convince and convert",
     "description": "We create modern websites for businesses, experts and brands – based in Münster, working with clients across Germany.",
     "tagline": "Minimal. Modern. Effective.",
-    "primaryButton": "Contact",
-    "secondaryButton": "Portfolio"
+    "primaryButton": "Request a project",
+    "secondaryButton": "View portfolio"
   },
   "quizPreview": {
     "kicker": "Project Calculator",
@@ -182,6 +159,7 @@
       "MINIMAL. MODERN. EFFECTIVE."
     ],
     "projectLabel": "Website Project",
+    "conceptLabel": "Concept project",
     "projectButton": "View Project",
     "projectTags": ["SEO READY", "AI OPTIMIZED", "RESPONSIVE"],
     "categories": {
@@ -213,77 +191,77 @@
         "title": "Immo Tonn",
         "description": "Premium real estate website with clear structure, professional property presentation and strong trust effect for buying and selling.",
         "imageVariant": "first",
-        "image": "/images/projects/immo-tonn.png",
+        "image": "/images/projects/immo-tonn.webp",
         "href": "https://immo-tonn.de/"
       },
       {
         "title": "TLSG Studio",
         "description": "Modern digital presence for a music and sound design studio focused on branding, clarity and creative identity.",
         "imageVariant": "second",
-        "image": "/images/projects/tlsg.png",
+        "image": "/images/projects/tlsg.webp",
         "href": "https://tlsglabel.com/"
       },
       {
         "title": "Pizzeria",
         "description": "Modern website for a pizzeria focused on clean structure, visual appeal, and a simple ordering experience. The project is currently still in development.",
         "imageVariant": "first",
-        "image": "/images/projects/pizzeria.png",
+        "image": "/images/projects/pizzeria.webp",
         "href": "https://pizzalanding-tetl.vercel.app/"
       },
       {
         "title": "Massage Studio",
         "description": "Calming website for massage services with elegant presentation and trustworthy booking flow.",
         "imageVariant": "first",
-        "image": "/images/projects/massage.png",
+        "image": "/images/projects/massage.webp",
         "href": "https://massage-landing-swart.vercel.app/#services"
       },
       {
         "title": "Senior Companion Support",
         "description": "A small and simple landing page for an independent senior companion. The project shows a quickly realizable website solution for a small budget — clear, calm and focused on direct contact.",
         "imageVariant": "first",
-        "image": "/images/projects/seniorenbegleitung.png",
+        "image": "/images/projects/seniorenbegleitung.webp",
         "href": "https://pflege-landing-1.vercel.app/"
       },
       {
         "title": "BeautyTime",
         "description": "Elegant online presence for a beauty salon in Cologne with premium look, clear offers and strong local impact.",
         "imageVariant": "second",
-        "image": "/images/projects/beautytime.png",
+        "image": "/images/projects/beautytime.webp",
         "href": "https://beautylanding1.vercel.app/de/index.html"
       },
       {
         "title": "Werkstatt",
         "description": "Modern website for an automotive workshop focused on trust, clear communication and professional service presentation.",
         "imageVariant": "second",
-        "image": "/images/projects/werk.png",
+        "image": "/images/projects/werk.webp",
         "href": "https://auto-service-landing-five.vercel.app/de"
       },
       {
         "title": "Laptop & Gadget Repair Shop",
         "description": "Modern website for a mobile device repair service with a clear service overview, transparent pricing and a trust-building design.",
         "imageVariant": "first",
-        "image": "/images/projects/techfix.png",
+        "image": "/images/projects/techfix.webp",
         "href": "https://repair-eosin.vercel.app/"
       },
       {
         "title": "Sole Proprietor Website",
         "description": "Personal website for a sole proprietor with a bold, memorable visual identity, clear service overview and a strong personal brand focus.",
         "imageVariant": "second",
-        "image": "/images/projects/privateD.png",
+        "image": "/images/projects/privateD.webp",
         "href": "https://www.gasterartur.com/"
       },
       {
         "title": "Speech Therapist Website",
         "description": "Website for a speech-language pathologist working with children and adults: diagnostics, speech correction, school readiness prep and online sessions.",
         "imageVariant": "first",
-        "image": "/images/projects/logoped.png",
+        "image": "/images/projects/logoped.webp",
         "href": "https://logoped2-khaki.vercel.app/"
       },
       {
         "title": "Jewelry Store & Workshop",
         "description": "Website for a jewelry house with a product catalog, workshop services and a premium brand presentation.",
         "imageVariant": "second",
-        "image": "/images/projects/Granat.png",
+        "image": "/images/projects/Granat.webp",
         "href": "https://jewerly-indol.vercel.app/"
       },
       {
@@ -298,7 +276,8 @@
         "description": "Editorial website for an independent financial advisory with bold typography, a clear structure and a direct path to the first consultation.",
         "imageVariant": "second",
         "image": "/images/projects/premium-consulting.webp",
-        "href": "https://premium-consulting-template.vercel.app/de"
+        "href": "https://premium-consulting-template.vercel.app/de",
+        "kind": "concept"
       },
       {
         "title": "FN Detailing",
@@ -312,7 +291,8 @@
         "description": "Concept multilingual website for a beauty studio with an expressive editorial/Y2K aesthetic, large-scale typography, a light and dark theme, and interactive scroll animations.",
         "imageVariant": "second",
         "image": "/images/projects/beauty-salon-landing.webp",
-        "href": "https://beauty-salon-landing-gray.vercel.app/de"
+        "href": "https://beauty-salon-landing-gray.vercel.app/de",
+        "kind": "concept"
       }
     ]
   },
