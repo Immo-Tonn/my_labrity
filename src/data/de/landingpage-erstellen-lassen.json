@@ -43,7 +43,7 @@
     ]
   },
   "proofSection": {
-    "kicker": "Referenz",
+    "kicker": "Projektbeispiel",
     "title": "So sieht das in der Praxis aus.",
     "description": "Ein Beispiel aus unserer Arbeit: eine editorial gestaltete Seite für ein Massagestudio, bei der ein einzelnes starkes Bild im Mittelpunkt steht.",
     "projectLabel": "Relax Massage Studio",
@@ -87,7 +87,7 @@
     "backToServicesLabel": "Alle Leistungen ansehen"
   },
   "images": {
-    "heroAlt": "Reales Projekt aus dem Labrity Portfolio: fokussierter, editorial gestalteter Auftritt für ein Massagestudio (Relax Massage Studio)"
+    "heroAlt": "Projekt aus dem Labrity Portfolio: fokussierter, editorial gestalteter Auftritt für ein Massagestudio (Relax Massage Studio)"
   },
   "breadcrumbParentLabel": "Leistungen",
   "relatedArticles": {

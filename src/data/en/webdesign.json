@@ -1,13 +1,13 @@
 {
   "hero": {
-    "kicker": "Webdesign",
-    "title": "Webdesign that makes your brand seen.",
-    "description": "Before anyone reads your copy, they see your website. Good webdesign decides in seconds whether trust is built — or not."
+    "kicker": "Web Design",
+    "title": "Web design that makes your brand seen.",
+    "description": "Before anyone reads your copy, they see your website. Good web design decides in seconds whether trust is built — or not."
   },
   "principlesSection": {
-    "kicker": "What good webdesign does",
+    "kicker": "What good web design does",
     "title": "Design that does more than just look good.",
-    "description": "For us, webdesign isn't decoration. It's meant to achieve something specific.",
+    "description": "For us, web design isn't decoration. It's meant to achieve something specific.",
     "items": [
       {
         "title": "Clarity",
@@ -44,7 +44,7 @@
     "description": "Every decision — spacing, type size, colour — has a reason behind it. Nothing feels arbitrary."
   },
   "proofSection": {
-    "kicker": "Reference",
+    "kicker": "Project example",
     "title": "What that looks like in practice.",
     "description": "An example from our work: a stylish, editorially designed website for a music label with a strong visual identity.",
     "projectLabel": "TLSG Studio",
@@ -61,7 +61,7 @@
       },
       {
         "label": "Mainly interested in the technical side?",
-        "linkLabel": "More on Webentwicklung",
+        "linkLabel": "More on web development",
         "href": "/webentwicklung"
       }
     ]
@@ -71,8 +71,8 @@
     "title": "What you'd want to know beforehand.",
     "items": [
       {
-        "question": "What's the difference between webdesign and web development?",
-        "answer": "Webdesign is the visual side — layout, typography, imagery. Web development is the technical build behind it. Both go into every project we do."
+        "question": "What's the difference between web design and web development?",
+        "answer": "Web design is the visual side — layout, typography, imagery. Web development is the technical build behind it. Both go into every project we do."
       },
       {
         "question": "Do I get several design directions to choose from?",
@@ -89,7 +89,7 @@
     "backToServicesLabel": "View all services"
   },
   "images": {
-    "heroAlt": "Real project from the Labrity portfolio: stylish, editorially designed website for a music label (TLSG Studio)"
+    "heroAlt": "Project from the Labrity portfolio: stylish, editorially designed website for a music label (TLSG Studio)"
   },
   "breadcrumbParentLabel": "Services",
   "relatedArticles": {

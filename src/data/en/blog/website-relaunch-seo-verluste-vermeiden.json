@@ -1,12 +1,12 @@
 {
   "slug": "website-relaunch-seo-verluste-vermeiden",
   "meta": {
-    "title": "Website Relaunch Without SEO Losses: What Businesses Should Watch For | Labrity",
-    "description": "A relaunch carries real SEO risk. Here's how to avoid the most common mistakes — based on Google's own documentation on site moves."
+    "title": "Website Relaunch Without SEO Losses: What to Watch | Labrity",
+    "description": "A relaunch carries SEO risk. Here's how to avoid the most common mistakes – based on Google's documentation on site moves."
   },
   "breadcrumbLabel": "Relaunch & SEO",
   "publishedDate": "2026-09-19",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-16",
   "hero": {
     "kicker": "Knowledge",
     "title": "Website relaunch without SEO losses: what businesses should watch for",
@@ -30,7 +30,7 @@
       "heading": "What Google actually says about redirects",
       "level": "h2",
       "paragraphs": [
-        "Google Search Central's official documentation on redirects states that permanent redirects (301 or 308) don't cause a loss of PageRank. In other words: a correctly set redirect from an old to a new URL is technically not a threat to your visibility.",
+        "Google Search Central's official documentation on site moves states that permanent redirects (301 or 308) don't cause a loss of PageRank. In other words: a correctly set redirect from an old to a new URL is technically not a threat to your visibility.",
         "Google also recommends keeping redirect chains as short as possible — ideally pointing directly to the final destination rather than through several intermediate steps — and keeping redirects in place for at least a year after a move, so search engines and inbound links from across the web have enough time to adjust to the new structure.",
         "Also important: from Google's perspective, a site move is only considered complete once Googlebot has visited every URL on both the old and new site at least once. Depending on the size of the site, that can take varying amounts of time — there's no fixed schedule for it."
       ]

@@ -48,7 +48,7 @@
     "description": "Wir bauen keine Websites von der Stange. Jedes Projekt beginnt bei Ihrem Unternehmen — nicht bei einem Baukasten."
   },
   "proofSection": {
-    "kicker": "Referenz",
+    "kicker": "Projektbeispiel",
     "title": "So sieht das in der Praxis aus.",
     "description": "Eine hochwertige Immobilien-Website mit klarem Aufbau und professioneller Objektpräsentation — ein Beispiel dafür, wie ein neuer digitaler Auftritt von Anfang an Vertrauen schafft.",
     "projectLabel": "Immo Tonn",
@@ -98,7 +98,7 @@
     "processLinkLabel": "Mehr zum Ablauf"
   },
   "images": {
-    "heroAlt": "Reales Projekt aus dem Labrity Portfolio: Immobilien-Website mit klarer Struktur (Immo Tonn)"
+    "heroAlt": "Projekt aus dem Labrity Portfolio: Immobilien-Website mit klarer Struktur (Immo Tonn)"
   },
   "breadcrumbParentLabel": "Leistungen",
   "relatedArticles": {
@@ -116,7 +116,7 @@
         "href": "/blog/website-briefing-checkliste"
       },
       {
-        "label": "Freelancer oder Webagentur: Was passt besser zu meinem Website-Projekt?",
+        "label": "Freelancer oder Webagentur: Was passt besser zu Ihrem Website-Projekt?",
         "linkLabel": "Artikel lesen",
         "href": "/blog/freelancer-oder-webagentur"
       }

@@ -14,24 +14,24 @@ const PATH = '/landingpage-erstellen-lassen';
 
 const META: Record<Language, { title: string; description: string }> = {
   de: {
-    title: 'Landingpage erstellen lassen | Labrity',
+    title: 'Landingpage erstellen lassen für Kampagne & Angebot | Labrity',
     description:
-      'Eine Landingpage für Ihre Kampagne oder Ihr Angebot — klar auf ein Ziel ausgerichtet und schnell umgesetzt.',
+      'Eine Landingpage mit einem klaren Ziel – für Ihre Kampagne, Ihr Angebot oder einen schnellen Start. Struktur, Design und Umsetzung aus einer Hand.',
   },
   en: {
-    title: 'Landing Page Design | Labrity',
+    title: 'Landing Page Design for Campaigns & Offers | Labrity',
     description:
-      'A landing page for your campaign or offer — focused on one goal and built fast.',
+      'A landing page with one clear goal – for your campaign, your offer or a fast start. Structure, design and build from a single source.',
   },
   ru: {
-    title: 'Создание лендинга | Labrity',
+    title: 'Лендинг под кампанию или предложение | Labrity',
     description:
-      'Лендинг под вашу кампанию или предложение — с фокусом на одну цель и быстрой реализацией.',
+      'Лендинг с одной понятной целью — для вашей кампании, предложения или быстрого старта. Структура, дизайн и реализация в одних руках.',
   },
   ua: {
-    title: 'Створення лендингу | Labrity',
+    title: 'Лендінг під кампанію чи пропозицію | Labrity',
     description:
-      'Лендинг під вашу кампанію чи пропозицію — з фокусом на одну мету та швидкою реалізацією.',
+      'Лендінг з однією зрозумілою метою — для вашої кампанії, пропозиції чи швидкого старту. Структура, дизайн і реалізація в одних руках.',
   },
 };
 

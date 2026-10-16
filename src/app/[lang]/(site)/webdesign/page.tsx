@@ -12,24 +12,24 @@ const PATH = '/webdesign';
 
 const META: Record<Language, { title: string; description: string }> = {
   de: {
-    title: 'Webdesign Agentur | Labrity',
+    title: 'Webdesign für Selbstständige & kleine Firmen | Labrity',
     description:
-      'Labrity entwickelt Webdesign, das Vertrauen schafft und Ihre Marke sichtbar macht — mit klarer Struktur und hochwertiger Ästhetik.',
+      'Webdesign aus Münster: klare Struktur und hochwertige Optik, die Vertrauen schafft – für Selbstständige und kleine Unternehmen in Deutschland.',
   },
   en: {
-    title: 'Webdesign Agency | Labrity',
+    title: 'Web Design for Freelancers & Small Businesses | Labrity',
     description:
-      'Labrity creates webdesign that builds trust and makes your brand visible — with clear structure and a premium aesthetic.',
+      'Web design from Münster with a clear structure and a premium look that builds trust – for freelancers and small businesses across Germany.',
   },
   ru: {
-    title: 'Веб-дизайн студия | Labrity',
+    title: 'Веб-дизайн для предпринимателей и малого бизнеса | Labrity',
     description:
-      'Labrity создаёт веб-дизайн, который формирует доверие и делает бренд заметным — с чёткой структурой и премиальной эстетикой.',
+      'Веб-дизайн из Мюнстера: чёткая структура и качественная эстетика, которые вызывают доверие, — для предпринимателей и малого бизнеса в Германии.',
   },
   ua: {
-    title: 'Веб-дизайн студія | Labrity',
+    title: 'Веб-дизайн для підприємців і малого бізнесу | Labrity',
     description:
-      'Labrity створює веб-дизайн, який формує довіру та робить бренд помітним — із чіткою структурою та преміальною естетикою.',
+      'Веб-дизайн із Мюнстера: чітка структура та якісна естетика, що викликають довіру, — для підприємців і малого бізнесу в Німеччині.',
   },
 };
 

@@ -43,7 +43,7 @@
     ]
   },
   "proofSection": {
-    "kicker": "Reference",
+    "kicker": "Project example",
     "title": "What that looks like in practice.",
     "description": "An example from our work: an editorially designed page for a massage studio, where one strong image takes center stage.",
     "projectLabel": "Relax Massage Studio",
@@ -87,7 +87,7 @@
     "backToServicesLabel": "View all services"
   },
   "images": {
-    "heroAlt": "Real project from the Labrity portfolio: focused, editorially designed massage studio website (Relax Massage Studio)"
+    "heroAlt": "Project from the Labrity portfolio: focused, editorially designed massage studio website (Relax Massage Studio)"
   },
   "breadcrumbParentLabel": "Services",
   "relatedArticles": {

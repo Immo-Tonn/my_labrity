@@ -1,20 +1,20 @@
 {
   "slug": "website-erstellen-lassen-kosten",
   "meta": {
-    "title": "Website Design & Build: What Does a Professional Website Really Cost? | Labrity",
-    "description": "Realistic price ranges for freelancers and agencies, what actually drives the cost, and how to compare quotes that look completely different."
+    "title": "What Does a Professional Website Cost in Germany? | Labrity",
+    "description": "Rough price ranges for websites in Germany, what drives the cost and how to compare quotes - with sources, and no price promises."
   },
   "breadcrumbLabel": "Website Costs",
   "publishedDate": "2026-09-19",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-16",
   "hero": {
     "kicker": "Knowledge",
     "title": "What does a professional website really cost?",
-    "intro": "The honest answer: it depends. But there are real price ranges, real cost drivers, and a few questions that help you judge a quote — before you even sit down for a call."
+    "intro": "The honest answer: it depends. But there are rough price ranges, typical cost drivers, and a few questions that help you judge a quote — before you even sit down for a call."
   },
   "keyTakeaway": {
     "title": "In short",
-    "text": "A solid business website in Germany typically falls between €2,000 (a simple freelancer solution) and €15,000 (a full agency project with concept, design, development and an SEO foundation). The real difference rarely comes from the website itself — it comes from scope, how custom it is, and how much work happens before design even starts."
+    "text": "Public price guides in Germany give very rough figures of about €800 to €5,000 for freelancers and about €1,500 to €20,000 for agencies, open-ended upwards. What matters is scope, how custom the site is, and how much work happens before design even starts. This is a market guide, not a price guarantee."
   },
   "sections": [
     {
@@ -27,24 +27,25 @@
       ]
     },
     {
-      "heading": "Realistic price ranges",
+      "heading": "Price ranges as a guide",
       "level": "h2",
       "paragraphs": [
-        "Based on multiple independent observations of the German web design market, rough figures emerge — they vary by region, experience and project scope, but give a realistic first orientation before you request actual quotes."
+        "Publicly available price guides give roughly the following orders of magnitude for Germany (sources at the end of the article). The figures come from providers, differ noticeably from source to source and depend on scope — use them as a first impression, not as a calculation.",
+        "Our own packages and starting prices are listed separately on the pricing page. This article is mainly meant to help you place quotes from different providers."
       ]
     },
     {
       "heading": "Freelancers",
       "level": "h3",
       "paragraphs": [
-        "Simple business-card sites with a handful of pages often run between €1,000 and €5,000. A solid, more custom business website usually falls between €2,000 and €8,000. Freelancers typically carry lower fixed costs than agencies, which is why a comparable result often costs less."
+        "For a simple business website of 5 to 10 pages, Wix (2025 figures) lists €800 to €3,000 for freelancers, and €500 to €1,500 for a one-pager. The portal experte.de gives €1,000 to €5,000 overall for freelancers, open-ended upwards. Both sources put hourly rates at roughly €50 to €100. Freelancers typically carry lower fixed costs than agencies, which is why a comparable result often costs less."
       ]
     },
     {
       "heading": "Agencies",
       "level": "h3",
       "paragraphs": [
-        "Agencies typically quote between €3,500 and €18,000, depending on how many people are involved (concept, design, development, copy, project management) and how thoroughly SEO fundamentals, structural planning and technical implementation are considered. Larger projects with custom functionality or multilingual structure often sit at the upper end of this range or beyond."
+        "For agencies, Wix lists €2,000 to €8,000 for a simple business website and €1,000 to €3,000 for a one-pager. experte.de gives €1,500 to €20,000 overall, open-ended upwards, with hourly rates of €80 to €150. What matters is how many people are involved (concept, design, development, copy, project management) and how thoroughly SEO fundamentals, structural planning and technical implementation are considered. Shops, custom functionality or multilingual sites sit well above that."
       ]
     },
     {
@@ -92,7 +93,7 @@
       },
       {
         "question": "What about ongoing costs after launch?",
-        "answer": "Budget for ongoing hosting, domain and possibly maintenance costs — typically a low double-digit to mid-range amount per month, depending on scope."
+        "answer": "Budget for ongoing domain, hosting and possibly maintenance costs. The amount depends heavily on the provider and scope — ask for these items to be listed separately in the quote."
       }
     ]
   },
@@ -112,5 +113,15 @@
   ],
   "images": {
     "coverAlt": "Rising columns of marble, steel and red glass on a desk next to a calculator, symbolising increasing cost."
-  }
+  },
+  "sources": [
+    {
+      "label": "Wix Blog — Website erstellen lassen: Preise (2025 guide values, in German)",
+      "url": "https://de.wix.com/blog/beitrag/website-erstellen-lassen-preise"
+    },
+    {
+      "label": "experte.de — Homepage erstellen lassen (in German)",
+      "url": "https://www.experte.de/homepage-erstellen/erstellen-lassen"
+    }
+  ]
 }

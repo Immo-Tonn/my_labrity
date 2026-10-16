@@ -1,6 +1,6 @@
 {
   "hero": {
-    "kicker": "Landingpage",
+    "kicker": "Лендинг",
     "title": "Лендинги под одну цель — а не десять.",
     "description": "Для кампании, предложения или запуска не нужен целый сайт — нужна одна страница с одним понятным действием."
   },
@@ -43,8 +43,8 @@
     ]
   },
   "proofSection": {
-    "kicker": "Пример из практики",
-    "title": "Как это выглядит на реальном проекте.",
+    "kicker": "Пример проекта",
+    "title": "Как это выглядит на практике.",
     "description": "Пример из нашей практики: editorial-страница для массажной студии, где в центре — одно сильное изображение.",
     "projectLabel": "Relax Massage Studio",
     "linkLabel": "Смотреть портфолио"
@@ -87,7 +87,7 @@
     "backToServicesLabel": "Смотреть все услуги"
   },
   "images": {
-    "heroAlt": "Реальный проект из портфолио Labrity: сфокусированный editorial-сайт массажной студии (Relax Massage Studio)"
+    "heroAlt": "Проект из портфолио Labrity: сфокусированный editorial-сайт массажной студии (Relax Massage Studio)"
   },
   "breadcrumbParentLabel": "Услуги",
   "relatedArticles": {

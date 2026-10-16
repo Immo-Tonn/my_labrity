@@ -39,7 +39,7 @@
     "items": [
       {
         "label": "Mainly focused on how it looks?",
-        "linkLabel": "More on Webdesign",
+        "linkLabel": "More on web design",
         "href": "/webdesign"
       },
       {
@@ -72,7 +72,7 @@
     "backToServicesLabel": "View all services"
   },
   "images": {
-    "heroAlt": "Real project from the Labrity portfolio: structured auto workshop website (Werkstatt)"
+    "heroAlt": "Project from the Labrity portfolio: structured auto workshop website (Werkstatt)"
   },
   "breadcrumbParentLabel": "Services",
   "relatedArticles": {

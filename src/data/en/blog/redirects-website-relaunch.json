@@ -1,12 +1,12 @@
 {
   "slug": "redirects-website-relaunch",
   "meta": {
-    "title": "Redirects During a Website Relaunch: What Businesses Should Know About 301s | Labrity",
-    "description": "301 redirects explained in plain terms for business owners: what they do, why they matter during a relaunch, and what Google Search Central says about them."
+    "title": "301 Redirects in a Website Relaunch Explained | Labrity",
+    "description": "301 redirects in plain terms for business owners: what they do, why they matter in a relaunch and what Google Search Central says."
   },
   "breadcrumbLabel": "301 Redirects",
   "publishedDate": "2026-09-19",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-16",
   "hero": {
     "kicker": "Knowledge",
     "title": "Redirects during a website relaunch: what businesses should know about 301s",
@@ -37,7 +37,7 @@
       "heading": "What Google Search Central officially says",
       "level": "h2",
       "paragraphs": [
-        "According to Google Search Central's official documentation, permanent redirects (301 or 308) themselves don't cause a loss of link value. The recommendation is also to keep redirect chains short — pointing directly to the final new page rather than through several intermediate steps — and to keep redirects active for at least a year after a move."
+        "According to Google Search Central's official documentation on site moves, permanent redirects (301 or 308) themselves don't cause a loss of link value. The recommendation is also to keep redirect chains short — pointing directly to the final new page rather than through several intermediate steps — and to keep redirects active for at least a year after a move."
       ]
     },
     {
@@ -53,6 +53,10 @@
     {
       "label": "Google Search Central — Redirects and Google Search",
       "url": "https://developers.google.com/search/docs/crawling-indexing/301-redirects"
+    },
+    {
+      "label": "Google Search Central — Site Moves and Migrations",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes"
     }
   ],
   "faq": {
