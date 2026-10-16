@@ -1,0 +1,39 @@
+# Порядок merge и чек-лист после выкладки
+
+Ветки образуют цепочку: каждая основана на предыдущей. Сливать строго по порядку, обычным merge-коммитом (не squash: squash даёт ложные конфликты в дочерних ветках).
+
+## Порядок
+
+| № | Ветка | База | Содержание |
+|---|---|---|---|
+| 0 | PR #18 → #19 → #20 → #21 → #22 | main | Уже открытая цепочка (портфолио, техника, SEO, блог, local SEO). **#21 сливать только вместе с #22** (в #22 исправлена вёрстка hero-видео). |
+| 1 | `audit/01-ssr-navigation-metadata` | #22 | Навигация и футер в серверном HTML, OG/Twitter, sitemap, lowercase-редирект, `seo:smoke` |
+| 2 | `audit/02-trust-legal-pages` | 01 | Честный помощник-чат + калькулятор, `/impressum`, `/ueber-uns` (noindex), метки «концепт» |
+| 3 | `audit/03-performance-assets` | 02 | Видео и картинки, кэш-заголовки, noindex для `*.vercel.app` |
+| 4 | `audit/04-ux-conversion` | 03 | Hero/CTA, форма, контраст, фокус, skip-link, Preloader |
+| 5 | `audit/05-content-i18n-pricing` | 04 | Языки, цены, title/description, статья про стоимость |
+| 6 | `audit/07-docs-seo-playbook` | 05 | Эта документация |
+
+## Проверки перед каждым merge
+
+- `npx tsc --noEmit`, `npx eslint src`, `npx next build`
+- `BASE_URL=http://localhost:3000 npm run seo:smoke` (после `next start`)
+- В браузере: 375 и 1280 px, de/en/ru/ua, нет горизонтальной прокрутки, ровно один h1
+
+## После выкладки (вручную)
+
+1. Search Console: см. `GOOGLE-SEARCH-CONSOLE.md`.
+2. Проверить `https://www.labrity.com/sitemap.xml` и страницы `/impressum`, `/privacy`.
+3. Пересчитать Lighthouse на проде (локальные замеры шумные).
+4. Vercel: редирект apex → www сделать постоянным (308).
+
+## Нужны данные владельца
+
+- Какие проекты портфолио реальные клиентские, какие концепты.
+- Факты и фото для «Über uns» (страница пока noindex).
+- Телефон/WhatsApp/Calendly: только если реально есть.
+- Реальные отзывы с разрешением.
+- Ссылки Telegram и LinkedIn.
+- Юридическая проверка Impressum и Datenschutz (Needs legal review), включая USt-IdNr.
+- Решение по hero-мокапу: оставить как иллюстрацию или заменить реальным скриншотом.
+- Всплывающие «заказы» (LiveActivity): это имитация активности, юридический риск по UWG; рекомендуется заменить нейтральным текстом.
