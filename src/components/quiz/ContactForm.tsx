@@ -3,6 +3,7 @@
 import { useState } from 'react';
 
 import { sendMessage } from '@/api/telegram';
+import { FormGuard } from '@/components/common/FormGuard';
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
 
 import { ContactFormData, QuizAnswers } from './quiz.types';
@@ -156,7 +157,8 @@ export default function ContactForm({ quiz, answers }: Props) {
   `;
 
   return (
-    <div className="p-8">
+    <div className="relative p-8">
+      <FormGuard />
       <h2 className="mb-2 text-3xl">{quiz.form.title}</h2>
 
       <p className="mb-8 text-sm text-gray-500">{quiz.form.description}</p>
