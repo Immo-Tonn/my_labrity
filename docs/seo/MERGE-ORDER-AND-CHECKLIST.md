@@ -17,6 +17,7 @@
 | —   | `audit/06-hero-real-project-mockup`    | 05   | **Не сливать.** Эксперимент с мокапом Immo Tonn; владелец выбрал прежнюю картинку, в ветке 07 коммит откачен                                |
 | 7   | `audit/07-docs-seo-playbook`           | 06   | Эта документация                                                                                                                            |
 | 8   | `audit/08-web-apps-business-solutions` | 07   | Новая услуга «Web-Apps & individuelle Business-Lösungen» (`/web-apps`, 4 языка) и статья блога про ПО для записи и управления               |
+| 9 | `audit/09-links-structure-audit` | 08 | Аудит ссылок: скрипт `npm run links:audit`, ссылки в футере, контекстные ссылки (цены, портфолио, статьи) |
 
 ## Проверки перед каждым merge
 
