@@ -17,6 +17,11 @@ export const BLOG_EDITORIAL_IMAGE: BlogImage = {
 };
 
 export const BLOG_COVER_IMAGES: Record<string, BlogImage> = {
+  'terminbuchung-verwaltung-software-kleine-betriebe': {
+    src: '/images/web-apps/dashboard-overview.webp',
+    width: 882,
+    height: 887,
+  },
   'website-erstellen-lassen-kosten': {
     src: '/images/blog/website-erstellen-lassen-kosten.jpg',
     width: 1024,

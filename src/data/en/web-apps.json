@@ -201,5 +201,10 @@
         "href": "/blog/website-briefing-checkliste"
       }
     ]
+  },
+  "visual": {
+    "caption": "Illustration: example of an interface. These are not real customer data.",
+    "alt1": "Illustration: appointment calendar on a laptop and online booking on a smartphone",
+    "alt2": "Illustration: dashboard with appointments, employees and revenue on a laptop"
   }
 }

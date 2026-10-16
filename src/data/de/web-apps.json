@@ -201,5 +201,10 @@
         "href": "/blog/website-briefing-checkliste"
       }
     ]
+  },
+  "visual": {
+    "caption": "Illustration: beispielhafte Darstellung einer Oberfläche. Es sind keine echten Kundendaten.",
+    "alt1": "Illustration: Terminkalender am Laptop und Online-Terminbuchung auf dem Smartphone",
+    "alt2": "Illustration: Dashboard mit Terminen, Mitarbeitern und Umsatz auf dem Laptop"
   }
 }

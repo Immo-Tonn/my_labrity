@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { ArrowUpRight, HelpCircle } from 'lucide-react';
 
 import { Breadcrumbs } from '@/components/common/Breadcrumbs';
@@ -21,6 +22,7 @@ export type WebAppsData = {
     description: string;
     items: UseCase[];
   };
+  visual: { caption: string; alt1: string; alt2: string };
   experience: { kicker: string; title: string; description: string };
   process: { kicker: string; title: string; items: Item[] };
   clarify: {
@@ -94,6 +96,50 @@ function LinkList({
   );
 }
 
+// Purely decorative abstract chart motif (no data, hidden from assistive tech).
+function AbstractCharts() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 520 360"
+      className="pointer-events-none absolute right-0 top-[-10px] hidden h-auto w-[44%] max-w-[560px] text-black xl:block"
+      fill="none"
+    >
+      <g stroke="currentColor" strokeOpacity="0.1" strokeWidth="1">
+        <path d="M20 40H500M20 120H500M20 200H500M20 280H500" />
+      </g>
+      <g fill="currentColor" fillOpacity="0.07">
+        <rect x="60" y="210" width="34" height="70" />
+        <rect x="116" y="180" width="34" height="100" />
+        <rect x="172" y="150" width="34" height="130" />
+        <rect x="228" y="190" width="34" height="90" />
+        <rect x="284" y="120" width="34" height="160" />
+        <rect x="340" y="90" width="34" height="190" />
+      </g>
+      <path
+        d="M60 230C120 200 160 150 230 160S320 100 380 70 450 60 480 40"
+        stroke="#18352b"
+        strokeOpacity="0.45"
+        strokeWidth="1.5"
+      />
+      <circle cx="480" cy="40" r="5" fill="#18352b" fillOpacity="0.55" />
+      <circle
+        cx="400"
+        cy="250"
+        r="46"
+        stroke="currentColor"
+        strokeOpacity="0.12"
+      />
+      <path
+        d="M400 204A46 46 0 0 1 446 250"
+        stroke="#18352b"
+        strokeOpacity="0.4"
+        strokeWidth="2"
+      />
+    </svg>
+  );
+}
+
 export default function WebAppsPageClient({
   initialData,
 }: {
@@ -119,7 +165,8 @@ export default function WebAppsPageClient({
       />
 
       {/* HERO */}
-      <section className="mx-auto max-w-[1700px] px-5 pb-16 pt-[130px] md:px-8 md:pb-24 md:pt-[170px]">
+      <section className="relative mx-auto max-w-[1700px] px-5 pb-16 pt-[130px] md:px-8 md:pb-24 md:pt-[170px]">
+        <AbstractCharts />
         <Breadcrumbs
           parentLabel={content.breadcrumbParentLabel}
           parentHref="/services"
@@ -148,6 +195,37 @@ export default function WebAppsPageClient({
             {content.hero.button}
           </LocalizedLink>
         </motion.div>
+      </section>
+
+      {/* VISUAL (illustrations) */}
+      <section className="px-5 md:px-8">
+        <div className="mx-auto max-w-[1500px]">
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="overflow-hidden border border-[#e7e2d9]">
+              <Image
+                src="/images/web-apps/booking-calendar-mobile.webp"
+                alt={content.visual.alt1}
+                width={882}
+                height={887}
+                sizes="(min-width: 1500px) 740px, (min-width: 768px) 50vw, 100vw"
+                className="h-auto w-full"
+              />
+            </div>
+            <div className="overflow-hidden border border-[#e7e2d9]">
+              <Image
+                src="/images/web-apps/dashboard-overview.webp"
+                alt={content.visual.alt2}
+                width={882}
+                height={887}
+                sizes="(min-width: 1500px) 740px, (min-width: 768px) 50vw, 100vw"
+                className="h-auto w-full"
+              />
+            </div>
+          </div>
+          <p className="mt-4 font-montserrat text-xs leading-6 text-neutral-500">
+            {content.visual.caption}
+          </p>
+        </div>
       </section>
 
       {/* TASKS */}
