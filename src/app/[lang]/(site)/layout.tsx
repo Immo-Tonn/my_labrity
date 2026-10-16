@@ -49,10 +49,35 @@ function buildStructuredData(lang: Language, description: string) {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'Organization',
+        '@type': ['Organization', 'ProfessionalService'],
         '@id': organizationId,
         name: 'Labrity',
         url: SITE_URL,
+        // Taken from the owner's own Google Business Profile (same data as
+        // there, so name/address/phone stay consistent across the web).
+        telephone: '+49 174 3454419',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Sessendrupweg 54',
+          postalCode: '48161',
+          addressLocality: 'Münster',
+          addressCountry: 'DE',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 52.0008871,
+          longitude: 7.5519881,
+        },
+        hasMap:
+          'https://www.google.com/maps/place/Labrity/@52.0008871,7.5519881,17z',
+        openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+            opens: '09:00',
+            closes: '18:00',
+          },
+        ],
         logo: `${SITE_URL}/images/logo-white.svg`,
         description,
         areaServed: {
