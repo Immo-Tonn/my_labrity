@@ -112,5 +112,24 @@
         "description": "Für Unternehmer und Marken, die bewusst ein höheres Niveau kommunizieren möchten."
       }
     ]
+  },
+  {
+    "_id": "7",
+    "title": "Web-Apps und individuelle Business-Lösungen",
+    "location": "Für Salons, Werkstätten, kleine Unternehmen und Dienstleister",
+    "card": [
+      {
+        "subtitle": "Software, die zu Ihrem Ablauf passt",
+        "description": "Online-Terminbuchung, Zeiterfassung, Kunden- und Auftragsverwaltung: individuelle Web-Apps statt Standardsoftware mit Funktionen, die Sie nicht brauchen."
+      },
+      {
+        "subtitle": "Eigene Zugänge für Team und Leitung",
+        "description": "Mitarbeiter und Leitung arbeiten mit passenden Rechten, Daten liegen in einer Datenbank mit Admin-Bereich."
+      },
+      {
+        "subtitle": "Preis auf Anfrage",
+        "description": "Jede Anwendung ist individuell. Nach einem Gespräch erhalten Sie ein persönliches Angebot."
+      }
+    ]
   }
 ]

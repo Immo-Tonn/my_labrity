@@ -46,6 +46,11 @@
         "label": "Sie haben noch gar keine Website?",
         "linkLabel": "Mehr zu Website erstellen lassen",
         "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Brauchen Sie mehr als eine Website, etwa Online-Buchung oder Zeiterfassung?",
+        "linkLabel": "Mehr zu Web-Apps",
+        "href": "/web-apps"
       }
     ]
   },

@@ -67,6 +67,11 @@
         "label": "Sie haben bereits eine Website und möchten sie erneuern?",
         "linkLabel": "Mehr zum Relaunch",
         "href": "/website-relaunch"
+      },
+      {
+        "label": "Brauchen Sie mehr als eine Website, etwa Online-Buchung oder Zeiterfassung?",
+        "linkLabel": "Mehr zu Web-Apps",
+        "href": "/web-apps"
       }
     ]
   },

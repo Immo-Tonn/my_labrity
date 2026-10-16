@@ -31,6 +31,12 @@
       "description": "A focused page for a campaign, an offer, or a fast start.",
       "href": "/landingpage-erstellen-lassen",
       "linkLabel": "Learn more"
+    },
+    {
+      "title": "Web Apps & Business Solutions",
+      "description": "Online calendars, time tracking and management: custom applications for your business.",
+      "href": "/web-apps",
+      "linkLabel": "Learn more"
     }
   ],
   "description": "We work with businesses across North Rhine-Westphalia and beyond."

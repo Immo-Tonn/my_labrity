@@ -14,6 +14,7 @@
 | 5 | `audit/05-content-i18n-pricing` | 04 | Языки, цены, title/description, статья про стоимость |
 | — | `audit/06-hero-real-project-mockup` | 05 | **Не сливать.** Эксперимент с мокапом Immo Tonn; владелец выбрал прежнюю картинку, в ветке 07 коммит откачен |
 | 7 | `audit/07-docs-seo-playbook` | 06 | Эта документация |
+| 8 | `audit/08-web-apps-business-solutions` | 07 | Новая услуга «Web-Apps & individuelle Business-Lösungen» (`/web-apps`, 4 языка) |
 
 ## Проверки перед каждым merge
 
@@ -36,5 +37,6 @@
 - Реальные отзывы с разрешением.
 - Ссылки Telegram и LinkedIn.
 - Юридическая проверка Impressum и Datenschutz (Needs legal review), включая USt-IdNr.
+- Web-Apps: подтвердить, можно ли называть ServiceOS по имени и как «собственную разработку»; подтвердить список функций.
 - Hero-мокап: оставлена прежняя AI-иллюстрация (вымышленные сайты «Luxury Villa Rentals», «Creative Studio»); при желании заменить реальным проектом (попытка с Immo Tonn лежит в ветке 06).
 - Всплывающие «заказы» (LiveActivity): это имитация активности, юридический риск по UWG; рекомендуется заменить нейтральным текстом.

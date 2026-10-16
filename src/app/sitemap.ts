@@ -25,6 +25,7 @@ const PAGES: {
   },
   { path: '/webdesign', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/webentwicklung', changeFrequency: 'weekly', priority: 0.9 },
+  { path: '/web-apps', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/website-relaunch', changeFrequency: 'weekly', priority: 0.9 },
   {
     path: '/landingpage-erstellen-lassen',

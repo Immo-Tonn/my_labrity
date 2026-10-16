@@ -397,5 +397,14 @@
     "primaryButton": "Projekt anfragen",
     "secondaryButton": "Kontakt aufnehmen",
     "note": "Kostenlose Ersteinschätzung. Transparent. Persönlich. Unverbindlich."
+  },
+  "webApps": {
+    "kicker": "Web-Apps & Business-Lösungen",
+    "title": "Individuelle Web-Apps",
+    "price": "Preis auf Anfrage",
+    "description": "Online-Kalender, Zeiterfassung, Kunden- und Auftragsverwaltung oder ein Verwaltungsbereich: Der Preis richtet sich nach Funktionen, Rollen und Umfang.",
+    "button": "Individuelles Angebot anfragen",
+    "linkLabel": "Mehr zu Web-Apps",
+    "href": "/web-apps"
   }
 }

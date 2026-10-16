@@ -397,5 +397,14 @@
     "steps": ["Project type", "Scope", "Recommendation"],
     "leftTitle": "3 short steps. One clear recommendation.",
     "leftDescription": "Quickly check which website solution fits your project."
+  },
+  "webApps": {
+    "kicker": "Web apps & business solutions",
+    "title": "Custom web apps",
+    "price": "Price on request",
+    "description": "Online calendar, time tracking, customer and order management or an admin area: the price depends on features, roles and scope.",
+    "button": "Request an individual offer",
+    "linkLabel": "More about web apps",
+    "href": "/web-apps"
   }
 }

@@ -120,6 +120,15 @@ export type PricesData = {
     description: string;
     items: PackageItem[];
   };
+  webApps?: {
+    kicker: string;
+    title: string;
+    price: string;
+    description: string;
+    button: string;
+    linkLabel: string;
+    href: string;
+  };
   customSolution?: CustomSolution;
   subscription: {
     kicker: string;
@@ -561,7 +570,7 @@ export default function PricesPageClient({
                   {content.hero.kicker}
                 </p>
 
-                <p className="sm:text-[38px] mt-7 max-w-[820px] font-tenor text-[32px] leading-[1] tracking-[-0.04em] text-black md:text-[54px]">
+                <p className="mt-7 max-w-[820px] font-tenor text-[32px] leading-[1] tracking-[-0.04em] text-black sm:text-[38px] md:text-[54px]">
                   {content.hero.note}
                 </p>
               </div>
@@ -664,6 +673,47 @@ export default function PricesPageClient({
           </div>
         </div>
       </section>
+
+      {/* WEB APPS — price on request */}
+      {content.webApps && (
+        <section className={getSectionClasses('py-20 md:py-24')}>
+          <div className="mx-auto max-w-[1500px]">
+            <div className="grid gap-10 border border-[#e7e2d9] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-center xl:p-14">
+              <div>
+                <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
+                  {content.webApps.kicker}
+                </p>
+
+                <h2 className="font-tenor text-[38px] leading-[1] tracking-[-0.04em] text-black md:text-[60px]">
+                  {content.webApps.title}
+                </h2>
+
+                <p className="mt-6 font-tenor text-[26px] text-black md:text-[32px]">
+                  {content.webApps.price}
+                </p>
+              </div>
+
+              <div className="xl:border-l xl:border-[#e7e2d9] xl:pl-12">
+                <p className="font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
+                  {content.webApps.description}
+                </p>
+
+                <div className="mt-9 flex flex-wrap items-center gap-4">
+                  <ActionButton onClick={openQuiz}>
+                    {content.webApps.button}
+                  </ActionButton>
+                  <LocalizedLink
+                    href={content.webApps.href}
+                    className="inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-black/70 underline underline-offset-4 transition duration-300 hover:text-black"
+                  >
+                    {content.webApps.linkLabel}
+                  </LocalizedLink>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CUSTOM SOLUTION */}
       {content.customSolution && (
