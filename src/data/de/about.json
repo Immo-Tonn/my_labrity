@@ -1,6 +1,6 @@
 {
   "title": "Über Labrity",
-  "intro": "Labrity ist ein Web Studio mit Sitz in Münster. Inhaber ist Andreas Tonn.",
+  "intro": "Labrity ist ein Web Studio mit Sitz in Münster. Inhaber ist Andreas Tonn. Wir entwickeln nicht nur Websites, sondern auch individuelle Webanwendungen, SaaS-Plattformen, CRM-Systeme und iOS-Apps.",
   "sections": [
     {
       "title": "Wo wir arbeiten",
@@ -12,7 +12,7 @@
     },
     {
       "title": "Technologie und Sprachen",
-      "text": "Wir arbeiten mit modernen Technologien wie Next.js und React. Diese Website ist auf Deutsch, Englisch, Russisch und Ukrainisch verfügbar."
+      "text": "Wir arbeiten mit modernen Technologien wie Next.js, React und Node.js. Unsere Website ist auf Deutsch, Englisch, Russisch und Ukrainisch verfügbar. Beratung und Umsetzung erfolgen unkompliziert online."
     }
   ],
   "services": {
@@ -40,5 +40,35 @@
       }
     ]
   },
-  "contactLabel": "Zum Kontaktformular"
+  "contactLabel": "Zum Kontaktformular",
+  "capabilities": {
+    "title": "Was wir entwickeln",
+    "intro": "Von der klaren Unternehmenswebsite bis zur individuellen Software: Wir planen, gestalten und programmieren alles aus einer Hand.",
+    "items": [
+      {
+        "title": "Websites und Landingpages",
+        "text": "Professionelle Websites, Landingpages und Portfolio-Seiten für Selbstständige und Unternehmen: schnell, mobil optimiert und für Suchmaschinen aufgebaut."
+      },
+      {
+        "title": "Webanwendungen und SaaS",
+        "text": "Individuelle Webanwendungen und SaaS-Plattformen mit Benutzerkonten, Rollen, Dashboards und Datenbank, von der ersten Idee bis zum laufenden Produkt."
+      },
+      {
+        "title": "CRM-Systeme entwickeln lassen",
+        "text": "Ein CRM, das zu Ihren Abläufen passt: Kunden, Anfragen, Aufgaben und Angebote an einem Ort, statt Standardsoftware mit Funktionen, die Sie nicht brauchen."
+      },
+      {
+        "title": "iOS-Apps entwickeln lassen",
+        "text": "Native iOS-Anwendungen für iPhone, von der Konzeption über das Design bis zur Umsetzung. Wir entwickeln auch eigene Apps und kennen den Weg vom Prototyp zum fertigen Produkt."
+      },
+      {
+        "title": "Online-Shops und Plattformen",
+        "text": "Online-Shops, Buchungs- und Vermittlungsplattformen sowie Kundenportale, passend zu Ihrem Geschäftsmodell."
+      },
+      {
+        "title": "Relaunch und Weiterentwicklung",
+        "text": "Bestehende Websites und Systeme modernisieren, schneller machen und technisch sauber weiterentwickeln, ohne vorhandene Rankings zu gefährden."
+      }
+    ]
+  }
 }
