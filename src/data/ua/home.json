@@ -213,77 +213,77 @@
         "title": "Immo Tonn",
         "description": "Преміальний сайт нерухомості з чіткою структурою, професійною подачею об'єктів та сильним ефектом довіри.",
         "imageVariant": "first",
-        "image": "/images/projects/immo-tonn.png",
+        "image": "/images/projects/immo-tonn.webp",
         "href": "https://immo-tonn.de/"
       },
       {
         "title": "TLSG Studio",
         "description": "Сучасна цифрова присутність для музичної студії з фокусом на бренд, стиль і креативність.",
         "imageVariant": "second",
-        "image": "/images/projects/tlsg.png",
+        "image": "/images/projects/tlsg.webp",
         "href": "https://tlsglabel.com/"
       },
       {
         "title": "Піцерія",
         "description": "Сучасний вебсайт для піцерії з акцентом на чітку структуру, візуальну привабливість та зручне оформлення замовлення. Проєкт наразі ще в розробці.",
         "imageVariant": "first",
-        "image": "/images/projects/pizzeria.png",
+        "image": "/images/projects/pizzeria.webp",
         "href": "https://pizzalanding-tetl.vercel.app/"
       },
       {
         "title": "Massage Studio",
         "description": "Спокійний сайт для масажних послуг з елегантною подачею та зручною структурою запису.",
         "imageVariant": "first",
-        "image": "/images/projects/massage.png",
+        "image": "/images/projects/massage.webp",
         "href": "https://massage-landing-swart.vercel.app/#services"
       },
       {
         "title": "Супровід літніх людей",
         "description": "Невеликий і простий лендинг для самостійної помічниці із супроводу літніх людей. Проєкт показує швидко реалізоване рішення для невеликого бюджету — спокійно, зрозуміло та з акцентом на швидкий контакт.",
         "imageVariant": "first",
-        "image": "/images/projects/seniorenbegleitung.png",
+        "image": "/images/projects/seniorenbegleitung.webp",
         "href": "https://pflege-landing-1.vercel.app/"
       },
       {
         "title": "BeautyTime",
         "description": "Елегантний сайт для салону краси в Кельні з premium стилем та сильним локальним ефектом.",
         "imageVariant": "second",
-        "image": "/images/projects/beautytime.png",
+        "image": "/images/projects/beautytime.webp",
         "href": "https://beautylanding1.vercel.app/de/index.html"
       },
       {
         "title": "Werkstatt",
         "description": "Сучасний сайт для автосервісу з фокусом на довіру, зрозумілу комунікацію та професійну подачу послуг.",
         "imageVariant": "second",
-        "image": "/images/projects/werk.png",
+        "image": "/images/projects/werk.webp",
         "href": "https://auto-service-landing-five.vercel.app/de"
       },
       {
         "title": "Майстерня з ремонту ноутбуків та гаджетів",
         "description": "Сучасний сайт сервісного центру з ремонту цифрової техніки з чітким переліком послуг, прозорими цінами та акцентом на довіру клієнтів.",
         "imageVariant": "first",
-        "image": "/images/projects/techfix.png",
+        "image": "/images/projects/techfix.webp",
         "href": "https://repair-eosin.vercel.app/"
       },
       {
         "title": "Сайт приватного підприємця",
         "description": "Особистий сайт для приватного підприємця з яскравим образом, чітким переліком послуг та акцентом на особистий бренд.",
         "imageVariant": "second",
-        "image": "/images/projects/privateD.png",
+        "image": "/images/projects/privateD.webp",
         "href": "https://www.gasterartur.com/"
       },
       {
         "title": "Сайт логопеда",
         "description": "Сайт логопеда для роботи з дітьми та дорослими: діагностика, корекція мовлення, підготовка до школи та онлайн-консультації.",
         "imageVariant": "first",
-        "image": "/images/projects/logoped.png",
+        "image": "/images/projects/logoped.webp",
         "href": "https://logoped2-khaki.vercel.app/"
       },
       {
         "title": "Ювелірний магазин і майстерня",
         "description": "Сайт ювелірного дому з каталогом прикрас, послугами майстерні та преміальною подачею бренду.",
         "imageVariant": "second",
-        "image": "/images/projects/Granat.png",
+        "image": "/images/projects/Granat.webp",
         "href": "https://jewerly-indol.vercel.app/"
       },
       {

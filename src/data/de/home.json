@@ -190,77 +190,77 @@
         "title": "Immo Tonn",
         "description": "Hochwertige Immobilien-Website mit klarem Aufbau, professioneller Objektpräsentation und starkem Vertrauenseffekt für Kauf und Verkauf.",
         "imageVariant": "first",
-        "image": "/images/projects/immo-tonn.png",
+        "image": "/images/projects/immo-tonn.webp",
         "href": "https://immo-tonn.de/"
       },
       {
         "title": "TLSG Studio",
         "description": "Moderner digitaler Auftritt für ein Musik- und Sounddesign-Studio mit Fokus auf Markenwirkung, Klarheit und kreativer Identität.",
         "imageVariant": "second",
-        "image": "/images/projects/tlsg.png",
+        "image": "/images/projects/tlsg.webp",
         "href": "https://tlsglabel.com/"
       },
       {
         "title": "Pizzeria",
         "description": "Moderner Webauftritt für eine Pizzeria mit Fokus auf klare Struktur, visuelle Ästhetik und einfache Online-Bestellung. Projekt befindet sich aktuell noch in Entwicklung.",
         "imageVariant": "first",
-        "image": "/images/projects/pizzeria.png",
+        "image": "/images/projects/pizzeria.webp",
         "href": "https://pizzalanding-tetl.vercel.app/"
       },
       {
         "title": "Massage Studio",
         "description": "Beruhigende Website für ein Massage-Angebot mit klarer Nutzerführung, eleganter Service-Präsentation und vertrauensvoller Buchungsstruktur.",
         "imageVariant": "first",
-        "image": "/images/projects/massage.png",
+        "image": "/images/projects/massage.webp",
         "href": "https://massage-landing-swart.vercel.app/#services"
       },
       {
         "title": "Alltagsbegleitung für Senioren",
         "description": "Eine kleine und einfache Landingpage für eine selbstständige Alltagsbegleiterin. Das Projekt zeigt eine schnell realisierbare Website-Lösung für ein kleines Budget — klar, ruhig und auf direkte Kontaktaufnahme ausgerichtet.",
         "imageVariant": "first",
-        "image": "/images/projects/seniorenbegleitung.png",
+        "image": "/images/projects/seniorenbegleitung.webp",
         "href": "https://pflege-landing-1.vercel.app/"
       },
       {
         "title": "BeautyTime",
         "description": "Eleganter Online-Auftritt für einen Beauty-Salon in Köln mit Premium-Look, klarer Angebotsstruktur und starker lokaler Wirkung.",
         "imageVariant": "second",
-        "image": "/images/projects/beautytime.png",
+        "image": "/images/projects/beautytime.webp",
         "href": "https://beautylanding1.vercel.app/de/index.html"
       },
       {
         "title": "Werkstatt",
         "description": "Moderner Webauftritt für eine KFZ-Werkstatt mit Fokus auf Vertrauen, klare Kommunikation und professionelle Service-Präsentation.",
         "imageVariant": "second",
-        "image": "/images/projects/werk.png",
+        "image": "/images/projects/werk.webp",
         "href": "https://auto-service-landing-five.vercel.app/de"
       },
       {
         "title": "Reparatur für Laptops und Gadgets",
         "description": "Moderner Webauftritt für einen Reparaturservice für Mobilgeräte mit klarer Leistungsübersicht, transparenten Preisen und vertrauensbildendem Design.",
         "imageVariant": "first",
-        "image": "/images/projects/techfix.png",
+        "image": "/images/projects/techfix.webp",
         "href": "https://repair-eosin.vercel.app/"
       },
       {
         "title": "Website für Einzelunternehmer",
         "description": "Persönliche Website für einen Einzelunternehmer mit einem einprägsamen Auftritt, klarer Leistungsdarstellung und Fokus auf die persönliche Marke.",
         "imageVariant": "second",
-        "image": "/images/projects/privateD.png",
+        "image": "/images/projects/privateD.webp",
         "href": "https://www.gasterartur.com/"
       },
       {
         "title": "Website für Logopädin",
         "description": "Website für eine Logopädin, die mit Kindern und Erwachsenen arbeitet: Diagnostik, Sprachkorrektur, Schulvorbereitung und Online-Beratung.",
         "imageVariant": "first",
-        "image": "/images/projects/logoped.png",
+        "image": "/images/projects/logoped.webp",
         "href": "https://logoped2-khaki.vercel.app/"
       },
       {
         "title": "Juweliergeschäft und Werkstatt",
         "description": "Website eines Juwelierhauses mit Schmuckkatalog, Werkstattleistungen und einer hochwertigen Markenpräsentation.",
         "imageVariant": "second",
-        "image": "/images/projects/Granat.png",
+        "image": "/images/projects/Granat.webp",
         "href": "https://jewerly-indol.vercel.app/"
       },
       {

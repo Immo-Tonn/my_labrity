@@ -348,6 +348,8 @@ export default function HomePageClient({
         loop
         muted
         playsInline
+        preload="metadata"
+        poster="/hero-poster.webp"
         className="fixed inset-0 -z-10 h-full w-full object-cover opacity-40"
       >
         <source src="/hero.mp4" type="video/mp4" />
@@ -404,7 +406,7 @@ export default function HomePageClient({
               <div className="2xl:min-w-[950px] 2xl:max-w-[1300px] relative mx-auto w-full xl:mx-0 xl:w-[52vw] xl:min-w-[420px] xl:max-w-[900px]">
                 <div className="2xl:-translate-y-[70px] relative w-full -translate-y-[20px] xl:-translate-y-[55px]">
                   <Image
-                    src="/images/hero/hero-devices.png"
+                    src="/images/hero/hero-devices.webp"
                     alt="Modern responsive website design"
                     width={886}
                     height={670}
