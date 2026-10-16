@@ -1,7 +1,10 @@
 import type { MetadataRoute } from 'next';
 
+import { BLOG_SLUGS } from '@/data/blogSlugs';
+import { getData } from '@/utils/getData';
 import { SITE_URL } from '@/utils/siteUrl';
 import {
+  DEFAULT_LOCALE,
   HREFLANG_CODES,
   LOCALES,
   withLocale,
@@ -36,39 +39,33 @@ const PAGES: {
   { path: '/blog', changeFrequency: 'weekly', priority: 0.7 },
 ];
 
-const BLOG_SLUGS = [
-  'website-erstellen-lassen-kosten',
-  'website-relaunch-seo-verluste-vermeiden',
-  'freelancer-oder-webagentur',
-  'website-veraltet-anzeichen',
-  'landingpage-oder-website',
-  'website-ladezeit-performance',
-  'website-briefing-checkliste',
-  'redirects-website-relaunch',
-  'landingpage-dauer-launch',
-  'webdesign-beauty-wellness',
-  'website-kunden-gewinnen-leadgenerierung',
-];
+// Absolute URL for a locale-free path. The German homepage is the bare origin
+// (no trailing slash), matching the <link rel="canonical"> that Next.js emits.
+function absoluteUrl(path: string, lang: Language) {
+  return `${SITE_URL}${withLocale(path, lang)}`.replace(/\/$/, '');
+}
 
 function buildLanguageAlternates(path: string) {
   const languages: Record<string, string> = {};
 
   for (const lang of LOCALES) {
-    languages[HREFLANG_CODES[lang]] = `${SITE_URL}${withLocale(path, lang)}`;
+    languages[HREFLANG_CODES[lang]] = absoluteUrl(path, lang);
   }
+
+  languages['x-default'] = absoluteUrl(path, DEFAULT_LOCALE);
 
   return languages;
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  // No `lastModified` field: we don't track real per-page change dates, and
-  // a timestamp that's just "now" on every build/request is worse than no
-  // signal at all — it tells crawlers everything changed today regardless
-  // of whether it actually did.
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  // No `lastModified` on static pages: we don't track real per-page change
+  // dates, and a timestamp that's just "now" on every build/request is worse
+  // than no signal at all. Blog articles are the exception — they carry a
+  // real `updatedDate` in their own JSON, which is used as `lastModified`.
   const localizedEntries = PAGES.flatMap(
     ({ path, changeFrequency, priority }) =>
       LOCALES.map((lang: Language) => ({
-        url: `${SITE_URL}${withLocale(path, lang)}`,
+        url: absoluteUrl(path, lang),
         changeFrequency,
         priority,
         alternates: {
@@ -77,17 +74,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       })),
   );
 
-  const blogArticleEntries = BLOG_SLUGS.flatMap(slug => {
-    const path = `/blog/${slug}`;
-    return LOCALES.map((lang: Language) => ({
-      url: `${SITE_URL}${withLocale(path, lang)}`,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-      alternates: {
-        languages: buildLanguageAlternates(path),
-      },
-    }));
-  });
+  const blogArticleEntries = await Promise.all(
+    BLOG_SLUGS.flatMap(slug =>
+      LOCALES.map(async (lang: Language) => {
+        const path = `/blog/${slug}`;
+        const article = await getData(`blog/${slug}`, lang);
+        const updatedDate: unknown = article.updatedDate;
+        const lastModified =
+          typeof updatedDate === 'string' &&
+          !Number.isNaN(Date.parse(updatedDate))
+            ? updatedDate
+            : undefined;
+
+        return {
+          url: absoluteUrl(path, lang),
+          ...(lastModified ? { lastModified } : {}),
+          changeFrequency: 'monthly' as const,
+          priority: 0.6,
+          alternates: {
+            languages: buildLanguageAlternates(path),
+          },
+        };
+      }),
+    ),
+  );
 
   return [...localizedEntries, ...blogArticleEntries];
 }

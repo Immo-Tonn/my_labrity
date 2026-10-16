@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getData } from '@/utils/getData';
 import { buildHreflangAlternates } from '@/utils/hreflangAlternates';
 import { buildOpenGraph } from '@/utils/openGraph';
+import { buildTwitter } from '@/utils/twitter';
 import { isLanguage, withLocale } from '@/utils/localizedPath';
 import HomePageClient, { type HomeData } from './HomePageClient';
 
@@ -29,6 +30,11 @@ export async function generateMetadata({
     openGraph: await buildOpenGraph(
       params.lang,
       canonical,
+      meta.openGraph.title,
+      meta.openGraph.description,
+    ),
+    twitter: await buildTwitter(
+      params.lang,
       meta.openGraph.title,
       meta.openGraph.description,
     ),

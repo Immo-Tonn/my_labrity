@@ -1,27 +1,4 @@
 {
-  "seo": {
-    "title": "Labrity Web Studio – Professionelle Websites für Unternehmen in Deutschland",
-    "description": "Labrity Web Studio entwickelt moderne, responsive und SEO-optimierte Websites für Unternehmen, Selbstständige, Dienstleister und Marken in Deutschland.",
-    "keywords": [
-      "Labrity",
-      "Labrity Web Studio",
-      "Webdesign Deutschland",
-      "Website erstellen lassen",
-      "professionelle Website",
-      "Website für Unternehmen",
-      "Website für Selbstständige",
-      "moderne Website",
-      "SEO optimierte Website",
-      "responsive Webdesign",
-      "Next.js Website",
-      "React Website",
-      "Premium Webdesign"
-    ],
-    "openGraphTitle": "Labrity Web Studio – Moderne Websites für Unternehmen",
-    "openGraphDescription": "Professionelle Websites mit modernem Design, klarer Struktur, SEO-Optimierung und starker digitaler Präsenz.",
-    "siteName": "Labrity Web Studio",
-    "locale": "de_DE"
-  },
   "hero": {
     "kicker": "Premium Web Studio",
     "titleFirst": "Websites, die ",
