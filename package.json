@@ -8,6 +8,7 @@
     "start": "next start",
     "types": "tsc --pretty --noEmit",
     "seo:smoke": "node scripts/seo-smoke.mjs",
+    "links:audit": "node scripts/link-audit.mjs",
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js --fix",
     "test-all": "npm run format && npm run lint && npm run types && npm run build",
