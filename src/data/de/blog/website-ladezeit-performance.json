@@ -1,12 +1,12 @@
 {
   "slug": "website-ladezeit-performance",
   "meta": {
-    "title": "Website-Ladezeit: Warum Performance für Nutzer und Unternehmen wichtig ist | Labrity",
-    "description": "Was Core Web Vitals tatsächlich messen, warum Google sie als Signal nutzt, und was das für Ihre Website praktisch bedeutet — auf Basis von web.dev und Google Search Central."
+    "title": "Website-Ladezeit: Warum Performance wichtig ist | Labrity",
+    "description": "Was Core Web Vitals messen, warum Google sie nutzt und was das praktisch für Ihre Website heißt – auf Basis von web.dev und Google Search Central."
   },
   "breadcrumbLabel": "Ladezeit & Performance",
   "publishedDate": "2026-09-19",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-16",
   "hero": {
     "kicker": "Wissen",
     "title": "Website-Ladezeit: Warum Performance für Nutzer und Unternehmen wichtig ist",
@@ -14,7 +14,7 @@
   },
   "keyTakeaway": {
     "title": "Kurz gesagt",
-    "text": "Google bewertet Ladezeit, Interaktivität und visuelle Stabilität über die sogenannten Core Web Vitals (LCP, INP, CLS). Laut Google gelten diese Werte als Rankingsignal — allerdings als einer von vielen, nicht als der entscheidende Faktor. Inhaltliche Relevanz bleibt wichtiger, aber bei ansonsten vergleichbaren Seiten kann Performance den Unterschied machen."
+    "text": "Google bewertet Ladezeit, Interaktivität und visuelle Stabilität über die sogenannten Core Web Vitals (LCP, INP, CLS). Laut Google fließen diese Werte in die Ranking-Systeme ein — allerdings als einer von vielen, nicht als der entscheidende Faktor. Inhaltliche Relevanz bleibt wichtiger, aber bei ansonsten vergleichbaren Seiten kann Performance den Unterschied machen."
   },
   "sections": [
     {
@@ -42,14 +42,14 @@
       "level": "h2",
       "paragraphs": [
         "Google misst Core Web Vitals nicht im Labor, sondern anhand realer Besucherdaten aus dem Chrome User Experience Report (CrUX). Eine Seite gilt als \"gut\" bewertet, wenn mindestens 75 Prozent der echten Besuche die genannten Schwellenwerte einhalten.",
-        "Core Web Vitals sind Teil der sogenannten Page-Experience-Signale und laut Google ein bestätigter Rankingfaktor. Wichtig ist die Einordnung: Inhaltliche Relevanz bleibt das stärkere Signal. Performance wirkt vor allem dort, wo mehrere Seiten inhaltlich ähnlich gut sind — dort kann sie den Unterschied machen."
+        "Core Web Vitals sind Teil der sogenannten Page-Experience-Signale und werden laut Google von den Ranking-Systemen genutzt. Wichtig ist die Einordnung: Inhaltliche Relevanz bleibt das stärkere Signal. Performance wirkt vor allem dort, wo mehrere Seiten inhaltlich ähnlich gut sind — dort kann sie den Unterschied machen."
       ]
     },
     {
       "heading": "Warum Performance auch ohne Google-Bezug wichtig ist",
       "level": "h2",
       "paragraphs": [
-        "Selbst wenn man das Rankingsignal komplett außer Acht lässt, bleibt ein einfacher Punkt: Eine langsame Website kostet direkt Besucher. Jemand, der auf eine Anzeige oder einen Suchtreffer klickt und dann mehrere Sekunden auf eine reagierende Seite wartet, springt in vielen Fällen einfach ab — bevor er überhaupt Ihr Angebot gesehen hat.",
+        "Selbst wenn man das Rankingsignal komplett außer Acht lässt, bleibt ein einfacher Punkt: Eine langsame Website kostet direkt Besucher. Wer auf eine Anzeige oder einen Suchtreffer klickt und dann mehrere Sekunden auf eine noch nicht reagierende Seite wartet, springt womöglich einfach ab — bevor er überhaupt Ihr Angebot gesehen hat.",
         "Performance ist damit gleichzeitig ein SEO-Thema und ein reines Conversion-Thema: Eine schnellere Website verliert weniger Besucher auf dem Weg zur eigentlichen Handlung, unabhängig davon, wie sie gefunden wurde."
       ]
     },

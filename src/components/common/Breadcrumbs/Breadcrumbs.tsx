@@ -18,7 +18,7 @@ export function Breadcrumbs({
   return (
     <nav
       aria-label="Breadcrumb"
-      className="mb-6 flex items-center gap-2 font-montserrat text-[11px] uppercase tracking-[0.22em] text-black/45 md:text-xs"
+      className="mb-6 flex items-center gap-2 font-montserrat text-xs uppercase tracking-[0.22em] text-black/60 md:text-xs"
     >
       <LocalizedLink
         href={parentHref}

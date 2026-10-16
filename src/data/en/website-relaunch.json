@@ -58,7 +58,7 @@
       },
       {
         "label": "Mainly interested in the technical side?",
-        "linkLabel": "More on Webentwicklung",
+        "linkLabel": "More on web development",
         "href": "/webentwicklung"
       }
     ]
@@ -90,7 +90,7 @@
     "backToServicesLabel": "View all services"
   },
   "images": {
-    "heroAlt": "Real project from the Labrity portfolio: bold, premium detailing studio website (FN Detailing)"
+    "heroAlt": "Project from the Labrity portfolio: bold, premium detailing studio website (FN Detailing)"
   },
   "breadcrumbParentLabel": "Services",
   "relatedArticles": {

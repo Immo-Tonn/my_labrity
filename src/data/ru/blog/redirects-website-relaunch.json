@@ -1,12 +1,12 @@
 {
   "slug": "redirects-website-relaunch",
   "meta": {
-    "title": "Редиректы при обновлении сайта: что бизнесу нужно знать о 301 | Labrity",
+    "title": "301-редиректы при обновлении сайта: что нужно знать | Labrity",
     "description": "301-редиректы простыми словами для владельца бизнеса: что они делают, почему важны при обновлении сайта, и что об этом говорит Google Search Central."
   },
   "breadcrumbLabel": "301-редиректы",
   "publishedDate": "2026-09-19",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-16",
   "hero": {
     "kicker": "Знания",
     "title": "Редиректы при обновлении сайта: что бизнесу нужно знать о 301-редиректах",
@@ -37,7 +37,7 @@
       "heading": "Что официально говорит об этом Google Search Central",
       "level": "h2",
       "paragraphs": [
-        "Согласно официальной документации Google Search Central, постоянные редиректы (301 или 308) сами по себе не приводят к потере веса ссылок. Также рекомендуется делать цепочки редиректов короткими — сразу на финальную новую страницу, без промежуточных шагов, — и держать редиректы активными минимум год после переноса."
+        "Согласно официальной документации Google Search Central о переносе сайтов, постоянные редиректы (301 или 308) сами по себе не приводят к потере веса ссылок. Также рекомендуется делать цепочки редиректов короткими — сразу на финальную новую страницу, без промежуточных шагов, — и держать редиректы активными минимум год после переноса."
       ]
     },
     {
@@ -53,6 +53,10 @@
     {
       "label": "Google Search Central — Redirects and Google Search",
       "url": "https://developers.google.com/search/docs/crawling-indexing/301-redirects"
+    },
+    {
+      "label": "Google Search Central — Site Moves and Migrations",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes"
     }
   ],
   "faq": {
@@ -76,7 +80,7 @@
   "relatedService": {
     "label": "Планируете обновление сайта?",
     "description": "Мы подходим к обновлению структурно — включая вопрос о том, что происходит с существующими страницами.",
-    "linkLabel": "Подробнее о Website Relaunch",
+    "linkLabel": "Подробнее об обновлении сайта",
     "href": "/website-relaunch"
   },
   "secondaryLink": null,

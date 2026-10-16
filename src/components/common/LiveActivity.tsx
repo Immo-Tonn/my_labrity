@@ -4,6 +4,8 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { useLanguage } from '@/utils/LanguageContext';
 
+const SEEN_KEY = 'labrity-live-activity-seen';
+
 type ActivityLanguage = 'de' | 'en' | 'ua' | 'ru';
 
 const activities: Record<ActivityLanguage, string[]> = {
@@ -19,7 +21,6 @@ const activities: Record<ActivityLanguage, string[]> = {
     'Branding-Anfrage vorbereitet',
     'Website-Relaunch geplant',
     'Projektinteresse aus Hamburg',
-    'AI-Projektanalyse abgeschlossen',
     'Website-Anfrage vorbereitet',
     'Projekt aus Köln vorbereitet',
     'Projektinteresse aus Leipzig',
@@ -30,7 +31,6 @@ const activities: Record<ActivityLanguage, string[]> = {
     'Projektinteresse aus Nürnberg',
     'Website-Konzept vorbereitet',
     'Projektinteresse aus Karlsruhe',
-    'AI-Kalkulator wurde genutzt',
     'Projektinteresse aus Mannheim',
   ],
 
@@ -46,7 +46,6 @@ const activities: Record<ActivityLanguage, string[]> = {
     'Branding request prepared',
     'Website relaunch planned',
     'Project interest from Hamburg',
-    'AI project analysis completed',
     'Website request prepared',
     'Project from Cologne prepared',
     'Project interest from Leipzig',
@@ -57,7 +56,6 @@ const activities: Record<ActivityLanguage, string[]> = {
     'Project interest from Nuremberg',
     'Website concept prepared',
     'Project interest from Karlsruhe',
-    'AI calculator was used',
     'Project interest from Mannheim',
   ],
 
@@ -73,7 +71,6 @@ const activities: Record<ActivityLanguage, string[]> = {
     'Брендинг-запит підготовлено',
     'Планується редизайн сайту',
     'Інтерес до проєкту з Гамбурга',
-    'AI-аналіз проєкту завершено',
     'Запит на сайт підготовлено',
     'Проєкт з Кельна підготовлено',
     'Інтерес до проєкту з Лейпцига',
@@ -84,7 +81,6 @@ const activities: Record<ActivityLanguage, string[]> = {
     'Інтерес до проєкту з Нюрнберга',
     'Концепт сайту підготовлено',
     'Інтерес до проєкту з Карлсруе',
-    'AI-калькулятор було використано',
     'Інтерес до проєкту з Мангайма',
   ],
 
@@ -100,7 +96,6 @@ const activities: Record<ActivityLanguage, string[]> = {
     'Брендинг-запрос подготовлен',
     'Планируется редизайн сайта',
     'Интерес к проекту из Гамбурга',
-    'AI-анализ проекта завершён',
     'Запрос на сайт подготовлен',
     'Проект из Кёльна подготовлен',
     'Интерес к проекту из Лейпцига',
@@ -111,7 +106,6 @@ const activities: Record<ActivityLanguage, string[]> = {
     'Интерес к проекту из Нюрнберга',
     'Концепт сайта подготовлен',
     'Интерес к проекту из Карлсруэ',
-    'AI-калькулятор был использован',
     'Интерес к проекту из Мангайма',
   ],
 };
@@ -178,27 +172,35 @@ export default function LiveActivity() {
   );
 
   useEffect(() => {
-    const showActivity = () => {
+    // Shown at most once per visitor: the flag lives in localStorage.
+    try {
+      if (window.localStorage.getItem(SEEN_KEY)) return;
+    } catch {
+      // Storage unavailable -> stay silent rather than repeat.
+      return;
+    }
+
+    let hideTimer: number | undefined;
+
+    const showTimer = window.setTimeout(() => {
       setActivityIndex(
         Math.floor(Math.random() * activities[activityLang].length),
       );
       setTimeIndex(Math.floor(Math.random() * times[activityLang].length));
       setIsVisible(true);
 
-      window.setTimeout(() => {
-        setIsVisible(false);
-      }, 5500);
-    };
+      try {
+        window.localStorage.setItem(SEEN_KEY, '1');
+      } catch {
+        // ignore
+      }
 
-    const startTimer = window.setTimeout(showActivity, 6000);
-
-    const interval = window.setInterval(() => {
-      showActivity();
-    }, 22000);
+      hideTimer = window.setTimeout(() => setIsVisible(false), 5500);
+    }, 8000);
 
     return () => {
-      window.clearTimeout(startTimer);
-      window.clearInterval(interval);
+      window.clearTimeout(showTimer);
+      window.clearTimeout(hideTimer);
     };
   }, [activityLang]);
 

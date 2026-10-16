@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getData } from '@/utils/getData';
 import { buildHreflangAlternates } from '@/utils/hreflangAlternates';
 import { buildOpenGraph } from '@/utils/openGraph';
+import { buildTwitter } from '@/utils/twitter';
 import { buildBreadcrumbSchema } from '@/utils/breadcrumbSchema';
 import { isLanguage, withLocale, type Language } from '@/utils/localizedPath';
 import WebsiteRelaunchPageClient, {
@@ -14,24 +15,24 @@ const PATH = '/website-relaunch';
 
 const META: Record<Language, { title: string; description: string }> = {
   de: {
-    title: 'Website Relaunch Agentur | Labrity',
+    title: 'Website Relaunch: SEO und Weiterleitungen im Blick | Labrity',
     description:
-      'Labrity begleitet Ihren Website-Relaunch mit einem strukturierten Vorgehen, das SEO-Risiken minimiert — von der Analyse bis zur sorgfältigen Umleitung.',
+      'Website erneuern, ohne Sichtbarkeit unnötig zu riskieren: Analyse, saubere 301-Weiterleitungen und ein strukturiertes Vorgehen beim Relaunch.',
   },
   en: {
-    title: 'Website Relaunch Agency | Labrity',
+    title: 'Website Relaunch with SEO and Redirects in Mind | Labrity',
     description:
-      'Labrity guides your website relaunch with a structured process that minimises SEO risk — from analysis to careful redirects.',
+      'Renew your website without needless risk to your visibility: analysis, clean 301 redirects and a structured process for your relaunch.',
   },
   ru: {
-    title: 'Обновление сайта (Relaunch) | Labrity',
+    title: 'Обновление сайта с учётом SEO и редиректов | Labrity',
     description:
-      'Labrity сопровождает обновление сайта по структурному процессу, который снижает SEO-риски — от анализа до аккуратных редиректов.',
+      'Обновите сайт без лишнего риска для видимости: анализ текущего сайта, аккуратные 301-редиректы и структурный процесс обновления.',
   },
   ua: {
-    title: 'Оновлення сайту (Relaunch) | Labrity',
+    title: 'Оновлення сайту з урахуванням SEO та редиректів | Labrity',
     description:
-      'Labrity супроводжує оновлення сайту за структурним процесом, який знижує SEO-ризики — від аналізу до обережних редиректів.',
+      'Оновіть сайт без зайвого ризику для видимості: аналіз поточного сайту, акуратні 301-редиректи та структурований процес оновлення.',
   },
 };
 
@@ -55,6 +56,7 @@ export async function generateMetadata({
       languages: buildHreflangAlternates(PATH),
     },
     openGraph: await buildOpenGraph(params.lang, canonical, title, description),
+    twitter: await buildTwitter(params.lang, title, description),
   };
 }
 

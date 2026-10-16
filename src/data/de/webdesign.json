@@ -44,7 +44,7 @@
     "description": "Jede Entscheidung — Abstand, Schriftgröße, Farbe — folgt einem Grund. Nichts wirkt beliebig."
   },
   "proofSection": {
-    "kicker": "Referenz",
+    "kicker": "Projektbeispiel",
     "title": "So sieht das in der Praxis aus.",
     "description": "Ein Beispiel aus unserer Arbeit: ein stilvoller, editorial gestalteter Auftritt für ein Musiklabel mit starker visueller Identität.",
     "projectLabel": "TLSG Studio",
@@ -89,7 +89,7 @@
     "backToServicesLabel": "Alle Leistungen ansehen"
   },
   "images": {
-    "heroAlt": "Reales Projekt aus dem Labrity Portfolio: stilvoller, editorial gestalteter Auftritt für ein Musiklabel (TLSG Studio)"
+    "heroAlt": "Projekt aus dem Labrity Portfolio: stilvoller, editorial gestalteter Auftritt für ein Musiklabel (TLSG Studio)"
   },
   "breadcrumbParentLabel": "Leistungen",
   "relatedArticles": {

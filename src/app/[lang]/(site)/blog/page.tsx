@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getData } from '@/utils/getData';
 import { buildHreflangAlternates } from '@/utils/hreflangAlternates';
 import { buildOpenGraph } from '@/utils/openGraph';
+import { buildTwitter } from '@/utils/twitter';
 import { isLanguage, withLocale, type Language } from '@/utils/localizedPath';
 import BlogIndexPageClient, {
   type BlogIndexData,
@@ -16,22 +17,22 @@ const META: Record<Language, { title: string; description: string }> = {
   de: {
     title: 'Blog | Labrity',
     description:
-      'Klare Antworten auf reale Fragen rund um Website-Projekte, Webdesign, Webentwicklung und Relaunch — ohne Trends, ohne Listicles.',
+      'Klare Antworten auf echte Fragen rund um Website-Projekte, Webdesign, Webentwicklung und Relaunch — ohne Trends, ohne Listicles.',
   },
   en: {
     title: 'Blog | Labrity',
     description:
-      'Clear answers to real questions about website projects, webdesign, web development and relaunches — no trend pieces, no listicles.',
+      'Clear answers to practical questions about website projects, web design, web development and relaunches — no trend pieces, no listicles.',
   },
   ru: {
     title: 'Блог | Labrity',
     description:
-      'Понятные ответы на реальные вопросы о разработке сайтов, дизайне, технической части и релонче — без трендов и списков ради списков.',
+      'Понятные ответы на практические вопросы о разработке сайтов, дизайне, технической части и обновлении сайта — без трендов и списков ради списков.',
   },
   ua: {
     title: 'Блог | Labrity',
     description:
-      'Зрозумілі відповіді на реальні питання про розробку сайтів, дизайн, технічну частину та релонч — без трендів і списків заради списків.',
+      'Зрозумілі відповіді на практичні питання про розробку сайтів, дизайн, технічну частину та оновлення сайту — без трендів і списків заради списків.',
   },
 };
 
@@ -55,6 +56,7 @@ export async function generateMetadata({
       languages: buildHreflangAlternates(PATH),
     },
     openGraph: await buildOpenGraph(params.lang, canonical, title, description),
+    twitter: await buildTwitter(params.lang, title, description),
   };
 }
 

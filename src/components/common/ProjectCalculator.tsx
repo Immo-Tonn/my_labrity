@@ -45,42 +45,41 @@ type ProjectCalculatorData = {
 };
 
 const fallbackCalculatorData: ProjectCalculatorData = {
-  startButton: '✨ Projekt-Kalkulator starten',
-  analysisTitle: '✨ AI-Projektanalyse',
-  finishedTitle: '✅ AI-Marktanalyse abgeschlossen',
-  marketAnalysisTitle: 'AI-basierte Marktanalyse',
+  startButton: 'Projektrechner starten',
+  analysisTitle: 'Projektrechner',
+  finishedTitle: 'Ihre Orientierung',
+  marketAnalysisTitle: 'Wie dieser Richtwert entsteht',
   marketAnalysisText:
-    'Diese Preisspanne wurde vom AI-Assistenten anhand typischer Marktpreise deutscher Webstudios, Projektumfang, Design-Komplexität, SEO-Anforderungen, Funktionen und moderner Website-Standards eingeordnet.',
-  marketAnalysisNote:
-    'Die angezeigte Range ist eine grobe Markt-Orientierung und kein finales Angebot von Labrity.',
+    'Der Richtwert ist der Startpreis des passenden Labrity-Pakets (siehe Preise). Das endgültige Angebot hängt von Umfang, Inhalten und Funktionen ab.',
+  marketAnalysisNote: 'Unverbindliche Orientierung, kein Festpreisangebot.',
   contactText:
-    'Für Ihre individuelle Labrity-Einschätzung, mögliche Rabatte und ein konkretes Angebot können Sie uns direkt über das Kontaktformular kontaktieren.',
-  contactButton: 'Individuelle Labrity-Preise anfragen',
-  restartButton: 'Neue AI-Analyse starten',
+    'Für ein konkretes Angebot schreiben Sie uns über das Kontaktformular.',
+  contactButton: 'Individuelles Angebot anfragen',
+  restartButton: 'Rechner neu starten',
   estimates: {
     compact: {
       title: 'Kompaktes Website-Projekt',
-      range: 'ca. 2.000€ – 3.500€',
+      range: 'ab 999 €',
       description:
-        'Die AI erkennt ein eher kompaktes Website-Projekt mit überschaubarem Umfang, klarer Struktur und wenigen komplexen Funktionen.',
+        'Das klingt nach einem kompakten Projekt mit überschaubarem Umfang, klarer Struktur und wenigen komplexen Funktionen.',
     },
     business: {
       title: 'Professionelle Business-Website',
-      range: 'ca. 4.000€ – 7.000€',
+      range: 'ab 4.900 €',
       description:
-        'Die AI erkennt ein professionelles Website-Projekt mit individuellem Design, mehreren Inhalten, guter Struktur und wichtigen Grundfunktionen.',
+        'Das klingt nach einer professionellen Website mit individuellem Design, mehreren Inhalten, guter Struktur und wichtigen Grundfunktionen.',
     },
     premium: {
       title: 'Individuelles Premium-Projekt',
-      range: 'ca. 8.000€ – 14.000€',
+      range: 'ab 7.500 €',
       description:
-        'Die AI erkennt ein anspruchsvolleres Premium-Projekt mit Design-Komplexität, SEO-Anforderungen, Content-Arbeit oder erweiterten Funktionen.',
+        'Das klingt nach einem anspruchsvolleren Projekt mit Design-Komplexität, SEO-Anforderungen, Content-Arbeit oder erweiterten Funktionen.',
     },
     complex: {
       title: 'Komplexe individuelle Web-Lösung',
-      range: 'ab ca. 15.000€',
+      range: 'Individuelles Angebot',
       description:
-        'Die AI erkennt ein größeres individuelles Projekt mit Shop, Login, Datenbank, Integrationen, Premium-Design oder komplexerer technischer Architektur.',
+        'Das klingt nach einem größeren Projekt mit Shop, Login, Datenbank, Integrationen oder komplexerer technischer Architektur.',
     },
   },
   questions: [],

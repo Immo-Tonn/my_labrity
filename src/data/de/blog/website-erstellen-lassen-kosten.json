@@ -1,20 +1,20 @@
 {
   "slug": "website-erstellen-lassen-kosten",
   "meta": {
-    "title": "Website erstellen lassen: Was kostet eine professionelle Website wirklich? | Labrity",
-    "description": "Realistische Preisspannen für Freelancer und Agenturen in Deutschland, was den Preis tatsächlich beeinflusst und wie Sie Angebote sinnvoll vergleichen."
+    "title": "Website erstellen lassen: Kosten und Preisspannen | Labrity",
+    "description": "Grobe Preisspannen für Websites in Deutschland, was den Preis bestimmt und wie Sie Angebote vergleichen – mit Quellen, ohne Preisversprechen."
   },
   "breadcrumbLabel": "Website-Kosten",
   "publishedDate": "2026-09-19",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-16",
   "hero": {
     "kicker": "Wissen",
     "title": "Was kostet eine professionelle Website wirklich?",
-    "intro": "Die ehrliche Antwort: Es kommt darauf an. Aber es gibt reale Preisspannen, echte Kostentreiber und ein paar Fragen, die Ihnen helfen, ein Angebot einzuschätzen — bevor Sie überhaupt ein Gespräch führen."
+    "intro": "Die ehrliche Antwort: Es kommt darauf an. Es gibt aber grobe Preisspannen, typische Kostentreiber und ein paar Fragen, mit denen Sie ein Angebot einschätzen können — bevor Sie überhaupt ein Gespräch führen."
   },
   "keyTakeaway": {
     "title": "Kurz gesagt",
-    "text": "Eine solide Business-Website bewegt sich in Deutschland meist zwischen 2.000 € (einfache Freelancer-Lösung) und 15.000 € (vollständiges Agenturprojekt mit Konzept, Design, Technik und SEO-Basis). Der große Unterschied entsteht nicht durch die Website selbst, sondern durch Umfang, Individualität und wie viel Arbeit vor dem eigentlichen Design steckt."
+    "text": "Öffentliche Preisratgeber nennen für Deutschland sehr grob rund 800 bis 5.000 € bei Freelancern und rund 1.500 bis 20.000 € bei Agenturen, nach oben offen. Entscheidend sind Umfang, Individualität und wie viel Arbeit vor dem eigentlichen Design steckt. Das ist eine Marktorientierung, keine Preisgarantie."
   },
   "sections": [
     {
@@ -27,24 +27,25 @@
       ]
     },
     {
-      "heading": "Realistische Preisspannen in Deutschland",
+      "heading": "Preisspannen als Orientierung",
       "level": "h2",
       "paragraphs": [
-        "Nach mehreren unabhängigen Marktbeobachtungen deutscher Webdesign-Anbieter zeichnen sich grob folgende Größenordnungen ab — sie schwanken je nach Region, Erfahrung und Projektumfang, geben aber eine realistische Orientierung für ein erstes Gefühl, bevor konkrete Angebote eingeholt werden."
+        "Öffentlich zugängliche Preisratgeber zeigen für Deutschland grob die folgenden Größenordnungen (Quellen am Ende des Artikels). Die Angaben stammen von Anbietern, weichen je nach Quelle deutlich voneinander ab und hängen vom Umfang ab — sie eignen sich als erstes Gefühl, nicht als Kalkulation.",
+        "Unsere eigenen Pakete und Einstiegspreise stehen getrennt auf der Preisseite. Dieser Artikel soll vor allem helfen, Angebote verschiedener Anbieter einzuordnen."
       ]
     },
     {
       "heading": "Freelancer",
       "level": "h3",
       "paragraphs": [
-        "Einfache Visitenkarten-Websites mit wenigen Seiten liegen häufig zwischen 1.000 € und 5.000 €. Eine solide Business-Website mit individuellerem Aufbau bewegt sich meist zwischen 2.000 € und 8.000 €. Freelancer haben in der Regel weniger Fixkosten als Agenturen, wodurch der Preis für ein vergleichbares Ergebnis oft niedriger ausfällt."
+        "Für eine einfache Business-Website mit 5 bis 10 Seiten nennt Wix (Stand 2025) 800 bis 3.000 € bei Freelancern, für einen Onepager 500 bis 1.500 €. Das Portal experte.de nennt für Freelancer insgesamt 1.000 bis 5.000 €, nach oben offen. Stundensätze liegen laut beiden Quellen bei etwa 50 bis 100 €. Freelancer haben in der Regel weniger Fixkosten als Agenturen, wodurch der Preis für ein vergleichbares Ergebnis oft niedriger ausfällt."
       ]
     },
     {
       "heading": "Agenturen",
       "level": "h3",
       "paragraphs": [
-        "Agenturen kalkulieren meist zwischen 3.500 € und 18.000 €, abhängig davon, wie viele Personen am Projekt beteiligt sind (Konzept, Design, Entwicklung, Text, Projektmanagement) und wie umfassend SEO-Grundlagen, Struktur-Planung und technische Umsetzung mitgedacht werden. Größere Projekte mit individuellen Funktionen oder mehrsprachigem Aufbau bewegen sich häufig am oberen Ende dieser Spanne oder darüber."
+        "Bei Agenturen nennt Wix für eine einfache Business-Website 2.000 bis 8.000 €, für einen Onepager 1.000 bis 3.000 €. experte.de nennt insgesamt 1.500 bis 20.000 €, nach oben offen, bei Stundensätzen von 80 bis 150 €. Entscheidend ist, wie viele Personen am Projekt beteiligt sind (Konzept, Design, Entwicklung, Text, Projektmanagement) und wie umfassend SEO-Grundlagen, Struktur-Planung und technische Umsetzung mitgedacht werden. Shops, individuelle Funktionen oder mehrsprachige Auftritte liegen deutlich darüber."
       ]
     },
     {
@@ -92,7 +93,7 @@
       },
       {
         "question": "Was ist mit laufenden Kosten nach dem Launch?",
-        "answer": "Rechnen Sie zusätzlich mit laufenden Kosten für Hosting, Domain und gegebenenfalls Wartung — üblich sind hier Beträge im niedrigen zweistelligen bis mittleren Bereich pro Monat, je nach Umfang."
+        "answer": "Rechnen Sie zusätzlich mit laufenden Kosten für Domain, Hosting und gegebenenfalls Wartung. Die Höhe hängt stark vom Anbieter und Umfang ab — lassen Sie sich diese Posten im Angebot getrennt ausweisen."
       }
     ]
   },
@@ -112,5 +113,15 @@
   ],
   "images": {
     "coverAlt": "Ansteigende Säulen aus Marmor, Stahl und rotem Glas auf einem Schreibtisch neben einem Taschenrechner – Sinnbild für steigende Kosten."
-  }
+  },
+  "sources": [
+    {
+      "label": "Wix Blog — Website erstellen lassen: Preise (Richtwerte 2025)",
+      "url": "https://de.wix.com/blog/beitrag/website-erstellen-lassen-preise"
+    },
+    {
+      "label": "experte.de — Homepage erstellen lassen",
+      "url": "https://www.experte.de/homepage-erstellen/erstellen-lassen"
+    }
+  ]
 }

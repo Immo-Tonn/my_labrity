@@ -65,7 +65,7 @@ export default function ServicesPageClient({
               delay: 0.1,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400 md:text-xs"
+            className="mb-4 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400 md:text-xs"
           >
             {content.servicesSection.kicker}
           </motion.p>
@@ -118,7 +118,7 @@ export default function ServicesPageClient({
         {/* NEW: links to the 5 dedicated service pages — added alongside the
             existing content above, never replacing it. */}
         <div className="mt-20 border-t border-[#e7e2d9] pt-16 md:mt-24 md:pt-20 xl:mt-28 xl:pt-24">
-          <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400 md:text-xs">
+          <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400 md:text-xs">
             {content.serviceLinks.kicker}
           </p>
 
@@ -163,7 +163,7 @@ export default function ServicesPageClient({
 
         {/* FINAL CTA */}
         <div className="mt-20 border border-[#e7e2d9] bg-[#111111] px-6 py-14 text-center shadow-[0_30px_70px_rgba(0,0,0,0.12)] md:mt-24 md:px-10 md:py-16 xl:mt-28 xl:px-16 xl:py-20">
-          <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-white/45 md:text-xs">
+          <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.28em] text-white/60 md:text-xs">
             {content.cta.kicker}
           </p>
 

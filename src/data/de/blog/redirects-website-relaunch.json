@@ -1,12 +1,12 @@
 {
   "slug": "redirects-website-relaunch",
   "meta": {
-    "title": "Redirects beim Website Relaunch: Was Unternehmen über 301-Weiterleitungen wissen sollten | Labrity",
-    "description": "301-Weiterleitungen einfach erklärt für Unternehmer: was sie tun, warum sie beim Relaunch wichtig sind, und was laut Google Search Central dabei zu beachten ist."
+    "title": "301-Weiterleitungen beim Relaunch einfach erklärt | Labrity",
+    "description": "301-Weiterleitungen einfach erklärt: was sie tun, warum sie beim Relaunch wichtig sind und was Google Search Central dazu sagt."
   },
   "breadcrumbLabel": "301-Weiterleitungen",
   "publishedDate": "2026-09-19",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-16",
   "hero": {
     "kicker": "Wissen",
     "title": "Redirects beim Website Relaunch: Was Unternehmen über 301-Weiterleitungen wissen sollten",
@@ -37,7 +37,7 @@
       "heading": "Was Google Search Central offiziell dazu sagt",
       "level": "h2",
       "paragraphs": [
-        "Laut der offiziellen Dokumentation von Google Search Central verursachen permanente Weiterleitungen (301 oder 308) selbst keinen Verlust an Linkwert. Die Empfehlung lautet außerdem, Weiterleitungsketten kurz zu halten — direkt zur finalen neuen Seite, nicht über mehrere Zwischenstationen — und Weiterleitungen nach einem Umzug mindestens ein Jahr lang aktiv zu lassen."
+        "Laut der offiziellen Google-Search-Central-Dokumentation zu Site-Umzügen verursachen permanente Weiterleitungen (301 oder 308) selbst keinen Verlust an Linkwert. Die Empfehlung lautet außerdem, Weiterleitungsketten kurz zu halten — direkt zur finalen neuen Seite, nicht über mehrere Zwischenstationen — und Weiterleitungen nach einem Umzug mindestens ein Jahr lang aktiv zu lassen."
       ]
     },
     {
@@ -53,6 +53,10 @@
     {
       "label": "Google Search Central — Redirects and Google Search",
       "url": "https://developers.google.com/search/docs/crawling-indexing/301-redirects"
+    },
+    {
+      "label": "Google Search Central — Site Moves and Migrations",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes"
     }
   ],
   "faq": {

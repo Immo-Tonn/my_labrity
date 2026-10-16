@@ -1,12 +1,12 @@
 {
   "slug": "website-relaunch-seo-verluste-vermeiden",
   "meta": {
-    "title": "Website Relaunch ohne SEO-Verluste: Worauf Unternehmen achten sollten | Labrity",
-    "description": "Ein Relaunch birgt reale SEO-Risiken. So lassen sich die häufigsten Fehler vermeiden — basierend auf der offiziellen Google-Dokumentation zu Site-Umzügen."
+    "title": "Website Relaunch ohne SEO-Verluste: Worauf achten? | Labrity",
+    "description": "Ein Relaunch birgt SEO-Risiken. So vermeiden Sie die häufigsten Fehler – basierend auf der Google-Dokumentation zu Site-Umzügen."
   },
   "breadcrumbLabel": "Relaunch & SEO",
   "publishedDate": "2026-09-19",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-16",
   "hero": {
     "kicker": "Wissen",
     "title": "Website Relaunch ohne SEO-Verluste: Worauf Unternehmen achten sollten",
@@ -30,7 +30,7 @@
       "heading": "Was Google zu Weiterleitungen tatsächlich sagt",
       "level": "h2",
       "paragraphs": [
-        "Google Search Central hält in der offiziellen Dokumentation zu Weiterleitungen fest, dass permanente Weiterleitungen (301 oder 308) keinen Verlust an PageRank verursachen. Das bedeutet: Eine korrekt gesetzte Weiterleitung von einer alten auf eine neue URL ist technisch keine Bedrohung für Ihre Sichtbarkeit.",
+        "Google Search Central hält in der offiziellen Dokumentation zu Site-Umzügen fest, dass permanente Weiterleitungen (301 oder 308) keinen Verlust an PageRank verursachen. Das bedeutet: Eine korrekt gesetzte Weiterleitung von einer alten auf eine neue URL ist technisch keine Bedrohung für Ihre Sichtbarkeit.",
         "Google empfiehlt außerdem, Weiterleitungsketten möglichst kurz zu halten — im Idealfall direkt auf das finale Ziel, nicht über mehrere Zwischenschritte. Und: Weiterleitungen sollten nach einem Umzug mindestens ein Jahr lang bestehen bleiben, damit Suchmaschinen und eingehende Links aus dem Web genug Zeit haben, sich auf die neue Struktur einzustellen.",
         "Ebenfalls wichtig: Ein Site-Umzug gilt aus Googles Sicht erst dann als abgeschlossen, wenn der Googlebot jede URL sowohl der alten als auch der neuen Seite mindestens einmal besucht hat. Das kann je nach Größe der Website unterschiedlich lange dauern — es gibt dafür keine feste Zeitspanne."
       ]

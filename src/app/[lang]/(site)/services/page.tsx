@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 
 import { getData } from '@/utils/getData';
 import { buildHreflangAlternates } from '@/utils/hreflangAlternates';
+import { buildOpenGraph } from '@/utils/openGraph';
+import { buildTwitter } from '@/utils/twitter';
 import { isLanguage, withLocale, type Language } from '@/utils/localizedPath';
 import ServicesPageClient, {
   type ServicesPageData,
@@ -12,24 +14,24 @@ const PATH = '/services';
 
 const META: Record<Language, { title: string; description: string }> = {
   de: {
-    title: 'Leistungen | Labrity',
+    title: 'Leistungen: Webdesign, Entwicklung & Relaunch | Labrity',
     description:
-      'Von starken Landingpages bis zu exklusiven Webauftritten entwickeln wir digitale Lösungen, die Vertrauen schaffen, Wirkung erzeugen und neue Kunden gewinnen.',
+      'Von der Landingpage bis zum vollständigen Webauftritt: Wir entwickeln Websites, die Vertrauen schaffen und neue Anfragen erleichtern.',
   },
   en: {
-    title: 'Services | Labrity',
+    title: 'Services: Web Design, Development & Relaunch | Labrity',
     description:
-      'From high-converting landing pages to exclusive websites, we create digital solutions that build trust, create impact and attract new clients.',
+      'From landing pages to complete websites: we build sites that create trust and make it easier for new clients to get in touch.',
   },
   ru: {
-    title: 'Услуги | Labrity',
+    title: 'Услуги: веб-дизайн, разработка и обновление | Labrity',
     description:
-      'От сильных лендингов до эксклюзивных сайтов — мы создаём цифровые решения, которые вызывают доверие, формируют впечатление и помогают привлекать новых клиентов.',
+      'От лендингов до полноценных сайтов: мы создаём сайты, которые вызывают доверие и облегчают новым клиентам обращение к вам.',
   },
   ua: {
-    title: 'Послуги | Labrity',
+    title: 'Послуги: веб-дизайн, розробка й оновлення | Labrity',
     description:
-      'Від сильних лендінгів до ексклюзивних сайтів — ми створюємо цифрові рішення, які викликають довіру, формують враження та залучають нових клієнтів.',
+      'Від лендінгів до повноцінних сайтів: ми створюємо сайти, що викликають довіру й полегшують новим клієнтам звернення до вас.',
   },
 };
 
@@ -52,11 +54,8 @@ export async function generateMetadata({
       canonical,
       languages: buildHreflangAlternates(PATH),
     },
-    openGraph: {
-      url: canonical,
-      title,
-      description,
-    },
+    openGraph: await buildOpenGraph(params.lang, canonical, title, description),
+    twitter: await buildTwitter(params.lang, title, description),
   };
 }
 
