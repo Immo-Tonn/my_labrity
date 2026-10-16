@@ -112,12 +112,12 @@ export default function Quiz() {
       {/* PROGRESS */}
       <div className="mb-9">
         <div className="mb-4 flex items-center justify-between gap-4">
-          <p className="font-montserrat text-[11px] font-medium uppercase tracking-[0.26em] text-black/40">
+          <p className="font-montserrat text-xs font-medium uppercase tracking-[0.26em] text-black/60">
             {quiz.progress} {step + 1} / {quiz.questions.length}
           </p>
 
           {question.multiple && (
-            <p className="hidden font-montserrat text-[10px] uppercase tracking-[0.18em] text-black/35 md:block">
+            <p className="hidden font-montserrat text-xs uppercase tracking-[0.18em] text-black/60 md:block">
               {labels.multiple}
             </p>
           )}
@@ -164,7 +164,7 @@ export default function Quiz() {
                     ? 'border-black bg-black text-white shadow-[0_16px_35px_rgba(0,0,0,0.12)]'
                     : 'border-[#e7e2d9] bg-white/35 text-neutral-600 hover:border-black hover:bg-white/70 hover:text-black'
                 }
-              `}
+`}
             >
               <span>{option}</span>
 
@@ -199,7 +199,7 @@ export default function Quiz() {
             text-black transition duration-300
             hover:border-black hover:bg-black hover:text-white
             disabled:pointer-events-none disabled:opacity-30
-          "
+"
         >
           {labels.back}
         </button>
@@ -216,7 +216,7 @@ export default function Quiz() {
             hover:-translate-y-[1px] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]
             disabled:cursor-not-allowed disabled:border-black/20 disabled:bg-black/20 disabled:text-black/40 disabled:shadow-none
             md:w-auto
-          "
+"
         >
           {quiz.next}
         </button>

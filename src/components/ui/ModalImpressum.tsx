@@ -23,7 +23,7 @@ export const ModalImpressum: React.FC<ModalImpressumProps> = ({ nameBtn }) => {
 
   const btnClasses = classnames(
     'block cursor-pointer font-montserrat font-normal not-italic transition duration-300',
-    'text-[12px] uppercase tracking-[0.14em] text-[#18352b]/55 hover:text-[#18352b]',
+    'text-[12px] uppercase tracking-[0.14em] text-[#18352b]/75 hover:text-[#18352b]',
   );
 
   return (

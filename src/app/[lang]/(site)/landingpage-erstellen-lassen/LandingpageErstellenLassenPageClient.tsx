@@ -94,7 +94,7 @@ export default function LandingpageErstellenLassenPageClient({
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-[1180px]"
         >
-          <p className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/45 md:text-[13px]">
+          <p className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/60 md:text-[13px]">
             {content.hero.kicker}
           </p>
           <h1 className="font-tenor text-[42px] leading-[1] tracking-[-0.04em] text-black md:text-[72px] xl:text-[96px]">
@@ -124,7 +124,7 @@ export default function LandingpageErstellenLassenPageClient({
       <section className="border-t border-[#e7e2d9] py-24 md:py-32">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
           <div className="mx-auto max-w-[860px] text-center">
-            <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+            <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
               {content.whenSection.kicker}
             </p>
             <h2 className="font-tenor text-[36px] leading-[1.05] tracking-[-0.03em] text-black md:text-[60px]">
@@ -157,7 +157,7 @@ export default function LandingpageErstellenLassenPageClient({
       <section className="border-t border-[#e7e2d9] py-24 md:py-32">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
           <div className="mx-auto max-w-[860px] text-center">
-            <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+            <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
               {content.principlesSection.kicker}
             </p>
             <h2 className="font-tenor text-[36px] leading-[1.05] tracking-[-0.03em] text-black md:text-[60px]">
@@ -186,7 +186,7 @@ export default function LandingpageErstellenLassenPageClient({
       {/* PROOF */}
       <section className="border-t border-[#e7e2d9] py-24 md:py-32">
         <div className="mx-auto max-w-[1100px] px-5 text-center md:px-8">
-          <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+          <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
             {content.proofSection.kicker}
           </p>
           <h2 className="font-tenor text-[34px] leading-[1.05] tracking-[-0.02em] text-black md:text-[52px]">
@@ -195,7 +195,7 @@ export default function LandingpageErstellenLassenPageClient({
           <p className="mx-auto mt-6 max-w-[640px] font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
             {content.proofSection.description}
           </p>
-          <p className="mt-4 font-montserrat text-[12px] uppercase tracking-[0.24em] text-black/50">
+          <p className="mt-4 font-montserrat text-[12px] uppercase tracking-[0.24em] text-black/60">
             {content.proofSection.projectLabel}
           </p>
           <LocalizedLink
@@ -210,7 +210,7 @@ export default function LandingpageErstellenLassenPageClient({
       {/* DISAMBIGUATION */}
       <section className="border-t border-[#e7e2d9] py-16 md:py-20">
         <div className="mx-auto max-w-[1100px] px-5 md:px-8">
-          <p className="mb-3 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+          <p className="mb-3 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
             {content.disambiguation.kicker}
           </p>
           <h2 className="mb-8 font-tenor text-[26px] leading-[1.1] text-black md:text-[34px]">
@@ -239,7 +239,7 @@ export default function LandingpageErstellenLassenPageClient({
       {/* FAQ */}
       <section className="border-t border-[#e7e2d9] py-24 md:py-32">
         <div className="mx-auto max-w-[1300px] px-5 md:px-8">
-          <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+          <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
             {content.faq.kicker}
           </p>
           <h2 className="font-tenor text-[36px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
@@ -249,7 +249,7 @@ export default function LandingpageErstellenLassenPageClient({
           <div className="mt-12 divide-y divide-[#e7e2d9] border-y border-[#e7e2d9]">
             {content.faq.items.map(item => (
               <details key={item.question} className="group py-7">
-                <summary className="flex cursor-pointer list-none items-start justify-between gap-6">
+                <summary className="flex min-h-[44px] cursor-pointer list-none items-start justify-between gap-6">
                   <span className="font-tenor text-[22px] leading-[1.1] tracking-[-0.02em] text-black md:text-[30px]">
                     {item.question}
                   </span>
@@ -272,7 +272,7 @@ export default function LandingpageErstellenLassenPageClient({
       {content.relatedArticles && (
         <section className="border-t border-[#e7e2d9] py-16 md:py-20">
           <div className="mx-auto max-w-[1100px] px-5 md:px-8">
-            <p className="mb-3 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+            <p className="mb-3 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
               {content.relatedArticles.kicker}
             </p>
             <h2 className="mb-8 font-tenor text-[26px] leading-[1.1] text-black md:text-[34px]">
@@ -302,7 +302,7 @@ export default function LandingpageErstellenLassenPageClient({
       {/* CTA */}
       <section className="px-5 py-24 md:px-8 md:py-32">
         <div className="mx-auto max-w-[1500px] bg-[#111111] px-6 py-14 text-center text-white shadow-[0_30px_70px_rgba(0,0,0,0.12)] md:px-10 md:py-20">
-          <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-white/40">
+          <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60">
             {content.cta.kicker}
           </p>
           <h2 className="mx-auto max-w-[900px] font-tenor text-[38px] leading-[1] tracking-[-0.04em] md:text-[68px]">
@@ -328,7 +328,7 @@ export default function LandingpageErstellenLassenPageClient({
 
           <LocalizedLink
             href="/services"
-            className="mt-7 inline-block font-montserrat text-[12px] uppercase tracking-[0.14em] text-white/50 underline-offset-4 transition duration-300 hover:text-white hover:underline"
+            className="mt-7 inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-white/60 underline-offset-4 transition duration-300 hover:text-white hover:underline"
           >
             {content.cta.backToServicesLabel}
           </LocalizedLink>

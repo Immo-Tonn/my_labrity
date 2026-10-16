@@ -136,6 +136,7 @@ export default async function RootLayout({
 
   const lang: Language = params.lang;
   const meta = await getData('meta', lang);
+  const common = await getData('common', lang);
   const structuredData = buildStructuredData(lang, meta.description);
 
   return (
@@ -168,9 +169,15 @@ export default async function RootLayout({
 
         <LanguageProvider lang={lang}>
           <QuizProvider>
+            <a href="#main-content" className="skip-link">
+              {common.skipLink}
+            </a>
+
             <Header />
 
-            <div className="flex-grow">{children}</div>
+            <div id="main-content" tabIndex={-1} className="flex-grow">
+              {children}
+            </div>
 
             <Footer />
 

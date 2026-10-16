@@ -128,6 +128,10 @@ export type HomeData = {
 const STATS_STEP = 200;
 const STATS_PAUSE = 2000;
 
+const prefersReducedMotion = () =>
+  typeof window !== 'undefined' &&
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 const parseStatTarget = (value: string) => Number(value.match(/\d+/)?.[0] || 1);
 
 const formatStatValue = (value: string, count: number) => {
@@ -155,6 +159,13 @@ function usePairedStatCounters(
     let leaderInterval: number;
     let followerInterval: number;
     let timeoutId: number;
+
+    // Reduced motion: show the final values, no looping count-up.
+    if (prefersReducedMotion()) {
+      setLeaderCount(leaderTarget);
+      setFollowerCount(followerTarget);
+      return;
+    }
 
     const startCycle = () => {
       leader = 1;
@@ -214,6 +225,11 @@ function useSoloStatCounter(target: number): number {
     let current = 1;
     let intervalId: number;
     let timeoutId: number;
+
+    if (prefersReducedMotion()) {
+      setCount(target);
+      return;
+    }
 
     const startCounting = () => {
       current = 1;
@@ -356,18 +372,18 @@ export default function HomePageClient({
       <main className="relative min-h-screen">
         <div className="container">
           {/* HERO */}
-          <section className="flex min-h-[calc(100vh-100px)] flex-col pb-[60px] pt-[150px] md:min-h-[calc(100vh-120px)] md:pb-[80px] md:pt-[165px] xl:min-h-screen xl:pb-[110px] xl:pt-[210px]">
+          <section className="flex min-h-[calc(100vh-100px)] flex-col pb-[60px] pt-[150px] md:min-h-[calc(100vh-120px)] md:pb-[80px] md:pt-[165px] xl:min-h-screen xl:pb-[72px] xl:pt-[150px]">
             <div className="flex flex-1 flex-col gap-16 xl:flex-row xl:items-center xl:justify-between">
               <div className="w-full max-w-[700px]">
-                <p className="mb-6 font-montserrat text-[11px] uppercase tracking-[0.34em] text-neutral-400 md:text-xs">
+                <p className="mb-6 font-montserrat text-xs uppercase tracking-[0.34em] text-neutral-400">
                   {content.hero.kicker}
                 </p>
 
                 <h1
                   className={`font-tenor leading-[0.96] text-black ${
                     lang === 'ru' || lang === 'ua'
-                      ? 'text-[42px] md:text-[62px] xl:text-[88px]'
-                      : 'text-[48px] md:text-[72px] xl:text-[108px]'
+                      ? 'text-[42px] md:text-[62px] xl:text-[clamp(52px,4.4vw,72px)]'
+                      : 'text-[48px] md:text-[72px] xl:text-[clamp(64px,5.6vw,92px)]'
                   }`}
                 >
                   {content.hero.titleFirst}
@@ -420,7 +436,7 @@ export default function HomePageClient({
           <section className="border-t border-[#e7e2d9] py-[64px] md:py-[82px] xl:py-[96px]">
             <div className="mb-9 flex flex-col gap-6 md:mb-11 md:flex-row md:items-end md:justify-between">
               <div>
-                <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
+                <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-400">
                   {content.featuredProjects.kicker}
                 </p>
 
@@ -431,7 +447,7 @@ export default function HomePageClient({
 
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-3">
-                  <span className="font-montserrat text-[10px] uppercase tracking-[0.28em] text-neutral-400">
+                  <span className="font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-400">
                     {content.featuredProjects.scrollLabel}
                   </span>
 
@@ -442,7 +458,7 @@ export default function HomePageClient({
 
                 <LocalizedLink
                   href="/portfolio"
-                  className="hidden w-fit items-center gap-4 font-montserrat text-[11px] font-medium uppercase tracking-[0.3em] text-neutral-600 transition duration-300 hover:text-black md:inline-flex"
+                  className="hidden w-fit items-center gap-4 font-montserrat text-xs font-medium uppercase tracking-[0.3em] text-neutral-600 transition duration-300 hover:text-black md:inline-flex"
                 >
                   {content.featuredProjects.button}
                   <span className="h-px w-12 bg-neutral-400 transition duration-300 hover:w-20 hover:bg-black" />
@@ -516,7 +532,7 @@ export default function HomePageClient({
 
             <LocalizedLink
               href="/portfolio"
-              className="mt-6 inline-flex w-fit items-center gap-4 font-montserrat text-[11px] font-medium uppercase tracking-[0.3em] text-neutral-600 transition duration-300 hover:text-black md:hidden"
+              className="mt-6 inline-flex w-fit items-center gap-4 font-montserrat text-xs font-medium uppercase tracking-[0.3em] text-neutral-600 transition duration-300 hover:text-black md:hidden"
             >
               {content.featuredProjects.button}
               <span className="h-px w-12 bg-neutral-400 transition duration-300 hover:w-20 hover:bg-black" />
@@ -527,7 +543,7 @@ export default function HomePageClient({
           <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[140px]">
             <div className="mx-auto max-w-[1024px]">
               <div className="mx-auto max-w-[860px] text-center">
-                <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
+                <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-400">
                   {content.audience.kicker}
                 </p>
 
@@ -579,7 +595,7 @@ export default function HomePageClient({
                   <div className="mt-2 h-px w-10 bg-white/35" />
 
                   <div className="mt-12">
-                    <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-white/35">
+                    <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60">
                       {content.quizPreview.kicker}
                     </p>
 
@@ -595,7 +611,7 @@ export default function HomePageClient({
                   </div>
 
                   <div className="mt-12 border-t border-white/20 pt-7">
-                    <p className="font-montserrat text-[11px] uppercase tracking-[0.26em] text-white/35">
+                    <p className="font-montserrat text-xs uppercase tracking-[0.26em] text-white/60">
                       {content.quizPreview.note}
                     </p>
                   </div>
@@ -603,7 +619,7 @@ export default function HomePageClient({
 
                 <div className="flex flex-col justify-between px-7 py-10 md:px-10 md:py-14 xl:px-12 xl:py-16">
                   <div>
-                    <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+                    <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
                       {content.quizPreview.kicker}
                     </p>
 
@@ -652,7 +668,7 @@ export default function HomePageClient({
           {/* DIFFERENCES */}
           <section className="border-t border-[#e7e2d9] py-[88px] md:py-[108px] xl:py-[124px]">
             <div className="mx-auto max-w-[860px] text-center">
-              <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
+              <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-400">
                 {content.differences.kicker}
               </p>
 
@@ -698,7 +714,7 @@ export default function HomePageClient({
           {/* STATS */}
           <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[150px]">
             <div className="mx-auto max-w-[760px] text-center">
-              <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
+              <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-400">
                 {content.stats.kicker}
               </p>
 
@@ -720,7 +736,7 @@ export default function HomePageClient({
           <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[140px]">
             <div className="grid gap-12 xl:grid-cols-[0.85fr_1.15fr] xl:items-end xl:gap-20">
               <div>
-                <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
+                <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-400">
                   {content.processPreview.kicker}
                 </p>
 
@@ -766,7 +782,7 @@ export default function HomePageClient({
           {/* CTA */}
           <section className="py-[90px] md:py-[110px] xl:py-[150px]">
             <div className="bg-[#111111] px-6 py-12 text-center shadow-[0_30px_70px_rgba(0,0,0,0.12)] transition duration-500 hover:shadow-[0_38px_80px_rgba(0,0,0,0.16)] md:px-10 md:py-16 xl:px-16 xl:py-20">
-              <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-white/45 md:text-xs">
+              <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.28em] text-white/60">
                 {content.cta.kicker}
               </p>
 
