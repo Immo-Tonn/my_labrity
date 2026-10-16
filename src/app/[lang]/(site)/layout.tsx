@@ -139,6 +139,13 @@ export default async function RootLayout({
   const common = await getData('common', lang);
   const structuredData = buildStructuredData(lang, meta.description);
 
+  // Navigation + footer copy are loaded on the server so the first HTML
+  // response already contains <nav>, the page links and <footer>.
+  const [navLinks, common] = await Promise.all([
+    getData('header', lang),
+    getData('common', lang),
+  ]);
+
   return (
     <html lang={HREFLANG_CODES[lang]} className="!scroll-smooth">
       <body
@@ -173,13 +180,22 @@ export default async function RootLayout({
               {common.skipLink}
             </a>
 
-            <Header />
+            <Header
+              navLinks={navLinks}
+              socials={common.socials}
+              burgerLabel={common.layout['aria-label'].burger}
+              closeLabel={common.layout['aria-label'].btnClose}
+            />
 
             <div id="main-content" tabIndex={-1} className="flex-grow">
               {children}
             </div>
 
-            <Footer />
+            <Footer
+              webLabel={common.layout.footer.web}
+              policyLabel={common.footerLabelPolicy}
+              impressumLabel={common.footerLabelImpressum}
+            />
 
             <LiveActivity />
 

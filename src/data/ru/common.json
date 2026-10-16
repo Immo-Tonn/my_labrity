@@ -58,18 +58,6 @@
   },
   "footerLabelPolicy": "Политика конфиденциальности",
   "footerLabelImpressum": "Юридическая информация",
-  "footer": [
-    {
-      "name": "company1",
-      "path": "#",
-      "ariaLabel": "Ссылка на сайт партнёра"
-    },
-    {
-      "name": "company2",
-      "path": "#",
-      "ariaLabel": "Ссылка на сайт партнёра"
-    }
-  ],
   "blogUi": {
     "breadcrumbParent": "Блог",
     "readLabel": "Читать",

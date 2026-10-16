@@ -22,12 +22,14 @@ type ProjectItem = {
   description: string;
   imageVariant: 'first' | 'second';
   href: string;
+  kind?: 'client' | 'concept';
 };
 
 type FeaturedProjectItem = {
   title: string;
   category: string;
   image: string;
+  kind?: 'client' | 'concept';
 };
 
 type FeaturedProjectsData = {
@@ -114,6 +116,7 @@ export type HomeData = {
     title: string;
     description: string;
     button: string;
+    conceptLabel: string;
     items: ProjectItem[];
   };
   cta: {
@@ -364,6 +367,8 @@ export default function HomePageClient({
         loop
         muted
         playsInline
+        preload="metadata"
+        poster="/hero-poster.webp"
         className="fixed inset-0 -z-10 h-full w-full object-cover opacity-40"
       >
         <source src="/hero.mp4" type="video/mp4" />
@@ -420,7 +425,7 @@ export default function HomePageClient({
               <div className="2xl:min-w-[950px] 2xl:max-w-[1300px] relative mx-auto w-full xl:mx-0 xl:w-[52vw] xl:min-w-[420px] xl:max-w-[900px]">
                 <div className="2xl:-translate-y-[70px] relative w-full -translate-y-[20px] xl:-translate-y-[55px]">
                   <Image
-                    src="/images/hero/hero-devices.png"
+                    src="/images/hero/hero-devices.webp"
                     alt="Modern responsive website design"
                     width={886}
                     height={670}
@@ -493,6 +498,12 @@ export default function HomePageClient({
                     <h3 className="mt-4 font-tenor text-[27px] leading-none text-black md:text-[30px]">
                       {project.title}
                     </h3>
+
+                    {project.kind === 'concept' && (
+                      <p className="mt-3 inline-block border border-neutral-400 px-2 py-1 font-montserrat text-[9px] uppercase tracking-[0.2em] text-neutral-600">
+                        {content.portfolio.conceptLabel}
+                      </p>
+                    )}
 
                     <div className="mt-5 flex items-center gap-4 font-montserrat text-[10px] uppercase tracking-[0.28em] text-neutral-500">
                       <span>{content.featuredProjects.projectButton}</span>

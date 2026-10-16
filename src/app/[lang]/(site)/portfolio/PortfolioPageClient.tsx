@@ -9,6 +9,7 @@ type ProjectItem = {
   imageVariant: 'first' | 'second';
   href: string;
   image?: string;
+  kind?: 'client' | 'concept';
 };
 
 type SeoBlockItem = {
@@ -33,6 +34,7 @@ export type PortfolioData = {
   seoBlock: SeoBlockItem[];
   marquee: string[];
   projectLabel: string;
+  conceptLabel: string;
   projectButton: string;
   projectTags: string[];
   categories: Record<string, string>;
@@ -203,6 +205,12 @@ export default function PortfolioPageClient({
                             <p className="mt-3 break-words font-montserrat text-xs uppercase tracking-[0.3em] text-neutral-500">
                               {content.projectLabel}
                             </p>
+
+                            {item.kind === 'concept' && (
+                              <p className="mt-3 inline-block border border-neutral-400 px-2 py-1 font-montserrat text-[10px] uppercase tracking-[0.2em] text-neutral-600">
+                                {content.conceptLabel}
+                              </p>
+                            )}
                           </div>
 
                           <a
