@@ -303,16 +303,47 @@
     "primaryButton": "Start Project",
     "secondaryButton": "Custom Offer"
   },
-  "platformTeaser": {
-    "kicker": "In development",
-    "title": "Booking and management for your business.",
-    "description": "Customers book online, your team works in one calendar, jobs and invoices run in one place. We are building the platform ourselves. Register to be informed first.",
-    "bullets": [
-      "Online booking around the clock",
-      "A calendar without double bookings",
-      "Customers, jobs and invoices in one place"
+  "webAppsShowcase": {
+    "kicker": "Web apps & custom software",
+    "title": "Your business does not need another spreadsheet. It needs a solution.",
+    "subtitle": "Whether it is appointment booking, staff management, customer management or custom business processes, we build web apps that adapt to your company. Not the other way round.",
+    "pairsTitle": "Typical situations. Matching solutions.",
+    "problemLabel": "Problem",
+    "solutionLabel": "Solution",
+    "pairs": [
+      {
+        "problem": "Customers phone you just to book an appointment.",
+        "solution": "Online booking where your customers choose free times themselves."
+      },
+      {
+        "problem": "Working hours are noted by hand and data gets lost.",
+        "solution": "A custom time-tracking system with a clear admin area."
+      },
+      {
+        "problem": "Enquiries, customers, invoices and appointments sit in different spreadsheets and programs.",
+        "solution": "One central system built around your company's workflows."
+      },
+      {
+        "problem": "You cannot see how orders, revenue and workload are developing.",
+        "solution": "A dashboard with key figures, reports and analytics."
+      }
     ],
-    "more": "Learn more",
-    "interest": "Register your interest"
+    "capabilitiesTitle": "What we build for you",
+    "capabilities": [
+      "Online booking and reservation systems",
+      "Calendars and schedule management",
+      "Customer management (CRM)",
+      "Time tracking and staff management",
+      "Orders, enquiries, quotes and invoices",
+      "Financial dashboards, reports and analytics",
+      "Customer and employee portals",
+      "Admin areas and process automation",
+      "Custom web apps and SaaS platforms"
+    ],
+    "primary": "Request a custom solution",
+    "secondary": "More about web apps",
+    "caption": "Concept illustrations of interfaces, not client projects.",
+    "alt1": "Illustration: dashboard with appointments, employees and revenue on a laptop",
+    "alt2": "Illustration: appointment calendar on a laptop and online booking on a smartphone"
   }
 }

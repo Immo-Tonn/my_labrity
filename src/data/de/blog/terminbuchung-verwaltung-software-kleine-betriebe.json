@@ -2,15 +2,15 @@
   "slug": "terminbuchung-verwaltung-software-kleine-betriebe",
   "meta": {
     "title": "Terminbuchung & Verwaltung: Software für kleine Betriebe | Labrity",
-    "description": "Wie Online-Terminbuchung und Verwaltungssoftware kleinen Betrieben Zeit sparen, was sie leisten sollte und woran Sie eine passende Lösung erkennen."
+    "description": "Buchungs- und Verwaltungssoftware für kleine Betriebe: was sie leistet, Standardsoftware oder individuelle Web-App und woran Sie die passende Lösung erkennen."
   },
   "breadcrumbLabel": "Software für kleine Betriebe",
   "publishedDate": "2026-10-16",
-  "updatedDate": "2026-10-16",
+  "updatedDate": "2026-10-17",
   "hero": {
     "kicker": "Wissen",
     "title": "Wie Buchungs- und Verwaltungssoftware kleinen Betrieben hilft.",
-    "intro": "Termine per Telefon, Aufträge auf Zetteln, Kunden in einer Excel-Liste: In vielen kleinen Betrieben läuft der Alltag so. Dieser Beitrag zeigt, was moderne Software dabei übernehmen kann, worauf Sie bei der Auswahl achten sollten und wo wir selbst ansetzen."
+    "intro": "Termine per Telefon, Aufträge auf Zetteln, Kunden in einer Excel-Liste: In vielen kleinen Betrieben läuft der Alltag so. Dieser Beitrag zeigt, was eine Buchungs- und Verwaltungssoftware übernehmen kann, wann Standardsoftware reicht und wann sich eine individuelle Web-App für Ihren Betrieb lohnt."
   },
   "keyTakeaway": {
     "title": "Kurz gesagt",
@@ -83,33 +83,52 @@
       ]
     },
     {
-      "heading": "Standardsoftware oder eigene Lösung?",
+      "heading": "Standardsoftware oder individuelle Lösung?",
       "level": "h2",
       "paragraphs": [
-        "Standardsoftware ist schnell eingerichtet und für typische Abläufe oft ausreichend. Sie stößt an Grenzen, wenn Ihr Ablauf von der Norm abweicht, wenn Sie Funktionen bezahlen, die Sie nicht nutzen, oder wenn die Anbindung an Ihre Website unflexibel ist. Eine individuelle Lösung passt genauer, braucht aber Planung und ein Budget. Welche Variante sinnvoll ist, hängt vom Umfang und von Ihren Abläufen ab."
+        "Standardsoftware ist schnell eingerichtet und für typische Abläufe oft ausreichend. Sie stößt an Grenzen, wenn Ihr Ablauf von der Norm abweicht, wenn mehrere Programme nicht zusammenarbeiten oder wenn Sie Funktionen bezahlen, die Sie nicht nutzen.",
+        "Eine individuelle Lösung wird um Ihre Abläufe herum gebaut: Terminbuchung, Kundenverwaltung, Zeiterfassung, Aufträge und Auswertungen in einem System. Sie braucht Planung und ein Budget, passt dafür genau zu Ihrem Betrieb und lässt sich erweitern, wenn Sie wachsen."
       ]
     },
     {
-      "heading": "Unsere eigene Plattform in Entwicklung",
+      "heading": "Wann sich eine individuelle Web-App lohnt",
       "level": "h2",
       "paragraphs": [
-        "Labrity entwickelt selbst eine solche Plattform für Dienstleistungsbetriebe wie Werkstätten, Salons und Studios. Sie ist noch in Entwicklung und derzeit nicht allgemein verfügbar. Folgende Bausteine sind bereits umgesetzt und werden getestet:"
+        "Eine individuelle Entwicklung ist sinnvoll, wenn mindestens einer dieser Punkte auf Sie zutrifft. Wir prüfen mit Ihnen ehrlich, ob eine Standardlösung reicht oder eine Web-App Sinn ergibt: Beides hat seinen Platz."
       ],
       "checklist": [
-        "Öffentliche Buchungsseite, die sich auch als Button in die eigene Website einbinden lässt",
-        "Kalender mit Konfliktprüfung, Pufferzeiten und Verfügbarkeit nach Arbeitszeiten, Urlaub und Betriebsschließungen",
-        "Kunden-, Mitarbeiter- und Leistungsverwaltung",
-        "Warteliste und Posteingang für Buchungsereignisse",
-        "Ablauf von der Anfrage über Angebot und Auftrag bis zur Rechnung",
-        "Rollen, Rechte und getrennte Sichtbarkeit sensibler Daten",
-        "Oberfläche auf Deutsch, Englisch, Ukrainisch und Russisch"
+        "Ihre Abläufe lassen sich in keinem Standardprogramm sauber abbilden.",
+        "Sie nutzen mehrere Tools und übertragen Daten von Hand dazwischen.",
+        "Kunden sollen online buchen, und das System soll zu Ihrem Auftritt und Ihren Regeln passen.",
+        "Mitarbeiter brauchen eigene Zugänge, etwa für Zeiterfassung oder Einsatzplanung.",
+        "Sie möchten Kennzahlen zu Aufträgen, Umsatz und Auslastung an einem Ort sehen."
+      ],
+      "links": [
+        {
+          "label": "Web-App entwickeln lassen: Leistung ansehen",
+          "href": "/web-app-entwickeln-lassen"
+        },
+        {
+          "label": "Alle Leistungen von Labrity",
+          "href": "/services"
+        },
+        {
+          "label": "Individuelle Lösung anfragen",
+          "href": "/contact"
+        }
       ]
     },
     {
-      "heading": "Was noch fehlt",
-      "level": "h3",
+      "heading": "So läuft ein Projekt mit Labrity ab",
+      "level": "h2",
       "paragraphs": [
-        "Weitere Funktionen wie E-Mail-Benachrichtigungen, Kalender-Synchronisierung und Online-Zahlung sind geplant, aber noch nicht umgesetzt. Wenn Sie sich für die Lösung interessieren, melden Sie sich gern: Wir halten Sie zum Stand auf dem Laufenden. Eine Zusage zu Funktionen, Terminen oder Preisen geben wir erst, wenn sie feststehen."
+        "Im ersten Gespräch beschreiben Sie Ihren Ablauf. Wir klären Umfang, Rollen und Funktionen, erstellen ein persönliches Angebot, entwickeln die Anwendung in Abstimmung mit Ihnen und gehen gemeinsam live. Einen Festpreis nennen wir erst, wenn der Umfang klar ist."
+      ],
+      "links": [
+        {
+          "label": "Gespräch unverbindlich anfragen",
+          "href": "/contact"
+        }
       ]
     },
     {
@@ -147,24 +166,24 @@
         "answer": "Häufig ja, etwa als Button oder eigener Bereich. Was technisch passt, klären wir nach einem Blick auf Ihre Website."
       },
       {
-        "question": "Ist Ihre Plattform schon verfügbar?",
-        "answer": "Nein, sie ist noch in Entwicklung. Sie können Ihr Interesse melden, wir informieren Sie über den Stand."
+        "question": "Wie läuft die Entwicklung einer individuellen Lösung ab?",
+        "answer": "Zuerst klären wir Ihren Ablauf, dann Umfang und Funktionen. Danach erhalten Sie ein persönliches Angebot, wir entwickeln die Anwendung mit Abstimmung der Zwischenstände und gehen gemeinsam live."
       },
       {
         "question": "Entwickeln Sie auch eine individuelle Lösung für meinen Betrieb?",
-        "answer": "Ja, als Web-App nach Absprache. Der Preis richtet sich nach Funktionen und Umfang und wird individuell angeboten."
+        "answer": "Ja. Wir entwickeln Web-Apps wie Buchungssysteme, Kundenverwaltung oder Zeiterfassung nach Ihren Abläufen. Der Preis richtet sich nach Funktionen und Umfang und wird individuell angeboten."
       }
     ]
   },
   "relatedService": {
-    "label": "Eine Web-App für Ihren Betrieb?",
-    "description": "Online-Kalender, Zeiterfassung oder Verwaltung: Erzählen Sie uns von Ihrem Ablauf.",
-    "linkLabel": "Mehr zu Web-Apps",
-    "href": "/web-apps"
+    "label": "Eine individuelle Web-App für Ihren Betrieb?",
+    "description": "Terminbuchung, Kundenverwaltung, Zeiterfassung und Auswertungen: Erzählen Sie uns von Ihrem Ablauf.",
+    "linkLabel": "Web-App entwickeln lassen",
+    "href": "/web-app-entwickeln-lassen"
   },
   "secondaryLink": {
-    "label": "Alle Leistungen im Überblick",
-    "href": "/services"
+    "label": "Individuelle Lösung anfragen",
+    "href": "/contact"
   },
   "relatedArticles": [
     "website-briefing-checkliste",

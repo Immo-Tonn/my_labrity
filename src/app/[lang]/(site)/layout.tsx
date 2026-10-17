@@ -225,7 +225,7 @@ export default async function RootLayout({
                     href: item.href,
                     label: item.title,
                   })),
-                { href: '/web-apps', label: common.footerLabelWebApps },
+                { href: '/web-app-entwickeln-lassen', label: common.footerLabelWebApps },
               ]}
               webLabel={common.layout.footer.web}
               policyLabel={common.footerLabelPolicy}

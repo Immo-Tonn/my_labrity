@@ -42,6 +42,18 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 308);
   }
 
+  // Old working URL of the Web-Apps service page -> final SEO URL.
+  const oldWebAppsRe = /^(\/(?:en|ua|ru))?\/web-apps(?=\/|$)/;
+  if (oldWebAppsRe.test(pathname)) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname.replace(
+      oldWebAppsRe,
+      '$1/web-app-entwickeln-lassen',
+    );
+
+    return NextResponse.redirect(url, 308);
+  }
+
   const firstSegment = pathname.split('/')[1];
 
   if (PREFIXED_LOCALES.includes(firstSegment)) {

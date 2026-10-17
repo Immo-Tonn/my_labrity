@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { BadgeCheck, Gem, PanelsTopLeft, Telescope } from 'lucide-react';
 
 import SeasonalSnow from '@/components/SeasonalSnow';
@@ -104,13 +105,21 @@ export type HomeData = {
     description: string;
     items: StatItem[];
   };
-  platformTeaser: {
+  webAppsShowcase: {
     kicker: string;
     title: string;
-    description: string;
-    bullets: string[];
-    more: string;
-    interest: string;
+    subtitle: string;
+    pairsTitle: string;
+    problemLabel: string;
+    solutionLabel: string;
+    pairs: { problem: string; solution: string }[];
+    capabilitiesTitle: string;
+    capabilities: string[];
+    primary: string;
+    secondary: string;
+    caption: string;
+    alt1: string;
+    alt2: string;
   };
   processPreview: {
     kicker: string;
@@ -798,41 +807,121 @@ export default function HomePageClient({
             </div>
           </section>
 
-          {/* PLATFORM TEASER */}
-          <section className="border-t border-[#e7e2d9] py-[70px] md:py-[90px] xl:py-[110px]">
-            <div className="grid gap-10 border border-[#e7e2d9] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[1fr_1fr] xl:items-center xl:p-14">
-              <div>
-                <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-500">
-                  {content.platformTeaser.kicker}
-                </p>
-                <h2 className="font-tenor text-[34px] leading-[1.04] text-black md:text-[48px] xl:text-[60px]">
-                  {content.platformTeaser.title}
-                </h2>
-                <p className="mt-5 font-montserrat text-sm leading-7 text-neutral-600 md:text-base">
-                  {content.platformTeaser.description}
-                </p>
+          {/* WEB APPS / CUSTOM SOFTWARE SHOWCASE */}
+          <section className="py-[70px] md:py-[90px] xl:py-[120px]">
+            <div className="relative overflow-hidden bg-[#111111] text-white shadow-[0_30px_70px_rgba(0,0,0,0.12)]">
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] [background-size:56px_56px]"
+              />
+
+              <div className="relative grid gap-14 px-6 py-14 md:px-10 md:py-20 xl:grid-cols-[1.05fr_0.95fr] xl:items-center xl:gap-16 xl:px-16 xl:py-24">
+                <motion.div
+                  initial={{ opacity: 0, y: 28 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-80px' }}
+                  transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60">
+                    {content.webAppsShowcase.kicker}
+                  </p>
+                  <h2 className="font-tenor text-[36px] leading-[1.02] tracking-[-0.03em] md:text-[56px] xl:text-[68px]">
+                    {content.webAppsShowcase.title}
+                  </h2>
+                  <p className="mt-6 max-w-[620px] font-montserrat text-[15px] leading-8 text-white/70 md:text-[17px]">
+                    {content.webAppsShowcase.subtitle}
+                  </p>
+                  <div className="mt-9 flex flex-wrap items-center gap-4">
+                    <LocalizedLink
+                      href="/contact"
+                      className="inline-flex min-h-[56px] items-center justify-center border border-white bg-white px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-black transition duration-300 hover:-translate-y-[1px]"
+                    >
+                      {content.webAppsShowcase.primary}
+                    </LocalizedLink>
+                    <LocalizedLink
+                      href="/web-app-entwickeln-lassen"
+                      className="inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-white/70 underline underline-offset-4 transition duration-300 hover:text-white"
+                    >
+                      {content.webAppsShowcase.secondary}
+                    </LocalizedLink>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 36 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-80px' }}
+                  transition={{
+                    duration: 0.9,
+                    delay: 0.1,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="relative mx-auto w-full max-w-[600px] pb-12"
+                >
+                  <Image
+                    src="/images/web-apps/dashboard-overview.webp"
+                    alt={content.webAppsShowcase.alt1}
+                    width={882}
+                    height={887}
+                    sizes="(min-width: 1280px) 520px, (min-width: 768px) 560px, 90vw"
+                    className="ml-auto h-auto w-[88%] border border-white/15 shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
+                  />
+                  <Image
+                    src="/images/web-apps/booking-calendar-mobile.webp"
+                    alt={content.webAppsShowcase.alt2}
+                    width={882}
+                    height={887}
+                    sizes="(min-width: 1280px) 330px, (min-width: 768px) 340px, 56vw"
+                    className="absolute bottom-0 left-0 h-auto w-[58%] border border-white/20 shadow-[0_30px_80px_rgba(0,0,0,0.55)]"
+                  />
+                </motion.div>
               </div>
 
-              <div>
-                <ul className="space-y-3 border-l border-black pl-5 font-montserrat text-[15px] leading-7 text-black">
-                  {content.platformTeaser.bullets.map(item => (
-                    <li key={item}>{item}</li>
+              <div className="relative border-t border-white/10 px-6 py-12 md:px-10 md:py-16 xl:px-16">
+                <h3 className="font-tenor text-[26px] leading-[1.1] md:text-[36px]">
+                  {content.webAppsShowcase.pairsTitle}
+                </h3>
+
+                <div className="mt-8 grid gap-px border border-white/15 bg-white/15 md:grid-cols-2 xl:grid-cols-4">
+                  {content.webAppsShowcase.pairs.map(pair => (
+                    <div
+                      key={pair.problem}
+                      className="flex flex-col bg-[#111111] p-6"
+                    >
+                      <p className="font-montserrat text-[11px] uppercase tracking-[0.24em] text-white/45">
+                        {content.webAppsShowcase.problemLabel}
+                      </p>
+                      <p className="mt-2 flex-1 font-montserrat text-[14px] leading-7 text-white/60">
+                        {pair.problem}
+                      </p>
+                      <div className="my-4 h-px w-10 bg-white/30" />
+                      <p className="font-montserrat text-[11px] uppercase tracking-[0.24em] text-white">
+                        {content.webAppsShowcase.solutionLabel}
+                      </p>
+                      <p className="mt-2 font-tenor text-[19px] leading-[1.3] text-white">
+                        {pair.solution}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                <h3 className="mt-14 font-tenor text-[22px] leading-[1.1] md:text-[28px]">
+                  {content.webAppsShowcase.capabilitiesTitle}
+                </h3>
+                <ul className="mt-6 flex flex-wrap gap-2">
+                  {content.webAppsShowcase.capabilities.map(item => (
+                    <li
+                      key={item}
+                      className="border border-white/20 px-4 py-2 font-montserrat text-[13px] leading-5 text-white/80"
+                    >
+                      {item}
+                    </li>
                   ))}
                 </ul>
-                <div className="mt-8 flex flex-wrap items-center gap-4">
-                  <LocalizedLink
-                    href="/web-apps"
-                    className="inline-flex min-h-[56px] items-center justify-center border border-black bg-black px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-[1px]"
-                  >
-                    {content.platformTeaser.more}
-                  </LocalizedLink>
-                  <LocalizedLink
-                    href="/contact"
-                    className="inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-black/70 underline underline-offset-4 transition duration-300 hover:text-black"
-                  >
-                    {content.platformTeaser.interest}
-                  </LocalizedLink>
-                </div>
+
+                <p className="mt-8 font-montserrat text-xs leading-6 text-white/45">
+                  {content.webAppsShowcase.caption}
+                </p>
               </div>
             </div>
           </section>

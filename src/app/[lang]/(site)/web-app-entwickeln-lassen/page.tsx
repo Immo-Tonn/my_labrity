@@ -10,28 +10,30 @@ import { SITE_URL } from '@/utils/siteUrl';
 import { isLanguage, withLocale, type Language } from '@/utils/localizedPath';
 import WebAppsPageClient, { type WebAppsData } from './WebAppsPageClient';
 
-const PATH = '/web-apps';
+const PATH = '/web-app-entwickeln-lassen';
 
+// Titles stay brand-light and keyword-first; descriptions are written for the
+// click (value + what is covered + next step), not stuffed with keywords.
 const META: Record<Language, { title: string; description: string }> = {
   de: {
-    title: 'Web-Apps & individuelle Business-Lösungen | Labrity',
+    title: 'Web-App entwickeln lassen: individuelle Software | Labrity',
     description:
-      'Individuelle Web-Apps für Ihren Betrieb: Online-Terminbuchung, Zeiterfassung, Kunden- und Auftragsverwaltung, Admin-Bereich. Preis auf Anfrage.',
+      'Web-App entwickeln lassen: Terminbuchung, CRM, Zeiterfassung und Auswertungen als individuelle Software für Ihr Unternehmen. Persönliches Angebot.',
   },
   en: {
-    title: 'Web Apps & Custom Business Solutions | Labrity',
+    title: 'Custom Web App Development for Businesses | Labrity',
     description:
-      'Custom web apps for your business: online booking, time tracking, customer and order management, admin area. Price on request.',
+      'Have a web app developed: online booking, CRM, time tracking and analytics as custom software for your business in Germany. Personal quote.',
   },
   ru: {
-    title: 'Веб-приложения и бизнес-решения на заказ | Labrity',
+    title: 'Разработка веб-приложений на заказ в Германии | Labrity',
     description:
-      'Индивидуальные веб-приложения для бизнеса: онлайн-запись, учёт рабочего времени, клиенты и заказы, админ-панель. Цена по запросу.',
+      'Разработка веб-приложений на заказ: онлайн-запись, CRM, учёт рабочего времени и аналитика под процессы вашей компании. Персональное предложение.',
   },
   ua: {
-    title: 'Вебзастосунки та бізнес-рішення на замовлення | Labrity',
+    title: 'Розробка вебзастосунків на замовлення в Німеччині | Labrity',
     description:
-      'Індивідуальні вебзастосунки для бізнесу: онлайн-запис, облік робочого часу, клієнти й замовлення, адмін-панель. Ціна за запитом.',
+      'Розробка вебзастосунків на замовлення: онлайн-запис, CRM, облік робочого часу та аналітика під процеси вашої компанії. Персональна пропозиція.',
   },
 };
 
@@ -64,6 +66,7 @@ export default async function WebAppsPage({ params }: { params: PageParams }) {
 
   const initialData: WebAppsData = await getData('web-apps', params.lang);
   const { title, description } = META[params.lang];
+  const url = `${SITE_URL}${withLocale(PATH, params.lang)}`;
 
   const breadcrumbSchema = buildBreadcrumbSchema([
     {
@@ -73,16 +76,29 @@ export default async function WebAppsPage({ params }: { params: PageParams }) {
     { name: initialData.hero.kicker, url: withLocale(PATH, params.lang) },
   ]);
 
-  // Service without any offer/price: pricing is "on request" by design.
+  // Service without any offer/price (pricing is "on request" by design). The
+  // catalog lists exactly the building blocks that are shown on the page.
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: title,
+    name: initialData.hero.title,
     description,
     serviceType: initialData.hero.kicker,
     provider: { '@id': `${SITE_URL}/#organization` },
-    areaServed: ['DE'],
-    url: `${SITE_URL}${withLocale(PATH, params.lang)}`,
+    areaServed: { '@type': 'Country', name: 'Germany' },
+    url,
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: initialData.tasks.title,
+      itemListElement: initialData.tasks.items.map(item => ({
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: item.title,
+          description: item.description,
+        },
+      })),
+    },
   };
 
   return (

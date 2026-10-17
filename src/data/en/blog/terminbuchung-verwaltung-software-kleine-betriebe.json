@@ -2,15 +2,15 @@
   "slug": "terminbuchung-verwaltung-software-kleine-betriebe",
   "meta": {
     "title": "Booking & Management Software for Small Businesses | Labrity",
-    "description": "How online booking and management software saves small businesses time, what it should offer and how to recognise a suitable solution."
+    "description": "Booking and management software for small businesses: what it does, standard software or a custom web app, and how to recognise the right solution."
   },
   "breadcrumbLabel": "Software for small businesses",
   "publishedDate": "2026-10-16",
-  "updatedDate": "2026-10-16",
+  "updatedDate": "2026-10-17",
   "hero": {
     "kicker": "Knowledge",
     "title": "How booking and management software helps small businesses.",
-    "intro": "Appointments by phone, jobs on paper slips, customers in a spreadsheet: that is how everyday work looks in many small businesses. This article shows what modern software can take over, what to look for when choosing, and where we ourselves come in."
+    "intro": "Appointments by phone, jobs on paper slips, customers in a spreadsheet: that is how everyday work looks in many small businesses. This article shows what booking and management software can take over, when standard software is enough and when a custom web app pays off for your business."
   },
   "keyTakeaway": {
     "title": "In short",
@@ -86,30 +86,49 @@
       "heading": "Standard software or a custom solution?",
       "level": "h2",
       "paragraphs": [
-        "Standard software is quick to set up and often sufficient for typical workflows. It reaches its limits when your workflow deviates from the norm, when you pay for features you do not use, or when the connection to your website is inflexible. A custom solution fits more precisely, but needs planning and a budget. Which option makes sense depends on scope and your workflow."
+        "Standard software is quick to set up and often sufficient for typical workflows. It reaches its limits when your workflow deviates from the norm, when several programs do not work together, or when you pay for features you do not use.",
+        "A custom solution is built around your workflows: appointment booking, customer management, time tracking, orders and reporting in one system. It needs planning and a budget, but fits your business exactly and can grow with you."
       ]
     },
     {
-      "heading": "Our own platform in development",
+      "heading": "When a custom web app pays off",
       "level": "h2",
       "paragraphs": [
-        "Labrity is developing such a platform itself for service businesses such as workshops, salons and studios. It is still in development and not generally available at the moment. The following building blocks are already implemented and being tested:"
+        "Custom development makes sense if at least one of these points applies to you. We will tell you honestly whether standard software is enough or a web app makes sense: both have their place."
       ],
       "checklist": [
-        "A public booking page that can also be embedded as a button in your own website",
-        "Calendar with conflict checks, buffer times and availability based on working hours, holidays and business closures",
-        "Management of customers, employees and services",
-        "Waiting list and an inbox for booking events",
-        "Flow from request through quote and job to invoice",
-        "Roles, permissions and separate visibility for sensitive data",
-        "Interface in German, English, Ukrainian and Russian"
+        "Your workflows cannot be mapped cleanly in any standard program.",
+        "You use several tools and copy data between them by hand.",
+        "Customers should book online, and the system should match your brand and your rules.",
+        "Employees need their own logins, for example for time tracking or scheduling.",
+        "You want key figures on orders, revenue and workload in one place."
+      ],
+      "links": [
+        {
+          "label": "Custom web app development: see the service",
+          "href": "/web-app-entwickeln-lassen"
+        },
+        {
+          "label": "All Labrity services",
+          "href": "/services"
+        },
+        {
+          "label": "Request a custom solution",
+          "href": "/contact"
+        }
       ]
     },
     {
-      "heading": "What is still missing",
-      "level": "h3",
+      "heading": "How a project with Labrity works",
+      "level": "h2",
       "paragraphs": [
-        "Further features such as e-mail notifications, calendar synchronisation and online payment are planned but not yet implemented. If you are interested in the solution, get in touch: we will keep you updated on progress. We give no commitment on features, dates or prices until they are settled."
+        "In the first conversation you describe your workflow. We clarify scope, roles and features, prepare a personal quote, build the application in agreement with you and go live together. We only name a fixed price once the scope is clear."
+      ],
+      "links": [
+        {
+          "label": "Request a non-binding conversation",
+          "href": "/contact"
+        }
       ]
     },
     {
@@ -147,24 +166,24 @@
         "answer": "Often yes, for example as a button or a separate area. What fits technically we clarify after looking at your website."
       },
       {
-        "question": "Is your platform already available?",
-        "answer": "No, it is still in development. You can register your interest and we will inform you about progress."
+        "question": "How does developing a custom solution work?",
+        "answer": "First we clarify your workflow, then scope and features. After that you receive a personal quote, we build the application with regular reviews of interim results and go live together."
       },
       {
         "question": "Do you also build a custom solution for my business?",
-        "answer": "Yes, as a web app by arrangement. The price depends on features and scope and is quoted individually."
+        "answer": "Yes. We build web apps such as booking systems, customer management or time tracking around your workflows. The price depends on features and scope and is quoted individually."
       }
     ]
   },
   "relatedService": {
-    "label": "A web app for your business?",
-    "description": "Online calendar, time tracking or management: tell us about your workflow.",
-    "linkLabel": "More about web apps",
-    "href": "/web-apps"
+    "label": "A custom web app for your business?",
+    "description": "Appointment booking, customer management, time tracking and analytics: tell us about your workflow.",
+    "linkLabel": "Custom web app development",
+    "href": "/web-app-entwickeln-lassen"
   },
   "secondaryLink": {
-    "label": "All services at a glance",
-    "href": "/services"
+    "label": "Request a custom solution",
+    "href": "/contact"
   },
   "relatedArticles": [
     "website-briefing-checkliste",

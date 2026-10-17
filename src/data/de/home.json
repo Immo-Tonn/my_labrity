@@ -330,16 +330,47 @@
       }
     ]
   },
-  "platformTeaser": {
-    "kicker": "In Entwicklung",
-    "title": "Terminbuchung und Verwaltung für Ihren Betrieb.",
-    "description": "Kunden buchen online, Ihr Team arbeitet in einem Kalender, Aufträge und Rechnungen laufen an einem Ort. Wir entwickeln die Plattform selbst. Melden Sie sich, um zuerst informiert zu werden.",
-    "bullets": [
-      "Online-Terminbuchung rund um die Uhr",
-      "Kalender ohne Doppelbuchungen",
-      "Kunden, Aufträge und Rechnungen an einem Ort"
+  "webAppsShowcase": {
+    "kicker": "Web-Apps & Software nach Maß",
+    "title": "Ihr Unternehmen braucht keine weitere Tabelle. Sondern eine Lösung.",
+    "subtitle": "Ob Terminbuchung, Mitarbeiterverwaltung, Kundenmanagement oder individuelle Geschäftsprozesse – wir entwickeln Web-Apps, die sich Ihrem Unternehmen anpassen. Nicht umgekehrt.",
+    "pairsTitle": "Typische Situationen. Passende Lösungen.",
+    "problemLabel": "Problem",
+    "solutionLabel": "Lösung",
+    "pairs": [
+      {
+        "problem": "Kunden rufen an, nur um einen Termin zu vereinbaren.",
+        "solution": "Online-Terminbuchung, bei der Ihre Kunden freie Zeiten selbst wählen."
+      },
+      {
+        "problem": "Arbeitszeiten werden von Hand notiert, Daten gehen verloren.",
+        "solution": "Eine eigene Zeiterfassung mit übersichtlichem Admin-Bereich."
+      },
+      {
+        "problem": "Anfragen, Kunden, Rechnungen und Termine liegen in verschiedenen Tabellen und Programmen.",
+        "solution": "Ein zentrales System, gebaut nach den Abläufen Ihres Unternehmens."
+      },
+      {
+        "problem": "Sie sehen nicht, wie sich Aufträge, Umsatz und Auslastung entwickeln.",
+        "solution": "Ein Dashboard mit Kennzahlen, Berichten und Auswertungen."
+      }
     ],
-    "more": "Mehr erfahren",
-    "interest": "Interesse anmelden"
+    "capabilitiesTitle": "Was wir für Sie entwickeln",
+    "capabilities": [
+      "Online-Terminbuchung und Buchungssysteme",
+      "Kalender und Terminplanung",
+      "Kundenverwaltung (CRM)",
+      "Zeiterfassung und Mitarbeiterverwaltung",
+      "Aufträge, Anfragen, Angebote und Rechnungen",
+      "Finanz-Dashboards, Berichte und Auswertungen",
+      "Kunden- und Mitarbeiterportale",
+      "Admin-Bereiche und Prozessautomatisierung",
+      "Individuelle Web-Apps und SaaS-Plattformen"
+    ],
+    "primary": "Individuelle Lösung anfragen",
+    "secondary": "Mehr über Web-Apps",
+    "caption": "Konzeptdarstellungen von Oberflächen, keine Kundenprojekte.",
+    "alt1": "Illustration: Dashboard mit Terminen, Mitarbeitern und Umsatz auf dem Laptop",
+    "alt2": "Illustration: Terminkalender am Laptop und Online-Terminbuchung auf dem Smartphone"
   }
 }

@@ -11,10 +11,27 @@ type Item = { title: string; description: string };
 type FaqItem = { question: string; answer: string };
 type LinkItem = { label: string; linkLabel: string; href: string };
 type UseCase = { audience: string; title: string; description: string };
+type Pair = { problem: string; solution: string };
 
 export type WebAppsData = {
   breadcrumbParentLabel: string;
-  hero: { kicker: string; title: string; description: string; button: string };
+  hero: {
+    kicker: string;
+    title: string;
+    description: string;
+    button: string;
+    secondary: string;
+  };
+  visual: { caption: string; alt1: string; alt2: string };
+  problems: {
+    kicker: string;
+    title: string;
+    description: string;
+    problemLabel: string;
+    solutionLabel: string;
+    items: Pair[];
+    note: string;
+  };
   tasks: { kicker: string; title: string; description: string; items: Item[] };
   useCases: {
     kicker: string;
@@ -22,16 +39,15 @@ export type WebAppsData = {
     description: string;
     items: UseCase[];
   };
-  visual: { caption: string; alt1: string; alt2: string };
-  costOfWaiting: {
+  why: {
     kicker: string;
     title: string;
     description: string;
-    items: Item[];
+    standardLabel: string;
+    customLabel: string;
+    rows: { standard: string; custom: string }[];
     note: string;
   };
-  interest: { title: string; description: string; button: string };
-  experience: { kicker: string; title: string; description: string };
   process: { kicker: string; title: string; items: Item[] };
   clarify: {
     kicker: string;
@@ -48,6 +64,7 @@ export type WebAppsData = {
     button: string;
     linkLabel: string;
   };
+  consult: { title: string; description: string; button: string };
   disambiguation: { kicker: string; title: string; items: LinkItem[] };
   faq: { kicker: string; title: string; items: FaqItem[] };
   relatedArticles: { kicker: string; title: string; items: LinkItem[] };
@@ -63,6 +80,9 @@ export type WebAppsData = {
 
 const kicker =
   'mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400';
+
+const primaryBtn =
+  'inline-flex min-h-[56px] items-center justify-center border border-black bg-black px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-[1px]';
 
 function LinkList({
   kickerText,
@@ -190,22 +210,75 @@ export default function WebAppsPageClient({
           <p className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/60 md:text-[13px]">
             {content.hero.kicker}
           </p>
-          <h1 className="font-tenor text-[38px] leading-[1.02] tracking-[-0.04em] text-black md:text-[68px] xl:text-[88px]">
+          <h1 className="font-tenor text-[34px] leading-[1.04] tracking-[-0.04em] text-black md:text-[60px] xl:text-[80px]">
             {content.hero.title}
           </h1>
           <p className="mt-8 max-w-[760px] font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[18px]">
             {content.hero.description}
           </p>
-          <LocalizedLink
-            href="/contact"
-            className="mt-10 inline-flex min-h-[56px] items-center justify-center border border-black bg-black px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-[1px]"
-          >
-            {content.hero.button}
-          </LocalizedLink>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <LocalizedLink href="/contact" className={primaryBtn}>
+              {content.hero.button}
+            </LocalizedLink>
+            <a
+              href="#situationen"
+              className="inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-black/70 underline underline-offset-4 transition duration-300 hover:text-black"
+            >
+              {content.hero.secondary}
+            </a>
+          </div>
         </motion.div>
       </section>
 
-      {/* VISUAL (illustrations) */}
+      {/* PROBLEMS -> SOLUTIONS */}
+      <section
+        id="situationen"
+        className="scroll-mt-24 border-t border-[#e7e2d9] py-24 md:py-32"
+      >
+        <div className="mx-auto max-w-[1500px] px-5 md:px-8">
+          <div className="max-w-[860px]">
+            <p className={kicker}>{content.problems.kicker}</p>
+            <h2 className="font-tenor text-[32px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
+              {content.problems.title}
+            </h2>
+            <p className="mt-6 font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
+              {content.problems.description}
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {content.problems.items.map((pair, index) => (
+              <div
+                key={pair.problem}
+                className="flex flex-col border border-[#e7e2d9] bg-white/55 p-7"
+              >
+                <span className="font-montserrat text-xs tracking-[0.28em] text-neutral-400">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <p className="mt-4 font-montserrat text-[11px] uppercase tracking-[0.24em] text-neutral-500">
+                  {content.problems.problemLabel}
+                </p>
+                <p className="mt-2 flex-1 font-montserrat text-[15px] leading-7 text-neutral-600">
+                  {pair.problem}
+                </p>
+                <div className="my-5 h-px w-12 bg-black/30" />
+                <p className="font-montserrat text-[11px] uppercase tracking-[0.24em] text-[#18352b]">
+                  {content.problems.solutionLabel}
+                </p>
+                <p className="mt-2 font-tenor text-[20px] leading-[1.25] text-black">
+                  {pair.solution}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-8 max-w-[760px] border-l border-black pl-5 font-montserrat text-[13px] leading-7 text-neutral-500">
+            {content.problems.note}
+          </p>
+        </div>
+      </section>
+
+      {/* VISUAL (concept illustrations) */}
       <section className="px-5 md:px-8">
         <div className="mx-auto max-w-[1500px]">
           <div className="grid gap-4 md:grid-cols-2">
@@ -236,12 +309,12 @@ export default function WebAppsPageClient({
         </div>
       </section>
 
-      {/* TASKS */}
+      {/* WHAT WE BUILD */}
       <section className="border-t border-[#e7e2d9] py-24 md:py-32">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
           <div className="mx-auto max-w-[860px] text-center">
             <p className={kicker}>{content.tasks.kicker}</p>
-            <h2 className="font-tenor text-[34px] leading-[1.05] tracking-[-0.03em] text-black md:text-[56px]">
+            <h2 className="font-tenor text-[32px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
               {content.tasks.title}
             </h2>
             <p className="mt-7 font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
@@ -249,7 +322,7 @@ export default function WebAppsPageClient({
             </p>
           </div>
 
-          <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {content.tasks.items.map(item => (
               <div
                 key={item.title}
@@ -264,68 +337,30 @@ export default function WebAppsPageClient({
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* COST OF WAITING */}
-      <section className="border-t border-[#e7e2d9] py-24 md:py-32">
-        <div className="mx-auto max-w-[1500px] px-5 md:px-8">
-          <div className="max-w-[860px]">
-            <p className={kicker}>{content.costOfWaiting.kicker}</p>
-            <h2 className="font-tenor text-[34px] leading-[1.05] tracking-[-0.03em] text-black md:text-[56px]">
-              {content.costOfWaiting.title}
-            </h2>
-            <p className="mt-6 font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
-              {content.costOfWaiting.description}
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {content.costOfWaiting.items.map((item, index) => (
-              <div
-                key={item.title}
-                className="border border-[#e7e2d9] bg-white/55 p-7"
-              >
-                <span className="font-montserrat text-xs tracking-[0.28em] text-neutral-500">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
-                <h3 className="mt-4 font-tenor text-[24px] leading-[1.1] text-black">
-                  {item.title}
-                </h3>
-                <p className="mt-3 font-montserrat text-[14px] leading-7 text-neutral-500">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-8 max-w-[760px] border-l border-black pl-5 font-montserrat text-[13px] leading-7 text-neutral-500">
-            {content.costOfWaiting.note}
-          </p>
-
-          <div className="mt-10 bg-[#111111] px-6 py-10 text-white md:px-10 md:py-12">
+          <div className="mt-12 bg-[#111111] px-6 py-10 text-white md:px-10 md:py-12">
             <h3 className="font-tenor text-[28px] leading-[1.05] md:text-[40px]">
-              {content.interest.title}
+              {content.consult.title}
             </h3>
             <p className="mt-4 max-w-[760px] font-montserrat text-[15px] leading-8 text-white/70 md:text-[17px]">
-              {content.interest.description}
+              {content.consult.description}
             </p>
             <LocalizedLink
               href="/contact"
               className="mt-8 inline-flex min-h-[56px] items-center justify-center border border-white bg-white px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-black transition duration-300 hover:-translate-y-[1px]"
             >
-              {content.interest.button}
+              {content.consult.button}
             </LocalizedLink>
           </div>
         </div>
       </section>
 
-      {/* USE CASES */}
+      {/* WHO IT IS FOR */}
       <section className="border-t border-[#e7e2d9] py-24 md:py-32">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
           <div className="max-w-[860px]">
             <p className={kicker}>{content.useCases.kicker}</p>
-            <h2 className="font-tenor text-[34px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
+            <h2 className="font-tenor text-[32px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
               {content.useCases.title}
             </h2>
             <p className="mt-6 font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
@@ -333,7 +368,7 @@ export default function WebAppsPageClient({
             </p>
           </div>
 
-          <div className="mt-12 grid gap-4 md:grid-cols-2">
+          <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {content.useCases.items.map(item => (
               <article
                 key={item.audience}
@@ -342,7 +377,7 @@ export default function WebAppsPageClient({
                 <p className="font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-500">
                   {item.audience}
                 </p>
-                <h3 className="mt-4 font-tenor text-[26px] leading-[1.1] tracking-[-0.02em] text-black md:text-[30px]">
+                <h3 className="mt-4 font-tenor text-[26px] leading-[1.1] tracking-[-0.02em] text-black md:text-[28px]">
                   {item.title}
                 </h3>
                 <p className="mt-4 font-montserrat text-[14px] leading-7 text-neutral-500 md:text-[15px]">
@@ -354,22 +389,48 @@ export default function WebAppsPageClient({
         </div>
       </section>
 
-      {/* EXPERIENCE */}
+      {/* WHY CUSTOM */}
       <section className="bg-black py-24 text-white md:py-32">
-        <div className="mx-auto grid max-w-[1600px] gap-12 px-5 md:px-8 xl:grid-cols-[1fr_0.9fr] xl:gap-20">
-          <div>
+        <div className="mx-auto max-w-[1500px] px-5 md:px-8">
+          <div className="max-w-[900px]">
             <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60">
-              {content.experience.kicker}
+              {content.why.kicker}
             </p>
-            <h2 className="font-tenor text-[40px] leading-[0.98] tracking-[-0.04em] md:text-[72px]">
-              {content.experience.title}
+            <h2 className="font-tenor text-[34px] leading-[1.02] tracking-[-0.04em] md:text-[64px]">
+              {content.why.title}
             </h2>
-          </div>
-          <div className="flex items-end">
-            <p className="max-w-[620px] font-montserrat text-[16px] leading-9 text-white/70 md:text-[19px]">
-              {content.experience.description}
+            <p className="mt-6 max-w-[720px] font-montserrat text-[15px] leading-8 text-white/70 md:text-[17px]">
+              {content.why.description}
             </p>
           </div>
+
+          <div className="mt-12 grid gap-px border border-white/15 bg-white/15 md:grid-cols-2">
+            <p className="bg-black px-6 py-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-white/50 md:px-8">
+              {content.why.standardLabel}
+            </p>
+            <p className="hidden bg-black px-6 py-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-white md:block md:px-8">
+              {content.why.customLabel}
+            </p>
+            {content.why.rows.map(row => (
+              <div key={row.standard} className="bg-black md:contents">
+                <p className="bg-black px-6 pb-3 pt-6 font-montserrat text-[15px] leading-7 text-white/55 md:px-8 md:py-6">
+                  {row.standard}
+                </p>
+                <div className="bg-black px-6 pb-6 pt-0 md:px-8 md:py-6">
+                  <p className="mb-2 font-montserrat text-[11px] uppercase tracking-[0.28em] text-white md:hidden">
+                    {content.why.customLabel}
+                  </p>
+                  <p className="font-tenor text-[20px] leading-[1.3] text-white">
+                    {row.custom}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-8 max-w-[760px] font-montserrat text-[13px] leading-7 text-white/55">
+            {content.why.note}
+          </p>
         </div>
       </section>
 
@@ -377,20 +438,20 @@ export default function WebAppsPageClient({
       <section className="border-t border-[#e7e2d9] py-24 md:py-32">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
           <p className={kicker}>{content.process.kicker}</p>
-          <h2 className="max-w-[860px] font-tenor text-[34px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
+          <h2 className="max-w-[860px] font-tenor text-[32px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
             {content.process.title}
           </h2>
 
-          <ol className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <ol className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
             {content.process.items.map((item, index) => (
               <li
                 key={item.title}
-                className="border border-[#e7e2d9] bg-white/45 p-7"
+                className="border border-[#e7e2d9] bg-white/45 p-6"
               >
                 <span className="font-montserrat text-xs tracking-[0.28em] text-neutral-500">
                   {String(index + 1).padStart(2, '0')}
                 </span>
-                <h3 className="mt-4 font-tenor text-[26px] leading-[1.1] text-black">
+                <h3 className="mt-4 font-tenor text-[24px] leading-[1.1] text-black">
                   {item.title}
                 </h3>
                 <p className="mt-3 font-montserrat text-[14px] leading-7 text-neutral-500">
@@ -407,7 +468,7 @@ export default function WebAppsPageClient({
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
           <div className="max-w-[860px]">
             <p className={kicker}>{content.clarify.kicker}</p>
-            <h2 className="font-tenor text-[34px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
+            <h2 className="font-tenor text-[32px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
               {content.clarify.title}
             </h2>
             <p className="mt-6 font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
@@ -451,10 +512,7 @@ export default function WebAppsPageClient({
                 {content.pricing.note}
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-4">
-                <LocalizedLink
-                  href="/contact"
-                  className="inline-flex min-h-[56px] items-center justify-center border border-black bg-black px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-[1px]"
-                >
+                <LocalizedLink href="/contact" className={primaryBtn}>
                   {content.pricing.button}
                 </LocalizedLink>
                 <LocalizedLink
@@ -469,17 +527,11 @@ export default function WebAppsPageClient({
         </div>
       </section>
 
-      <LinkList
-        kickerText={content.disambiguation.kicker}
-        title={content.disambiguation.title}
-        items={content.disambiguation.items}
-      />
-
       {/* FAQ */}
       <section className="border-t border-[#e7e2d9] py-24 md:py-32">
         <div className="mx-auto max-w-[1300px] px-5 md:px-8">
           <p className={kicker}>{content.faq.kicker}</p>
-          <h2 className="font-tenor text-[34px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
+          <h2 className="font-tenor text-[32px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
             {content.faq.title}
           </h2>
 
@@ -504,6 +556,12 @@ export default function WebAppsPageClient({
           </div>
         </div>
       </section>
+
+      <LinkList
+        kickerText={content.disambiguation.kicker}
+        title={content.disambiguation.title}
+        items={content.disambiguation.items}
+      />
 
       <LinkList
         kickerText={content.relatedArticles.kicker}

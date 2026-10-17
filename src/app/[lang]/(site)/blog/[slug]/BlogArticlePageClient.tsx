@@ -13,6 +13,7 @@ type Section = {
   level: 'h2' | 'h3';
   paragraphs: string[];
   checklist?: string[];
+  links?: { label: string; href: string }[];
 };
 
 type FaqItem = { question: string; answer: string };
@@ -179,6 +180,22 @@ export default function BlogArticlePageClient({
                       </p>
                     ))}
                   </div>
+
+                  {section.links && section.links.length > 0 && (
+                    <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+                      {section.links.map(link => (
+                        <li key={link.href}>
+                          <LocalizedLink
+                            href={link.href}
+                            className="inline-flex min-h-[44px] items-center gap-1 font-montserrat text-[13px] font-semibold uppercase tracking-[0.06em] text-black underline-offset-4 hover:underline"
+                          >
+                            {link.label}
+                            <ArrowUpRight size={14} strokeWidth={1.8} />
+                          </LocalizedLink>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
 
                   {section.checklist && (
                     <ul className="mt-6 space-y-3 border-t border-[#e7e2d9] pt-6">
