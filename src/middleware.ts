@@ -11,6 +11,11 @@ const PREFIXED_LOCALES = ['en', 'ua', 'ru'];
 // page at "/de/...".
 const explicitDefaultLocaleRe = /^\/de(?=\/|$)/;
 
+// "uk" is Ukrainian's real language code (used in hreflang), but our URL
+// segment is "/ua". Anyone guessing or linking "/uk/..." is sent to the real
+// Ukrainian page instead of a 404.
+const ukrainianAliasRe = /^\/uk(?=\/|$)/;
+
 export function middleware(request: NextRequest) {
   const { pathname: rawPathname } = request.nextUrl;
 
@@ -20,6 +25,13 @@ export function middleware(request: NextRequest) {
   // lowercase path also carries an explicit "/de" prefix, that prefix is
   // dropped in the same redirect to avoid a second hop.
   const pathname = rawPathname.toLowerCase();
+
+  if (ukrainianAliasRe.test(pathname)) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname.replace(ukrainianAliasRe, '/ua');
+
+    return NextResponse.redirect(url, 308);
+  }
 
   if (pathname !== rawPathname) {
     const url = request.nextUrl.clone();
