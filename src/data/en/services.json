@@ -112,5 +112,24 @@
         "description": "For entrepreneurs and brands who intentionally communicate a higher level."
       }
     ]
+  },
+  {
+    "_id": "7",
+    "title": "Web apps and custom business solutions",
+    "location": "For salons, workshops, small businesses and service providers",
+    "card": [
+      {
+        "subtitle": "No more paper slips and double bookings",
+        "description": "Online booking, time tracking, customer and order management in one application that fits your workflow. Instead of standard software with features you do not need."
+      },
+      {
+        "subtitle": "Separate logins for team and management",
+        "description": "Employees and managers work with matching permissions, and data lives in a database with an admin area."
+      },
+      {
+        "subtitle": "Price on request",
+        "description": "Every application is individual. After a conversation you receive a personal offer."
+      }
+    ]
   }
 ]

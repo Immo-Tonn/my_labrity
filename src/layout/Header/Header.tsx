@@ -7,18 +7,17 @@ import { Logo } from '@/components/ui/Logo';
 import { Navbar } from '@/components/ui/Navbar';
 import BurgerMenuIcon from '@/../public/icons/burger-menu.svg';
 import { BurgerMenu } from '@/components/ui/BurgerMenu';
+import type { NavLinkItem } from '@/components/ui/Navbar/types';
+import type { SocialLink } from '@/components/ui/Socials/types';
 
 import { useLanguage } from '@/utils/LanguageContext';
-import { getData } from '@/utils/getData';
 import { stripLocale, withLocale, type Language } from '@/utils/localizedPath';
 
-type CommonData = {
-  layout?: {
-    'aria-label'?: {
-      burger?: string;
-      btnClose?: string;
-    };
-  };
+type HeaderProps = {
+  navLinks: NavLinkItem[];
+  socials: SocialLink[];
+  burgerLabel: string;
+  closeLabel: string;
 };
 
 const languages: {
@@ -48,11 +47,15 @@ const languages: {
   },
 ];
 
-export function Header() {
+export function Header({
+  navLinks,
+  socials,
+  burgerLabel,
+  closeLabel,
+}: HeaderProps) {
   const { lang } = useLanguage();
   const pathname = usePathname();
 
-  const [common, setCommon] = useState<CommonData | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [hideHeader, setHideHeader] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -63,19 +66,6 @@ export function Header() {
 
   const currentLanguage =
     languages.find(language => language.code === lang) || languages[0];
-
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const data = await getData('common', lang);
-        setCommon(data);
-      } catch {
-        setCommon(null);
-      }
-    };
-
-    loadData();
-  }, [lang]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -138,7 +128,7 @@ export function Header() {
   return (
     <header
       className={classnames(
-        'fixed left-0 top-0 z-[50] w-full transition-transform duration-300',
+        'fixed inset-x-0 top-0 z-[50] transition-transform duration-300',
         'border-b border-[#e7e2d9]',
         hideHeader ? '-translate-y-full' : 'translate-y-0',
         scrolled
@@ -149,10 +139,13 @@ export function Header() {
       <div className="container relative flex items-center justify-between gap-6 xl:gap-10">
         <Logo path="header" onClick={closeMenu} className="shrink-0" />
 
-        <Navbar
-          variant="header"
-          className="hidden lg:flex lg:flex-1 lg:justify-center lg:text-[13px] lg:font-medium lg:uppercase lg:tracking-[0.22em] lg:text-black"
-        />
+        <nav className="hidden lg:flex lg:flex-1 lg:justify-center">
+          <Navbar
+            variant="header"
+            navLinks={navLinks}
+            className="lg:text-[13px] lg:font-medium lg:uppercase lg:tracking-[0.22em] lg:text-black"
+          />
+        </nav>
 
         <div
           ref={languageRef}
@@ -204,14 +197,22 @@ export function Header() {
 
         <button
           onClick={openMenu}
-          aria-label={common?.layout?.['aria-label']?.burger || 'menu'}
+          aria-label={burgerLabel}
           className="text-black transition-all duration-300 hover:scale-110 active:scale-95 lg:hidden"
         >
           <BurgerMenuIcon width={30} height={30} />
         </button>
       </div>
 
-      {isOpen && <BurgerMenu isOpen={isOpen} onClose={closeMenu} />}
+      {isOpen && (
+        <BurgerMenu
+          isOpen={isOpen}
+          onClose={closeMenu}
+          navLinks={navLinks}
+          socials={socials}
+          closeLabel={closeLabel}
+        />
+      )}
     </header>
   );
 }

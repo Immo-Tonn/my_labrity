@@ -29,40 +29,58 @@ const useFocusTrap = <T extends HTMLElement>(
     lastFocusedElem.current = document.activeElement as HTMLElement | null;
     lastFocusedElem.current?.blur();
 
-    const focusableElems = target.querySelectorAll(
-      TABBABLE_ELEMS + tabbableElems,
-    );
+    // Re-queried on every Tab press (not captured once here) so the trap
+    // keeps working if the panel's content changes while it's open — e.g.
+    // async data swapping in more nav links after the initial mount would
+    // otherwise leave first/last pointing at stale, no-longer-boundary
+    // elements and let Tab escape into the page behind it.
+    const getBoundaryElements = () => {
+      const focusableElems = target.querySelectorAll(
+        TABBABLE_ELEMS + tabbableElems,
+      );
 
-    const numFocusableElems = focusableElems.length;
+      if (focusableElems.length === 0) return null;
 
-    if (numFocusableElems === 0) return;
+      return {
+        first: focusableElems[0] as HTMLElement,
+        last: focusableElems[focusableElems.length - 1] as HTMLElement,
+      };
+    };
 
-    const firstElement = focusableElems[0] as HTMLElement;
-    const lastElement = focusableElems[numFocusableElems - 1] as HTMLElement;
+    const initialBoundary = getBoundaryElements();
 
-    if (initialFocus === 'first') {
-      firstElement.focus();
-    }
+    if (initialBoundary) {
+      if (initialFocus === 'first') {
+        initialBoundary.first.focus();
+      }
 
-    if (typeof initialFocus === 'number') {
-      if (initialFocus >= 0 && initialFocus < numFocusableElems) {
-        const elem = focusableElems[initialFocus] as HTMLElement;
-        elem.focus();
+      if (typeof initialFocus === 'number') {
+        const focusableElems = target.querySelectorAll(
+          TABBABLE_ELEMS + tabbableElems,
+        );
+
+        if (initialFocus >= 0 && initialFocus < focusableElems.length) {
+          (focusableElems[initialFocus] as HTMLElement).focus();
+        }
       }
     }
 
     const handleTab = (event: KeyboardEvent) => {
       if (event.key !== 'Tab') return;
 
+      const boundary = getBoundaryElements();
+
+      if (!boundary) return;
+
       const focusedElement = document.activeElement as HTMLElement;
 
-      if (!event.shiftKey && focusedElement === lastElement) {
-        firstElement.focus();
+      if (!event.shiftKey && focusedElement === boundary.last) {
+        boundary.first.focus();
         event.preventDefault();
       }
 
-      if (event.shiftKey && focusedElement === firstElement) {
-        lastElement.focus();
+      if (event.shiftKey && focusedElement === boundary.first) {
+        boundary.last.focus();
         event.preventDefault();
       }
     };

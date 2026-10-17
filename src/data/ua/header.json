@@ -21,6 +21,11 @@
   },
   {
     "id": 5,
+    "href": "/blog",
+    "title": "Блог"
+  },
+  {
+    "id": 6,
     "href": "/contact",
     "title": "Контакт"
   }

@@ -19,13 +19,14 @@
       },
       {
         "label": "Instagram",
-        "href": "#"
+        "href": "https://www.instagram.com/labrity_it/"
       },
       {
-        "label": "LinkedIn",
-        "href": "#"
+        "label": "Facebook",
+        "href": "https://www.facebook.com/share/1Wo19A6T3M/"
       }
-    ]
+    ],
+    "locationNote": "Labrity is based in Münster and works with businesses across North Rhine-Westphalia as well as throughout Germany. Consultation and collaboration take place easily online."
   },
   "form": {
     "fields": [
@@ -49,7 +50,7 @@
       },
       {
         "name": "phone",
-        "label": "Phone / WhatsApp",
+        "label": "Phone / WhatsApp (optional)",
         "type": "tel",
         "placeholder": "+49 123 456789"
       },
@@ -61,6 +62,8 @@
       }
     ],
     "submitLabel": "Send Request",
+    "sendingLabel": "Sending…",
+    "emailAltLabel": "Prefer to email us directly?",
     "note": "We usually reply within 24–48 hours."
   },
   "errors": {
@@ -74,14 +77,14 @@
     "lastNamePattern": "Please enter a valid last name.",
     "emailRequired": "Please enter your email address.",
     "emailPattern": "Please enter a valid email address.",
-    "phoneRequired": "Please enter your phone number.",
     "phonePattern": "Please enter a valid phone number.",
     "phoneMin": "At least 7 characters required.",
     "phoneMax": "Maximum 20 characters allowed.",
     "messageRequired": "Please enter a message.",
     "messageMin": "At least 10 characters required.",
     "messageMax": "Maximum 1000 characters allowed.",
-    "privacyRequired": "Please confirm the privacy policy."
+    "privacyRequired": "Please confirm the privacy policy.",
+    "sendFailed": "Sending failed. Please try again."
   },
   "checkbox": {
     "label": "I agree to the processing of my personal data in accordance with the ",

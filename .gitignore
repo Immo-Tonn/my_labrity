@@ -45,3 +45,6 @@ next-env.d.ts
 #IDE
 /.idea/
 !/.swc/
+
+# local Claude Code dev-tooling config (not part of the app)
+/.claude/

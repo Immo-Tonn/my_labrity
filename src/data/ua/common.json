@@ -1,4 +1,5 @@
 {
+  "skipLink": "Перейти до вмісту",
   "metadataAdmin": {
     "title": "Адмін-панель — Labrity",
     "description": "Адмін-зона сайту Labrity"
@@ -33,12 +34,12 @@
     },
     {
       "name": "instagram",
-      "path": "#",
+      "path": "https://www.instagram.com/labrity_it/",
       "ariaLabel": "Відкрити Instagram"
     },
     {
       "name": "facebook",
-      "path": "#",
+      "path": "https://www.facebook.com/share/1Wo19A6T3M/",
       "ariaLabel": "Відкрити Facebook"
     }
   ],
@@ -57,16 +58,12 @@
   },
   "footerLabelPolicy": "Політика конфіденційності",
   "footerLabelImpressum": "Імпресум",
-  "footer": [
-    {
-      "name": "company1",
-      "path": "#",
-      "ariaLabel": "Посилання на сайт партнера"
-    },
-    {
-      "name": "company2",
-      "path": "#",
-      "ariaLabel": "Посилання на сайт партнера"
-    }
-  ]
+  "blogUi": {
+    "breadcrumbParent": "Блог",
+    "readLabel": "Читати",
+    "sourcesLabel": "Джерела",
+    "moreArticlesLabel": "Читайте також",
+    "allArticlesLabel": "Дивитися всі статті"
+  },
+  "footerLabelWebApps": "Вебзастосунки"
 }

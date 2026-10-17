@@ -1,0 +1,243 @@
+{
+  "hero": {
+    "kicker": "Web-Apps & individuelle Business-Lösungen",
+    "title": "Software, die zu Ihrem Betrieb passt.",
+    "description": "Neben Websites entwickeln wir individuelle Web-Apps und digitale Werkzeuge für Ihr Unternehmen: vom Online-Terminkalender über die Zeiterfassung bis zum Verwaltungsbereich mit Datenbank.",
+    "button": "Individuelles Angebot anfragen"
+  },
+  "tasks": {
+    "kicker": "Was möglich ist",
+    "title": "Aufgaben, die wir digital lösen.",
+    "description": "Typische Anwendungen für Salons, Werkstätten und kleine Unternehmen. Der genaue Umfang wird immer gemeinsam festgelegt.",
+    "items": [
+      {
+        "title": "Online-Kalender und Buchungssysteme",
+        "description": "Kunden sehen freie Zeiten und buchen selbst. Sie behalten den Überblick über alle Termine."
+      },
+      {
+        "title": "Terminbuchung über die Website",
+        "description": "Anfragen und Buchungen laufen direkt über Ihre Website statt per Telefon und Nachricht."
+      },
+      {
+        "title": "Zeiterfassung für Mitarbeiter",
+        "description": "Beginn und Ende der Schicht, Arbeitsstunden und Auswertungen für Team und Leitung."
+      },
+      {
+        "title": "Kunden- und Auftragsverwaltung",
+        "description": "Kontakte, Aufträge und Status an einem Ort statt in verstreuten Listen."
+      },
+      {
+        "title": "Bereiche für Mitarbeiter und Leitung",
+        "description": "Eigene Zugänge mit passenden Rechten: Jeder sieht, was er braucht."
+      },
+      {
+        "title": "Admin-Bereich und Datenbank",
+        "description": "Inhalte, Leistungen und Daten selbst pflegen, ohne technische Kenntnisse."
+      },
+      {
+        "title": "Formulare, Benachrichtigungen, Automatisierung",
+        "description": "Wiederkehrende Abläufe wie Anfragen, Bestätigungen und Erinnerungen weniger von Hand erledigen."
+      },
+      {
+        "title": "Kleine individuelle Web-Apps",
+        "description": "Als Teil Ihrer bestehenden Website oder als eigenständige Anwendung."
+      }
+    ]
+  },
+  "useCases": {
+    "kicker": "Beispiele aus dem Alltag",
+    "title": "Wo so etwas helfen kann.",
+    "description": "Beispielszenarien, keine Kundenprojekte. Sie zeigen, wofür sich eine individuelle Lösung eignen kann.",
+    "items": [
+      {
+        "audience": "Friseur- und Beauty-Salons",
+        "title": "Termine online buchen",
+        "description": "Kundinnen wählen Leistung und freie Zeit selbst. Der Kalender zeigt, wer wann eingeplant ist, Änderungen sind schnell erledigt."
+      },
+      {
+        "audience": "Werkstätten",
+        "title": "Anfragen und Aufträge im Blick",
+        "description": "Terminanfragen für Inspektion oder Reparatur und eine Übersicht über Aufträge und Status, ohne Zettelwirtschaft."
+      },
+      {
+        "audience": "Kleine Unternehmen und Teams",
+        "title": "Arbeitszeiten digital erfassen",
+        "description": "Schichtbeginn, Schichtende und Stunden werden erfasst und lassen sich am Monatsende auswerten."
+      },
+      {
+        "audience": "Studios, Trainer und Dienstleister",
+        "title": "Alles an einem Ort verwalten",
+        "description": "Kundenliste, Leistungen und Termine mit eigenen Zugängen für Team und Leitung."
+      }
+    ]
+  },
+  "experience": {
+    "kicker": "Aus eigener Entwicklung",
+    "title": "Wir haben so etwas bereits gebaut.",
+    "description": "Wir haben selbst eine Verwaltungsanwendung entwickelt, mit Terminkalender, Kunden, Mitarbeitern, Leistungen, Datenbank und Admin-Funktionen. Diese Erfahrung bringen wir in Ihr Projekt ein."
+  },
+  "process": {
+    "kicker": "So gehen wir vor",
+    "title": "Vier Schritte bis zur Anwendung.",
+    "items": [
+      {
+        "title": "Gespräch",
+        "description": "Sie schildern Ihren Ablauf und was Sie entlasten soll."
+      },
+      {
+        "title": "Konzept",
+        "description": "Wir klären Umfang, Rollen und Funktionen und schlagen eine passende Lösung vor."
+      },
+      {
+        "title": "Umsetzung",
+        "description": "Wir entwickeln die Anwendung und stimmen Zwischenstände mit Ihnen ab."
+      },
+      {
+        "title": "Start",
+        "description": "Sie testen, wir passen an und gehen gemeinsam live."
+      }
+    ]
+  },
+  "clarify": {
+    "kicker": "Vorab klären wir",
+    "title": "Was wir gemeinsam besprechen.",
+    "description": "Nicht jede Idee passt in jedes Budget oder jede technische Umgebung. Deshalb klären wir wichtige Punkte vor der Umsetzung.",
+    "items": [
+      {
+        "title": "Datenschutz und Hosting",
+        "description": "Welche Daten verarbeitet werden, wo die Anwendung läuft und was nach DSGVO zu beachten ist."
+      },
+      {
+        "title": "Anbindung an bestehende Systeme",
+        "description": "Ob und wie eine Verbindung zu vorhandener Software möglich ist, prüfen wir im Einzelfall."
+      },
+      {
+        "title": "Umfang und Prioritäten",
+        "description": "Wir beginnen mit dem, was am meisten bringt. Weitere Funktionen können folgen."
+      },
+      {
+        "title": "Betrieb und Wartung",
+        "description": "Wer die Anwendung nach dem Start betreut und weiterentwickelt."
+      }
+    ]
+  },
+  "pricing": {
+    "kicker": "Preis",
+    "title": "Preis auf Anfrage.",
+    "price": "Preis auf Anfrage",
+    "description": "Web-Apps sind individuell, deshalb gibt es keine Festpreise. Nach einem ersten Gespräch erhalten Sie ein persönliches Angebot, passend zu Umfang und Anforderungen.",
+    "note": "Individuelles Angebot, abhängig von Funktionen, Rollen und Umfang.",
+    "button": "Individuelles Angebot anfragen",
+    "linkLabel": "Alle Preise ansehen"
+  },
+  "disambiguation": {
+    "kicker": "Sie suchen etwas anderes?",
+    "title": "Vielleicht passt eine dieser Seiten besser.",
+    "items": [
+      {
+        "label": "Es geht Ihnen um eine schnelle, solide Website?",
+        "linkLabel": "Mehr zu Webentwicklung",
+        "href": "/webentwicklung"
+      },
+      {
+        "label": "Sie brauchen zuerst eine Website?",
+        "linkLabel": "Mehr zu Website erstellen lassen",
+        "href": "/website-erstellen-lassen"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Häufige Fragen",
+    "title": "Was Sie vorher wissen möchten.",
+    "items": [
+      {
+        "question": "Was ist eine Web-App?",
+        "answer": "Eine Anwendung, die Sie im Browser nutzen, ohne etwas zu installieren, zum Beispiel ein Buchungskalender oder eine Zeiterfassung. Sie läuft auf Smartphone, Tablet und Desktop."
+      },
+      {
+        "question": "Kann eine Web-App in meine bestehende Website integriert werden?",
+        "answer": "In vielen Fällen ja: als eigener Bereich oder als eingebundene Funktion. Was technisch sinnvoll ist, klären wir nach einem Blick auf Ihre Website."
+      },
+      {
+        "question": "Was kostet eine individuelle Web-App?",
+        "answer": "Das hängt von Funktionen, Rollen und Umfang ab, deshalb nennen wir keinen Pauschalpreis. Nach einem Gespräch erhalten Sie ein individuelles Angebot."
+      },
+      {
+        "question": "Wie lange dauert die Entwicklung?",
+        "answer": "Das hängt vom Umfang ab. Eine Einschätzung gibt es nach dem ersten Gespräch, wenn klar ist, was die Anwendung können soll."
+      },
+      {
+        "question": "Wie sieht es mit dem Datenschutz aus?",
+        "answer": "Sobald personenbezogene Daten verarbeitet werden, spielt die DSGVO eine Rolle. Wir besprechen vorab, welche Daten anfallen und wo sie gespeichert werden. Eine rechtliche Prüfung ersetzt das nicht."
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Nächster Schritt",
+    "title": "Haben Sie eine Idee für Ihren Betrieb?",
+    "description": "Beschreiben Sie kurz Ihren Ablauf. Wir sagen Ihnen ehrlich, was sich umsetzen lässt.",
+    "primaryButton": "Individuelles Angebot anfragen",
+    "secondaryButton": "Leistungen ansehen",
+    "backToServicesLabel": "Alle Leistungen ansehen"
+  },
+  "breadcrumbParentLabel": "Leistungen",
+  "relatedArticles": {
+    "kicker": "Weiterlesen",
+    "title": "Mehr dazu im Blog.",
+    "items": [
+      {
+        "label": "Wie Buchungs- und Verwaltungssoftware kleinen Betrieben hilft.",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/terminbuchung-verwaltung-software-kleine-betriebe"
+      },
+      {
+        "label": "Was kostet eine professionelle Website wirklich?",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      },
+      {
+        "label": "Website-Briefing: Was vor dem ersten Gespräch vorbereitet sein sollte",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/website-briefing-checkliste"
+      }
+    ]
+  },
+  "visual": {
+    "caption": "Illustration: beispielhafte Darstellung einer Oberfläche. Es sind keine echten Kundendaten.",
+    "alt1": "Illustration: Terminkalender am Laptop und Online-Terminbuchung auf dem Smartphone",
+    "alt2": "Illustration: Dashboard mit Terminen, Mitarbeitern und Umsatz auf dem Laptop"
+  },
+  "costOfWaiting": {
+    "kicker": "Der Alltag ohne System",
+    "title": "Was Ihnen das Warten kostet.",
+    "description": "Es zeigt sich selten in einer großen Rechnung, sondern in vielen kleinen Verlusten, Tag für Tag.",
+    "items": [
+      {
+        "title": "Verpasste Anrufe",
+        "description": "Wer gerade nicht ans Telefon geht, verliert im schlechtesten Fall den Termin an den Wettbewerber. Online-Buchung funktioniert auch, wenn Sie mitten in der Arbeit stecken."
+      },
+      {
+        "title": "Doppelt vergebene Termine",
+        "description": "Zwei Kunden zur selben Zeit kosten Vertrauen und Nerven. Ein Kalender mit Konfliktprüfung verhindert das, bevor es passiert."
+      },
+      {
+        "title": "Büroarbeit am Abend",
+        "description": "Termine übertragen, Listen abgleichen, Rechnungen nachschreiben: Zeit, die Sie für Ihr Geschäft oder für sich brauchen."
+      },
+      {
+        "title": "Wissen nur im Kopf",
+        "description": "Fällt jemand aus oder wechselt das Team, fehlt der Überblick. Gemeinsame Daten machen Sie unabhängiger von Einzelnen."
+      },
+      {
+        "title": "Keine klaren Zahlen",
+        "description": "Ohne Auswertung bleibt offen, welche Leistungen sich lohnen und wann Kapazität frei ist."
+      }
+    ],
+    "note": "Das sind keine Garantien, sondern typische Reibungsverluste, die passende Software spürbar verringern kann."
+  },
+  "interest": {
+    "title": "Eine solche Lösung für Ihren Betrieb?",
+    "description": "Unsere eigene Plattform für Terminbuchung und Verwaltung ist in Entwicklung. Wer sich jetzt meldet, wird zuerst informiert, sobald sie verfügbar ist. Unverbindlich.",
+    "button": "Jetzt Interesse anmelden"
+  }
+}

@@ -1,4 +1,5 @@
 {
+  "skipLink": "Перейти к содержимому",
   "metadataAdmin": {
     "title": "Админ-панель — Labrity",
     "description": "Административная зона сайта Labrity"
@@ -33,12 +34,12 @@
     },
     {
       "name": "instagram",
-      "path": "#",
+      "path": "https://www.instagram.com/labrity_it/",
       "ariaLabel": "Открыть Instagram"
     },
     {
       "name": "facebook",
-      "path": "#",
+      "path": "https://www.facebook.com/share/1Wo19A6T3M/",
       "ariaLabel": "Открыть Facebook"
     }
   ],
@@ -57,16 +58,12 @@
   },
   "footerLabelPolicy": "Политика конфиденциальности",
   "footerLabelImpressum": "Юридическая информация",
-  "footer": [
-    {
-      "name": "company1",
-      "path": "#",
-      "ariaLabel": "Ссылка на сайт партнёра"
-    },
-    {
-      "name": "company2",
-      "path": "#",
-      "ariaLabel": "Ссылка на сайт партнёра"
-    }
-  ]
+  "blogUi": {
+    "breadcrumbParent": "Блог",
+    "readLabel": "Читать",
+    "sourcesLabel": "Источники",
+    "moreArticlesLabel": "Читайте также",
+    "allArticlesLabel": "Смотреть все статьи"
+  },
+  "footerLabelWebApps": "Веб-приложения"
 }

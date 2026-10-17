@@ -1,0 +1,78 @@
+{
+  "title": "About Labrity",
+  "intro": "Labrity is a web studio based in Münster, Germany. The owner is Andreas Tonn. We build more than websites: custom web applications, SaaS platforms, CRM systems and iOS apps.",
+  "sections": [
+    {
+      "title": "Where we work",
+      "text": "Labrity is based in Münster and works with businesses across North Rhine-Westphalia and throughout Germany. Consultation and implementation take place conveniently online."
+    },
+    {
+      "title": "Our approach",
+      "text": "Every website is created around the business, audience and positioning — without generic templates. Structure, design, trust, SEO and the user journey are developed as one connected system."
+    },
+    {
+      "title": "Technology and languages",
+      "text": "We work with modern technologies such as Next.js, React and Node.js. Our website is available in German, English, Russian and Ukrainian. Consultation and delivery happen online."
+    }
+  ],
+  "services": {
+    "title": "What we offer",
+    "items": [
+      {
+        "label": "Website Design & Build",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Web design",
+        "href": "/webdesign"
+      },
+      {
+        "label": "Web development",
+        "href": "/webentwicklung"
+      },
+      {
+        "label": "Website relaunch",
+        "href": "/website-relaunch"
+      },
+      {
+        "label": "Landing pages",
+        "href": "/landingpage-erstellen-lassen"
+      },
+      {
+        "label": "Web apps and business solutions",
+        "href": "/web-apps"
+      }
+    ]
+  },
+  "contactLabel": "Go to the contact form",
+  "capabilities": {
+    "title": "What we build",
+    "intro": "From a clear company website to custom software: we plan, design and develop everything in one place.",
+    "items": [
+      {
+        "title": "Websites and landing pages",
+        "text": "Professional websites, landing pages and portfolio sites for freelancers and businesses: fast, mobile-friendly and built for search engines."
+      },
+      {
+        "title": "Web applications and SaaS",
+        "text": "Custom web applications and SaaS platforms with user accounts, roles, dashboards and a database, from the first idea to a running product."
+      },
+      {
+        "title": "Custom CRM development",
+        "text": "A CRM that fits your workflow: customers, inquiries, tasks and quotes in one place, instead of standard software full of features you do not need."
+      },
+      {
+        "title": "iOS app development",
+        "text": "Native iOS apps for iPhone, from concept and design to implementation. We also build our own apps and know the path from prototype to finished product."
+      },
+      {
+        "title": "Online shops and platforms",
+        "text": "Online shops, booking and marketplace platforms and customer portals that match your business model."
+      },
+      {
+        "title": "Relaunch and further development",
+        "text": "Modernize existing websites and systems, make them faster and develop them cleanly, without putting existing rankings at risk."
+      }
+    ]
+  }
+}

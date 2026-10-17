@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
 
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
 
@@ -14,6 +15,8 @@ type ProcessCard = {
   title: string;
   description: string;
 };
+
+type RelatedArticleItem = { label: string; linkLabel: string; href: string };
 
 export type ProcessData = {
   hero: {
@@ -32,6 +35,11 @@ export type ProcessData = {
     title: string;
     description: string;
     items: ProcessCard[];
+  };
+  relatedArticles?: {
+    kicker: string;
+    title: string;
+    items: RelatedArticleItem[];
   };
   resultSection: {
     kicker: string;
@@ -81,7 +89,7 @@ export default function ProcessPageClient({
               delay: 0.1,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/45 md:text-[13px]"
+            className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/60 md:text-[13px]"
           >
             {content.hero.kicker}
           </motion.p>
@@ -131,11 +139,11 @@ export default function ProcessPageClient({
                 className="flex items-center gap-4"
               >
                 <div className="flex items-center gap-3">
-                  <span className="font-montserrat text-[10px] font-semibold uppercase tracking-[0.28em] text-black/35">
+                  <span className="font-montserrat text-xs font-semibold uppercase tracking-[0.28em] text-black/60">
                     {item.number}
                   </span>
 
-                  <span className="font-montserrat text-[11px] font-medium uppercase tracking-[0.22em] text-black/70">
+                  <span className="font-montserrat text-xs font-medium uppercase tracking-[0.22em] text-black/70">
                     {item.title}
                   </span>
                 </div>
@@ -154,7 +162,7 @@ export default function ProcessPageClient({
         <div className="mx-auto max-w-[1700px] px-5 md:px-8">
           <div className="grid gap-12 xl:grid-cols-[0.8fr_1.2fr] xl:gap-20">
             <div>
-              <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+              <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
                 {content.stepsSection.kicker}
               </p>
 
@@ -197,7 +205,7 @@ export default function ProcessPageClient({
       <section className="border-t border-[#e7e2d9] py-24 md:py-32">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
           <div className="mx-auto max-w-[860px] text-center">
-            <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+            <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
               {content.clientSection.kicker}
             </p>
 
@@ -229,11 +237,42 @@ export default function ProcessPageClient({
         </div>
       </section>
 
+      {/* RELATED ARTICLES */}
+      {content.relatedArticles && (
+        <section className="border-t border-[#e7e2d9] py-16 md:py-20">
+          <div className="mx-auto max-w-[1100px] px-5 md:px-8">
+            <p className="mb-3 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
+              {content.relatedArticles.kicker}
+            </p>
+            <h2 className="mb-8 font-tenor text-[26px] leading-[1.1] text-black md:text-[34px]">
+              {content.relatedArticles.title}
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              {content.relatedArticles.items.map(item => (
+                <LocalizedLink
+                  key={item.href}
+                  href={item.href}
+                  className="group flex flex-col items-start gap-3 border border-[#e7e2d9] bg-white/40 px-6 py-5 transition duration-300 hover:bg-white/70 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+                >
+                  <span className="font-montserrat text-[14px] leading-6 text-neutral-600">
+                    {item.label}
+                  </span>
+                  <span className="inline-flex shrink-0 items-center gap-1 font-montserrat text-[13px] font-semibold uppercase tracking-[0.06em] text-black">
+                    {item.linkLabel}
+                    <ArrowUpRight size={14} strokeWidth={1.8} />
+                  </span>
+                </LocalizedLink>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CALM SECTION */}
       <section className="bg-black py-24 text-white md:py-32">
         <div className="mx-auto grid max-w-[1600px] gap-12 px-5 md:px-8 xl:grid-cols-[1fr_0.9fr] xl:gap-20">
           <div>
-            <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-white/35">
+            <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60">
               {content.calmSection.kicker}
             </p>
 
@@ -255,7 +294,7 @@ export default function ProcessPageClient({
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
           <div className="grid gap-12 xl:grid-cols-[0.8fr_1.2fr] xl:gap-20">
             <div>
-              <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+              <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
                 {content.resultSection.kicker}
               </p>
 
@@ -291,7 +330,7 @@ export default function ProcessPageClient({
       {/* CTA */}
       <section className="px-5 py-24 md:px-8 md:py-32">
         <div className="mx-auto max-w-[1500px] bg-[#111111] px-6 py-14 text-center text-white shadow-[0_30px_70px_rgba(0,0,0,0.12)] md:px-10 md:py-20">
-          <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-white/40">
+          <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60">
             {content.cta.kicker}
           </p>
 

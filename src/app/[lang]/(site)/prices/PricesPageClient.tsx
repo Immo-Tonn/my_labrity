@@ -120,6 +120,15 @@ export type PricesData = {
     description: string;
     items: PackageItem[];
   };
+  webApps?: {
+    kicker: string;
+    title: string;
+    price: string;
+    description: string;
+    button: string;
+    linkLabel: string;
+    href: string;
+  };
   customSolution?: CustomSolution;
   subscription: {
     kicker: string;
@@ -198,7 +207,7 @@ function SectionTitle({
           : 'max-w-[780px]'
       }
     >
-      <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+      <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
         {kicker}
       </p>
 
@@ -309,7 +318,7 @@ function InfoBlock({ label, value }: { label: string; value?: string }) {
 
   return (
     <div>
-      <p className="font-montserrat text-[10px] font-semibold uppercase tracking-[0.22em] text-black/35">
+      <p className="font-montserrat text-xs font-semibold uppercase tracking-[0.22em] text-black/60">
         {label}
       </p>
 
@@ -353,7 +362,7 @@ function PackageCard({
           <Icon size={42} strokeWidth={1.1} className="text-black/40" />
 
           {item.badge && (
-            <span className="bg-black px-3 py-1.5 font-montserrat text-[10px] font-semibold uppercase tracking-[0.18em] text-white">
+            <span className="bg-black px-3 py-1.5 font-montserrat text-xs font-semibold uppercase tracking-[0.18em] text-white">
               {item.badge}
             </span>
           )}
@@ -435,7 +444,7 @@ function SubscriptionCard({ item }: { item: SubscriptionItem }) {
         {item.price}
       </p>
 
-      <p className="mt-3 font-montserrat text-[11px] font-medium uppercase tracking-[0.18em] text-black/35">
+      <p className="mt-3 font-montserrat text-xs font-medium uppercase tracking-[0.18em] text-black/60">
         {item.setup}
       </p>
 
@@ -477,7 +486,7 @@ function CareCard({ item }: { item: CareItem }) {
 function AdditionalServiceCard({ item }: { item: AdditionalServiceItem }) {
   return (
     <article className="min-w-0 border border-[#e7e2d9] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/75">
-      <p className="font-montserrat text-[11px] font-medium uppercase tracking-[0.22em] text-black/35">
+      <p className="font-montserrat text-xs font-medium uppercase tracking-[0.22em] text-black/60">
         {item.price}
       </p>
 
@@ -511,7 +520,7 @@ export default function PricesPageClient({
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1, ease: heroEase }}
-                className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/45 md:text-[13px]"
+                className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/60 md:text-[13px]"
               >
                 {content.hero.kicker}
               </motion.p>
@@ -557,11 +566,11 @@ export default function PricesPageClient({
               className="2xl:-translate-y-4 border border-[#e7e2d9] bg-white/35 shadow-[0_14px_36px_rgba(0,0,0,0.025)]"
             >
               <div className="px-7 py-8 md:px-9 md:py-10">
-                <p className="font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+                <p className="font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
                   {content.hero.kicker}
                 </p>
 
-                <p className="mt-7 max-w-[820px] font-tenor text-[38px] leading-[1] tracking-[-0.04em] text-black md:text-[54px]">
+                <p className="mt-7 max-w-[820px] font-tenor text-[32px] leading-[1] tracking-[-0.04em] text-black sm:text-[38px] md:text-[54px]">
                   {content.hero.note}
                 </p>
               </div>
@@ -576,7 +585,7 @@ export default function PricesPageClient({
                       {stat.value}
                     </p>
 
-                    <p className="mt-5 font-montserrat text-[10px] font-medium uppercase tracking-[0.24em] text-black/45">
+                    <p className="mt-5 font-montserrat text-xs font-medium uppercase tracking-[0.24em] text-black/60">
                       {stat.label}
                     </p>
 
@@ -620,7 +629,7 @@ export default function PricesPageClient({
                   key={item.title}
                   className="grid gap-5 py-7 md:grid-cols-[90px_70px_1fr] md:items-start md:gap-7"
                 >
-                  <p className="font-montserrat text-[10px] font-semibold uppercase tracking-[0.28em] text-black/30">
+                  <p className="font-montserrat text-xs font-semibold uppercase tracking-[0.28em] text-black/60">
                     {String(index + 1).padStart(2, '0')}
                   </p>
 
@@ -665,13 +674,54 @@ export default function PricesPageClient({
         </div>
       </section>
 
+      {/* WEB APPS — price on request */}
+      {content.webApps && (
+        <section className={getSectionClasses('py-20 md:py-24')}>
+          <div className="mx-auto max-w-[1500px]">
+            <div className="grid gap-10 border border-[#e7e2d9] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-center xl:p-14">
+              <div>
+                <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
+                  {content.webApps.kicker}
+                </p>
+
+                <h2 className="font-tenor text-[38px] leading-[1] tracking-[-0.04em] text-black md:text-[60px]">
+                  {content.webApps.title}
+                </h2>
+
+                <p className="mt-6 font-tenor text-[26px] text-black md:text-[32px]">
+                  {content.webApps.price}
+                </p>
+              </div>
+
+              <div className="xl:border-l xl:border-[#e7e2d9] xl:pl-12">
+                <p className="font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
+                  {content.webApps.description}
+                </p>
+
+                <div className="mt-9 flex flex-wrap items-center gap-4">
+                  <ActionButton onClick={openQuiz}>
+                    {content.webApps.button}
+                  </ActionButton>
+                  <LocalizedLink
+                    href={content.webApps.href}
+                    className="inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-black/70 underline underline-offset-4 transition duration-300 hover:text-black"
+                  >
+                    {content.webApps.linkLabel}
+                  </LocalizedLink>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CUSTOM SOLUTION */}
       {content.customSolution && (
         <section className={getSectionClasses('py-20 md:py-24')}>
           <div className="mx-auto max-w-[1500px]">
             <div className="grid gap-10 border border-[#e7e2d9] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-center xl:p-14">
               <div>
-                <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+                <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
                   {content.customSolution.kicker}
                 </p>
 
@@ -709,7 +759,7 @@ export default function PricesPageClient({
               <div className="mt-2 h-px w-10 bg-white/35" />
 
               <div className="mt-12">
-                <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-white/35">
+                <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60">
                   {content.quizPreview.kicker}
                 </p>
 
@@ -724,7 +774,7 @@ export default function PricesPageClient({
               </div>
 
               <div className="mt-12 border-t border-white/20 pt-7">
-                <p className="font-montserrat text-[11px] uppercase tracking-[0.26em] text-white/35">
+                <p className="font-montserrat text-xs uppercase tracking-[0.26em] text-white/60">
                   {content.quizPreview.note}
                 </p>
               </div>
@@ -732,7 +782,7 @@ export default function PricesPageClient({
 
             <div className="flex flex-col justify-between px-7 py-10 md:px-10 md:py-14 xl:px-12 xl:py-16">
               <div>
-                <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+                <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
                   {content.quizPreview.kicker}
                 </p>
 
@@ -812,7 +862,7 @@ export default function PricesPageClient({
         <div className="mx-auto max-w-[1500px]">
           <div className="grid gap-12 border border-[#e7e2d9] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[1fr_0.8fr] xl:p-14">
             <div>
-              <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+              <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
                 {content.redesign.kicker}
               </p>
 
@@ -887,7 +937,7 @@ export default function PricesPageClient({
           <div className="mt-14 divide-y divide-[#e7e2d9] border-y border-[#e7e2d9]">
             {content.faq.items.map(item => (
               <details key={item.question} className="group py-7">
-                <summary className="flex cursor-pointer list-none items-start justify-between gap-6">
+                <summary className="flex min-h-[44px] cursor-pointer list-none items-start justify-between gap-6">
                   <span className="font-tenor text-[28px] leading-[1] tracking-[-0.03em] text-black md:text-[40px]">
                     {item.question}
                   </span>
@@ -911,7 +961,7 @@ export default function PricesPageClient({
       {/* CTA */}
       <section className="px-5 py-24 md:px-8 md:py-32">
         <div className="mx-auto max-w-[1500px] bg-[#111111] px-6 py-14 text-center text-white shadow-[0_30px_70px_rgba(0,0,0,0.12)] md:px-10 md:py-20">
-          <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-white/40">
+          <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60">
             {content.cta.kicker}
           </p>
 
@@ -936,7 +986,7 @@ export default function PricesPageClient({
             </LocalizedLink>
           </div>
 
-          <p className="mx-auto mt-8 max-w-[620px] font-montserrat text-[12px] leading-6 text-white/45">
+          <p className="mx-auto mt-8 max-w-[620px] font-montserrat text-[12px] leading-6 text-white/60">
             {content.cta.note}
           </p>
         </div>

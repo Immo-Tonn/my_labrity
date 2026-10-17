@@ -1,35 +1,12 @@
 {
-  "seo": {
-    "title": "Labrity Web Studio – Професійні сайти для бізнесу в Німеччині",
-    "description": "Labrity Web Studio створює сучасні, адаптивні та SEO-оптимізовані сайти для компаній, підприємців, сервісних бізнесів і брендів у Німеччині.",
-    "keywords": [
-      "Labrity",
-      "Labrity Web Studio",
-      "вебдизайн Німеччина",
-      "створення сайтів",
-      "професійний сайт",
-      "сайт для бізнесу",
-      "сайт для підприємців",
-      "сучасний сайт",
-      "SEO оптимізований сайт",
-      "адаптивний вебдизайн",
-      "Next.js сайт",
-      "React сайт",
-      "преміальний вебдизайн"
-    ],
-    "openGraphTitle": "Labrity Web Studio – Сучасні сайти для бізнесу",
-    "openGraphDescription": "Професійні сайти з сучасним дизайном, чіткою структурою, SEO-оптимізацією та сильною цифровою присутністю.",
-    "siteName": "Labrity Web Studio",
-    "locale": "uk_UA"
-  },
   "hero": {
     "kicker": "Premium Web Studio",
     "titleFirst": "Сайти, що",
     "titleSecond": "переконують і приводять клієнтів",
-    "description": "Ми створюємо сучасні сайти для бізнесу, експертів і брендів.",
+    "description": "Ми створюємо сучасні сайти для бізнесу, експертів і брендів — з Мюнстера для клієнтів по всій Німеччині.",
     "tagline": "Мінімалізм. Сучасність. Ефективність.",
-    "primaryButton": "Контакт",
-    "secondaryButton": "Портфоліо"
+    "primaryButton": "Обговорити проєкт",
+    "secondaryButton": "Дивитися портфоліо"
   },
   "quizPreview": {
     "kicker": "Калькулятор проєкту",
@@ -50,64 +27,7 @@
     "ctaKicker": "Наступний проєкт",
     "ctaTitle": "Наступний проєкт може бути вашим.",
     "ctaDescription": "Розкажіть нам про вашу ідею — ми перетворимо її на сильну цифрову присутність.",
-    "ctaButton": "Запустити калькулятор проєкту",
-    "items": [
-      {
-        "title": "Immo Tonn",
-        "category": "Нерухомість",
-        "image": "/images/projects/immo-tonn.png"
-      },
-      {
-        "title": "TLSG Studio",
-        "category": "Музична індустрія",
-        "image": "/images/projects/tlsg.png"
-      },
-      {
-        "title": "Massage Studio",
-        "category": "Wellness & Spa",
-        "image": "/images/projects/massage.png"
-      },
-      {
-        "title": "Піцерія",
-        "category": "Ресторан",
-        "image": "/images/projects/pizzeria.png"
-      },
-      {
-        "title": "Допомога літнім людям",
-        "category": "Супровід літніх людей",
-        "image": "/images/projects/seniorenbegleitung.png"
-      },
-      {
-        "title": "BeautyTime",
-        "category": "Beauty-індустрія",
-        "image": "/images/projects/beautytime.png"
-      },
-      {
-        "title": "Автомайстерня",
-        "category": "Автомобільна індустрія",
-        "image": "/images/projects/werk.png"
-      },
-      {
-        "title": "Майстерня з ремонту ноутбуків та гаджетів",
-        "category": "Ремонт техніки",
-        "image": "/images/projects/techfix.png"
-      },
-      {
-        "title": "Сайт приватного підприємця",
-        "category": "Приватний підприємець",
-        "image": "/images/projects/privateD.png"
-      },
-      {
-        "title": "Сайт логопеда",
-        "category": "Логопедія",
-        "image": "/images/projects/logoped.png"
-      },
-      {
-        "title": "Ювелірний магазин і майстерня",
-        "category": "Ювелірні прикраси",
-        "image": "/images/projects/Granat.png"
-      }
-    ]
+    "ctaButton": "Запустити калькулятор проєкту"
   },
   "audience": {
     "kicker": "Для кого ми працюємо",
@@ -239,6 +159,7 @@
       "МІНІМАЛІЗМ. СУЧАСНІСТЬ. ЕФЕКТИВНІСТЬ."
     ],
     "projectLabel": "Вебсайт проєкт",
+    "conceptLabel": "Концептуальний проєкт",
     "projectButton": "Дивитися проєкт",
     "projectTags": ["SEO READY", "AI ОПТИМІЗОВАНО", "RESPONSIVE"],
     "categories": {
@@ -252,7 +173,11 @@
       "Майстерня з ремонту ноутбуків та гаджетів": "Ремонт техніки",
       "Сайт приватного підприємця": "Приватний підприємець",
       "Сайт логопеда": "Логопедія",
-      "Ювелірний магазин і майстерня": "Ювелірні прикраси"
+      "Ювелірний магазин і майстерня": "Ювелірні прикраси",
+      "Relax Massage Studio": "Wellness & Spa",
+      "Premium Consulting": "Фінансовий консалтинг",
+      "FN Detailing": "Детейлінг",
+      "Beauty Salon Landing": "Краса та Wellness"
     },
     "blackSection": {
       "kicker": "У розробці",
@@ -266,78 +191,108 @@
         "title": "Immo Tonn",
         "description": "Преміальний сайт нерухомості з чіткою структурою, професійною подачею об'єктів та сильним ефектом довіри.",
         "imageVariant": "first",
-        "image": "/images/projects/immo-tonn.png",
+        "image": "/images/projects/immo-tonn.webp",
         "href": "https://immo-tonn.de/"
       },
       {
         "title": "TLSG Studio",
         "description": "Сучасна цифрова присутність для музичної студії з фокусом на бренд, стиль і креативність.",
         "imageVariant": "second",
-        "image": "/images/projects/tlsg.png",
+        "image": "/images/projects/tlsg.webp",
         "href": "https://tlsglabel.com/"
       },
       {
         "title": "Піцерія",
         "description": "Сучасний вебсайт для піцерії з акцентом на чітку структуру, візуальну привабливість та зручне оформлення замовлення. Проєкт наразі ще в розробці.",
         "imageVariant": "first",
-        "image": "/images/projects/pizzeria.png",
+        "image": "/images/projects/pizzeria.webp",
         "href": "https://pizzalanding-tetl.vercel.app/"
       },
       {
         "title": "Massage Studio",
         "description": "Спокійний сайт для масажних послуг з елегантною подачею та зручною структурою запису.",
         "imageVariant": "first",
-        "image": "/images/projects/massage.png",
+        "image": "/images/projects/massage.webp",
         "href": "https://massage-landing-swart.vercel.app/#services"
       },
       {
         "title": "Супровід літніх людей",
         "description": "Невеликий і простий лендинг для самостійної помічниці із супроводу літніх людей. Проєкт показує швидко реалізоване рішення для невеликого бюджету — спокійно, зрозуміло та з акцентом на швидкий контакт.",
         "imageVariant": "first",
-        "image": "/images/projects/seniorenbegleitung.png",
+        "image": "/images/projects/seniorenbegleitung.webp",
         "href": "https://pflege-landing-1.vercel.app/"
       },
       {
         "title": "BeautyTime",
         "description": "Елегантний сайт для салону краси в Кельні з premium стилем та сильним локальним ефектом.",
         "imageVariant": "second",
-        "image": "/images/projects/beautytime.png",
+        "image": "/images/projects/beautytime.webp",
         "href": "https://beautylanding1.vercel.app/de/index.html"
       },
       {
         "title": "Werkstatt",
         "description": "Сучасний сайт для автосервісу з фокусом на довіру, зрозумілу комунікацію та професійну подачу послуг.",
         "imageVariant": "second",
-        "image": "/images/projects/werk.png",
+        "image": "/images/projects/werk.webp",
         "href": "https://auto-service-landing-five.vercel.app/de"
       },
       {
         "title": "Майстерня з ремонту ноутбуків та гаджетів",
         "description": "Сучасний сайт сервісного центру з ремонту цифрової техніки з чітким переліком послуг, прозорими цінами та акцентом на довіру клієнтів.",
         "imageVariant": "first",
-        "image": "/images/projects/techfix.png",
+        "image": "/images/projects/techfix.webp",
         "href": "https://repair-eosin.vercel.app/"
       },
       {
         "title": "Сайт приватного підприємця",
         "description": "Особистий сайт для приватного підприємця з яскравим образом, чітким переліком послуг та акцентом на особистий бренд.",
         "imageVariant": "second",
-        "image": "/images/projects/privateD.png",
+        "image": "/images/projects/privateD.webp",
         "href": "https://www.gasterartur.com/"
       },
       {
         "title": "Сайт логопеда",
         "description": "Сайт логопеда для роботи з дітьми та дорослими: діагностика, корекція мовлення, підготовка до школи та онлайн-консультації.",
         "imageVariant": "first",
-        "image": "/images/projects/logoped.png",
+        "image": "/images/projects/logoped.webp",
         "href": "https://logoped2-khaki.vercel.app/"
       },
       {
         "title": "Ювелірний магазин і майстерня",
         "description": "Сайт ювелірного дому з каталогом прикрас, послугами майстерні та преміальною подачею бренду.",
         "imageVariant": "second",
-        "image": "/images/projects/Granat.png",
+        "image": "/images/projects/Granat.webp",
         "href": "https://jewerly-indol.vercel.app/"
+      },
+      {
+        "title": "Relax Massage Studio",
+        "description": "Редакційний сайт для приватної масажної студії з великою типографікою, зрозумілим переліком послуг та прямим шляхом до запису.",
+        "imageVariant": "first",
+        "image": "/images/projects/relax-massage.webp",
+        "href": "https://massage-landing-six.vercel.app"
+      },
+      {
+        "title": "Premium Consulting",
+        "description": "Редакційний сайт для незалежного фінансового консалтингу з великою типографікою, зрозумілою структурою та прямим шляхом до першої консультації.",
+        "imageVariant": "second",
+        "image": "/images/projects/premium-consulting.webp",
+        "href": "https://premium-consulting-template.vercel.app/de",
+        "kind": "concept"
+      },
+      {
+        "title": "FN Detailing",
+        "description": "Редакційний сайт для преміальної детейлінг-студії з великою типографікою, зрозумілою структурою послуг і прямим шляхом до запису.",
+        "imageVariant": "first",
+        "image": "/images/projects/auto-detailing.webp",
+        "href": "https://auto-detailing-website-tau.vercel.app"
+      },
+      {
+        "title": "Beauty Salon Landing",
+        "description": "Концептуальний багатомовний сайт для beauty-студії з виразною editorial/Y2K-естетикою, великою типографікою, світлою і темною темою та інтерактивними скрол-анімаціями.",
+        "imageVariant": "second",
+        "image": "/images/projects/beauty-salon-landing.webp",
+        "href": "https://beauty-salon-landing-gray.vercel.app/de",
+        "kind": "concept"
       }
     ]
   },
@@ -374,5 +329,17 @@
     "description": "Ми створюємо сайти, які виглядають дорого, викликають довіру та чітко позиціонують ваш бізнес онлайн.",
     "primaryButton": "Почати проєкт",
     "secondaryButton": "Індивідуальна пропозиція"
+  },
+  "platformTeaser": {
+    "kicker": "У розробці",
+    "title": "Запис і керування для вашого бізнесу.",
+    "description": "Клієнти записуються онлайн, команда працює в одному календарі, замовлення й рахунки в одному місці. Платформу ми робимо самі. Залиште заявку, щоб дізнатися першими.",
+    "bullets": [
+      "Онлайн-запис цілодобово",
+      "Календар без подвійних записів",
+      "Клієнти, замовлення й рахунки в одному місці"
+    ],
+    "more": "Детальніше",
+    "interest": "Залишити заявку на інтерес"
   }
 }

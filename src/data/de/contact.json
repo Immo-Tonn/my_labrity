@@ -19,13 +19,14 @@
       },
       {
         "label": "Instagram",
-        "href": "#"
+        "href": "https://www.instagram.com/labrity_it/"
       },
       {
-        "label": "LinkedIn",
-        "href": "#"
+        "label": "Facebook",
+        "href": "https://www.facebook.com/share/1Wo19A6T3M/"
       }
-    ]
+    ],
+    "locationNote": "Labrity ist in Münster ansässig und arbeitet mit Unternehmen im gesamten Nordrhein-Westfalen sowie deutschlandweit zusammen. Beratung und Umsetzung erfolgen unkompliziert online."
   },
   "form": {
     "fields": [
@@ -49,7 +50,7 @@
       },
       {
         "name": "phone",
-        "label": "Telefon / WhatsApp",
+        "label": "Telefon / WhatsApp (optional)",
         "type": "tel",
         "placeholder": "+49 123 456789"
       },
@@ -61,6 +62,8 @@
       }
     ],
     "submitLabel": "Anfrage senden",
+    "sendingLabel": "Wird gesendet…",
+    "emailAltLabel": "Lieber direkt per E-Mail?",
     "note": "Wir antworten in der Regel innerhalb von 24–48 Stunden."
   },
   "errors": {
@@ -74,14 +77,14 @@
     "lastNamePattern": "Bitte geben Sie einen gültigen Nachnamen ein.",
     "emailRequired": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
     "emailPattern": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
-    "phoneRequired": "Bitte geben Sie Ihre Telefonnummer ein.",
     "phonePattern": "Bitte geben Sie eine gültige Telefonnummer ein.",
     "phoneMin": "Mindestens 7 Zeichen erforderlich.",
     "phoneMax": "Maximal 20 Zeichen erlaubt.",
     "messageRequired": "Bitte schreiben Sie eine Nachricht.",
     "messageMin": "Die Nachricht muss mindestens 10 Zeichen enthalten.",
     "messageMax": "Maximal 1000 Zeichen erlaubt.",
-    "privacyRequired": "Bitte bestätigen Sie die Datenschutzerklärung."
+    "privacyRequired": "Bitte bestätigen Sie die Datenschutzerklärung.",
+    "sendFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
   },
   "checkbox": {
     "label": "Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der ",
