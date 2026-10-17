@@ -262,6 +262,13 @@ export async function POST(request: Request) {
   recentHashes.set(hash, now);
   registerSend(getClientKey(request));
 
+  // Preview/testing aid: run every check but do not contact Telegram.
+  // Never set FORM_DRY_RUN in production.
+  if (process.env.FORM_DRY_RUN === '1') {
+    console.warn('[telegram-guard] dry run: message accepted, not sent');
+    return new Response(null, { status: 200 });
+  }
+
   let response: Response;
   try {
     response = await fetch(
