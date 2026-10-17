@@ -404,7 +404,7 @@ export default function HomePageClient({
           <section className="flex min-h-[calc(100vh-100px)] flex-col pb-[60px] pt-[150px] md:min-h-[calc(100vh-120px)] md:pb-[80px] md:pt-[165px] xl:min-h-screen xl:pb-[110px] xl:pt-[210px]">
             <div className="flex flex-1 flex-col gap-16 xl:flex-row xl:items-center xl:justify-between">
               <div className="w-full max-w-[700px]">
-                <p className="mb-6 font-montserrat text-[11px] uppercase tracking-[0.34em] text-[#a3a3a3] md:text-xs">
+                <p className="mb-6 font-montserrat text-[11px] uppercase tracking-[0.34em] text-neutral-400 md:text-xs">
                   {content.hero.kicker}
                 </p>
 
