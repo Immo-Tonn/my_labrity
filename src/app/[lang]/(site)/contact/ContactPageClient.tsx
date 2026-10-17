@@ -1,8 +1,9 @@
 'use client';
 
-import { ChangeEvent, FormEvent, useRef, useState } from 'react';
+import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 
 import { sendMessage } from '@/api/telegram';
+import { FormGuard } from '@/components/common/FormGuard';
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
 
 type ContactLink = {
@@ -113,6 +114,18 @@ export default function ContactPageClient({
   const [formData, setFormData] = useState<ContactFormState>(initialFormState);
   const [formErrors, setFormErrors] = useState<ContactFormErrors>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const successRef = useRef<HTMLDivElement | null>(null);
+
+  // Bring the confirmation into view: it used to be a small grey line that
+  // was easy to miss below the fold.
+  useEffect(() => {
+    if (isSubmitted) {
+      successRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }
+  }, [isSubmitted]);
   const [isLoading, setIsLoading] = useState(false);
   const [submitError, setSubmitError] = useState('');
   // Guards against a second submit firing before React has re-rendered the
@@ -308,6 +321,7 @@ ${formData.phone.trim() ? `📱 Phone: ${formData.phone.trim()}\n` : ''}💬 Mes
                 noValidate
                 className="mt-10 grid gap-x-8 gap-y-8 md:grid-cols-2 xl:mt-12"
               >
+                <FormGuard />
                 {content.form.fields.map(field =>
                   field.type === 'textarea' ? (
                     <div key={field.name} className="md:col-span-2">
@@ -444,13 +458,20 @@ ${formData.phone.trim() ? `📱 Phone: ${formData.phone.trim()}\n` : ''}💬 Mes
                     </p>
                   )}
 
-                  <p
-                    role="status"
-                    aria-live="polite"
-                    className="mt-5 font-montserrat text-sm leading-6 text-neutral-500"
-                  >
-                    {isSubmitted ? content.successMessage : content.form.note}
-                  </p>
+                  {isSubmitted ? (
+                    <div
+                      ref={successRef}
+                      role="status"
+                      aria-live="polite"
+                      className="mt-5 border border-[#18352b]/30 bg-[#18352b]/5 px-5 py-4 font-montserrat text-[15px] font-medium leading-6 text-[#18352b]"
+                    >
+                      {content.successMessage}
+                    </div>
+                  ) : (
+                    <p className="mt-5 font-montserrat text-sm leading-6 text-neutral-500">
+                      {content.form.note}
+                    </p>
+                  )}
 
                   {emailLinks.length > 0 && (
                     <p className="mt-3 font-montserrat text-sm leading-6 text-neutral-600">
