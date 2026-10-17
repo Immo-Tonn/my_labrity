@@ -73,8 +73,6 @@ export type WebAppsData = {
     title: string;
     description: string;
     primaryButton: string;
-    secondaryButton: string;
-    backToServicesLabel: string;
   };
 };
 
@@ -588,20 +586,7 @@ export default function WebAppsPageClient({
             >
               {content.cta.primaryButton}
             </LocalizedLink>
-            <LocalizedLink
-              href="/services"
-              className="inline-flex min-h-[56px] items-center justify-center border border-white/40 bg-transparent px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:border-white hover:bg-white hover:text-black"
-            >
-              {content.cta.secondaryButton}
-            </LocalizedLink>
           </div>
-
-          <LocalizedLink
-            href="/services"
-            className="mt-7 inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-white/60 underline-offset-4 transition duration-300 hover:text-white hover:underline"
-          >
-            {content.cta.backToServicesLabel}
-          </LocalizedLink>
         </div>
       </section>
     </main>

@@ -357,15 +357,42 @@
     ],
     "capabilitiesTitle": "Was wir für Sie entwickeln",
     "capabilities": [
-      "Online-Terminbuchung und Buchungssysteme",
-      "Kalender und Terminplanung",
-      "Kundenverwaltung (CRM)",
-      "Zeiterfassung und Mitarbeiterverwaltung",
-      "Aufträge, Anfragen, Angebote und Rechnungen",
-      "Finanz-Dashboards, Berichte und Auswertungen",
-      "Kunden- und Mitarbeiterportale",
-      "Admin-Bereiche und Prozessautomatisierung",
-      "Individuelle Web-Apps und SaaS-Plattformen"
+      {
+        "title": "Online-Terminbuchung und Buchungssysteme",
+        "description": "Ihre Kunden buchen freie Termine selbstständig, auch außerhalb Ihrer Öffnungszeiten. Weniger Telefonate, weniger Abstimmung und ein klarer Buchungsprozess."
+      },
+      {
+        "title": "Kalender und Terminplanung",
+        "description": "Alle Termine und Verfügbarkeiten an einem Ort. Arbeitszeiten, Pausen und Abwesenheiten fließen in die Planung ein, damit Ihr Team den Überblick behält."
+      },
+      {
+        "title": "Kundenverwaltung (CRM)",
+        "description": "Kundendaten, Anfragen und wichtige Informationen zentral verwalten, statt sie in verschiedenen Tabellen und Nachrichten zu suchen."
+      },
+      {
+        "title": "Zeiterfassung und Mitarbeiterverwaltung",
+        "description": "Arbeitszeiten digital erfassen und übersichtlich auswerten, mit einer Lösung, die zu den Abläufen Ihres Unternehmens passt."
+      },
+      {
+        "title": "Aufträge, Anfragen, Angebote und Rechnungen",
+        "description": "Vom ersten Kundenkontakt bis zur Rechnung: Informationen und Bearbeitungsstände in einem nachvollziehbaren Ablauf zusammenführen."
+      },
+      {
+        "title": "Finanz-Dashboards, Berichte und Auswertungen",
+        "description": "Wichtige Geschäftszahlen übersichtlich darstellen, Entwicklungen erkennen und Entscheidungen auf einer besseren Informationsgrundlage treffen."
+      },
+      {
+        "title": "Kunden- und Mitarbeiterportale",
+        "description": "Geschützte Zugänge, über die Kunden oder Mitarbeiter genau die Informationen und Funktionen nutzen, die für sie relevant sind."
+      },
+      {
+        "title": "Admin-Bereiche und Prozessautomatisierung",
+        "description": "Wiederkehrende Aufgaben vereinfachen, Geschäftsprozesse digitalisieren und manuelle Arbeit reduzieren."
+      },
+      {
+        "title": "Individuelle Web-Apps und Softwareplattformen",
+        "description": "Wenn Standardsoftware nicht zu Ihrem Unternehmen passt, entwickeln wir eine Lösung, die sich an Ihren tatsächlichen Geschäftsprozessen orientiert."
+      }
     ],
     "primary": "Individuelle Lösung anfragen",
     "secondary": "Mehr über Web-Apps",

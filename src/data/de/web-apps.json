@@ -13,39 +13,39 @@
     "items": [
       {
         "title": "Online-Terminbuchung und Buchungssysteme",
-        "description": "Kunden buchen Leistungen und freie Zeiten selbst, auch außerhalb Ihrer Öffnungszeiten."
+        "description": "Ihre Kunden buchen freie Termine selbstständig, auch außerhalb Ihrer Öffnungszeiten. Weniger Telefonate, weniger Abstimmung und ein klarer Buchungsprozess."
       },
       {
         "title": "Kalender und Terminplanung",
-        "description": "Alle Termine in einer Ansicht, mit Mitarbeitern, Ressourcen und Konfliktprüfung."
+        "description": "Alle Termine und Verfügbarkeiten an einem Ort. Arbeitszeiten, Pausen und Abwesenheiten fließen in die Planung ein, damit Ihr Team den Überblick behält."
       },
       {
         "title": "Kundenverwaltung (CRM)",
-        "description": "Kontakte, Verlauf und Anfragen zentral, statt in verstreuten Listen."
+        "description": "Kundendaten, Anfragen und wichtige Informationen zentral verwalten, statt sie in verschiedenen Tabellen und Nachrichten zu suchen."
       },
       {
         "title": "Zeiterfassung und Mitarbeiterverwaltung",
-        "description": "Arbeitszeiten, Schichten und Auswertungen für Team und Leitung."
+        "description": "Arbeitszeiten digital erfassen und übersichtlich auswerten, mit einer Lösung, die zu den Abläufen Ihres Unternehmens passt."
       },
       {
         "title": "Aufträge, Anfragen, Angebote und Rechnungen",
-        "description": "Vom ersten Kontakt bis zur Rechnung in einem durchgängigen Ablauf."
+        "description": "Vom ersten Kundenkontakt bis zur Rechnung: Informationen und Bearbeitungsstände in einem nachvollziehbaren Ablauf zusammenführen."
       },
       {
         "title": "Finanz-Dashboards, Berichte und Auswertungen",
-        "description": "Kennzahlen, die Sie für Entscheidungen brauchen, übersichtlich aufbereitet."
+        "description": "Wichtige Geschäftszahlen übersichtlich darstellen, Entwicklungen erkennen und Entscheidungen auf einer besseren Informationsgrundlage treffen."
       },
       {
         "title": "Kunden- und Mitarbeiterportale",
-        "description": "Eigene Zugänge mit passenden Rechten: Jeder sieht, was er braucht."
+        "description": "Geschützte Zugänge, über die Kunden oder Mitarbeiter genau die Informationen und Funktionen nutzen, die für sie relevant sind."
       },
       {
         "title": "Admin-Bereiche und Prozessautomatisierung",
-        "description": "Geschäftsprozesse digitalisieren: Daten selbst pflegen, wiederkehrende Schritte automatisieren."
+        "description": "Wiederkehrende Aufgaben vereinfachen, Geschäftsprozesse digitalisieren und manuelle Arbeit reduzieren."
       },
       {
-        "title": "Individuelle Web-Apps und SaaS-Plattformen",
-        "description": "Eigenständige Webanwendungen oder Erweiterungen Ihrer bestehenden Website."
+        "title": "Individuelle Web-Apps und Softwareplattformen",
+        "description": "Wenn Standardsoftware nicht zu Ihrem Unternehmen passt, entwickeln wir eine Lösung, die sich an Ihren tatsächlichen Geschäftsprozessen orientiert."
       }
     ]
   },
@@ -202,9 +202,7 @@
     "kicker": "Nächster Schritt",
     "title": "Haben Sie eine Idee für Ihren Betrieb?",
     "description": "Beschreiben Sie kurz Ihren Ablauf. Wir sagen Ihnen ehrlich, was sich umsetzen lässt.",
-    "primaryButton": "Individuelle Lösung anfragen",
-    "secondaryButton": "Leistungen ansehen",
-    "backToServicesLabel": "Alle Leistungen ansehen"
+    "primaryButton": "Individuelle Lösung anfragen"
   },
   "breadcrumbParentLabel": "Leistungen",
   "relatedArticles": {

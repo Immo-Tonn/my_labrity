@@ -38,5 +38,9 @@
     "website": "Wir erstellen Websites und Landingpages für Unternehmen und Selbstständige. Einen Überblick finden Sie unter „Leistungen“; für eine konkrete Anfrage nutzen Sie bitte das Kontaktformular.",
     "price": "Die Kosten hängen vom Umfang des Projekts ab. Einstiegspreise finden Sie auf der Seite „Preise“; ein individuelles Angebot erhalten Sie über das Kontaktformular.",
     "duration": "Die Dauer hängt vom Projektumfang ab. Den Ablauf eines Projekts beschreibt die Seite „Ablauf“; Details besprechen wir gern persönlich."
-  }
+  },
+  "teaserMessages": [
+    "👋 Fragen zu Website oder SEO?",
+    "Brauchen Sie eine moderne Website?"
+  ]
 }

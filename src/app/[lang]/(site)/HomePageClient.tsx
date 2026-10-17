@@ -10,6 +10,7 @@ import SeasonalHearts from '@/components/SeasonalHearts';
 import { useQuiz } from '@/components/quiz';
 import { Preloader } from '@/components/ui';
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
+import { Accordion } from '@/components/ui/Accordion';
 import { useLanguage } from '@/utils/LanguageContext';
 
 type StatItem = {
@@ -114,7 +115,7 @@ export type HomeData = {
     solutionLabel: string;
     pairs: { problem: string; solution: string }[];
     capabilitiesTitle: string;
-    capabilities: string[];
+    capabilities: { title: string; description: string }[];
     primary: string;
     secondary: string;
     caption: string;
@@ -905,19 +906,15 @@ export default function HomePageClient({
                   ))}
                 </div>
 
-                <h3 className="mt-14 font-tenor text-[22px] leading-[1.1] md:text-[28px]">
-                  {content.webAppsShowcase.capabilitiesTitle}
-                </h3>
-                <ul className="mt-6 flex flex-wrap gap-2">
-                  {content.webAppsShowcase.capabilities.map(item => (
-                    <li
-                      key={item}
-                      className="border border-white/20 px-4 py-2 font-montserrat text-[13px] leading-5 text-white/80"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <div className="mt-14 grid gap-8 xl:grid-cols-[0.7fr_1.3fr] xl:gap-16">
+                  <h3 className="font-tenor text-[28px] leading-[1.1] md:text-[40px]">
+                    {content.webAppsShowcase.capabilitiesTitle}
+                  </h3>
+                  <Accordion
+                    items={content.webAppsShowcase.capabilities}
+                    defaultOpen={0}
+                  />
+                </div>
 
                 <p className="mt-8 font-montserrat text-xs leading-6 text-white/45">
                   {content.webAppsShowcase.caption}

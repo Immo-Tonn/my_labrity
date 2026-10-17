@@ -330,15 +330,42 @@
     ],
     "capabilitiesTitle": "What we build for you",
     "capabilities": [
-      "Online booking and reservation systems",
-      "Calendars and schedule management",
-      "Customer management (CRM)",
-      "Time tracking and staff management",
-      "Orders, enquiries, quotes and invoices",
-      "Financial dashboards, reports and analytics",
-      "Customer and employee portals",
-      "Admin areas and process automation",
-      "Custom web apps and SaaS platforms"
+      {
+        "title": "Online booking and reservation systems",
+        "description": "Your customers book free appointments themselves, even outside your opening hours. Fewer phone calls, less back-and-forth and a clear booking process."
+      },
+      {
+        "title": "Calendars and schedule management",
+        "description": "All appointments and availability in one place. Working hours, breaks and absences are taken into account in planning, so your team keeps the overview."
+      },
+      {
+        "title": "Customer management (CRM)",
+        "description": "Manage customer data, enquiries and key information centrally instead of searching through different spreadsheets and messages."
+      },
+      {
+        "title": "Time tracking and staff management",
+        "description": "Record working hours digitally and evaluate them clearly, with a solution that fits your company's workflows."
+      },
+      {
+        "title": "Orders, enquiries, quotes and invoices",
+        "description": "From the first customer contact to the invoice: bring information and processing status together in one traceable workflow."
+      },
+      {
+        "title": "Financial dashboards, reports and analytics",
+        "description": "Present key business figures clearly, spot developments and make decisions on a better information base."
+      },
+      {
+        "title": "Customer and employee portals",
+        "description": "Protected logins through which customers or employees use exactly the information and functions that are relevant to them."
+      },
+      {
+        "title": "Admin areas and process automation",
+        "description": "Simplify recurring tasks, digitise business processes and reduce manual work."
+      },
+      {
+        "title": "Custom web apps and software platforms",
+        "description": "When standard software does not fit your company, we build a solution based on your actual business processes."
+      }
     ],
     "primary": "Request a custom solution",
     "secondary": "More about web apps",

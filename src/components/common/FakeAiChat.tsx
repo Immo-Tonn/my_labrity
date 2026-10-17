@@ -30,6 +30,7 @@ type AssistantData = {
     calculatorSubtitle: string;
   };
   initialMessage: string;
+  teaserMessages?: string[];
   contact: {
     formLabel: string;
     emailLabel: string;
@@ -116,6 +117,7 @@ export default function FakeAiChat() {
 
   const [content, setContent] = useState<AssistantData | null>(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [teaser, setTeaser] = useState<string | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [activeMode, setActiveMode] = useState<ActiveMode>('chat');
@@ -169,6 +171,28 @@ export default function FakeAiChat() {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
+
+  // Original brand behaviour: a short speech bubble shows up above the badge
+  // after 4 s and disappears after 14 s (same timing as before).
+  useEffect(() => {
+    const messages = content?.teaserMessages;
+
+    if (!messages || messages.length === 0) return;
+
+    const show = window.setTimeout(() => {
+      setTeaser(messages[Math.floor(Math.random() * messages.length)]);
+    }, 4000);
+    const hide = window.setTimeout(() => setTeaser(null), 14000);
+
+    return () => {
+      window.clearTimeout(show);
+      window.clearTimeout(hide);
+    };
+  }, [content]);
+
+  useEffect(() => {
+    if (isOpen) setTeaser(null);
+  }, [isOpen]);
 
   if (!content) return null;
 
@@ -229,6 +253,15 @@ export default function FakeAiChat() {
 
   return (
     <>
+      {teaser && !isOpen && (
+        <div
+          role="status"
+          className="fixed bottom-[92px] right-6 z-50 max-w-[230px] animate-bounce rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-sm text-black shadow-[0_12px_35px_rgba(0,0,0,0.14)]"
+        >
+          {teaser}
+        </div>
+      )}
+
       <button
         type="button"
         onClick={() => setIsOpen(open => !open)}
@@ -237,20 +270,13 @@ export default function FakeAiChat() {
         }
         aria-haspopup="dialog"
         aria-expanded={isOpen}
-        className="fixed bottom-3 right-3 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-black text-white shadow-[0_8px_24px_rgba(0,0,0,0.25)] transition hover:scale-105 md:bottom-6 md:right-6 md:h-14 md:w-14"
+        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 animate-pulse items-center justify-center rounded-full bg-black text-sm font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:scale-105"
       >
-        <svg
+        <span
           aria-hidden="true"
-          viewBox="0 0 24 24"
-          className="h-5 w-5 md:h-6 md:w-6"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z" />
-        </svg>
+          className="absolute right-1 top-1 h-3 w-3 rounded-full border-2 border-black bg-green-400"
+        />
+        AI
       </button>
 
       {isOpen && (
@@ -259,7 +285,7 @@ export default function FakeAiChat() {
           role="dialog"
           aria-modal="true"
           aria-label={content.header.chatTitle}
-          className="fixed bottom-16 left-3 right-3 z-50 flex h-[min(520px,calc(100dvh-88px))] flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.18)] md:bottom-24 md:left-auto md:right-6 md:w-[350px]"
+          className="fixed bottom-20 left-4 right-4 z-50 flex h-[min(520px,calc(100dvh-120px))] flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.18)] md:bottom-24 md:left-auto md:right-6 md:w-[350px]"
         >
           <div className="flex items-start justify-between border-b border-neutral-200 bg-black px-5 py-4 text-white">
             <div>

@@ -13,39 +13,39 @@
     "items": [
       {
         "title": "Online booking and reservation systems",
-        "description": "Customers book services and free times themselves, even outside your opening hours."
+        "description": "Your customers book free appointments themselves, even outside your opening hours. Fewer phone calls, less back-and-forth and a clear booking process."
       },
       {
         "title": "Calendars and schedule management",
-        "description": "All appointments in one view, with employees, resources and conflict checks."
+        "description": "All appointments and availability in one place. Working hours, breaks and absences are taken into account in planning, so your team keeps the overview."
       },
       {
         "title": "Customer management (CRM)",
-        "description": "Contacts, history and enquiries in one place instead of scattered lists."
+        "description": "Manage customer data, enquiries and key information centrally instead of searching through different spreadsheets and messages."
       },
       {
         "title": "Time tracking and staff management",
-        "description": "Working hours, shifts and reports for the team and management."
+        "description": "Record working hours digitally and evaluate them clearly, with a solution that fits your company's workflows."
       },
       {
         "title": "Orders, enquiries, quotes and invoices",
-        "description": "From the first contact to the invoice in one continuous workflow."
+        "description": "From the first customer contact to the invoice: bring information and processing status together in one traceable workflow."
       },
       {
         "title": "Financial dashboards, reports and analytics",
-        "description": "The key figures you need for decisions, clearly presented."
+        "description": "Present key business figures clearly, spot developments and make decisions on a better information base."
       },
       {
         "title": "Customer and employee portals",
-        "description": "Separate logins with matching permissions: everyone sees what they need."
+        "description": "Protected logins through which customers or employees use exactly the information and functions that are relevant to them."
       },
       {
         "title": "Admin areas and process automation",
-        "description": "Digitise business processes: maintain data yourself, automate recurring steps."
+        "description": "Simplify recurring tasks, digitise business processes and reduce manual work."
       },
       {
-        "title": "Custom web apps and SaaS platforms",
-        "description": "Standalone applications or extensions of your existing website."
+        "title": "Custom web apps and software platforms",
+        "description": "When standard software does not fit your company, we build a solution based on your actual business processes."
       }
     ]
   },
@@ -202,9 +202,7 @@
     "kicker": "Next step",
     "title": "Do you have an idea for your business?",
     "description": "Briefly describe your workflow. We will tell you honestly what can be built.",
-    "primaryButton": "Request a custom solution",
-    "secondaryButton": "View services",
-    "backToServicesLabel": "View all services"
+    "primaryButton": "Request a custom solution"
   },
   "breadcrumbParentLabel": "Services",
   "relatedArticles": {

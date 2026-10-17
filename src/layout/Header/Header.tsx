@@ -136,20 +136,20 @@ export function Header({
           : 'bg-[#f8f6f1] py-5',
       )}
     >
-      <div className="container relative flex items-center justify-between gap-6 xl:gap-10">
+      <div className="2xl:gap-10 container relative flex items-center justify-between gap-6">
         <Logo path="header" onClick={closeMenu} className="shrink-0" />
 
-        <nav className="hidden lg:flex lg:flex-1 lg:justify-center">
+        <nav className="hidden xl:flex xl:flex-1 xl:justify-center">
           <Navbar
             variant="header"
             navLinks={navLinks}
-            className="lg:text-[13px] lg:font-medium lg:uppercase lg:tracking-[0.22em] lg:text-black"
+            className="2xl:gap-10 2xl:[&_a]:text-[15px] 2xl:[&_a]:tracking-[0.02em] xl:gap-6 xl:font-medium xl:uppercase xl:text-black xl:[&_a]:whitespace-nowrap xl:[&_a]:text-[12px] xl:[&_a]:tracking-[0.08em]"
           />
         </nav>
 
         <div
           ref={languageRef}
-          className="relative hidden items-center font-montserrat text-[12px] uppercase tracking-[0.22em] lg:flex"
+          className="relative hidden items-center font-montserrat text-[12px] uppercase tracking-[0.22em] xl:flex"
         >
           <button
             type="button"
@@ -198,7 +198,7 @@ export function Header({
         <button
           onClick={openMenu}
           aria-label={burgerLabel}
-          className="text-black transition-all duration-300 hover:scale-110 active:scale-95 lg:hidden"
+          className="text-black transition-all duration-300 hover:scale-110 active:scale-95 xl:hidden"
         >
           <BurgerMenuIcon width={30} height={30} />
         </button>

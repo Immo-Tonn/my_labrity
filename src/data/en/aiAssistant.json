@@ -38,5 +38,9 @@
     "website": "We build websites and landing pages for businesses and self-employed people. You can find an overview under “Services”; for a specific enquiry, please use the contact form.",
     "price": "The cost depends on the scope of the project. Starting prices are on the “Prices” page; for an individual quote, please use the contact form.",
     "duration": "The timeline depends on the scope of the project. The “Process” page describes how a project works; we are happy to discuss details personally."
-  }
+  },
+  "teaserMessages": [
+    "👋 Questions about websites or SEO?",
+    "Need a modern website?"
+  ]
 }
