@@ -420,15 +420,15 @@ export default function HomePageClient({
                   {content.hero.titleSecond}
                 </h1>
 
-                <p className="mt-7 max-w-[520px] font-montserrat text-sm leading-7 text-neutral-600 md:text-base xl:mt-9 xl:text-lg">
+                <p className="mt-5 max-w-[520px] font-montserrat text-sm leading-7 text-neutral-600 md:mt-6 md:text-base xl:mt-7 xl:text-lg">
                   {content.hero.description}
                 </p>
 
-                <p className="mt-4 font-montserrat text-[12px] uppercase tracking-[0.28em] text-neutral-400 md:text-[13px]">
+                <p className="mt-3 font-montserrat text-[12px] uppercase tracking-[0.28em] text-neutral-400 md:text-[13px]">
                   {content.hero.tagline}
                 </p>
 
-                <div className="mt-10 flex flex-wrap gap-4 md:mt-12">
+                <div className="mt-6 flex flex-wrap gap-4 md:mt-8 xl:mt-8">
                   <LocalizedLink
                     href="/contact"
                     className="inline-flex min-h-[56px] items-center justify-center border border-black bg-black px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-[1px] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
