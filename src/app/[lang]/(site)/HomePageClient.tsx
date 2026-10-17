@@ -401,18 +401,18 @@ export default function HomePageClient({
       <main className="relative min-h-screen">
         <div className="container">
           {/* HERO */}
-          <section className="flex min-h-[calc(100vh-100px)] flex-col pb-[60px] pt-[150px] md:min-h-[calc(100vh-120px)] md:pb-[80px] md:pt-[165px] xl:min-h-screen xl:pb-[72px] xl:pt-[150px]">
+          <section className="flex min-h-[calc(100vh-100px)] flex-col pb-[60px] pt-[150px] md:min-h-[calc(100vh-120px)] md:pb-[80px] md:pt-[165px] xl:min-h-screen xl:pb-[110px] xl:pt-[210px]">
             <div className="flex flex-1 flex-col gap-16 xl:flex-row xl:items-center xl:justify-between">
               <div className="w-full max-w-[700px]">
-                <p className="mb-6 font-montserrat text-xs uppercase tracking-[0.34em] text-neutral-400">
+                <p className="mb-6 font-montserrat text-[11px] uppercase tracking-[0.34em] text-[#a3a3a3] md:text-xs">
                   {content.hero.kicker}
                 </p>
 
                 <h1
                   className={`font-tenor leading-[0.96] text-black ${
                     lang === 'ru' || lang === 'ua'
-                      ? 'text-[42px] md:text-[62px] xl:text-[clamp(52px,4.4vw,72px)]'
-                      : 'text-[48px] md:text-[72px] xl:text-[clamp(64px,5.6vw,92px)]'
+                      ? 'text-[42px] md:text-[62px] xl:text-[88px]'
+                      : 'text-[48px] md:text-[72px] xl:text-[108px]'
                   }`}
                 >
                   {content.hero.titleFirst}
@@ -446,7 +446,7 @@ export default function HomePageClient({
               </div>
 
               {/* HERO IMAGE */}
-              <div className="2xl:min-w-[950px] 2xl:max-w-[1300px] relative mx-auto w-full xl:mx-0 xl:w-[52vw] xl:min-w-[420px] xl:max-w-[900px]">
+              <div className="2xl:min-w-[950px] 2xl:max-w-[1300px] relative mx-auto w-full xl:mx-0 xl:w-[52vw] xl:min-w-[680px] xl:max-w-[900px]">
                 <div className="2xl:-translate-y-[70px] relative w-full -translate-y-[20px] xl:-translate-y-[55px]">
                   <Image
                     src="/images/hero/hero-devices.webp"
