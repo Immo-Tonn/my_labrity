@@ -2,6 +2,8 @@
 
 import { ArrowUp } from 'lucide-react';
 
+// Compact square arrow button in the footer's existing style (thin green
+// border, #f8f6f1 background). Icon-only, labelled for assistive tech.
 export function BackToTop({ label }: { label: string }) {
   const handleClick = () => {
     const reduce = window.matchMedia(
@@ -15,15 +17,16 @@ export function BackToTop({ label }: { label: string }) {
     <button
       type="button"
       onClick={handleClick}
-      className="group inline-flex min-h-[44px] items-center gap-3 font-montserrat text-[12px] uppercase tracking-[0.14em] text-[#18352b]/55 transition duration-300 hover:text-[#18352b]"
+      aria-label={label}
+      title={label}
+      className="group flex h-11 w-11 items-center justify-center border border-[#18352b]/25 bg-[#f8f6f1] text-[#18352b]/70 transition duration-300 hover:border-[#18352b] hover:text-[#18352b]"
     >
-      {label}
-      <span
+      <ArrowUp
+        size={18}
+        strokeWidth={1.5}
         aria-hidden="true"
-        className="flex h-9 w-9 items-center justify-center border border-[#18352b]/25 text-[#18352b] transition duration-300 group-hover:-translate-y-[2px] group-hover:border-[#18352b]"
-      >
-        <ArrowUp size={16} strokeWidth={1.6} />
-      </span>
+        className="transition duration-300 group-hover:-translate-y-[2px]"
+      />
     </button>
   );
 }
