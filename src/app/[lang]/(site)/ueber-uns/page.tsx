@@ -15,24 +15,24 @@ const PATH = '/ueber-uns';
 
 const META: Record<Language, { title: string; description: string }> = {
   de: {
-    title: 'Über Labrity: Websites, Web-Apps, CRM & iOS-Apps aus Münster',
+    title: 'Über Labrity | Web Studio aus Münster',
     description:
-      'Labrity aus Münster entwickelt Websites, Webanwendungen, SaaS-Plattformen, CRM-Systeme und iOS-Apps für Unternehmen in NRW und deutschlandweit.',
+      'Labrity ist ein Web Studio aus Münster für Unternehmen in NRW und deutschlandweit: wer wir sind, wie wir arbeiten und was wir anbieten.',
   },
   en: {
-    title: 'About Labrity: Websites, Web Apps, CRM & iOS Apps from Münster',
+    title: 'About Labrity | Web Studio from Münster',
     description:
-      'Labrity from Münster builds websites, web applications, SaaS platforms, CRM systems and iOS apps for businesses in North Rhine-Westphalia and across Germany.',
+      'Labrity is a web studio from Münster working with businesses in North Rhine-Westphalia and across Germany: who we are, how we work and what we offer.',
   },
   ru: {
-    title: 'О Labrity: сайты, веб-приложения, CRM и iOS-приложения',
+    title: 'О Labrity | Веб-студия из Мюнстера',
     description:
-      'Labrity из Мюнстера разрабатывает сайты, веб-приложения, SaaS-платформы, CRM-системы и iOS-приложения для компаний в NRW и по всей Германии.',
+      'Labrity — веб-студия из Мюнстера для компаний в NRW и по всей Германии: кто мы, как работаем и что предлагаем.',
   },
   ua: {
-    title: 'Про Labrity: сайти, вебзастосунки, CRM та iOS-застосунки',
+    title: 'Про Labrity | Веб-студія з Мюнстера',
     description:
-      'Labrity з Мюнстера розробляє сайти, вебзастосунки, SaaS-платформи, CRM-системи та iOS-застосунки для компаній у NRW та по всій Німеччині.',
+      'Labrity — веб-студія з Мюнстера для компаній у NRW та по всій Німеччині: хто ми, як працюємо і що пропонуємо.',
   },
 };
 
@@ -42,8 +42,9 @@ type AboutData = {
   sections: { title: string; text: string }[];
   capabilities: {
     title: string;
-    intro: string;
-    items: { title: string; text: string }[];
+    text: string;
+    linkLabel: string;
+    href: string;
   };
   services: { title: string; items: { label: string; href: string }[] };
   contactLabel: string;
@@ -97,21 +98,14 @@ export default async function AboutPage({ params }: { params: PageParams }) {
                 {about.capabilities.title}
               </h2>
               <p className="mt-3 font-montserrat text-sm leading-7 text-[#18352b]/75">
-                {about.capabilities.intro}
+                {about.capabilities.text}
               </p>
-
-              <div className="mt-6 grid gap-6 md:grid-cols-2">
-                {about.capabilities.items.map(item => (
-                  <article key={item.title}>
-                    <h3 className="font-tenor text-lg font-semibold text-[#18352b]">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 font-montserrat text-sm leading-7 text-[#18352b]/75">
-                      {item.text}
-                    </p>
-                  </article>
-                ))}
-              </div>
+              <Link
+                href={withLocale(about.capabilities.href, lang)}
+                className="mt-4 inline-flex min-h-[44px] items-center font-montserrat text-[13px] font-semibold uppercase tracking-[0.06em] text-[#18352b] underline underline-offset-4 transition hover:opacity-70"
+              >
+                {about.capabilities.linkLabel}
+              </Link>
             </section>
 
             {about.sections.map(section => (

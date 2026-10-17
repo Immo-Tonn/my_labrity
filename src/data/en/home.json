@@ -332,45 +332,51 @@
     "capabilities": [
       {
         "title": "Online booking and reservation systems",
-        "description": "Your customers book free appointments themselves, even outside your opening hours. Fewer phone calls, less back-and-forth and a clear booking process."
+        "description": "Customers book themselves, around the clock."
       },
       {
         "title": "Calendars and schedule management",
-        "description": "All appointments and availability in one place. Working hours, breaks and absences are taken into account in planning, so your team keeps the overview."
+        "description": "All appointments and availability in one place."
       },
       {
         "title": "Customer management (CRM)",
-        "description": "Manage customer data, enquiries and key information centrally instead of searching through different spreadsheets and messages."
+        "description": "Customer data and enquiries in one central place."
       },
       {
         "title": "Time tracking and staff management",
-        "description": "Record working hours digitally and evaluate them clearly, with a solution that fits your company's workflows."
+        "description": "Record and evaluate working hours digitally."
       },
       {
         "title": "Orders, enquiries, quotes and invoices",
-        "description": "From the first customer contact to the invoice: bring information and processing status together in one traceable workflow."
+        "description": "From first contact to invoice in one workflow."
       },
       {
         "title": "Financial dashboards, reports and analytics",
-        "description": "Present key business figures clearly, spot developments and make decisions on a better information base."
+        "description": "Key business figures at a glance."
       },
       {
         "title": "Customer and employee portals",
-        "description": "Protected logins through which customers or employees use exactly the information and functions that are relevant to them."
+        "description": "Protected logins for customers and employees."
       },
       {
         "title": "Admin areas and process automation",
-        "description": "Simplify recurring tasks, digitise business processes and reduce manual work."
+        "description": "Simplify recurring tasks and reduce manual work."
       },
       {
         "title": "Custom web apps and software platforms",
-        "description": "When standard software does not fit your company, we build a solution based on your actual business processes."
+        "description": "When standard software does not fit: a solution built around your processes."
       }
     ],
     "primary": "Request a custom solution",
     "secondary": "More about web apps",
     "caption": "Concept illustrations of interfaces, not client projects.",
     "alt1": "Illustration: dashboard with appointments, employees and revenue on a laptop",
-    "alt2": "Illustration: appointment calendar on a laptop and online booking on a smartphone"
+    "alt2": "Illustration: appointment calendar on a laptop and online booking on a smartphone",
+    "finalCta": {
+      "title": "Your workflows. Our solution.",
+      "description": "Tell us what should run more easily in your business. We will build the software for it.",
+      "primary": "Request a custom solution",
+      "secondary": "Discover all possibilities"
+    }
   }
 }

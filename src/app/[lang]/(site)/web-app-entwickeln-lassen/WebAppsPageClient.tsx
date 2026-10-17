@@ -147,30 +147,30 @@ export default function WebAppsPageClient({
       />
 
       {/* HERO */}
-      <section className="mx-auto max-w-[1700px] px-5 pb-16 pt-[130px] md:px-8 md:pb-24 md:pt-[170px]">
+      <section className="mx-auto max-w-[1700px] px-5 pb-12 pt-[112px] md:px-8 md:pb-24 md:pt-[170px]">
         <Breadcrumbs
           parentLabel={content.breadcrumbParentLabel}
           parentHref="/services"
           currentLabel={content.hero.kicker}
         />
 
-        <div className="grid items-center gap-12 xl:grid-cols-[1.15fr_0.85fr] xl:gap-16">
+        <div className="grid items-center gap-9 md:gap-12 xl:grid-cols-[1.15fr_0.85fr] xl:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 36 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/60 md:text-[13px]">
-              {content.hero.kicker}
-            </p>
             <h1 className="2xl:text-[80px] font-tenor text-[34px] leading-[1.04] tracking-[-0.04em] text-black md:text-[60px] xl:text-[68px]">
               {content.hero.title}
             </h1>
-            <p className="mt-8 max-w-[760px] font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[18px]">
+            <p className="mt-6 max-w-[760px] font-montserrat text-[15px] leading-8 text-neutral-500 md:mt-8 md:text-[18px]">
               {content.hero.description}
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <LocalizedLink href="/contact" className={primaryBtn}>
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 md:mt-10 md:gap-4">
+              <LocalizedLink
+                href="/contact"
+                className={`${primaryBtn} w-full text-center sm:w-auto`}
+              >
                 {content.hero.button}
               </LocalizedLink>
               <a

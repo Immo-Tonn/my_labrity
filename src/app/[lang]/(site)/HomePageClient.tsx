@@ -121,6 +121,12 @@ export type HomeData = {
     caption: string;
     alt1: string;
     alt2: string;
+    finalCta: {
+      title: string;
+      description: string;
+      primary: string;
+      secondary: string;
+    };
   };
   processPreview: {
     kicker: string;
@@ -928,6 +934,29 @@ export default function HomePageClient({
                 <p className="mt-8 font-montserrat text-xs leading-6 text-white/45">
                   {content.webAppsShowcase.caption}
                 </p>
+
+                <div className="mt-12 border-t border-white/10 pt-12 text-center md:mt-16 md:pt-16">
+                  <h3 className="mx-auto max-w-[760px] font-tenor text-[34px] leading-[1.05] tracking-[-0.03em] md:text-[56px]">
+                    {content.webAppsShowcase.finalCta.title}
+                  </h3>
+                  <p className="mx-auto mt-5 max-w-[620px] font-montserrat text-[15px] leading-8 text-white/70 md:text-[17px]">
+                    {content.webAppsShowcase.finalCta.description}
+                  </p>
+                  <div className="mx-auto mt-9 flex max-w-[460px] flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center sm:gap-4">
+                    <LocalizedLink
+                      href="/contact"
+                      className="inline-flex min-h-[56px] items-center justify-center border border-white bg-white px-8 text-center font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-black transition duration-300 hover:-translate-y-[1px]"
+                    >
+                      {content.webAppsShowcase.finalCta.primary}
+                    </LocalizedLink>
+                    <LocalizedLink
+                      href="/web-app-entwickeln-lassen"
+                      className="inline-flex min-h-[56px] items-center justify-center border border-white/40 px-8 text-center font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:border-white hover:bg-white hover:text-black"
+                    >
+                      {content.webAppsShowcase.finalCta.secondary}
+                    </LocalizedLink>
+                  </div>
+                </div>
               </div>
             </div>
           </section>

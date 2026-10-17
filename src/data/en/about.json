@@ -1,6 +1,6 @@
 {
   "title": "About Labrity",
-  "intro": "Labrity is a web studio based in Münster, Germany. The owner is Andreas Tonn. We build more than websites: custom web applications, SaaS platforms, CRM systems and iOS apps.",
+  "intro": "Labrity is a web studio based in Münster, Germany. The owner is Andreas Tonn. Besides websites, we also build custom software for businesses.",
   "sections": [
     {
       "title": "Where we work",
@@ -39,40 +39,16 @@
         "href": "/landingpage-erstellen-lassen"
       },
       {
-        "label": "Web apps and business solutions",
+        "label": "Business Software",
         "href": "/web-app-entwickeln-lassen"
       }
     ]
   },
   "contactLabel": "Go to the contact form",
   "capabilities": {
-    "title": "What we build",
-    "intro": "From a clear company website to custom software: we plan, design and develop everything in one place.",
-    "items": [
-      {
-        "title": "Websites and landing pages",
-        "text": "Professional websites, landing pages and portfolio sites for freelancers and businesses: fast, mobile-friendly and built for search engines."
-      },
-      {
-        "title": "Web applications and SaaS",
-        "text": "Custom web applications and SaaS platforms with user accounts, roles, dashboards and a database, from the first idea to a running product."
-      },
-      {
-        "title": "Custom CRM development",
-        "text": "A CRM that fits your workflow: customers, inquiries, tasks and quotes in one place, instead of standard software full of features you do not need."
-      },
-      {
-        "title": "iOS app development",
-        "text": "Native iOS apps for iPhone, from concept and design to implementation. We also build our own apps and know the path from prototype to finished product."
-      },
-      {
-        "title": "Online shops and platforms",
-        "text": "Online shops, booking and marketplace platforms and customer portals that match your business model."
-      },
-      {
-        "title": "Relaunch and further development",
-        "text": "Modernize existing websites and systems, make them faster and develop them cleanly, without putting existing rankings at risk."
-      }
-    ]
+    "title": "More than websites",
+    "text": "We plan, design and develop everything in one place: from a clear company website to web apps, booking systems and iOS apps. How we build software for businesses is explained on our software development page.",
+    "linkLabel": "Discover business software",
+    "href": "/web-app-entwickeln-lassen"
   }
 }
