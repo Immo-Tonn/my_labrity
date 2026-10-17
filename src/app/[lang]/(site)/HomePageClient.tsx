@@ -857,23 +857,15 @@ export default function HomePageClient({
                     delay: 0.1,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="relative mx-auto w-full max-w-[600px] pb-12"
+                  className="mx-auto w-full max-w-[520px] xl:max-w-none"
                 >
-                  <Image
-                    src="/images/web-apps/dashboard-overview.webp"
-                    alt={content.webAppsShowcase.alt1}
-                    width={882}
-                    height={887}
-                    sizes="(min-width: 1280px) 520px, (min-width: 768px) 560px, 90vw"
-                    className="ml-auto h-auto w-[88%] border border-white/15 shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
-                  />
                   <Image
                     src="/images/web-apps/booking-calendar-mobile.webp"
                     alt={content.webAppsShowcase.alt2}
                     width={882}
                     height={887}
-                    sizes="(min-width: 1280px) 330px, (min-width: 768px) 340px, 56vw"
-                    className="absolute bottom-0 left-0 h-auto w-[58%] border border-white/20 shadow-[0_30px_80px_rgba(0,0,0,0.55)]"
+                    sizes="(min-width: 1280px) 40vw, (min-width: 768px) 520px, 88vw"
+                    className="h-auto w-full border border-white/15 shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
                   />
                 </motion.div>
               </div>
@@ -915,6 +907,23 @@ export default function HomePageClient({
                     defaultOpen={0}
                   />
                 </div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 36 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-80px' }}
+                  transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                  className="mx-auto mt-14 w-full max-w-[640px] md:mt-20"
+                >
+                  <Image
+                    src="/images/web-apps/dashboard-overview.webp"
+                    alt={content.webAppsShowcase.alt1}
+                    width={882}
+                    height={887}
+                    sizes="(min-width: 768px) 640px, 88vw"
+                    className="h-auto w-full border border-white/15 shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
+                  />
+                </motion.div>
 
                 <p className="mt-8 font-montserrat text-xs leading-6 text-white/45">
                   {content.webAppsShowcase.caption}

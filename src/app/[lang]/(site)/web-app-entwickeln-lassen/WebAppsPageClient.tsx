@@ -122,50 +122,6 @@ function LinkList({
   );
 }
 
-// Purely decorative abstract chart motif (no data, hidden from assistive tech).
-function AbstractCharts() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 520 360"
-      className="pointer-events-none absolute right-0 top-[-10px] hidden h-auto w-[44%] max-w-[560px] text-black xl:block"
-      fill="none"
-    >
-      <g stroke="currentColor" strokeOpacity="0.1" strokeWidth="1">
-        <path d="M20 40H500M20 120H500M20 200H500M20 280H500" />
-      </g>
-      <g fill="currentColor" fillOpacity="0.07">
-        <rect x="60" y="210" width="34" height="70" />
-        <rect x="116" y="180" width="34" height="100" />
-        <rect x="172" y="150" width="34" height="130" />
-        <rect x="228" y="190" width="34" height="90" />
-        <rect x="284" y="120" width="34" height="160" />
-        <rect x="340" y="90" width="34" height="190" />
-      </g>
-      <path
-        d="M60 230C120 200 160 150 230 160S320 100 380 70 450 60 480 40"
-        stroke="#18352b"
-        strokeOpacity="0.45"
-        strokeWidth="1.5"
-      />
-      <circle cx="480" cy="40" r="5" fill="#18352b" fillOpacity="0.55" />
-      <circle
-        cx="400"
-        cy="250"
-        r="46"
-        stroke="currentColor"
-        strokeOpacity="0.12"
-      />
-      <path
-        d="M400 204A46 46 0 0 1 446 250"
-        stroke="#18352b"
-        strokeOpacity="0.4"
-        strokeWidth="2"
-      />
-    </svg>
-  );
-}
-
 export default function WebAppsPageClient({
   initialData,
 }: {
@@ -191,41 +147,67 @@ export default function WebAppsPageClient({
       />
 
       {/* HERO */}
-      <section className="relative mx-auto max-w-[1700px] px-5 pb-16 pt-[130px] md:px-8 md:pb-24 md:pt-[170px]">
-        <AbstractCharts />
+      <section className="mx-auto max-w-[1700px] px-5 pb-16 pt-[130px] md:px-8 md:pb-24 md:pt-[170px]">
         <Breadcrumbs
           parentLabel={content.breadcrumbParentLabel}
           parentHref="/services"
           currentLabel={content.hero.kicker}
         />
 
-        <motion.div
-          initial={{ opacity: 0, y: 36 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-[1180px]"
-        >
-          <p className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/60 md:text-[13px]">
-            {content.hero.kicker}
-          </p>
-          <h1 className="font-tenor text-[34px] leading-[1.04] tracking-[-0.04em] text-black md:text-[60px] xl:text-[80px]">
-            {content.hero.title}
-          </h1>
-          <p className="mt-8 max-w-[760px] font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[18px]">
-            {content.hero.description}
-          </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <LocalizedLink href="/contact" className={primaryBtn}>
-              {content.hero.button}
-            </LocalizedLink>
-            <a
-              href="#situationen"
-              className="inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-black/70 underline underline-offset-4 transition duration-300 hover:text-black"
-            >
-              {content.hero.secondary}
-            </a>
-          </div>
-        </motion.div>
+        <div className="grid items-center gap-12 xl:grid-cols-[1.15fr_0.85fr] xl:gap-16">
+          <motion.div
+            initial={{ opacity: 0, y: 36 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <p className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/60 md:text-[13px]">
+              {content.hero.kicker}
+            </p>
+            <h1 className="2xl:text-[80px] font-tenor text-[34px] leading-[1.04] tracking-[-0.04em] text-black md:text-[60px] xl:text-[68px]">
+              {content.hero.title}
+            </h1>
+            <p className="mt-8 max-w-[760px] font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[18px]">
+              {content.hero.description}
+            </p>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <LocalizedLink href="/contact" className={primaryBtn}>
+                {content.hero.button}
+              </LocalizedLink>
+              <a
+                href="#situationen"
+                className="inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-black/70 underline underline-offset-4 transition duration-300 hover:text-black"
+              >
+                {content.hero.secondary}
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.figure
+            initial={{ opacity: 0, y: 36 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.9,
+              delay: 0.15,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="mx-auto w-full max-w-[520px] xl:max-w-none"
+          >
+            <div className="overflow-hidden border border-[#e7e2d9] shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+              <Image
+                src="/images/web-apps/booking-calendar-mobile.webp"
+                alt={content.visual.alt1}
+                width={882}
+                height={887}
+                priority
+                sizes="(min-width: 1280px) 40vw, (min-width: 768px) 520px, 92vw"
+                className="h-auto w-full"
+              />
+            </div>
+            <figcaption className="mt-3 font-montserrat text-xs leading-6 text-neutral-500">
+              {content.visual.caption}
+            </figcaption>
+          </motion.figure>
+        </div>
       </section>
 
       {/* PROBLEMS -> SOLUTIONS */}
@@ -276,48 +258,35 @@ export default function WebAppsPageClient({
         </div>
       </section>
 
-      {/* VISUAL (concept illustrations) */}
-      <section className="px-5 md:px-8">
-        <div className="mx-auto max-w-[1500px]">
-          <div className="grid gap-4 md:grid-cols-2">
-            <div className="overflow-hidden border border-[#e7e2d9]">
-              <Image
-                src="/images/web-apps/booking-calendar-mobile.webp"
-                alt={content.visual.alt1}
-                width={882}
-                height={887}
-                sizes="(min-width: 1500px) 740px, (min-width: 768px) 50vw, 100vw"
-                className="h-auto w-full"
-              />
-            </div>
-            <div className="overflow-hidden border border-[#e7e2d9]">
-              <Image
-                src="/images/web-apps/dashboard-overview.webp"
-                alt={content.visual.alt2}
-                width={882}
-                height={887}
-                sizes="(min-width: 1500px) 740px, (min-width: 768px) 50vw, 100vw"
-                className="h-auto w-full"
-              />
-            </div>
-          </div>
-          <p className="mt-4 font-montserrat text-xs leading-6 text-neutral-500">
-            {content.visual.caption}
-          </p>
-        </div>
-      </section>
-
       {/* WHAT WE BUILD */}
       <section className="border-t border-[#e7e2d9] py-24 md:py-32">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
-          <div className="mx-auto max-w-[860px] text-center">
-            <p className={kicker}>{content.tasks.kicker}</p>
-            <h2 className="font-tenor text-[32px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
-              {content.tasks.title}
-            </h2>
-            <p className="mt-7 font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
-              {content.tasks.description}
-            </p>
+          <div className="grid items-center gap-12 xl:grid-cols-[1fr_0.9fr] xl:gap-20">
+            <div className="max-w-[760px]">
+              <p className={kicker}>{content.tasks.kicker}</p>
+              <h2 className="font-tenor text-[32px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
+                {content.tasks.title}
+              </h2>
+              <p className="mt-7 font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
+                {content.tasks.description}
+              </p>
+            </div>
+
+            <figure className="relative mx-auto w-full max-w-[520px] xl:max-w-none">
+              <div className="relative overflow-hidden border border-[#e7e2d9] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+                <Image
+                  src="/images/web-apps/dashboard-overview.webp"
+                  alt={content.visual.alt2}
+                  width={882}
+                  height={887}
+                  sizes="(min-width: 1280px) 40vw, (min-width: 768px) 520px, 92vw"
+                  className="h-auto w-full"
+                />
+              </div>
+              <figcaption className="mt-3 font-montserrat text-xs leading-6 text-neutral-500">
+                {content.visual.caption}
+              </figcaption>
+            </figure>
           </div>
 
           <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
