@@ -56,6 +56,13 @@ const config: Config = {
       },
 
       colors: {
+        // WCAG AA: Tailwind's default neutral-400 (#a3a3a3, 2.3:1) and
+        // neutral-500 (#737373, 4.4:1) fail 4.5:1 on the off-white #f8f6f1
+        // used for small captions/kickers. Darkened just enough to pass.
+        neutral: {
+          400: '#5f5f5f',
+          500: '#555555',
+        },
         mainBcg: '#E5E1D5',
         footerBcg: '#D6D0C5',
         cardBcg: '#FAF5ED',

@@ -1,0 +1,83 @@
+{
+  "slug": "landingpage-oder-website",
+  "meta": {
+    "title": "Landingpage oder Website: Was brauche ich wirklich? | Labrity",
+    "description": "Der Unterschied zwischen einer Landingpage und einer vollständigen Website — objektiv erklärt, mit konkreten Anwendungsfällen für beide."
+  },
+  "breadcrumbLabel": "Landingpage vs. Website",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Wissen",
+    "title": "Landingpage oder Website: Was brauche ich wirklich?",
+    "intro": "Beide Begriffe werden oft synonym verwendet, obwohl sie unterschiedliche Aufgaben erfüllen. Der Unterschied liegt nicht im Umfang, sondern im Ziel."
+  },
+  "keyTakeaway": {
+    "title": "Kurz gesagt",
+    "text": "Eine Website stellt Ihr gesamtes Unternehmen dar und ist auf Dauer angelegt. Eine Landingpage verfolgt ein einziges, zeitlich oft begrenztes Ziel — etwa eine Kampagne oder ein Angebot. Beide haben ihre Berechtigung, aber selten dieselbe."
+  },
+  "sections": [
+    {
+      "heading": "Was eine Website leisten soll",
+      "level": "h2",
+      "paragraphs": [
+        "Eine Website ist die digitale Gesamtdarstellung Ihres Unternehmens: wer Sie sind, was Sie anbieten, wie man Sie erreicht, welche Referenzen es gibt. Sie ist darauf angelegt, über einen langen Zeitraum zu bestehen und mehrere unterschiedliche Besucherinteressen gleichzeitig zu bedienen.",
+        "Genau diese Breite ist gleichzeitig ihre Stärke und ihre Grenze: Eine Website kann viele unterschiedliche Fragen beantworten, aber sie kann nicht für jede einzelne Werbekampagne die eine perfekt zugeschnittene Botschaft liefern, ohne dabei unübersichtlich zu werden."
+      ]
+    },
+    {
+      "heading": "Was eine Landingpage leisten soll",
+      "level": "h2",
+      "paragraphs": [
+        "Eine Landingpage verfolgt genau ein Ziel — eine Anmeldung, eine Anfrage, ein Angebot. Sie wird bewusst ohne Ablenkung gestaltet: kein umfangreiches Menü, keine zehn gleichrangigen Optionen, sondern ein klarer Weg zu einer einzigen Handlung. Typischerweise ist sie mit einer konkreten Kampagne, einem zeitlich begrenzten Angebot oder einem Produktlaunch verknüpft.",
+        "Diese Fokussierung ist kein Nachteil, sondern der eigentliche Zweck: Wer über eine Anzeige zu einer Landingpage kommt, soll genau die Botschaft sehen, die zur Anzeige passt — nicht erst durch eine allgemeine Website navigieren müssen, um das gesuchte Angebot zu finden."
+      ]
+    },
+    {
+      "heading": "Typische Anwendungsfälle für eine Website",
+      "level": "h2",
+      "paragraphs": [
+        "Sie führen ein bestehendes Unternehmen mit mehreren Leistungen. Kunden sollen sich informieren, vergleichen und selbst entscheiden können, welcher Bereich für sie relevant ist. Sie brauchen eine Struktur, die über Monate und Jahre Bestand hat und mit dem Unternehmen mitwachsen kann."
+      ]
+    },
+    {
+      "heading": "Typische Anwendungsfälle für eine Landingpage",
+      "level": "h2",
+      "paragraphs": [
+        "Sie schalten Werbeanzeigen für ein konkretes Angebot und möchten, dass Besucher direkt bei der passenden Botschaft landen. Sie starten ein neues, noch kleines Vorhaben und brauchen schnell eine erste digitale Präsenz. Sie testen ein Angebot zeitlich begrenzt und wollen dafür keine dauerhafte Struktur aufbauen."
+      ]
+    },
+    {
+      "heading": "Was, wenn beides zutrifft?",
+      "level": "h2",
+      "paragraphs": [
+        "Häufig ist die richtige Lösung nicht \"entweder-oder\": Ein etabliertes Unternehmen kann eine vollständige Website als Basis haben und für einzelne Kampagnen zusätzlich gezielte Landingpages einsetzen. Die Website bleibt die dauerhafte Grundlage, die Landingpage übernimmt die kurzfristige, fokussierte Aufgabe.",
+        "In der Praxis bewährt sich dieses Zusammenspiel besonders bei saisonalen Angeboten, Produkteinführungen oder Marketingkampagnen, die zeitlich begrenzt laufen: Die Hauptwebsite bleibt unverändert bestehen, während eine oder mehrere Landingpages parallel für die jeweilige Kampagne existieren."
+      ]
+    },
+    {
+      "heading": "Woran Sie erkennen, was Sie gerade brauchen",
+      "level": "h2",
+      "paragraphs": [
+        "Eine einfache Orientierungsfrage hilft weiter: Soll die Seite Ihr Unternehmen als Ganzes repräsentieren, oder soll sie genau eine Handlung auslösen? Im ersten Fall ist eine Website die richtige Wahl, im zweiten eine Landingpage. Wenn Sie unsicher sind, lohnt es sich, das konkrete Ziel der nächsten Wochen zu betrachten, statt eine grundsätzliche Entscheidung für alle Zukunft treffen zu wollen."
+      ]
+    }
+  ],
+  "relatedService": {
+    "label": "Sie planen eine konkrete Kampagne?",
+    "description": "Erzählen Sie uns von Ihrem Vorhaben — wir sagen Ihnen, wie die Landingpage aussehen könnte.",
+    "linkLabel": "Mehr zu Landingpage erstellen lassen",
+    "href": "/landingpage-erstellen-lassen"
+  },
+  "secondaryLink": {
+    "label": "Sie brauchen eine vollständige Website?",
+    "href": "/website-erstellen-lassen"
+  },
+  "relatedArticles": [
+    "landingpage-dauer-launch",
+    "website-erstellen-lassen-kosten"
+  ],
+  "images": {
+    "coverAlt": "Eine einzelne fokussierte Landingpage-Tafel neben einer mehrseitigen Website-Komposition, aufgestellt vor einem Sonnenuntergang."
+  }
+}

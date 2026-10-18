@@ -4,7 +4,6 @@
     "title": "Von der ersten Idee bis zum fertigen digitalen Auftritt.",
     "description": "Wir begleiten Ihr Projekt Schritt für Schritt — mit klarer Struktur, modernem Design und einem Prozess, der verständlich bleibt."
   },
-
   "stepsSection": {
     "kicker": "Unser Prozess",
     "title": "Ein klarer Ablauf für ein starkes Ergebnis.",
@@ -37,7 +36,6 @@
       }
     ]
   },
-
   "clientSection": {
     "kicker": "Vorbereitung",
     "title": "Was wir von Ihnen brauchen.",
@@ -57,7 +55,6 @@
       }
     ]
   },
-
   "resultSection": {
     "kicker": "Ergebnis",
     "title": "Was Sie am Ende erhalten.",
@@ -81,18 +78,27 @@
       }
     ]
   },
-
   "calmSection": {
     "kicker": "Keine Zufälle",
     "title": "Kein Chaos. Kein Rätselraten.",
     "description": "Ein gutes Website-Projekt braucht nicht nur Design, sondern einen klaren Ablauf. Deshalb arbeiten wir Schritt für Schritt, damit Entscheidungen verständlich bleiben und das Ergebnis gezielt entsteht."
   },
-
   "cta": {
     "kicker": "Nächster Schritt",
     "title": "Bereit, Ihr Projekt zu starten?",
     "description": "Erzählen Sie uns kurz von Ihrem Projekt — wir prüfen, welche Website-Lösung zu Ihrem Ziel passt.",
     "primaryButton": "Projekt starten",
     "secondaryButton": "Portfolio ansehen"
+  },
+  "relatedArticles": {
+    "kicker": "Weiterlesen",
+    "title": "Mehr dazu im Blog.",
+    "items": [
+      {
+        "label": "Website-Briefing: Was vor dem ersten Gespräch vorbereitet sein sollte",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/website-briefing-checkliste"
+      }
+    ]
   }
 }

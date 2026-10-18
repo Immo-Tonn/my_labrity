@@ -1,0 +1,79 @@
+{
+  "slug": "landingpage-dauer-launch",
+  "meta": {
+    "title": "How Long Does a Landing Page Take Until Launch? | Labrity",
+    "description": "No blanket number — the actual factors that determine how quickly a landing page can go live, from content readiness to your approval process."
+  },
+  "breadcrumbLabel": "Time to launch",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Knowledge",
+    "title": "How long does a landing page take until launch?",
+    "intro": "The honest answer is: it depends — on quite specific, influenceable factors, not on some secret industry formula. Knowing these factors lets you estimate your own timeline realistically instead of relying on a blanket number from a quote."
+  },
+  "keyTakeaway": null,
+  "sections": [
+    {
+      "heading": "Why there's no credible blanket number",
+      "level": "h2",
+      "paragraphs": [
+        "Any claim like \"your landing page in 5 days\" without knowledge of your specific project is either a marketing promise or refers to a very narrowly defined standard package. The actual duration depends on several independent factors that can vary considerably from project to project."
+      ]
+    },
+    {
+      "heading": "Factor 1: How ready is your content already?",
+      "level": "h2",
+      "paragraphs": [
+        "The biggest time factor is almost always content — not design or technology. If copy, the offer, audience understanding, and at least rough visual material already exist, execution can start considerably faster. If all of that still needs to be developed, that's not a bad thing in itself — but it's work that needs to be realistically planned for, not skipped."
+      ]
+    },
+    {
+      "heading": "Factor 2: How many people need to approve internally?",
+      "level": "h2",
+      "paragraphs": [
+        "An approval process with one decision-maker often moves faster in practice than one where several departments give feedback in sequence. This isn't a criticism of thorough internal alignment — just a note that every additional approval loop realistically costs time that should be planned for separately."
+      ]
+    },
+    {
+      "heading": "Factor 3: How clear is the page's goal?",
+      "level": "h2",
+      "paragraphs": [
+        "A landing page with a single, clearly defined goal (\"book an appointment\", \"request a quote\") can be structured faster than a page meant to serve multiple audiences or offers at once. Ambitious goals are entirely legitimate — but the more a single page is meant to achieve, the more coordination effort goes into structure and prioritisation."
+      ]
+    },
+    {
+      "heading": "Factor 4: Does it need custom design or a proven pattern?",
+      "level": "h2",
+      "paragraphs": [
+        "A landing page built on an already proven structure needs less design time than one where visual identity and structure are developed completely from scratch. Both approaches have their place — the question is which one makes more sense for your specific goal and timeline."
+      ]
+    },
+    {
+      "heading": "What this means for your own planning",
+      "level": "h2",
+      "paragraphs": [
+        "Instead of asking for a general number, it's worth asking any agency or freelancer a different question: \"What exactly would extend or shorten the timeline in our case?\" A serious answer names concrete points like the ones above — not just a date with no reasoning behind it.",
+        "If you want to influence the pace yourself, the most effective lever is almost always preparing content and the decision process as early as possible — not putting pressure on the execution phase."
+      ]
+    }
+  ],
+  "faq": null,
+  "relatedService": {
+    "label": "Planning a landing page?",
+    "description": "We discuss your actual timeline based on real factors, not a standard number.",
+    "linkLabel": "More on Landing Page Creation",
+    "href": "/landingpage-erstellen-lassen"
+  },
+  "secondaryLink": {
+    "label": "Our process at a glance",
+    "href": "/process"
+  },
+  "relatedArticles": [
+    "landingpage-oder-website",
+    "website-briefing-checkliste"
+  ],
+  "images": {
+    "coverAlt": "A blueprint with a red route drawn across it on a desk with a marble sphere, mountains visible in the morning light."
+  }
+}

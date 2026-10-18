@@ -1,9 +1,9 @@
 'use client';
 
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 
 import { sendMessage } from '@/api/telegram';
-import { useLanguage } from '@/utils/LanguageContext';
+import { FormGuard } from '@/components/common/FormGuard';
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
 
 type ContactLink = {
@@ -28,11 +28,14 @@ export type ContactData = {
     kicker: string;
     title: string;
     description: string;
+    locationNote?: string;
     contacts: ContactLink[];
   };
   form: {
     fields: ContactField[];
     submitLabel: string;
+    sendingLabel: string;
+    emailAltLabel: string;
     note: string;
   };
   errors: {
@@ -46,7 +49,6 @@ export type ContactData = {
     lastNamePattern?: string;
     emailRequired?: string;
     emailPattern?: string;
-    phoneRequired?: string;
     phonePattern?: string;
     phoneMin?: string;
     phoneMax?: string;
@@ -54,6 +56,7 @@ export type ContactData = {
     messageMin?: string;
     messageMax?: string;
     privacyRequired?: string;
+    sendFailed?: string;
   };
   checkbox: {
     label: string;
@@ -73,6 +76,23 @@ type ContactFormState = {
 
 type ContactFormErrors = Partial<Record<keyof ContactFormState, string>>;
 
+// DOM order of the form controls — used to focus the first invalid one.
+const fieldOrder: (keyof ContactFormState)[] = [
+  'firstName',
+  'lastName',
+  'email',
+  'phone',
+  'message',
+  'privacy',
+];
+
+const autoCompleteFor: Record<string, string> = {
+  firstName: 'given-name',
+  lastName: 'family-name',
+  email: 'email',
+  phone: 'tel',
+};
+
 const initialFormState: ContactFormState = {
   firstName: '',
   lastName: '',
@@ -87,12 +107,31 @@ export default function ContactPageClient({
 }: {
   initialData: ContactData;
 }) {
-  const { lang } = useLanguage();
   const content = initialData;
+  const emailLinks = content.sidebar.contacts.filter(item =>
+    item.href.startsWith('mailto:'),
+  );
   const [formData, setFormData] = useState<ContactFormState>(initialFormState);
   const [formErrors, setFormErrors] = useState<ContactFormErrors>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const successRef = useRef<HTMLDivElement | null>(null);
+
+  // Bring the confirmation into view: it used to be a small grey line that
+  // was easy to miss below the fold.
+  useEffect(() => {
+    if (isSubmitted) {
+      successRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }
+  }, [isSubmitted]);
   const [isLoading, setIsLoading] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  // Guards against a second submit firing before React has re-rendered the
+  // button as disabled (rapid double-click/double-tap) — isLoading itself
+  // only updates on the next render, which isn't synchronous enough.
+  const isSubmittingRef = useRef(false);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -151,14 +190,15 @@ export default function ContactPageClient({
       errors.email = content.errors?.emailPattern;
     }
 
-    if (!phone) {
-      errors.phone = content.errors?.phoneRequired;
-    } else if (phone.length < 7) {
-      errors.phone = content.errors?.phoneMin;
-    } else if (phone.length > 20) {
-      errors.phone = content.errors?.phoneMax;
-    } else if (!phonePattern.test(phone)) {
-      errors.phone = content.errors?.phonePattern;
+    // Phone is optional: only validated when the visitor filled it in.
+    if (phone) {
+      if (phone.length < 7) {
+        errors.phone = content.errors?.phoneMin;
+      } else if (phone.length > 20) {
+        errors.phone = content.errors?.phoneMax;
+      } else if (!phonePattern.test(phone)) {
+        errors.phone = content.errors?.phonePattern;
+      }
     }
 
     if (!message) {
@@ -179,10 +219,19 @@ export default function ContactPageClient({
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (isSubmittingRef.current) return;
+
     const validationErrors = validateForm();
     setFormErrors(validationErrors);
+    setSubmitError('');
 
-    if (Object.keys(validationErrors).length > 0) return;
+    const firstInvalid = fieldOrder.find(name => validationErrors[name]);
+    if (firstInvalid) {
+      document.getElementById(firstInvalid)?.focus();
+      return;
+    }
+
+    isSubmittingRef.current = true;
 
     try {
       setIsLoading(true);
@@ -192,8 +241,7 @@ export default function ContactPageClient({
 👤 First name: ${formData.firstName}
 👤 Last name: ${formData.lastName}
 📧 Email: ${formData.email}
-📱 Phone: ${formData.phone}
-💬 Message: ${formData.message}`;
+${formData.phone.trim() ? `📱 Phone: ${formData.phone.trim()}\n` : ''}💬 Message: ${formData.message}`;
 
       await sendMessage(message);
 
@@ -201,17 +249,10 @@ export default function ContactPageClient({
       setFormData(initialFormState);
       setFormErrors({});
     } catch {
-      setFormErrors(prev => ({
-        ...prev,
-        message:
-          lang === 'de'
-            ? 'Senden fehlgeschlagen. Bitte versuchen Sie es erneut.'
-            : lang === 'en'
-              ? 'Sending failed. Please try again.'
-              : 'Не вдалося надіслати. Спробуйте ще раз.',
-      }));
+      setSubmitError(content.errors?.sendFailed ?? '');
     } finally {
       setIsLoading(false);
+      isSubmittingRef.current = false;
     }
   };
 
@@ -222,7 +263,7 @@ export default function ContactPageClient({
           <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
             <div className="flex flex-col justify-between bg-[#151515] px-6 py-10 text-white md:px-10 md:py-14 xl:px-14 xl:py-16">
               <div>
-                <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.32em] text-white/45 md:text-xs">
+                <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60 md:text-xs">
                   {content.sidebar.kicker}
                 </p>
 
@@ -230,28 +271,40 @@ export default function ContactPageClient({
                   {content.sidebar.title}
                 </h1>
 
-                <p className="text-white/68 mt-6 max-w-[420px] font-montserrat text-sm leading-7 md:text-base">
+                <p className="mt-6 max-w-[420px] font-montserrat text-sm leading-7 text-white/75 md:text-base">
                   {content.sidebar.description}
                 </p>
+
+                {content.sidebar.locationNote && (
+                  <p className="mt-5 max-w-[420px] font-montserrat text-[13px] leading-7 text-white/65 md:text-sm">
+                    {content.sidebar.locationNote}
+                  </p>
+                )}
               </div>
 
               <div className="border-white/12 mt-12 border-t pt-6">
-                <div className="text-white/62 flex flex-wrap gap-x-6 gap-y-3 font-montserrat text-[12px] uppercase tracking-[0.16em] md:text-[13px]">
-                  {content.sidebar.contacts.map((item, index) => (
-                    <a
-                      key={`${item.label}-${index}`}
-                      href={item.href}
-                      className="transition duration-300 hover:text-white"
-                    >
-                      {item.label}
-                    </a>
-                  ))}
+                <div className="flex flex-wrap gap-x-6 gap-y-1 font-montserrat text-[12px] uppercase tracking-[0.16em] text-white/75 md:text-[13px]">
+                  {content.sidebar.contacts.map((item, index) => {
+                    const isExternal = item.href.startsWith('http');
+
+                    return (
+                      <a
+                        key={`${item.label}-${index}`}
+                        href={item.href}
+                        target={isExternal ? '_blank' : undefined}
+                        rel={isExternal ? 'noopener noreferrer' : undefined}
+                        className="inline-flex min-h-[44px] items-center transition duration-300 hover:text-white"
+                      >
+                        {item.label}
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
             </div>
 
             <div className="bg-[#fffdfa] px-6 py-10 md:px-10 md:py-14 xl:px-14 xl:py-16">
-              <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400 md:text-xs">
+              <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400 md:text-xs">
                 {content.hero.kicker}
               </p>
 
@@ -265,8 +318,10 @@ export default function ContactPageClient({
 
               <form
                 onSubmit={handleSubmit}
+                noValidate
                 className="mt-10 grid gap-x-8 gap-y-8 md:grid-cols-2 xl:mt-12"
               >
+                <FormGuard />
                 {content.form.fields.map(field =>
                   field.type === 'textarea' ? (
                     <div key={field.name} className="md:col-span-2">
@@ -284,11 +339,21 @@ export default function ContactPageClient({
                         onChange={handleChange}
                         placeholder={field.placeholder}
                         rows={5}
+                        aria-required="true"
+                        aria-invalid={formErrors[field.name] ? true : undefined}
+                        aria-describedby={
+                          formErrors[field.name]
+                            ? `${field.name}-error`
+                            : undefined
+                        }
                         className="w-full resize-none border-b border-[#d8d3ca] bg-transparent pb-4 font-montserrat text-[15px] text-black outline-none transition duration-300 placeholder:text-neutral-400 focus:border-black"
                       />
 
                       {formErrors[field.name] && (
-                        <p className="mt-2 font-montserrat text-xs text-red-600">
+                        <p
+                          id={`${field.name}-error`}
+                          className="mt-2 font-montserrat text-xs text-red-700"
+                        >
                           {formErrors[field.name]}
                         </p>
                       )}
@@ -309,11 +374,24 @@ export default function ContactPageClient({
                         value={formData[field.name]}
                         onChange={handleChange}
                         placeholder={field.placeholder}
+                        autoComplete={autoCompleteFor[field.name]}
+                        aria-required={
+                          field.name === 'phone' ? undefined : true
+                        }
+                        aria-invalid={formErrors[field.name] ? true : undefined}
+                        aria-describedby={
+                          formErrors[field.name]
+                            ? `${field.name}-error`
+                            : undefined
+                        }
                         className="w-full border-b border-[#d8d3ca] bg-transparent pb-4 font-montserrat text-[15px] text-black outline-none transition duration-300 placeholder:text-neutral-400 focus:border-black"
                       />
 
                       {formErrors[field.name] && (
-                        <p className="mt-2 font-montserrat text-xs text-red-600">
+                        <p
+                          id={`${field.name}-error`}
+                          className="mt-2 font-montserrat text-xs text-red-700"
+                        >
                           {formErrors[field.name]}
                         </p>
                       )}
@@ -324,8 +402,14 @@ export default function ContactPageClient({
                 <div className="md:col-span-2">
                   <label className="flex items-start gap-3 font-montserrat text-sm leading-6 text-neutral-600">
                     <input
+                      id="privacy"
                       type="checkbox"
                       name="privacy"
+                      aria-required="true"
+                      aria-invalid={formErrors.privacy ? true : undefined}
+                      aria-describedby={
+                        formErrors.privacy ? 'privacy-error' : undefined
+                      }
                       checked={formData.privacy}
                       onChange={handleChange}
                       className="mt-1 h-4 w-4 border border-[#cfc8bd]"
@@ -345,7 +429,10 @@ export default function ContactPageClient({
                   </label>
 
                   {formErrors.privacy && (
-                    <p className="mt-2 font-montserrat text-xs text-red-600">
+                    <p
+                      id="privacy-error"
+                      className="mt-2 font-montserrat text-xs text-red-700"
+                    >
                       {formErrors.privacy}
                     </p>
                   )}
@@ -357,12 +444,51 @@ export default function ContactPageClient({
                     disabled={isLoading}
                     className="inline-flex min-h-[56px] items-center justify-center border border-black bg-black px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-[1px] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)] disabled:cursor-not-allowed disabled:opacity-70"
                   >
-                    {isLoading ? 'Sending...' : content.form.submitLabel}
+                    {isLoading
+                      ? content.form.sendingLabel
+                      : content.form.submitLabel}
                   </button>
 
-                  <p className="mt-5 font-montserrat text-sm leading-6 text-neutral-500">
-                    {isSubmitted ? content.successMessage : content.form.note}
-                  </p>
+                  {submitError && (
+                    <p
+                      role="alert"
+                      className="mt-5 font-montserrat text-sm leading-6 text-red-700"
+                    >
+                      {submitError}
+                    </p>
+                  )}
+
+                  {isSubmitted ? (
+                    <div
+                      ref={successRef}
+                      role="status"
+                      aria-live="polite"
+                      className="mt-5 border border-[#18352b]/30 bg-[#18352b]/5 px-5 py-4 font-montserrat text-[15px] font-medium leading-6 text-[#18352b]"
+                    >
+                      {content.successMessage}
+                    </div>
+                  ) : (
+                    <p className="mt-5 font-montserrat text-sm leading-6 text-neutral-500">
+                      {content.form.note}
+                    </p>
+                  )}
+
+                  {emailLinks.length > 0 && (
+                    <p className="mt-3 font-montserrat text-sm leading-6 text-neutral-600">
+                      {content.form.emailAltLabel}{' '}
+                      {emailLinks.map((item, index) => (
+                        <span key={item.href}>
+                          {index > 0 && ', '}
+                          <a
+                            href={item.href}
+                            className="text-black underline underline-offset-2 transition duration-300 hover:text-neutral-600"
+                          >
+                            {item.label}
+                          </a>
+                        </span>
+                      ))}
+                    </p>
+                  )}
                 </div>
               </form>
             </div>

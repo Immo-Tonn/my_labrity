@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 
 import { getData } from '@/utils/getData';
 import { buildHreflangAlternates } from '@/utils/hreflangAlternates';
+import { buildOpenGraph } from '@/utils/openGraph';
+import { buildTwitter } from '@/utils/twitter';
 import { isLanguage, withLocale, type Language } from '@/utils/localizedPath';
 import ContactPageClient, { type ContactData } from './ContactPageClient';
 
@@ -12,22 +14,22 @@ const META: Record<Language, { title: string; description: string }> = {
   de: {
     title: 'Kontakt | Labrity',
     description:
-      'Erzählen Sie uns von Ihrem Projekt — wir freuen uns auf Ihre Anfrage für Ihre neue Website, Ihr Rebranding oder Ihren digitalen Auftritt.',
+      'Labrity aus Münster entwickelt digitale Auftritte für Unternehmen in Nordrhein-Westfalen und deutschlandweit. Erzählen Sie uns von Ihrem Projekt.',
   },
   en: {
     title: 'Contact | Labrity',
     description:
-      'Tell us about your project — we would love to hear from you about your new website, rebrand or digital presence.',
+      'Labrity, based in Münster, builds digital presences for businesses across North Rhine-Westphalia and throughout Germany. Tell us about your project.',
   },
   ru: {
     title: 'Контакты | Labrity',
     description:
-      'Расскажите нам о вашем проекте — мы будем рады вашей заявке на новый сайт, редизайн или полноценное цифровое присутствие.',
+      'Labrity из Мюнстера создаёт цифровые проекты для компаний в Северном Рейне-Вестфалии и по всей Германии. Расскажите нам о вашем проекте.',
   },
   ua: {
     title: 'Контакти | Labrity',
     description:
-      'Розкажіть нам про ваш проєкт — будемо раді вашому зверненню щодо нового сайту, ребрендингу або цифрової присутності.',
+      'Labrity з Мюнстера створює цифрові проєкти для компаній у Північному Рейні-Вестфалії та по всій Німеччині. Розкажіть нам про ваш проєкт.',
   },
 };
 
@@ -50,11 +52,8 @@ export async function generateMetadata({
       canonical,
       languages: buildHreflangAlternates(PATH),
     },
-    openGraph: {
-      url: canonical,
-      title,
-      description,
-    },
+    openGraph: await buildOpenGraph(params.lang, canonical, title, description),
+    twitter: await buildTwitter(params.lang, title, description),
   };
 }
 

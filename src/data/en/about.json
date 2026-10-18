@@ -1,0 +1,54 @@
+{
+  "title": "About Labrity",
+  "intro": "Labrity is a web studio based in Münster, Germany. The owner is Andreas Tonn. Besides websites, we also build custom software for businesses.",
+  "sections": [
+    {
+      "title": "Where we work",
+      "text": "Labrity is based in Münster and works with businesses across North Rhine-Westphalia and throughout Germany. Consultation and implementation take place conveniently online."
+    },
+    {
+      "title": "Our approach",
+      "text": "Every website is created around the business, audience and positioning — without generic templates. Structure, design, trust, SEO and the user journey are developed as one connected system."
+    },
+    {
+      "title": "Technology and languages",
+      "text": "We work with modern technologies such as Next.js, React and Node.js. Our website is available in German, English, Russian and Ukrainian. Consultation and delivery happen online."
+    }
+  ],
+  "services": {
+    "title": "What we offer",
+    "items": [
+      {
+        "label": "Website Design & Build",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Web design",
+        "href": "/webdesign"
+      },
+      {
+        "label": "Web development",
+        "href": "/webentwicklung"
+      },
+      {
+        "label": "Website relaunch",
+        "href": "/website-relaunch"
+      },
+      {
+        "label": "Landing pages",
+        "href": "/landingpage-erstellen-lassen"
+      },
+      {
+        "label": "Business Software",
+        "href": "/web-app-entwickeln-lassen"
+      }
+    ]
+  },
+  "contactLabel": "Go to the contact form",
+  "capabilities": {
+    "title": "More than websites",
+    "text": "We plan, design and develop everything in one place: from a clear company website to web apps, booking systems and iOS apps. How we build software for businesses is explained on our software development page.",
+    "linkLabel": "Discover business software",
+    "href": "/web-app-entwickeln-lassen"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Über Labrity",
+  "intro": "Labrity ist ein Web Studio mit Sitz in Münster. Inhaber ist Andreas Tonn. Neben Websites entwickeln wir auch individuelle Software für Unternehmen.",
+  "sections": [
+    {
+      "title": "Wo wir arbeiten",
+      "text": "Labrity ist in Münster ansässig und arbeitet mit Unternehmen im gesamten Nordrhein-Westfalen sowie deutschlandweit zusammen. Beratung und Umsetzung erfolgen unkompliziert online."
+    },
+    {
+      "title": "Unser Ansatz",
+      "text": "Jede Website wird passend zu Business, Zielgruppe und Positionierung entwickelt — ohne generische Templates. Struktur, Design, Vertrauen, SEO und Nutzerführung werden als ein zusammenhängendes System gedacht."
+    },
+    {
+      "title": "Technologie und Sprachen",
+      "text": "Wir arbeiten mit modernen Technologien wie Next.js, React und Node.js. Unsere Website ist auf Deutsch, Englisch, Russisch und Ukrainisch verfügbar. Beratung und Umsetzung erfolgen unkompliziert online."
+    }
+  ],
+  "services": {
+    "title": "Was wir anbieten",
+    "items": [
+      {
+        "label": "Website erstellen lassen",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Webdesign",
+        "href": "/webdesign"
+      },
+      {
+        "label": "Webentwicklung",
+        "href": "/webentwicklung"
+      },
+      {
+        "label": "Website Relaunch",
+        "href": "/website-relaunch"
+      },
+      {
+        "label": "Landingpage erstellen lassen",
+        "href": "/landingpage-erstellen-lassen"
+      },
+      {
+        "label": "Software für Unternehmen",
+        "href": "/web-app-entwickeln-lassen"
+      }
+    ]
+  },
+  "contactLabel": "Zum Kontaktformular",
+  "capabilities": {
+    "title": "Mehr als Websites",
+    "text": "Wir planen, gestalten und programmieren alles aus einer Hand: von der klaren Unternehmenswebsite bis zu Web-Apps, Buchungssystemen und iOS-Apps. Wie wir Software für Ihr Unternehmen entwickeln, lesen Sie auf der Seite zur Softwareentwicklung.",
+    "linkLabel": "Software für Unternehmen entdecken",
+    "href": "/web-app-entwickeln-lassen"
+  }
+}

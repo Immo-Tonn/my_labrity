@@ -1,48 +1,66 @@
 {
-  "startButton": "✨ Start Project Calculator",
-  "analysisTitle": "✨ AI Project Analysis",
-  "finishedTitle": "✅ AI Market Analysis Completed",
-  "marketAnalysisTitle": "AI-based market analysis",
-  "marketAnalysisText": "This price range was estimated by the AI assistant based on typical market prices of German web studios, project scope, design complexity, SEO requirements, functions and modern website standards.",
-  "marketAnalysisNote": "The displayed range is a rough market orientation and not a final offer from Labrity.",
-  "contactText": "For your individual Labrity estimate, possible discounts and a concrete offer, you can contact us directly through the contact form.",
-  "contactButton": "Request individual Labrity pricing",
-  "restartButton": "Start new AI analysis",
-
+  "startButton": "Start project calculator",
+  "analysisTitle": "Project calculator",
+  "finishedTitle": "Your orientation",
+  "marketAnalysisTitle": "How this figure is derived",
+  "marketAnalysisText": "The figure is the starting price of the matching Labrity package (see Prices). The final offer depends on scope, content and features.",
+  "marketAnalysisNote": "Non-binding orientation, not a fixed-price offer.",
+  "contactText": "For a concrete offer, write to us via the contact form.",
+  "contactButton": "Request an individual offer",
+  "restartButton": "Restart calculator",
   "estimates": {
     "compact": {
       "title": "Compact Website Project",
-      "range": "ca. 2.000€ – 3.500€",
-      "description": "The AI recognizes a rather compact website project with manageable scope, clear structure and few complex functions."
+      "range": "from €999",
+      "description": "This sounds like a compact project with manageable scope, clear structure and few complex functions."
     },
     "business": {
       "title": "Professional Business Website",
-      "range": "ca. 4.000€ – 7.000€",
-      "description": "The AI recognizes a professional website project with individual design, several content sections, good structure and important basic functions."
+      "range": "from €4,900",
+      "description": "This sounds like a professional website with individual design, several content sections, good structure and key basic functions."
     },
     "premium": {
       "title": "Individual Premium Project",
-      "range": "ca. 8.000€ – 14.000€",
-      "description": "The AI recognizes a more demanding premium project with design complexity, SEO requirements, content work or extended functions."
+      "range": "from €7,500",
+      "description": "This sounds like a more demanding project with design complexity, SEO requirements, content work or extended functions."
     },
     "complex": {
       "title": "Complex Individual Web Solution",
-      "range": "ab ca. 15.000€",
-      "description": "The AI recognizes a larger individual project with shop, login, database, integrations, premium design or more complex technical architecture."
+      "range": "Individual offer",
+      "description": "This sounds like a larger project with shop, login, database, integrations or more complex technical architecture."
     }
   },
-
   "questions": [
     {
       "key": "business",
       "label": "Business",
       "question": "What kind of business do you have?",
       "answers": [
-        { "label": "Self-employed", "value": "Self-employed", "weight": 1 },
-        { "label": "Small company", "value": "Small company", "weight": 1 },
-        { "label": "Brand / Studio", "value": "Brand / Studio", "weight": 2 },
-        { "label": "Online shop", "value": "Online shop", "weight": 4 },
-        { "label": "Not started yet", "value": "Not started yet", "weight": 1 }
+        {
+          "label": "Self-employed",
+          "value": "Self-employed",
+          "weight": 1
+        },
+        {
+          "label": "Small company",
+          "value": "Small company",
+          "weight": 1
+        },
+        {
+          "label": "Brand / Studio",
+          "value": "Brand / Studio",
+          "weight": 2
+        },
+        {
+          "label": "Online shop",
+          "value": "Online shop",
+          "weight": 4
+        },
+        {
+          "label": "Not started yet",
+          "value": "Not started yet",
+          "weight": 1
+        }
       ]
     },
     {
@@ -50,15 +68,31 @@
       "label": "Website type",
       "question": "What kind of website do you need?",
       "answers": [
-        { "label": "Landing page", "value": "Landing page", "weight": 1 },
-        { "label": "Company website", "value": "Company website", "weight": 2 },
+        {
+          "label": "Landing page",
+          "value": "Landing page",
+          "weight": 1
+        },
+        {
+          "label": "Company website",
+          "value": "Company website",
+          "weight": 2
+        },
         {
           "label": "Portfolio / Personal brand",
           "value": "Portfolio / Personal brand",
           "weight": 2
         },
-        { "label": "Online shop", "value": "Online shop", "weight": 5 },
-        { "label": "Not sure yet", "value": "Not sure yet", "weight": 1 }
+        {
+          "label": "Online shop",
+          "value": "Online shop",
+          "weight": 5
+        },
+        {
+          "label": "Not sure yet",
+          "value": "Not sure yet",
+          "weight": 1
+        }
       ]
     },
     {
@@ -66,19 +100,31 @@
       "label": "Goal",
       "question": "What is the main goal of the website?",
       "answers": [
-        { "label": "More inquiries", "value": "More inquiries", "weight": 1 },
+        {
+          "label": "More inquiries",
+          "value": "More inquiries",
+          "weight": 1
+        },
         {
           "label": "Premium presence",
           "value": "Premium presence",
           "weight": 2
         },
-        { "label": "Sell online", "value": "Sell online", "weight": 5 },
+        {
+          "label": "Sell online",
+          "value": "Sell online",
+          "weight": 5
+        },
         {
           "label": "Show information",
           "value": "Show information",
           "weight": 1
         },
-        { "label": "Not sure yet", "value": "Not sure yet", "weight": 1 }
+        {
+          "label": "Not sure yet",
+          "value": "Not sure yet",
+          "weight": 1
+        }
       ]
     },
     {
@@ -86,7 +132,11 @@
       "label": "Current website",
       "question": "Do you already have a website?",
       "answers": [
-        { "label": "No", "value": "No", "weight": 1 },
+        {
+          "label": "No",
+          "value": "No",
+          "weight": 1
+        },
         {
           "label": "Yes, but it is okay",
           "value": "Yes, but it is okay",
@@ -97,7 +147,11 @@
           "value": "Yes, needs redesign",
           "weight": 2
         },
-        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+        {
+          "label": "Not sure",
+          "value": "Not sure",
+          "weight": 1
+        }
       ]
     },
     {
@@ -105,15 +159,31 @@
       "label": "Number of pages",
       "question": "How large should the website be?",
       "answers": [
-        { "label": "1 page", "value": "1 page", "weight": 0 },
-        { "label": "2–5 pages", "value": "2–5 pages", "weight": 1 },
-        { "label": "6–10 pages", "value": "6–10 pages", "weight": 3 },
+        {
+          "label": "1 page",
+          "value": "1 page",
+          "weight": 0
+        },
+        {
+          "label": "2–5 pages",
+          "value": "2–5 pages",
+          "weight": 1
+        },
+        {
+          "label": "6–10 pages",
+          "value": "6–10 pages",
+          "weight": 3
+        },
         {
           "label": "More than 10 pages",
           "value": "More than 10 pages",
           "weight": 5
         },
-        { "label": "Not sure yet", "value": "Not sure yet", "weight": 1 }
+        {
+          "label": "Not sure yet",
+          "value": "Not sure yet",
+          "weight": 1
+        }
       ]
     },
     {
@@ -121,7 +191,11 @@
       "label": "Design style",
       "question": "How should the design look?",
       "answers": [
-        { "label": "Simple & clean", "value": "Simple & clean", "weight": 0 },
+        {
+          "label": "Simple & clean",
+          "value": "Simple & clean",
+          "weight": 0
+        },
         {
           "label": "Minimal & modern",
           "value": "Minimal & modern",
@@ -137,7 +211,11 @@
           "value": "Premium / creative",
           "weight": 4
         },
-        { "label": "Not sure yet", "value": "Not sure yet", "weight": 1 }
+        {
+          "label": "Not sure yet",
+          "value": "Not sure yet",
+          "weight": 1
+        }
       ]
     },
     {
@@ -145,7 +223,11 @@
       "label": "Animations",
       "question": "Do you need animations or visual effects?",
       "answers": [
-        { "label": "No", "value": "No", "weight": 0 },
+        {
+          "label": "No",
+          "value": "No",
+          "weight": 0
+        },
         {
           "label": "Small animations",
           "value": "Small animations",
@@ -156,7 +238,11 @@
           "value": "Many modern effects",
           "weight": 4
         },
-        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+        {
+          "label": "Not sure",
+          "value": "Not sure",
+          "weight": 1
+        }
       ]
     },
     {
@@ -169,13 +255,21 @@
           "value": "Yes, clear examples",
           "weight": 0
         },
-        { "label": "A few ideas", "value": "A few ideas", "weight": 1 },
+        {
+          "label": "A few ideas",
+          "value": "A few ideas",
+          "weight": 1
+        },
         {
           "label": "No, need consultation",
           "value": "No, need consultation",
           "weight": 2
         },
-        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+        {
+          "label": "Not sure",
+          "value": "Not sure",
+          "weight": 1
+        }
       ]
     },
     {
@@ -188,9 +282,21 @@
           "value": "Everything is ready",
           "weight": 0
         },
-        { "label": "Partly ready", "value": "Partly ready", "weight": 2 },
-        { "label": "We need support", "value": "We need support", "weight": 4 },
-        { "label": "Not sure yet", "value": "Not sure yet", "weight": 2 }
+        {
+          "label": "Partly ready",
+          "value": "Partly ready",
+          "weight": 2
+        },
+        {
+          "label": "We need support",
+          "value": "We need support",
+          "weight": 4
+        },
+        {
+          "label": "Not sure yet",
+          "value": "Not sure yet",
+          "weight": 2
+        }
       ]
     },
     {
@@ -213,7 +319,11 @@
           "value": "Create texts completely",
           "weight": 4
         },
-        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+        {
+          "label": "Not sure",
+          "value": "Not sure",
+          "weight": 1
+        }
       ]
     },
     {
@@ -221,15 +331,31 @@
       "label": "Media",
       "question": "Do you need photos, videos or a hero video?",
       "answers": [
-        { "label": "No", "value": "No", "weight": 0 },
-        { "label": "Photos", "value": "Photos", "weight": 1 },
-        { "label": "Photos + videos", "value": "Photos + videos", "weight": 3 },
+        {
+          "label": "No",
+          "value": "No",
+          "weight": 0
+        },
+        {
+          "label": "Photos",
+          "value": "Photos",
+          "weight": 1
+        },
+        {
+          "label": "Photos + videos",
+          "value": "Photos + videos",
+          "weight": 3
+        },
         {
           "label": "Hero video / Premium look",
           "value": "Hero video / Premium look",
           "weight": 4
         },
-        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+        {
+          "label": "Not sure",
+          "value": "Not sure",
+          "weight": 1
+        }
       ]
     },
     {
@@ -242,13 +368,21 @@
           "value": "Everything exists",
           "weight": 0
         },
-        { "label": "Only logo", "value": "Only logo", "weight": 1 },
+        {
+          "label": "Only logo",
+          "value": "Only logo",
+          "weight": 1
+        },
         {
           "label": "Develop everything new",
           "value": "Develop everything new",
           "weight": 4
         },
-        { "label": "Not sure yet", "value": "Not sure yet", "weight": 2 }
+        {
+          "label": "Not sure yet",
+          "value": "Not sure yet",
+          "weight": 2
+        }
       ]
     },
     {
@@ -256,19 +390,31 @@
       "label": "Contact / Leads",
       "question": "How should clients contact you?",
       "answers": [
-        { "label": "Contact form", "value": "Contact form", "weight": 1 },
+        {
+          "label": "Contact form",
+          "value": "Contact form",
+          "weight": 1
+        },
         {
           "label": "WhatsApp / Phone",
           "value": "WhatsApp / Phone",
           "weight": 1
         },
-        { "label": "Form + Email", "value": "Form + Email", "weight": 2 },
+        {
+          "label": "Form + Email",
+          "value": "Form + Email",
+          "weight": 2
+        },
         {
           "label": "Booking / Calendar",
           "value": "Booking / Calendar",
           "weight": 4
         },
-        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+        {
+          "label": "Not sure",
+          "value": "Not sure",
+          "weight": 1
+        }
       ]
     },
     {
@@ -281,8 +427,16 @@
           "value": "Simple website",
           "weight": 0
         },
-        { "label": "Contact form", "value": "Contact form", "weight": 1 },
-        { "label": "Booking system", "value": "Booking system", "weight": 4 },
+        {
+          "label": "Contact form",
+          "value": "Contact form",
+          "weight": 1
+        },
+        {
+          "label": "Booking system",
+          "value": "Booking system",
+          "weight": 4
+        },
         {
           "label": "Login / Database",
           "value": "Login / Database",
@@ -300,7 +454,11 @@
       "label": "Editing",
       "question": "Do you want to edit content yourself later?",
       "answers": [
-        { "label": "No", "value": "No", "weight": 0 },
+        {
+          "label": "No",
+          "value": "No",
+          "weight": 0
+        },
         {
           "label": "Yes, simple changes",
           "value": "Yes, simple changes",
@@ -311,7 +469,11 @@
           "value": "Yes, CMS / Admin area",
           "weight": 5
         },
-        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+        {
+          "label": "Not sure",
+          "value": "Not sure",
+          "weight": 1
+        }
       ]
     },
     {
@@ -319,15 +481,31 @@
       "label": "Languages",
       "question": "Do you need multiple languages?",
       "answers": [
-        { "label": "Only English", "value": "Only English", "weight": 0 },
+        {
+          "label": "Only English",
+          "value": "Only English",
+          "weight": 0
+        },
         {
           "label": "German + English",
           "value": "German + English",
           "weight": 2
         },
-        { "label": "3 languages", "value": "3 languages", "weight": 3 },
-        { "label": "Multilingual", "value": "Multilingual", "weight": 5 },
-        { "label": "Not sure yet", "value": "Not sure yet", "weight": 1 }
+        {
+          "label": "3 languages",
+          "value": "3 languages",
+          "weight": 3
+        },
+        {
+          "label": "Multilingual",
+          "value": "Multilingual",
+          "weight": 5
+        },
+        {
+          "label": "Not sure yet",
+          "value": "Not sure yet",
+          "weight": 1
+        }
       ]
     },
     {
@@ -335,10 +513,26 @@
       "label": "SEO",
       "question": "How important is SEO / Google?",
       "answers": [
-        { "label": "Very important", "value": "Very important", "weight": 4 },
-        { "label": "Medium", "value": "Medium", "weight": 1 },
-        { "label": "Later", "value": "Later", "weight": 1 },
-        { "label": "Not important", "value": "Not important", "weight": 0 }
+        {
+          "label": "Very important",
+          "value": "Very important",
+          "weight": 4
+        },
+        {
+          "label": "Medium",
+          "value": "Medium",
+          "weight": 1
+        },
+        {
+          "label": "Later",
+          "value": "Later",
+          "weight": 1
+        },
+        {
+          "label": "Not important",
+          "value": "Not important",
+          "weight": 0
+        }
       ]
     },
     {
@@ -351,9 +545,21 @@
           "value": "Yes, Google Maps / local",
           "weight": 2
         },
-        { "label": "No", "value": "No", "weight": 0 },
-        { "label": "Maybe later", "value": "Maybe later", "weight": 1 },
-        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+        {
+          "label": "No",
+          "value": "No",
+          "weight": 0
+        },
+        {
+          "label": "Maybe later",
+          "value": "Maybe later",
+          "weight": 1
+        },
+        {
+          "label": "Not sure",
+          "value": "Not sure",
+          "weight": 1
+        }
       ]
     },
     {
@@ -361,7 +567,11 @@
       "label": "Integrations",
       "question": "Do you need external integrations?",
       "answers": [
-        { "label": "No", "value": "No", "weight": 0 },
+        {
+          "label": "No",
+          "value": "No",
+          "weight": 0
+        },
         {
           "label": "Google Maps / WhatsApp",
           "value": "Google Maps / WhatsApp",
@@ -377,7 +587,11 @@
           "value": "API / special systems",
           "weight": 6
         },
-        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+        {
+          "label": "Not sure",
+          "value": "Not sure",
+          "weight": 1
+        }
       ]
     },
     {
@@ -395,7 +609,11 @@
           "value": "Already available",
           "weight": 0
         },
-        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+        {
+          "label": "Not sure",
+          "value": "Not sure",
+          "weight": 1
+        }
       ]
     },
     {
@@ -403,10 +621,26 @@
       "label": "Domain",
       "question": "Do you already have domain and hosting?",
       "answers": [
-        { "label": "Yes", "value": "Yes", "weight": 0 },
-        { "label": "Only domain", "value": "Only domain", "weight": 1 },
-        { "label": "No, need help", "value": "No, need help", "weight": 2 },
-        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+        {
+          "label": "Yes",
+          "value": "Yes",
+          "weight": 0
+        },
+        {
+          "label": "Only domain",
+          "value": "Only domain",
+          "weight": 1
+        },
+        {
+          "label": "No, need help",
+          "value": "No, need help",
+          "weight": 2
+        },
+        {
+          "label": "Not sure",
+          "value": "Not sure",
+          "weight": 1
+        }
       ]
     },
     {
@@ -414,9 +648,21 @@
       "label": "Launch",
       "question": "Do you need help with launch / deployment?",
       "answers": [
-        { "label": "Yes", "value": "Yes", "weight": 2 },
-        { "label": "No", "value": "No", "weight": 0 },
-        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+        {
+          "label": "Yes",
+          "value": "Yes",
+          "weight": 2
+        },
+        {
+          "label": "No",
+          "value": "No",
+          "weight": 0
+        },
+        {
+          "label": "Not sure",
+          "value": "Not sure",
+          "weight": 1
+        }
       ]
     },
     {
@@ -424,10 +670,26 @@
       "label": "Support",
       "question": "Do you need support after launch?",
       "answers": [
-        { "label": "No", "value": "No", "weight": 0 },
-        { "label": "Small changes", "value": "Small changes", "weight": 1 },
-        { "label": "Regular support", "value": "Regular support", "weight": 3 },
-        { "label": "Not sure", "value": "Not sure", "weight": 1 }
+        {
+          "label": "No",
+          "value": "No",
+          "weight": 0
+        },
+        {
+          "label": "Small changes",
+          "value": "Small changes",
+          "weight": 1
+        },
+        {
+          "label": "Regular support",
+          "value": "Regular support",
+          "weight": 3
+        },
+        {
+          "label": "Not sure",
+          "value": "Not sure",
+          "weight": 1
+        }
       ]
     },
     {
@@ -445,8 +707,16 @@
           "value": "Within one month",
           "weight": 2
         },
-        { "label": "In 2–3 months", "value": "In 2–3 months", "weight": 1 },
-        { "label": "Still open", "value": "Still open", "weight": 0 }
+        {
+          "label": "In 2–3 months",
+          "value": "In 2–3 months",
+          "weight": 1
+        },
+        {
+          "label": "Still open",
+          "value": "Still open",
+          "weight": 0
+        }
       ]
     },
     {
@@ -469,7 +739,11 @@
           "value": "I am only getting information",
           "weight": 0
         },
-        { "label": "Not sure yet", "value": "Not sure yet", "weight": 0 }
+        {
+          "label": "Not sure yet",
+          "value": "Not sure yet",
+          "weight": 0
+        }
       ]
     }
   ]

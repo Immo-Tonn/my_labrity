@@ -1,0 +1,291 @@
+{
+  "hero": {
+    "kicker": "Individuelle Softwareentwicklung",
+    "title": "Web-App entwickeln lassen: Software, die zu Ihrem Betrieb passt.",
+    "description": "Terminbuchung, Mitarbeiterverwaltung, Kundenmanagement, Aufträge und Auswertungen: Wir entwickeln Web-Apps nach den Abläufen Ihres Unternehmens, statt Sie in ein Standardprogramm zu zwängen.",
+    "button": "Individuelle Lösung anfragen",
+    "secondary": "Typische Situationen ansehen"
+  },
+  "tasks": {
+    "kicker": "Was wir entwickeln",
+    "title": "Individuelle Software und Web-Apps für Ihr Geschäft.",
+    "description": "Jede Lösung wird individuell geplant. Das sind die häufigsten Bausteine, die sich auch kombinieren lassen.",
+    "items": [
+      {
+        "title": "Online-Terminbuchung und Buchungssysteme",
+        "description": "Ihre Kunden buchen freie Termine selbstständig, auch außerhalb Ihrer Öffnungszeiten. Weniger Telefonate, weniger Abstimmung und ein klarer Buchungsprozess."
+      },
+      {
+        "title": "Kalender und Terminplanung",
+        "description": "Alle Termine und Verfügbarkeiten an einem Ort. Arbeitszeiten, Pausen und Abwesenheiten fließen in die Planung ein, damit Ihr Team den Überblick behält."
+      },
+      {
+        "title": "Kundenverwaltung (CRM)",
+        "description": "Kundendaten, Anfragen und wichtige Informationen zentral verwalten, statt sie in verschiedenen Tabellen und Nachrichten zu suchen."
+      },
+      {
+        "title": "Zeiterfassung und Mitarbeiterverwaltung",
+        "description": "Arbeitszeiten digital erfassen und übersichtlich auswerten, mit einer Lösung, die zu den Abläufen Ihres Unternehmens passt."
+      },
+      {
+        "title": "Aufträge, Anfragen, Angebote und Rechnungen",
+        "description": "Vom ersten Kundenkontakt bis zur Rechnung: Informationen und Bearbeitungsstände in einem nachvollziehbaren Ablauf zusammenführen."
+      },
+      {
+        "title": "Finanz-Dashboards, Berichte und Auswertungen",
+        "description": "Wichtige Geschäftszahlen übersichtlich darstellen, Entwicklungen erkennen und Entscheidungen auf einer besseren Informationsgrundlage treffen."
+      },
+      {
+        "title": "Kunden- und Mitarbeiterportale",
+        "description": "Geschützte Zugänge, über die Kunden oder Mitarbeiter genau die Informationen und Funktionen nutzen, die für sie relevant sind."
+      },
+      {
+        "title": "Admin-Bereiche und Prozessautomatisierung",
+        "description": "Wiederkehrende Aufgaben vereinfachen, Geschäftsprozesse digitalisieren und manuelle Arbeit reduzieren."
+      },
+      {
+        "title": "Individuelle Web-Apps und Softwareplattformen",
+        "description": "Wenn Standardsoftware nicht zu Ihrem Unternehmen passt, entwickeln wir eine Lösung, die sich an Ihren tatsächlichen Geschäftsprozessen orientiert."
+      }
+    ]
+  },
+  "useCases": {
+    "kicker": "Für wen",
+    "title": "Branchen und Betriebe, für die das passt.",
+    "description": "Beispielszenarien, keine Kundenprojekte. Sie zeigen, wofür sich eine individuelle Lösung eignen kann.",
+    "items": [
+      {
+        "audience": "Friseur- und Beauty-Salons",
+        "title": "Termine ohne Telefon",
+        "description": "Kundinnen wählen Leistung und freie Zeit selbst. Der Kalender zeigt die Auslastung pro Mitarbeiterin, Änderungen sind schnell erledigt."
+      },
+      {
+        "audience": "Barbershops",
+        "title": "Walk-ins und Termine im Blick",
+        "description": "Feste Termine und freie Slots in einer Übersicht, mit Wartezeiten und klarer Planung pro Barber."
+      },
+      {
+        "audience": "Studios und Trainer",
+        "title": "Buchungen, Kunden und Leistungen",
+        "description": "Kursplätze, Einzeltermine und Kundenlisten an einem Ort, mit eigenem Zugang für Team und Leitung."
+      },
+      {
+        "audience": "Servicebetriebe und Werkstätten",
+        "title": "Anfragen und Aufträge im Griff",
+        "description": "Terminanfragen, Aufträge und Status in einem System, ohne Zettelwirtschaft und doppelte Eingaben."
+      },
+      {
+        "audience": "Kleine Unternehmen mit Mitarbeitern",
+        "title": "Zeiten und Aufgaben digital",
+        "description": "Arbeitszeiten erfassen, Einsätze planen und Monatsauswertungen automatisch erzeugen."
+      },
+      {
+        "audience": "Unternehmen mit vielen Anfragen und Aufträgen",
+        "title": "Vom Angebot zur Rechnung",
+        "description": "Anfragen, Angebote, Aufträge und Rechnungen in einem durchgängigen Ablauf, mit Auswertungen für die Leitung."
+      }
+    ]
+  },
+  "process": {
+    "kicker": "So gehen wir vor",
+    "title": "Fünf Schritte von der Idee zur Anwendung.",
+    "items": [
+      {
+        "title": "Beratung",
+        "description": "Sie schildern Ihren Ablauf und was Sie entlasten soll. Das Gespräch ist unverbindlich."
+      },
+      {
+        "title": "Konzept und Angebot",
+        "description": "Wir klären Umfang, Rollen und Funktionen und erstellen ein persönliches Angebot."
+      },
+      {
+        "title": "Umsetzung",
+        "description": "Wir entwickeln die Anwendung und stimmen Zwischenstände mit Ihnen ab."
+      },
+      {
+        "title": "Test und Übergabe",
+        "description": "Sie testen, wir passen an und gehen gemeinsam live."
+      },
+      {
+        "title": "Weiterentwicklung",
+        "description": "Auf Wunsch betreuen wir die Anwendung und erweitern sie schrittweise."
+      }
+    ]
+  },
+  "clarify": {
+    "kicker": "Vorab klären wir",
+    "title": "Was wir gemeinsam besprechen.",
+    "description": "Nicht jede Idee passt in jedes Budget oder jede technische Umgebung. Deshalb klären wir wichtige Punkte vor der Umsetzung.",
+    "items": [
+      {
+        "title": "Datenschutz und Hosting",
+        "description": "Welche Daten verarbeitet werden, wo die Anwendung läuft und was nach DSGVO zu beachten ist."
+      },
+      {
+        "title": "Anbindung an bestehende Systeme",
+        "description": "Ob und wie eine Verbindung zu vorhandener Software möglich ist, prüfen wir im Einzelfall."
+      },
+      {
+        "title": "Umfang und Prioritäten",
+        "description": "Wir beginnen mit dem, was am meisten bringt. Weitere Funktionen können folgen."
+      },
+      {
+        "title": "Betrieb und Wartung",
+        "description": "Wer die Anwendung nach dem Start betreut und weiterentwickelt."
+      }
+    ]
+  },
+  "pricing": {
+    "kicker": "Preis",
+    "title": "Preis auf Anfrage.",
+    "price": "Preis auf Anfrage",
+    "description": "Web-Apps sind individuell, deshalb gibt es keine Festpreise. Nach einem ersten Gespräch erhalten Sie ein persönliches Angebot, passend zu Umfang und Anforderungen.",
+    "note": "Individuelles Angebot, abhängig von Funktionen, Rollen und Umfang.",
+    "button": "Individuelles Angebot anfragen",
+    "linkLabel": "Alle Preise ansehen"
+  },
+  "disambiguation": {
+    "kicker": "Sie suchen etwas anderes?",
+    "title": "Vielleicht passt eine dieser Seiten besser.",
+    "items": [
+      {
+        "label": "Es geht Ihnen um eine schnelle, solide Website?",
+        "linkLabel": "Mehr zu Webentwicklung",
+        "href": "/webentwicklung"
+      },
+      {
+        "label": "Sie brauchen zuerst eine Website?",
+        "linkLabel": "Mehr zu Website erstellen lassen",
+        "href": "/website-erstellen-lassen"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Häufige Fragen",
+    "title": "Was Sie vorher wissen möchten.",
+    "items": [
+      {
+        "question": "Was ist eine Web-App?",
+        "answer": "Eine Web-App, auch Webanwendung genannt, ist eine Anwendung, die Sie im Browser nutzen, ohne etwas zu installieren, zum Beispiel ein Buchungskalender oder eine Zeiterfassung. Sie läuft auf Smartphone, Tablet und Desktop."
+      },
+      {
+        "question": "Web-App oder Standardsoftware: Was lohnt sich?",
+        "answer": "Wenn Ihre Abläufe vom Standard abweichen, mehrere Programme nicht zusammenarbeiten oder Sie für Funktionen zahlen, die Sie nicht nutzen. Wir prüfen gemeinsam, was für Sie sinnvoll ist."
+      },
+      {
+        "question": "Kann eine Web-App in meine bestehende Website integriert werden?",
+        "answer": "In vielen Fällen ja: als eigener Bereich oder als eingebundene Funktion. Was technisch passt, klären wir nach einem Blick auf Ihre Website."
+      },
+      {
+        "question": "Können Sie auch ein Buchungssystem oder eine CRM-Software entwickeln?",
+        "answer": "Ja. Online-Terminbuchung, Kundenverwaltung (CRM), Zeiterfassung, Aufträge und Auswertungen gehören zu den häufigsten Bausteinen. Den Umfang legen wir gemeinsam fest."
+      },
+      {
+        "question": "Was kostet es, eine Web-App entwickeln zu lassen?",
+        "answer": "Das hängt von Funktionen, Rollen und Umfang ab, deshalb nennen wir keinen Pauschalpreis. Nach einem Gespräch erhalten Sie ein persönliches Angebot."
+      },
+      {
+        "question": "Wie lange dauert die Entwicklung einer Web-App?",
+        "answer": "Das hängt vom Umfang ab. Eine Einschätzung gibt es nach dem ersten Gespräch, wenn klar ist, was die Anwendung können soll."
+      },
+      {
+        "question": "Wie sieht es mit dem Datenschutz aus?",
+        "answer": "Sobald personenbezogene Daten verarbeitet werden, spielt die DSGVO eine Rolle. Wir besprechen vorab, welche Daten anfallen und wo sie gespeichert werden. Eine rechtliche Prüfung ersetzt das nicht."
+      },
+      {
+        "question": "Wie starte ich?",
+        "answer": "Schreiben Sie uns über das Kontaktformular, was Sie lösen möchten. Wir melden uns und besprechen den nächsten Schritt."
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Nächster Schritt",
+    "title": "Haben Sie eine Idee für Ihren Betrieb?",
+    "description": "Beschreiben Sie kurz Ihren Ablauf. Wir sagen Ihnen ehrlich, was sich umsetzen lässt.",
+    "primaryButton": "Individuelle Lösung anfragen"
+  },
+  "breadcrumbParentLabel": "Leistungen",
+  "relatedArticles": {
+    "kicker": "Weiterlesen",
+    "title": "Mehr dazu im Blog.",
+    "items": [
+      {
+        "label": "Wie Buchungs- und Verwaltungssoftware kleinen Betrieben hilft.",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/terminbuchung-verwaltung-software-kleine-betriebe"
+      },
+      {
+        "label": "Was kostet eine professionelle Website wirklich?",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      },
+      {
+        "label": "Website-Briefing: Was vor dem ersten Gespräch vorbereitet sein sollte",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/website-briefing-checkliste"
+      }
+    ]
+  },
+  "visual": {
+    "caption": "Illustration: beispielhafte Darstellung einer Oberfläche. Es sind keine echten Kundendaten.",
+    "alt1": "Illustration: Terminkalender am Laptop und Online-Terminbuchung auf dem Smartphone",
+    "alt2": "Illustration: Dashboard mit Terminen, Mitarbeitern und Umsatz auf dem Laptop"
+  },
+  "problems": {
+    "kicker": "Kennen Sie das?",
+    "title": "Vier Alltagsprobleme, für die es eine Lösung gibt.",
+    "description": "Das sind typische Situationen aus Salons, Werkstätten und kleinen Unternehmen. Welche Lösung passt, hängt von Ihren Abläufen ab.",
+    "problemLabel": "Problem",
+    "solutionLabel": "Lösung",
+    "items": [
+      {
+        "problem": "Kunden rufen an, nur um einen Termin zu vereinbaren.",
+        "solution": "Online-Terminbuchung: Ihre Kunden wählen freie Zeiten selbst, Sie sehen alle Termine in einem Kalender."
+      },
+      {
+        "problem": "Arbeitszeiten werden von Hand notiert, Daten gehen verloren.",
+        "solution": "Eigene Zeiterfassung mit Admin-Bereich: Schichtbeginn, Schichtende und Stunden an einem Ort."
+      },
+      {
+        "problem": "Anfragen, Kunden, Rechnungen und Termine liegen in verschiedenen Tabellen und Programmen.",
+        "solution": "Ein zentrales System, gebaut nach den Abläufen Ihres Unternehmens, statt vieler Einzellösungen."
+      },
+      {
+        "problem": "Sie sehen nicht, wie sich Aufträge, Umsatz und Auslastung entwickeln.",
+        "solution": "Ein Dashboard mit Kennzahlen, Berichten und Auswertungen, die Sie auf einen Blick verstehen."
+      }
+    ],
+    "note": "Das sind keine Garantien, sondern typische Reibungsverluste, die passende Software spürbar verringern kann."
+  },
+  "why": {
+    "kicker": "Warum individuell",
+    "title": "Nicht Ihr Betrieb soll sich der Software anpassen.",
+    "description": "Standardsoftware ist für einfache Anforderungen oft die richtige Wahl, und wir sagen Ihnen ehrlich, wenn sie reicht. Eine individuelle Lösung lohnt sich, wenn Ihre Abläufe davon abweichen.",
+    "standardLabel": "Standardsoftware",
+    "customLabel": "Individuelle Web-App",
+    "rows": [
+      {
+        "standard": "Sie passen Ihre Abläufe an die Software an.",
+        "custom": "Die Software wird nach Ihren Abläufen gebaut."
+      },
+      {
+        "standard": "Viele Funktionen, die Sie nie nutzen.",
+        "custom": "Genau die Funktionen, die Sie brauchen."
+      },
+      {
+        "standard": "Mehrere Programme, die nicht zusammenarbeiten.",
+        "custom": "Ein System für Termine, Kunden, Aufträge und Auswertung."
+      },
+      {
+        "standard": "Erweiterungen hängen vom Anbieter ab.",
+        "custom": "Erweiterbar, wenn Ihr Unternehmen wächst."
+      }
+    ],
+    "note": "Aus der Praxis: Wir arbeiten selbst an einem Softwareprojekt mit Terminverwaltung, Kunden, Mitarbeitern, Aufträgen, Finanzwerkzeugen und Auswertungen. Diese Erfahrung fließt in Ihre Lösung ein."
+  },
+  "consult": {
+    "title": "Besprechen wir Ihre Lösung.",
+    "description": "Beschreiben Sie kurz Ihren Ablauf. Wir sagen Ihnen ehrlich, was sich umsetzen lässt, und erstellen ein persönliches Angebot.",
+    "button": "Individuelle Lösung anfragen"
+  }
+}

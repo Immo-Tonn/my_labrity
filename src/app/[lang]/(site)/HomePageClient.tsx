@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { BadgeCheck, Gem, PanelsTopLeft, Telescope } from 'lucide-react';
 
 import SeasonalSnow from '@/components/SeasonalSnow';
@@ -9,6 +10,7 @@ import SeasonalHearts from '@/components/SeasonalHearts';
 import { useQuiz } from '@/components/quiz';
 import { Preloader } from '@/components/ui';
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
+import { Accordion } from '@/components/ui/Accordion';
 import { useLanguage } from '@/utils/LanguageContext';
 
 type StatItem = {
@@ -22,12 +24,14 @@ type ProjectItem = {
   description: string;
   imageVariant: 'first' | 'second';
   href: string;
+  kind?: 'client' | 'concept';
 };
 
 type FeaturedProjectItem = {
   title: string;
   category: string;
   image: string;
+  kind?: 'client' | 'concept';
 };
 
 type FeaturedProjectsData = {
@@ -102,6 +106,28 @@ export type HomeData = {
     description: string;
     items: StatItem[];
   };
+  webAppsShowcase: {
+    kicker: string;
+    title: string;
+    subtitle: string;
+    pairsTitle: string;
+    problemLabel: string;
+    solutionLabel: string;
+    pairs: { problem: string; solution: string }[];
+    capabilitiesTitle: string;
+    capabilities: { title: string; description: string }[];
+    primary: string;
+    secondary: string;
+    caption: string;
+    alt1: string;
+    alt2: string;
+    finalCta: {
+      title: string;
+      description: string;
+      primary: string;
+      secondary: string;
+    };
+  };
   processPreview: {
     kicker: string;
     title: string;
@@ -114,6 +140,7 @@ export type HomeData = {
     title: string;
     description: string;
     button: string;
+    conceptLabel: string;
     items: ProjectItem[];
   };
   cta: {
@@ -127,6 +154,10 @@ export type HomeData = {
 
 const STATS_STEP = 200;
 const STATS_PAUSE = 2000;
+
+const prefersReducedMotion = () =>
+  typeof window !== 'undefined' &&
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const parseStatTarget = (value: string) => Number(value.match(/\d+/)?.[0] || 1);
 
@@ -155,6 +186,13 @@ function usePairedStatCounters(
     let leaderInterval: number;
     let followerInterval: number;
     let timeoutId: number;
+
+    // Reduced motion: show the final values, no looping count-up.
+    if (prefersReducedMotion()) {
+      setLeaderCount(leaderTarget);
+      setFollowerCount(followerTarget);
+      return;
+    }
 
     const startCycle = () => {
       leader = 1;
@@ -214,6 +252,11 @@ function useSoloStatCounter(target: number): number {
     let current = 1;
     let intervalId: number;
     let timeoutId: number;
+
+    if (prefersReducedMotion()) {
+      setCount(target);
+      return;
+    }
 
     const startCounting = () => {
       current = 1;
@@ -288,6 +331,31 @@ export default function HomePageClient({
   const { lang } = useLanguage();
   const { openQuiz } = useQuiz();
   const content = initialData;
+  const heroVideoRef = useRef<HTMLVideoElement | null>(null);
+
+  // Respect prefers-reduced-motion: the decorative background video only
+  // plays for visitors who haven't asked for reduced motion. Autoplay is
+  // driven entirely from here (not the `autoPlay` attribute) so a
+  // reduced-motion visitor never sees the video start moving at all.
+  useEffect(() => {
+    const video = heroVideoRef.current;
+    if (!video) return;
+
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    const syncPlayback = () => {
+      if (mediaQuery.matches) {
+        video.pause();
+      } else {
+        video.play().catch(() => {});
+      }
+    };
+
+    syncPlayback();
+    mediaQuery.addEventListener('change', syncPlayback);
+
+    return () => mediaQuery.removeEventListener('change', syncPlayback);
+  }, []);
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -319,10 +387,12 @@ export default function HomePageClient({
       <SeasonalHearts />
 
       <video
-        autoPlay
+        ref={heroVideoRef}
         loop
         muted
         playsInline
+        preload="metadata"
+        poster="/hero-poster.webp"
         className="fixed inset-0 -z-10 h-full w-full object-cover opacity-40"
       >
         <source src="/hero.mp4" type="video/mp4" />
@@ -350,15 +420,15 @@ export default function HomePageClient({
                   {content.hero.titleSecond}
                 </h1>
 
-                <p className="mt-7 max-w-[520px] font-montserrat text-sm leading-7 text-neutral-600 md:text-base xl:mt-9 xl:text-lg">
+                <p className="mt-5 max-w-[520px] font-montserrat text-sm leading-7 text-neutral-600 md:mt-6 md:text-base xl:mt-7 xl:text-lg">
                   {content.hero.description}
                 </p>
 
-                <p className="mt-4 font-montserrat text-[12px] uppercase tracking-[0.28em] text-neutral-400 md:text-[13px]">
+                <p className="mt-3 font-montserrat text-[12px] uppercase tracking-[0.28em] text-neutral-400 md:text-[13px]">
                   {content.hero.tagline}
                 </p>
 
-                <div className="mt-10 flex flex-wrap gap-4 md:mt-12">
+                <div className="mt-6 flex flex-wrap gap-4 md:mt-8 xl:mt-8">
                   <LocalizedLink
                     href="/contact"
                     className="inline-flex min-h-[56px] items-center justify-center border border-black bg-black px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:-translate-y-[1px] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
@@ -379,7 +449,7 @@ export default function HomePageClient({
               <div className="2xl:min-w-[950px] 2xl:max-w-[1300px] relative mx-auto w-full xl:mx-0 xl:w-[52vw] xl:min-w-[680px] xl:max-w-[900px]">
                 <div className="2xl:-translate-y-[70px] relative w-full -translate-y-[20px] xl:-translate-y-[55px]">
                   <Image
-                    src="/images/hero/hero-devices.png"
+                    src="/images/hero/hero-devices.webp"
                     alt="Modern responsive website design"
                     width={886}
                     height={670}
@@ -395,7 +465,7 @@ export default function HomePageClient({
           <section className="border-t border-[#e7e2d9] py-[64px] md:py-[82px] xl:py-[96px]">
             <div className="mb-9 flex flex-col gap-6 md:mb-11 md:flex-row md:items-end md:justify-between">
               <div>
-                <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
+                <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-400">
                   {content.featuredProjects.kicker}
                 </p>
 
@@ -406,7 +476,7 @@ export default function HomePageClient({
 
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-3">
-                  <span className="font-montserrat text-[10px] uppercase tracking-[0.28em] text-neutral-400">
+                  <span className="font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-400">
                     {content.featuredProjects.scrollLabel}
                   </span>
 
@@ -417,7 +487,7 @@ export default function HomePageClient({
 
                 <LocalizedLink
                   href="/portfolio"
-                  className="hidden w-fit items-center gap-4 font-montserrat text-[11px] font-medium uppercase tracking-[0.3em] text-neutral-600 transition duration-300 hover:text-black md:inline-flex"
+                  className="hidden w-fit items-center gap-4 font-montserrat text-xs font-medium uppercase tracking-[0.3em] text-neutral-600 transition duration-300 hover:text-black md:inline-flex"
                 >
                   {content.featuredProjects.button}
                   <span className="h-px w-12 bg-neutral-400 transition duration-300 hover:w-20 hover:bg-black" />
@@ -452,6 +522,12 @@ export default function HomePageClient({
                     <h3 className="mt-4 font-tenor text-[27px] leading-none text-black md:text-[30px]">
                       {project.title}
                     </h3>
+
+                    {project.kind === 'concept' && (
+                      <p className="mt-3 inline-block border border-neutral-400 px-2 py-1 font-montserrat text-[9px] uppercase tracking-[0.2em] text-neutral-600">
+                        {content.portfolio.conceptLabel}
+                      </p>
+                    )}
 
                     <div className="mt-5 flex items-center gap-4 font-montserrat text-[10px] uppercase tracking-[0.28em] text-neutral-500">
                       <span>{content.featuredProjects.projectButton}</span>
@@ -491,7 +567,7 @@ export default function HomePageClient({
 
             <LocalizedLink
               href="/portfolio"
-              className="mt-6 inline-flex w-fit items-center gap-4 font-montserrat text-[11px] font-medium uppercase tracking-[0.3em] text-neutral-600 transition duration-300 hover:text-black md:hidden"
+              className="mt-6 inline-flex w-fit items-center gap-4 font-montserrat text-xs font-medium uppercase tracking-[0.3em] text-neutral-600 transition duration-300 hover:text-black md:hidden"
             >
               {content.featuredProjects.button}
               <span className="h-px w-12 bg-neutral-400 transition duration-300 hover:w-20 hover:bg-black" />
@@ -502,7 +578,7 @@ export default function HomePageClient({
           <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[140px]">
             <div className="mx-auto max-w-[1024px]">
               <div className="mx-auto max-w-[860px] text-center">
-                <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
+                <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-400">
                   {content.audience.kicker}
                 </p>
 
@@ -554,7 +630,7 @@ export default function HomePageClient({
                   <div className="mt-2 h-px w-10 bg-white/35" />
 
                   <div className="mt-12">
-                    <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-white/35">
+                    <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60">
                       {content.quizPreview.kicker}
                     </p>
 
@@ -570,7 +646,7 @@ export default function HomePageClient({
                   </div>
 
                   <div className="mt-12 border-t border-white/20 pt-7">
-                    <p className="font-montserrat text-[11px] uppercase tracking-[0.26em] text-white/35">
+                    <p className="font-montserrat text-xs uppercase tracking-[0.26em] text-white/60">
                       {content.quizPreview.note}
                     </p>
                   </div>
@@ -578,7 +654,7 @@ export default function HomePageClient({
 
                 <div className="flex flex-col justify-between px-7 py-10 md:px-10 md:py-14 xl:px-12 xl:py-16">
                   <div>
-                    <p className="mb-5 font-montserrat text-[11px] uppercase tracking-[0.32em] text-neutral-400">
+                    <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
                       {content.quizPreview.kicker}
                     </p>
 
@@ -627,7 +703,7 @@ export default function HomePageClient({
           {/* DIFFERENCES */}
           <section className="border-t border-[#e7e2d9] py-[88px] md:py-[108px] xl:py-[124px]">
             <div className="mx-auto max-w-[860px] text-center">
-              <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
+              <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-400">
                 {content.differences.kicker}
               </p>
 
@@ -673,7 +749,7 @@ export default function HomePageClient({
           {/* STATS */}
           <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[150px]">
             <div className="mx-auto max-w-[760px] text-center">
-              <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
+              <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-400">
                 {content.stats.kicker}
               </p>
 
@@ -695,7 +771,7 @@ export default function HomePageClient({
           <section className="border-t border-[#e7e2d9] py-[90px] md:py-[110px] xl:py-[140px]">
             <div className="grid gap-12 xl:grid-cols-[0.85fr_1.15fr] xl:items-end xl:gap-20">
               <div>
-                <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-400 md:text-xs">
+                <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-400">
                   {content.processPreview.kicker}
                 </p>
 
@@ -738,10 +814,157 @@ export default function HomePageClient({
             </div>
           </section>
 
+          {/* WEB APPS / CUSTOM SOFTWARE SHOWCASE */}
+          <section className="py-[70px] md:py-[90px] xl:py-[120px]">
+            <div className="relative overflow-hidden bg-[#111111] text-white shadow-[0_30px_70px_rgba(0,0,0,0.12)]">
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] [background-size:56px_56px]"
+              />
+
+              <div className="relative grid gap-14 px-6 py-14 md:px-10 md:py-20 xl:grid-cols-[1.05fr_0.95fr] xl:items-center xl:gap-16 xl:px-16 xl:py-24">
+                <motion.div
+                  initial={{ opacity: 0, y: 28 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-80px' }}
+                  transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60">
+                    {content.webAppsShowcase.kicker}
+                  </p>
+                  <h2 className="font-tenor text-[36px] leading-[1.02] tracking-[-0.03em] md:text-[56px] xl:text-[68px]">
+                    {content.webAppsShowcase.title}
+                  </h2>
+                  <p className="mt-6 max-w-[620px] font-montserrat text-[15px] leading-8 text-white/70 md:text-[17px]">
+                    {content.webAppsShowcase.subtitle}
+                  </p>
+                  <div className="mt-9 flex flex-wrap items-center gap-4">
+                    <LocalizedLink
+                      href="/contact"
+                      className="inline-flex min-h-[56px] items-center justify-center border border-white bg-white px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-black transition duration-300 hover:-translate-y-[1px]"
+                    >
+                      {content.webAppsShowcase.primary}
+                    </LocalizedLink>
+                    <LocalizedLink
+                      href="/web-app-entwickeln-lassen"
+                      className="inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-white/70 underline underline-offset-4 transition duration-300 hover:text-white"
+                    >
+                      {content.webAppsShowcase.secondary}
+                    </LocalizedLink>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 36 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-80px' }}
+                  transition={{
+                    duration: 0.9,
+                    delay: 0.1,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="mx-auto w-full max-w-[520px] xl:max-w-none"
+                >
+                  <Image
+                    src="/images/web-apps/booking-calendar-mobile.webp"
+                    alt={content.webAppsShowcase.alt2}
+                    width={882}
+                    height={887}
+                    sizes="(min-width: 1280px) 40vw, (min-width: 768px) 520px, 88vw"
+                    className="h-auto w-full border border-white/15 shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
+                  />
+                </motion.div>
+              </div>
+
+              <div className="relative border-t border-white/10 px-6 py-12 md:px-10 md:py-16 xl:px-16">
+                <h3 className="font-tenor text-[26px] leading-[1.1] md:text-[36px]">
+                  {content.webAppsShowcase.pairsTitle}
+                </h3>
+
+                <div className="mt-8 grid gap-px border border-white/15 bg-white/15 md:grid-cols-2 xl:grid-cols-4">
+                  {content.webAppsShowcase.pairs.map(pair => (
+                    <div
+                      key={pair.problem}
+                      className="flex flex-col bg-[#111111] p-6"
+                    >
+                      <p className="font-montserrat text-[11px] uppercase tracking-[0.24em] text-white/45">
+                        {content.webAppsShowcase.problemLabel}
+                      </p>
+                      <p className="mt-2 flex-1 font-montserrat text-[14px] leading-7 text-white/60">
+                        {pair.problem}
+                      </p>
+                      <div className="my-4 h-px w-10 bg-white/30" />
+                      <p className="font-montserrat text-[11px] uppercase tracking-[0.24em] text-white">
+                        {content.webAppsShowcase.solutionLabel}
+                      </p>
+                      <p className="mt-2 font-tenor text-[19px] leading-[1.3] text-white">
+                        {pair.solution}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-14 grid gap-8 xl:grid-cols-[0.7fr_1.3fr] xl:gap-16">
+                  <h3 className="font-tenor text-[28px] leading-[1.1] md:text-[40px]">
+                    {content.webAppsShowcase.capabilitiesTitle}
+                  </h3>
+                  <Accordion
+                    items={content.webAppsShowcase.capabilities}
+                    defaultOpen={0}
+                  />
+                </div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 36 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-80px' }}
+                  transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                  className="mx-auto mt-14 w-full max-w-[640px] md:mt-20"
+                >
+                  <Image
+                    src="/images/web-apps/dashboard-overview.webp"
+                    alt={content.webAppsShowcase.alt1}
+                    width={882}
+                    height={887}
+                    sizes="(min-width: 768px) 640px, 88vw"
+                    className="h-auto w-full border border-white/15 shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
+                  />
+                </motion.div>
+
+                <p className="mt-8 font-montserrat text-xs leading-6 text-white/45">
+                  {content.webAppsShowcase.caption}
+                </p>
+
+                <div className="mt-12 border-t border-white/10 pt-12 text-center md:mt-16 md:pt-16">
+                  <h3 className="mx-auto max-w-[760px] font-tenor text-[34px] leading-[1.05] tracking-[-0.03em] md:text-[56px]">
+                    {content.webAppsShowcase.finalCta.title}
+                  </h3>
+                  <p className="mx-auto mt-5 max-w-[620px] font-montserrat text-[15px] leading-8 text-white/70 md:text-[17px]">
+                    {content.webAppsShowcase.finalCta.description}
+                  </p>
+                  <div className="mx-auto mt-9 flex max-w-[460px] flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center sm:gap-4">
+                    <LocalizedLink
+                      href="/contact"
+                      className="inline-flex min-h-[56px] items-center justify-center border border-white bg-white px-8 text-center font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-black transition duration-300 hover:-translate-y-[1px]"
+                    >
+                      {content.webAppsShowcase.finalCta.primary}
+                    </LocalizedLink>
+                    <LocalizedLink
+                      href="/web-app-entwickeln-lassen"
+                      className="inline-flex min-h-[56px] items-center justify-center border border-white/40 px-8 text-center font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:border-white hover:bg-white hover:text-black"
+                    >
+                      {content.webAppsShowcase.finalCta.secondary}
+                    </LocalizedLink>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* CTA */}
           <section className="py-[90px] md:py-[110px] xl:py-[150px]">
             <div className="bg-[#111111] px-6 py-12 text-center shadow-[0_30px_70px_rgba(0,0,0,0.12)] transition duration-500 hover:shadow-[0_38px_80px_rgba(0,0,0,0.16)] md:px-10 md:py-16 xl:px-16 xl:py-20">
-              <p className="mb-4 font-montserrat text-[11px] uppercase tracking-[0.28em] text-white/45 md:text-xs">
+              <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.28em] text-white/60">
                 {content.cta.kicker}
               </p>
 

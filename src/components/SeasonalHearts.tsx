@@ -445,7 +445,9 @@ export default function SeasonalHearts({
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    // Decorative falling effect: never mount it for visitors who asked for
+    // reduced motion.
+    setMounted(!window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   }, []);
 
   if (!mounted) return null;

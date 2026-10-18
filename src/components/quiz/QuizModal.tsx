@@ -75,7 +75,7 @@ export default function QuizModal() {
           </div>
 
           <div className="mt-9 md:mt-10 xl:mt-0">
-            <p className="mb-4 font-montserrat text-[9px] uppercase tracking-[0.3em] text-white/35 md:text-[10px] xl:text-[11px]">
+            <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.3em] text-white/60">
               {modal.kicker}
             </p>
 
@@ -89,7 +89,7 @@ export default function QuizModal() {
           </div>
 
           <div className="mt-7 border-t border-white/20 pt-5 xl:mt-0 xl:pt-7">
-            <p className="font-montserrat text-[9px] uppercase tracking-[0.22em] text-white/35 md:text-[10px] xl:text-[11px] xl:tracking-[0.26em]">
+            <p className="font-montserrat text-xs uppercase tracking-[0.22em] text-white/60 xl:tracking-[0.26em]">
               {modal.note}
             </p>
           </div>

@@ -1,48 +1,34 @@
-'use client';
+import React from 'react';
 
-import React, { useEffect, useState } from 'react';
+import { Logo, LocalizedLink } from '@/components/ui';
+import { BackToTop } from '@/components/ui/BackToTop';
 
-import { Logo, FooterItem, LocalizedLink } from '@/components/ui';
-import { ModalImpressum } from '@/components/ui/ModalImpressum';
-
-import { useLanguage } from '@/utils/LanguageContext';
-import { getData } from '@/utils/getData';
-
-interface FooterData {
-  layout: {
-    footer: {
-      web: string;
-    };
-  };
-  footerLabelPolicy: string;
-  footerLabelImpressum: string;
-  footer: {
-    name: string;
-    path: string;
-    ariaLabel: string;
-  }[];
+interface FooterProps {
+  toTopLabel: string;
+  webLabel: string;
+  policyLabel: string;
+  impressumLabel: string;
 }
 
-export const Footer: React.FC = () => {
-  const { lang } = useLanguage();
-  const [data, setData] = useState<FooterData | null>(null);
-
-  useEffect(() => {
-    const loadData = async () => {
-      const result = await getData('common', lang);
-      setData(result);
-    };
-
-    loadData();
-  }, [lang]);
-
-  if (!data) return null;
-
-  const { footer } = data;
+// Layout, classes and spacing are identical to the footer in `main`. The only
+// addition is the back-to-top arrow, which is absolutely positioned on the top
+// border so it never moves or overlaps any original element.
+export const Footer: React.FC<FooterProps> = ({
+  toTopLabel,
+  webLabel,
+  policyLabel,
+  impressumLabel,
+}) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full border-t border-[#18352b]/10 bg-[#f8f6f1] py-6 md:py-7 xl:py-8">
+    <footer className="relative w-full border-t border-[#18352b]/10 bg-[#f8f6f1] py-6 md:py-7 xl:py-8">
+      <div className="container pointer-events-none absolute inset-x-0 top-0 flex justify-end">
+        <div className="pointer-events-auto -translate-y-1/2">
+          <BackToTop label={toTopLabel} />
+        </div>
+      </div>
+
       <div className="container">
         <div className="flex flex-col gap-6 xl:flex-row xl:items-center xl:justify-between">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between xl:flex-1">
@@ -59,12 +45,17 @@ export const Footer: React.FC = () => {
                 href="/privacy"
                 className="text-[12px] uppercase tracking-[0.14em] text-[#18352b]/55 transition duration-300 hover:text-[#18352b] smOnly:mb-3"
               >
-                {data.footerLabelPolicy}
+                {policyLabel}
               </LocalizedLink>
 
               <span className="text-[#18352b]/20">|</span>
 
-              <ModalImpressum nameBtn={data.footerLabelImpressum} />
+              <LocalizedLink
+                href="/impressum"
+                className="block font-montserrat text-[12px] font-normal uppercase not-italic tracking-[0.14em] text-[#18352b]/55 transition duration-300 hover:text-[#18352b]"
+              >
+                {impressumLabel}
+              </LocalizedLink>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-3 border-[#18352b]/10 md:gap-4 xl:border-l xl:pl-6">
@@ -74,18 +65,17 @@ export const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 className="font-montserrat text-[12px] uppercase tracking-[0.14em] text-[#18352b]/55 transition duration-300 hover:text-[#18352b]"
               >
-                {data.layout.footer.web}
+                {webLabel}
               </a>
 
-              <ul className="flex items-center gap-3 xl:gap-5">
-                {footer.map(item => (
-                  <FooterItem
-                    key={item.name}
-                    name={item.name}
-                    href={item.path}
-                    ariaL={item.ariaLabel}
-                  />
-                ))}
+              {/* Same invisible spacer as the two empty partner slots in main
+                  (keeps the exact spacing without dead '#' links). */}
+              <ul
+                aria-hidden="true"
+                className="flex items-center gap-3 xl:gap-5"
+              >
+                <li />
+                <li />
               </ul>
             </div>
           </div>

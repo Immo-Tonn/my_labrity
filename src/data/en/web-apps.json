@@ -1,0 +1,291 @@
+{
+  "hero": {
+    "kicker": "Custom software development",
+    "title": "Custom web app development: software that fits your business.",
+    "description": "Appointment booking, staff management, customer management, orders and analytics: we build web apps around your company's workflows instead of forcing you into a standard program.",
+    "button": "Request a custom solution",
+    "secondary": "See typical situations"
+  },
+  "tasks": {
+    "kicker": "What we build",
+    "title": "Custom software and web apps for your business.",
+    "description": "Every solution is planned individually. These are the most common building blocks, and they can be combined.",
+    "items": [
+      {
+        "title": "Online booking and reservation systems",
+        "description": "Your customers book free appointments themselves, even outside your opening hours. Fewer phone calls, less back-and-forth and a clear booking process."
+      },
+      {
+        "title": "Calendars and schedule management",
+        "description": "All appointments and availability in one place. Working hours, breaks and absences are taken into account in planning, so your team keeps the overview."
+      },
+      {
+        "title": "Customer management (CRM)",
+        "description": "Manage customer data, enquiries and key information centrally instead of searching through different spreadsheets and messages."
+      },
+      {
+        "title": "Time tracking and staff management",
+        "description": "Record working hours digitally and evaluate them clearly, with a solution that fits your company's workflows."
+      },
+      {
+        "title": "Orders, enquiries, quotes and invoices",
+        "description": "From the first customer contact to the invoice: bring information and processing status together in one traceable workflow."
+      },
+      {
+        "title": "Financial dashboards, reports and analytics",
+        "description": "Present key business figures clearly, spot developments and make decisions on a better information base."
+      },
+      {
+        "title": "Customer and employee portals",
+        "description": "Protected logins through which customers or employees use exactly the information and functions that are relevant to them."
+      },
+      {
+        "title": "Admin areas and process automation",
+        "description": "Simplify recurring tasks, digitise business processes and reduce manual work."
+      },
+      {
+        "title": "Custom web apps and software platforms",
+        "description": "When standard software does not fit your company, we build a solution based on your actual business processes."
+      }
+    ]
+  },
+  "useCases": {
+    "kicker": "Who it is for",
+    "title": "Industries and businesses where this fits.",
+    "description": "Example scenarios, not client projects. They show what a custom solution can be used for.",
+    "items": [
+      {
+        "audience": "Hair and beauty salons",
+        "title": "Appointments without the phone",
+        "description": "Clients choose the service and a free time themselves. The calendar shows each employee's workload, and changes are quick."
+      },
+      {
+        "audience": "Barbershops",
+        "title": "Walk-ins and appointments at a glance",
+        "description": "Fixed appointments and free slots in one overview, with waiting times and clear planning per barber."
+      },
+      {
+        "audience": "Studios and trainers",
+        "title": "Bookings, customers and services",
+        "description": "Class places, single appointments and customer lists in one place, with separate logins for team and management."
+      },
+      {
+        "audience": "Service businesses and workshops",
+        "title": "Enquiries and jobs under control",
+        "description": "Appointment requests, jobs and status in one system, without paper notes and double entries."
+      },
+      {
+        "audience": "Small businesses with employees",
+        "title": "Time and tasks digitally",
+        "description": "Record working hours, plan assignments and generate monthly reports automatically."
+      },
+      {
+        "audience": "Companies with many enquiries and orders",
+        "title": "From quote to invoice",
+        "description": "Enquiries, quotes, orders and invoices in one continuous workflow, with analytics for management."
+      }
+    ]
+  },
+  "process": {
+    "kicker": "How we work",
+    "title": "Five steps from idea to application.",
+    "items": [
+      {
+        "title": "Consultation",
+        "description": "You describe your workflow and what should be easier. The conversation is non-binding."
+      },
+      {
+        "title": "Concept and quote",
+        "description": "We clarify scope, roles and features and prepare a personal quote."
+      },
+      {
+        "title": "Development",
+        "description": "We build the application and review interim results with you."
+      },
+      {
+        "title": "Testing and handover",
+        "description": "You test, we adjust and go live together."
+      },
+      {
+        "title": "Further development",
+        "description": "On request we look after the application and extend it step by step."
+      }
+    ]
+  },
+  "clarify": {
+    "kicker": "We clarify upfront",
+    "title": "What we discuss together.",
+    "description": "Not every idea fits every budget or technical environment. That is why we clarify the important points before development.",
+    "items": [
+      {
+        "title": "Data protection and hosting",
+        "description": "Which data is processed, where the application runs and what to consider under GDPR."
+      },
+      {
+        "title": "Connection to existing systems",
+        "description": "Whether and how a connection to existing software is possible is checked case by case."
+      },
+      {
+        "title": "Scope and priorities",
+        "description": "We start with what brings the most value. More features can follow."
+      },
+      {
+        "title": "Operation and maintenance",
+        "description": "Who looks after and develops the application after launch."
+      }
+    ]
+  },
+  "pricing": {
+    "kicker": "Price",
+    "title": "Price on request.",
+    "price": "Price on request",
+    "description": "Web apps are individual, so there are no fixed prices. After an initial conversation you receive a personal offer that matches scope and requirements.",
+    "note": "Individual offer, depending on features, roles and scope.",
+    "button": "Request an individual offer",
+    "linkLabel": "View all prices"
+  },
+  "disambiguation": {
+    "kicker": "Looking for something else?",
+    "title": "One of these pages may fit better.",
+    "items": [
+      {
+        "label": "Do you need a fast, solid website?",
+        "linkLabel": "More about web development",
+        "href": "/webentwicklung"
+      },
+      {
+        "label": "Do you need a website first?",
+        "linkLabel": "More about getting a website built",
+        "href": "/website-erstellen-lassen"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Frequently asked questions",
+    "title": "What you may want to know first.",
+    "items": [
+      {
+        "question": "What is a web app?",
+        "answer": "A web app, also called a web application, is an application you use in the browser without installing anything, for example a booking calendar or time tracking. It runs on smartphone, tablet and desktop."
+      },
+      {
+        "question": "Web app or standard software: which pays off?",
+        "answer": "When your workflows differ from the standard, several programs do not work together, or you pay for features you do not use. We look at what makes sense for you together."
+      },
+      {
+        "question": "Can a web app be integrated into my existing website?",
+        "answer": "In many cases yes: as a separate area or an embedded function. What fits technically we clarify after a look at your website."
+      },
+      {
+        "question": "Can you also build a booking system or CRM software?",
+        "answer": "Yes. Online booking, customer management (CRM), time tracking, orders and reporting are among the most common building blocks. We define the scope together."
+      },
+      {
+        "question": "How much does it cost to have a web app developed?",
+        "answer": "It depends on features, roles and scope, so we do not give a flat price. After a conversation you receive a personal quote."
+      },
+      {
+        "question": "How long does it take to develop a web app?",
+        "answer": "That depends on the scope. We can give an estimate after the first conversation, once it is clear what the application should do."
+      },
+      {
+        "question": "What about data protection?",
+        "answer": "As soon as personal data is processed, GDPR matters. We discuss upfront which data is involved and where it is stored. This does not replace legal review."
+      },
+      {
+        "question": "How do I get started?",
+        "answer": "Tell us via the contact form what you want to solve. We will get back to you and discuss the next step."
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Next step",
+    "title": "Do you have an idea for your business?",
+    "description": "Briefly describe your workflow. We will tell you honestly what can be built.",
+    "primaryButton": "Request a custom solution"
+  },
+  "breadcrumbParentLabel": "Services",
+  "relatedArticles": {
+    "kicker": "Keep reading",
+    "title": "More on this in the blog.",
+    "items": [
+      {
+        "label": "How booking and management software helps small businesses.",
+        "linkLabel": "Read article",
+        "href": "/blog/terminbuchung-verwaltung-software-kleine-betriebe"
+      },
+      {
+        "label": "What does a professional website really cost?",
+        "linkLabel": "Read article",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      },
+      {
+        "label": "Website briefing: what to prepare before your first call",
+        "linkLabel": "Read article",
+        "href": "/blog/website-briefing-checkliste"
+      }
+    ]
+  },
+  "visual": {
+    "caption": "Illustration: example of an interface. These are not real customer data.",
+    "alt1": "Illustration: appointment calendar on a laptop and online booking on a smartphone",
+    "alt2": "Illustration: dashboard with appointments, employees and revenue on a laptop"
+  },
+  "problems": {
+    "kicker": "Sound familiar?",
+    "title": "Four everyday problems that have a solution.",
+    "description": "These are typical situations from salons, workshops and small businesses. Which solution fits depends on your workflows.",
+    "problemLabel": "Problem",
+    "solutionLabel": "Solution",
+    "items": [
+      {
+        "problem": "Customers phone you just to book an appointment.",
+        "solution": "Online booking: your customers choose free times themselves and you see all appointments in one calendar."
+      },
+      {
+        "problem": "Working hours are noted by hand and data gets lost.",
+        "solution": "Your own time tracking with an admin area: shift start, shift end and hours in one place."
+      },
+      {
+        "problem": "Enquiries, customers, invoices and appointments sit in different spreadsheets and programs.",
+        "solution": "One central system built around your company's workflows instead of many separate tools."
+      },
+      {
+        "problem": "You cannot see how orders, revenue and workload are developing.",
+        "solution": "A dashboard with key figures, reports and analytics you understand at a glance."
+      }
+    ],
+    "note": "These are not guarantees but typical friction losses that suitable software can noticeably reduce."
+  },
+  "why": {
+    "kicker": "Why custom",
+    "title": "Your business should not have to adapt to the software.",
+    "description": "Standard software is often the right choice for simple needs, and we will tell you honestly when it is enough. A custom solution pays off when your workflows differ from the standard.",
+    "standardLabel": "Standard software",
+    "customLabel": "Custom web app",
+    "rows": [
+      {
+        "standard": "You adapt your workflows to the software.",
+        "custom": "The software is built around your workflows."
+      },
+      {
+        "standard": "Many features you never use.",
+        "custom": "Exactly the features you need."
+      },
+      {
+        "standard": "Several programs that do not work together.",
+        "custom": "One system for appointments, customers, orders and reporting."
+      },
+      {
+        "standard": "Extensions depend on the vendor.",
+        "custom": "Extendable as your business grows."
+      }
+    ],
+    "note": "From experience: we are working on a software project of our own, with appointment management, customers, employees, orders, financial tools and analytics planned. That experience goes into your solution."
+  },
+  "consult": {
+    "title": "Let's discuss your solution.",
+    "description": "Briefly describe your workflow. We will tell you honestly what can be built and prepare a personal quote.",
+    "button": "Request a custom solution"
+  }
+}

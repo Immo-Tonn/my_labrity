@@ -11,16 +11,26 @@
   },
   {
     "id": 3,
+    "href": "/web-app-entwickeln-lassen",
+    "title": "Програми для бізнесу"
+  },
+  {
+    "id": 4,
     "href": "/prices",
     "title": "Ціни"
   },
   {
-    "id": 4,
+    "id": 5,
     "href": "/process",
     "title": "Процес"
   },
   {
-    "id": 5,
+    "id": 6,
+    "href": "/blog",
+    "title": "Блог"
+  },
+  {
+    "id": 7,
     "href": "/contact",
     "title": "Контакт"
   }

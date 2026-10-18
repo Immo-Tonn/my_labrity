@@ -1,0 +1,79 @@
+{
+  "slug": "landingpage-dauer-launch",
+  "meta": {
+    "title": "Wie lange dauert eine Landingpage bis zum Launch? | Labrity",
+    "description": "Keine pauschale Zahl, sondern die tatsächlichen Faktoren, die bestimmen, wie schnell eine Landingpage live gehen kann — von Content bis Freigabeprozess."
+  },
+  "breadcrumbLabel": "Dauer bis zum Launch",
+  "publishedDate": "2026-09-19",
+  "updatedDate": "2026-09-19",
+  "hero": {
+    "kicker": "Wissen",
+    "title": "Wie lange dauert eine Landingpage bis zum Launch?",
+    "intro": "Die ehrliche Antwort lautet: Es kommt darauf an — und zwar auf ganz konkrete, beeinflussbare Faktoren, nicht auf eine geheime Branchen-Formel. Wer diese Faktoren kennt, kann den eigenen Zeitrahmen realistisch einschätzen, statt sich auf eine pauschale Zahl aus einem Angebot zu verlassen."
+  },
+  "keyTakeaway": null,
+  "sections": [
+    {
+      "heading": "Warum es keine seriöse pauschale Zahl gibt",
+      "level": "h2",
+      "paragraphs": [
+        "Jede Aussage wie \"Ihre Landingpage in 5 Tagen\" ohne Kenntnis Ihres konkreten Projekts ist entweder ein Marketing-Versprechen oder bezieht sich auf ein sehr eng definiertes Standardpaket. Die tatsächliche Dauer hängt von mehreren unabhängigen Faktoren ab, die sich von Projekt zu Projekt stark unterscheiden können."
+      ]
+    },
+    {
+      "heading": "Faktor 1: Wie fertig ist Ihr Content bereits?",
+      "level": "h2",
+      "paragraphs": [
+        "Der größte Zeitfaktor ist fast immer der Content — nicht das Design oder die Technik. Liegen Texte, Angebot, Zielgruppenverständnis und mindestens grobes Bildmaterial bereits vor, kann die Umsetzung deutlich zügiger starten. Muss all das erst erarbeitet werden, ist das an sich keine schlechte Sache — aber es ist Arbeit, die realistisch eingeplant werden muss, nicht übersprungen werden kann."
+      ]
+    },
+    {
+      "heading": "Faktor 2: Wie viele Personen müssen intern zustimmen?",
+      "level": "h2",
+      "paragraphs": [
+        "Ein Freigabeprozess mit einer entscheidungsbefugten Person läuft in der Praxis oft schneller als einer mit mehreren Abteilungen, die nacheinander Feedback geben. Das ist keine Kritik an gründlicher interner Abstimmung — nur ein Hinweis darauf, dass jede zusätzliche Freigabeschleife realistisch Zeit kostet, die separat eingeplant werden sollte."
+      ]
+    },
+    {
+      "heading": "Faktor 3: Wie klar ist das Ziel der Seite?",
+      "level": "h2",
+      "paragraphs": [
+        "Eine Landingpage mit einem einzigen, klar definierten Ziel (\"Termin buchen\", \"Angebot anfragen\") lässt sich zügiger strukturieren als eine Seite, die mehrere Zielgruppen oder Angebote gleichzeitig bedienen soll. Ambitionierte Ziele sind völlig legitim — aber je mehr eine einzelne Seite leisten soll, desto mehr Abstimmungsaufwand steckt in Struktur und Priorisierung."
+      ]
+    },
+    {
+      "heading": "Faktor 4: Braucht es individuelles Design oder ein bewährtes Muster?",
+      "level": "h2",
+      "paragraphs": [
+        "Eine Landingpage, die auf einem bereits bestehenden, bewährten Aufbau basiert, benötigt weniger Entwurfszeit als eine, bei der visuelle Identität und Struktur komplett neu entwickelt werden. Beides hat seine Berechtigung — die Frage ist nur, was für Ihr konkretes Ziel und Ihren Zeitrahmen sinnvoller ist."
+      ]
+    },
+    {
+      "heading": "Was das für Ihre eigene Planung bedeutet",
+      "level": "h2",
+      "paragraphs": [
+        "Statt nach einer allgemeinen Zahl zu fragen, lohnt sich eine andere Frage an jede Agentur oder jeden Freelancer: \"Was genau würde in unserem Fall den Zeitplan verlängern oder verkürzen?\" Eine seriöse Antwort benennt konkrete Punkte wie die oben genannten — nicht nur ein Datum ohne Begründung.",
+        "Wenn Sie selbst Einfluss auf das Tempo nehmen möchten, ist der wirkungsvollste Hebel fast immer, Content und Entscheidungsprozess so früh wie möglich vorzubereiten — nicht, Druck auf die Umsetzungsphase auszuüben."
+      ]
+    }
+  ],
+  "faq": null,
+  "relatedService": {
+    "label": "Landingpage geplant?",
+    "description": "Wir besprechen Ihren konkreten Zeitrahmen anhand echter Faktoren, nicht anhand einer Standardzahl.",
+    "linkLabel": "Mehr zur Landingpage-Erstellung",
+    "href": "/landingpage-erstellen-lassen"
+  },
+  "secondaryLink": {
+    "label": "Unser Ablauf im Überblick",
+    "href": "/process"
+  },
+  "relatedArticles": [
+    "landingpage-oder-website",
+    "website-briefing-checkliste"
+  ],
+  "images": {
+    "coverAlt": "Ein Bauplan mit eingezeichneter roter Route auf einem Schreibtisch mit Marmorkugel, im Hintergrund Berge im Morgenlicht."
+  }
+}
