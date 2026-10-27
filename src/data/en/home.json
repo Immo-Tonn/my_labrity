@@ -163,6 +163,7 @@
     "projectButton": "View Project",
     "projectTags": ["SEO READY", "AI OPTIMIZED", "RESPONSIVE"],
     "categories": {
+      "NØFORM": "Fashion & Streetwear",
       "Immo Tonn": "Real Estate",
       "TLSG Studio": "Music Industry",
       "Pizzeria": "Restaurant",
@@ -293,6 +294,16 @@
         "image": "/images/projects/beauty-salon-landing.webp",
         "href": "https://beauty-salon-landing-gray.vercel.app/de",
         "kind": "concept"
+      },
+      {
+        "title": "NØFORM",
+        "description": "NØFORM is a fictional streetwear brand and a concept project: campaign hero with sound toggle, a lookbook to explore and a product stage, in German, English and Ukrainian.",
+        "imageVariant": "first",
+        "image": "/images/projects/noform.webp",
+        "href": "https://noform-drab.vercel.app/en",
+        "kind": "concept",
+        "detailLabel": "Websites for fashion brands",
+        "detailHref": "/website-fuer-modemarken"
       }
     ]
   },

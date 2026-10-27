@@ -62,6 +62,11 @@
         "label": "Interessiert an Preisen und Paketen?",
         "linkLabel": "Preise & Pakete ansehen",
         "href": "/prices"
+      },
+      {
+        "label": "Ihre Marke ist ein Modelabel oder eine Streetwear-Marke?",
+        "linkLabel": "Mehr zu Websites für Modemarken",
+        "href": "/website-fuer-modemarken"
       }
     ]
   },

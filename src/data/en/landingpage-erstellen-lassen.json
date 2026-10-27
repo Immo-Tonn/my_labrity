@@ -62,6 +62,11 @@
         "label": "Interested in prices and packages?",
         "linkLabel": "View prices & packages",
         "href": "/prices"
+      },
+      {
+        "label": "Is your brand a fashion label or a streetwear brand?",
+        "linkLabel": "More on Websites for fashion brands",
+        "href": "/website-fuer-modemarken"
       }
     ]
   },

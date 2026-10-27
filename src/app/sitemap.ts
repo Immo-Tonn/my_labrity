@@ -27,6 +27,7 @@ const PAGES: {
   { path: '/webentwicklung', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/web-app-entwickeln-lassen', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/website-relaunch', changeFrequency: 'weekly', priority: 0.9 },
+  { path: '/website-fuer-modemarken', changeFrequency: 'weekly', priority: 0.8 },
   {
     path: '/landingpage-erstellen-lassen',
     changeFrequency: 'weekly',
