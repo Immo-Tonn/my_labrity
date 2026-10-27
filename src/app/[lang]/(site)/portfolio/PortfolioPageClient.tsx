@@ -3,6 +3,8 @@
 import { motion, MotionConfig } from 'framer-motion';
 import Image from 'next/image';
 
+import { LocalizedLink } from '@/components/ui/LocalizedLink';
+
 type ProjectItem = {
   title: string;
   description: string;
@@ -10,6 +12,9 @@ type ProjectItem = {
   href: string;
   image?: string;
   kind?: 'client' | 'concept';
+  // Optional internal link to a service page that relates to this project.
+  detailLabel?: string;
+  detailHref?: string;
 };
 
 type SeoBlockItem = {
@@ -283,6 +288,18 @@ export default function PortfolioPageClient({
                           {content.projectButton}
                           <span className="h-px w-12 bg-neutral-400 transition duration-300 group-hover:w-20 group-hover:bg-black" />
                         </a>
+
+                        {item.detailHref && item.detailLabel && (
+                          <div>
+                            <LocalizedLink
+                              href={item.detailHref}
+                              className="mt-6 inline-flex min-h-[44px] items-center gap-2 border-b border-black/40 font-montserrat text-xs uppercase tracking-[0.2em] text-black transition duration-300 hover:border-black"
+                            >
+                              {item.detailLabel}
+                              <span aria-hidden="true">→</span>
+                            </LocalizedLink>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>

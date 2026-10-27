@@ -163,6 +163,7 @@
     "projectButton": "Смотреть проект",
     "projectTags": ["SEO READY", "AI ОПТИМИЗАЦИЯ", "RESPONSIVE"],
     "categories": {
+      "NØFORM": "Мода и streetwear",
       "Immo Tonn": "Недвижимость",
       "TLSG Studio": "Музыкальная индустрия",
       "Pizzeria": "Ресторан",
@@ -293,6 +294,16 @@
         "image": "/images/projects/beauty-salon-landing.webp",
         "href": "https://beauty-salon-landing-gray.vercel.app/de",
         "kind": "concept"
+      },
+      {
+        "title": "NØFORM",
+        "description": "NØFORM — вымышленный streetwear-бренд и концепт-проект: кампейн-экран с переключателем звука, лукбук для исследования и витрина вещей, на немецком, английском и украинском.",
+        "imageVariant": "first",
+        "image": "/images/projects/noform.webp",
+        "href": "https://noform-drab.vercel.app/de",
+        "kind": "concept",
+        "detailLabel": "Сайты для модных брендов",
+        "detailHref": "/website-fuer-modemarken"
       }
     ]
   },

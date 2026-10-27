@@ -1,0 +1,170 @@
+{
+  "breadcrumbParentLabel": "Services",
+  "hero": {
+    "kicker": "Website for fashion brands",
+    "title": "A website that makes your brand felt.",
+    "description": "For labels, streetwear brands and designers: a digital presence with a campaign opening, a lookbook and a clear collection story. Made with mobile in mind, in German and other languages."
+  },
+  "images": {
+    "heroAlt": "NØFORM concept project from the Labrity portfolio: campaign hero of a fictional streetwear brand with a visor and hood in black and white",
+    "lookbookAlt": "NØFORM lookbook: black and white streetwear looks from a concept project for a fictional fashion brand",
+    "visorAlt": "NØFORM product stage: chrome visor against a black background, concept project"
+  },
+  "needs": {
+    "kicker": "What matters",
+    "title": "What a website for a fashion brand has to deliver.",
+    "description": "A fashion brand is not understood through a product list but through attitude, imagery and rhythm. The website is often the first place where all of that comes together.",
+    "items": [
+      {
+        "title": "Atmosphere before catalogue",
+        "description": "The first impression decides whether a brand lands. Imagery, typography and pace say more than a list of items."
+      },
+      {
+        "title": "A collection told clearly",
+        "description": "Campaign, lookbook and individual pieces need a structure in which visitors move intuitively without losing the thread."
+      },
+      {
+        "title": "Mobile first",
+        "description": "Many visitors arrive straight from social media on their phone. Images have to load fast, and the page has to feel right there."
+      }
+    ]
+  },
+  "example": {
+    "kicker": "Concept project",
+    "title": "NØFORM: a fictional streetwear brand as an example.",
+    "description": "NØFORM is an invented brand that we built as a concept to show what a brand presence for fashion can look like. It is not a client project.",
+    "facts": [
+      {
+        "title": "Campaign opening",
+        "description": "A full-screen hero with the brand name and a sound toggle sets the mood from the first second."
+      },
+      {
+        "title": "A lookbook to explore",
+        "description": "The collection can be explored by scrolling and dragging instead of sitting in a grid."
+      },
+      {
+        "title": "One brand, several languages",
+        "description": "The concept site is available in German, English and Ukrainian."
+      }
+    ],
+    "button": "View NØFORM",
+    "note": "Fictional brand. All content serves as a concept presentation only."
+  },
+  "offer": {
+    "kicker": "What we build",
+    "title": "Building blocks for a strong brand presence.",
+    "description": "Which building blocks you need depends on your brand and where you stand. This is a selection, not a fixed package.",
+    "items": [
+      {
+        "title": "Campaign homepage",
+        "description": "An opening that makes your brand understandable within seconds."
+      },
+      {
+        "title": "Lookbook and collection pages",
+        "description": "Images in the centre, with a clear structure and fast loading times."
+      },
+      {
+        "title": "Product stage",
+        "description": "Individual pieces or highlights presented with impact."
+      },
+      {
+        "title": "Multilingual",
+        "description": "Your brand in several languages, with a structure that lets search engines match each version correctly."
+      },
+      {
+        "title": "Launch landing page",
+        "description": "For the start of a collection: a focused page with one clear next step."
+      },
+      {
+        "title": "Technology and visibility",
+        "description": "Fast pages, clean foundations for search and content that is easy to understand."
+      }
+    ]
+  },
+  "disclaimerStatement": {
+    "kicker": "To be honest",
+    "title": "Brand first, shop if needed.",
+    "description": "This page is about brand presences: campaign, lookbook, collection launch. For a full online shop with cart and payment, a shop system is often the better foundation. We will tell you openly what fits your project. And no one can seriously promise rankings on Google."
+  },
+  "disambiguation": {
+    "kicker": "Looking for something else?",
+    "title": "Maybe one of these pages fits better.",
+    "items": [
+      {
+        "label": "Is it only about launching a collection or a campaign?",
+        "linkLabel": "More on Landing page creation",
+        "href": "/landingpage-erstellen-lassen"
+      },
+      {
+        "label": "Do you need a general company website?",
+        "linkLabel": "More on Website creation",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Interested in prices and packages?",
+        "linkLabel": "View prices & packages",
+        "href": "/prices"
+      },
+      {
+        "label": "Would you like to see more of our work?",
+        "linkLabel": "View portfolio",
+        "href": "/portfolio"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Common questions",
+    "title": "What you'd want to know beforehand.",
+    "items": [
+      {
+        "question": "How much does a website for a fashion brand cost?",
+        "answer": "It depends on the scope: number of pages, image material, languages and special features. Our packages and prices give you an orientation. You receive a concrete offer after a short conversation, without obligation."
+      },
+      {
+        "question": "Do I need my own online shop for that?",
+        "answer": "Not necessarily. Many brands start with a brand presence made of campaign and lookbook and link to an existing shop. If you want to sell directly, we will talk about which solution makes sense."
+      },
+      {
+        "question": "Is NØFORM a real client project?",
+        "answer": "No. NØFORM is a fictional brand that we built as a concept project to show our work on a fashion topic. Concept projects are labelled as such in the portfolio."
+      },
+      {
+        "question": "Can the website be multilingual?",
+        "answer": "Yes. Labrity itself is built in four languages, and NØFORM exists in three. A clean structure allows search engines to match each language version correctly."
+      },
+      {
+        "question": "What material do I need to get started?",
+        "answer": "Ideally images or campaign material, a logo and a short description of your brand. If not everything exists yet, we clarify in a conversation what is missing and how we proceed."
+      }
+    ]
+  },
+  "relatedArticles": {
+    "kicker": "Further reading",
+    "title": "More on this in our blog.",
+    "items": [
+      {
+        "label": "Web design for beauty and wellness brands: what really matters",
+        "linkLabel": "Read article",
+        "href": "/blog/webdesign-beauty-wellness"
+      },
+      {
+        "label": "Landing page or website: what do you actually need?",
+        "linkLabel": "Read article",
+        "href": "/blog/landingpage-oder-website"
+      },
+      {
+        "label": "What does a professional website really cost?",
+        "linkLabel": "Read article",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Next step",
+    "title": "Your brand deserves its own presence.",
+    "description": "Tell us briefly about your brand and your plans. We will get back to you with an honest assessment.",
+    "primaryButton": "Request a project",
+    "secondaryButton": "View portfolio",
+    "backToServicesLabel": "View all services"
+  }
+}

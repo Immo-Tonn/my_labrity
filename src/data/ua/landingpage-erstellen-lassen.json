@@ -62,6 +62,11 @@
         "label": "Цікавлять ціни та пакети?",
         "linkLabel": "Переглянути ціни та пакети",
         "href": "/prices"
+      },
+      {
+        "label": "Ваш бренд — модний лейбл чи streetwear?",
+        "linkLabel": "Більше про сайти для модних брендів",
+        "href": "/website-fuer-modemarken"
       }
     ]
   },

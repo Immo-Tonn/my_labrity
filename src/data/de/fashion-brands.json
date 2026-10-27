@@ -1,0 +1,170 @@
+{
+  "breadcrumbParentLabel": "Leistungen",
+  "hero": {
+    "kicker": "Website für Modemarken",
+    "title": "Eine Website, die Ihre Marke spürbar macht.",
+    "description": "Für Labels, Streetwear-Marken und Designer: ein digitaler Auftritt mit Kampagnen-Einstieg, Lookbook und klarer Kollektionsgeschichte. Fürs Handy gedacht, auf Deutsch und in weiteren Sprachen."
+  },
+  "images": {
+    "heroAlt": "Konzeptprojekt NØFORM aus dem Labrity Portfolio: Kampagnen-Hero einer fiktiven Streetwear-Marke mit Visor und Kapuze in Schwarz-Weiß",
+    "lookbookAlt": "NØFORM Lookbook: Streetwear-Looks in Schwarz-Weiß, vom Konzeptprojekt für eine fiktive Modemarke",
+    "visorAlt": "NØFORM Produktbühne: chromfarbene Visor-Brille vor schwarzem Hintergrund, Konzeptprojekt"
+  },
+  "needs": {
+    "kicker": "Worauf es ankommt",
+    "title": "Was eine Website für eine Modemarke leisten muss.",
+    "description": "Eine Modemarke versteht man nicht über eine Produktliste, sondern über Haltung, Bilder und Rhythmus. Die Website ist oft der erste Ort, an dem all das zusammenkommt.",
+    "items": [
+      {
+        "title": "Atmosphäre vor Katalog",
+        "description": "Der erste Eindruck entscheidet, ob eine Marke wirkt. Bildsprache, Typografie und Tempo erzählen mehr als eine Liste von Artikeln."
+      },
+      {
+        "title": "Kollektion klar erzählt",
+        "description": "Kampagne, Lookbook und einzelne Stücke brauchen eine Struktur, in der sich Besucher intuitiv bewegen, ohne den Faden zu verlieren."
+      },
+      {
+        "title": "Mobil zuerst",
+        "description": "Viele Besucher kommen über Social Media direkt aufs Handy. Bilder müssen schnell laden, und die Seite muss sich dort richtig anfühlen."
+      }
+    ]
+  },
+  "example": {
+    "kicker": "Konzeptprojekt",
+    "title": "NØFORM: eine fiktive Streetwear-Marke als Beispiel.",
+    "description": "NØFORM ist eine erfundene Marke, die wir als Konzept umgesetzt haben, um zu zeigen, wie ein Markenauftritt für Mode aussehen kann. Es ist kein Kundenprojekt.",
+    "facts": [
+      {
+        "title": "Kampagnen-Einstieg",
+        "description": "Ein Vollbild-Hero mit Markenname und Ton-Schalter setzt gleich zu Beginn die Stimmung."
+      },
+      {
+        "title": "Lookbook zum Entdecken",
+        "description": "Die Kollektion lässt sich per Scrollen und Ziehen erkunden, statt in einem Raster zu stehen."
+      },
+      {
+        "title": "Eine Marke, mehrere Sprachen",
+        "description": "Die Konzeptseite gibt es auf Deutsch, Englisch und Ukrainisch."
+      }
+    ],
+    "button": "NØFORM ansehen",
+    "note": "Fiktive Marke. Alle Inhalte dienen ausschließlich der Konzeptdarstellung."
+  },
+  "offer": {
+    "kicker": "Was wir umsetzen",
+    "title": "Bausteine für einen starken Markenauftritt.",
+    "description": "Welche Bausteine Sie brauchen, hängt von Ihrer Marke und Ihrem Stand ab. Das ist eine Auswahl, kein festes Paket.",
+    "items": [
+      {
+        "title": "Kampagnen-Startseite",
+        "description": "Ein Einstieg, der Ihre Marke in wenigen Sekunden verständlich macht."
+      },
+      {
+        "title": "Lookbook und Kollektionsseiten",
+        "description": "Bilder im Mittelpunkt, mit klarer Struktur und schnellen Ladezeiten."
+      },
+      {
+        "title": "Produktbühne",
+        "description": "Einzelne Stücke oder Highlights wirkungsvoll in Szene gesetzt."
+      },
+      {
+        "title": "Mehrsprachigkeit",
+        "description": "Ihre Marke in mehreren Sprachen, mit einer Struktur, die Suchmaschinen jede Version richtig zuordnen lässt."
+      },
+      {
+        "title": "Launch-Landingpage",
+        "description": "Für den Start einer Kollektion: eine fokussierte Seite mit einem klaren nächsten Schritt."
+      },
+      {
+        "title": "Technik und Sichtbarkeit",
+        "description": "Schnelle Seiten, saubere Grundlagen für die Suche und verständliche Inhalte."
+      }
+    ]
+  },
+  "disclaimerStatement": {
+    "kicker": "Ehrlich gesagt",
+    "title": "Marke zuerst, Shop bei Bedarf.",
+    "description": "Diese Seite beschreibt Markenauftritte: Kampagne, Lookbook, Kollektionsstart. Für einen vollständigen Onlineshop mit Warenkorb und Bezahlung ist oft ein Shop-System die bessere Basis. Wir sagen Ihnen offen, was zu Ihrem Vorhaben passt. Und: Platzierungen bei Google kann niemand seriös zusichern."
+  },
+  "disambiguation": {
+    "kicker": "Sie suchen etwas anderes?",
+    "title": "Vielleicht passt eine dieser Seiten besser.",
+    "items": [
+      {
+        "label": "Es geht nur um den Start einer Kollektion oder Kampagne?",
+        "linkLabel": "Mehr zu Landingpage erstellen lassen",
+        "href": "/landingpage-erstellen-lassen"
+      },
+      {
+        "label": "Sie brauchen eine allgemeine Unternehmenswebsite?",
+        "linkLabel": "Mehr zu Website erstellen lassen",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Interessiert an Preisen und Paketen?",
+        "linkLabel": "Preise & Pakete ansehen",
+        "href": "/prices"
+      },
+      {
+        "label": "Sie möchten weitere Arbeiten sehen?",
+        "linkLabel": "Portfolio ansehen",
+        "href": "/portfolio"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Häufige Fragen",
+    "title": "Was Sie vorher wissen möchten.",
+    "items": [
+      {
+        "question": "Wie viel kostet eine Website für eine Modemarke?",
+        "answer": "Das hängt vom Umfang ab: Anzahl der Seiten, Bildmaterial, Sprachen und gewünschte Besonderheiten. Eine Orientierung geben unsere Pakete und Preise. Ein konkretes Angebot erhalten Sie nach einem kurzen Gespräch, ohne Verpflichtung."
+      },
+      {
+        "question": "Brauche ich dafür einen eigenen Onlineshop?",
+        "answer": "Nicht unbedingt. Viele Marken starten mit einem Markenauftritt aus Kampagne und Lookbook und verlinken auf einen bestehenden Shop. Wenn Sie direkt verkaufen möchten, besprechen wir, welche Lösung dafür sinnvoll ist."
+      },
+      {
+        "question": "Ist NØFORM ein echtes Kundenprojekt?",
+        "answer": "Nein. NØFORM ist eine fiktive Marke, die wir als Konzeptprojekt umgesetzt haben, um unsere Arbeit an einem Modethema zu zeigen. Konzeptprojekte sind im Portfolio entsprechend gekennzeichnet."
+      },
+      {
+        "question": "Kann die Website mehrsprachig sein?",
+        "answer": "Ja. Labrity selbst ist in vier Sprachen aufgebaut, und NØFORM gibt es in drei Sprachen. Eine saubere Struktur ermöglicht es Suchmaschinen, jede Sprachversion richtig zuzuordnen."
+      },
+      {
+        "question": "Welches Material brauche ich für den Start?",
+        "answer": "Idealerweise Bilder oder Kampagnenmaterial, ein Logo und eine kurze Beschreibung Ihrer Marke. Ist noch nicht alles vorhanden, klären wir im Gespräch, was fehlt und wie wir vorgehen."
+      }
+    ]
+  },
+  "relatedArticles": {
+    "kicker": "Weiterlesen",
+    "title": "Mehr dazu im Blog.",
+    "items": [
+      {
+        "label": "Webdesign für Beauty- und Wellness-Marken: Worauf es wirklich ankommt",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/webdesign-beauty-wellness"
+      },
+      {
+        "label": "Landingpage oder Website: Was brauche ich wirklich?",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/landingpage-oder-website"
+      },
+      {
+        "label": "Was kostet eine professionelle Website wirklich?",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Nächster Schritt",
+    "title": "Ihre Marke verdient einen eigenen Auftritt.",
+    "description": "Erzählen Sie uns kurz von Ihrer Marke und Ihrem Vorhaben. Wir melden uns mit einer ehrlichen Einschätzung.",
+    "primaryButton": "Projekt anfragen",
+    "secondaryButton": "Portfolio ansehen",
+    "backToServicesLabel": "Alle Leistungen ansehen"
+  }
+}
