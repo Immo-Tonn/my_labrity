@@ -185,7 +185,7 @@ const packageIcons = [
 const priceFactorIcons = [Target, Sparkles, ShieldCheck];
 
 function getSectionClasses(extraClasses = '') {
-  return `border-t border-[#e7e2d9] px-5 py-20 md:px-8 md:py-28 ${extraClasses}`;
+  return `border-t border-[#111]/[0.12] px-5 py-20 md:px-8 md:py-28 ${extraClasses}`;
 }
 
 function SectionTitle({
@@ -275,7 +275,7 @@ function IconBox({
       className={`flex size-12 shrink-0 items-center justify-center border ${
         dark
           ? 'border-white/15 text-white/70'
-          : 'border-[#e7e2d9] text-black/40'
+          : 'border-[#111]/[0.12] text-black/40'
       }`}
     >
       <Icon size={24} strokeWidth={1.15} />
@@ -348,8 +348,8 @@ function PackageCard({
     <article
       className={`relative flex h-full min-w-0 flex-col border p-7 transition duration-300 hover:-translate-y-[2px] ${
         isRecommended
-          ? 'border-black bg-white shadow-[0_24px_70px_rgba(0,0,0,0.09)]'
-          : 'border-[#e7e2d9] bg-white/45 shadow-[0_14px_36px_rgba(0,0,0,0.03)] hover:bg-white/70'
+          ? 'sw-ink border-[#111]'
+          : 'border-[#111]/[0.12] bg-white/45 shadow-[0_14px_36px_rgba(0,0,0,0.03)] hover:bg-white/70'
       }`}
     >
       <button
@@ -394,7 +394,7 @@ function PackageCard({
           {item.price}
         </p>
 
-        <p className="mt-6 border-t border-[#e7e2d9] pt-5 font-montserrat text-[13px] leading-6 text-neutral-500">
+        <p className="mt-6 border-t border-[#111]/[0.12] pt-5 font-montserrat text-[13px] leading-6 text-neutral-500">
           {item.idealFor}
         </p>
 
@@ -406,7 +406,7 @@ function PackageCard({
           item.notSuitableFor ||
           item.duration ||
           item.support) && (
-          <div className="mb-5 mt-8 space-y-4 border-t border-[#e7e2d9] pt-6">
+          <div className="mb-5 mt-8 space-y-4 border-t border-[#111]/[0.12] pt-6">
             <InfoBlock label={ui.suitableFor} value={item.suitableFor} />
             <InfoBlock label={ui.notSuitableFor} value={item.notSuitableFor} />
 
@@ -433,7 +433,7 @@ function PackageCard({
 
 function SubscriptionCard({ item }: { item: SubscriptionItem }) {
   return (
-    <article className="flex h-full min-w-0 flex-col border border-[#e7e2d9] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/75">
+    <article className="flex h-full min-w-0 flex-col border border-[#111]/[0.12] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/75">
       <RefreshCcw size={38} strokeWidth={1.1} className="mb-7 text-black/40" />
 
       <h3 className="break-words font-tenor text-[30px] leading-[1] tracking-[-0.03em] text-black">
@@ -461,7 +461,7 @@ function SubscriptionCard({ item }: { item: SubscriptionItem }) {
 
 function CareCard({ item }: { item: CareItem }) {
   return (
-    <article className="flex h-full min-w-0 flex-col border border-[#e7e2d9] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/75">
+    <article className="flex h-full min-w-0 flex-col border border-[#111]/[0.12] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/75">
       <ShieldCheck size={38} strokeWidth={1.1} className="mb-7 text-black/40" />
 
       <h3 className="break-words font-tenor text-[30px] leading-[1] tracking-[-0.03em] text-black">
@@ -485,7 +485,7 @@ function CareCard({ item }: { item: CareItem }) {
 
 function AdditionalServiceCard({ item }: { item: AdditionalServiceItem }) {
   return (
-    <article className="min-w-0 border border-[#e7e2d9] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/75">
+    <article className="min-w-0 border border-[#111]/[0.12] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/75">
       <p className="font-montserrat text-xs font-medium uppercase tracking-[0.22em] text-black/60">
         {item.price}
       </p>
@@ -510,7 +510,7 @@ export default function PricesPageClient({
   const content = initialData;
 
   return (
-    <main className="min-h-screen bg-[#f8f6f1] text-black">
+    <main className="swiss min-h-screen bg-[#F7F7F5]/65 text-black">
       {/* HERO */}
       <section className="md:pb-18 2xl:pb-24 2xl:pt-[195px] px-5 pb-14 pt-[135px] md:px-8 md:pt-[155px] xl:pb-20 xl:pt-[180px]">
         <div className="mx-auto max-w-[1700px]">
@@ -563,7 +563,7 @@ export default function PricesPageClient({
               initial={{ opacity: 0, y: 36 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.3, ease: heroEase }}
-              className="2xl:-translate-y-4 border border-[#e7e2d9] bg-white/35 shadow-[0_14px_36px_rgba(0,0,0,0.025)]"
+              className="2xl:-translate-y-4 border border-[#111]/[0.12] bg-white/35 shadow-[0_14px_36px_rgba(0,0,0,0.025)]"
             >
               <div className="px-7 py-8 md:px-9 md:py-10">
                 <p className="font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
@@ -575,7 +575,7 @@ export default function PricesPageClient({
                 </p>
               </div>
 
-              <div className="grid divide-y divide-[#e7e2d9] border-t border-[#e7e2d9] sm:grid-cols-2 sm:divide-x sm:divide-y-0 xl:grid-cols-4">
+              <div className="grid divide-y divide-[#111]/[0.12] border-t border-[#111]/[0.12] sm:grid-cols-2 sm:divide-x sm:divide-y-0 xl:grid-cols-4">
                 {(content.hero.stats ?? []).map(stat => (
                   <div
                     key={`${stat.value}-${stat.label}`}
@@ -620,7 +620,7 @@ export default function PricesPageClient({
             </div>
           </div>
 
-          <div className="divide-y divide-[#e7e2d9] border-y border-[#e7e2d9]">
+          <div className="divide-y divide-[#111]/[0.12] border-y border-[#111]/[0.12]">
             {content.priceFactors.items.map((item, index) => {
               const Icon = priceFactorIcons[index] || Target;
 
@@ -678,7 +678,7 @@ export default function PricesPageClient({
       {content.webApps && (
         <section className={getSectionClasses('py-20 md:py-24')}>
           <div className="mx-auto max-w-[1500px]">
-            <div className="grid gap-10 border border-[#e7e2d9] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-center xl:p-14">
+            <div className="grid gap-10 border border-[#111]/[0.12] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-center xl:p-14">
               <div>
                 <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
                   {content.webApps.kicker}
@@ -693,7 +693,7 @@ export default function PricesPageClient({
                 </p>
               </div>
 
-              <div className="xl:border-l xl:border-[#e7e2d9] xl:pl-12">
+              <div className="xl:border-l xl:border-[#111]/[0.12] xl:pl-12">
                 <p className="font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
                   {content.webApps.description}
                 </p>
@@ -717,9 +717,9 @@ export default function PricesPageClient({
 
       {/* CUSTOM SOLUTION */}
       {content.customSolution && (
-        <section className={getSectionClasses('py-20 md:py-24')}>
+        <section className={getSectionClasses('sw-tint py-20 md:py-24')}>
           <div className="mx-auto max-w-[1500px]">
-            <div className="grid gap-10 border border-[#e7e2d9] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-center xl:p-14">
+            <div className="grid gap-10 border border-[#111]/[0.12] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-center xl:p-14">
               <div>
                 <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
                   {content.customSolution.kicker}
@@ -730,7 +730,7 @@ export default function PricesPageClient({
                 </h2>
               </div>
 
-              <div className="xl:border-l xl:border-[#e7e2d9] xl:pl-12">
+              <div className="xl:border-l xl:border-[#111]/[0.12] xl:pl-12">
                 <p className="font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
                   {content.customSolution.description}
                 </p>
@@ -748,9 +748,9 @@ export default function PricesPageClient({
         </section>
       )}
       {/* PROJECT CALCULATOR */}
-      <section className={getSectionClasses()}>
+      <section className={getSectionClasses('sw-tint')}>
         <div className="mx-auto max-w-[1500px]">
-          <div className="grid overflow-hidden border border-[#e7e2d9] bg-[#f8f6f1] shadow-[0_24px_70px_rgba(0,0,0,0.06)] xl:grid-cols-[0.85fr_1.15fr]">
+          <div className="grid overflow-hidden border border-[#111]/[0.12] bg-[#F7F7F5] shadow-[0_24px_70px_rgba(0,0,0,0.06)] xl:grid-cols-[0.85fr_1.15fr]">
             <div className="relative overflow-hidden bg-[#111111] px-7 py-10 text-white md:px-10 md:py-14 xl:px-12 xl:py-16">
               <p className="font-tenor text-[24px] uppercase tracking-[-0.03em] text-white">
                 LABRITY
@@ -794,7 +794,7 @@ export default function PricesPageClient({
                   {content.quizPreview.description}
                 </p>
 
-                <div className="mt-10 divide-y divide-[#e7e2d9] border-y border-[#e7e2d9]">
+                <div className="mt-10 divide-y divide-[#111]/[0.12] border-y border-[#111]/[0.12]">
                   {content.quizPreview.steps.map((item, index) => (
                     <div
                       key={item}
@@ -858,9 +858,9 @@ export default function PricesPageClient({
       </section>
 
       {/* REDESIGN */}
-      <section className={getSectionClasses('py-24 md:py-32')}>
+      <section className={getSectionClasses('sw-tint py-24 md:py-32')}>
         <div className="mx-auto max-w-[1500px]">
-          <div className="grid gap-12 border border-[#e7e2d9] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[1fr_0.8fr] xl:p-14">
+          <div className="grid gap-12 border border-[#111]/[0.12] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[1fr_0.8fr] xl:p-14">
             <div>
               <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
                 {content.redesign.kicker}
@@ -875,7 +875,7 @@ export default function PricesPageClient({
               </p>
             </div>
 
-            <div className="border-t border-[#e7e2d9] pt-8 xl:border-l xl:border-t-0 xl:pl-12 xl:pt-0">
+            <div className="border-t border-[#111]/[0.12] pt-8 xl:border-l xl:border-t-0 xl:pl-12 xl:pt-0">
               <p className="break-words font-tenor text-[46px] leading-none tracking-[-0.04em] text-black md:text-[62px]">
                 {content.redesign.price}
               </p>
@@ -910,7 +910,7 @@ export default function PricesPageClient({
       </section>
 
       {/* CARE */}
-      <section className={getSectionClasses('py-24 md:py-32')}>
+      <section className={getSectionClasses('sw-ink py-24 md:py-32')}>
         <div className="2xl:grid-cols-[0.75fr_1.25fr] 2xl:gap-20 mx-auto grid max-w-[1600px] gap-12">
           <div>
             <SectionTitle
@@ -934,7 +934,7 @@ export default function PricesPageClient({
         <div className="mx-auto max-w-[1300px]">
           <SectionTitle kicker={content.faq.kicker} title={content.faq.title} />
 
-          <div className="mt-14 divide-y divide-[#e7e2d9] border-y border-[#e7e2d9]">
+          <div className="mt-14 divide-y divide-[#111]/[0.12] border-y border-[#111]/[0.12]">
             {content.faq.items.map(item => (
               <details key={item.question} className="group py-7">
                 <summary className="flex min-h-[44px] cursor-pointer list-none items-start justify-between gap-6">

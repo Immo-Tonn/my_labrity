@@ -1,0 +1,561 @@
+/* Projects page — intro tiles and project description panels. */
+
+/* ───────────── Intro ───────────── */
+
+.tags {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  border: 1px solid #111111;
+}
+
+@media (min-width: 640px) {
+  .tags {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.tag {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 76px;
+  padding: 18px 22px;
+  overflow: hidden;
+  border-bottom: 1px solid #111111;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.tag:last-child {
+  border-bottom: 0;
+}
+
+@media (min-width: 640px) {
+  .tag {
+    border-bottom: 0;
+    border-right: 1px solid #111111;
+    font-size: 14px;
+    letter-spacing: 0.16em;
+  }
+
+  .tag:last-child {
+    border-right: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tag {
+    min-height: 80px;
+    padding: 20px 32px;
+    font-size: 17px;
+    letter-spacing: 0.2em;
+  }
+}
+
+.tag .mark {
+  width: 8px;
+  height: 8px;
+  flex: none;
+  background: #111111;
+  transition:
+    background-color 0.4s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tag .text {
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tag::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #ff3830;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tag:hover .mark {
+  background: #ff3830;
+  transform: scale(1.35);
+}
+
+.tag:hover .text {
+  transform: translateX(6px);
+}
+
+.tag:hover::after {
+  transform: scaleX(1);
+}
+
+.cells {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  border: 1px solid #111111;
+  border-top: 0;
+}
+
+@media (min-width: 1024px) {
+  .cells {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.cell {
+  position: relative;
+  min-width: 0;
+  padding: 30px 24px 36px;
+  border-bottom: 1px solid #111111;
+  background: #f7f7f5;
+  color: #111111;
+  cursor: default;
+  transition: background-color 0.45s ease;
+}
+
+.cell:last-child {
+  border-bottom: 0;
+}
+
+.cell.dark {
+  background: #111111;
+  color: #f7f7f5;
+}
+
+@media (min-width: 1024px) {
+  .cell {
+    padding: 30px 36px 34px;
+    border-bottom: 0;
+    border-right: 1px solid #111111;
+  }
+
+  .cell:last-child {
+    border-right: 0;
+  }
+}
+
+.cell::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #ff3830;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cell:hover::before {
+  transform: scaleX(1);
+}
+
+.cell:hover {
+  background: #fbfbfa;
+}
+
+.cell.dark:hover {
+  background: #1a1a1a;
+}
+
+.cellKicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cellKicker::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  flex: none;
+  background: #ff3830;
+}
+
+.cell:hover .cellKicker {
+  transform: translateX(6px);
+}
+
+/* ───────────── Project ───────────── */
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  border: 1px solid #111111;
+  background: #f7f7f5;
+}
+
+@media (min-width: 1024px) {
+  .card {
+    grid-template-columns: minmax(0, 0.58fr) minmax(0, 0.42fr);
+  }
+}
+
+.panel {
+  --fg: #f7f7f5;
+  --sub: rgba(247, 247, 245, 0.78);
+  --line: rgba(247, 247, 245, 0.28);
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  background: #111111;
+  color: var(--fg);
+  border-top: 1px solid #111111;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+@media (min-width: 1024px) {
+  .panel {
+    border-top: 0;
+    border-left: 1px solid #111111;
+  }
+}
+
+/* The whole description block turns light — on pointer hover over any
+   part of it, and while keyboard focus is anywhere inside. Geometry never
+   changes: only colours move. */
+.panel:focus-within {
+  --fg: #111111;
+  --sub: rgba(17, 17, 17, 0.74);
+  --line: rgba(17, 17, 17, 0.24);
+  background: #f7f7f5;
+}
+
+@media (hover: hover) {
+  .panel:hover {
+    --fg: #111111;
+    --sub: rgba(17, 17, 17, 0.74);
+    --line: rgba(17, 17, 17, 0.24);
+    background: #f7f7f5;
+  }
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 22px 22px;
+  border-bottom: 1px solid var(--line);
+  transition: border-color 0.4s ease;
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+  padding: 28px 22px 32px;
+}
+
+.foot {
+  padding: 22px 22px 26px;
+  border-top: 1px solid var(--line);
+  transition: border-color 0.4s ease;
+}
+
+@media (min-width: 768px) {
+  .head {
+    padding: 28px 36px;
+  }
+
+  .body {
+    padding: 36px 36px 40px;
+  }
+
+  .foot {
+    padding: 26px 36px 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .head {
+    padding: 32px 44px;
+  }
+
+  .body {
+    padding: 44px 44px 48px;
+  }
+
+  .foot {
+    padding: 28px 44px 36px;
+  }
+}
+
+.meta {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  color: var(--fg);
+  transition: color 0.4s ease;
+}
+
+.metaSub {
+  margin: 10px 0 0;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--sub);
+  transition: color 0.4s ease;
+}
+
+.concept {
+  display: inline-block;
+  margin: 12px 0 0;
+  padding: 5px 9px;
+  border: 1px solid var(--line);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sub);
+  transition:
+    color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.title {
+  margin: 0;
+  max-width: 100%;
+  hyphens: auto;
+  overflow-wrap: anywhere;
+  color: var(--fg);
+  transition: color 0.4s ease;
+}
+
+.desc {
+  margin: 26px 0 0;
+  max-width: 560px;
+  color: var(--sub);
+  transition: color 0.4s ease;
+}
+
+.tagsRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin: 0 0 22px;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--sub);
+  transition: color 0.4s ease;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  background: currentColor;
+  opacity: 0.55;
+}
+
+.open {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--fg);
+  transition: color 0.4s ease;
+}
+
+.openLine {
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: currentColor;
+  transition:
+    width 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    height 0.3s ease,
+    background-color 0.4s ease;
+}
+
+.panel:hover .openLine,
+.panel:focus-within .openLine,
+.open:hover .openLine {
+  width: 80px;
+  height: 2px;
+  background: #ff3830;
+}
+
+.detail {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--fg);
+  transition:
+    border-color 0.35s ease,
+    color 0.4s ease;
+}
+
+.detail:hover {
+  border-color: #ff3830;
+}
+
+.arrow {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  color: var(--fg);
+  transition:
+    border-color 0.4s ease,
+    color 0.4s ease;
+}
+
+.arrow svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* The arrow is red on hover/focus, and nudges up and to the right. */
+.panel:focus-within .arrow {
+  border-color: #ff3830;
+  color: #ff3830;
+}
+
+.panel:focus-within .arrow svg {
+  transform: translate(3px, -3px);
+}
+
+@media (hover: hover) {
+  .panel:hover .arrow {
+    border-color: #ff3830;
+    color: #ff3830;
+  }
+
+  .panel:hover .arrow svg {
+    transform: translate(3px, -3px);
+  }
+}
+
+.panel a:focus-visible {
+  outline: 2px solid #ff3830;
+  outline-offset: 4px;
+}
+
+.shot {
+  position: relative;
+  display: flex;
+  min-height: 300px;
+  padding: 16px;
+  overflow: hidden;
+  background: #eeeeeb;
+}
+
+@media (min-width: 768px) {
+  .shot {
+    min-height: 430px;
+    padding: 28px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .shot {
+    min-height: 520px;
+  }
+}
+
+.shot:focus-visible {
+  outline: 2px solid #ff3830;
+  outline-offset: -4px;
+}
+
+.frame {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  min-height: 268px;
+  overflow: hidden;
+  border: 1px solid rgba(17, 17, 17, 0.18);
+  background: #f7f7f5;
+}
+
+@media (min-width: 768px) {
+  .frame {
+    min-height: 374px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .frame {
+    min-height: 464px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tag .mark,
+  .tag .text,
+  .tag::after,
+  .cell::before,
+  .cellKicker,
+  .arrow svg,
+  .openLine {
+    transition: none;
+  }
+}
+
+/* ───────────── Hero on video (light-on-dark) ───────────── */
+
+.hero .tags,
+.hero .cells {
+  border-color: rgba(247, 247, 245, 0.55);
+}
+
+.hero .tag {
+  border-color: rgba(247, 247, 245, 0.55);
+  background: rgba(17, 17, 17, 0.5);
+  color: #f7f7f5;
+}
+
+.hero .tag .mark {
+  background: #f7f7f5;
+}
+
+.hero .cell {
+  border-color: rgba(247, 247, 245, 0.55);
+  background: rgba(17, 17, 17, 0.58);
+  color: #f7f7f5;
+}
+
+.hero .cell.dark {
+  background: #111111;
+}
+
+.hero .cell:hover {
+  background: rgba(17, 17, 17, 0.78);
+}
+
+.hero .cell.dark:hover {
+  background: #1a1a1a;
+}

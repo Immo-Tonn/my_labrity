@@ -5,7 +5,11 @@ import Image from 'next/image';
 import { ArrowUpRight, HelpCircle } from 'lucide-react';
 
 import { Breadcrumbs } from '@/components/common/Breadcrumbs';
+import { BackgroundVideo } from '@/components/common/BackgroundVideo';
+import { InnerPhoto } from '@/components/common/InnerPhoto';
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
+
+import { ProblemsGrid } from './ProblemsGrid';
 
 type Item = { title: string; description: string };
 type FaqItem = { question: string; answer: string };
@@ -22,7 +26,13 @@ export type WebAppsData = {
     button: string;
     secondary: string;
   };
-  visual: { caption: string; alt1: string; alt2: string };
+  visual: {
+    caption: string;
+    alt1: string;
+    alt2: string;
+    pauseLabel: string;
+    playLabel: string;
+  };
   problems: {
     kicker: string;
     title: string;
@@ -92,7 +102,7 @@ function LinkList({
   items: LinkItem[];
 }) {
   return (
-    <section className="border-t border-[#e7e2d9] py-16 md:py-20">
+    <section className="border-t border-[#111]/[0.12] py-16 md:py-20">
       <div className="mx-auto max-w-[1100px] px-5 md:px-8">
         <p className="mb-3 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
           {kickerText}
@@ -105,7 +115,7 @@ function LinkList({
             <LocalizedLink
               key={item.href}
               href={item.href}
-              className="group flex flex-col items-start gap-3 border border-[#e7e2d9] bg-white/40 px-6 py-5 transition duration-300 hover:bg-white/70 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+              className="group flex flex-col items-start gap-3 border border-[#111]/[0.12] bg-white/40 px-6 py-5 transition duration-300 hover:bg-white/70 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
             >
               <span className="font-montserrat text-[14px] leading-6 text-neutral-600">
                 {item.label}
@@ -140,7 +150,7 @@ export default function WebAppsPageClient({
   };
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f8f6f1] text-black">
+    <main className="swiss min-h-screen overflow-hidden bg-[#F7F7F5]/65 text-black">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
@@ -149,6 +159,7 @@ export default function WebAppsPageClient({
       {/* HERO */}
       <section className="mx-auto max-w-[1700px] px-5 pb-12 pt-[112px] md:px-8 md:pb-24 md:pt-[170px]">
         <Breadcrumbs
+          variant="swiss"
           parentLabel={content.breadcrumbParentLabel}
           parentHref="/services"
           currentLabel={content.hero.kicker}
@@ -175,7 +186,7 @@ export default function WebAppsPageClient({
               </LocalizedLink>
               <a
                 href="#situationen"
-                className="inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-black/70 underline underline-offset-4 transition duration-300 hover:text-black"
+                className="group/link relative inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-black/70 transition-colors duration-300 before:absolute before:bottom-[10px] before:left-0 before:z-10 before:h-px before:w-0 before:bg-[#FF3830] before:transition-[width] before:duration-300 after:absolute after:bottom-[10px] after:left-0 after:h-px after:w-full after:bg-black/30 hover:text-[#FF3830] hover:before:w-full focus-visible:text-[#FF3830] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#111111] focus-visible:before:w-full"
               >
                 {content.hero.secondary}
               </a>
@@ -192,20 +203,16 @@ export default function WebAppsPageClient({
             }}
             className="mx-auto w-full max-w-[520px] xl:max-w-none"
           >
-            <div className="overflow-hidden border border-[#e7e2d9] shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
-              <Image
-                src="/images/web-apps/booking-calendar-mobile.webp"
-                alt={content.visual.alt1}
-                width={882}
-                height={887}
-                priority
-                sizes="(min-width: 1280px) 40vw, (min-width: 768px) 520px, 92vw"
-                className="h-auto w-full"
-              />
-            </div>
-            <figcaption className="mt-3 font-montserrat text-xs leading-6 text-neutral-500">
-              {content.visual.caption}
-            </figcaption>
+            <InnerPhoto
+              src="/images/inner/kontakt-red-1600.webp"
+              width={1536}
+              height={1024}
+              sizes="(min-width: 1280px) 40vw, (min-width: 768px) 520px, 92vw"
+              position="38% 50%"
+              open
+              priority
+              className="aspect-[3/2] w-full xl:aspect-[4/3]"
+            />
           </motion.figure>
         </div>
       </section>
@@ -213,7 +220,7 @@ export default function WebAppsPageClient({
       {/* PROBLEMS -> SOLUTIONS */}
       <section
         id="situationen"
-        className="scroll-mt-24 border-t border-[#e7e2d9] py-24 md:py-32"
+        className="sw-tint scroll-mt-24 border-t border-[#111]/[0.12] py-24 md:py-32"
       >
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
           <div className="max-w-[860px]">
@@ -226,31 +233,11 @@ export default function WebAppsPageClient({
             </p>
           </div>
 
-          <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {content.problems.items.map((pair, index) => (
-              <div
-                key={pair.problem}
-                className="flex flex-col border border-[#e7e2d9] bg-white/55 p-7"
-              >
-                <span className="font-montserrat text-xs tracking-[0.28em] text-neutral-400">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
-                <p className="mt-4 font-montserrat text-[11px] uppercase tracking-[0.24em] text-neutral-500">
-                  {content.problems.problemLabel}
-                </p>
-                <p className="mt-2 flex-1 font-montserrat text-[15px] leading-7 text-neutral-600">
-                  {pair.problem}
-                </p>
-                <div className="my-5 h-px w-12 bg-black/30" />
-                <p className="font-montserrat text-[11px] uppercase tracking-[0.24em] text-[#18352b]">
-                  {content.problems.solutionLabel}
-                </p>
-                <p className="mt-2 font-tenor text-[20px] leading-[1.25] text-black">
-                  {pair.solution}
-                </p>
-              </div>
-            ))}
-          </div>
+          <ProblemsGrid
+            items={content.problems.items}
+            problemLabel={content.problems.problemLabel}
+            solutionLabel={content.problems.solutionLabel}
+          />
 
           <p className="mt-8 max-w-[760px] border-l border-black pl-5 font-montserrat text-[13px] leading-7 text-neutral-500">
             {content.problems.note}
@@ -259,41 +246,37 @@ export default function WebAppsPageClient({
       </section>
 
       {/* WHAT WE BUILD */}
-      <section className="border-t border-[#e7e2d9] py-24 md:py-32">
+      <section className="border-t border-[#111]/[0.12] py-24 md:py-32">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
-          <div className="grid items-center gap-12 xl:grid-cols-[1fr_0.9fr] xl:gap-20">
-            <div className="max-w-[760px]">
-              <p className={kicker}>{content.tasks.kicker}</p>
-              <h2 className="font-tenor text-[32px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
-                {content.tasks.title}
-              </h2>
-              <p className="mt-7 font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
-                {content.tasks.description}
-              </p>
-            </div>
-
-            <figure className="relative mx-auto w-full max-w-[520px] xl:max-w-none">
-              <div className="relative overflow-hidden border border-[#e7e2d9] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
-                <Image
-                  src="/images/web-apps/dashboard-overview.webp"
-                  alt={content.visual.alt2}
-                  width={882}
-                  height={887}
-                  sizes="(min-width: 1280px) 40vw, (min-width: 768px) 520px, 92vw"
-                  className="h-auto w-full"
-                />
-              </div>
-              <figcaption className="mt-3 font-montserrat text-xs leading-6 text-neutral-500">
-                {content.visual.caption}
-              </figcaption>
-            </figure>
+          <div className="max-w-[760px]">
+            <p className={kicker}>{content.tasks.kicker}</p>
+            <h2 className="font-tenor text-[32px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
+              {content.tasks.title}
+            </h2>
+            <p className="mt-7 font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
+              {content.tasks.description}
+            </p>
           </div>
+        </div>
 
+        {/* Full-bleed: edge to edge of the browser window. */}
+        <figure className="mt-12 w-full md:mt-16">
+          <BackgroundVideo
+            webm="/videos/software-bg.webm"
+            mp4="/videos/software-bg.mp4"
+            poster="/videos/software-bg-poster.jpg"
+            pauseLabel={content.visual.pauseLabel}
+            playLabel={content.visual.playLabel}
+            className="aspect-[16/10] w-full border-x-0 md:aspect-auto md:h-[clamp(500px,40vw,650px)]"
+          />
+        </figure>
+
+        <div className="mx-auto max-w-[1500px] px-5 md:px-8">
           <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {content.tasks.items.map(item => (
               <div
                 key={item.title}
-                className="border border-[#e7e2d9] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/70"
+                className="border border-[#111]/[0.12] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/70"
               >
                 <h3 className="font-tenor text-[24px] leading-[1.1] tracking-[-0.02em] text-black">
                   {item.title}
@@ -323,7 +306,7 @@ export default function WebAppsPageClient({
       </section>
 
       {/* WHO IT IS FOR */}
-      <section className="border-t border-[#e7e2d9] py-24 md:py-32">
+      <section className="sw-tint border-t border-[#111]/[0.12] py-24 md:py-32">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
           <div className="max-w-[860px]">
             <p className={kicker}>{content.useCases.kicker}</p>
@@ -339,7 +322,7 @@ export default function WebAppsPageClient({
             {content.useCases.items.map(item => (
               <article
                 key={item.audience}
-                className="border border-[#e7e2d9] bg-white/55 p-7 md:p-9"
+                className="border border-[#111]/[0.12] bg-white/55 p-7 md:p-9"
               >
                 <p className="font-montserrat text-[11px] uppercase tracking-[0.28em] text-neutral-500">
                   {item.audience}
@@ -359,16 +342,27 @@ export default function WebAppsPageClient({
       {/* WHY CUSTOM */}
       <section className="bg-black py-24 text-white md:py-32">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
-          <div className="max-w-[900px]">
-            <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60">
-              {content.why.kicker}
-            </p>
-            <h2 className="font-tenor text-[34px] leading-[1.02] tracking-[-0.04em] md:text-[64px]">
-              {content.why.title}
-            </h2>
-            <p className="mt-6 max-w-[720px] font-montserrat text-[15px] leading-8 text-white/70 md:text-[17px]">
-              {content.why.description}
-            </p>
+          <div className="grid items-end gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+            <div className="max-w-[900px]">
+              <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60">
+                {content.why.kicker}
+              </p>
+              <h2 className="font-tenor text-[34px] leading-[1.02] tracking-[-0.04em] md:text-[64px]">
+                {content.why.title}
+              </h2>
+              <p className="mt-6 max-w-[720px] font-montserrat text-[15px] leading-8 text-white/70 md:text-[17px]">
+                {content.why.description}
+              </p>
+            </div>
+
+            <InnerPhoto
+              src="/images/inner/software-glass-1600.webp"
+              width={1536}
+              height={1024}
+              sizes="(min-width: 1024px) 42vw, 92vw"
+              position="50% 55%"
+              className="aspect-[3/2] w-full border-white/20 sm:aspect-[16/10] lg:aspect-[4/3]"
+            />
           </div>
 
           <div className="mt-12 grid gap-px border border-white/15 bg-white/15 md:grid-cols-2">
@@ -402,7 +396,7 @@ export default function WebAppsPageClient({
       </section>
 
       {/* PROCESS */}
-      <section className="border-t border-[#e7e2d9] py-24 md:py-32">
+      <section className="border-t border-[#111]/[0.12] py-24 md:py-32">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
           <p className={kicker}>{content.process.kicker}</p>
           <h2 className="max-w-[860px] font-tenor text-[32px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
@@ -413,7 +407,7 @@ export default function WebAppsPageClient({
             {content.process.items.map((item, index) => (
               <li
                 key={item.title}
-                className="border border-[#e7e2d9] bg-white/45 p-6"
+                className="border border-[#111]/[0.12] bg-white/45 p-6"
               >
                 <span className="font-montserrat text-xs tracking-[0.28em] text-neutral-500">
                   {String(index + 1).padStart(2, '0')}
@@ -431,7 +425,7 @@ export default function WebAppsPageClient({
       </section>
 
       {/* CLARIFY UPFRONT */}
-      <section className="border-t border-[#e7e2d9] py-24 md:py-32">
+      <section className="sw-tint border-t border-[#111]/[0.12] py-24 md:py-32">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
           <div className="max-w-[860px]">
             <p className={kicker}>{content.clarify.kicker}</p>
@@ -462,16 +456,16 @@ export default function WebAppsPageClient({
       </section>
 
       {/* PRICING */}
-      <section className="border-t border-[#e7e2d9] py-24 md:py-32">
+      <section className="border-t border-[#111]/[0.12] py-24 md:py-32">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
-          <div className="grid gap-10 border border-[#e7e2d9] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-center xl:p-14">
+          <div className="grid gap-10 border border-[#111]/[0.12] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-center xl:p-14">
             <div>
               <p className={kicker}>{content.pricing.kicker}</p>
               <h2 className="font-tenor text-[38px] leading-[1] tracking-[-0.04em] text-black md:text-[60px]">
                 {content.pricing.title}
               </h2>
             </div>
-            <div className="xl:border-l xl:border-[#e7e2d9] xl:pl-12">
+            <div className="xl:border-l xl:border-[#111]/[0.12] xl:pl-12">
               <p className="font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
                 {content.pricing.description}
               </p>
@@ -484,7 +478,7 @@ export default function WebAppsPageClient({
                 </LocalizedLink>
                 <LocalizedLink
                   href="/prices"
-                  className="inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-black/70 underline underline-offset-4 transition duration-300 hover:text-black"
+                  className="group/link relative inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-black/70 transition-colors duration-300 before:absolute before:bottom-[10px] before:left-0 before:z-10 before:h-px before:w-0 before:bg-[#FF3830] before:transition-[width] before:duration-300 after:absolute after:bottom-[10px] after:left-0 after:h-px after:w-full after:bg-black/30 hover:text-[#FF3830] hover:before:w-full focus-visible:text-[#FF3830] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#111111] focus-visible:before:w-full"
                 >
                   {content.pricing.linkLabel}
                 </LocalizedLink>
@@ -495,14 +489,14 @@ export default function WebAppsPageClient({
       </section>
 
       {/* FAQ */}
-      <section className="border-t border-[#e7e2d9] py-24 md:py-32">
+      <section className="border-t border-[#111]/[0.12] py-24 md:py-32">
         <div className="mx-auto max-w-[1300px] px-5 md:px-8">
           <p className={kicker}>{content.faq.kicker}</p>
           <h2 className="font-tenor text-[32px] leading-[1.05] tracking-[-0.03em] text-black md:text-[54px]">
             {content.faq.title}
           </h2>
 
-          <div className="mt-12 divide-y divide-[#e7e2d9] border-y border-[#e7e2d9]">
+          <div className="mt-12 divide-y divide-[#111]/[0.12] border-y border-[#111]/[0.12]">
             {content.faq.items.map(item => (
               <details key={item.question} className="group py-7">
                 <summary className="flex min-h-[44px] cursor-pointer list-none items-start justify-between gap-6">

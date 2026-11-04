@@ -69,7 +69,7 @@ export default function ProcessPageClient({
   const content = initialData;
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f8f6f1] text-black">
+    <main className="swiss min-h-screen overflow-hidden bg-[#F7F7F5]/65 text-black">
       {/* HERO */}
       <section className="mx-auto max-w-[1700px] px-5 pb-16 pt-[130px] md:px-8 md:pb-24 md:pt-[170px]">
         <motion.div
@@ -130,7 +130,7 @@ export default function ProcessPageClient({
             delay: 0.45,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="mt-16 border-y border-[#e7e2d9] py-6 md:mt-20"
+          className="mt-16 border-y border-[#111]/[0.12] py-6 md:mt-20"
         >
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             {content.stepsSection.items.map((item, index) => (
@@ -158,7 +158,7 @@ export default function ProcessPageClient({
       </section>
 
       {/* STEPS */}
-      <section className="border-t border-[#e7e2d9] py-24 md:py-32">
+      <section className="border-t border-[#111]/[0.12] py-24 md:py-32">
         <div className="mx-auto max-w-[1700px] px-5 md:px-8">
           <div className="grid gap-12 xl:grid-cols-[0.8fr_1.2fr] xl:gap-20">
             <div>
@@ -175,7 +175,7 @@ export default function ProcessPageClient({
               </p>
             </div>
 
-            <div className="divide-y divide-[#e7e2d9] border-y border-[#e7e2d9]">
+            <div className="divide-y divide-[#111]/[0.12] border-y border-[#111]/[0.12]">
               {content.stepsSection.items.map(item => (
                 <div
                   key={`${item.number}-${item.title}`}
@@ -202,7 +202,7 @@ export default function ProcessPageClient({
       </section>
 
       {/* CLIENT NEEDS */}
-      <section className="border-t border-[#e7e2d9] py-24 md:py-32">
+      <section className="sw-tint border-t border-[#111]/[0.12] py-24 md:py-32">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
           <div className="mx-auto max-w-[860px] text-center">
             <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
@@ -222,7 +222,7 @@ export default function ProcessPageClient({
             {content.clientSection.items.map(item => (
               <div
                 key={item.title}
-                className="border border-[#e7e2d9] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/70 hover:shadow-[0_20px_48px_rgba(0,0,0,0.05)]"
+                className="border border-[#111]/[0.12] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/70 hover:shadow-[0_20px_48px_rgba(0,0,0,0.05)]"
               >
                 <h3 className="font-tenor text-[30px] leading-[1] tracking-[-0.03em] text-black">
                   {item.title}
@@ -239,7 +239,7 @@ export default function ProcessPageClient({
 
       {/* RELATED ARTICLES */}
       {content.relatedArticles && (
-        <section className="border-t border-[#e7e2d9] py-16 md:py-20">
+        <section className="border-t border-[#111]/[0.12] py-16 md:py-20">
           <div className="mx-auto max-w-[1100px] px-5 md:px-8">
             <p className="mb-3 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
               {content.relatedArticles.kicker}
@@ -252,7 +252,7 @@ export default function ProcessPageClient({
                 <LocalizedLink
                   key={item.href}
                   href={item.href}
-                  className="group flex flex-col items-start gap-3 border border-[#e7e2d9] bg-white/40 px-6 py-5 transition duration-300 hover:bg-white/70 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+                  className="group flex flex-col items-start gap-3 border border-[#111]/[0.12] bg-white/40 px-6 py-5 transition duration-300 hover:bg-white/70 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
                 >
                   <span className="font-montserrat text-[14px] leading-6 text-neutral-600">
                     {item.label}
@@ -290,7 +290,7 @@ export default function ProcessPageClient({
       </section>
 
       {/* RESULT */}
-      <section className="border-t border-[#e7e2d9] py-24 md:py-32">
+      <section className="sw-tint border-t border-[#111]/[0.12] py-24 md:py-32">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
           <div className="grid gap-12 xl:grid-cols-[0.8fr_1.2fr] xl:gap-20">
             <div>
@@ -311,7 +311,7 @@ export default function ProcessPageClient({
               {content.resultSection.items.map(item => (
                 <div
                   key={item.title}
-                  className="min-h-[210px] border border-[#e7e2d9] bg-white/45 p-7 transition duration-300 hover:-translate-y-[2px] hover:bg-white/75"
+                  className="min-h-[210px] border border-[#111]/[0.12] bg-white/45 p-7 transition duration-300 hover:-translate-y-[2px] hover:bg-white/75"
                 >
                   <h3 className="font-tenor text-[30px] leading-[1] tracking-[-0.03em] text-black">
                     {item.title}

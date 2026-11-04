@@ -161,14 +161,14 @@
       {
         "children": [
           {
-            "text": "Diese Website verwendet die Consent-Management-Plattform (CMP) von Usercentrics, um Ihre Einwilligung zum Einsatz von Cookies und vergleichbaren Technologien einzuholen und zu verwalten, bevor diese aktiv werden. Beim ersten Aufruf der Website wird Ihnen ein Cookie-Banner angezeigt, über das Sie der Nutzung optionaler Cookies zustimmen, sie ablehnen oder individuell anpassen können."
+            "text": "Diese Website verwendet einen eigenen, selbst gehosteten Cookie-Banner (Open-Source-Bibliothek „CookieConsent“), um Ihre Einwilligung zum Einsatz von Cookies und vergleichbaren Technologien einzuholen und zu verwalten, bevor diese aktiv werden. Beim ersten Aufruf der Website wird Ihnen ein Cookie-Banner angezeigt, über das Sie der Nutzung optionaler Cookies zustimmen, sie ablehnen oder individuell anpassen können. Ihre Auswahl wird in einem technisch notwendigen Cookie (labrity_cookie_consent) gespeichert; dabei werden keine Daten an Dritte übermittelt."
           }
         ]
       },
       {
         "children": [
           {
-            "text": "Wir nutzen Vercel Analytics (Vercel Inc.), um anonymisierte, aggregierte Nutzungsstatistiken (z. B. Seitenaufrufe) zu erheben und die Website zu verbessern. Vercel Analytics wird erst geladen und aktiv, nachdem Sie der entsprechenden Kategorie im Cookie-Banner zugestimmt haben."
+            "text": "Wir nutzen Vercel Analytics (Vercel Inc.), um anonymisierte, aggregierte Nutzungsstatistiken (z. B. Seitenaufrufe) zu erheben und die Website zu verbessern. Vercel Analytics wird erst geladen und aktiv, nachdem Sie der entsprechenden Kategorie im Cookie-Banner zugestimmt haben. Zusätzlich setzen wir Google Analytics 4 (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) zur Reichweitenmessung ein. Es wird mit Google Consent Mode v2 betrieben: Bis zu Ihrer Einwilligung werden alle Einwilligungssignale auf „abgelehnt“ gesetzt, das Google-Tag wird nicht geladen und es werden keine Daten an Google übertragen. Erst nach Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG) wird Google Analytics geladen; dabei können u. a. Ihre IP-Adresse (gekürzt/anonymisiert), Seitenaufrufe und Geräteinformationen verarbeitet und Daten in Drittländer (z. B. USA) übermittelt werden. Über „Cookie-Einstellungen“ im Footer können Sie Ihre Einwilligung jederzeit widerrufen."
           }
         ]
       },

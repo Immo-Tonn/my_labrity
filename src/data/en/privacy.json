@@ -161,14 +161,14 @@
       {
         "children": [
           {
-            "text": "This website uses the Usercentrics Consent Management Platform (CMP) to obtain and manage your consent for cookies and similar technologies before they become active. On your first visit, a cookie banner is displayed where you can accept, decline, or individually customize the use of optional cookies."
+            "text": "This website uses its own self-hosted cookie banner (open-source library “CookieConsent”) to obtain and manage your consent for cookies and similar technologies before they become active. On your first visit, a cookie banner is displayed where you can accept, decline, or individually customize the use of optional cookies. Your choice is stored in a technically necessary cookie (labrity_cookie_consent); no data is passed on to third parties in the process."
           }
         ]
       },
       {
         "children": [
           {
-            "text": "We use Vercel Analytics (Vercel Inc.) to collect anonymized, aggregated usage statistics (e.g. page views) in order to improve the website. Vercel Analytics is only loaded and activated after you have given consent to the corresponding category in the cookie banner."
+            "text": "We use Vercel Analytics (Vercel Inc.) to collect anonymized, aggregated usage statistics (e.g. page views) in order to improve the website. Vercel Analytics is only loaded and activated after you have given consent to the corresponding category in the cookie banner. We also use Google Analytics 4 (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland) for audience measurement, operated with Google Consent Mode v2: until you consent, all consent signals are set to “denied”, the Google tag is not loaded and no data is sent to Google. Only after your consent (Art. 6(1)(a) GDPR, Section 25(1) TDDDG) is Google Analytics loaded; this may process, among other things, your (shortened/anonymised) IP address, page views and device information, and data may be transferred to third countries (e.g. the USA). You can withdraw your consent at any time via “Cookie settings” in the footer."
           }
         ]
       },

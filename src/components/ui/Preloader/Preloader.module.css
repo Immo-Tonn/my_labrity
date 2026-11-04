@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
 
-  background: #f8f6f1;
+  background: #f7f7f5;
 
   transition:
     opacity 0.7s ease,
@@ -98,7 +98,7 @@
   letter-spacing: 0.28em;
   text-transform: uppercase;
 
-  color: rgba(24, 53, 43, 0.56);
+  color: rgba(17, 17, 17, 0.56);
 }
 
 @keyframes lineMove {

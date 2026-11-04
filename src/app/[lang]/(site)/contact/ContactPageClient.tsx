@@ -4,6 +4,7 @@ import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 
 import { sendMessage } from '@/api/telegram';
 import { FormGuard } from '@/components/common/FormGuard';
+import { InnerPhoto } from '@/components/common/InnerPhoto';
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
 
 type ContactLink = {
@@ -257,11 +258,11 @@ ${formData.phone.trim() ? `📱 Phone: ${formData.phone.trim()}\n` : ''}💬 Mes
   };
 
   return (
-    <main className="min-h-screen bg-[#f8f6f1] pt-[120px] md:pt-[140px] xl:pt-[170px]">
+    <main className="swiss min-h-screen bg-[#F7F7F5]/65 pt-[120px] md:pt-[140px] xl:pt-[170px]">
       <section className="container pb-[90px] md:pb-[110px] xl:pb-[140px]">
-        <div className="overflow-hidden border border-[#e7e2d9] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.05)]">
+        <div className="overflow-hidden border border-[#111] bg-[#F7F7F5]">
           <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="flex flex-col justify-between bg-[#151515] px-6 py-10 text-white md:px-10 md:py-14 xl:px-14 xl:py-16">
+            <div className="flex flex-col justify-between bg-[#111111] px-6 py-10 text-white md:px-10 md:py-14 xl:px-14 xl:py-16">
               <div>
                 <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60 md:text-xs">
                   {content.sidebar.kicker}
@@ -280,6 +281,16 @@ ${formData.phone.trim() ? `📱 Phone: ${formData.phone.trim()}\n` : ''}💬 Mes
                     {content.sidebar.locationNote}
                   </p>
                 )}
+
+                <InnerPhoto
+                  src="/images/inner/kontakt-red-1600.webp"
+                  width={1536}
+                  height={1024}
+                  sizes="(min-width: 1024px) 40vw, 92vw"
+                  position="30% 50%"
+                  open="lg"
+                  className="mt-10 aspect-[3/2] w-full border-white/25 md:aspect-[16/9] lg:aspect-[3/2]"
+                />
               </div>
 
               <div className="border-white/12 mt-12 border-t pt-6">
@@ -303,7 +314,7 @@ ${formData.phone.trim() ? `📱 Phone: ${formData.phone.trim()}\n` : ''}💬 Mes
               </div>
             </div>
 
-            <div className="bg-[#fffdfa] px-6 py-10 md:px-10 md:py-14 xl:px-14 xl:py-16">
+            <div className="bg-[#F7F7F5] px-6 py-10 md:px-10 md:py-14 xl:px-14 xl:py-16">
               <p className="mb-4 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400 md:text-xs">
                 {content.hero.kicker}
               </p>
@@ -319,7 +330,7 @@ ${formData.phone.trim() ? `📱 Phone: ${formData.phone.trim()}\n` : ''}💬 Mes
               <form
                 onSubmit={handleSubmit}
                 noValidate
-                className="mt-10 grid gap-x-8 gap-y-8 md:grid-cols-2 xl:mt-12"
+                className="mt-10 grid gap-x-5 gap-y-6 md:grid-cols-2 xl:mt-12"
               >
                 <FormGuard />
                 {content.form.fields.map(field =>
@@ -346,7 +357,7 @@ ${formData.phone.trim() ? `📱 Phone: ${formData.phone.trim()}\n` : ''}💬 Mes
                             ? `${field.name}-error`
                             : undefined
                         }
-                        className="w-full resize-none border-b border-[#d8d3ca] bg-transparent pb-4 font-montserrat text-[15px] text-black outline-none transition duration-300 placeholder:text-neutral-400 focus:border-black"
+                        className="w-full resize-none border border-[#111]/60 bg-transparent px-4 py-3.5 font-montserrat text-[15px] text-black outline-none transition duration-300 placeholder:text-neutral-400 focus:border-[#111] focus:bg-white/60"
                       />
 
                       {formErrors[field.name] && (
@@ -384,7 +395,7 @@ ${formData.phone.trim() ? `📱 Phone: ${formData.phone.trim()}\n` : ''}💬 Mes
                             ? `${field.name}-error`
                             : undefined
                         }
-                        className="w-full border-b border-[#d8d3ca] bg-transparent pb-4 font-montserrat text-[15px] text-black outline-none transition duration-300 placeholder:text-neutral-400 focus:border-black"
+                        className="w-full border border-[#111]/60 bg-transparent px-4 py-3.5 font-montserrat text-[15px] text-black outline-none transition duration-300 placeholder:text-neutral-400 focus:border-[#111] focus:bg-white/60"
                       />
 
                       {formErrors[field.name] && (
@@ -412,7 +423,7 @@ ${formData.phone.trim() ? `📱 Phone: ${formData.phone.trim()}\n` : ''}💬 Mes
                       }
                       checked={formData.privacy}
                       onChange={handleChange}
-                      className="mt-1 h-4 w-4 border border-[#cfc8bd]"
+                      className="mt-1 h-4 w-4 border border-[#111]/50"
                     />
 
                     <span>
@@ -463,7 +474,7 @@ ${formData.phone.trim() ? `📱 Phone: ${formData.phone.trim()}\n` : ''}💬 Mes
                       ref={successRef}
                       role="status"
                       aria-live="polite"
-                      className="mt-5 border border-[#18352b]/30 bg-[#18352b]/5 px-5 py-4 font-montserrat text-[15px] font-medium leading-6 text-[#18352b]"
+                      className="mt-5 border border-[#111111]/30 bg-[#111111]/5 px-5 py-4 font-montserrat text-[15px] font-medium leading-6 text-[#111111]"
                     >
                       {content.successMessage}
                     </div>

@@ -1,12 +1,15 @@
 {
   "hero": {
-    "kicker": "Premium Web Studio",
-    "titleFirst": "Websites that",
-    "titleSecond": "convince and convert",
-    "description": "We build modern websites and custom software for businesses – from online booking to business management.",
+    "kicker": "Web design & online visibility",
+    "titleFirst": "Websites that convince.",
+    "titleSecond": "So your business gets found.",
+    "description": "We build and modernise websites and optimise them for Google and AI search such as ChatGPT — so potential customers can find your business, products and services more easily.",
     "tagline": "Minimal. Modern. Effective.",
     "primaryButton": "Contact",
-    "secondaryButton": "Portfolio"
+    "secondaryButton": "Portfolio",
+    "blockWords": ["Design.", "Visibility.", "Growth."],
+    "pauseLabel": "Pause image rotation",
+    "resumeLabel": "Resume image rotation"
   },
   "quizPreview": {
     "kicker": "Project Calculator",

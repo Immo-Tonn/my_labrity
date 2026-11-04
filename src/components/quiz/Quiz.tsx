@@ -123,7 +123,7 @@ export default function Quiz() {
           )}
         </div>
 
-        <div className="h-px w-full bg-[#e7e2d9]">
+        <div className="h-px w-full bg-[#111]/[0.12]">
           <div
             className="h-px bg-black transition-all duration-500"
             style={{ width: `${progressPercent}%` }}
@@ -162,7 +162,7 @@ export default function Quiz() {
                 ${
                   isSelected
                     ? 'border-black bg-black text-white shadow-[0_16px_35px_rgba(0,0,0,0.12)]'
-                    : 'border-[#e7e2d9] bg-white/35 text-neutral-600 hover:border-black hover:bg-white/70 hover:text-black'
+                    : 'border-[#111]/[0.12] bg-white/35 text-neutral-600 hover:border-black hover:bg-white/70 hover:text-black'
                 }
 `}
             >

@@ -5,7 +5,9 @@ import Script from 'next/script';
 import { notFound } from 'next/navigation';
 import { Montserrat, Tenor_Sans } from 'next/font/google';
 
-import ConsentAnalytics from '@/components/common/ConsentAnalytics';
+import CookieConsent from '@/components/common/CookieConsent';
+import SiteBackground from '@/components/common/SiteBackground';
+import SwissMotion from '@/components/common/SwissMotion';
 import QuizProvider from '@/components/quiz/QuizProvider';
 import { classnames } from '@/utils/classnames';
 import { Footer } from '@/layout/Footer';
@@ -165,9 +167,10 @@ export default async function RootLayout({
 
   // Navigation + footer copy are loaded on the server so the first HTML
   // response already contains <nav>, the page links and <footer>.
-  const [navLinks, common] = await Promise.all([
+  const [navLinks, common, webApps] = await Promise.all([
     getData('header', lang),
     getData('common', lang),
+    getData('web-apps', lang),
   ]);
 
   return (
@@ -179,17 +182,12 @@ export default async function RootLayout({
           'flex min-h-screen flex-col overflow-x-hidden bg-mainBcg',
         )}
       >
-        <Script
-          src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"
-          strategy="beforeInteractive"
-        />
-
-        <Script
-          id="usercentrics-cmp"
-          src="https://web.cmp.usercentrics.eu/ui/loader.js"
-          data-ruleset-id="HFXPFXoht5HmRs"
-          strategy="beforeInteractive"
-        />
+        {/* Consent Mode v2 defaults: everything denied before any Google tag
+            exists. gtag.js itself is only loaded after analytics consent
+            (see CookieConsent), so nothing is sent to Google before that. */}
+        <Script id="consent-default" strategy="beforeInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});`}
+        </Script>
 
         <script
           type="application/ld+json"
@@ -199,6 +197,8 @@ export default async function RootLayout({
         />
 
         <LanguageProvider lang={lang}>
+          <SiteBackground />
+
           <QuizProvider>
             <a href="#main-content" className="skip-link">
               {common.skipLink}
@@ -220,14 +220,25 @@ export default async function RootLayout({
               webLabel={common.layout.footer.web}
               policyLabel={common.footerLabelPolicy}
               impressumLabel={common.footerLabelImpressum}
+              cookiesLabel={common.footerLabelCookies}
+              bgPauseLabel={webApps.visual.pauseLabel}
+              bgPlayLabel={webApps.visual.playLabel}
             />
 
             <LiveActivity />
 
             <FakeAiChat />
           </QuizProvider>
+
+          <CookieConsent />
+
+          <SwissMotion />
+
+          {/* Framer-motion blocks start at opacity 0 in the server HTML. */}
+          <noscript>
+            <style>{`main [style*=opacity\\:0]{opacity:1!important;transform:none!important}`}</style>
+          </noscript>
         </LanguageProvider>
-        <ConsentAnalytics />
       </body>
     </html>
   );

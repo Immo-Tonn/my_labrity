@@ -28,15 +28,15 @@ export const Impressum = () => {
   }, [lang]);
 
   return (
-    <div className="h-full overflow-y-auto pr-2 text-[#18352b]">
-      <h2 className="mb-8 font-tenor text-[38px] leading-none text-[#18352b] md:text-[52px]">
+    <div className="h-full overflow-y-auto pr-2 text-[#111111]">
+      <h2 className="mb-8 font-tenor text-[38px] leading-none text-[#111111] md:text-[52px]">
         Impressum
       </h2>
 
-      <div className="space-y-8 font-montserrat text-sm leading-7 text-[#18352b]/75 md:text-base">
+      <div className="space-y-8 font-montserrat text-sm leading-7 text-[#111111]/75 md:text-base">
         {items.map(item => (
           <div key={item._id}>
-            <h3 className="mb-2 font-tenor text-2xl text-[#18352b]">
+            <h3 className="mb-2 font-tenor text-2xl text-[#111111]">
               {item.title}
             </h3>
 

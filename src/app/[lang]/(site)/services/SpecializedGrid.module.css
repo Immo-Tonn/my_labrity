@@ -1,0 +1,231 @@
+/* "Mehr Details zu einzelnen Leistungen" — same block system as the problems
+   grid on Software für Unternehmen: 60/40 · 40/60 rows, light/graphite cells,
+   square number badges, thin lines, small red accents. */
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.card {
+  position: relative;
+  border-bottom: 1px solid #111111;
+  transition:
+    box-shadow 0.45s ease,
+    background-color 0.45s ease;
+}
+
+.light {
+  background: #f7f7f5;
+  color: #111111;
+  --rule: rgba(17, 17, 17, 0.28);
+  --sub: rgba(17, 17, 17, 0.7);
+  --ring: #111111;
+}
+
+.dark {
+  background: #111111;
+  color: #f7f7f5;
+  --rule: rgba(247, 247, 245, 0.3);
+  --sub: rgba(247, 247, 245, 0.72);
+  --ring: #f7f7f5;
+}
+
+.card:hover,
+.card:focus-within {
+  z-index: 2;
+  box-shadow: 0 16px 36px rgba(17, 17, 17, 0.16);
+}
+
+.light:hover {
+  background: #fbfbfa;
+}
+
+.dark:hover {
+  background: #1a1a1a;
+}
+
+.link {
+  display: flex;
+  height: 100%;
+  min-height: 260px;
+  flex-direction: column;
+  padding: 28px 24px 32px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: -8px;
+}
+
+.number {
+  position: relative;
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.light .number {
+  background: #111111;
+  color: #f7f7f5;
+}
+
+.dark .number {
+  background: #f7f7f5;
+  color: #111111;
+}
+
+/* The red corner marks only some cells, so it never turns into wallpaper. */
+.mark .number::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 7px;
+  height: 7px;
+  background: #ff3830;
+}
+
+.card:hover .number,
+.link:focus-visible .number {
+  transform: translateX(5px);
+}
+
+.title {
+  max-width: 22ch;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+.desc {
+  margin-top: 14px;
+  margin-bottom: 26px;
+  max-width: 46ch;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--sub);
+}
+
+.rule {
+  display: block;
+  height: 1px;
+  margin: 26px 0 20px;
+  margin-top: auto;
+  transform-origin: left;
+  background: var(--rule);
+  transition: background-color 0.45s ease;
+}
+
+.card:hover .rule,
+.link:focus-visible .rule {
+  background: #ff3830;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  align-self: flex-start;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cta span {
+  background-image: linear-gradient(#ff3830, #ff3830);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  padding-bottom: 3px;
+  transition:
+    background-size 0.4s ease,
+    color 0.3s ease;
+}
+
+.card:hover .cta span,
+.link:focus-visible .cta span {
+  background-size: 100% 1px;
+  color: #ff3830;
+}
+
+.arrow {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover .arrow,
+.link:focus-visible .arrow {
+  transform: translate(3px, -3px);
+  color: #ff3830;
+}
+
+@media (min-width: 768px) {
+  .link {
+    padding: 40px 40px 44px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+  }
+
+  .wide {
+    grid-column: span 6;
+  }
+
+  .narrow {
+    grid-column: span 4;
+  }
+
+  .single {
+    grid-column: span 10;
+  }
+
+  .left {
+    border-right: 1px solid #111111;
+  }
+}
+
+@media (min-width: 1280px) {
+  .link {
+    padding: 48px 56px 52px;
+    min-height: 300px;
+  }
+
+  .wide .title,
+  .single .title {
+    font-size: 34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .number,
+  .rule,
+  .arrow,
+  .cta span {
+    transition: none;
+  }
+
+  .card:hover .number,
+  .card:hover .arrow {
+    transform: none;
+  }
+}

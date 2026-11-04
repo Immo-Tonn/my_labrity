@@ -34,7 +34,7 @@ function ArticleRow({
       className="group flex flex-col gap-4 py-10 md:flex-row md:items-center md:justify-between md:gap-8"
     >
       <div className="max-w-[760px]">
-        <h2 className="font-tenor text-[28px] leading-[1.05] tracking-[-0.02em] text-black transition-colors duration-300 group-hover:text-[#18352b] md:text-[38px]">
+        <h2 className="font-tenor text-[28px] leading-[1.05] tracking-[-0.02em] text-black transition-colors duration-300 group-hover:text-[#111111] md:text-[38px]">
           {article.title}
         </h2>
         <p className="mt-3 font-montserrat text-[14px] leading-7 text-neutral-500 md:text-[15px]">
@@ -65,7 +65,7 @@ export default function BlogIndexPageClient({
   const secondHalf = content.articles.slice(splitIndex);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f8f6f1] text-black">
+    <main className="swiss min-h-screen overflow-hidden bg-[#F7F7F5]/65 text-black">
       {/* HERO */}
       <section className="mx-auto max-w-[1700px] px-5 pb-16 pt-[130px] md:px-8 md:pb-24 md:pt-[170px]">
         <motion.div
@@ -86,7 +86,7 @@ export default function BlogIndexPageClient({
         </motion.div>
 
         {/* HERO IMAGE */}
-        <div className="mx-auto mt-14 max-w-[1400px] overflow-hidden border border-[#e7e2d9] md:mt-20">
+        <div className="mx-auto mt-14 max-w-[1400px] overflow-hidden border border-[#111]/[0.12] md:mt-20">
           <Image
             src={BLOG_HERO_IMAGE.src}
             alt={content.heroAlt}
@@ -100,9 +100,9 @@ export default function BlogIndexPageClient({
       </section>
 
       {/* ARTICLE LIST — FIRST HALF */}
-      <section className="border-t border-[#e7e2d9] py-16 md:py-24">
+      <section className="border-t border-[#111]/[0.12] py-16 md:py-24">
         <div className="mx-auto max-w-[1300px] px-5 md:px-8">
-          <div className="divide-y divide-[#e7e2d9] border-y border-[#e7e2d9]">
+          <div className="divide-y divide-[#111]/[0.12] border-y border-[#111]/[0.12]">
             {firstHalf.map(article => (
               <ArticleRow
                 key={article.slug}
@@ -115,9 +115,9 @@ export default function BlogIndexPageClient({
       </section>
 
       {/* EDITORIAL IMAGE */}
-      <section className="border-t border-[#e7e2d9] bg-[#f2efe8] py-16 md:py-24">
+      <section className="border-t border-[#111]/[0.12] bg-[#EEEEEB] py-16 md:py-24">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
-          <div className="overflow-hidden border border-[#e7e2d9]">
+          <div className="overflow-hidden border border-[#111]/[0.12]">
             <Image
               src={BLOG_EDITORIAL_IMAGE.src}
               alt={content.editorialAlt}
@@ -134,7 +134,7 @@ export default function BlogIndexPageClient({
       {/* ARTICLE LIST — SECOND HALF */}
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-[1300px] px-5 md:px-8">
-          <div className="divide-y divide-[#e7e2d9] border-y border-[#e7e2d9]">
+          <div className="divide-y divide-[#111]/[0.12] border-y border-[#111]/[0.12]">
             {secondHalf.map(article => (
               <ArticleRow
                 key={article.slug}

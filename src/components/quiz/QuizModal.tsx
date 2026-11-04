@@ -53,13 +53,13 @@ export default function QuizModal() {
       />
 
       {/* MODAL */}
-      <div className="relative z-10 flex max-h-[92dvh] w-full max-w-[1180px] flex-col overflow-hidden border border-[#e7e2d9] bg-[#f8f6f1] shadow-[0_40px_110px_rgba(0,0,0,0.35)] lg:grid lg:h-full lg:max-h-[620px] lg:grid-cols-[0.82fr_1.18fr]">
+      <div className="relative z-10 flex max-h-[92dvh] w-full max-w-[1180px] flex-col overflow-hidden border border-[#111]/[0.12] bg-[#F7F7F5] shadow-[0_40px_110px_rgba(0,0,0,0.35)] lg:grid lg:h-full lg:max-h-[620px] lg:grid-cols-[0.82fr_1.18fr]">
         {/* CLOSE */}
         <button
           type="button"
           onClick={closeQuiz}
           aria-label={modal.close}
-          className="absolute right-4 top-4 z-30 flex h-9 w-9 items-center justify-center border border-white/20 bg-black/30 font-montserrat text-[18px] leading-none text-white transition duration-300 hover:bg-white hover:text-black md:right-6 md:top-6 lg:h-10 lg:w-10 xl:border-black/10 xl:bg-[#f8f6f1]/80 xl:text-black xl:hover:bg-black xl:hover:text-white"
+          className="absolute right-4 top-4 z-30 flex h-9 w-9 items-center justify-center border border-white/20 bg-black/30 font-montserrat text-[18px] leading-none text-white transition duration-300 hover:bg-white hover:text-black md:right-6 md:top-6 lg:h-10 lg:w-10 xl:border-black/10 xl:bg-[#F7F7F5]/80 xl:text-black xl:hover:bg-black xl:hover:text-white"
         >
           ×
         </button>
@@ -96,7 +96,7 @@ export default function QuizModal() {
         </aside>
 
         {/* QUIZ AREA */}
-        <div className="relative min-h-0 flex-1 overflow-y-auto bg-[#f8f6f1]">
+        <div className="relative min-h-0 flex-1 overflow-y-auto bg-[#F7F7F5]">
           <div className="px-6 py-7 md:px-10 md:py-10 xl:px-12 xl:py-14">
             <Quiz />
           </div>

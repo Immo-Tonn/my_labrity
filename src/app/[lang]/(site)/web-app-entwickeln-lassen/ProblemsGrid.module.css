@@ -1,0 +1,183 @@
+/* "Kennen Sie das?" — four problems as a 60/40 · 40/60 block grid. */
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.card {
+  position: relative;
+  border-bottom: 1px solid #111111;
+  transition:
+    box-shadow 0.45s ease,
+    background-color 0.45s ease;
+}
+
+.light {
+  background: #f7f7f5;
+  color: #111111;
+  --rule: rgba(17, 17, 17, 0.28);
+  --sub: rgba(17, 17, 17, 0.7);
+}
+
+.dark {
+  background: #111111;
+  color: #f7f7f5;
+  --rule: rgba(247, 247, 245, 0.3);
+  --sub: rgba(247, 247, 245, 0.72);
+}
+
+.card:hover {
+  z-index: 2;
+  box-shadow: 0 16px 36px rgba(17, 17, 17, 0.16);
+}
+
+.light:hover {
+  background: #fbfbfa;
+}
+
+.dark:hover {
+  background: #1a1a1a;
+}
+
+.inner {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 28px 24px 32px;
+}
+
+.number {
+  position: relative;
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.light .number {
+  background: #111111;
+  color: #f7f7f5;
+}
+
+.dark .number {
+  background: #f7f7f5;
+  color: #111111;
+}
+
+.number::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 7px;
+  height: 7px;
+  background: #ff3830;
+}
+
+.card:hover .number {
+  transform: translateX(5px);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--sub);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  flex: none;
+  background: #ff3830;
+}
+
+.problem {
+  margin-top: 12px;
+  max-width: 46ch;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--sub);
+}
+
+.rule {
+  display: block;
+  height: 1px;
+  margin: 26px 0 24px;
+  transform-origin: left;
+  background: var(--rule);
+  transition: background-color 0.45s ease;
+}
+
+.card:hover .rule {
+  background: #ff3830;
+}
+
+.solution {
+  margin-top: 12px;
+  max-width: 34ch;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    padding: 40px 40px 44px;
+  }
+
+  .solution {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+  }
+
+  .wide {
+    grid-column: span 6;
+  }
+
+  .narrow {
+    grid-column: span 4;
+  }
+
+  .left {
+    border-right: 1px solid #111111;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inner {
+    padding: 48px 56px 52px;
+  }
+
+  .wide .solution {
+    font-size: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .number,
+  .rule {
+    transition: none;
+  }
+
+  .card:hover .number {
+    transform: none;
+  }
+}

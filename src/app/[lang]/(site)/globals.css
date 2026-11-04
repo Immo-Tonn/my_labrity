@@ -202,3 +202,563 @@ select:focus-visible,
     overflow-wrap: anywhere;
   }
 }
+
+/* Home-only header entrance (the class is applied by Header on the home page). */
+@keyframes home-header-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.home-header {
+  animation: home-header-in 0.8s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-header {
+    animation: none;
+  }
+}
+
+/* ───────────── Cookie banner (vanilla-cookieconsent): black & white, square ───────────── */
+#cc-main {
+  --cc-font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  --cc-bg: #f7f7f5;
+  --cc-primary-color: #111;
+  --cc-secondary-color: #555555;
+  --cc-btn-primary-bg: #111;
+  --cc-btn-primary-color: #fff;
+  --cc-btn-primary-border-color: #111;
+  --cc-btn-primary-hover-bg: #ff3830;
+  --cc-btn-primary-hover-color: #111;
+  --cc-btn-primary-hover-border-color: #ff3830;
+  --cc-btn-secondary-bg: transparent;
+  --cc-btn-secondary-color: #111;
+  --cc-btn-secondary-border-color: #111;
+  --cc-btn-secondary-hover-bg: #111;
+  --cc-btn-secondary-hover-color: #fff;
+  --cc-btn-secondary-hover-border-color: #111;
+  --cc-separator-border-color: #111;
+  --cc-toggle-on-bg: #111;
+  --cc-toggle-off-bg: #9a9a9a;
+  --cc-toggle-readonly-bg: #c8c8c5;
+  --cc-toggle-on-knob-bg: #fff;
+  --cc-toggle-off-knob-bg: #fff;
+  --cc-section-category-border: #111;
+  --cc-cookie-category-block-bg: #eeeeeb;
+  --cc-cookie-category-block-border: #eeeeeb;
+  --cc-cookie-category-block-hover-bg: #e4e4e1;
+  --cc-cookie-category-block-hover-border: #e4e4e1;
+  --cc-overlay-bg: rgba(17, 17, 17, 0.55);
+  --cc-modal-border-radius: 0;
+  --cc-btn-border-radius: 0;
+  --cc-modal-margin: 0.75rem;
+  --cc-link-color: #111;
+}
+
+#cc-main .cm,
+#cc-main .pm {
+  border: 1px solid #111;
+  box-shadow: none;
+}
+
+#cc-main .cm__title,
+#cc-main .pm__title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+#cc-main .cm__desc,
+#cc-main .pm__section-desc {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+#cc-main .cc__link,
+#cc-main a {
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  background-image: none;
+}
+
+#cc-main .cm__btn,
+#cc-main .pm__btn {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  #cc-main {
+    --cc-modal-margin: 0;
+  }
+
+  #cc-main .cm {
+    max-width: 100%;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  #cc-main .cm__desc {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+/* ───────────── Swiss system for the inner pages (<main class="swiss">) ─────────────
+   Same language as Home: Montserrat 600 headlines, left-aligned blocks, square
+   hairline-bordered modules on #F7F7F5/#EEEEEB, small red accents. Home and
+   Leistungen do not use this class and are untouched. */
+.swiss {
+  --sw-line: #111111;
+  --sw-e: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.swiss h1,
+.swiss h2,
+.swiss h3,
+.swiss h4,
+.swiss .font-tenor {
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+.swiss h1 {
+  font-size: clamp(34px, 5.2vw, 72px);
+  line-height: 1.03;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+/* Default only: a page's own text-[..] size on an h2 still wins. */
+:where(.swiss) h2 {
+  font-size: clamp(27px, 3.5vw, 50px);
+  line-height: 1.07;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+.swiss h3,
+.swiss h4 {
+  letter-spacing: -0.02em;
+}
+
+/* Left-aligned, grid-first composition */
+.swiss .text-center {
+  text-align: left;
+}
+
+.swiss :is(a, button).text-center {
+  text-align: center;
+}
+
+.swiss :not(a):not(button).justify-center {
+  justify-content: flex-start;
+}
+
+.swiss .flex-col.items-center {
+  align-items: flex-start;
+}
+
+.swiss
+  .mx-auto:is(
+    [class*='max-w-[4'],
+    [class*='max-w-[5'],
+    [class*='max-w-[6'],
+    [class*='max-w-[7'],
+    [class*='max-w-[8'],
+    [class*='max-w-[9'],
+    [class*='max-w-xl'],
+    [class*='max-w-2xl'],
+    [class*='max-w-3xl'],
+    [class*='max-w-4xl']
+  ) {
+  margin-left: 0;
+}
+
+/* One shared left edge: narrower centred wrappers share the page width */
+.swiss
+  .mx-auto:is(
+    [class*='max-w-[11'],
+    [class*='max-w-[12'],
+    [class*='max-w-[13']
+  ) {
+  max-width: 1500px;
+}
+
+/* Square modules, no shadows, black hairlines */
+.swiss [class*='rounded'] {
+  border-radius: 0 !important;
+}
+
+.swiss [class*='shadow'] {
+  box-shadow: none !important;
+}
+
+.swiss
+  :is(
+    [class*='border-[#111]/[0.12]'],
+    [class*='border-[#111]/[0.15]'],
+    [class*='border-black/10'],
+    [class*='border-black/5']
+  ) {
+  border-color: var(--sw-line);
+}
+
+.swiss [class*='divide-[#111]'] > * + * {
+  border-color: var(--sw-line);
+}
+
+.swiss .bg-white {
+  background-color: #f7f7f5;
+}
+
+.swiss :is([class*='bg-black/5'], [class*='bg-black/[0.0']) {
+  background-color: #eeeeeb;
+}
+
+/* Brand red for the small red bullets */
+.swiss [class*='bg-[#D5292F]'] {
+  background-color: #ff3830;
+}
+
+/* Kickers get Home's small red square */
+.swiss p:is([class*='tracking-[0.3']) {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.swiss p:is([class*='tracking-[0.3'])::before {
+  content: '';
+  flex: none;
+  width: 6px;
+  height: 6px;
+  background: #ff3830;
+}
+
+/* Buttons: dark → red on hover, like Home */
+.swiss :is(a, button)[class*='bg-black']:hover {
+  background-color: #ff3830 !important;
+  border-color: #ff3830 !important;
+  color: #111 !important;
+}
+
+.swiss [class*='hover:-translate-y']:hover {
+  transform: none !important;
+}
+
+.swiss a[class*='group'][class*='border']:hover {
+  background-color: #eeeeeb;
+}
+
+/* Scroll reveals (classes are added by SwissMotion only below the fold) */
+.sw-r {
+  transition:
+    opacity 0.9s var(--sw-e) var(--sw-d, 0s),
+    transform 0.9s var(--sw-e) var(--sw-d, 0s);
+}
+
+.sw-r:not(.sw-in) {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.sw-r.sw-l:not(.sw-in) {
+  transform: translateX(-32px);
+}
+
+.sw-r.sw-rt:not(.sw-in) {
+  transform: translateX(32px);
+}
+
+.sw-mask {
+  transition: clip-path 1.1s var(--sw-e) var(--sw-d, 0s);
+}
+
+.sw-mask:not(.sw-in) {
+  clip-path: inset(0 calc(100% - 2px) 0 0);
+}
+
+.sw-mask.sw-in {
+  clip-path: inset(0 0 0 0);
+}
+
+.sw-mask:not(.sw-in) img {
+  transform: scale(1.1);
+}
+
+/* Photos that start inside the first screen open on load (pure CSS). */
+.sw-open {
+  overflow: hidden;
+  animation: swOpen 1.1s var(--sw-e) 0.2s both;
+}
+
+.sw-open img {
+  animation: swZoom 1.6s var(--sw-e) 0.2s both;
+}
+
+@media (min-width: 1024px) {
+  .sw-open-lg {
+    animation: swOpen 1.1s var(--sw-e) 0.2s both;
+  }
+
+  .sw-open-lg img {
+    animation: swZoom 1.6s var(--sw-e) 0.2s both;
+  }
+}
+
+@keyframes swOpen {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes swZoom {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.sw-line {
+  transform-origin: left;
+  transition: transform 1.2s var(--sw-e) var(--sw-d, 0s);
+}
+
+.sw-line:not(.sw-in) {
+  transform: scaleX(0.001);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sw-open,
+  .sw-open img,
+  .sw-open-lg,
+  .sw-open-lg img {
+    animation: none !important;
+  }
+
+  .sw-r,
+  .sw-mask,
+  .sw-line {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+}
+
+/* ───────────── Header / footer brand row ─────────────
+   One scale for wordmark + navigation, so alignment never relies on
+   hand-tuned pixel offsets. */
+:root {
+  --logo-w: 123px;
+  --nav-fs: 12.4px;
+  --pad-x: 1.25rem;
+  --cw: 100vw;
+}
+
+@media (min-width: 480px) {
+  :root {
+    --cw: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --logo-w: 146px;
+    --pad-x: 2rem;
+    --cw: 768px;
+  }
+}
+
+@media (min-width: 900px) {
+  :root {
+    --cw: 900px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --cw: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --logo-w: 168px;
+    --nav-fs: 13.4px;
+    --cw: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  :root {
+    --nav-fs: 13.4px;
+  }
+}
+
+.brand-img {
+  width: var(--logo-w);
+  height: auto;
+}
+
+/* half of the free space between the viewport edge and the logo */
+.brand-link {
+  margin-left: calc((max(0px, (100vw - var(--cw)) / 2) + var(--pad-x)) * -0.5);
+}
+
+/* Cap-height of the nav labels sits on the baseline of the wordmark letters:
+   centre-aligned boxes are shifted by (logo height − label cap height) / 2. */
+.hdr-nav {
+  transform: translateY(
+    calc((var(--logo-w) / 7.056 - 0.7 * var(--nav-fs)) / 2)
+  );
+}
+
+/* Inner pages: keep entrance offsets from ever creating a horizontal scroll,
+   one graphite for every dark block, one focus ring for every control. */
+.swiss {
+  overflow-x: clip;
+}
+
+.swiss :is(.bg-black, [class*='bg-[#0']) {
+  background-color: #111111;
+}
+
+.swiss :is(a, button, input, textarea, select, summary):focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 3px;
+}
+
+.swiss .bg-black :is(a, button):focus-visible,
+.swiss [class*='bg-[#111']:is(section, div) :is(a, button):focus-visible {
+  outline-color: #ffffff;
+}
+
+.swiss :is(input, textarea, select):focus {
+  border-color: #111111;
+  outline: none;
+}
+
+.swiss :is(input, textarea, select):focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+/* ───────────── Composition tools for the inner pages ─────────────
+   Pages pick their own rhythm with two section modifiers and get joined
+   hairline cells for card grids (no gaps, no shadows, shared borders). */
+.swiss .sw-tint {
+  background-color: #eeeeeb;
+}
+
+.swiss .sw-ink {
+  --sw-line: rgba(247, 247, 245, 0.32);
+  background-color: #111111;
+  color: #f7f7f5;
+}
+
+.swiss .sw-ink :is([class*='text-black'], [class*='text-[#111']) {
+  color: #f7f7f5;
+}
+
+.swiss
+  .sw-ink
+  :is(
+    [class*='text-neutral-'],
+    [class*='text-black/'],
+    [class*='text-[#111111]/'],
+    [class*='text-[#111]/']
+  ) {
+  color: rgba(247, 247, 245, 0.72);
+}
+
+.swiss .sw-ink :is([class*='border-[#111'], [class*='border-black']) {
+  border-color: var(--sw-line);
+}
+
+.swiss .sw-ink [class*='bg-black/'],
+.swiss .sw-ink [class*='bg-white/'] {
+  background-color: transparent;
+}
+
+.swiss .sw-ink [class*='bg-[#111111]'] {
+  background-color: #1b1b1b;
+}
+
+.swiss .sw-ink [class*='bg-[#EEEEEB]'] {
+  background-color: #1b1b1b;
+}
+
+.swiss .sw-ink :is(a, button)[class*='bg-black'],
+.swiss .sw-ink :is(a, button)[class*='bg-[#111']:not([class*='bg-[#111]/']) {
+  background-color: #f7f7f5;
+  border-color: #f7f7f5;
+  color: #111111;
+}
+
+.swiss .sw-ink :is(a, button):focus-visible,
+.swiss .sw-ink :is(input, textarea, select, summary):focus-visible {
+  outline-color: #ffffff;
+}
+
+.swiss .sw-ink a:not([class*='bg-']):hover {
+  color: #ffffff;
+}
+
+/* Card grids become one joined block of cells. */
+.swiss .grid:is(.gap-3, .gap-4, .gap-5, .gap-6):has(> [class*='border-[#111']) {
+  gap: 0;
+  border-top: 1px solid var(--sw-line);
+  border-left: 1px solid var(--sw-line);
+}
+
+.swiss
+  .grid:is(.gap-3, .gap-4, .gap-5, .gap-6):has(> [class*='border-[#111'])
+  > [class*='border-[#111'] {
+  border-width: 0 1px 1px 0;
+  border-color: var(--sw-line);
+}
+
+.swiss
+  .grid:is(.gap-3, .gap-4, .gap-5, .gap-6):has(> [class*='border-[#111'])
+  > [class*='border-[#111']:not(.sw-ink) {
+  background-color: transparent;
+}
+
+.swiss
+  .grid:is(.gap-3, .gap-4, .gap-5, .gap-6):has(> [class*='border-[#111'])
+  > .sw-ink {
+  border-color: #111111;
+}
+
+.swiss
+  .grid:is(.gap-3, .gap-4, .gap-5, .gap-6):has(> [class*='border-[#111'])
+  > [class*='border-[#111']:hover {
+  background-color: rgba(17, 17, 17, 0.05);
+}
+
+.swiss
+  .sw-ink
+  .grid:is(.gap-3, .gap-4, .gap-5, .gap-6):has(> [class*='border-[#111'])
+  > [class*='border-[#111']:hover {
+  background-color: rgba(247, 247, 245, 0.06);
+}
+
+/* Step numerals stay quiet but readable. */
+.swiss [class*='text-black/20']:not(svg) {
+  color: rgba(17, 17, 17, 0.45);
+}
+
+.swiss .sw-ink [class*='text-black/20']:not(svg) {
+  color: rgba(247, 247, 245, 0.5);
+}

@@ -40,7 +40,7 @@ export default function QuizResult({ quiz, answers, form }: Props) {
       </div>
 
       {/* CONTACT */}
-      <div className="mb-8 rounded-2xl border border-[#e7e2d9] bg-white p-6">
+      <div className="mb-8 rounded-2xl border border-[#111]/[0.12] bg-white p-6">
         <h3 className="mb-4 text-lg font-medium">{quiz.result.contactTitle}</h3>
 
         <div className="grid gap-2 text-sm text-gray-700">
@@ -63,7 +63,7 @@ export default function QuizResult({ quiz, answers, form }: Props) {
       </div>
 
       {/* ANSWERS */}
-      <div className="mb-8 rounded-2xl border border-[#e7e2d9] bg-white p-6">
+      <div className="mb-8 rounded-2xl border border-[#111]/[0.12] bg-white p-6">
         <h3 className="mb-5 text-lg font-medium">{quiz.result.summaryTitle}</h3>
 
         <div className="grid gap-5">
@@ -99,7 +99,7 @@ export default function QuizResult({ quiz, answers, form }: Props) {
       </div>
 
       {/* NEXT STEPS */}
-      <div className="mb-10 rounded-2xl border border-[#e7e2d9] bg-white p-6">
+      <div className="mb-10 rounded-2xl border border-[#111]/[0.12] bg-white p-6">
         <h3 className="mb-3 text-lg font-medium">{quiz.result.nextTitle}</h3>
 
         <p className="text-sm leading-7 text-gray-600">

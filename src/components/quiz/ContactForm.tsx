@@ -141,7 +141,7 @@ export default function ContactForm({ quiz, answers }: Props) {
     w-full
     rounded-2xl
     border
-    border-[#e7e2d9]
+    border-[#111]/[0.12]
     px-5
     py-4
     text-base
@@ -225,7 +225,7 @@ export default function ContactForm({ quiz, answers }: Props) {
                 privacy: undefined,
               }));
             }}
-            className="mt-1 h-4 w-4 border border-[#e7e2d9]"
+            className="mt-1 h-4 w-4 border border-[#111]/[0.12]"
           />
 
           <span>
