@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 import { Montserrat, Tenor_Sans } from 'next/font/google';
 
 import CookieConsent from '@/components/common/CookieConsent';
-import SiteBackground from '@/components/common/SiteBackground';
+// import SiteBackground from '@/components/common/SiteBackground';
 import SwissMotion from '@/components/common/SwissMotion';
 import QuizProvider from '@/components/quiz/QuizProvider';
 import { classnames } from '@/utils/classnames';
@@ -197,7 +197,9 @@ export default async function RootLayout({
         />
 
         <LanguageProvider lang={lang}>
-          <SiteBackground />
+          {/* Site background video is temporarily off. To bring it back,
+              uncomment the line below (the footer toggle appears with it). */}
+          {/* <SiteBackground /> */}
 
           <QuizProvider>
             <a href="#main-content" className="skip-link">

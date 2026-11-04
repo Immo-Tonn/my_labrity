@@ -26,6 +26,7 @@ export default function SiteBackground() {
   return (
     <div
       aria-hidden="true"
+      data-site-bg=""
       className="pointer-events-none fixed inset-0 -z-10 bg-[#F7F7F5] bg-cover bg-center"
       style={{ backgroundImage: 'url(/videos/site-bg-poster.jpg)' }}
     >

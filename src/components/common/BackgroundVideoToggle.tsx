@@ -15,6 +15,12 @@ export default function BackgroundVideoToggle({
 }: Props) {
   const paused = useBgVideoPaused();
   const [reduced, setReduced] = useState(false);
+  const [present, setPresent] = useState(false);
+
+  // Only show the control while the background layer is actually mounted.
+  useEffect(() => {
+    setPresent(Boolean(document.querySelector('[data-site-bg]')));
+  }, []);
 
   useEffect(() => {
     const query = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -28,7 +34,7 @@ export default function BackgroundVideoToggle({
     return () => query.removeEventListener('change', onChange);
   }, []);
 
-  if (reduced) return null;
+  if (reduced || !present) return null;
 
   return (
     <button
