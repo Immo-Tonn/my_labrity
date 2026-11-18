@@ -66,5 +66,6 @@
     "allArticlesLabel": "View all articles"
   },
   "footerLabelWebApps": "Web apps",
-  "footerLabelToTop": "Back to top"
+  "footerLabelToTop": "Back to top",
+  "footerLabelCookies": "Cookie settings"
 }

@@ -1,4 +1,5 @@
 import { getData } from './getData';
+import { SITE_URL } from './siteUrl';
 import { type Language } from './localizedPath';
 
 // Like `openGraph`, a page's own `twitter` object replaces the layout's one
@@ -11,8 +12,8 @@ export async function buildTwitter(
   description: string,
 ) {
   const meta = await getData('meta', lang);
-  const images: string[] = meta.openGraph.images.map(
-    (img: { url: string }) => img.url,
+  const images: string[] = meta.openGraph.images.map((img: { url: string }) =>
+    img.url.startsWith('http') ? img.url : `${SITE_URL}${img.url}`,
   );
 
   return {

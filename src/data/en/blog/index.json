@@ -18,6 +18,65 @@
     "webdesign-beauty-wellness",
     "website-kunden-gewinnen-leadgenerierung"
   ],
-  "heroAlt": "An open laptop on a marble table overlooking the sea and mountains at sunset, accented by a red glass element.",
-  "editorialAlt": "An open laptop on a dark desk with a notebook, coffee mug and a red maple branch, the Cologne skyline visible in the background."
+  "heroAlt": "An open design book with bold black shapes, a glass sphere and a red bookmark.",
+  "editorialAlt": "Folded light paper with a red inner sheet on a dark graphite surface.",
+  "cards": {
+    "terminbuchung-verwaltung-software-kleine-betriebe": {
+      "category": "Web apps",
+      "excerpt": "What booking and management software can take over, when standard tools are enough, and when a custom web app pays off."
+    },
+    "website-erstellen-lassen-kosten": {
+      "category": "Pricing",
+      "excerpt": "Rough price ranges, typical cost drivers and the questions that help you judge a quote."
+    },
+    "website-relaunch-seo-verluste-vermeiden": {
+      "category": "Relaunch",
+      "excerpt": "A relaunch is risky because Google already knows the old site. Good preparation avoids SEO losses."
+    },
+    "freelancer-oder-webagentur": {
+      "category": "Decision",
+      "excerpt": "No one-size-fits-all answer: the real differences, so you can decide what suits your project."
+    },
+    "website-veraltet-anzeichen": {
+      "category": "Check",
+      "excerpt": "Seven signs you can check yourself in a few minutes — no technical knowledge needed."
+    },
+    "landingpage-oder-website": {
+      "category": "Strategy",
+      "excerpt": "The difference is not size but purpose. Here is how to tell which one you actually need."
+    },
+    "website-ladezeit-performance": {
+      "category": "Technology",
+      "excerpt": "Visitors feel load time instantly and Google measures it directly, so performance is a business matter."
+    },
+    "website-briefing-checkliste": {
+      "category": "Project start",
+      "excerpt": "A few answers up front save time on both sides and lead to a fitting quote faster."
+    },
+    "redirects-website-relaunch": {
+      "category": "SEO",
+      "excerpt": "301 redirects are the most important lever for keeping your rankings during a relaunch."
+    },
+    "landingpage-dauer-launch": {
+      "category": "Landing page",
+      "excerpt": "Duration depends on concrete factors. Knowing them lets you plan a realistic timeline."
+    },
+    "webdesign-beauty-wellness": {
+      "category": "Industries",
+      "excerpt": "In beauty and wellness the website decides before the first contact: clarity, atmosphere, easy booking."
+    },
+    "website-kunden-gewinnen-leadgenerierung": {
+      "category": "Lead generation",
+      "excerpt": "New clients come from a combination: positioning, trust, a clear way to get in touch, ongoing optimisation."
+    }
+  },
+  "featuredSlug": "website-relaunch-seo-verluste-vermeiden",
+  "featuredLabel": "Featured article",
+  "readTimeLabel": "min read",
+  "cta": {
+    "kicker": "Your project",
+    "title": "Let's talk about your website.",
+    "text": "Briefly describe your plans — we usually reply within 24–48 hours.",
+    "button": "Get in touch"
+  }
 }

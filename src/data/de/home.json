@@ -1,12 +1,15 @@
 {
   "hero": {
-    "kicker": "Premium Web Studio",
-    "titleFirst": "Websites, die ",
-    "titleSecond": "überzeugen und verkaufen",
-    "description": "Wir entwickeln Websites und individuelle Software für Unternehmen – von der Terminbuchung bis zur Geschäftsverwaltung.",
+    "kicker": "Webdesign & Online-Sichtbarkeit",
+    "titleFirst": "Websites, die überzeugen.",
+    "titleSecond": "Damit Ihr Unternehmen gefunden wird.",
+    "description": "Wir erstellen und modernisieren Websites und optimieren sie für Google und KI-Suchen wie ChatGPT — damit potenzielle Kunden Ihr Unternehmen, Ihre Produkte und Leistungen leichter finden.",
     "tagline": "Minimal. Modern. Effektiv.",
     "primaryButton": "Kontakt",
-    "secondaryButton": "Portfolio"
+    "secondaryButton": "Portfolio",
+    "blockWords": ["Design.", "Sichtbarkeit.", "Wachstum."],
+    "pauseLabel": "Bildwechsel pausieren",
+    "resumeLabel": "Bildwechsel fortsetzen"
   },
   "quizPreview": {
     "kicker": "Projekt-Kalkulator",
@@ -169,8 +172,8 @@
         "title": "Immo Tonn",
         "description": "Hochwertige Immobilien-Website mit klarem Aufbau, professioneller Objektpräsentation und starkem Vertrauenseffekt für Kauf und Verkauf.",
         "imageVariant": "first",
-        "image": "/images/projects/immo-tonn.webp",
-        "href": "https://immo-tonn.de/"
+        "image": "/images/projects/immo-tonn-hero.webp",
+        "href": "https://immo-tonn.com"
       },
       {
         "title": "TLSG Studio",
@@ -415,6 +418,8 @@
       "description": "Erzählen Sie uns, was in Ihrem Betrieb einfacher laufen soll. Wir entwickeln die passende Software dafür.",
       "primary": "Individuelle Lösung anfragen",
       "secondary": "Alle Möglichkeiten entdecken"
-    }
+    },
+    "moreLabel": "Mehr",
+    "lessLabel": "Weniger"
   }
 }

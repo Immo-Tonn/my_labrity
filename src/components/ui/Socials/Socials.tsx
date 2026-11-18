@@ -5,7 +5,7 @@ import { SocialsItem } from '@/components/ui';
 import { SocialsProps } from './types';
 
 export const Socials: React.FC<SocialsProps> = ({ socials, className }) => {
-  const socialsClasses = classnames('flex gap-4 text-[#18352b]', className);
+  const socialsClasses = classnames('flex gap-4 text-[#111111]', className);
 
   return (
     <ul className={socialsClasses}>

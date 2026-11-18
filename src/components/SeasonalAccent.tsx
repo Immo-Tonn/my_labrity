@@ -87,7 +87,7 @@ export default function SeasonalAccent({
 
   if (isMainHoliday) {
     return (
-      <div className="bg-[#f8f6f1]/92 relative z-[7] border-b border-[#e7e2d9] backdrop-blur-sm">
+      <div className="bg-[#F7F7F5]/92 relative z-[7] border-b border-[#111]/[0.12] backdrop-blur-sm">
         <div className="mx-auto flex max-w-[1180px] flex-col items-center justify-center px-4 py-4 text-center md:flex-row md:gap-5 md:py-5">
           <div className="flex items-center justify-center gap-3">
             <span
@@ -120,7 +120,7 @@ export default function SeasonalAccent({
   }
 
   return (
-    <div className="bg-[#f8f6f1]/92 relative z-[7] border-b border-[#e7e2d9] backdrop-blur-sm">
+    <div className="bg-[#F7F7F5]/92 relative z-[7] border-b border-[#111]/[0.12] backdrop-blur-sm">
       <div className="mx-auto flex max-w-[1180px] flex-col items-center justify-center gap-2 px-4 py-4 text-center md:flex-row md:gap-5 md:py-5">
         <div className="flex items-center justify-center gap-3">
           <span

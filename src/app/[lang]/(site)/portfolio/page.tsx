@@ -65,7 +65,16 @@ export default async function PortfolioPage({
   if (!isLanguage(params.lang)) notFound();
 
   const home = await getData('home', params.lang);
+  const webApps = await getData('web-apps', params.lang);
   const initialData: PortfolioData = home.portfolio;
 
-  return <PortfolioPageClient initialData={initialData} />;
+  return (
+    <PortfolioPageClient
+      initialData={initialData}
+      video={{
+        pauseLabel: webApps.visual.pauseLabel,
+        playLabel: webApps.visual.playLabel,
+      }}
+    />
+  );
 }

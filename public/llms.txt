@@ -1,0 +1,27 @@
+# Labrity
+
+> Labrity ist ein Webstudio aus Münster (Deutschland). Wir entwickeln moderne, klar aufgebaute Websites, Landingpages und Web-Apps für Selbstständige, kleine Unternehmen und Dienstleister in ganz Deutschland. Sprachen der Website: Deutsch, English, Русский, Українська.
+
+Kontakt: labrity@web.de · Tel. +49 174 3454419 · Sessendrupweg 54, 48161 Münster · Mo–Fr 09:00–18:00
+
+## Leistungen
+- [Leistungen im Überblick](https://www.labrity.com/services): Websites, Webdesign, Entwicklung, Relaunch
+- [Website erstellen lassen](https://www.labrity.com/website-erstellen-lassen)
+- [Webdesign](https://www.labrity.com/webdesign)
+- [Webentwicklung](https://www.labrity.com/webentwicklung)
+- [Web-App entwickeln lassen](https://www.labrity.com/web-app-entwickeln-lassen)
+- [Website-Relaunch ohne SEO-Verluste](https://www.labrity.com/website-relaunch)
+- [Landingpage erstellen lassen](https://www.labrity.com/landingpage-erstellen-lassen)
+- [Website für Modemarken](https://www.labrity.com/website-fuer-modemarken)
+
+## Informationen
+- [Preise und FAQ](https://www.labrity.com/prices)
+- [Ablauf eines Projekts](https://www.labrity.com/process)
+- [Projekte und Referenzen](https://www.labrity.com/portfolio)
+- [Blog](https://www.labrity.com/blog)
+- [Über uns](https://www.labrity.com/ueber-uns)
+- [Kontakt](https://www.labrity.com/contact)
+
+## Optional
+- [Sitemap](https://www.labrity.com/sitemap.xml)
+- [English version](https://www.labrity.com/en)

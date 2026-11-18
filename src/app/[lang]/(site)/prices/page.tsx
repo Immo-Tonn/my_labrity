@@ -47,6 +47,7 @@ export default async function PricesPage({ params }: { params: PageParams }) {
   if (!isLanguage(params.lang)) notFound();
 
   const initialData: PricesData = await getData('prices', params.lang);
+  const webApps = await getData('web-apps', params.lang);
 
   // FAQPage schema built directly from the FAQ block actually rendered below
   // (PricesPageClient), so the structured data can never drift from what a
@@ -70,7 +71,13 @@ export default async function PricesPage({ params }: { params: PageParams }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
-      <PricesPageClient initialData={initialData} />
+      <PricesPageClient
+        initialData={initialData}
+        video={{
+          pauseLabel: webApps.visual.pauseLabel,
+          playLabel: webApps.visual.playLabel,
+        }}
+      />
     </>
   );
 }

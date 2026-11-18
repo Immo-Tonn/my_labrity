@@ -3,7 +3,11 @@
 import { motion, MotionConfig } from 'framer-motion';
 import Image from 'next/image';
 
+import { BackgroundVideo } from '@/components/common/BackgroundVideo';
+
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
+
+import styles from './PortfolioPage.module.css';
 
 type ProjectItem = {
   title: string;
@@ -47,265 +51,245 @@ export type PortfolioData = {
   items: ProjectItem[];
 };
 
+export type PortfolioVideo = { pauseLabel: string; playLabel: string };
+
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+// Sequential entrance from different sides; framer-motion's reduced-motion
+// setting drops the offsets, and the noscript rule in the layout keeps the
+// content visible without JavaScript.
+const reveal = (x: number, y: number, delay = 0) => ({
+  initial: { opacity: 0, x, y },
+  whileInView: { opacity: 1, x: 0, y: 0 },
+  viewport: { once: true, amount: 0.2 },
+  transition: { duration: 0.8, delay, ease: EASE },
+});
+
 export default function PortfolioPageClient({
   initialData,
+  video,
 }: {
   initialData: PortfolioData;
+  video: PortfolioVideo;
 }) {
   const content = initialData;
-
-  const isSeniorProject = (title: string) =>
-    title.toLowerCase().includes('alltags') ||
-    title.toLowerCase().includes('senior');
 
   return (
     // reducedMotion="user" makes framer-motion automatically shorten/skip
     // these transform/opacity animations for visitors with
     // prefers-reduced-motion enabled, and leaves everyone else unchanged.
     <MotionConfig reducedMotion="user">
-      <main className="min-h-screen overflow-hidden bg-[#f8f6f1] text-black">
-        {/* HERO */}
-        <section className="relative mx-auto max-w-[1700px] px-5 pb-16 pt-[125px] md:px-8 md:pb-24 md:pt-[165px]">
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-            className="grid gap-12 xl:grid-cols-[1.1fr_0.7fr] xl:items-end"
-          >
-            <div>
-              <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.34em] text-neutral-500">
-                {content.kicker}
-              </p>
+      <main className="swiss min-h-screen overflow-hidden bg-[#F7F7F5]/65 text-black">
+        {/* STAGE — one video stays fixed behind the compact intro and the
+            project gallery, so the screenshots sit on the moving background
+            right away. */}
+        <div
+          className={`${styles.stage} relative isolate bg-[#111111] text-[#F7F7F5]`}
+        >
+          <div className={styles.stageBg} aria-hidden="false">
+            <BackgroundVideo
+              webm="/videos/software-bg.webm"
+              mp4="/videos/software-bg.mp4"
+              poster="/videos/software-bg-poster.jpg"
+              pauseLabel={video.pauseLabel}
+              playLabel={video.playLabel}
+              className="h-full w-full border-0"
+              overlayClassName="bg-[#111111]/45 [background-image:linear-gradient(to_bottom,rgba(17,17,17,0.6),rgba(17,17,17,0.2)_40%,rgba(17,17,17,0.5))]"
+              controlClassName="right-5 top-24 md:right-8 md:top-28"
+            />
+          </div>
 
-              <h1 className="max-w-[1050px] font-tenor text-[54px] leading-[0.95] tracking-[-0.045em] text-black md:text-[90px] xl:text-[126px]">
-                {content.title}
-              </h1>
-            </div>
+          {/* INTRO */}
+          <section className={`${styles.hero} relative flex flex-col`}>
+            <div className="mx-auto flex w-full max-w-[1700px] flex-1 flex-col px-5 pb-8 pt-[110px] md:px-8 md:pb-10 md:pt-[130px]">
+              <div className="grid gap-6 xl:grid-cols-[1.15fr_0.65fr] xl:items-end xl:gap-16">
+                <div>
+                  <motion.p
+                    {...reveal(-28, 0)}
+                    className="mb-5 flex items-center gap-3 font-montserrat text-[13px] font-semibold uppercase tracking-[0.34em] text-[#F7F7F5]"
+                  >
+                    {content.kicker}
+                  </motion.p>
 
-            <div className="max-w-[640px] xl:pb-4">
-              <p className="font-montserrat text-[15px] leading-8 text-neutral-600 md:text-[18px]">
-                {content.description}
-              </p>
+                  <motion.h1
+                    {...reveal(-48, 0, 0.12)}
+                    className="max-w-[1050px] font-tenor text-[54px] leading-[0.95] tracking-[-0.045em] text-[#F7F7F5] md:text-[90px] xl:text-[126px]"
+                  >
+                    {content.title}
+                  </motion.h1>
+                </div>
 
-              <div className="mt-8 flex flex-wrap items-center gap-4 font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-500">
-                {content.topTags.map((tag, tagIndex) => (
-                  <div key={tag} className="flex items-center gap-4">
-                    {tagIndex > 0 && (
-                      <span className="h-1 w-1 rounded-full bg-neutral-400" />
-                    )}
-                    <span>{tag}</span>
-                  </div>
-                ))}
+                <motion.div
+                  {...reveal(48, 0, 0.28)}
+                  className="max-w-[640px] border-t border-[#F7F7F5]/60 pt-6 xl:mb-3 xl:border-l xl:border-t-0 xl:pl-8 xl:pt-0"
+                >
+                  <p className="font-montserrat text-[15px] leading-8 text-[#F7F7F5]/90 md:text-[18px]">
+                    {content.description}
+                  </p>
+                </motion.div>
               </div>
             </div>
-          </motion.div>
 
-          {/* SEO BLOCK */}
-          <div className="mt-20 border-t border-[#e7e2d9] pt-10">
-            <div className="grid grid-cols-1 gap-y-12 xl:grid-cols-3 xl:gap-x-16 xl:gap-y-0">
-              {content.seoBlock.map(item => (
-                <div key={item.kicker} className="min-w-0">
-                  <p className="break-words font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-500">
-                    {item.kicker}
-                  </p>
-
-                  <p className="mt-5 hyphens-auto break-words font-tenor text-[30px] leading-[1.08] text-black md:text-[34px] xl:text-[40px]">
-                    {item.title}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* MARQUEE */}
-        <section className="overflow-hidden border-y border-[#e7e2d9] bg-[#f8f6f1] py-5">
-          <div className="marquee-wrapper">
-            <div className="marquee-track">
-              {Array.from({ length: 2 }).map((_, index) => (
-                <div
-                  key={index}
-                  className="flex shrink-0 items-center gap-14 pr-14"
-                >
-                  {content.marquee.map(text => (
-                    <span
-                      key={text}
-                      className="whitespace-nowrap font-montserrat text-xs uppercase tracking-[0.34em] text-neutral-500"
+            <div className="relative z-10 overflow-hidden border-t border-[#F7F7F5]/45 bg-[#111111]/55 py-4">
+              <div className="marquee-wrapper">
+                <div className="marquee-track">
+                  {Array.from({ length: 2 }).map((_, index) => (
+                    <div
+                      key={index}
+                      className="flex shrink-0 items-center gap-14 pr-14"
                     >
-                      {text}
-                    </span>
+                      {content.marquee.map(text => (
+                        <span
+                          key={text}
+                          className="whitespace-nowrap font-montserrat text-xs font-semibold uppercase tracking-[0.34em] text-[#F7F7F5]"
+                        >
+                          {text}
+                        </span>
+                      ))}
+                    </div>
                   ))}
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* PROJECTS */}
-        <section className="mx-auto max-w-[1700px] px-5 pb-28 pt-16 md:px-8 md:pb-40 md:pt-24">
-          <div className="space-y-10 md:space-y-14">
-            {content.items.map((item, index) => {
-              const seniorProject = isSeniorProject(item.title);
+          {/* PROJECTS — gallery on the video */}
+          <section className="relative mx-auto max-w-[1700px] px-5 pb-20 pt-10 md:px-8 md:pb-28 md:pt-14">
+            <div className={styles.gallery}>
+              {content.items.map((item, index) => {
+                const delay = (index % 3) * 0.06;
 
-              return (
-                <motion.article
-                  key={`${item.title}-${index}`}
-                  initial={{ opacity: 0, y: 34 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.18 }}
-                  transition={{
-                    duration: 0.7,
-                    delay: index * 0.04,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  className="group overflow-hidden border border-[#e4ddd3] bg-[#fbfaf7] transition duration-500 hover:-translate-y-1 hover:border-black/20 hover:shadow-[0_28px_90px_rgba(0,0,0,0.08)]"
-                >
-                  <div className="grid md:min-h-[50vh] lg:grid-cols-[0.58fr_0.42fr]">
-                    {/* SCREENSHOT */}
+                return (
+                  <motion.article
+                    key={`${item.title}-${index}`}
+                    {...reveal(0, 28, delay)}
+                    className={`group font-montserrat ${styles.gcard}`}
+                  >
                     <a
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="relative flex min-h-[300px] items-center justify-center overflow-hidden bg-[#ede7dd] p-4 md:min-h-[430px] md:p-6 xl:min-h-[520px]"
+                      aria-label={`${content.projectButton}: ${item.title}`}
+                      className={styles.gshot}
                     >
-                      <div className="relative h-full min-h-[260px] w-full overflow-hidden border border-black/10 bg-[#f8f6f1] shadow-[0_20px_70px_rgba(0,0,0,0.10)] md:min-h-[478px] xl:min-h-[440px]">
-                        {item.image ? (
-                          <Image
-                            src={item.image}
-                            alt={`${item.title} Premium Website Projekt`}
-                            fill
-                            priority={index === 0}
-                            sizes="(max-width: 1280px) 100vw, 58vw"
-                            className="object-contain p-3 transition duration-700 group-hover:scale-[1.025] md:p-5"
+                      {item.image ? (
+                        <Image
+                          src={item.image}
+                          alt={`${item.title} Premium Website Projekt`}
+                          fill
+                          priority={index < 3}
+                          sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                          className={styles.gimg}
+                        />
+                      ) : (
+                        <span className="absolute inset-0 flex items-center justify-center text-xs uppercase tracking-[0.32em] text-neutral-500">
+                          Coming Soon
+                        </span>
+                      )}
+                      <span aria-hidden="true" className={styles.garrow}>
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.6"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M7 17L17 7M17 7H8M17 7V16"
                           />
-                        ) : (
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <span className="font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-500">
-                              Coming Soon
-                            </span>
-                          </div>
-                        )}
-                      </div>
+                        </svg>
+                      </span>
                     </a>
 
-                    {/* CONTENT */}
-                    <div
-                      className={`flex min-w-0 flex-col justify-between md:p-9 xl:p-12 ${
-                        seniorProject ? 'p-5' : 'p-6'
-                      }`}
-                    >
-                      <div className="min-w-0">
-                        <div
-                          className={`flex items-start justify-between gap-6 ${
-                            seniorProject ? 'mb-6' : 'mb-8'
-                          }`}
-                        >
-                          <div className="min-w-0">
-                            <p className="break-words font-montserrat text-xs uppercase tracking-[0.34em] text-neutral-500">
-                              {String(index + 1).padStart(2, '0')} /{' '}
-                              {content.categories[item.title] ||
-                                content.projectLabel}
-                            </p>
+                    <div className={styles.gbody}>
+                      <p className={styles.gmeta}>
+                        <span>{String(index + 1).padStart(2, '0')}</span>
+                        <span aria-hidden="true" className={styles.gdot} />
+                        <span>
+                          {content.categories[item.title] ||
+                            content.projectLabel}
+                        </span>
+                        {item.kind === 'concept' && (
+                          <span className={styles.gconcept}>
+                            {content.conceptLabel}
+                          </span>
+                        )}
+                      </p>
 
-                            <p className="mt-3 break-words font-montserrat text-xs uppercase tracking-[0.3em] text-neutral-500">
-                              {content.projectLabel}
-                            </p>
+                      <h2 className="mt-3 font-tenor text-[28px] leading-[1.02] tracking-[-0.035em] md:text-[32px]">
+                        {item.title}
+                      </h2>
 
-                            {item.kind === 'concept' && (
-                              <p className="mt-3 inline-block border border-neutral-400 px-2 py-1 font-montserrat text-[10px] uppercase tracking-[0.2em] text-neutral-600">
-                                {content.conceptLabel}
-                              </p>
-                            )}
-                          </div>
+                      <p className={styles.gdesc}>{item.description}</p>
 
-                          <a
-                            href={item.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`${content.projectButton}: ${item.title}`}
-                            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#d9cfbe] transition duration-300 group-hover:border-black group-hover:bg-black group-hover:text-white"
-                          >
-                            <svg
-                              className="h-4 w-4"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="1.5"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M7 17L17 7M17 7H8M17 7V16"
-                              />
-                            </svg>
-                          </a>
-                        </div>
-
-                        <h2
-                          className={`
-                          max-w-full
-                          font-tenor
-                          leading-[0.95]
-                          tracking-[-0.04em]
-                          text-black
-                          md:text-[70px]
-                          lg:text-[64px]
-                          xl:text-[74px]
-                          ${'hyphens-auto text-[36px] [overflow-wrap:anywhere] sm:text-[44px]'}`}
-                        >
-                          {item.title}
-                        </h2>
-
-                        <p
-                          className={`mt-7 max-w-[620px] font-montserrat text-[14px] leading-8 text-neutral-700 md:text-[16px] ${
-                            seniorProject
-                              ? '[overflow-wrap:anywhere]'
-                              : 'break-words'
-                          }`}
-                        >
-                          {item.description}
-                        </p>
-                      </div>
-
-                      <div className="mt-10 min-w-0">
-                        <div className="mb-8 flex flex-wrap items-center gap-4 font-montserrat text-xs uppercase tracking-[0.28em] text-neutral-500">
-                          {content.projectTags.map((tag, tagIndex) => (
-                            <div key={tag} className="flex items-center gap-4">
-                              {tagIndex > 0 && (
-                                <span className="h-1 w-1 rounded-full bg-neutral-400" />
-                              )}
-                              <span>{tag}</span>
-                            </div>
-                          ))}
-                        </div>
-
+                      <div className={styles.gfoot}>
                         <a
                           href={item.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-4 font-montserrat text-xs uppercase tracking-[0.34em] text-neutral-600 transition duration-300 hover:text-black"
+                          className={styles.open}
                         >
                           {content.projectButton}
-                          <span className="h-px w-12 bg-neutral-400 transition duration-300 group-hover:w-20 group-hover:bg-black" />
+                          <span
+                            aria-hidden="true"
+                            className={styles.openLine}
+                          />
                         </a>
 
                         {item.detailHref && item.detailLabel && (
-                          <div>
-                            <LocalizedLink
-                              href={item.detailHref}
-                              className="mt-6 inline-flex min-h-[44px] items-center gap-2 border-b border-black/40 font-montserrat text-xs uppercase tracking-[0.2em] text-black transition duration-300 hover:border-black"
-                            >
-                              {item.detailLabel}
-                              <span aria-hidden="true">→</span>
-                            </LocalizedLink>
-                          </div>
+                          <LocalizedLink
+                            href={item.detailHref}
+                            className={styles.detail}
+                          >
+                            {item.detailLabel}
+                            <span aria-hidden="true">→</span>
+                          </LocalizedLink>
                         )}
                       </div>
                     </div>
-                  </div>
-                </motion.article>
-              );
-            })}
+                  </motion.article>
+                );
+              })}
+            </div>
+          </section>
+        </div>
+
+        {/* TAGS + SEO CELLS — moved below the gallery */}
+        <section className="mx-auto max-w-[1700px] px-5 py-16 md:px-8 md:py-24">
+          <motion.div
+            {...reveal(0, 32, 0.4)}
+            className={`mt-10 md:mt-10 ${styles.tags}`}
+          >
+            {content.topTags.map(tag => (
+              <div key={tag} className={`font-montserrat ${styles.tag}`}>
+                <span aria-hidden="true" className={styles.mark} />
+                <span className={styles.text}>{tag}</span>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* SEO BLOCK */}
+          <div className={styles.cells}>
+            {content.seoBlock.map((item, itemIndex) => (
+              <motion.div
+                key={item.kicker}
+                {...reveal(
+                  itemIndex === 1 ? 0 : itemIndex === 0 ? -36 : 36,
+                  itemIndex === 1 ? 36 : 0,
+                  0.15 + itemIndex * 0.12,
+                )}
+                className={`${styles.cell} ${itemIndex === 1 ? styles.dark : ''}`}
+              >
+                <p className={`font-montserrat ${styles.cellKicker}`}>
+                  {item.kicker}
+                </p>
+
+                <p className="mt-6 hyphens-manual break-words font-tenor text-[30px] leading-[1.08] md:text-[34px] xl:text-[40px]">
+                  {item.title}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </section>
 

@@ -87,9 +87,9 @@ export default async function ImpressumPage({
   const title = common?.footerLabelImpressum || FALLBACK_TITLE[lang];
 
   return (
-    <main className="min-h-screen bg-[#f8f6f1] pt-[120px] md:pt-[140px] xl:pt-[170px]">
+    <main className="swiss min-h-screen bg-[#F7F7F5]/65 pt-[120px] md:pt-[140px] xl:pt-[170px]">
       <section className="container pb-[90px] md:pb-[110px] xl:pb-[140px]">
-        <div className="overflow-hidden border border-[#e7e2d9] bg-white px-6 py-10 shadow-[0_24px_60px_rgba(0,0,0,0.05)] md:px-10 md:py-14 xl:px-14 xl:py-16">
+        <div className="overflow-hidden border border-[#111]/[0.12] bg-white px-6 py-10 shadow-[0_24px_60px_rgba(0,0,0,0.05)] md:px-10 md:py-14 xl:px-14 xl:py-16">
           <h1 className="max-w-[720px] font-tenor text-[36px] leading-[1.04] text-black md:text-[52px] xl:text-[64px]">
             {title}
           </h1>
@@ -97,11 +97,11 @@ export default async function ImpressumPage({
           <div className="mt-10 max-w-[820px]">
             {sections.map(item => (
               <section key={item._id} className="mb-8">
-                <h2 className="font-tenor text-xl font-semibold text-[#18352b]">
+                <h2 className="font-tenor text-xl font-semibold text-[#111111]">
                   {item.title}
                 </h2>
 
-                <div className="mt-2 font-montserrat text-sm leading-7 text-[#18352b]/75">
+                <div className="mt-2 font-montserrat text-sm leading-7 text-[#111111]/75">
                   {item.description.map((block, index) => (
                     <p key={index} className="whitespace-pre-line">
                       {block.children[0]?.text ?? ''}
@@ -114,7 +114,7 @@ export default async function ImpressumPage({
             <p className="font-montserrat text-sm leading-7">
               <Link
                 href={withLocale('/privacy', lang)}
-                className="text-[#18352b] underline underline-offset-4 transition hover:opacity-70"
+                className="text-[#111111] underline underline-offset-4 transition hover:opacity-70"
               >
                 {common?.footerLabelPolicy}
               </Link>

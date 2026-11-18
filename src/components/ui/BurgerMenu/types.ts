@@ -5,6 +5,7 @@ export interface IBurgerMenuProps {
   navLinks: NavLinkItem[];
   socials: SocialLink[];
   closeLabel: string;
+  id?: string;
   isOpen: boolean;
   onClose: () => void;
 }

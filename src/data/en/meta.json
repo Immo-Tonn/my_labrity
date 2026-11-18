@@ -4,19 +4,34 @@
   "keywords": "Labrity, professional website, business website, website for freelancers, web design Germany, modern websites",
   "icons": [
     {
-      "url": "/meta/favicon.ico"
+      "url": "/favicon.ico?v=2",
+      "rel": "icon",
+      "type": "image/x-icon",
+      "sizes": "16x16 32x32 48x48"
     },
     {
-      "url": "/meta/favicon-16x16.png",
+      "url": "/meta/favicon-16x16.png?v=2",
       "rel": "icon",
       "type": "image/png",
       "sizes": "16x16"
     },
     {
-      "url": "/meta/favicon-32x32.png",
+      "url": "/meta/favicon-32x32.png?v=2",
       "rel": "icon",
       "type": "image/png",
       "sizes": "32x32"
+    },
+    {
+      "url": "/meta/favicon-48x48.png?v=2",
+      "rel": "icon",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "url": "/meta/apple-touch-icon.png?v=2",
+      "rel": "apple-touch-icon",
+      "type": "image/png",
+      "sizes": "180x180"
     }
   ],
   "manifest": "/meta/site.webmanifest",
@@ -28,7 +43,7 @@
     "siteName": "Labrity",
     "images": [
       {
-        "url": "/meta/opengraph-image.jpg",
+        "url": "/meta/opengraph-labrity.jpg",
         "width": 1200,
         "height": 630,
         "alt": "Labrity – Professional Websites"

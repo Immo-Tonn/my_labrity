@@ -39,6 +39,7 @@ const languages: {
 ];
 
 export const BurgerMenu: React.FC<IBurgerMenuProps> = ({
+  id,
   isOpen,
   onClose,
   navLinks,
@@ -95,9 +96,13 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-[999] bg-black/30 backdrop-blur-xl xl:hidden">
+    <div className="fixed inset-0 z-[999] bg-black/30 backdrop-blur-xl lg:hidden">
       <div
         ref={modalRef}
+        id={id}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menu"
         className="
           absolute
           right-0
@@ -106,7 +111,7 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({
           w-[260px]
           flex-col
           gap-6
-          bg-[#f8f6f1]
+          bg-[#F7F7F5]
           px-6
           pb-6
           pt-6
@@ -114,12 +119,12 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({
         "
       >
         <div className="flex items-center justify-between">
-          <Logo path="header" onClick={onClose} />
+          <Logo path="header" onClick={onClose} noOffset />
 
           <button
             onClick={onClose}
             aria-label={closeLabel}
-            className="text-black transition hover:scale-110"
+            className="text-black transition hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#111]"
           >
             <CloseIcon width={24} height={24} />
           </button>
@@ -133,7 +138,7 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({
           />
         </nav>
 
-        <div className="border-y border-[#e7e2d9] py-4">
+        <div className="border-y border-[#111]/[0.12] py-4">
           <div className="mb-3 flex items-center justify-between font-montserrat text-[10px] uppercase tracking-[0.28em]">
             <span className="text-neutral-400">LANG</span>
 

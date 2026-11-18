@@ -70,7 +70,7 @@ export default function BlogArticlePageClient({
     : null;
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f8f6f1] text-black">
+    <main className="swiss min-h-screen overflow-hidden bg-[#F7F7F5]/65 text-black">
       {faqStructuredData && (
         <script
           type="application/ld+json"
@@ -109,7 +109,7 @@ export default function BlogArticlePageClient({
             isPortraitCover ? 'mx-auto max-w-[560px]' : 'mx-auto max-w-[1600px]'
           }
         >
-          <div className="overflow-hidden border border-[#e7e2d9]">
+          <div className="overflow-hidden border border-[#111]/[0.12]">
             <Image
               src={cover.src}
               alt={content.images.coverAlt}
@@ -154,7 +154,7 @@ export default function BlogArticlePageClient({
       )}
 
       {/* BODY */}
-      <section className="border-t border-[#e7e2d9] py-16 md:py-24">
+      <section className="border-t border-[#111]/[0.12] py-16 md:py-24">
         <div className="mx-auto max-w-[1300px] px-5 md:px-8">
           <div className="grid gap-14 xl:grid-cols-[1fr_780px_1fr]">
             <div className="col-start-2 space-y-14">
@@ -198,7 +198,7 @@ export default function BlogArticlePageClient({
                   )}
 
                   {section.checklist && (
-                    <ul className="mt-6 space-y-3 border-t border-[#e7e2d9] pt-6">
+                    <ul className="mt-6 space-y-3 border-t border-[#111]/[0.12] pt-6">
                       {section.checklist.map(item => (
                         <li
                           key={item.slice(0, 40)}
@@ -217,7 +217,7 @@ export default function BlogArticlePageClient({
 
               {/* SOURCES */}
               {content.sources && content.sources.length > 0 && (
-                <div className="border-t border-[#e7e2d9] pt-8">
+                <div className="border-t border-[#111]/[0.12] pt-8">
                   <p className="mb-3 font-montserrat text-xs font-semibold uppercase tracking-[0.24em] text-black/60">
                     {content.ui.sourcesLabel}
                   </p>
@@ -244,7 +244,7 @@ export default function BlogArticlePageClient({
 
       {/* FAQ */}
       {content.faq && (
-        <section className="border-t border-[#e7e2d9] py-16 md:py-24">
+        <section className="border-t border-[#111]/[0.12] py-16 md:py-24">
           <div className="mx-auto max-w-[1300px] px-5 md:px-8">
             <div className="mx-auto max-w-[780px]">
               <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
@@ -254,7 +254,7 @@ export default function BlogArticlePageClient({
                 {content.faq.title}
               </h2>
 
-              <div className="mt-10 divide-y divide-[#e7e2d9] border-y border-[#e7e2d9]">
+              <div className="mt-10 divide-y divide-[#111]/[0.12] border-y border-[#111]/[0.12]">
                 {content.faq.items.map(item => (
                   <details key={item.question} className="group py-6">
                     <summary className="flex min-h-[44px] cursor-pointer list-none items-start justify-between gap-6">
@@ -308,7 +308,7 @@ export default function BlogArticlePageClient({
 
       {/* RELATED ARTICLES */}
       {content.relatedArticles.length > 0 && (
-        <section className="border-t border-[#e7e2d9] py-16 md:py-20">
+        <section className="border-t border-[#111]/[0.12] py-16 md:py-20">
           <div className="mx-auto max-w-[1300px] px-5 md:px-8">
             <p className="mb-6 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
               {content.ui.moreArticlesLabel}
@@ -318,7 +318,7 @@ export default function BlogArticlePageClient({
                 <LocalizedLink
                   key={related.slug}
                   href={`/blog/${related.slug}`}
-                  className="group flex items-center justify-between gap-4 border border-[#e7e2d9] bg-white/40 px-6 py-5 transition duration-300 hover:bg-white/70"
+                  className="group flex items-center justify-between gap-4 border border-[#111]/[0.12] bg-white/40 px-6 py-5 transition duration-300 hover:bg-white/70"
                 >
                   <span className="font-montserrat text-[14px] leading-6 text-neutral-700">
                     {related.title}

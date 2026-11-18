@@ -63,7 +63,7 @@ export default function WebentwicklungPageClient({
   };
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f8f6f1] text-black">
+    <main className="swiss min-h-screen overflow-hidden bg-[#F7F7F5]/65 text-black">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
@@ -97,7 +97,7 @@ export default function WebentwicklungPageClient({
 
       {/* HERO VISUAL — dark */}
       <section className="px-5 md:px-8">
-        <div className="mx-auto max-w-[1700px] overflow-hidden border border-[#e7e2d9]">
+        <div className="mx-auto max-w-[1700px] overflow-hidden border border-[#111]/[0.12]">
           <Image
             src="/images/services/webentwicklung-hero.jpg"
             alt={content.images.heroAlt}
@@ -110,7 +110,7 @@ export default function WebentwicklungPageClient({
       </section>
 
       {/* CORE */}
-      <section className="border-t border-[#e7e2d9] py-24 md:py-32">
+      <section className="border-t border-[#111]/[0.12] py-24 md:py-32">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8">
           <div className="mx-auto max-w-[860px] text-center">
             <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
@@ -128,7 +128,7 @@ export default function WebentwicklungPageClient({
             {content.coreSection.items.map(item => (
               <div
                 key={item.title}
-                className="border border-[#e7e2d9] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/70"
+                className="border border-[#111]/[0.12] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/70"
               >
                 <h3 className="font-tenor text-[26px] leading-[1.05] tracking-[-0.02em] text-black">
                   {item.title}
@@ -143,7 +143,7 @@ export default function WebentwicklungPageClient({
       </section>
 
       {/* FOR WHOM */}
-      <section className="border-t border-[#e7e2d9] py-24 md:py-32">
+      <section className="sw-tint border-t border-[#111]/[0.12] py-24 md:py-32">
         <div className="mx-auto max-w-[860px] px-5 text-center md:px-8">
           <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
             {content.forWhomSection.kicker}
@@ -177,7 +177,7 @@ export default function WebentwicklungPageClient({
       </section>
 
       {/* DISAMBIGUATION */}
-      <section className="border-t border-[#e7e2d9] py-16 md:py-20">
+      <section className="sw-tint border-t border-[#111]/[0.12] py-16 md:py-20">
         <div className="mx-auto max-w-[1100px] px-5 md:px-8">
           <p className="mb-3 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
             {content.disambiguation.kicker}
@@ -190,7 +190,7 @@ export default function WebentwicklungPageClient({
               <LocalizedLink
                 key={item.href}
                 href={item.href}
-                className="group flex flex-col items-start gap-3 border border-[#e7e2d9] bg-white/40 px-6 py-5 transition duration-300 hover:bg-white/70 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+                className="group flex flex-col items-start gap-3 border border-[#111]/[0.12] bg-white/40 px-6 py-5 transition duration-300 hover:bg-white/70 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
               >
                 <span className="font-montserrat text-[14px] leading-6 text-neutral-600">
                   {item.label}
@@ -206,7 +206,7 @@ export default function WebentwicklungPageClient({
       </section>
 
       {/* FAQ */}
-      <section className="border-t border-[#e7e2d9] py-24 md:py-32">
+      <section className="border-t border-[#111]/[0.12] py-24 md:py-32">
         <div className="mx-auto max-w-[1300px] px-5 md:px-8">
           <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
             {content.faq.kicker}
@@ -215,7 +215,7 @@ export default function WebentwicklungPageClient({
             {content.faq.title}
           </h2>
 
-          <div className="mt-12 divide-y divide-[#e7e2d9] border-y border-[#e7e2d9]">
+          <div className="mt-12 divide-y divide-[#111]/[0.12] border-y border-[#111]/[0.12]">
             {content.faq.items.map(item => (
               <details key={item.question} className="group py-7">
                 <summary className="flex min-h-[44px] cursor-pointer list-none items-start justify-between gap-6">
@@ -239,7 +239,7 @@ export default function WebentwicklungPageClient({
 
       {/* RELATED ARTICLES */}
       {content.relatedArticles && (
-        <section className="border-t border-[#e7e2d9] py-16 md:py-20">
+        <section className="border-t border-[#111]/[0.12] py-16 md:py-20">
           <div className="mx-auto max-w-[1100px] px-5 md:px-8">
             <p className="mb-3 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
               {content.relatedArticles.kicker}
@@ -252,7 +252,7 @@ export default function WebentwicklungPageClient({
                 <LocalizedLink
                   key={item.href}
                   href={item.href}
-                  className="group flex flex-col items-start gap-3 border border-[#e7e2d9] bg-white/40 px-6 py-5 transition duration-300 hover:bg-white/70 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+                  className="group flex flex-col items-start gap-3 border border-[#111]/[0.12] bg-white/40 px-6 py-5 transition duration-300 hover:bg-white/70 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
                 >
                   <span className="font-montserrat text-[14px] leading-6 text-neutral-600">
                     {item.label}

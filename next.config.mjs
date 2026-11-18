@@ -19,13 +19,11 @@ const nextConfig = {
     return config;
   },
 
-  // Content-Security-Policy is intentionally NOT set here yet. This site loads
-  // Usercentrics CMP (web.cmp.usercentrics.eu, plus whatever it calls
-  // internally — currently broken, see the known CMP ruleset issue) and an
-  // inline Google Analytics init script, and a safe CSP needs to enumerate
-  // every one of those sources without relying on 'unsafe-inline'. That needs
-  // a dedicated pass once Usercentrics is reconfigured — see the audit report
-  // for a proposed CSP to review at that point.
+  // Content-Security-Policy is intentionally NOT set here yet. The cookie
+  // banner is self-hosted (vanilla-cookieconsent), but an inline Google
+  // Analytics init script and googletagmanager.com are still in use, so a safe
+  // CSP needs a dedicated pass to enumerate those sources without relying on
+  // 'unsafe-inline'.
   async headers() {
     return [
       {

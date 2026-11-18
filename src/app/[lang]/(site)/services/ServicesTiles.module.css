@@ -1,0 +1,122 @@
+/* Decorative tile composition (pure CSS). The block size is reserved by the
+   parent, tiles live inside an overflow-hidden frame. */
+
+.frame {
+  position: relative;
+  overflow: hidden;
+  background: #eeeeeb;
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  isolation: isolate;
+  --e: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Cursor tilt (desktop only, ≤ 1.5°) */
+.tilt {
+  position: absolute;
+  inset: 0;
+  transform: perspective(1400px) rotateX(var(--tx, 0deg))
+    rotateY(var(--ty, 0deg));
+  transition: transform 0.6s var(--e);
+  will-change: transform;
+}
+
+/* Static, light perspective of the whole plane */
+.plane {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 118%;
+  aspect-ratio: 4 / 3;
+  transform: translate(-50%, -50%) perspective(1100px) rotateX(20deg)
+    rotateZ(-5deg);
+  transform-origin: 50% 50%;
+}
+
+.tile {
+  position: absolute;
+  left: calc(var(--x) * 1%);
+  top: calc(var(--y) * 1.3333%);
+  width: calc(var(--w) * 1%);
+  height: calc(var(--h) * 1.3333%);
+  animation: tileIn 0.8s var(--e) var(--d, 0s) both;
+  animation-play-state: paused;
+}
+
+.root[data-play] .tile {
+  animation-play-state: running;
+}
+
+.light {
+  background: #f7f7f5;
+  /* thickness: stacked 1px steps give the bottom/right side faces */
+  box-shadow:
+    1px 1px 0 #dcdcd8,
+    2px 2px 0 #d3d3cf,
+    3px 3px 0 #cbcbc7,
+    4px 4px 0 #c3c3bf,
+    5px 6px 0 #bbbbb7,
+    /* contact shadow, then a long soft one (light from the top left) */ 7px 9px
+      8px -1px rgba(17, 17, 17, 0.2),
+    16px 22px 30px -4px rgba(17, 17, 17, 0.16);
+}
+
+.dark {
+  background: #1c1c1c;
+  box-shadow:
+    1px 1px 0 #101010,
+    2px 2px 0 #0a0a0a,
+    3px 3px 0 #060606,
+    4px 4px 0 #040404,
+    5px 6px 0 #000,
+    7px 9px 8px -1px rgba(0, 0, 0, 0.3),
+    18px 24px 32px -4px rgba(17, 17, 17, 0.26);
+}
+
+.red {
+  background: #ff3830;
+  box-shadow:
+    1px 1px 0 #e0302a,
+    2px 2px 0 #c92a25,
+    3px 3px 0 #b3241f,
+    4px 4px 0 #9f1f1b,
+    5px 6px 0 #8c1b17,
+    6px 8px 7px -1px rgba(17, 17, 17, 0.28),
+    12px 17px 22px -4px rgba(17, 17, 17, 0.2);
+}
+
+/* a faint top-left light edge so the faces read as raised slabs */
+.tile::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.55);
+}
+
+.dark::before {
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+@keyframes tileIn {
+  from {
+    opacity: 0;
+    transform: translate(var(--fx, 0px), var(--fy, 12px));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* No JS: the finished composition is shown at once (see <noscript> too). */
+@media (prefers-reduced-motion: reduce) {
+  .tile {
+    animation: none;
+    opacity: 1;
+  }
+
+  .tilt {
+    transition: none;
+    transform: none;
+  }
+}
