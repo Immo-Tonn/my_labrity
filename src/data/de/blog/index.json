@@ -18,6 +18,65 @@
     "webdesign-beauty-wellness",
     "website-kunden-gewinnen-leadgenerierung"
   ],
-  "heroAlt": "Aufgeklappter Laptop auf einer Marmorplatte mit Blick auf Meer und Berge bei Sonnenuntergang, akzentuiert durch ein rotes Glaselement.",
-  "editorialAlt": "Offener Laptop auf einem dunklen Schreibtisch mit Notizbuch, Kaffeetasse und rotem Ahornzweig, im Hintergrund die Kölner Skyline."
+  "heroAlt": "Aufgeschlagenes Designbuch mit kräftigen schwarzen Formen, einer Glaskugel und einem roten Lesezeichen.",
+  "editorialAlt": "Gefaltetes helles Papier mit rotem Innenblatt auf einer dunklen Graphitfläche.",
+  "cards": {
+    "terminbuchung-verwaltung-software-kleine-betriebe": {
+      "category": "Web-Apps",
+      "excerpt": "Was Buchungs- und Verwaltungssoftware übernimmt, wann Standardsoftware reicht und wann sich eine eigene Web-App lohnt."
+    },
+    "website-erstellen-lassen-kosten": {
+      "category": "Preise",
+      "excerpt": "Grobe Preisspannen, typische Kostentreiber und Fragen, mit denen Sie ein Angebot einschätzen können."
+    },
+    "website-relaunch-seo-verluste-vermeiden": {
+      "category": "Relaunch",
+      "excerpt": "Ein Relaunch ist riskant, weil Google die alte Seite kennt. Mit guter Vorbereitung lassen sich SEO-Verluste vermeiden."
+    },
+    "freelancer-oder-webagentur": {
+      "category": "Entscheidung",
+      "excerpt": "Keine pauschal richtige Antwort: die echten Unterschiede, damit Sie passend zu Ihrem Projekt entscheiden."
+    },
+    "website-veraltet-anzeichen": {
+      "category": "Check",
+      "excerpt": "Sieben Anzeichen, die Sie in wenigen Minuten selbst prüfen können — ohne technisches Vorwissen."
+    },
+    "landingpage-oder-website": {
+      "category": "Strategie",
+      "excerpt": "Der Unterschied liegt nicht im Umfang, sondern im Ziel. So erkennen Sie, was Sie wirklich brauchen."
+    },
+    "website-ladezeit-performance": {
+      "category": "Technik",
+      "excerpt": "Besucher spüren die Ladezeit sofort, Google misst sie direkt. Darum ist Performance Geschäftssache."
+    },
+    "website-briefing-checkliste": {
+      "category": "Projektstart",
+      "excerpt": "Mit ein paar Antworten vorab sparen beide Seiten Zeit und kommen schneller zum passenden Angebot."
+    },
+    "redirects-website-relaunch": {
+      "category": "SEO",
+      "excerpt": "301-Weiterleitungen sind der wichtigste Hebel, um bei einem Relaunch keine Rankings zu verlieren."
+    },
+    "landingpage-dauer-launch": {
+      "category": "Landingpage",
+      "excerpt": "Die Dauer hängt von konkreten Faktoren ab. Wer sie kennt, plant den Zeitrahmen realistisch."
+    },
+    "webdesign-beauty-wellness": {
+      "category": "Branchen",
+      "excerpt": "Bei Beauty und Wellness entscheidet die Website vor dem ersten Kontakt: Klarheit, Atmosphäre, einfache Buchung."
+    },
+    "website-kunden-gewinnen-leadgenerierung": {
+      "category": "Kundengewinnung",
+      "excerpt": "Neue Kunden entstehen durch Zusammenspiel: Positionierung, Vertrauen, klarer Kontaktweg, laufende Optimierung."
+    }
+  },
+  "featuredSlug": "website-relaunch-seo-verluste-vermeiden",
+  "featuredLabel": "Empfohlener Artikel",
+  "readTimeLabel": "Min. Lesezeit",
+  "cta": {
+    "kicker": "Ihr Projekt",
+    "title": "Sprechen wir über Ihre Website.",
+    "text": "Beschreiben Sie kurz Ihr Vorhaben — wir melden uns in der Regel innerhalb von 24–48 Stunden.",
+    "button": "Kontakt aufnehmen"
+  }
 }

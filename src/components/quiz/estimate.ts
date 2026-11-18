@@ -138,8 +138,7 @@ export const calculateEstimate = (
 
   // FEATURES
   // 0: Contact form | 1: Online appointment booking | 2: Price calculator
-  // 3: Customer management | 4: Connection with other services
-  // 5: Client account area | 6: Not sure
+  // 3: Connection with other services | 4: Client account area | 5: Not sure
   featureIndexes.forEach(featureIndex => {
     switch (featureIndex) {
       case 0:
@@ -154,21 +153,15 @@ export const calculateEstimate = (
         total += 300;
         break;
 
-      // case 3:
-      //   total += 2000;
-      //   break;
-
-      case 4:
+      case 3:
         total += 200;
         break;
 
-      case 5:
+      case 4:
         total += 1000;
         break;
 
-      // default:
-      //   total += 0;
-      //   break;
+      // 5 (Not sure): no surcharge
     }
   });
 

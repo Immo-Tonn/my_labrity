@@ -1,10 +1,9 @@
 'use client';
 
-import { type ComponentType, type ReactNode, useState } from 'react';
-import { motion } from 'framer-motion';
+import { type ReactNode, useState } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 import {
   BadgeCheck,
-  Check,
   ChevronDown,
   Gem,
   HelpCircle,
@@ -15,11 +14,13 @@ import {
   ShieldCheck,
   Sparkles,
   Target,
-  type LucideProps,
 } from 'lucide-react';
 
+import { BackgroundVideo } from '@/components/common/BackgroundVideo';
 import { useQuiz } from '@/components/quiz';
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
+
+import styles from './Prices.module.css';
 
 type PriceFactorItem = {
   title: string;
@@ -172,7 +173,14 @@ export type PricesData = {
   };
 };
 
-const heroEase = [0.22, 1, 0.36, 1] as const;
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+// Hero background video, shown behind a dimming layer.
+const HERO_VIDEO = {
+  webm: '/videos/gold-bg.webm',
+  mp4: '/videos/gold-bg.mp4',
+  poster: '/videos/gold-bg-poster.jpg',
+};
 
 const packageIcons = [
   Palette,
@@ -184,8 +192,35 @@ const packageIcons = [
 ];
 const priceFactorIcons = [Target, Sparkles, ShieldCheck];
 
+// A number and its euro sign (either order) never break across lines.
+const nb = (text: string) =>
+  text.replace(/(\d)\s+€/g, '$1 €').replace(/€\s+(\d)/g, '€ $1');
+
+// Short, staggered entrance from a given side. Without motion (reduced
+// motion) the grid simply renders in place.
+function useReveal() {
+  const reduce = useReducedMotion();
+
+  return (x: number, y: number, delay = 0) =>
+    reduce
+      ? {}
+      : {
+          initial: { opacity: 0, x, y },
+          whileInView: { opacity: 1, x: 0, y: 0 },
+          viewport: { once: true, amount: 0.12 },
+          transition: { duration: 0.75, delay, ease: EASE },
+        };
+}
+
+const cx = (...names: (string | false | undefined)[]) =>
+  names.filter(Boolean).join(' ');
+
 function getSectionClasses(extraClasses = '') {
-  return `border-t border-[#111]/[0.12] px-5 py-20 md:px-8 md:py-28 ${extraClasses}`;
+  return `border-t border-[#111] px-5 py-16 md:px-8 md:py-24 ${extraClasses}`;
+}
+
+function Kicker({ children }: { children: ReactNode }) {
+  return <p className={styles.kicker}>{children}</p>;
 }
 
 function SectionTitle({
@@ -203,20 +238,20 @@ function SectionTitle({
     <div
       className={
         align === 'center'
-          ? 'mx-auto max-w-[900px] text-center'
+          ? 'mx-auto flex max-w-[900px] flex-col items-center text-center'
           : 'max-w-[780px]'
       }
     >
-      <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
-        {kicker}
-      </p>
+      <Kicker>{kicker}</Kicker>
 
-      <h2 className="font-tenor text-[42px] leading-[1] tracking-[-0.04em] text-black md:text-[72px]">
+      <h2 className="font-tenor text-[40px] leading-[1] tracking-[-0.04em] md:text-[68px]">
         {title}
       </h2>
 
       {description && (
-        <p className="mt-7 font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
+        <p
+          className={`${styles.sub} mt-7 font-montserrat text-[15px] leading-8 md:text-[17px]`}
+        >
           {description}
         </p>
       )}
@@ -228,25 +263,21 @@ function ActionButton({
   children,
   onClick,
   href,
-  variant = 'dark',
+  ghost = false,
   className = '',
 }: {
   children: ReactNode;
   onClick?: () => void;
   href?: string;
-  variant?: 'dark' | 'light' | 'outlineDark' | 'outlineLight';
+  ghost?: boolean;
   className?: string;
 }) {
-  const variants = {
-    dark: 'border-black bg-black text-white hover:-translate-y-[1px] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]',
-    light: 'border-white bg-white text-black hover:-translate-y-[1px]',
-    outlineDark:
-      'border-black bg-transparent text-black hover:bg-black hover:text-white',
-    outlineLight:
-      'border-white/40 bg-transparent text-white hover:border-white hover:bg-white hover:text-black',
-  };
-
-  const classes = `inline-flex min-h-[56px] items-center justify-center border px-8 text-center font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] transition duration-300 ${variants[variant]} ${className}`;
+  const classes = cx(
+    styles.btn,
+    ghost && styles.ghost,
+    'font-montserrat',
+    className,
+  );
 
   if (href) {
     return (
@@ -263,48 +294,12 @@ function ActionButton({
   );
 }
 
-function IconBox({
-  icon: Icon,
-  dark = false,
-}: {
-  icon: ComponentType<LucideProps>;
-  dark?: boolean;
-}) {
+function FeatureList({ items }: { items: string[] }) {
   return (
-    <span
-      className={`flex size-12 shrink-0 items-center justify-center border ${
-        dark
-          ? 'border-white/15 text-white/70'
-          : 'border-[#111]/[0.12] text-black/40'
-      }`}
-    >
-      <Icon size={24} strokeWidth={1.15} />
-    </span>
-  );
-}
-function FeatureList({
-  items,
-  light = false,
-}: {
-  items: string[];
-  light?: boolean;
-}) {
-  return (
-    <ul className="space-y-3">
+    <ul className={`${styles.list} font-montserrat`}>
       {items.map(feature => (
-        <li
-          key={feature}
-          className={`flex gap-3 font-montserrat text-[13px] leading-6 ${
-            light ? 'text-white/70' : 'text-neutral-600'
-          }`}
-        >
-          <Check
-            size={16}
-            strokeWidth={1.6}
-            className={`mt-1 shrink-0 ${light ? 'text-white' : 'text-black'}`}
-          />
-
-          <span>{feature}</span>
+        <li key={feature}>
+          <span>{nb(feature)}</span>
         </li>
       ))}
     </ul>
@@ -318,12 +313,14 @@ function InfoBlock({ label, value }: { label: string; value?: string }) {
 
   return (
     <div>
-      <p className="font-montserrat text-xs font-semibold uppercase tracking-[0.22em] text-black/60">
+      <p
+        className={`${styles.fg} font-montserrat text-xs font-semibold uppercase tracking-[0.22em]`}
+      >
         {label}
       </p>
 
-      <p className="mt-2 font-montserrat text-[13px] leading-6 text-neutral-500">
-        {value}
+      <p className={`${styles.sub} mt-2 font-montserrat text-[13px] leading-6`}>
+        {nb(value)}
       </p>
     </div>
   );
@@ -334,49 +331,45 @@ function PackageCard({
   index,
   ui,
   onClick,
+  reveal,
 }: {
   item: PackageItem;
   index: number;
   ui: PricesData['ui'];
   onClick: () => void;
+  reveal: ReturnType<typeof useReveal>;
 }) {
   const Icon = packageIcons[index] || PanelsTopLeft;
-  const isRecommended = Boolean(item.badge);
   const [isOpen, setIsOpen] = useState(false);
+  const col = index % 3;
+  const side = col === 0 ? -48 : col === 2 ? 48 : 0;
 
   return (
-    <article
-      className={`relative flex h-full min-w-0 flex-col border p-7 transition duration-300 hover:-translate-y-[2px] ${
-        isRecommended
-          ? 'sw-ink border-[#111]'
-          : 'border-[#111]/[0.12] bg-white/45 shadow-[0_14px_36px_rgba(0,0,0,0.03)] hover:bg-white/70'
-      }`}
+    <motion.article
+      {...reveal(side, side === 0 ? 40 : 0, (index % 3) * 0.08)}
+      className={cx(styles.cell, styles.pkg)}
     >
       <button
         type="button"
         onClick={() => setIsOpen(prev => !prev)}
         aria-expanded={isOpen}
-        className="flex w-full flex-col text-left md:pointer-events-none"
+        className={styles.pkgToggle}
       >
         <div className="mb-8 flex items-start justify-between gap-4">
-          <Icon size={42} strokeWidth={1.1} className="text-black/40" />
+          <Icon size={42} strokeWidth={1.1} className={styles.sub} />
 
-          {item.badge && (
-            <span className="bg-black px-3 py-1.5 font-montserrat text-xs font-semibold uppercase tracking-[0.18em] text-white">
-              {item.badge}
-            </span>
-          )}
+          {item.badge && <span className={styles.badge}>{item.badge}</span>}
         </div>
 
         <div className="flex items-start justify-between gap-4">
-          <h3 className="max-w-[420px] break-words font-tenor text-[34px] leading-[1] tracking-[-0.035em] text-black">
+          <h3 className="max-w-[420px] break-words font-tenor text-[32px] leading-[1] tracking-[-0.035em] xl:text-[34px]">
             {item.name}
           </h3>
 
           <ChevronDown
             size={22}
             strokeWidth={1.4}
-            className={`mt-2 shrink-0 text-black/40 transition-transform duration-300 md:hidden ${
+            className={`mt-2 shrink-0 transition-transform duration-300 md:hidden ${
               isOpen ? 'rotate-180' : ''
             }`}
           />
@@ -386,16 +379,21 @@ function PackageCard({
       <div
         className={`${isOpen ? 'flex flex-1 flex-col' : 'hidden'} md:flex md:flex-1 md:flex-col`}
       >
-        <p className="mt-5 font-montserrat text-[14px] leading-7 text-neutral-500">
-          {item.shortDescription}
+        <p
+          className={`${styles.sub} mt-5 font-montserrat text-[14px] leading-7`}
+        >
+          {nb(item.shortDescription)}
         </p>
 
-        <p className="mt-8 break-words font-tenor text-[40px] leading-none tracking-[-0.04em] text-black">
-          {item.price}
+        <p className="mt-8 break-words font-tenor text-[40px] leading-none tracking-[-0.04em]">
+          {nb(item.price)}
         </p>
 
-        <p className="mt-6 border-t border-[#111]/[0.12] pt-5 font-montserrat text-[13px] leading-6 text-neutral-500">
-          {item.idealFor}
+        <p
+          className={`${styles.sub} mt-6 border-t pt-5 font-montserrat text-[13px] leading-6`}
+          style={{ borderColor: 'var(--line)' }}
+        >
+          {nb(item.idealFor)}
         </p>
 
         <div className="mt-7">
@@ -406,7 +404,10 @@ function PackageCard({
           item.notSuitableFor ||
           item.duration ||
           item.support) && (
-          <div className="mb-5 mt-8 space-y-4 border-t border-[#111]/[0.12] pt-6">
+          <div
+            className="mb-5 mt-8 space-y-4 border-t pt-6"
+            style={{ borderColor: 'var(--line)' }}
+          >
             <InfoBlock label={ui.suitableFor} value={item.suitableFor} />
             <InfoBlock label={ui.notSuitableFor} value={item.notSuitableFor} />
 
@@ -421,246 +422,211 @@ function PackageCard({
 
         <ActionButton
           onClick={onClick}
-          variant={isRecommended ? 'dark' : 'outlineDark'}
-          className="mt-auto w-full"
+          ghost={index % 2 === 1}
+          className="mt-8 w-full"
         >
           {item.button}
         </ActionButton>
       </div>
-    </article>
-  );
-}
-
-function SubscriptionCard({ item }: { item: SubscriptionItem }) {
-  return (
-    <article className="flex h-full min-w-0 flex-col border border-[#111]/[0.12] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/75">
-      <RefreshCcw size={38} strokeWidth={1.1} className="mb-7 text-black/40" />
-
-      <h3 className="break-words font-tenor text-[30px] leading-[1] tracking-[-0.03em] text-black">
-        {item.name}
-      </h3>
-
-      <p className="2xl:text-[34px] mt-6 break-words font-tenor text-[30px] leading-none tracking-[-0.04em] text-black">
-        {item.price}
-      </p>
-
-      <p className="mt-3 font-montserrat text-xs font-medium uppercase tracking-[0.18em] text-black/60">
-        {item.setup}
-      </p>
-
-      <p className="mt-6 font-montserrat text-[14px] leading-7 text-neutral-500">
-        {item.description}
-      </p>
-
-      <div className="mt-7">
-        <FeatureList items={item.features} />
-      </div>
-    </article>
-  );
-}
-
-function CareCard({ item }: { item: CareItem }) {
-  return (
-    <article className="flex h-full min-w-0 flex-col border border-[#111]/[0.12] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/75">
-      <ShieldCheck size={38} strokeWidth={1.1} className="mb-7 text-black/40" />
-
-      <h3 className="break-words font-tenor text-[30px] leading-[1] tracking-[-0.03em] text-black">
-        {item.name}
-      </h3>
-
-      <p className="2xl:text-[34px] mt-6 break-words font-tenor text-[30px] leading-none tracking-[-0.04em] text-black">
-        {item.price}
-      </p>
-
-      <p className="mt-6 font-montserrat text-[14px] leading-7 text-neutral-500">
-        {item.description}
-      </p>
-
-      <div className="mt-7">
-        <FeatureList items={item.features} />
-      </div>
-    </article>
-  );
-}
-
-function AdditionalServiceCard({ item }: { item: AdditionalServiceItem }) {
-  return (
-    <article className="min-w-0 border border-[#111]/[0.12] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/75">
-      <p className="font-montserrat text-xs font-medium uppercase tracking-[0.22em] text-black/60">
-        {item.price}
-      </p>
-
-      <h3 className="mt-5 break-words font-tenor text-[30px] leading-[1] tracking-[-0.03em] text-black">
-        {item.name}
-      </h3>
-
-      <p className="mt-5 font-montserrat text-[14px] leading-7 text-neutral-500">
-        {item.description}
-      </p>
-    </article>
+    </motion.article>
   );
 }
 
 export default function PricesPageClient({
   initialData,
+  video,
 }: {
   initialData: PricesData;
+  video: { pauseLabel: string; playLabel: string };
 }) {
   const { openQuiz } = useQuiz();
   const content = initialData;
+  const reveal = useReveal();
+
+  const sectionWrap = { style: { opacity: 1 } };
 
   return (
-    <main className="swiss min-h-screen bg-[#F7F7F5]/65 text-black">
-      {/* HERO */}
-      <section className="md:pb-18 2xl:pb-24 2xl:pt-[195px] px-5 pb-14 pt-[135px] md:px-8 md:pt-[155px] xl:pb-20 xl:pt-[180px]">
+    <main
+      className={`${styles.page} swiss min-h-screen overflow-x-clip bg-[#F7F7F5]/65 text-black`}
+    >
+      {/* HERO — graphite, light text; the optional video sits behind. */}
+      <section
+        className={cx(
+          styles.hero,
+          styles.dark,
+          'px-5 pb-14 pt-[135px] md:px-8 md:pb-20 md:pt-[160px] xl:pb-24 xl:pt-[185px]',
+        )}
+      >
+        <div className={styles.heroMedia}>
+          <BackgroundVideo
+            {...HERO_VIDEO}
+            pauseLabel={video.pauseLabel}
+            playLabel={video.playLabel}
+            className="h-full w-full border-0"
+            videoClassName="saturate-[0.7]"
+            overlayClassName="bg-[#111111]/70"
+            controlClassName="right-5 top-24 md:right-8 md:top-28"
+          />
+        </div>
+
         <div className="mx-auto max-w-[1700px]">
-          <div className="2xl:grid-cols-[1.08fr_0.82fr] 2xl:items-center 2xl:gap-20 grid gap-12">
-            <motion.div>
-              <motion.p
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.1, ease: heroEase }}
-                className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/60 md:text-[13px]"
-              >
-                {content.hero.kicker}
-              </motion.p>
+          <motion.p
+            {...reveal(-28, 0, 0.05)}
+            className="mb-6 flex items-center gap-3 font-montserrat text-[12px] font-semibold uppercase tracking-[0.38em] text-[#F7F7F5] md:text-[13px]"
+          >
+            {content.hero.kicker}
+          </motion.p>
 
-              <motion.h1
-                initial={{ opacity: 0, y: 32 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.18, ease: heroEase }}
-                className="2xl:text-[98px] max-w-[1040px] font-tenor text-[42px] leading-[1] tracking-[-0.04em] text-black md:text-[64px] xl:text-[78px]"
-              >
-                {content.hero.title}
-              </motion.h1>
+          <motion.h1
+            {...reveal(-48, 0, 0.15)}
+            className="2xl:text-[96px] max-w-[1100px] font-tenor text-[40px] leading-[1.02] tracking-[-0.04em] text-[#F7F7F5] md:text-[64px] xl:text-[80px]"
+          >
+            {content.hero.title}
+          </motion.h1>
 
-              <motion.p
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.32, ease: heroEase }}
-                className="mt-8 max-w-[760px] font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[18px]"
-              >
-                {content.hero.description}
-              </motion.p>
+          <motion.p
+            {...reveal(48, 0, 0.3)}
+            className="mt-8 max-w-[780px] font-montserrat text-[15px] leading-8 text-[#F7F7F5]/90 md:text-[18px]"
+          >
+            {nb(content.hero.description)}
+          </motion.p>
 
-              <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.45, ease: heroEase }}
-                className="mt-10 flex flex-wrap gap-4"
-              >
-                <ActionButton onClick={openQuiz}>
-                  {content.hero.primaryButton}
-                </ActionButton>
+          <motion.div
+            {...reveal(0, 28, 0.45)}
+            className="mt-10 flex flex-wrap gap-4"
+          >
+            <ActionButton onClick={openQuiz}>
+              {content.hero.primaryButton}
+            </ActionButton>
 
-                <ActionButton href="#packages" variant="outlineDark">
-                  {content.hero.secondaryButton}
-                </ActionButton>
-              </motion.div>
+            <ActionButton href="#packages" ghost>
+              {content.hero.secondaryButton}
+            </ActionButton>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* NOTE + STATS — starts light after the graphite hero */}
+      <section className="border-t border-[#111] px-5 py-12 md:px-8 md:py-16">
+        <div className="mx-auto max-w-[1700px]" {...sectionWrap}>
+          <div className={cx(styles.mosaic, styles.band)}>
+            <motion.div
+              {...reveal(0, 40)}
+              className={cx(styles.cell, styles.light, styles.note)}
+            >
+              <p className="font-tenor text-[34px] leading-[1.02] tracking-[-0.04em] md:text-[40px] xl:text-[44px]">
+                {nb(content.hero.note)}
+              </p>
             </motion.div>
 
-            <motion.aside
-              initial={{ opacity: 0, y: 36 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.3, ease: heroEase }}
-              className="2xl:-translate-y-4 border border-[#111]/[0.12] bg-white/35 shadow-[0_14px_36px_rgba(0,0,0,0.025)]"
-            >
-              <div className="px-7 py-8 md:px-9 md:py-10">
-                <p className="font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
-                  {content.hero.kicker}
+            {(content.hero.stats ?? []).map((stat, index) => (
+              <motion.div
+                key={`${stat.value}-${stat.label}`}
+                data-i={index}
+                {...reveal(index % 2 === 0 ? -56 : 56, 0, 0.1 + index * 0.1)}
+                className={cx(styles.cell, styles.light, styles.stat)}
+              >
+                <p className="font-tenor text-[44px] leading-none tracking-[-0.04em] md:text-[56px]">
+                  {stat.value}
                 </p>
 
-                <p className="mt-7 max-w-[820px] font-tenor text-[32px] leading-[1] tracking-[-0.04em] text-black sm:text-[38px] md:text-[54px]">
-                  {content.hero.note}
-                </p>
-              </div>
-
-              <div className="grid divide-y divide-[#111]/[0.12] border-t border-[#111]/[0.12] sm:grid-cols-2 sm:divide-x sm:divide-y-0 xl:grid-cols-4">
-                {(content.hero.stats ?? []).map(stat => (
-                  <div
-                    key={`${stat.value}-${stat.label}`}
-                    className="px-7 py-7 md:px-9 md:py-9"
-                  >
-                    <p className="font-tenor text-[38px] leading-none tracking-[-0.04em] text-black">
-                      {stat.value}
-                    </p>
-
-                    <p className="mt-5 font-montserrat text-xs font-medium uppercase tracking-[0.24em] text-black/60">
-                      {stat.label}
-                    </p>
-
-                    <div className="mt-7 h-px w-20 bg-black/20" />
-                  </div>
-                ))}
-              </div>
-            </motion.aside>
+                <div>
+                  <span
+                    aria-hidden="true"
+                    className={cx(styles.rule, styles.statLine, 'mb-5')}
+                  />
+                  <p className="font-montserrat text-xs font-medium uppercase tracking-[0.24em]">
+                    {stat.label}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ORIENTATION */}
-      <section className={getSectionClasses('xl:py-24')}>
-        <div className="mx-auto grid max-w-[1500px] gap-12 xl:grid-cols-[0.82fr_1.18fr] xl:items-start xl:gap-20">
-          <div>
-            <SectionTitle
-              kicker={content.priceFactors.kicker}
-              title={content.priceFactors.title}
-              description={content.priceFactors.description}
-              align="left"
-            />
+      {/* ORIENTATION — starts graphite, ends light */}
+      <section className={getSectionClasses()}>
+        <div className="mx-auto max-w-[1500px]" {...sectionWrap}>
+          <div
+            className={cx(styles.mosaic, styles.split)}
+            style={{ '--cols': '0.8fr 1.2fr' } as React.CSSProperties}
+          >
+            <motion.div
+              {...reveal(-48, 0)}
+              className={cx(styles.cell, styles.dark, styles.pad)}
+            >
+              <SectionTitle
+                kicker={content.priceFactors.kicker}
+                title={content.priceFactors.title}
+                description={content.priceFactors.description}
+                align="left"
+              />
 
-            <div className="mt-9 flex flex-wrap gap-4">
-              <ActionButton href="#packages">
-                {content.hero.secondaryButton}
-              </ActionButton>
+              <div className="mt-9 flex flex-wrap gap-4">
+                <ActionButton href="#packages">
+                  {content.hero.secondaryButton}
+                </ActionButton>
 
-              <ActionButton onClick={openQuiz} variant="outlineDark">
-                {content.hero.primaryButton}
-              </ActionButton>
+                <ActionButton onClick={openQuiz} ghost>
+                  {content.hero.primaryButton}
+                </ActionButton>
+              </div>
+            </motion.div>
+
+            <div className={styles.mosaic} style={{ border: 0 }}>
+              {content.priceFactors.items.map((item, index) => {
+                const Icon = priceFactorIcons[index] || Target;
+
+                return (
+                  <motion.article
+                    key={item.title}
+                    {...reveal(48, 0, 0.1 + index * 0.1)}
+                    className={cx(
+                      styles.cell,
+                      styles.factor,
+                      index % 2 === 0 ? styles.light : styles.dark,
+                    )}
+                  >
+                    <p className="font-montserrat text-xs font-semibold uppercase tracking-[0.28em]">
+                      {String(index + 1).padStart(2, '0')}
+                    </p>
+
+                    <Icon
+                      size={38}
+                      strokeWidth={1.1}
+                      className={styles.factorIcon}
+                    />
+
+                    <div>
+                      <h3 className="font-tenor text-[30px] leading-[1] tracking-[-0.03em] md:text-[38px]">
+                        {item.title}
+                      </h3>
+
+                      <p
+                        className={`${styles.sub} mt-4 max-w-[720px] font-montserrat text-[14px] leading-7 md:text-[16px]`}
+                      >
+                        {item.description}
+                      </p>
+                    </div>
+                  </motion.article>
+                );
+              })}
             </div>
           </div>
-
-          <div className="divide-y divide-[#111]/[0.12] border-y border-[#111]/[0.12]">
-            {content.priceFactors.items.map((item, index) => {
-              const Icon = priceFactorIcons[index] || Target;
-
-              return (
-                <article
-                  key={item.title}
-                  className="grid gap-5 py-7 md:grid-cols-[90px_70px_1fr] md:items-start md:gap-7"
-                >
-                  <p className="font-montserrat text-xs font-semibold uppercase tracking-[0.28em] text-black/60">
-                    {String(index + 1).padStart(2, '0')}
-                  </p>
-
-                  <Icon size={38} strokeWidth={1.1} className="text-black/35" />
-
-                  <div>
-                    <h3 className="font-tenor text-[30px] leading-[1] tracking-[-0.03em] text-black md:text-[38px]">
-                      {item.title}
-                    </h3>
-
-                    <p className="mt-4 max-w-[720px] font-montserrat text-[14px] leading-7 text-neutral-500 md:text-[16px]">
-                      {item.description}
-                    </p>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
         </div>
       </section>
 
-      {/* PACKAGES */}
+      {/* PACKAGES — starts graphite, whole card swaps palette on hover */}
       <section id="packages" className={getSectionClasses()}>
-        <div className="mx-auto max-w-[1700px]">
+        <div className="mx-auto max-w-[1700px]" {...sectionWrap}>
           <SectionTitle
             kicker={content.packages.kicker}
             title={content.packages.title}
             description={content.packages.description}
           />
 
-          <div className="mt-14 grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] gap-4 md:auto-rows-fr">
+          <div className={cx(styles.mosaic, styles.pkgGrid, 'mt-14')}>
             {content.packages.items.map((item, index) => (
               <PackageCard
                 key={item.name}
@@ -668,149 +634,219 @@ export default function PricesPageClient({
                 index={index}
                 ui={content.ui}
                 onClick={openQuiz}
+                reveal={reveal}
               />
             ))}
           </div>
         </div>
       </section>
 
-      {/* WEB APPS — price on request */}
+      {/* WEB APPS — graphite | light */}
       {content.webApps && (
-        <section className={getSectionClasses('py-20 md:py-24')}>
-          <div className="mx-auto max-w-[1500px]">
-            <div className="grid gap-10 border border-[#111]/[0.12] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-center xl:p-14">
-              <div>
-                <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
-                  {content.webApps.kicker}
-                </p>
+        <section className={getSectionClasses()}>
+          <div className="mx-auto max-w-[1500px]" {...sectionWrap}>
+            <div
+              className={cx(styles.mosaic, styles.split)}
+              style={{ '--cols': '0.9fr 1.1fr' } as React.CSSProperties}
+            >
+              <motion.div
+                {...reveal(-48, 0)}
+                className={cx(styles.cell, styles.dark, styles.pad)}
+              >
+                <Kicker>{content.webApps.kicker}</Kicker>
 
-                <h2 className="font-tenor text-[38px] leading-[1] tracking-[-0.04em] text-black md:text-[60px]">
+                <h2 className="font-tenor text-[38px] leading-[1] tracking-[-0.04em] md:text-[60px]">
                   {content.webApps.title}
                 </h2>
 
-                <p className="mt-6 font-tenor text-[26px] text-black md:text-[32px]">
-                  {content.webApps.price}
+                <p className="mt-6 font-tenor text-[26px] md:text-[32px]">
+                  {nb(content.webApps.price)}
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="xl:border-l xl:border-[#111]/[0.12] xl:pl-12">
-                <p className="font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
+              <motion.div
+                {...reveal(48, 0, 0.12)}
+                className={cx(
+                  styles.cell,
+                  styles.light,
+                  styles.pad,
+                  'flex flex-col justify-center',
+                )}
+              >
+                <p
+                  className={`${styles.sub} font-montserrat text-[15px] leading-8 md:text-[17px]`}
+                >
                   {content.webApps.description}
                 </p>
 
-                <div className="mt-9 flex flex-wrap items-center gap-4">
+                <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3">
                   <ActionButton onClick={openQuiz}>
                     {content.webApps.button}
                   </ActionButton>
                   <LocalizedLink
                     href={content.webApps.href}
-                    className="inline-flex min-h-[44px] items-center font-montserrat text-[12px] uppercase tracking-[0.14em] text-black/70 underline underline-offset-4 transition duration-300 hover:text-black"
+                    className={`${styles.link} font-montserrat`}
                   >
                     {content.webApps.linkLabel}
                   </LocalizedLink>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
       )}
 
-      {/* CUSTOM SOLUTION */}
+      {/* CUSTOM SOLUTION — graphite | light */}
       {content.customSolution && (
-        <section className={getSectionClasses('sw-tint py-20 md:py-24')}>
-          <div className="mx-auto max-w-[1500px]">
-            <div className="grid gap-10 border border-[#111]/[0.12] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-center xl:p-14">
-              <div>
-                <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
-                  {content.customSolution.kicker}
-                </p>
+        <section className={getSectionClasses()}>
+          <div className="mx-auto max-w-[1500px]" {...sectionWrap}>
+            <div
+              className={cx(styles.mosaic, styles.split)}
+              style={{ '--cols': '0.9fr 1.1fr' } as React.CSSProperties}
+            >
+              <motion.div
+                {...reveal(-48, 0)}
+                className={cx(styles.cell, styles.dark, styles.pad)}
+              >
+                <Kicker>{content.customSolution.kicker}</Kicker>
 
-                <h2 className="font-tenor text-[42px] leading-[1] tracking-[-0.04em] text-black md:text-[68px]">
+                <h2 className="font-tenor text-[40px] leading-[1] tracking-[-0.04em] md:text-[64px]">
                   {content.customSolution.title}
                 </h2>
-              </div>
+              </motion.div>
 
-              <div className="xl:border-l xl:border-[#111]/[0.12] xl:pl-12">
-                <p className="font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
+              <motion.div
+                {...reveal(48, 0, 0.12)}
+                className={cx(
+                  styles.cell,
+                  styles.light,
+                  styles.pad,
+                  'flex flex-col justify-center',
+                )}
+              >
+                <p
+                  className={`${styles.sub} font-montserrat text-[15px] leading-8 md:text-[17px]`}
+                >
                   {content.customSolution.description}
                 </p>
 
-                <p className="mt-6 border-l border-black pl-5 font-montserrat text-[13px] leading-7 text-neutral-500">
-                  {content.customSolution.note}
+                <p
+                  className={`${styles.sub} mt-6 border-l-2 border-[#FF3830] pl-5 font-montserrat text-[13px] leading-7`}
+                >
+                  {nb(content.customSolution.note)}
                 </p>
 
-                <ActionButton onClick={openQuiz} className="mt-9">
-                  {content.customSolution.button}
-                </ActionButton>
-              </div>
+                <div className="mt-9">
+                  <ActionButton onClick={openQuiz}>
+                    {content.customSolution.button}
+                  </ActionButton>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
       )}
-      {/* PROJECT CALCULATOR */}
-      <section className={getSectionClasses('sw-tint')}>
-        <div className="mx-auto max-w-[1500px]">
-          <div className="grid overflow-hidden border border-[#111]/[0.12] bg-[#F7F7F5] shadow-[0_24px_70px_rgba(0,0,0,0.06)] xl:grid-cols-[0.85fr_1.15fr]">
-            <div className="relative overflow-hidden bg-[#111111] px-7 py-10 text-white md:px-10 md:py-14 xl:px-12 xl:py-16">
-              <p className="font-tenor text-[24px] uppercase tracking-[-0.03em] text-white">
-                LABRITY
-              </p>
 
-              <div className="mt-2 h-px w-10 bg-white/35" />
-
-              <div className="mt-12">
-                <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60">
-                  {content.quizPreview.kicker}
+      {/* PROJECT CALCULATOR — graphite | light */}
+      <section className={getSectionClasses()}>
+        <div className="mx-auto max-w-[1500px]" {...sectionWrap}>
+          <div
+            className={cx(styles.mosaic, styles.split)}
+            style={{ '--cols': '0.85fr 1.15fr' } as React.CSSProperties}
+          >
+            <motion.div
+              {...reveal(-48, 0)}
+              className={cx(
+                styles.cell,
+                styles.dark,
+                styles.pad,
+                'flex flex-col justify-between',
+              )}
+            >
+              <div>
+                <p className="font-tenor text-[24px] uppercase tracking-[-0.03em]">
+                  LABRITY
                 </p>
 
-                <h2 className="max-w-[560px] font-tenor text-[44px] leading-[0.96] tracking-[-0.05em] text-white md:text-[64px]">
-                  {content.quizPreview.leftTitle ?? content.quizPreview.title}
-                </h2>
+                <span
+                  aria-hidden="true"
+                  className={cx(styles.rule, 'mt-2 w-10')}
+                />
 
-                <p className="mt-7 max-w-[560px] font-montserrat text-[15px] leading-8 text-white/65 md:text-[17px]">
-                  {content.quizPreview.leftDescription ??
-                    content.quizPreview.description}
-                </p>
+                <div className="mt-12">
+                  <Kicker>{content.quizPreview.kicker}</Kicker>
+
+                  <h2 className="max-w-[560px] font-tenor text-[42px] leading-[0.96] tracking-[-0.05em] md:text-[60px]">
+                    {content.quizPreview.leftTitle ?? content.quizPreview.title}
+                  </h2>
+
+                  <p
+                    className={`${styles.sub} mt-7 max-w-[560px] font-montserrat text-[15px] leading-8 md:text-[17px]`}
+                  >
+                    {content.quizPreview.leftDescription ??
+                      content.quizPreview.description}
+                  </p>
+                </div>
               </div>
 
-              <div className="mt-12 border-t border-white/20 pt-7">
-                <p className="font-montserrat text-xs uppercase tracking-[0.26em] text-white/60">
+              <div
+                className="mt-12 border-t pt-7"
+                style={{ borderColor: 'var(--line)' }}
+              >
+                <p
+                  className={`${styles.sub} font-montserrat text-xs uppercase tracking-[0.26em]`}
+                >
                   {content.quizPreview.note}
                 </p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex flex-col justify-between px-7 py-10 md:px-10 md:py-14 xl:px-12 xl:py-16">
+            <motion.div
+              {...reveal(48, 0, 0.12)}
+              className={cx(
+                styles.cell,
+                styles.light,
+                styles.pad,
+                'flex flex-col justify-between',
+              )}
+            >
               <div>
-                <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
-                  {content.quizPreview.kicker}
-                </p>
+                <Kicker>{content.quizPreview.kicker}</Kicker>
 
-                <h3 className="max-w-[760px] font-tenor text-[40px] leading-[1] tracking-[-0.04em] text-black md:text-[66px]">
+                <h3 className="max-w-[760px] font-tenor text-[38px] leading-[1] tracking-[-0.04em] md:text-[60px]">
                   {content.quizPreview.title}
                 </h3>
 
-                <p className="mt-7 max-w-[720px] font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
+                <p
+                  className={`${styles.sub} mt-7 max-w-[720px] font-montserrat text-[15px] leading-8 md:text-[17px]`}
+                >
                   {content.quizPreview.description}
                 </p>
 
-                <div className="mt-10 divide-y divide-[#111]/[0.12] border-y border-[#111]/[0.12]">
+                <div
+                  className="mt-10 divide-y border-y"
+                  style={{ borderColor: 'var(--line)' }}
+                >
                   {content.quizPreview.steps.map((item, index) => (
                     <div
                       key={item}
                       className="flex items-center justify-between gap-5 py-5"
+                      style={{ borderColor: 'var(--line)' }}
                     >
                       <div className="flex items-center gap-5">
-                        <span className="font-tenor text-[34px] leading-none text-black/20">
+                        <span className="font-tenor text-[34px] leading-none opacity-30">
                           {String(index + 1).padStart(2, '0')}
                         </span>
 
-                        <span className="font-montserrat text-[12px] font-medium uppercase tracking-[0.22em] text-black/70">
+                        <span className="font-montserrat text-[12px] font-medium uppercase tracking-[0.22em]">
                           {item}
                         </span>
                       </div>
 
-                      <span className="h-px w-10 bg-black/15" />
+                      <span
+                        aria-hidden="true"
+                        className={cx(styles.rule, 'w-10')}
+                      />
                     </div>
                   ))}
                 </div>
@@ -822,16 +858,22 @@ export default function PricesPageClient({
               >
                 {content.quizPreview.button}
               </ActionButton>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* WEBSITE IM ABO */}
+      {/* WEBSITE IM ABO — graphite title, then light / graphite / light */}
       <section className={getSectionClasses()}>
-        <div className="mx-auto max-w-[1600px]">
-          <div className="2xl:grid-cols-[0.75fr_1.25fr] 2xl:gap-20 grid gap-12">
-            <div>
+        <div className="mx-auto max-w-[1600px]" {...sectionWrap}>
+          <div
+            className={cx(styles.mosaic, styles.split)}
+            style={{ '--cols': '0.75fr 1.25fr' } as React.CSSProperties}
+          >
+            <motion.div
+              {...reveal(-48, 0)}
+              className={cx(styles.cell, styles.dark, styles.pad)}
+            >
               <SectionTitle
                 kicker={content.subscription.kicker}
                 title={content.subscription.title}
@@ -839,117 +881,230 @@ export default function PricesPageClient({
                 align="left"
               />
 
-              <p className="mt-8 border-l border-black pl-5 font-montserrat text-[13px] leading-7 text-neutral-500">
-                {content.subscription.note}
+              <p
+                className={`${styles.sub} mt-8 border-l-2 border-[#FF3830] pl-5 font-montserrat text-[13px] leading-7`}
+              >
+                {nb(content.subscription.note)}
               </p>
 
-              <ActionButton onClick={openQuiz} className="mt-9">
-                {content.hero.primaryButton}
-              </ActionButton>
-            </div>
+              <div className="mt-9">
+                <ActionButton onClick={openQuiz}>
+                  {content.hero.primaryButton}
+                </ActionButton>
+              </div>
+            </motion.div>
 
-            <div className="grid auto-rows-fr grid-cols-[repeat(auto-fit,minmax(min(100%,280px),1fr))] gap-4">
-              {content.subscription.items.map(item => (
-                <SubscriptionCard key={item.name} item={item} />
+            <div
+              className={cx(styles.mosaic, styles.cards3)}
+              style={{ border: 0 }}
+            >
+              {content.subscription.items.map((item, index) => (
+                <motion.article
+                  key={item.name}
+                  {...reveal(
+                    index === 1 ? 0 : 48,
+                    index === 1 ? 40 : 0,
+                    0.1 + index * 0.1,
+                  )}
+                  className={cx(styles.cell, styles.card)}
+                >
+                  <span aria-hidden="true" className={styles.cardDot} />
+
+                  <h3 className="break-words font-tenor text-[28px] leading-[1] tracking-[-0.03em]">
+                    {item.name}
+                  </h3>
+
+                  <p className="mt-6 break-words font-tenor text-[28px] leading-none tracking-[-0.04em]">
+                    {nb(item.price)}
+                  </p>
+
+                  <p
+                    className={`${styles.sub} mt-3 font-montserrat text-xs font-medium uppercase tracking-[0.18em]`}
+                  >
+                    {nb(item.setup)}
+                  </p>
+
+                  <p
+                    className={`${styles.sub} mt-6 font-montserrat text-[14px] leading-7`}
+                  >
+                    {nb(item.description)}
+                  </p>
+
+                  <div className="mt-7">
+                    <FeatureList items={item.features} />
+                  </div>
+                </motion.article>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* REDESIGN */}
-      <section className={getSectionClasses('sw-tint py-24 md:py-32')}>
-        <div className="mx-auto max-w-[1500px]">
-          <div className="grid gap-12 border border-[#111]/[0.12] bg-white/55 p-7 shadow-[0_18px_45px_rgba(0,0,0,0.04)] md:p-10 xl:grid-cols-[1fr_0.8fr] xl:p-14">
-            <div>
-              <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
-                {content.redesign.kicker}
-              </p>
+      {/* REDESIGN — graphite | light */}
+      <section className={getSectionClasses()}>
+        <div className="mx-auto max-w-[1500px]" {...sectionWrap}>
+          <div
+            className={cx(styles.mosaic, styles.split)}
+            style={{ '--cols': '1fr 0.8fr' } as React.CSSProperties}
+          >
+            <motion.div
+              {...reveal(-48, 0)}
+              className={cx(styles.cell, styles.dark, styles.pad)}
+            >
+              <Kicker>{content.redesign.kicker}</Kicker>
 
-              <h2 className="font-tenor text-[42px] leading-[1] tracking-[-0.04em] text-black md:text-[72px]">
+              <h2 className="font-tenor text-[40px] leading-[1] tracking-[-0.04em] md:text-[68px]">
                 {content.redesign.title}
               </h2>
 
-              <p className="mt-7 max-w-[760px] font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
+              <p
+                className={`${styles.sub} mt-7 max-w-[760px] font-montserrat text-[15px] leading-8 md:text-[17px]`}
+              >
                 {content.redesign.description}
               </p>
-            </div>
+            </motion.div>
 
-            <div className="border-t border-[#111]/[0.12] pt-8 xl:border-l xl:border-t-0 xl:pl-12 xl:pt-0">
-              <p className="break-words font-tenor text-[46px] leading-none tracking-[-0.04em] text-black md:text-[62px]">
-                {content.redesign.price}
+            <motion.div
+              {...reveal(48, 0, 0.12)}
+              className={cx(styles.cell, styles.light, styles.pad)}
+            >
+              <p className="break-words font-tenor text-[44px] leading-none tracking-[-0.04em] md:text-[60px]">
+                {nb(content.redesign.price)}
               </p>
 
               <div className="mt-8">
                 <FeatureList items={content.redesign.features} />
               </div>
 
-              <ActionButton onClick={openQuiz} className="mt-9">
-                {content.redesign.button}
-              </ActionButton>
-            </div>
+              <div className="mt-9">
+                <ActionButton onClick={openQuiz}>
+                  {content.redesign.button}
+                </ActionButton>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* ADDITIONAL SERVICES */}
-      <section className={getSectionClasses('py-24 md:py-32')}>
-        <div className="mx-auto max-w-[1500px]">
+      {/* ADDITIONAL SERVICES — checkerboard, starts graphite */}
+      <section className={getSectionClasses()}>
+        <div className="mx-auto max-w-[1500px]" {...sectionWrap}>
           <SectionTitle
             kicker={content.additionalServices.kicker}
             title={content.additionalServices.title}
             description={content.additionalServices.description}
           />
 
-          <div className="mt-14 grid auto-rows-fr grid-cols-[repeat(auto-fit,minmax(min(100%,260px),1fr))] gap-4">
-            {content.additionalServices.items.map(item => (
-              <AdditionalServiceCard key={item.name} item={item} />
+          <div className={cx(styles.mosaic, styles.addGrid, 'mt-14')}>
+            {content.additionalServices.items.map((item, index) => (
+              <motion.article
+                key={item.name}
+                {...reveal(index % 2 === 0 ? -40 : 40, 0, (index % 4) * 0.07)}
+                className={cx(styles.cell, styles.add)}
+              >
+                <p
+                  className={`${styles.addPrice} font-montserrat text-xs font-medium uppercase tracking-[0.22em]`}
+                >
+                  {nb(item.price)}
+                </p>
+
+                <h3 className="mt-5 break-words font-tenor text-[28px] leading-[1] tracking-[-0.03em]">
+                  {item.name}
+                </h3>
+
+                <p
+                  className={`${styles.sub} mt-5 font-montserrat text-[14px] leading-7`}
+                >
+                  {nb(item.description)}
+                </p>
+              </motion.article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CARE */}
-      <section className={getSectionClasses('sw-ink py-24 md:py-32')}>
-        <div className="2xl:grid-cols-[0.75fr_1.25fr] 2xl:gap-20 mx-auto grid max-w-[1600px] gap-12">
-          <div>
-            <SectionTitle
-              kicker={content.care.kicker}
-              title={content.care.title}
-              description={content.care.description}
-              align="left"
-            />
-          </div>
+      {/* CARE — starts light after the graphite grid */}
+      <section className={getSectionClasses()}>
+        <div className="mx-auto max-w-[1600px]" {...sectionWrap}>
+          <div
+            className={cx(styles.mosaic, styles.split)}
+            style={{ '--cols': '0.75fr 1.25fr' } as React.CSSProperties}
+          >
+            <motion.div
+              {...reveal(-48, 0)}
+              className={cx(styles.cell, styles.light, styles.pad)}
+            >
+              <SectionTitle
+                kicker={content.care.kicker}
+                title={content.care.title}
+                description={content.care.description}
+                align="left"
+              />
+            </motion.div>
 
-          <div className="grid auto-rows-fr grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))] gap-4">
-            {content.care.items.map(item => (
-              <CareCard key={item.name} item={item} />
-            ))}
+            <div
+              className={cx(styles.mosaic, styles.cards3, styles.startDark)}
+              style={{ border: 0 }}
+            >
+              {content.care.items.map((item, index) => (
+                <motion.article
+                  key={item.name}
+                  {...reveal(
+                    index === 1 ? 0 : 48,
+                    index === 1 ? 40 : 0,
+                    0.1 + index * 0.1,
+                  )}
+                  className={cx(styles.cell, styles.card)}
+                >
+                  <span aria-hidden="true" className={styles.cardDot} />
+
+                  <h3 className="break-words font-tenor text-[28px] leading-[1] tracking-[-0.03em]">
+                    {item.name}
+                  </h3>
+
+                  <p className="mt-6 break-words font-tenor text-[28px] leading-none tracking-[-0.04em]">
+                    {nb(item.price)}
+                  </p>
+
+                  <p
+                    className={`${styles.sub} mt-6 font-montserrat text-[14px] leading-7`}
+                  >
+                    {nb(item.description)}
+                  </p>
+
+                  <div className="mt-7">
+                    <FeatureList items={item.features} />
+                  </div>
+                </motion.article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className={getSectionClasses('py-24 md:py-32')}>
-        <div className="mx-auto max-w-[1300px]">
+      <section className={getSectionClasses('py-20 md:py-28')}>
+        <div className="mx-auto max-w-[1300px]" {...sectionWrap}>
           <SectionTitle kicker={content.faq.kicker} title={content.faq.title} />
 
-          <div className="mt-14 divide-y divide-[#111]/[0.12] border-y border-[#111]/[0.12]">
+          <div
+            className={`${styles.faq} mt-14 divide-y divide-[#111] border-y border-[#111]`}
+          >
             {content.faq.items.map(item => (
               <details key={item.question} className="group py-7">
                 <summary className="flex min-h-[44px] cursor-pointer list-none items-start justify-between gap-6">
-                  <span className="font-tenor text-[28px] leading-[1] tracking-[-0.03em] text-black md:text-[40px]">
+                  <span className="font-tenor text-[26px] leading-[1] tracking-[-0.03em] text-black md:text-[38px]">
                     {item.question}
                   </span>
 
                   <HelpCircle
                     size={28}
                     strokeWidth={1.1}
-                    className="mt-1 shrink-0 text-black/40 transition duration-300 group-open:rotate-45"
+                    className="mt-1 shrink-0 text-black/50 transition duration-300 group-open:rotate-45"
                   />
                 </summary>
 
-                <p className="mt-5 max-w-[820px] font-montserrat text-[14px] leading-8 text-neutral-500 md:text-[16px]">
+                <p className="mt-5 max-w-[820px] font-montserrat text-[14px] leading-8 text-neutral-600 md:text-[16px]">
                   {item.answer}
                 </p>
               </details>
@@ -958,38 +1113,49 @@ export default function PricesPageClient({
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="px-5 py-24 md:px-8 md:py-32">
-        <div className="mx-auto max-w-[1500px] bg-[#111111] px-6 py-14 text-center text-white shadow-[0_30px_70px_rgba(0,0,0,0.12)] md:px-10 md:py-20">
-          <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60">
-            {content.cta.kicker}
-          </p>
+      {/* CTA — graphite */}
+      <section className="px-5 pb-24 md:px-8 md:pb-32">
+        <motion.div
+          {...reveal(0, 40)}
+          className={cx(
+            styles.cell,
+            styles.dark,
+            'mx-auto max-w-[1500px] border border-[#111] px-6 py-14 text-center md:px-10 md:py-20',
+          )}
+        >
+          <div className="flex flex-col items-center">
+            <Kicker>{content.cta.kicker}</Kicker>
+          </div>
 
-          <h2 className="mx-auto max-w-[900px] font-tenor text-[42px] leading-[1] tracking-[-0.04em] md:text-[78px]">
+          <h2 className="mx-auto max-w-[900px] font-tenor text-[40px] leading-[1] tracking-[-0.04em] md:text-[76px]">
             {content.cta.title}
           </h2>
 
-          <p className="mx-auto mt-6 max-w-[680px] font-montserrat text-[15px] leading-8 text-white/70 md:text-[18px]">
+          <p
+            className={`${styles.sub} mx-auto mt-6 max-w-[680px] font-montserrat text-[15px] leading-8 md:text-[18px]`}
+          >
             {content.cta.description}
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <ActionButton onClick={openQuiz} variant="light">
+            <ActionButton onClick={openQuiz}>
               {content.cta.primaryButton}
             </ActionButton>
 
             <LocalizedLink
               href="/contact"
-              className="inline-flex min-h-[56px] items-center justify-center border border-white/40 bg-transparent px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:border-white hover:bg-white hover:text-black"
+              className={`${styles.btn} ${styles.ghost} font-montserrat`}
             >
               {content.cta.secondaryButton}
             </LocalizedLink>
           </div>
 
-          <p className="mx-auto mt-8 max-w-[620px] font-montserrat text-[12px] leading-6 text-white/60">
+          <p
+            className={`${styles.sub} mx-auto mt-8 max-w-[620px] font-montserrat text-[12px] leading-6`}
+          >
             {content.cta.note}
           </p>
-        </div>
+        </motion.div>
       </section>
     </main>
   );

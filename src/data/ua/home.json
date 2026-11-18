@@ -195,8 +195,8 @@
         "title": "Immo Tonn",
         "description": "Преміальний сайт нерухомості з чіткою структурою, професійною подачею об'єктів та сильним ефектом довіри.",
         "imageVariant": "first",
-        "image": "/images/projects/immo-tonn.webp",
-        "href": "https://immo-tonn.de/"
+        "image": "/images/projects/immo-tonn-hero.webp",
+        "href": "https://immo-tonn.com"
       },
       {
         "title": "TLSG Studio",
@@ -418,6 +418,8 @@
       "description": "Розкажіть, що у вашому бізнесі має працювати простіше. Ми розробимо для цього відповідну програму.",
       "primary": "Запитати індивідуальне рішення",
       "secondary": "Дізнатися про всі можливості"
-    }
+    },
+    "moreLabel": "Ще",
+    "lessLabel": "Сховати"
   }
 }

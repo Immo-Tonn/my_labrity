@@ -1,0 +1,404 @@
+/* Ablauf — alternating graphite / light blocks, 16px apart (8px on phones). */
+
+.dark {
+  --bg: #111111;
+  --fg: #f7f7f5;
+  --sub: rgba(247, 247, 245, 0.78);
+  --line: rgba(247, 247, 245, 0.3);
+}
+
+.light {
+  --bg: #f7f7f5;
+  --fg: #111111;
+  --sub: rgba(17, 17, 17, 0.72);
+  --line: rgba(17, 17, 17, 0.24);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .stack {
+    gap: 16px;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .split {
+    grid-template-columns: var(--cols, 1fr 1fr);
+  }
+}
+
+.block {
+  position: relative;
+  min-width: 0;
+  border: 1px solid #111111;
+  background: var(--bg);
+  color: var(--fg);
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.45s ease;
+}
+
+.pad {
+  padding: 28px 22px;
+}
+
+@media (min-width: 768px) {
+  .pad {
+    padding: 44px 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .pad {
+    padding: 56px 56px;
+  }
+}
+
+/* soft lift on hover for content blocks */
+.hoverable:hover {
+  border-color: #ff3830;
+  box-shadow: 0 14px 34px rgba(17, 17, 17, 0.14);
+}
+
+.sub {
+  color: var(--sub);
+}
+
+.kicker {
+  margin: 0 0 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--fg);
+}
+
+.rule {
+  display: block;
+  height: 1px;
+  background: var(--line);
+  transform-origin: left;
+}
+
+/* ───────────── Step rows ───────────── */
+
+.stepRow {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 768px) {
+  .stepRow {
+    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Text block: number at the top, title and text at the bottom. */
+.step {
+  display: flex;
+  min-height: 260px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 26px 22px;
+  transition:
+    border-color 0.2s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@media (min-width: 768px) {
+  .step {
+    min-height: 420px;
+    padding: 36px 40px;
+  }
+}
+
+/* Photo block: same size as the text block beside it. */
+.stepPhoto {
+  aspect-ratio: 4 / 3;
+}
+
+@media (min-width: 768px) {
+  .stepPhoto {
+    aspect-ratio: auto;
+    min-height: 420px;
+  }
+}
+
+.stepNum {
+  font-size: 46px;
+  line-height: 1;
+  opacity: 0.55;
+  transition:
+    transform 0.2s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .stepNum {
+    font-size: 88px;
+  }
+}
+
+/* Hover only where there is a real pointer; touch never gets sticky hover. */
+@media (hover: hover) and (pointer: fine) {
+  .step:hover {
+    border-color: #ff3830;
+    box-shadow: 0 14px 34px rgba(17, 17, 17, 0.14);
+  }
+
+  .step:hover .stepNum {
+    transform: translateX(8px);
+    opacity: 1;
+  }
+}
+
+/* ───────────── Hero: title beside a photo ───────────── */
+
+.heroGrid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 768px) {
+  .heroGrid {
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .heroGrid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.heroPhoto {
+  min-height: 300px;
+}
+
+@media (min-width: 1280px) {
+  .heroPhoto {
+    min-height: 0;
+  }
+}
+
+/* ───────────── Process line (hero) ───────────── */
+
+.line {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 768px) {
+  .line {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* A red line draws itself across the top of the five steps. */
+.line::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 3px;
+  background: #ff3830;
+  transform-origin: left;
+  animation: lineDraw 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+}
+
+@keyframes lineDraw {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.lineItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--line);
+  cursor: default;
+  transition: background-color 0.35s ease;
+}
+
+.lineItem:last-child {
+  border-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .lineItem {
+    padding: 22px 24px;
+    border-bottom: 0;
+    border-right: 1px solid var(--line);
+  }
+
+  .lineItem:last-child {
+    border-right: 0;
+  }
+}
+
+.lineItem::after {
+  content: '';
+  height: 2px;
+  width: 24px;
+  margin-top: 4px;
+  background: #ff3830;
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lineItem:hover::after {
+  width: 64px;
+}
+
+/* ───────────── Links and buttons ───────────── */
+
+.btn {
+  display: inline-flex;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 28px;
+  border: 1px solid var(--fg);
+  background: var(--fg);
+  color: var(--bg);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    color 0.35s ease;
+}
+
+.ghost {
+  background: transparent;
+  color: var(--fg);
+}
+
+.btn::after {
+  content: '↗';
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  border-color: #ff3830;
+  background: #ff3830;
+  color: #111111;
+}
+
+.btn:hover::after,
+.btn:focus-visible::after,
+.linkCard:hover .arrow,
+.linkCard:focus-visible .arrow {
+  transform: translate(4px, -4px);
+}
+
+.btn:focus-visible,
+.linkCard:focus-visible {
+  outline: 2px solid #ff3830;
+  outline-offset: 3px;
+}
+
+.linkCard {
+  display: flex;
+  height: 100%;
+  min-width: 0;
+  flex-direction: column;
+  gap: 14px;
+  padding: 22px 24px;
+  border: 1px solid #111111;
+  background: var(--bg);
+  color: var(--fg);
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.45s ease;
+}
+
+@media (min-width: 640px) {
+  .linkCard {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+
+.linkCard:hover,
+.linkCard:focus-visible {
+  border-color: #ff3830;
+  box-shadow: 0 14px 34px rgba(17, 17, 17, 0.14);
+}
+
+.linkText {
+  background: linear-gradient(#ff3830, #ff3830) no-repeat 0 100% / 0% 2px;
+  padding-bottom: 2px;
+  transition: background-size 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.linkCard:hover .linkText,
+.linkCard:focus-visible .linkText {
+  background-size: 100% 2px;
+}
+
+.arrow {
+  display: inline-flex;
+  color: #ff3830;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Reduced motion: the finished composition, in place. */
+@media (prefers-reduced-motion: reduce) {
+  .page [style*='opacity:0'],
+  .page [style*='opacity: 0'] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .line::before {
+    animation: none;
+  }
+
+  .step,
+  .stepNum,
+  .lineItem::after,
+  .btn::after,
+  .arrow,
+  .linkText,
+  .block,
+  .linkCard {
+    transition: none;
+  }
+}

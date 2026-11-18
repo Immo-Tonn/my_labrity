@@ -45,7 +45,7 @@ export const Preloader = () => {
 
     const fadeTimer = window.setTimeout(() => {
       setFade(true);
-    }, 900);
+    }, 500);
 
     const hideTimer = window.setTimeout(() => {
       try {
@@ -54,7 +54,7 @@ export const Preloader = () => {
         // ignore
       }
       setShow(false);
-    }, 1800);
+    }, 1100);
 
     return () => {
       window.clearTimeout(fadeTimer);

@@ -15,6 +15,7 @@ type BackgroundVideoProps = {
   // Optional dimming layer above the video (under the control) and a custom
   // position for the pause/play button; defaults keep the original look.
   overlayClassName?: string;
+  videoClassName?: string;
   controlClassName?: string;
 };
 
@@ -29,6 +30,7 @@ export function BackgroundVideo({
   playLabel,
   className,
   overlayClassName,
+  videoClassName,
   controlClassName,
 }: BackgroundVideoProps) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -99,7 +101,10 @@ export function BackgroundVideo({
         poster={poster}
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
-        className="absolute inset-0 h-full w-full object-cover"
+        className={classnames(
+          'absolute inset-0 h-full w-full object-cover',
+          videoClassName,
+        )}
       >
         <source src={webm} type="video/webm" />
         <source src={mp4} type="video/mp4" />

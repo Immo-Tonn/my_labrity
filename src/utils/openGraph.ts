@@ -1,4 +1,5 @@
 import { getData } from './getData';
+import { SITE_URL } from './siteUrl';
 import { type Language } from './localizedPath';
 
 // og:locale uses underscore-separated BCP-47-ish codes, distinct from the
@@ -31,7 +32,13 @@ export async function buildOpenGraph(
   description: string,
 ) {
   const meta = await getData('meta', lang);
-  const images: OpenGraphImage[] = meta.openGraph.images;
+  // Absolute URLs: social/AI crawlers need full image links.
+  const images: OpenGraphImage[] = meta.openGraph.images.map(
+    (img: OpenGraphImage) => ({
+      ...img,
+      url: img.url.startsWith('http') ? img.url : `${SITE_URL}${img.url}`,
+    }),
+  );
 
   return {
     type: 'website' as const,

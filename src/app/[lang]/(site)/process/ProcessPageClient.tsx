@@ -1,9 +1,13 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { type ReactNode } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
+import { InnerPhoto } from '@/components/common/InnerPhoto';
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
+
+import styles from './Process.module.css';
 
 type ProcessStep = {
   number: string;
@@ -61,302 +65,469 @@ export type ProcessData = {
   };
 };
 
+// Photographs (all decorative): the hero shows the team at work, each step
+// gets its own large picture beside its text.
+const HERO_PHOTO = {
+  src: '/images/inner/about-team-work.webp',
+  width: 1536,
+  height: 1024,
+};
+
+const STEP_PHOTOS = [
+  {
+    src: '/images/blog/landingpage-dauer-launch.jpg',
+    width: 1536,
+    height: 1024,
+    position: '50% 60%',
+  },
+  {
+    src: '/images/inner/aluminium-frame-red-corner.webp',
+    width: 1122,
+    height: 1402,
+    position: '50% 18%',
+  },
+  {
+    src: '/images/blog/landingpage-oder-website.jpg',
+    width: 1374,
+    height: 1145,
+    position: '50% 50%',
+  },
+  {
+    src: '/images/inner/concrete-interior-laptop.webp',
+    width: 1536,
+    height: 1024,
+    position: '50% 50%',
+  },
+  {
+    src: '/images/blog/website-ladezeit-performance.jpg',
+    width: 1374,
+    height: 1145,
+    position: '40% 50%',
+  },
+];
+
+const EASE = [0.22, 1, 0.36, 1] as const;
+const STEP_EASE = [0.23, 1, 0.32, 1] as const;
+
+// Short entrance from a given side; with reduced motion the finished
+// composition simply renders in place.
+function useReveal() {
+  const reduce = useReducedMotion();
+
+  return (x: number, y: number, delay = 0) =>
+    reduce
+      ? {}
+      : {
+          initial: { opacity: 0, x, y },
+          whileInView: { opacity: 1, x: 0, y: 0 },
+          viewport: { once: true, amount: 0.12 },
+          transition: { duration: 0.75, delay, ease: EASE },
+        };
+}
+
+const cx = (...names: (string | false | undefined)[]) =>
+  names.filter(Boolean).join(' ');
+
+function Kicker({ children }: { children: ReactNode }) {
+  return <p className={`${styles.kicker} font-montserrat`}>{children}</p>;
+}
+
 export default function ProcessPageClient({
   initialData,
 }: {
   initialData: ProcessData;
 }) {
   const content = initialData;
+  const reveal = useReveal();
+  const reduce = useReducedMotion();
+  const steps = content.stepsSection.items;
+
+  // Steps: short 20px slide from alternating sides, ease-out, converging
+  // into the grid. Nothing moves with reduced motion.
+  const stepReveal = (x: number, delay = 0) =>
+    reduce
+      ? {}
+      : {
+          initial: { opacity: 0, x },
+          whileInView: { opacity: 1, x: 0 },
+          viewport: { once: true, amount: 0.2 },
+          transition: { duration: 0.45, delay, ease: STEP_EASE },
+        };
 
   return (
-    <main className="swiss min-h-screen overflow-hidden bg-[#F7F7F5]/65 text-black">
-      {/* HERO */}
-      <section className="mx-auto max-w-[1700px] px-5 pb-16 pt-[130px] md:px-8 md:pb-24 md:pt-[170px]">
-        <motion.div
-          initial={{ opacity: 0, y: 36 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.9,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-          className="max-w-[1180px]"
-        >
-          <motion.p
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.7,
-              delay: 0.1,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/60 md:text-[13px]"
-          >
-            {content.hero.kicker}
-          </motion.p>
+    <main
+      className={`${styles.page} swiss min-h-screen overflow-x-clip bg-[#F7F7F5]/65 text-black`}
+    >
+      <section className="mx-auto max-w-[1700px] px-5 pb-20 pt-[110px] md:px-8 md:pb-28 md:pt-[140px]">
+        <div className={styles.stack} style={{ opacity: 1 }}>
+          {/* HERO — graphite title beside a photo, then the process line */}
+          <div className={styles.heroGrid}>
+            <motion.div
+              {...reveal(-48, 0)}
+              className={cx(
+                styles.block,
+                styles.dark,
+                styles.pad,
+                'flex flex-col justify-end',
+              )}
+            >
+              <motion.p
+                {...reveal(-24, 0, 0.1)}
+                className="mb-6 font-montserrat text-[12px] font-semibold uppercase tracking-[0.38em] md:text-[13px]"
+              >
+                {content.hero.kicker}
+              </motion.p>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 32 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.9,
-              delay: 0.18,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="font-tenor text-[48px] leading-[0.96] tracking-[-0.045em] text-black md:text-[84px] xl:text-[118px]"
-          >
-            {content.hero.title}
-          </motion.h1>
+              <motion.h1
+                {...reveal(-40, 0, 0.2)}
+                className="max-w-[1180px] font-tenor text-[44px] leading-[0.98] tracking-[-0.045em] md:text-[72px] xl:text-[88px]"
+              >
+                {content.hero.title}
+              </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.32,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="mt-8 max-w-[760px] font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[18px]"
-          >
-            {content.hero.description}
-          </motion.p>
-        </motion.div>
+              <motion.p
+                {...reveal(40, 0, 0.35)}
+                className={`${styles.sub} mt-8 max-w-[760px] font-montserrat text-[15px] leading-8 md:text-[18px]`}
+              >
+                {content.hero.description}
+              </motion.p>
+            </motion.div>
 
-        {/* PROCESS LINE */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.45,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-          className="mt-16 border-y border-[#111]/[0.12] py-6 md:mt-20"
-        >
-          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            {content.stepsSection.items.map((item, index) => (
+            <InnerPhoto
+              src={HERO_PHOTO.src}
+              width={HERO_PHOTO.width}
+              height={HERO_PHOTO.height}
+              sizes="(min-width: 1280px) 45vw, 100vw"
+              position="50% 50%"
+              open
+              priority
+              className={styles.heroPhoto}
+            />
+          </div>
+
+          <motion.div
+            {...reveal(48, 0, 0.1)}
+            className={cx(styles.block, styles.light, styles.line)}
+          >
+            {steps.map(item => (
               <div
                 key={`${item.number}-${item.title}`}
-                className="flex items-center gap-4"
+                className={styles.lineItem}
               >
-                <div className="flex items-center gap-3">
-                  <span className="font-montserrat text-xs font-semibold uppercase tracking-[0.28em] text-black/60">
-                    {item.number}
-                  </span>
+                <span className="font-montserrat text-xs font-semibold uppercase tracking-[0.28em]">
+                  {item.number}
+                </span>
 
-                  <span className="font-montserrat text-xs font-medium uppercase tracking-[0.22em] text-black/70">
-                    {item.title}
-                  </span>
-                </div>
-
-                {index < content.stepsSection.items.length - 1 && (
-                  <span className="hidden h-px w-10 bg-black/15 md:block" />
-                )}
+                <span
+                  className={`${styles.sub} font-montserrat text-xs font-medium uppercase tracking-[0.22em]`}
+                >
+                  {item.title}
+                </span>
               </div>
             ))}
-          </div>
-        </motion.div>
-      </section>
+          </motion.div>
 
-      {/* STEPS */}
-      <section className="border-t border-[#111]/[0.12] py-24 md:py-32">
-        <div className="mx-auto max-w-[1700px] px-5 md:px-8">
-          <div className="grid gap-12 xl:grid-cols-[0.8fr_1.2fr] xl:gap-20">
-            <div>
-              <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
-                {content.stepsSection.kicker}
-              </p>
+          {/* STEPS — graphite intro, then five rows of two equal blocks:
+              text beside a large photo, sides alternating. */}
+          <motion.div
+            {...stepReveal(-20)}
+            className={cx(styles.block, styles.dark, styles.pad)}
+          >
+            <div className="grid gap-8 xl:grid-cols-[1.1fr_0.9fr] xl:items-end xl:gap-16">
+              <div>
+                <Kicker>{content.stepsSection.kicker}</Kicker>
 
-              <h2 className="font-tenor text-[42px] leading-[1] tracking-[-0.04em] text-black md:text-[72px]">
-                {content.stepsSection.title}
-              </h2>
+                <h2 className="font-tenor text-[40px] leading-[1] tracking-[-0.04em] md:text-[68px]">
+                  {content.stepsSection.title}
+                </h2>
+              </div>
 
-              <p className="mt-7 max-w-[560px] font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
+              <p
+                className={`${styles.sub} max-w-[560px] font-montserrat text-[15px] leading-8 md:text-[17px]`}
+              >
                 {content.stepsSection.description}
               </p>
             </div>
+          </motion.div>
 
-            <div className="divide-y divide-[#111]/[0.12] border-y border-[#111]/[0.12]">
-              {content.stepsSection.items.map(item => (
-                <div
-                  key={`${item.number}-${item.title}`}
-                  className="grid gap-5 py-8 md:grid-cols-[110px_1fr] md:gap-8"
+          {steps.map((item, index) => {
+            const photo = STEP_PHOTOS[index];
+            const photoFirst = index % 2 === 1;
+
+            return (
+              <div
+                key={`${item.number}-${item.title}`}
+                className={styles.stepRow}
+              >
+                <motion.div
+                  {...stepReveal(photoFirst ? 20 : -20, 0.04)}
+                  className={cx(
+                    styles.block,
+                    styles.step,
+                    index % 2 === 0 ? styles.light : styles.dark,
+                  )}
                 >
-                  <p className="font-tenor text-[46px] leading-none text-black/20 md:text-[64px]">
+                  <p className={`${styles.stepNum} font-tenor`}>
                     {item.number}
                   </p>
 
                   <div>
-                    <h3 className="font-tenor text-[30px] leading-[1] tracking-[-0.03em] text-black md:text-[42px]">
+                    <h3 className="font-tenor text-[30px] leading-[1] tracking-[-0.03em] md:text-[42px]">
                       {item.title}
                     </h3>
 
-                    <p className="mt-4 max-w-[720px] font-montserrat text-[14px] leading-7 text-neutral-500 md:text-[16px]">
+                    <motion.span
+                      aria-hidden="true"
+                      initial={{ opacity: 0, scaleX: 0 }}
+                      whileInView={{ opacity: 1, scaleX: 1 }}
+                      viewport={{ once: true, amount: 0.5 }}
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.2,
+                        ease: STEP_EASE,
+                      }}
+                      className={cx(styles.rule, 'mt-5 max-w-[320px]')}
+                    />
+
+                    <p
+                      className={`${styles.sub} mt-5 max-w-[520px] font-montserrat text-[14px] leading-7 md:text-[16px]`}
+                    >
                       {item.description}
                     </p>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+                </motion.div>
 
-      {/* CLIENT NEEDS */}
-      <section className="sw-tint border-t border-[#111]/[0.12] py-24 md:py-32">
-        <div className="mx-auto max-w-[1500px] px-5 md:px-8">
-          <div className="mx-auto max-w-[860px] text-center">
-            <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
-              {content.clientSection.kicker}
-            </p>
+                {photo && (
+                  <InnerPhoto
+                    src={photo.src}
+                    width={photo.width}
+                    height={photo.height}
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    position={photo.position}
+                    hoverZoom
+                    className={cx(
+                      styles.stepPhoto,
+                      photoFirst && 'md:order-first',
+                    )}
+                  />
+                )}
+              </div>
+            );
+          })}
 
-            <h2 className="font-tenor text-[42px] leading-[1] tracking-[-0.04em] text-black md:text-[72px]">
-              {content.clientSection.title}
-            </h2>
+          {/* CLIENT NEEDS — starts graphite (previous block ended light) */}
+          <motion.div
+            {...reveal(-48, 0)}
+            className={cx(styles.block, styles.dark, styles.pad)}
+          >
+            <div className="mx-auto max-w-[860px]">
+              <Kicker>{content.clientSection.kicker}</Kicker>
 
-            <p className="mt-7 font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
-              {content.clientSection.description}
-            </p>
-          </div>
+              <h2 className="font-tenor text-[40px] leading-[1] tracking-[-0.04em] md:text-[68px]">
+                {content.clientSection.title}
+              </h2>
 
-          <div className="mt-14 grid gap-4 md:grid-cols-3">
-            {content.clientSection.items.map(item => (
-              <div
-                key={item.title}
-                className="border border-[#111]/[0.12] bg-white/45 p-7 shadow-[0_14px_36px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-[2px] hover:bg-white/70 hover:shadow-[0_20px_48px_rgba(0,0,0,0.05)]"
+              <p
+                className={`${styles.sub} mt-7 font-montserrat text-[15px] leading-8 md:text-[17px]`}
               >
-                <h3 className="font-tenor text-[30px] leading-[1] tracking-[-0.03em] text-black">
+                {content.clientSection.description}
+              </p>
+            </div>
+          </motion.div>
+
+          <div className={cx(styles.grid, 'md:grid-cols-3')}>
+            {content.clientSection.items.map((item, index) => (
+              <motion.div
+                key={item.title}
+                {...reveal(
+                  index === 1 ? 0 : index === 0 ? -48 : 48,
+                  index === 1 ? 40 : 0,
+                  index * 0.1,
+                )}
+                className={cx(
+                  styles.block,
+                  styles.hoverable,
+                  styles.pad,
+                  index % 2 === 0 ? styles.light : styles.dark,
+                )}
+              >
+                <h3 className="font-tenor text-[30px] leading-[1] tracking-[-0.03em]">
                   {item.title}
                 </h3>
 
-                <p className="mt-5 font-montserrat text-[14px] leading-7 text-neutral-500">
+                <span
+                  aria-hidden="true"
+                  className={cx(styles.rule, 'mt-5 w-16')}
+                />
+
+                <p
+                  className={`${styles.sub} mt-5 font-montserrat text-[14px] leading-7`}
+                >
                   {item.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* RELATED ARTICLES */}
-      {content.relatedArticles && (
-        <section className="border-t border-[#111]/[0.12] py-16 md:py-20">
-          <div className="mx-auto max-w-[1100px] px-5 md:px-8">
-            <p className="mb-3 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
-              {content.relatedArticles.kicker}
-            </p>
-            <h2 className="mb-8 font-tenor text-[26px] leading-[1.1] text-black md:text-[34px]">
-              {content.relatedArticles.title}
-            </h2>
-            <div className="grid gap-4 md:grid-cols-2">
-              {content.relatedArticles.items.map(item => (
-                <LocalizedLink
-                  key={item.href}
-                  href={item.href}
-                  className="group flex flex-col items-start gap-3 border border-[#111]/[0.12] bg-white/40 px-6 py-5 transition duration-300 hover:bg-white/70 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
-                >
-                  <span className="font-montserrat text-[14px] leading-6 text-neutral-600">
-                    {item.label}
-                  </span>
-                  <span className="inline-flex shrink-0 items-center gap-1 font-montserrat text-[13px] font-semibold uppercase tracking-[0.06em] text-black">
-                    {item.linkLabel}
-                    <ArrowUpRight size={14} strokeWidth={1.8} />
-                  </span>
-                </LocalizedLink>
-              ))}
+          {/* RELATED ARTICLES — graphite header, light link cards */}
+          {content.relatedArticles && (
+            <div
+              className={cx(styles.grid, styles.split)}
+              style={{ '--cols': '0.8fr 1.2fr' } as React.CSSProperties}
+            >
+              <motion.div
+                {...reveal(-48, 0)}
+                className={cx(styles.block, styles.dark, styles.pad)}
+              >
+                <Kicker>{content.relatedArticles.kicker}</Kicker>
+
+                <h2 className="font-tenor text-[26px] leading-[1.1] md:text-[34px]">
+                  {content.relatedArticles.title}
+                </h2>
+              </motion.div>
+
+              <div className={styles.stack}>
+                {content.relatedArticles.items.map((item, index) => (
+                  <motion.div
+                    key={item.href}
+                    {...reveal(48, 0, index * 0.1)}
+                    className="flex-1"
+                  >
+                    <LocalizedLink
+                      href={item.href}
+                      className={cx(styles.linkCard, styles.light)}
+                    >
+                      <span className="font-montserrat text-[14px] leading-6">
+                        {item.label}
+                      </span>
+                      <span className="inline-flex shrink-0 items-center gap-2 font-montserrat text-[13px] font-semibold uppercase tracking-[0.06em]">
+                        <span className={styles.linkText}>
+                          {item.linkLabel}
+                        </span>
+                        <span aria-hidden="true" className={styles.arrow}>
+                          <ArrowUpRight size={16} strokeWidth={1.8} />
+                        </span>
+                      </span>
+                    </LocalizedLink>
+                  </motion.div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-      )}
+          )}
 
-      {/* CALM SECTION */}
-      <section className="bg-black py-24 text-white md:py-32">
-        <div className="mx-auto grid max-w-[1600px] gap-12 px-5 md:px-8 xl:grid-cols-[1fr_0.9fr] xl:gap-20">
-          <div>
-            <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60">
-              {content.calmSection.kicker}
-            </p>
+          {/* CALM — graphite (previous ended light) */}
+          <motion.div
+            {...reveal(0, 40)}
+            className={cx(styles.block, styles.dark, styles.pad)}
+          >
+            <div className="grid gap-12 xl:grid-cols-[1fr_0.9fr] xl:gap-20">
+              <div>
+                <Kicker>{content.calmSection.kicker}</Kicker>
 
-            <h2 className="font-tenor text-[54px] leading-[0.9] tracking-[-0.05em] md:text-[110px]">
-              {content.calmSection.title}
-            </h2>
-          </div>
+                <h2 className="font-tenor text-[50px] leading-[0.92] tracking-[-0.05em] md:text-[104px]">
+                  {content.calmSection.title}
+                </h2>
+              </div>
 
-          <div className="flex items-end">
-            <p className="max-w-[620px] font-montserrat text-[16px] leading-9 text-white/70 md:text-[19px]">
-              {content.calmSection.description}
-            </p>
-          </div>
-        </div>
-      </section>
+              <div className="flex items-end">
+                <p
+                  className={`${styles.sub} max-w-[620px] font-montserrat text-[16px] leading-9 md:text-[19px]`}
+                >
+                  {content.calmSection.description}
+                </p>
+              </div>
+            </div>
+          </motion.div>
 
-      {/* RESULT */}
-      <section className="sw-tint border-t border-[#111]/[0.12] py-24 md:py-32">
-        <div className="mx-auto max-w-[1500px] px-5 md:px-8">
-          <div className="grid gap-12 xl:grid-cols-[0.8fr_1.2fr] xl:gap-20">
-            <div>
-              <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-400">
-                {content.resultSection.kicker}
-              </p>
+          {/* RESULT — light title, then graphite / light checkerboard */}
+          <div
+            className={cx(styles.grid, styles.split)}
+            style={{ '--cols': '0.8fr 1.2fr' } as React.CSSProperties}
+          >
+            <motion.div
+              {...reveal(-56, 0)}
+              className={cx(styles.block, styles.light, styles.pad)}
+            >
+              <Kicker>{content.resultSection.kicker}</Kicker>
 
-              <h2 className="font-tenor text-[42px] leading-[1] tracking-[-0.04em] text-black md:text-[72px]">
+              <h2 className="font-tenor text-[40px] leading-[1] tracking-[-0.04em] md:text-[68px]">
                 {content.resultSection.title}
               </h2>
 
-              <p className="mt-7 max-w-[560px] font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[17px]">
+              <p
+                className={`${styles.sub} mt-7 max-w-[560px] font-montserrat text-[15px] leading-8 md:text-[17px]`}
+              >
                 {content.resultSection.description}
               </p>
-            </div>
+            </motion.div>
 
-            <div className="grid gap-4 md:grid-cols-2">
-              {content.resultSection.items.map(item => (
-                <div
+            <div className={cx(styles.grid, 'md:grid-cols-2')}>
+              {content.resultSection.items.map((item, index) => (
+                <motion.div
                   key={item.title}
-                  className="min-h-[210px] border border-[#111]/[0.12] bg-white/45 p-7 transition duration-300 hover:-translate-y-[2px] hover:bg-white/75"
+                  {...reveal(index % 2 === 0 ? 48 : -48, 0, index * 0.08)}
+                  className={cx(
+                    styles.block,
+                    styles.hoverable,
+                    styles.pad,
+                    'min-h-[210px]',
+                    index === 0 || index === 3 ? styles.dark : styles.light,
+                  )}
                 >
-                  <h3 className="font-tenor text-[30px] leading-[1] tracking-[-0.03em] text-black">
+                  <h3 className="font-tenor text-[30px] leading-[1] tracking-[-0.03em]">
                     {item.title}
                   </h3>
 
-                  <p className="mt-5 font-montserrat text-[14px] leading-7 text-neutral-500">
+                  <span
+                    aria-hidden="true"
+                    className={cx(styles.rule, 'mt-5 w-16')}
+                  />
+
+                  <p
+                    className={`${styles.sub} mt-5 font-montserrat text-[14px] leading-7`}
+                  >
                     {item.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* CTA */}
-      <section className="px-5 py-24 md:px-8 md:py-32">
-        <div className="mx-auto max-w-[1500px] bg-[#111111] px-6 py-14 text-center text-white shadow-[0_30px_70px_rgba(0,0,0,0.12)] md:px-10 md:py-20">
-          <p className="mb-5 font-montserrat text-xs uppercase tracking-[0.32em] text-white/60">
-            {content.cta.kicker}
-          </p>
+          {/* CTA — light (previous ended graphite) */}
+          <motion.div
+            {...reveal(0, 40)}
+            className={cx(styles.block, styles.light, styles.pad, 'md:py-20')}
+          >
+            <div>
+              <Kicker>{content.cta.kicker}</Kicker>
 
-          <h2 className="mx-auto max-w-[900px] font-tenor text-[42px] leading-[1] tracking-[-0.04em] md:text-[78px]">
-            {content.cta.title}
-          </h2>
+              <h2 className="max-w-[900px] font-tenor text-[40px] leading-[1] tracking-[-0.04em] md:text-[76px]">
+                {content.cta.title}
+              </h2>
 
-          <p className="mx-auto mt-6 max-w-[680px] font-montserrat text-[15px] leading-8 text-white/70 md:text-[18px]">
-            {content.cta.description}
-          </p>
+              <p
+                className={`${styles.sub} mt-6 max-w-[680px] font-montserrat text-[15px] leading-8 md:text-[18px]`}
+              >
+                {content.cta.description}
+              </p>
 
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <LocalizedLink
-              href="/contact"
-              className="inline-flex min-h-[56px] items-center justify-center border border-white bg-white px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-black transition duration-300 hover:-translate-y-[1px]"
-            >
-              {content.cta.primaryButton}
-            </LocalizedLink>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <LocalizedLink
+                  href="/contact"
+                  className={`${styles.btn} font-montserrat`}
+                >
+                  {content.cta.primaryButton}
+                </LocalizedLink>
 
-            <LocalizedLink
-              href="/portfolio"
-              className="inline-flex min-h-[56px] items-center justify-center border border-white/40 bg-transparent px-8 font-montserrat text-[14px] font-semibold uppercase tracking-[0.08em] text-white transition duration-300 hover:border-white hover:bg-white hover:text-black"
-            >
-              {content.cta.secondaryButton}
-            </LocalizedLink>
-          </div>
+                <LocalizedLink
+                  href="/portfolio"
+                  className={`${styles.btn} ${styles.ghost} font-montserrat`}
+                >
+                  {content.cta.secondaryButton}
+                </LocalizedLink>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
     </main>

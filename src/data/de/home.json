@@ -172,8 +172,8 @@
         "title": "Immo Tonn",
         "description": "Hochwertige Immobilien-Website mit klarem Aufbau, professioneller Objektpräsentation und starkem Vertrauenseffekt für Kauf und Verkauf.",
         "imageVariant": "first",
-        "image": "/images/projects/immo-tonn.webp",
-        "href": "https://immo-tonn.de/"
+        "image": "/images/projects/immo-tonn-hero.webp",
+        "href": "https://immo-tonn.com"
       },
       {
         "title": "TLSG Studio",
@@ -418,6 +418,8 @@
       "description": "Erzählen Sie uns, was in Ihrem Betrieb einfacher laufen soll. Wir entwickeln die passende Software dafür.",
       "primary": "Individuelle Lösung anfragen",
       "secondary": "Alle Möglichkeiten entdecken"
-    }
+    },
+    "moreLabel": "Mehr",
+    "lessLabel": "Weniger"
   }
 }

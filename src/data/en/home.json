@@ -195,8 +195,8 @@
         "title": "Immo Tonn",
         "description": "Premium real estate website with clear structure, professional property presentation and strong trust effect for buying and selling.",
         "imageVariant": "first",
-        "image": "/images/projects/immo-tonn.webp",
-        "href": "https://immo-tonn.de/"
+        "image": "/images/projects/immo-tonn-hero.webp",
+        "href": "https://immo-tonn.com"
       },
       {
         "title": "TLSG Studio",
@@ -391,6 +391,8 @@
       "description": "Tell us what should run more easily in your business. We will build the software for it.",
       "primary": "Request a custom solution",
       "secondary": "Discover all possibilities"
-    }
+    },
+    "moreLabel": "More",
+    "lessLabel": "Less"
   }
 }

@@ -145,7 +145,7 @@ export default function HomeHero({
   const remaining = useRef(ROTATION_MS);
   const leaveTimers = useRef<number[]>([]);
 
-  // Reduced motion + start after the assembly has finished (≈2.4 s, +1.7 s
+  // Reduced motion + start after the assembly has finished (≈2.4 s, +1.0 s
   // behind the preloader on a first visit).
   useEffect(() => {
     const reducedMotion = window.matchMedia(
@@ -167,7 +167,7 @@ export default function HomeHero({
         remaining.current = ROTATION_MS;
         setStarted(true);
       },
-      (fresh ? 1700 : 0) + 3800,
+      (fresh ? 1000 : 0) + 3800,
     );
 
     return () => window.clearTimeout(startId);

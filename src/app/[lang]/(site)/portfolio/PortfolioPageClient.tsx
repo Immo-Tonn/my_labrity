@@ -74,22 +74,19 @@ export default function PortfolioPageClient({
 }) {
   const content = initialData;
 
-  const isSeniorProject = (title: string) =>
-    title.toLowerCase().includes('alltags') ||
-    title.toLowerCase().includes('senior');
-
   return (
     // reducedMotion="user" makes framer-motion automatically shorten/skip
     // these transform/opacity animations for visitors with
     // prefers-reduced-motion enabled, and leaves everyone else unchanged.
     <MotionConfig reducedMotion="user">
       <main className="swiss min-h-screen overflow-hidden bg-[#F7F7F5]/65 text-black">
-        {/* HERO — the video is the background, shown at its own 16:9 on
-            desktop; light text over a dimming layer. */}
-        <section
-          className={`${styles.hero} relative isolate flex flex-col overflow-hidden bg-[#111111] text-[#F7F7F5] lg:min-h-[56.25vw]`}
+        {/* STAGE — one video stays fixed behind the compact intro and the
+            project gallery, so the screenshots sit on the moving background
+            right away. */}
+        <div
+          className={`${styles.stage} relative isolate bg-[#111111] text-[#F7F7F5]`}
         >
-          <div className="absolute inset-0 -z-10">
+          <div className={styles.stageBg} aria-hidden="false">
             <BackgroundVideo
               webm="/videos/software-bg.webm"
               mp4="/videos/software-bg.mp4"
@@ -97,173 +94,104 @@ export default function PortfolioPageClient({
               pauseLabel={video.pauseLabel}
               playLabel={video.playLabel}
               className="h-full w-full border-0"
-              overlayClassName="bg-[#111111]/55 [background-image:linear-gradient(to_bottom,rgba(17,17,17,0.55),rgba(17,17,17,0.15)_35%,rgba(17,17,17,0.65))]"
+              overlayClassName="bg-[#111111]/45 [background-image:linear-gradient(to_bottom,rgba(17,17,17,0.6),rgba(17,17,17,0.2)_40%,rgba(17,17,17,0.5))]"
               controlClassName="right-5 top-24 md:right-8 md:top-28"
             />
           </div>
 
-          <div className="mx-auto flex w-full max-w-[1700px] flex-1 flex-col px-5 pb-10 pt-[125px] md:px-8 md:pb-10 md:pt-[130px]">
-            <div className="grid gap-10 xl:grid-cols-[1.15fr_0.65fr] xl:items-end xl:gap-16">
-              <div>
-                <motion.p
-                  {...reveal(-28, 0)}
-                  className="mb-6 flex items-center gap-3 font-montserrat text-[13px] font-semibold uppercase tracking-[0.34em] text-[#F7F7F5]"
-                >
-                  {content.kicker}
-                </motion.p>
+          {/* INTRO */}
+          <section className={`${styles.hero} relative flex flex-col`}>
+            <div className="mx-auto flex w-full max-w-[1700px] flex-1 flex-col px-5 pb-8 pt-[110px] md:px-8 md:pb-10 md:pt-[130px]">
+              <div className="grid gap-6 xl:grid-cols-[1.15fr_0.65fr] xl:items-end xl:gap-16">
+                <div>
+                  <motion.p
+                    {...reveal(-28, 0)}
+                    className="mb-5 flex items-center gap-3 font-montserrat text-[13px] font-semibold uppercase tracking-[0.34em] text-[#F7F7F5]"
+                  >
+                    {content.kicker}
+                  </motion.p>
 
-                <motion.h1
-                  {...reveal(-48, 0, 0.12)}
-                  className="max-w-[1050px] font-tenor text-[54px] leading-[0.95] tracking-[-0.045em] text-[#F7F7F5] md:text-[90px] xl:text-[126px]"
-                >
-                  {content.title}
-                </motion.h1>
-              </div>
-
-              <motion.div
-                {...reveal(48, 0, 0.28)}
-                className="max-w-[640px] border-t border-[#F7F7F5]/60 pt-6 xl:mb-3 xl:border-l xl:border-t-0 xl:pl-8 xl:pt-0"
-              >
-                <p className="font-montserrat text-[15px] leading-8 text-[#F7F7F5]/90 md:text-[18px]">
-                  {content.description}
-                </p>
-              </motion.div>
-            </div>
-
-            <motion.div
-              {...reveal(0, 32, 0.4)}
-              className={`mt-10 md:mt-10 ${styles.tags}`}
-            >
-              {content.topTags.map(tag => (
-                <div key={tag} className={`font-montserrat ${styles.tag}`}>
-                  <span aria-hidden="true" className={styles.mark} />
-                  <span className={styles.text}>{tag}</span>
+                  <motion.h1
+                    {...reveal(-48, 0, 0.12)}
+                    className="max-w-[1050px] font-tenor text-[54px] leading-[0.95] tracking-[-0.045em] text-[#F7F7F5] md:text-[90px] xl:text-[126px]"
+                  >
+                    {content.title}
+                  </motion.h1>
                 </div>
-              ))}
-            </motion.div>
 
-            {/* SEO BLOCK */}
-            <div className={styles.cells}>
-              {content.seoBlock.map((item, itemIndex) => (
                 <motion.div
-                  key={item.kicker}
-                  {...reveal(
-                    itemIndex === 1 ? 0 : itemIndex === 0 ? -36 : 36,
-                    itemIndex === 1 ? 36 : 0,
-                    0.15 + itemIndex * 0.12,
-                  )}
-                  className={`${styles.cell} ${itemIndex === 1 ? styles.dark : ''}`}
+                  {...reveal(48, 0, 0.28)}
+                  className="max-w-[640px] border-t border-[#F7F7F5]/60 pt-6 xl:mb-3 xl:border-l xl:border-t-0 xl:pl-8 xl:pt-0"
                 >
-                  <p className={`font-montserrat ${styles.cellKicker}`}>
-                    {item.kicker}
-                  </p>
-
-                  <p className="mt-6 hyphens-manual break-words font-tenor text-[30px] leading-[1.08] md:text-[34px] xl:text-[40px]">
-                    {item.title}
+                  <p className="font-montserrat text-[15px] leading-8 text-[#F7F7F5]/90 md:text-[18px]">
+                    {content.description}
                   </p>
                 </motion.div>
-              ))}
-            </div>
-          </div>
-
-          <div className="relative z-10 overflow-hidden border-t border-[#F7F7F5]/45 bg-[#111111]/55 py-4">
-            <div className="marquee-wrapper">
-              <div className="marquee-track">
-                {Array.from({ length: 2 }).map((_, index) => (
-                  <div
-                    key={index}
-                    className="flex shrink-0 items-center gap-14 pr-14"
-                  >
-                    {content.marquee.map(text => (
-                      <span
-                        key={text}
-                        className="whitespace-nowrap font-montserrat text-xs font-semibold uppercase tracking-[0.34em] text-[#F7F7F5]"
-                      >
-                        {text}
-                      </span>
-                    ))}
-                  </div>
-                ))}
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* PROJECTS */}
-        <section className="mx-auto max-w-[1700px] px-5 pb-28 pt-12 md:px-8 md:pb-40 md:pt-16">
-          <div className="space-y-10 md:space-y-14" style={{ opacity: 1 }}>
-            {content.items.map((item, index) => {
-              const seniorProject = isSeniorProject(item.title);
-              const delay = Math.min(index, 3) * 0.05;
+            <div className="relative z-10 overflow-hidden border-t border-[#F7F7F5]/45 bg-[#111111]/55 py-4">
+              <div className="marquee-wrapper">
+                <div className="marquee-track">
+                  {Array.from({ length: 2 }).map((_, index) => (
+                    <div
+                      key={index}
+                      className="flex shrink-0 items-center gap-14 pr-14"
+                    >
+                      {content.marquee.map(text => (
+                        <span
+                          key={text}
+                          className="whitespace-nowrap font-montserrat text-xs font-semibold uppercase tracking-[0.34em] text-[#F7F7F5]"
+                        >
+                          {text}
+                        </span>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
 
-              return (
-                <article
-                  key={`${item.title}-${index}`}
-                  className={`group ${styles.card}`}
-                >
-                  {/* SCREENSHOT — the frame opens through a mask from the left
-                      (SwissMotion). */}
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.shot}
+          {/* PROJECTS — gallery on the video */}
+          <section className="relative mx-auto max-w-[1700px] px-5 pb-20 pt-10 md:px-8 md:pb-28 md:pt-14">
+            <div className={styles.gallery}>
+              {content.items.map((item, index) => {
+                const delay = (index % 3) * 0.06;
+
+                return (
+                  <motion.article
+                    key={`${item.title}-${index}`}
+                    {...reveal(0, 28, delay)}
+                    className={`group font-montserrat ${styles.gcard}`}
                   >
-                    <div className={styles.frame}>
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${content.projectButton}: ${item.title}`}
+                      className={styles.gshot}
+                    >
                       {item.image ? (
                         <Image
                           src={item.image}
                           alt={`${item.title} Premium Website Projekt`}
                           fill
-                          priority={index === 0}
-                          sizes="(max-width: 1280px) 100vw, 58vw"
-                          className="object-contain p-3 transition duration-700 group-hover:scale-[1.025] md:p-5"
+                          priority={index < 3}
+                          sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                          className={styles.gimg}
                         />
                       ) : (
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <span className="font-montserrat text-xs uppercase tracking-[0.32em] text-neutral-500">
-                            Coming Soon
-                          </span>
-                        </div>
+                        <span className="absolute inset-0 flex items-center justify-center text-xs uppercase tracking-[0.32em] text-neutral-500">
+                          Coming Soon
+                        </span>
                       )}
-                    </div>
-                  </a>
-
-                  {/* DESCRIPTION — slides in from the right. */}
-                  <motion.div
-                    {...reveal(56, 0, 0.12 + delay)}
-                    className={`font-montserrat ${styles.panel}`}
-                  >
-                    <div className={styles.head}>
-                      <div className="min-w-0">
-                        <p className={styles.meta}>
-                          {String(index + 1).padStart(2, '0')} /{' '}
-                          {content.categories[item.title] ||
-                            content.projectLabel}
-                        </p>
-
-                        <p className={styles.metaSub}>{content.projectLabel}</p>
-
-                        {item.kind === 'concept' && (
-                          <p className={styles.concept}>
-                            {content.conceptLabel}
-                          </p>
-                        )}
-                      </div>
-
-                      <a
-                        href={item.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${content.projectButton}: ${item.title}`}
-                        className={styles.arrow}
-                      >
+                      <span aria-hidden="true" className={styles.garrow}>
                         <svg
                           fill="none"
                           stroke="currentColor"
-                          strokeWidth="1.5"
+                          strokeWidth="1.6"
                           viewBox="0 0 24 24"
-                          aria-hidden="true"
                         >
                           <path
                             strokeLinecap="round"
@@ -271,55 +199,45 @@ export default function PortfolioPageClient({
                             d="M7 17L17 7M17 7H8M17 7V16"
                           />
                         </svg>
-                      </a>
-                    </div>
+                      </span>
+                    </a>
 
-                    <div className={styles.body}>
-                      <h2
-                        className={`${styles.title} font-tenor leading-[0.95] tracking-[-0.04em] ${
-                          seniorProject
-                            ? 'text-[32px] sm:text-[40px]'
-                            : 'text-[36px] sm:text-[44px]'
-                        } md:text-[64px] lg:text-[52px] xl:text-[68px]`}
-                      >
+                    <div className={styles.gbody}>
+                      <p className={styles.gmeta}>
+                        <span>{String(index + 1).padStart(2, '0')}</span>
+                        <span aria-hidden="true" className={styles.gdot} />
+                        <span>
+                          {content.categories[item.title] ||
+                            content.projectLabel}
+                        </span>
+                        {item.kind === 'concept' && (
+                          <span className={styles.gconcept}>
+                            {content.conceptLabel}
+                          </span>
+                        )}
+                      </p>
+
+                      <h2 className="mt-3 font-tenor text-[28px] leading-[1.02] tracking-[-0.035em] md:text-[32px]">
                         {item.title}
                       </h2>
 
-                      <p
-                        className={`${styles.desc} text-[14px] leading-8 md:text-[16px] ${
-                          seniorProject
-                            ? '[overflow-wrap:anywhere]'
-                            : 'break-words'
-                        }`}
-                      >
-                        {item.description}
-                      </p>
-                    </div>
+                      <p className={styles.gdesc}>{item.description}</p>
 
-                    <div className={styles.foot}>
-                      <div className={styles.tagsRow}>
-                        {content.projectTags.map((tag, tagIndex) => (
-                          <div key={tag} className="flex items-center gap-4">
-                            {tagIndex > 0 && (
-                              <span aria-hidden="true" className={styles.dot} />
-                            )}
-                            <span>{tag}</span>
-                          </div>
-                        ))}
-                      </div>
+                      <div className={styles.gfoot}>
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.open}
+                        >
+                          {content.projectButton}
+                          <span
+                            aria-hidden="true"
+                            className={styles.openLine}
+                          />
+                        </a>
 
-                      <a
-                        href={item.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.open}
-                      >
-                        {content.projectButton}
-                        <span aria-hidden="true" className={styles.openLine} />
-                      </a>
-
-                      {item.detailHref && item.detailLabel && (
-                        <div>
+                        {item.detailHref && item.detailLabel && (
                           <LocalizedLink
                             href={item.detailHref}
                             className={styles.detail}
@@ -327,13 +245,51 @@ export default function PortfolioPageClient({
                             {item.detailLabel}
                             <span aria-hidden="true">→</span>
                           </LocalizedLink>
-                        </div>
-                      )}
+                        )}
+                      </div>
                     </div>
-                  </motion.div>
-                </article>
-              );
-            })}
+                  </motion.article>
+                );
+              })}
+            </div>
+          </section>
+        </div>
+
+        {/* TAGS + SEO CELLS — moved below the gallery */}
+        <section className="mx-auto max-w-[1700px] px-5 py-16 md:px-8 md:py-24">
+          <motion.div
+            {...reveal(0, 32, 0.4)}
+            className={`mt-10 md:mt-10 ${styles.tags}`}
+          >
+            {content.topTags.map(tag => (
+              <div key={tag} className={`font-montserrat ${styles.tag}`}>
+                <span aria-hidden="true" className={styles.mark} />
+                <span className={styles.text}>{tag}</span>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* SEO BLOCK */}
+          <div className={styles.cells}>
+            {content.seoBlock.map((item, itemIndex) => (
+              <motion.div
+                key={item.kicker}
+                {...reveal(
+                  itemIndex === 1 ? 0 : itemIndex === 0 ? -36 : 36,
+                  itemIndex === 1 ? 36 : 0,
+                  0.15 + itemIndex * 0.12,
+                )}
+                className={`${styles.cell} ${itemIndex === 1 ? styles.dark : ''}`}
+              >
+                <p className={`font-montserrat ${styles.cellKicker}`}>
+                  {item.kicker}
+                </p>
+
+                <p className="mt-6 hyphens-manual break-words font-tenor text-[30px] leading-[1.08] md:text-[34px] xl:text-[40px]">
+                  {item.title}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </section>
 

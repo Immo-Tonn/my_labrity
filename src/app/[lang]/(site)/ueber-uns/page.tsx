@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import { InnerPhoto } from '@/components/common/InnerPhoto';
 import { getData } from '@/utils/getData';
 import { buildHreflangAlternates } from '@/utils/hreflangAlternates';
 import { buildOpenGraph } from '@/utils/openGraph';
@@ -91,7 +92,18 @@ export default async function AboutPage({ params }: { params: PageParams }) {
           </p>
         </div>
 
-        <div className="sw-ink grid gap-6 px-6 py-10 md:px-10 md:py-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 xl:px-14 xl:py-16">
+        <InnerPhoto
+          src="/images/inner/about-team-work.webp"
+          width={1536}
+          height={1024}
+          sizes="(min-width: 1500px) 1400px, 92vw"
+          position="50% 42%"
+          open
+          priority
+          className="mt-10 aspect-[4/3] w-full md:mt-12 md:aspect-[21/9]"
+        />
+
+        <div className="sw-ink mt-10 grid gap-6 px-6 py-10 md:px-10 md:py-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 xl:px-14 xl:py-16">
           <h2 className="max-w-[640px] font-tenor text-[#111111]">
             {about.capabilities.title}
           </h2>
@@ -144,6 +156,15 @@ export default async function AboutPage({ params }: { params: PageParams }) {
             </ul>
           </div>
         </div>
+
+        <InnerPhoto
+          src="/images/inner/about-studio-light.webp"
+          width={1536}
+          height={1024}
+          sizes="(min-width: 1500px) 1400px, 92vw"
+          position="55% 55%"
+          className="mt-10 aspect-[4/3] w-full md:aspect-[21/9]"
+        />
 
         <Link
           href={withLocale('/contact', lang)}

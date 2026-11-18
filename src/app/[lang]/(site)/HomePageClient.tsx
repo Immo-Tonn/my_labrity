@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import Image from 'next/image';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Plus } from 'lucide-react';
 
 import SeasonalSnow from '@/components/SeasonalSnow';
 import SeasonalHearts from '@/components/SeasonalHearts';
@@ -119,6 +119,8 @@ export type HomeData = {
     pairs: { problem: string; solution: string }[];
     capabilitiesTitle: string;
     capabilities: { title: string; description: string }[];
+    moreLabel: string;
+    lessLabel: string;
     primary: string;
     secondary: string;
     caption: string;
@@ -368,6 +370,48 @@ const arrowCls =
 // Underlined text link with a growing hairline.
 const linkCls =
   'group inline-flex items-center gap-3 font-montserrat text-[13px] font-medium text-[#111]';
+
+// Web-app capabilities: the three main ones, the rest behind "Mehr".
+const CAPABILITIES_VISIBLE = 3;
+
+function CapabilitiesList({
+  items,
+  moreLabel,
+  lessLabel,
+}: {
+  items: { title: string; description: string }[];
+  moreLabel: string;
+  lessLabel: string;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const hasMore = items.length > CAPABILITIES_VISIBLE;
+  const visible = expanded ? items : items.slice(0, CAPABILITIES_VISIBLE);
+
+  return (
+    <>
+      <Accordion items={visible} defaultOpen={0} />
+
+      {hasMore && (
+        <button
+          type="button"
+          aria-expanded={expanded}
+          onClick={() => setExpanded(value => !value)}
+          className={`${btnLineLight} group mt-8 min-w-[180px] justify-between`}
+        >
+          {expanded ? lessLabel : moreLabel}
+          <Plus
+            aria-hidden="true"
+            size={16}
+            strokeWidth={1.6}
+            className={`transition-transform duration-300 ${
+              expanded ? 'rotate-45' : ''
+            }`}
+          />
+        </button>
+      )}
+    </>
+  );
+}
 
 export default function HomePageClient({
   initialData,
@@ -750,14 +794,16 @@ export default function HomePageClient({
                 <article
                   key={`${item.title}-${index}`}
                   {...rv(index * 0.08)}
-                  className={`${s.rv} group flex min-h-[260px] flex-col justify-between border-b border-[#111] p-6 transition-colors duration-500 hover:bg-[#111] hover:text-white md:min-h-[320px] md:p-8 ${
+                  className={`${s.rv} ${s.diff} group relative flex min-h-[260px] flex-col justify-between border-b border-[#111] p-6 transition-colors duration-500 hover:bg-[#111] hover:text-white md:min-h-[320px] md:p-8 ${
                     index % 2 === 0 ? 'md:border-r' : ''
                   } ${index < 3 ? 'xl:border-r' : 'xl:border-r-0'} ${
                     index >= 2 ? 'xl:border-b' : ''
                   } last:border-b-0 md:[&:nth-last-child(-n+2)]:border-b-0 xl:[&:nth-last-child(-n+2)]:border-b`}
                 >
                   <div className="flex items-start justify-between">
-                    <span className="font-montserrat text-[48px] font-semibold leading-none tracking-[-0.05em] md:text-[64px]">
+                    <span
+                      className={`${s.diffNum} font-montserrat text-[48px] font-semibold leading-none tracking-[-0.05em] md:text-[64px]`}
+                    >
                       {String(index + 1).padStart(2, '0')}
                     </span>
 
@@ -767,7 +813,7 @@ export default function HomePageClient({
                     />
                   </div>
 
-                  <div>
+                  <div className={s.diffText}>
                     <h3 className="font-montserrat text-[24px] font-semibold leading-[1.08] tracking-[-0.03em] md:text-[28px]">
                       {item.title}
                     </h3>
@@ -974,9 +1020,10 @@ export default function HomePageClient({
               </h3>
 
               <div className="xl:col-span-8">
-                <Accordion
+                <CapabilitiesList
                   items={content.webAppsShowcase.capabilities}
-                  defaultOpen={0}
+                  moreLabel={content.webAppsShowcase.moreLabel}
+                  lessLabel={content.webAppsShowcase.lessLabel}
                 />
               </div>
             </div>
