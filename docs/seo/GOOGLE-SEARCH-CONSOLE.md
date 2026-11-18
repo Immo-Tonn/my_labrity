@@ -82,10 +82,17 @@ Search Console → «Проверка URL» → вставить адрес → 
   мы её не меняем.
 - **mylabrity.vercel.app:** после merge отдаёт заголовок `X-Robots-Tag: noindex`
   (см. PR «Производительность и ресурсы»), на основной домен это не влияет.
-- **Usercentrics:** в консоли разработчика были ошибки «No ruleset data» (403).
-  Проверить в панели Usercentrics, что домены `labrity.com` и `www.labrity.com`
-  добавлены в разрешённые для ваших настроек; иначе баннер согласия на проде
-  может не работать. Мы это не меняем.
+- **Баннер согласия:** вместо Usercentrics (ошибки «No ruleset data», 403)
+  сайт использует собственный баннер на `vanilla-cookieconsent`
+  (`src/components/common/CookieConsent.tsx`). Ссылка «Cookie-Einstellungen» в
+  футере открывает настройки повторно. Usercentrics на сайте больше не
+  подгружается, его можно отключить в панели Usercentrics.
+- **Журнал согласий:** выбор посетителя уходит в `POST /api/consent` и
+  архивируется сообщением «🍪 Consent erteilt» в приватном Telegram-чате.
+  Нужны переменные окружения `TELEGRAM_CONSENT_CHAT_ID` и токен бота
+  (`TELEGRAM_CONSENT_BOT_TOKEN` или `TELEGRAM_BOT_TOKEN`), заданные в Vercel
+  (Production и Preview). Значения в репозиторий не попадают. Без chat id
+  пишется только лог хостинга.
 - **Bing Webmaster Tools** (необязательно): <https://www.bing.com/webmasters> →
   импорт сайта из Google Search Console. Часть AI-поиска опирается на индекс
   Bing.
