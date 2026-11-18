@@ -73,6 +73,34 @@ const buildTranslations = () =>
     }),
   );
 
+const CONSENT_REVISION = 1;
+
+// Proof of consent (Art. 7(1) DSGVO): sends the choice and the random consent
+// ID to /api/consent. Never blocks or changes the visitor's choice.
+const logConsent = (trigger: 'first' | 'change', lang: string) => {
+  try {
+    const { consentId } = CookieConsentApi.getCookie();
+    const { acceptType } = CookieConsentApi.getUserPreferences();
+
+    void fetch('/api/consent', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      keepalive: true,
+      body: JSON.stringify({
+        consentId,
+        acceptType,
+        analytics: CookieConsentApi.acceptedCategory('analytics'),
+        revision: CONSENT_REVISION,
+        lang,
+        path: window.location.pathname.slice(0, 120),
+        trigger,
+      }),
+    }).catch(() => undefined);
+  } catch {
+    // Logging must never break the banner.
+  }
+};
+
 const gtagUpdate = (granted: boolean) => {
   window.gtag?.('consent', 'update', {
     analytics_storage: granted ? 'granted' : 'denied',
@@ -83,6 +111,7 @@ export default function CookieConsent() {
   const { lang } = useLanguage();
   const [analytics, setAnalytics] = useState(false);
   const initialLang = useRef(lang);
+  const langRef = useRef(lang);
 
   useEffect(() => {
     const sync = () => {
@@ -96,7 +125,7 @@ export default function CookieConsent() {
     };
 
     void CookieConsentApi.run({
-      revision: 1,
+      revision: CONSENT_REVISION,
       autoClearCookies: true,
       hideFromBots: true,
       disablePageInteraction: false,
@@ -126,8 +155,12 @@ export default function CookieConsent() {
         default: lang,
         translations: buildTranslations(),
       },
+      onFirstConsent: () => logConsent('first', langRef.current),
       onConsent: sync,
-      onChange: sync,
+      onChange: () => {
+        sync();
+        logConsent('change', langRef.current);
+      },
     });
     // Run once; language changes are handled below.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -137,6 +170,7 @@ export default function CookieConsent() {
     if (initialLang.current === lang) return;
 
     initialLang.current = lang;
+    langRef.current = lang;
     void CookieConsentApi.setLanguage(lang);
   }, [lang]);
 
