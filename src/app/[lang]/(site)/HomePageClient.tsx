@@ -552,7 +552,11 @@ export default function HomePageClient({
                 >
                   <div
                     data-rv
-                    className={`${s.mask} relative aspect-[4/3] overflow-hidden border-b border-[#111] bg-[#EEEEEB]`}
+                    className={`${s.mask} relative aspect-[4/3] overflow-hidden border-b border-[#111] ${
+                      project.image.includes('immo-tonn')
+                        ? 'bg-[#101326]'
+                        : 'bg-[#EEEEEB]'
+                    }`}
                   >
                     <div className={`${s.zoom} absolute inset-0`}>
                       <Image
@@ -560,13 +564,17 @@ export default function HomePageClient({
                         alt={`${project.title} Website Projekt`}
                         fill
                         sizes="(max-width: 480px) 78vw, (max-width: 1280px) 380px, 420px"
-                        className="object-cover object-top transition duration-700 ease-out group-hover:scale-[1.05]"
+                        className={`transition duration-700 ease-out group-hover:scale-[1.05] ${
+                          project.image.includes('immo-tonn')
+                            ? 'object-contain object-center'
+                            : 'object-cover object-top'
+                        }`}
                       />
                     </div>
                   </div>
 
-                  <div className="flex flex-1 flex-col p-5 md:p-6">
-                    <p className="flex items-center justify-between font-montserrat text-[11px] uppercase tracking-[0.16em] text-neutral-600">
+                  <div className="flex flex-1 flex-col p-5 transition-colors duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:bg-[#111] group-hover:text-white group-focus-visible:bg-[#111] group-focus-visible:text-white md:p-6">
+                    <p className="flex items-center justify-between font-montserrat text-[11px] uppercase tracking-[0.16em] text-neutral-600 transition-colors duration-300 group-hover:text-white/70 group-focus-visible:text-white/70">
                       <span>{String(index + 1).padStart(2, '0')}</span>
                       <span>{project.category}</span>
                     </p>
@@ -576,18 +584,18 @@ export default function HomePageClient({
                     </h3>
 
                     {project.kind === 'concept' && (
-                      <p className="mt-3 inline-block w-fit border border-[#111]/50 px-2 py-1 font-montserrat text-[9px] uppercase tracking-[0.2em] text-neutral-600">
+                      <p className="mt-3 inline-block w-fit border border-[#111]/50 px-2 py-1 font-montserrat text-[9px] uppercase tracking-[0.2em] text-neutral-600 transition-colors duration-300 group-hover:border-white/50 group-hover:text-white/70">
                         {content.portfolio.conceptLabel}
                       </p>
                     )}
 
-                    <span className="mt-auto flex items-center gap-3 pt-8 font-montserrat text-[12px] font-medium text-[#111]">
+                    <span className="mt-auto flex items-center gap-3 pt-8 font-montserrat text-[12px] font-medium text-[#111] transition-colors duration-300 group-hover:text-[#FF3830] group-focus-visible:text-[#FF3830]">
                       {content.featuredProjects.projectButton}
                       <ArrowUpRight
                         aria-hidden="true"
                         size={15}
                         strokeWidth={1.6}
-                        className={arrowCls}
+                        className={`${arrowCls} group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#FF3830]`}
                       />
                     </span>
                   </div>
