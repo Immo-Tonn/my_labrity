@@ -8,6 +8,7 @@ import * as CookieConsentApi from 'vanilla-cookieconsent';
 import 'vanilla-cookieconsent/dist/cookieconsent.css';
 
 import { useLanguage } from '@/utils/LanguageContext';
+import CookieIcon from '@/../public/icons/cookie.svg';
 import { LOCALES, withLocale } from '@/utils/localizedPath';
 
 import { COOKIE_TEXTS } from './cookieConsentTexts';
@@ -110,6 +111,7 @@ const gtagUpdate = (granted: boolean) => {
 export default function CookieConsent() {
   const { lang } = useLanguage();
   const [analytics, setAnalytics] = useState(false);
+  const [decided, setDecided] = useState(false);
   const initialLang = useRef(lang);
   const langRef = useRef(lang);
 
@@ -122,6 +124,7 @@ export default function CookieConsent() {
       gtagUpdate(granted);
       if (GA_ID) window[`ga-disable-${GA_ID}`] = !granted;
       setAnalytics(granted);
+      setDecided(true);
     };
 
     void CookieConsentApi.run({
@@ -174,20 +177,40 @@ export default function CookieConsent() {
     void CookieConsentApi.setLanguage(lang);
   }, [lang]);
 
-  if (!analytics) return null;
+  const label = COOKIE_TEXTS[lang]?.preferencesTitle ?? 'Cookie settings';
 
   return (
     <>
-      <Analytics />
-      {GA_ID && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-            strategy="afterInteractive"
+      {decided && (
+        <button
+          type="button"
+          aria-label={label}
+          title={label}
+          onClick={() => CookieConsentApi.showPreferences()}
+          className="group fixed bottom-4 left-4 z-[900] flex h-11 w-11 items-center justify-center rounded-full border border-black/15 bg-white text-black shadow-md transition hover:scale-105 hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        >
+          <CookieIcon
+            width={26}
+            height={24}
+            aria-hidden="true"
+            className="[&_path]:transition-[fill] group-hover:[&_path]:fill-white group-hover:[&_circle[fill='#FFFFFF']]:fill-black"
           />
-          <Script id="ga-init" strategy="afterInteractive">
-            {`gtag('js', new Date());gtag('config', '${GA_ID}');`}
-          </Script>
+        </button>
+      )}
+      {analytics && (
+        <>
+          <Analytics />
+          {GA_ID && (
+            <>
+              <Script
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+                strategy="afterInteractive"
+              />
+              <Script id="ga-init" strategy="afterInteractive">
+                {`gtag('js', new Date());gtag('config', '${GA_ID}');`}
+              </Script>
+            </>
+          )}
         </>
       )}
     </>

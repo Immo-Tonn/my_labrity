@@ -5,6 +5,7 @@ import ArrowWhiteIcon from './arrow-white.svg';
 import BurgerMenuIcon from './burger-menu.svg';
 import CloseIcon from './close-icon.svg';
 import ConversationIcon from './conversation.svg';
+import CookieIcon from './cookie.svg';
 import ErrorIcon from './error.svg'
 import FacebookIcon from './facebook.svg';
 import FlowerIcon from './flower.svg';
@@ -24,6 +25,7 @@ ArrowRightIcon,
 ArrowWhiteIcon,
 BurgerMenuIcon,
 ConversationIcon,
+CookieIcon,
 CloseIcon,
 ErrorIcon,
 FacebookIcon,
