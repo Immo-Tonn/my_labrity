@@ -589,7 +589,11 @@ export default function HomePageClient({
                         alt={`${project.title} Website Projekt`}
                         fill
                         sizes="(max-width: 480px) 78vw, (max-width: 1280px) 380px, 420px"
-                        className="object-contain object-center transition duration-700 ease-out group-hover:scale-[1.05]"
+                        className={`transition duration-700 ease-out group-hover:scale-[1.05] ${
+                          project.image.includes('immo-tonn')
+                            ? 'object-contain object-center'
+                            : 'object-cover object-top'
+                        }`}
                       />
                     </div>
                   </div>

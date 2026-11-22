@@ -193,7 +193,7 @@ export default function CookieConsent() {
             width={26}
             height={24}
             aria-hidden="true"
-            className="[&_path]:transition-[fill] group-hover:[&_path]:fill-white group-hover:[&_circle[fill='#FFFFFF']]:fill-black"
+            className="group-hover:[&_circle[fill='#FFFFFF']]:fill-black [&_path]:transition-[fill] group-hover:[&_path]:fill-white"
           />
         </button>
       )}
