@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 
 import { BackgroundVideo } from '@/components/common/BackgroundVideo';
+import { InnerPhoto } from '@/components/common/InnerPhoto';
 import { useQuiz } from '@/components/quiz';
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
 
@@ -622,6 +623,20 @@ export default function PricesPageClient({
               })}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* PHOTO — three materials, one per package tier */}
+      <section className="border-t border-[#111] px-5 pt-10 md:px-8 md:pt-14">
+        <div className="mx-auto max-w-[1700px]">
+          <InnerPhoto
+            src="/images/inner/prices-material-tiers.webp"
+            width={1536}
+            height={1024}
+            sizes="(min-width: 1700px) 1700px, 92vw"
+            position="50% 50%"
+            className="aspect-[4/3] w-full md:aspect-[21/9]"
+          />
         </div>
       </section>
 

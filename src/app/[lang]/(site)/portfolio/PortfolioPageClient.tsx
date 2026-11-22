@@ -4,6 +4,7 @@ import { motion, MotionConfig } from 'framer-motion';
 import Image from 'next/image';
 
 import { BackgroundVideo } from '@/components/common/BackgroundVideo';
+import { InnerPhoto } from '@/components/common/InnerPhoto';
 
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
 
@@ -291,6 +292,15 @@ export default function PortfolioPageClient({
               </motion.div>
             ))}
           </div>
+
+          <InnerPhoto
+            src="/images/inner/portfolio-concrete-forms.webp"
+            width={1536}
+            height={1024}
+            sizes="(min-width: 1700px) 1700px, 92vw"
+            position="50% 58%"
+            className="mt-10 aspect-[4/3] w-full md:mt-14 md:aspect-[21/9]"
+          />
         </section>
 
         {/* BLACK SECTION */}
