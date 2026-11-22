@@ -13,22 +13,22 @@ const PATH = '/webdesign';
 
 const META: Record<Language, { title: string; description: string }> = {
   de: {
-    title: 'Webdesign für Selbstständige & kleine Firmen | Labrity',
+    title: 'Webdesign in Münster für Selbstständige & Firmen | Labrity',
     description:
       'Webdesign aus Münster: klare Struktur und hochwertige Optik, die Vertrauen schafft – für Selbstständige und kleine Unternehmen in Deutschland.',
   },
   en: {
-    title: 'Web Design for Freelancers & Small Businesses | Labrity',
+    title: 'Web Design in Münster for Small Businesses | Labrity',
     description:
       'Web design from Münster with a clear structure and a premium look that builds trust – for freelancers and small businesses across Germany.',
   },
   ru: {
-    title: 'Веб-дизайн для предпринимателей и малого бизнеса | Labrity',
+    title: 'Веб-дизайн в Мюнстере для малого бизнеса | Labrity',
     description:
       'Веб-дизайн из Мюнстера: чёткая структура и качественная эстетика, которые вызывают доверие, — для предпринимателей и малого бизнеса в Германии.',
   },
   ua: {
-    title: 'Веб-дизайн для підприємців і малого бізнесу | Labrity',
+    title: 'Веб-дизайн у Мюнстері для малого бізнесу | Labrity',
     description:
       'Веб-дизайн із Мюнстера: чітка структура та якісна естетика, що викликають довіру, — для підприємців і малого бізнесу в Німеччині.',
   },

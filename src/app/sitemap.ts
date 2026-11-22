@@ -37,6 +37,31 @@ const PAGES: {
     priority: 0.8,
   },
   {
+    path: '/website-fuer-arztpraxis',
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  },
+  {
+    path: '/website-fuer-beauty-studio',
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  },
+  {
+    path: '/website-fuer-pizzeria',
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  },
+  {
+    path: '/website-fuer-billardclub',
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  },
+  {
+    path: '/website-fuer-apartments',
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  },
+  {
     path: '/landingpage-erstellen-lassen',
     changeFrequency: 'weekly',
     priority: 0.9,

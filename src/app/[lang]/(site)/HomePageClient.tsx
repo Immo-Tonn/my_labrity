@@ -456,6 +456,30 @@ export default function HomePageClient({
     return () => observer.disconnect();
   }, []);
 
+  // The project carousel scrolls sideways, so the browser's lazy loading only
+  // fetches the cards right next to the viewport and the rest pop in late.
+  // As soon as the carousel is near the screen, load all of its images.
+  useEffect(() => {
+    const carousel = rootRef.current?.querySelector('[data-carousel]');
+
+    if (!carousel || !('IntersectionObserver' in window)) return;
+
+    const observer = new IntersectionObserver(
+      entries => {
+        if (!entries.some(entry => entry.isIntersecting)) return;
+        carousel.querySelectorAll('img').forEach(img => {
+          img.loading = 'eager';
+        });
+        observer.disconnect();
+      },
+      { rootMargin: '800px 0px' },
+    );
+
+    observer.observe(carousel);
+
+    return () => observer.disconnect();
+  }, []);
+
   useEffect(() => {
     const hash = window.location.hash;
 
@@ -540,6 +564,7 @@ export default function HomePageClient({
 
             <div
               role="region"
+              data-carousel
               aria-label={content.featuredProjects.title}
               tabIndex={0}
               className="flex snap-x snap-mandatory divide-x divide-[#111] overflow-x-auto scroll-smooth"
@@ -564,11 +589,7 @@ export default function HomePageClient({
                         alt={`${project.title} Website Projekt`}
                         fill
                         sizes="(max-width: 480px) 78vw, (max-width: 1280px) 380px, 420px"
-                        className={`transition duration-700 ease-out group-hover:scale-[1.05] ${
-                          project.image.includes('immo-tonn')
-                            ? 'object-contain object-center'
-                            : 'object-cover object-top'
-                        }`}
+                        className="object-contain object-center transition duration-700 ease-out group-hover:scale-[1.05]"
                       />
                     </div>
                   </div>

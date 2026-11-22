@@ -1,0 +1,170 @@
+{
+  "breadcrumbParentLabel": "Services",
+  "meta": {
+    "title": "Website for a Beauty or Lash Studio in Münster | Labrity",
+    "description": "Websites for lash studios and beauty salons in Münster: strong visuals, clear services, simple booking request. Concept example: Lash Studio Demo."
+  },
+  "hero": {
+    "kicker": "Website for a beauty or lash studio in Münster",
+    "title": "A studio presence in Münster that shows precision and calm.",
+    "description": "For lash studios, nail and hair salons: large images, clear services and a booking request that takes just a few steps. Built for mobile, where most bookings begin."
+  },
+  "imageAlt": "Lash Studio Demo concept project from the Labrity portfolio: website for a lash studio with a close-up of lashes on a black background and oversized typography",
+  "needs": {
+    "kicker": "What matters",
+    "title": "What a beauty website has to do.",
+    "description": "Clients choose a studio by first impression. They want to see the work, feel calm and get an appointment quickly.",
+    "items": [
+      {
+        "title": "Work, not promises",
+        "description": "Large, real images show style and craft better than any description."
+      },
+      {
+        "title": "Services at a glance",
+        "description": "Lashes, nails, hair: a clear overview, so several offers do not feel like a jumble."
+      },
+      {
+        "title": "Findable in Münster",
+        "description": "A clean foundation for local search, so search engines can match the studio, its services and its location correctly."
+      }
+    ]
+  },
+  "example": {
+    "kicker": "Concept project",
+    "title": "Lash Studio Demo: a fictional studio as an example.",
+    "description": "Lash Studio Demo is an invented studio that we built as a concept to show what a beauty presence can look like. It is not a client project.",
+    "facts": [
+      {
+        "title": "A look of its own",
+        "description": "High-contrast black and white, oversized typography and a chrome shape as the brand mark."
+      },
+      {
+        "title": "Booking in a few steps",
+        "description": "A short request with a ready-made WhatsApp message, with nothing stored on the server."
+      },
+      {
+        "title": "Multilingual",
+        "description": "The concept site is available in German, English and Ukrainian."
+      }
+    ],
+    "button": "View Lash Studio Demo",
+    "note": "Fictional studio. All content serves only to present the concept."
+  },
+  "offer": {
+    "kicker": "What we build",
+    "title": "Building blocks for a studio presence.",
+    "description": "Which building blocks you need depends on your studio. This is a selection, not a fixed package.",
+    "items": [
+      {
+        "title": "Home page with a strong opening",
+        "description": "A hero that conveys your studio's style and attitude in seconds."
+      },
+      {
+        "title": "Services with preview",
+        "description": "Lashes, nails, hair or your own offer, clearly organised, with prices as you prefer."
+      },
+      {
+        "title": "Gallery and reference images",
+        "description": "Your work in the centre, loading fast on mobile."
+      },
+      {
+        "title": "Booking request",
+        "description": "A short flow, for example via WhatsApp, that makes enquiries easy."
+      },
+      {
+        "title": "Multiple languages",
+        "description": "Your studio in several languages, cleanly structured for search engines."
+      },
+      {
+        "title": "Technology and visibility",
+        "description": "Fast pages, local foundations for search and understandable content."
+      }
+    ]
+  },
+  "disclaimerStatement": {
+    "kicker": "To be honest",
+    "title": "Studio feel first, booking system if needed.",
+    "description": "This page describes presences for studios: images, services, the way to an appointment. For automatic online booking with a calendar and payment, a dedicated booking system is often the better basis. We tell you openly what suits your plan. And: nobody can seriously guarantee Google rankings."
+  },
+  "disambiguation": {
+    "kicker": "Looking for something else?",
+    "title": "Maybe one of these pages fits better.",
+    "items": [
+      {
+        "label": "Is it just about a single campaign or offer?",
+        "linkLabel": "More on Landing page creation",
+        "href": "/landingpage-erstellen-lassen"
+      },
+      {
+        "label": "Do you need a general company website?",
+        "linkLabel": "More on Website creation",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Interested in prices and packages?",
+        "linkLabel": "View prices & packages",
+        "href": "/prices"
+      },
+      {
+        "label": "Would you like to see more of our work?",
+        "linkLabel": "View portfolio",
+        "href": "/portfolio"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Common questions",
+    "title": "What you'd want to know beforehand.",
+    "items": [
+      {
+        "question": "How much does a website for a beauty or lash studio cost?",
+        "answer": "It depends on the scope: number of pages, image material, languages and the features you want. Our packages and prices give you a guide. You receive a concrete quote after a short conversation, with no obligation."
+      },
+      {
+        "question": "Do you build websites for studios in Münster and the surrounding area?",
+        "answer": "Yes. We build websites for studios and salons in Münster, the Münsterland region and across Germany. Coordination and delivery work conveniently online."
+      },
+      {
+        "question": "Is Lash Studio Demo a real client project?",
+        "answer": "No. Lash Studio Demo is a fictional studio that we built as a concept project to show our work on a beauty topic. Concept projects are labelled as such in the portfolio."
+      },
+      {
+        "question": "Can clients book an appointment online?",
+        "answer": "In the concept, the request goes through a ready-made WhatsApp message. A booking system with a calendar is possible as an extension; we discuss what suits your studio."
+      },
+      {
+        "question": "What material do I need to get started?",
+        "answer": "Ideally photos of your work and the studio, a logo, the list of services and contact details. If something is missing, we clarify in a conversation how to proceed."
+      }
+    ]
+  },
+  "relatedArticles": {
+    "kicker": "Further reading",
+    "title": "More on this in our blog.",
+    "items": [
+      {
+        "label": "Web design for beauty and wellness brands: what really matters",
+        "linkLabel": "Read article",
+        "href": "/blog/webdesign-beauty-wellness"
+      },
+      {
+        "label": "Landing page or website: what do you actually need?",
+        "linkLabel": "Read article",
+        "href": "/blog/landingpage-oder-website"
+      },
+      {
+        "label": "What does a professional website really cost?",
+        "linkLabel": "Read article",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Next step",
+    "title": "Your business deserves a strong presence.",
+    "description": "Tell us briefly about your business and your plans. We will get back to you with an honest assessment.",
+    "primaryButton": "Request a project",
+    "secondaryButton": "View portfolio",
+    "backToServicesLabel": "View all services"
+  }
+}

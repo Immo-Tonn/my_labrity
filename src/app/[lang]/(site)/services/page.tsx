@@ -14,24 +14,24 @@ const PATH = '/services';
 
 const META: Record<Language, { title: string; description: string }> = {
   de: {
-    title: 'Leistungen: Webdesign, Entwicklung & Relaunch | Labrity',
+    title: 'Leistungen: Webdesign & Entwicklung in Münster | Labrity',
     description:
-      'Von der Landingpage bis zum vollständigen Webauftritt: Wir entwickeln Websites, die Vertrauen schaffen und neue Anfragen erleichtern.',
+      'Webdesign, Webentwicklung und Relaunch in Münster: von der Landingpage bis zum vollständigen Webauftritt, der Vertrauen schafft und Anfragen erleichtert.',
   },
   en: {
-    title: 'Services: Web Design, Development & Relaunch | Labrity',
+    title: 'Web Design & Development in Münster | Labrity',
     description:
-      'From landing pages to complete websites: we build sites that create trust and make it easier for new clients to get in touch.',
+      'Web design, development and relaunch in Münster: from landing pages to complete websites that build trust and make it easy for new clients to get in touch.',
   },
   ru: {
-    title: 'Услуги: веб-дизайн, разработка и обновление | Labrity',
+    title: 'Веб-дизайн и разработка в Мюнстере | Labrity',
     description:
-      'От лендингов до полноценных сайтов: мы создаём сайты, которые вызывают доверие и облегчают новым клиентам обращение к вам.',
+      'Веб-дизайн, разработка и обновление сайтов в Мюнстере: от лендингов до полноценных сайтов, которые вызывают доверие и облегчают обращение клиентов.',
   },
   ua: {
-    title: 'Послуги: веб-дизайн, розробка й оновлення | Labrity',
+    title: 'Веб-дизайн і розробка в Мюнстері | Labrity',
     description:
-      'Від лендінгів до повноцінних сайтів: ми створюємо сайти, що викликають довіру й полегшують новим клієнтам звернення до вас.',
+      'Веб-дизайн, розробка й оновлення сайтів у Мюнстері: від лендінгів до повноцінних сайтів, що викликають довіру й полегшують звернення клієнтів.',
   },
 };
 

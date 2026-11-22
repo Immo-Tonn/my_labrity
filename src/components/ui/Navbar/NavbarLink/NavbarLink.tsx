@@ -15,6 +15,11 @@ const PARENT_SECTION: Record<string, string> = {
   '/website-relaunch': '/services',
   '/landingpage-erstellen-lassen': '/services',
   '/website-fuer-modemarken': '/services',
+  '/website-fuer-arztpraxis': '/services',
+  '/website-fuer-beauty-studio': '/services',
+  '/website-fuer-pizzeria': '/services',
+  '/website-fuer-billardclub': '/services',
+  '/website-fuer-apartments': '/services',
 };
 
 // Locale-free comparison, so "/ru/blog/slug" highlights "Blog" just like

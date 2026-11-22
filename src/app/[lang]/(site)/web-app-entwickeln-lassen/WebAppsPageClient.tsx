@@ -21,6 +21,7 @@ type Pair = { problem: string; solution: string };
 export type WebAppsData = {
   breadcrumbParentLabel: string;
   hero: {
+    h1?: string;
     kicker: string;
     title: string;
     description: string;
@@ -244,9 +245,12 @@ export default function WebAppsPageClient({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h1 className="2xl:text-[80px] font-tenor text-[34px] leading-[1.04] tracking-[-0.04em] text-black md:text-[60px] xl:text-[68px]">
-              {content.hero.title}
+            <h1 className="2xl:text-[72px] font-tenor text-[32px] leading-[1.04] tracking-[-0.04em] text-black md:text-[54px] xl:text-[60px]">
+              {content.hero.h1 ?? content.hero.title}
             </h1>
+            <p className="mt-6 max-w-[760px] font-tenor text-[22px] leading-[1.15] tracking-[-0.02em] text-black/80 md:text-[30px]">
+              {content.hero.title}
+            </p>
             <p className="mt-6 max-w-[760px] font-montserrat text-[15px] leading-8 text-neutral-500 md:mt-8 md:text-[18px]">
               {content.hero.description}
             </p>

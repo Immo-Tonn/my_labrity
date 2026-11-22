@@ -1,0 +1,165 @@
+{
+  "breadcrumbParentLabel": "Services",
+  "meta": {
+    "title": "Website for a Medical Practice in Münster | Labrity",
+    "description": "Calm, clear websites for medical practices in Münster: opening hours, services, first visit. With the Hausarztpraxis Weber concept project as an example."
+  },
+  "hero": {
+    "kicker": "Website for a medical practice in Münster",
+    "title": "A practice website in Münster that creates calm and trust.",
+    "description": "For GP practices, specialists and practice teams: opening hours, services and the way to an appointment found at once. Calmly designed, easy to read and built for mobile."
+  },
+  "imageAlt": "Hausarztpraxis Weber concept project from the Labrity portfolio: a calm practice website with a large headline and a doctor in an armchair",
+  "needs": {
+    "kicker": "What matters",
+    "title": "What a practice website has to do.",
+    "description": "Patients rarely search for long. They want to know when the practice is open, what it offers and how to get an appointment.",
+    "items": [
+      {
+        "title": "Opening hours at a glance",
+        "description": "Hours, phone number and holiday notices are where people expect them, with no searching and no detours."
+      },
+      {
+        "title": "Readable for everyone",
+        "description": "Large type, clear contrast and plain language help older patients and small screens alike."
+      },
+      {
+        "title": "Findable in Münster",
+        "description": "A clean foundation for local search, so search engines can match the practice, its services and its location correctly."
+      }
+    ]
+  },
+  "example": {
+    "kicker": "Concept project",
+    "title": "Hausarztpraxis Weber: a fictional practice as an example.",
+    "description": "Hausarztpraxis Weber is an invented practice that we built as a concept to show what a practice website can look like. It is not a client project.",
+    "facts": [
+      {
+        "title": "Calm design",
+        "description": "Muted green on warm white, large typography and clear contrast instead of visual noise."
+      },
+      {
+        "title": "The way to an appointment",
+        "description": "Booking by phone, opening hours and notes on holidays and availability at a glance."
+      },
+      {
+        "title": "Data-light",
+        "description": "Built in the concept without cookies, tracking or external services."
+      }
+    ],
+    "button": "View Hausarztpraxis Weber",
+    "note": "Fictional practice. All content serves only to present the concept."
+  },
+  "offer": {
+    "kicker": "What we build",
+    "title": "Building blocks for a practice website.",
+    "description": "Which building blocks you need depends on your practice. This is a selection, not a fixed package.",
+    "items": [
+      {
+        "title": "Home page with a path to booking",
+        "description": "A clear start with phone number, opening hours and the most important next step."
+      },
+      {
+        "title": "Services and focus areas",
+        "description": "What your practice offers, explained clearly and without jargon."
+      },
+      {
+        "title": "Team and practice",
+        "description": "Doctors and team introduced, so the first visit feels familiar."
+      },
+      {
+        "title": "First visit and FAQ",
+        "description": "Answers to the most common questions: what to bring, what happens, where to park."
+      },
+      {
+        "title": "Multiple languages",
+        "description": "In several languages if you wish, including right-to-left layout."
+      },
+      {
+        "title": "Technology and privacy",
+        "description": "Fast pages, a clean foundation for search and a data-light setup."
+      }
+    ]
+  },
+  "disclaimerStatement": {
+    "kicker": "To be honest",
+    "title": "Information yes, healing promises no.",
+    "description": "A practice website informs about services and procedures. Healing promises and comparisons are legally sensitive for doctors, so have your legal notice, privacy policy and advertising texts reviewed by a qualified professional. And: nobody can seriously guarantee Google rankings."
+  },
+  "disambiguation": {
+    "kicker": "Looking for something else?",
+    "title": "Maybe one of these pages fits better.",
+    "items": [
+      {
+        "label": "Is it just about a single campaign or offer?",
+        "linkLabel": "More on Landing page creation",
+        "href": "/landingpage-erstellen-lassen"
+      },
+      {
+        "label": "Do you need a general company website?",
+        "linkLabel": "More on Website creation",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Interested in prices and packages?",
+        "linkLabel": "View prices & packages",
+        "href": "/prices"
+      },
+      {
+        "label": "Would you like to see more of our work?",
+        "linkLabel": "View portfolio",
+        "href": "/portfolio"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Common questions",
+    "title": "What you'd want to know beforehand.",
+    "items": [
+      {
+        "question": "How much does a website for a medical practice cost?",
+        "answer": "It depends on the scope: number of pages, team photos, languages and the features you want. Our packages and prices give you a guide. You receive a concrete quote after a short conversation, with no obligation."
+      },
+      {
+        "question": "Do you build websites for practices in Münster and the surrounding area?",
+        "answer": "Yes. We build websites for practices in Münster, the Münsterland region and across Germany. Coordination and delivery work conveniently online."
+      },
+      {
+        "question": "Is Hausarztpraxis Weber a real client project?",
+        "answer": "No. Hausarztpraxis Weber is a fictional practice that we built as a concept project to show our work on a health topic. Concept projects are labelled as such in the portfolio."
+      },
+      {
+        "question": "Can patients book appointments online?",
+        "answer": "In the concept, appointments are made by phone. Online booking is possible as an extension; we discuss what suits your practice."
+      },
+      {
+        "question": "What content do I need to get started?",
+        "answer": "Ideally photos of the practice and team, opening hours, an overview of services and the legally required details. If something is missing, we clarify in a conversation how to proceed."
+      }
+    ]
+  },
+  "relatedArticles": {
+    "kicker": "Further reading",
+    "title": "More on this in our blog.",
+    "items": [
+      {
+        "label": "Landing page or website: what do you actually need?",
+        "linkLabel": "Read article",
+        "href": "/blog/landingpage-oder-website"
+      },
+      {
+        "label": "What does a professional website really cost?",
+        "linkLabel": "Read article",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Next step",
+    "title": "Your business deserves a strong presence.",
+    "description": "Tell us briefly about your business and your plans. We will get back to you with an honest assessment.",
+    "primaryButton": "Request a project",
+    "secondaryButton": "View portfolio",
+    "backToServicesLabel": "View all services"
+  }
+}

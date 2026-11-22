@@ -28,24 +28,24 @@ const DEMO_URL: Record<Language, string> = {
 // stays on /landingpage-erstellen-lassen and /website-erstellen-lassen.
 const META: Record<Language, { title: string; description: string }> = {
   de: {
-    title: 'Website für Modemarken erstellen lassen | Labrity',
+    title: 'Website für Modemarken in Münster | Labrity',
     description:
-      'Websites für Labels und Streetwear-Marken: Kampagnen-Einstieg, Lookbook und Kollektionsstart. Mit dem Konzeptbeispiel NØFORM.',
+      'Website für Modemarken in Münster: Kampagnen-Einstieg, Lookbook und Kollektionsstart für Labels und Streetwear. Mit dem Konzeptbeispiel NØFORM.',
   },
   en: {
-    title: 'Website for Fashion Brands and Labels | Labrity',
+    title: 'Website for Fashion Brands in Münster | Labrity',
     description:
-      'Websites for labels and streetwear brands: campaign opening, lookbook and collection launch. With the NØFORM concept project as an example.',
+      'Website for fashion brands in Münster: campaign opening, lookbook and collection launch for labels and streetwear. With the NØFORM concept project.',
   },
   ru: {
-    title: 'Сайт для модного бренда и лейбла | Labrity',
+    title: 'Сайт для модного бренда в Мюнстере | Labrity',
     description:
-      'Сайты для лейблов и streetwear-брендов: кампейн-экран, лукбук и запуск коллекции. С концепт-проектом NØFORM в качестве примера.',
+      'Сайт для модного бренда в Мюнстере: кампейн-экран, лукбук и запуск коллекции для лейблов и streetwear. С концепт-проектом NØFORM.',
   },
   ua: {
-    title: 'Сайт для модного бренду та лейблу | Labrity',
+    title: 'Сайт для модного бренду в Мюнстері | Labrity',
     description:
-      'Сайти для лейблів і streetwear-брендів: кампейн-екран, лукбук і запуск колекції. З концепт-проєктом NØFORM як прикладом.',
+      'Сайт для модного бренду в Мюнстері: кампейн-екран, лукбук і запуск колекції для лейблів і streetwear. З концепт-проєктом NØFORM.',
   },
 };
 

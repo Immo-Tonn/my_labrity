@@ -1,0 +1,165 @@
+{
+  "breadcrumbParentLabel": "Leistungen",
+  "meta": {
+    "title": "Website für Arztpraxis in Münster erstellen lassen | Labrity",
+    "description": "Ruhige, verständliche Websites für Arztpraxen in Münster: Sprechzeiten, Leistungen, erster Besuch. Mit dem Konzeptbeispiel Hausarztpraxis Weber."
+  },
+  "hero": {
+    "kicker": "Website für Arztpraxis in Münster",
+    "title": "Eine Praxis-Website in Münster, die Ruhe und Vertrauen schafft.",
+    "description": "Für Hausarztpraxen, Fachärzte und Praxisteams: Sprechzeiten, Leistungen und der Weg zum Termin sofort gefunden. Ruhig gestaltet, gut lesbar und fürs Handy gebaut."
+  },
+  "imageAlt": "Konzeptprojekt Hausarztpraxis Weber aus dem Labrity Portfolio: ruhige Praxis-Website mit großer Überschrift und Arzt im Sessel",
+  "needs": {
+    "kicker": "Worauf es ankommt",
+    "title": "Was eine Praxis-Website leisten muss.",
+    "description": "Patientinnen und Patienten suchen selten lange. Sie wollen wissen, wann geöffnet ist, was die Praxis anbietet und wie sie einen Termin bekommen.",
+    "items": [
+      {
+        "title": "Sprechzeiten sofort sichtbar",
+        "description": "Öffnungszeiten, Telefon und Urlaubshinweise stehen dort, wo man sie erwartet, ohne Suchen und ohne Umwege."
+      },
+      {
+        "title": "Lesbar für alle",
+        "description": "Große Schrift, klare Kontraste und einfache Sprache helfen auch älteren Patienten und auf kleinen Bildschirmen."
+      },
+      {
+        "title": "Auffindbar in Münster",
+        "description": "Saubere Grundlagen für die lokale Suche, damit Suchmaschinen Praxis, Leistungen und Standort richtig zuordnen können."
+      }
+    ]
+  },
+  "example": {
+    "kicker": "Konzeptprojekt",
+    "title": "Hausarztpraxis Weber: eine fiktive Praxis als Beispiel.",
+    "description": "Hausarztpraxis Weber ist eine erfundene Praxis, die wir als Konzept umgesetzt haben, um zu zeigen, wie eine Praxis-Website aussehen kann. Es ist kein Kundenprojekt.",
+    "facts": [
+      {
+        "title": "Ruhige Gestaltung",
+        "description": "Gedecktes Grün auf warmem Weiß, große Typografie und klare Kontraste statt visuellem Rauschen."
+      },
+      {
+        "title": "Weg zum Termin",
+        "description": "Telefonische Terminvereinbarung, Sprechzeiten und Hinweise zu Urlaub und Erreichbarkeit auf einen Blick."
+      },
+      {
+        "title": "Datensparsam",
+        "description": "Im Konzept ohne Cookies, Tracking und externe Dienste umgesetzt."
+      }
+    ],
+    "button": "Hausarztpraxis Weber ansehen",
+    "note": "Fiktive Praxis. Alle Inhalte dienen ausschließlich der Konzeptdarstellung."
+  },
+  "offer": {
+    "kicker": "Was wir umsetzen",
+    "title": "Bausteine für eine Praxis-Website.",
+    "description": "Welche Bausteine Sie brauchen, hängt von Ihrer Praxis ab. Das ist eine Auswahl, kein festes Paket.",
+    "items": [
+      {
+        "title": "Startseite mit Terminweg",
+        "description": "Ein klarer Einstieg mit Telefon, Sprechzeiten und dem wichtigsten nächsten Schritt."
+      },
+      {
+        "title": "Leistungen und Schwerpunkte",
+        "description": "Was Ihre Praxis anbietet, verständlich und ohne Fachchinesisch erklärt."
+      },
+      {
+        "title": "Team und Praxis",
+        "description": "Ärztinnen, Ärzte und Team vorgestellt, damit der erste Besuch vertraut wirkt."
+      },
+      {
+        "title": "Erster Besuch und FAQ",
+        "description": "Antworten auf die häufigsten Fragen: Was mitbringen, wie läuft es ab, wo parken."
+      },
+      {
+        "title": "Mehrsprachigkeit",
+        "description": "Auf Wunsch in mehreren Sprachen, auch mit Rechts-nach-links-Darstellung."
+      },
+      {
+        "title": "Technik und Datenschutz",
+        "description": "Schnelle Seiten, saubere Grundlagen für die Suche und ein datensparsamer Aufbau."
+      }
+    ]
+  },
+  "disclaimerStatement": {
+    "kicker": "Ehrlich gesagt",
+    "title": "Information ja, Heilversprechen nein.",
+    "description": "Eine Praxis-Website informiert über Leistungen und Abläufe. Heilversprechen und Vergleiche sind für Ärzte rechtlich heikel; Impressum, Datenschutz und Werbetexte sollten Sie daher fachkundig prüfen lassen. Und: Platzierungen bei Google kann niemand seriös zusichern."
+  },
+  "disambiguation": {
+    "kicker": "Sie suchen etwas anderes?",
+    "title": "Vielleicht passt eine dieser Seiten besser.",
+    "items": [
+      {
+        "label": "Es geht nur um eine einzelne Aktion oder ein Angebot?",
+        "linkLabel": "Mehr zu Landingpage erstellen lassen",
+        "href": "/landingpage-erstellen-lassen"
+      },
+      {
+        "label": "Sie brauchen eine allgemeine Unternehmenswebsite?",
+        "linkLabel": "Mehr zu Website erstellen lassen",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Interessiert an Preisen und Paketen?",
+        "linkLabel": "Preise & Pakete ansehen",
+        "href": "/prices"
+      },
+      {
+        "label": "Sie möchten weitere Arbeiten sehen?",
+        "linkLabel": "Portfolio ansehen",
+        "href": "/portfolio"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Häufige Fragen",
+    "title": "Was Sie vorher wissen möchten.",
+    "items": [
+      {
+        "question": "Wie viel kostet eine Website für eine Arztpraxis?",
+        "answer": "Das hängt vom Umfang ab: Anzahl der Seiten, Team-Fotos, Sprachen und gewünschte Funktionen. Eine Orientierung geben unsere Pakete und Preise. Ein konkretes Angebot erhalten Sie nach einem kurzen Gespräch, ohne Verpflichtung."
+      },
+      {
+        "question": "Erstellen Sie Websites für Praxen in Münster und Umgebung?",
+        "answer": "Ja. Wir erstellen Websites für Praxen in Münster, im Münsterland und in ganz Deutschland. Abstimmung und Umsetzung laufen bequem online."
+      },
+      {
+        "question": "Ist Hausarztpraxis Weber ein echtes Kundenprojekt?",
+        "answer": "Nein. Hausarztpraxis Weber ist eine fiktive Praxis, die wir als Konzeptprojekt umgesetzt haben, um unsere Arbeit an einem Gesundheitsthema zu zeigen. Konzeptprojekte sind im Portfolio entsprechend gekennzeichnet."
+      },
+      {
+        "question": "Können Patienten online Termine buchen?",
+        "answer": "Im Konzept läuft die Terminvereinbarung per Telefon. Eine Online-Terminbuchung ist als Erweiterung möglich; wir besprechen, was zu Ihrer Praxis passt."
+      },
+      {
+        "question": "Welche Inhalte brauche ich für den Start?",
+        "answer": "Idealerweise Fotos der Praxis und des Teams, Sprechzeiten, eine Leistungsübersicht und die Pflichtangaben. Fehlt noch etwas, klären wir im Gespräch, wie wir vorgehen."
+      }
+    ]
+  },
+  "relatedArticles": {
+    "kicker": "Weiterlesen",
+    "title": "Mehr dazu im Blog.",
+    "items": [
+      {
+        "label": "Landingpage oder Website: Was brauche ich wirklich?",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/landingpage-oder-website"
+      },
+      {
+        "label": "Was kostet eine professionelle Website wirklich?",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Nächster Schritt",
+    "title": "Ihr Betrieb verdient einen starken Auftritt.",
+    "description": "Erzählen Sie uns kurz von Ihrem Betrieb und Ihrem Vorhaben. Wir melden uns mit einer ehrlichen Einschätzung.",
+    "primaryButton": "Projekt anfragen",
+    "secondaryButton": "Portfolio ansehen",
+    "backToServicesLabel": "Alle Leistungen ansehen"
+  }
+}

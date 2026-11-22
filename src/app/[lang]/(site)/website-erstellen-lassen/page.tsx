@@ -15,22 +15,22 @@ const PATH = '/website-erstellen-lassen';
 
 const META: Record<Language, { title: string; description: string }> = {
   de: {
-    title: 'Website erstellen lassen: von der Idee zum Auftritt | Labrity',
+    title: 'Website erstellen lassen in Münster | Labrity',
     description:
       'Website erstellen lassen in Münster: Konzept, Design und Umsetzung für Selbstständige und kleine Unternehmen – von der ersten Idee bis zum Launch.',
   },
   en: {
-    title: 'Get a Website Built: From First Idea to Launch | Labrity',
+    title: 'Website Design & Build in Münster | Labrity',
     description:
       'Have a website built by a studio in Münster: concept, design and build for freelancers and small businesses, from first idea to launch.',
   },
   ru: {
-    title: 'Заказать сайт: от первой идеи до запуска | Labrity',
+    title: 'Разработка сайта в Мюнстере | Labrity',
     description:
       'Заказать разработку сайта в Мюнстере: концепция, дизайн и реализация для предпринимателей и малого бизнеса — от идеи до запуска.',
   },
   ua: {
-    title: 'Замовити сайт: від першої ідеї до запуску | Labrity',
+    title: 'Розробка сайту в Мюнстері | Labrity',
     description:
       'Замовити розробку сайту в Мюнстері: концепція, дизайн і реалізація для підприємців і малого бізнесу — від ідеї до запуску.',
   },

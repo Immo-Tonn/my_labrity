@@ -14,7 +14,7 @@ type RelatedArticleItem = { label: string; linkLabel: string; href: string };
 
 export type WebentwicklungData = {
   breadcrumbParentLabel: string;
-  hero: { kicker: string; title: string; description: string };
+  hero: { h1?: string; kicker: string; title: string; description: string };
   images: { heroAlt: string };
   coreSection: {
     kicker: string;
@@ -83,13 +83,14 @@ export default function WebentwicklungPageClient({
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-[1180px]"
         >
-          <p className="mb-6 font-montserrat text-[12px] font-medium uppercase tracking-[0.38em] text-black/60 md:text-[13px]">
-            {content.hero.kicker}
-          </p>
-          <h1 className="font-tenor text-[42px] leading-[1] tracking-[-0.04em] text-black md:text-[72px] xl:text-[96px]">
-            {content.hero.title}
+          {/* H1 = the search phrase incl. city; the marketing line is the sub-headline. */}
+          <h1 className="font-tenor text-[38px] leading-[1.02] tracking-[-0.04em] text-black md:text-[64px] xl:text-[84px]">
+            {content.hero.h1 ?? content.hero.kicker}
           </h1>
-          <p className="mt-8 max-w-[760px] font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[18px]">
+          <p className="mt-8 max-w-[960px] font-tenor text-[24px] leading-[1.15] tracking-[-0.02em] text-black/80 md:text-[36px]">
+            {content.hero.title}
+          </p>
+          <p className="mt-6 max-w-[760px] font-montserrat text-[15px] leading-8 text-neutral-500 md:text-[18px]">
             {content.hero.description}
           </p>
         </motion.div>

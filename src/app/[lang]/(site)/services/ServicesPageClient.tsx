@@ -27,6 +27,7 @@ export type ServicesPageData = {
   services: Service[];
   buttonLabel: string;
   serviceLinks: {
+    h1?: string;
     kicker: string;
     title: string;
     description?: string;
@@ -91,8 +92,12 @@ export default function ServicesPageClient({
               }}
               className="2xl:text-[72px] font-tenor text-[38px] leading-[1.02] text-black md:text-[56px] lg:text-[48px] xl:text-[64px]"
             >
-              {content.servicesSection.title}
+              {content.serviceLinks.h1 ?? content.servicesSection.title}
             </motion.h1>
+
+            <p className="mt-5 max-w-[760px] font-tenor text-[22px] leading-[1.15] tracking-[-0.02em] text-black/80 md:text-[28px]">
+              {content.servicesSection.title}
+            </p>
 
             <motion.p
               initial={{ opacity: 0, y: 24 }}

@@ -1,0 +1,165 @@
+{
+  "breadcrumbParentLabel": "Services",
+  "meta": {
+    "title": "Website for Apartments & Stays in Münster | Labrity",
+    "description": "Websites for furnished apartments and worker accommodation in Münster: floor plans, location, equipment, simple enquiry. Concept example: Apartament Demo."
+  },
+  "hero": {
+    "kicker": "Website for apartments and worker accommodation in Münster",
+    "title": "An apartment website in Münster that shows location, equipment and price clearly.",
+    "description": "For furnished apartments, worker accommodation and holiday lets: floor plans, equipment and distances at a glance, a simple way to enquire and a presence that looks credible even without glossy photos."
+  },
+  "imageAlt": "Apartament Demo concept project from the Labrity portfolio: website for furnished apartments with a blueprint grid and a black-and-white halftone of the old town with a castle",
+  "needs": {
+    "kicker": "What matters",
+    "title": "What an apartment website has to do.",
+    "description": "Anyone looking for accommodation for weeks or months decides by location, kitchen, parking and price, less by atmosphere.",
+    "items": [
+      {
+        "title": "Facts quickly graspable",
+        "description": "Area, beds, equipment and price are clearly there, with no need to hunt for them."
+      },
+      {
+        "title": "Trust even without professional photos",
+        "description": "A thoughtful visual language and a clean structure make simple accommodation look high-quality and credible."
+      },
+      {
+        "title": "Findable in Münster",
+        "description": "A clean foundation for local search, so search engines can match the accommodation, its offer and its location correctly."
+      }
+    ]
+  },
+  "example": {
+    "kicker": "Concept project",
+    "title": "Apartament Demo: a fictional business as an example.",
+    "description": "Apartament Demo is an invented business with furnished apartments that we built as a concept to show what an accommodation presence can look like. It is not a client project.",
+    "facts": [
+      {
+        "title": "A visual language of its own",
+        "description": "All photos appear in a uniform black-and-white halftone that recalls technical drawings."
+      },
+      {
+        "title": "Floor plans to explore",
+        "description": "Interactive floor plans with rooms, furniture and dimensions, plus apartment types from one to four rooms."
+      },
+      {
+        "title": "Location and stay calculator",
+        "description": "Distances to key places, a calculator for the length of stay and a separate area for companies."
+      }
+    ],
+    "button": "View Apartament Demo",
+    "note": "Fictional business. All content serves only to present the concept."
+  },
+  "offer": {
+    "kicker": "What we build",
+    "title": "Building blocks for an apartment website.",
+    "description": "Which building blocks you need depends on your business. This is a selection, not a fixed package.",
+    "items": [
+      {
+        "title": "Home page with a clear offer",
+        "description": "An opening that makes the location, size and target group of the apartments clear at once."
+      },
+      {
+        "title": "Apartment types and floor plans",
+        "description": "Area, beds and number of guests clearly shown, with interactive floor plans if you wish."
+      },
+      {
+        "title": "Location and distances",
+        "description": "Key places and routes at a glance, so guests can judge the location immediately."
+      },
+      {
+        "title": "Enquiry and company area",
+        "description": "A simple way to enquire, also for companies with several employees."
+      },
+      {
+        "title": "Multiple languages",
+        "description": "Your offer in several languages, cleanly structured for search engines."
+      },
+      {
+        "title": "Technology and visibility",
+        "description": "Fast pages, local foundations for search and understandable content."
+      }
+    ]
+  },
+  "disclaimerStatement": {
+    "kicker": "To be honest",
+    "title": "Direct enquiries instead of platform dependence.",
+    "description": "Your own website complements booking platforms and gives you a direct route to guests and companies. For automatic booking with a calendar and payment, a booking system is often the better basis. We tell you openly what suits your plan. And: nobody can seriously guarantee Google rankings."
+  },
+  "disambiguation": {
+    "kicker": "Looking for something else?",
+    "title": "Maybe one of these pages fits better.",
+    "items": [
+      {
+        "label": "Is it just about a single campaign or offer?",
+        "linkLabel": "More on Landing page creation",
+        "href": "/landingpage-erstellen-lassen"
+      },
+      {
+        "label": "Do you need a general company website?",
+        "linkLabel": "More on Website creation",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Interested in prices and packages?",
+        "linkLabel": "View prices & packages",
+        "href": "/prices"
+      },
+      {
+        "label": "Would you like to see more of our work?",
+        "linkLabel": "View portfolio",
+        "href": "/portfolio"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Common questions",
+    "title": "What you'd want to know beforehand.",
+    "items": [
+      {
+        "question": "How much does a website for apartments or worker accommodation cost?",
+        "answer": "It depends on the scope: number of pages, image material, languages and the features you want. Our packages and prices give you a guide. You receive a concrete quote after a short conversation, with no obligation."
+      },
+      {
+        "question": "Do you build websites for accommodation in Münster and the surrounding area?",
+        "answer": "Yes. We build websites for apartments, worker accommodation and holiday lets in Münster, the Münsterland region and across Germany. Coordination and delivery work conveniently online."
+      },
+      {
+        "question": "Is Apartament Demo a real client project?",
+        "answer": "No. Apartament Demo is a fictional business that we built as a concept project to show our work on an accommodation topic. Concept projects are labelled as such in the portfolio."
+      },
+      {
+        "question": "What if my photos are not professional?",
+        "answer": "That is not an obstacle. In the concept, weak photos became a credible presence through a uniform visual language, floor plans and clear typography. We discuss what is possible with your material."
+      },
+      {
+        "question": "What material do I need to get started?",
+        "answer": "Ideally photos of the apartments, floor plans or dimensions, the equipment list, location and contact details. If something is missing, we clarify in a conversation how to proceed."
+      }
+    ]
+  },
+  "relatedArticles": {
+    "kicker": "Further reading",
+    "title": "More on this in our blog.",
+    "items": [
+      {
+        "label": "Landing page or website: what do you actually need?",
+        "linkLabel": "Read article",
+        "href": "/blog/landingpage-oder-website"
+      },
+      {
+        "label": "What does a professional website really cost?",
+        "linkLabel": "Read article",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Next step",
+    "title": "Your business deserves a strong presence.",
+    "description": "Tell us briefly about your business and your plans. We will get back to you with an honest assessment.",
+    "primaryButton": "Request a project",
+    "secondaryButton": "View portfolio",
+    "backToServicesLabel": "View all services"
+  }
+}
