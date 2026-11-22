@@ -158,7 +158,12 @@
       "Relax Massage Studio": "Wellness & Spa",
       "Premium Consulting": "Finanzberatung",
       "FN Detailing": "Fahrzeugaufbereitung",
-      "Beauty Salon Landing": "Beauty & Wellness"
+      "Beauty Salon Landing": "Beauty & Wellness",
+      "Lash Studio Demo": "Wimpern & Beauty",
+      "Apartament Demo": "Apartments & Unterkunft",
+      "Billyard": "Freizeit & Billard",
+      "Pizza & Döner": "Gastronomie",
+      "Hausarztpraxis Weber": "Gesundheit & Praxis"
     },
     "blackSection": {
       "kicker": "In Entwicklung",
@@ -284,6 +289,56 @@
         "kind": "concept",
         "detailLabel": "Websites für Modemarken",
         "detailHref": "/website-fuer-modemarken"
+      },
+      {
+        "title": "Lash Studio Demo",
+        "description": "Konzeptprojekt: Website für ein Wimpernstudio mit Nagel- und Haarservice, mit riesiger Typografie, Schwarz-Weiß-Look, kurzer Terminanfrage per WhatsApp und drei Sprachen.",
+        "imageVariant": "first",
+        "image": "/images/projects/lash-studio-demo.webp",
+        "href": "https://beauty-studio-demo-nine.vercel.app/de",
+        "kind": "concept",
+        "detailLabel": "Websites für Beauty-Studios",
+        "detailHref": "/website-fuer-beauty-studio"
+      },
+      {
+        "title": "Apartament Demo",
+        "description": "Konzeptprojekt: Website für möblierte Apartments, die aus schwachen Fotos eine eigene Bildsprache macht — mit Grundrissen, Aufenthaltsrechner und Firmenbereich.",
+        "imageVariant": "second",
+        "image": "/images/projects/apartament-demo.webp",
+        "href": "https://apartament-demo.vercel.app/de",
+        "kind": "concept",
+        "detailLabel": "Websites für Apartments",
+        "detailHref": "/website-fuer-apartments"
+      },
+      {
+        "title": "Billyard",
+        "description": "Konzeptprojekt: eine kraftvolle Scroll-Website für einen fiktiven Billardclub mit Darts, Shisha, Karten und Tischfußball — in Rot, Schwarz und Weiß, mit großer Typografie und drei Sprachen.",
+        "imageVariant": "first",
+        "image": "/images/projects/billyard.webp",
+        "href": "https://billyard-nu.vercel.app/de",
+        "kind": "concept",
+        "detailLabel": "Websites für Billardclubs",
+        "detailHref": "/website-fuer-billardclub"
+      },
+      {
+        "title": "Pizza & Döner",
+        "description": "Konzeptprojekt: eine kraftvolle Scroll-Website für einen fiktiven Pizza- und Döner-Lieferservice — mit großem Hero, fliegenden Belägen, Yufka-Szene und drei Sprachen.",
+        "imageVariant": "second",
+        "image": "/images/projects/pizza-doner.webp",
+        "href": "https://pizza-doner-lieferservice.vercel.app/de",
+        "kind": "concept",
+        "detailLabel": "Websites für Pizzerien",
+        "detailHref": "/website-fuer-pizzeria"
+      },
+      {
+        "title": "Hausarztpraxis Weber",
+        "description": "Konzeptprojekt: eine ruhige, minimalistische Website für eine fiktive Hausarztpraxis — mit Sprechzeiten, Leistungen, Team und erstem Besuch, in vier Sprachen.",
+        "imageVariant": "first",
+        "image": "/images/projects/hausarztpraxis-weber.webp",
+        "href": "https://hausarzt-concept.vercel.app/de",
+        "kind": "concept",
+        "detailLabel": "Websites für Arztpraxen",
+        "detailHref": "/website-fuer-arztpraxis"
       }
     ]
   },

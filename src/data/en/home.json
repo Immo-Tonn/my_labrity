@@ -181,7 +181,12 @@
       "Relax Massage Studio": "Wellness & Spa",
       "Premium Consulting": "Financial Consulting",
       "FN Detailing": "Vehicle Detailing",
-      "Beauty Salon Landing": "Beauty & Wellness"
+      "Beauty Salon Landing": "Beauty & Wellness",
+      "Lash Studio Demo": "Lashes & Beauty",
+      "Apartament Demo": "Apartments & Stays",
+      "Billyard": "Leisure & Billiards",
+      "Pizza & Döner": "Food & Delivery",
+      "Hausarztpraxis Weber": "Health & Practice"
     },
     "blackSection": {
       "kicker": "In Development",
@@ -307,6 +312,56 @@
         "kind": "concept",
         "detailLabel": "Websites for fashion brands",
         "detailHref": "/website-fuer-modemarken"
+      },
+      {
+        "title": "Lash Studio Demo",
+        "description": "Concept project: website for a lash studio with nail and hair services, featuring huge typography, a black-and-white look, a short WhatsApp booking request and three languages.",
+        "imageVariant": "first",
+        "image": "/images/projects/lash-studio-demo.webp",
+        "href": "https://beauty-studio-demo-nine.vercel.app/en",
+        "kind": "concept",
+        "detailLabel": "Websites for beauty studios",
+        "detailHref": "/website-fuer-beauty-studio"
+      },
+      {
+        "title": "Apartament Demo",
+        "description": "Concept project: a website for furnished apartments that turns weak photos into a distinct image style — with floor plans, stay calculator and company section.",
+        "imageVariant": "second",
+        "image": "/images/projects/apartament-demo.webp",
+        "href": "https://apartament-demo.vercel.app/en",
+        "kind": "concept",
+        "detailLabel": "Websites for apartments",
+        "detailHref": "/website-fuer-apartments"
+      },
+      {
+        "title": "Billyard",
+        "description": "Concept project: a powerful scroll website for a fictional billiard club with darts, shisha, cards and table football — in red, black and white, with large typography and three languages.",
+        "imageVariant": "first",
+        "image": "/images/projects/billyard.webp",
+        "href": "https://billyard-nu.vercel.app/en",
+        "kind": "concept",
+        "detailLabel": "Websites for billiard clubs",
+        "detailHref": "/website-fuer-billardclub"
+      },
+      {
+        "title": "Pizza & Döner",
+        "description": "Concept project: a powerful scroll website for a fictional pizza and doner delivery service — with a large hero, flying toppings, a yufka scene and three languages.",
+        "imageVariant": "second",
+        "image": "/images/projects/pizza-doner.webp",
+        "href": "https://pizza-doner-lieferservice.vercel.app/en",
+        "kind": "concept",
+        "detailLabel": "Websites for pizzerias",
+        "detailHref": "/website-fuer-pizzeria"
+      },
+      {
+        "title": "Hausarztpraxis Weber",
+        "description": "Concept project: a calm, minimalist website for a fictional GP practice — with opening hours, services, team and first visit, in four languages.",
+        "imageVariant": "first",
+        "image": "/images/projects/hausarztpraxis-weber.webp",
+        "href": "https://hausarzt-concept.vercel.app/en",
+        "kind": "concept",
+        "detailLabel": "Websites for medical practices",
+        "detailHref": "/website-fuer-arztpraxis"
       }
     ]
   },

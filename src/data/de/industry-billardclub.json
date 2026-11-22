@@ -1,0 +1,165 @@
+{
+  "breadcrumbParentLabel": "Leistungen",
+  "meta": {
+    "title": "Website für Billardclub und Freizeit-Lounge in Münster | Labrity",
+    "description": "Websites für Billardclubs, Darts- und Freizeit-Lounges in Münster: Atmosphäre, Angebot und Kontakt in einem Auftritt. Mit dem Konzeptbeispiel Billyard."
+  },
+  "hero": {
+    "kicker": "Website für Billardclub und Freizeit-Lounge in Münster",
+    "title": "Eine Club-Website in Münster, die den Abend schon vorab spürbar macht.",
+    "description": "Für Billardclubs, Darts-Bars und Freizeit-Lounges: ein Auftritt mit Atmosphäre, der trotzdem schnell zeigt, was es gibt, wann geöffnet ist und wie man reserviert."
+  },
+  "imageAlt": "Konzeptprojekt Billyard aus dem Labrity Portfolio: Website eines fiktiven Billardclubs mit roter Fläche, großem Schriftzug und Billardtisch mit schwarzer Acht",
+  "needs": {
+    "kicker": "Worauf es ankommt",
+    "title": "Was eine Club-Website leisten muss.",
+    "description": "Ein Club verkauft Atmosphäre. Die Seite soll Lust auf den Abend machen und trotzdem auf einen Blick zeigen, was geboten wird und wie man dazukommt.",
+    "items": [
+      {
+        "title": "Atmosphäre vor Liste",
+        "description": "Farben, Bilder und Tempo vermitteln den Abend besser als eine Aufzählung von Angeboten."
+      },
+      {
+        "title": "Angebot klar gegliedert",
+        "description": "Billard, Darts, Karten, Tischfußball: jeder Bereich hat seinen Platz, ohne dass die Seite unübersichtlich wird."
+      },
+      {
+        "title": "Auffindbar in Münster",
+        "description": "Saubere Grundlagen für die lokale Suche, damit Suchmaschinen Club, Angebot und Standort richtig zuordnen können."
+      }
+    ]
+  },
+  "example": {
+    "kicker": "Konzeptprojekt",
+    "title": "Billyard: ein fiktiver Billardclub als Beispiel.",
+    "description": "Billyard ist ein erfundener Billardclub, den wir als Konzept umgesetzt haben, um zu zeigen, wie ein Freizeit-Auftritt aussehen kann. Es ist kein Kundenprojekt.",
+    "facts": [
+      {
+        "title": "Scroll-Geschichte",
+        "description": "Rot, Schwarz und Warmweiß, große Typografie und eine dreidimensionale Acht als Blickfang."
+      },
+      {
+        "title": "Bereiche mit eigener Szene",
+        "description": "Billard, Darts, Karten, Tischfußball und Kontakt, dazu Galerie mit Großansicht und FAQ."
+      },
+      {
+        "title": "Rücksicht auf Nutzer",
+        "description": "Sound-Schalter standardmäßig aus, reduzierte Bewegung und Touch-Bedienung beachtet."
+      }
+    ],
+    "button": "Billyard ansehen",
+    "note": "Fiktiver Club. Alle Inhalte dienen ausschließlich der Konzeptdarstellung."
+  },
+  "offer": {
+    "kicker": "Was wir umsetzen",
+    "title": "Bausteine für einen Club-Auftritt.",
+    "description": "Welche Bausteine Sie brauchen, hängt von Ihrem Club ab. Das ist eine Auswahl, kein festes Paket.",
+    "items": [
+      {
+        "title": "Startseite mit Charakter",
+        "description": "Ein Einstieg, der Stil und Stimmung Ihres Clubs sofort vermittelt."
+      },
+      {
+        "title": "Angebot und Preise",
+        "description": "Tische, Spiele und Konditionen übersichtlich dargestellt."
+      },
+      {
+        "title": "Galerie",
+        "description": "Bilder Ihres Clubs in Großansicht, schnell geladen auch auf dem Handy."
+      },
+      {
+        "title": "Reservierung und Kontakt",
+        "description": "Ein einfacher Weg zur Anfrage, zum Anruf oder zur Anfahrt."
+      },
+      {
+        "title": "Mehrsprachigkeit",
+        "description": "Ihr Club in mehreren Sprachen, sauber für Suchmaschinen strukturiert."
+      },
+      {
+        "title": "Technik und Sichtbarkeit",
+        "description": "Schnelle Seiten, lokale Grundlagen für die Suche und verständliche Inhalte."
+      }
+    ]
+  },
+  "disclaimerStatement": {
+    "kicker": "Ehrlich gesagt",
+    "title": "Atmosphäre mit klaren Informationen.",
+    "description": "Ein starker Auftritt ersetzt keine klaren Angaben: Öffnungszeiten, Preise, Reservierung und Altersregeln gehören gut sichtbar auf die Seite. Wir sagen Ihnen offen, was zu Ihrem Vorhaben passt. Und: Platzierungen bei Google kann niemand seriös zusichern."
+  },
+  "disambiguation": {
+    "kicker": "Sie suchen etwas anderes?",
+    "title": "Vielleicht passt eine dieser Seiten besser.",
+    "items": [
+      {
+        "label": "Es geht nur um eine einzelne Aktion oder ein Angebot?",
+        "linkLabel": "Mehr zu Landingpage erstellen lassen",
+        "href": "/landingpage-erstellen-lassen"
+      },
+      {
+        "label": "Sie brauchen eine allgemeine Unternehmenswebsite?",
+        "linkLabel": "Mehr zu Website erstellen lassen",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Interessiert an Preisen und Paketen?",
+        "linkLabel": "Preise & Pakete ansehen",
+        "href": "/prices"
+      },
+      {
+        "label": "Sie möchten weitere Arbeiten sehen?",
+        "linkLabel": "Portfolio ansehen",
+        "href": "/portfolio"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Häufige Fragen",
+    "title": "Was Sie vorher wissen möchten.",
+    "items": [
+      {
+        "question": "Wie viel kostet eine Website für einen Billardclub?",
+        "answer": "Das hängt vom Umfang ab: Anzahl der Seiten, Bildmaterial, Sprachen und gewünschte Besonderheiten. Eine Orientierung geben unsere Pakete und Preise. Ein konkretes Angebot erhalten Sie nach einem kurzen Gespräch, ohne Verpflichtung."
+      },
+      {
+        "question": "Erstellen Sie Websites für Clubs und Lounges in Münster und Umgebung?",
+        "answer": "Ja. Wir erstellen Websites für Clubs, Bars und Freizeitbetriebe in Münster, im Münsterland und in ganz Deutschland. Abstimmung und Umsetzung laufen bequem online."
+      },
+      {
+        "question": "Ist Billyard ein echter Kunde?",
+        "answer": "Nein. Billyard ist ein fiktiver Billardclub, den wir als Konzeptprojekt umgesetzt haben, um unsere Arbeit an einem Freizeitthema zu zeigen. Konzeptprojekte sind im Portfolio entsprechend gekennzeichnet."
+      },
+      {
+        "question": "Kann man über die Website einen Tisch reservieren?",
+        "answer": "Im Konzept führt der Kontaktbereich zur Anfrage. Eine Online-Reservierung mit Kalender ist als Erweiterung möglich; wir besprechen, was zu Ihrem Club passt."
+      },
+      {
+        "question": "Welches Material brauche ich für den Start?",
+        "answer": "Idealerweise Fotos des Clubs, Öffnungszeiten, Angebot mit Preisen und Kontaktdaten. Ist noch nicht alles vorhanden, klären wir im Gespräch, wie wir vorgehen."
+      }
+    ]
+  },
+  "relatedArticles": {
+    "kicker": "Weiterlesen",
+    "title": "Mehr dazu im Blog.",
+    "items": [
+      {
+        "label": "Landingpage oder Website: Was brauche ich wirklich?",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/landingpage-oder-website"
+      },
+      {
+        "label": "Was kostet eine professionelle Website wirklich?",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Nächster Schritt",
+    "title": "Ihr Betrieb verdient einen starken Auftritt.",
+    "description": "Erzählen Sie uns kurz von Ihrem Betrieb und Ihrem Vorhaben. Wir melden uns mit einer ehrlichen Einschätzung.",
+    "primaryButton": "Projekt anfragen",
+    "secondaryButton": "Portfolio ansehen",
+    "backToServicesLabel": "Alle Leistungen ansehen"
+  }
+}

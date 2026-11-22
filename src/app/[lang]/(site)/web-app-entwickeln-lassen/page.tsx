@@ -16,24 +16,24 @@ const PATH = '/web-app-entwickeln-lassen';
 // click (value + what is covered + next step), not stuffed with keywords.
 const META: Record<Language, { title: string; description: string }> = {
   de: {
-    title: 'Web-App entwickeln lassen: individuelle Software | Labrity',
+    title: 'Web-App entwickeln lassen in Münster | Labrity',
     description:
-      'Web-App entwickeln lassen: Terminbuchung, CRM, Zeiterfassung und Auswertungen als individuelle Software für Ihr Unternehmen. Persönliches Angebot.',
+      'Web-App entwickeln lassen in Münster: Terminbuchung, CRM, Zeiterfassung und Auswertungen als individuelle Software. Persönliches Angebot.',
   },
   en: {
-    title: 'Custom Web App Development for Businesses | Labrity',
+    title: 'Custom Web App Development in Münster | Labrity',
     description:
-      'Have a web app developed: online booking, CRM, time tracking and analytics as custom software for your business in Germany. Personal quote.',
+      'Custom web app development in Münster: online booking, CRM, time tracking and analytics as software built for your business. Personal quote.',
   },
   ru: {
-    title: 'Разработка веб-приложений на заказ в Германии | Labrity',
+    title: 'Разработка веб-приложений в Мюнстере | Labrity',
     description:
-      'Разработка веб-приложений на заказ: онлайн-запись, CRM, учёт рабочего времени и аналитика под процессы вашей компании. Персональное предложение.',
+      'Разработка веб-приложений на заказ в Мюнстере: онлайн-запись, CRM, учёт времени и аналитика под процессы вашей компании. Персональное предложение.',
   },
   ua: {
-    title: 'Розробка вебзастосунків на замовлення в Німеччині | Labrity',
+    title: 'Розробка вебзастосунків у Мюнстері | Labrity',
     description:
-      'Розробка вебзастосунків на замовлення: онлайн-запис, CRM, облік робочого часу та аналітика під процеси вашої компанії. Персональна пропозиція.',
+      'Розробка вебзастосунків на замовлення у Мюнстері: онлайн-запис, CRM, облік часу та аналітика під процеси вашої компанії. Персональна пропозиція.',
   },
 };
 

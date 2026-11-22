@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Preise für Websites & Landingpages | Labrity",
+    "title": "Preise für Websites & Landingpages in Münster | Labrity",
     "description": "Transparente Preise für professionelle Websites, Landingpages, Redesigns, Website im Abo und Betreuung – als Orientierung, je nach Umfang."
   },
   "ui": {
@@ -44,7 +44,8 @@
         "value": "100%",
         "label": "Responsive Design"
       }
-    ]
+    ],
+    "h1": "Preise für Websites in Münster"
   },
   "priceFactors": {
     "kicker": "Orientierung",

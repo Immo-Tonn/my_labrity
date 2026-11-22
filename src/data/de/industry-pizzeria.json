@@ -1,0 +1,165 @@
+{
+  "breadcrumbParentLabel": "Leistungen",
+  "meta": {
+    "title": "Website für Pizzeria und Lieferservice in Münster | Labrity",
+    "description": "Websites für Pizzerien und Lieferdienste in Münster: appetitlicher Einstieg, klare Karte, Lieferung, Abholung. Mit Konzeptbeispiel Pizza & Döner."
+  },
+  "hero": {
+    "kicker": "Website für Pizzeria und Lieferservice in Münster",
+    "title": "Eine Restaurant-Website in Münster, die Appetit macht und schnell zum Anruf führt.",
+    "description": "Für Pizzerien, Döner-Läden und Lieferdienste: ein Auftritt, der Lust aufs Essen macht, die Speisekarte klar zeigt und den Weg zu Lieferung oder Abholung kurz hält."
+  },
+  "imageAlt": "Konzeptprojekt Pizza & Döner aus dem Labrity Portfolio: Website eines fiktiven Lieferservices mit Pizza und fliegenden Belägen auf schwarzem Hintergrund",
+  "needs": {
+    "kicker": "Worauf es ankommt",
+    "title": "Was eine Gastronomie-Website leisten muss.",
+    "description": "Wer Hunger hat, entscheidet schnell. Die Seite muss Appetit machen und in Sekunden zeigen, was es gibt, wann geöffnet ist und wie man bestellt.",
+    "items": [
+      {
+        "title": "Appetit zuerst",
+        "description": "Starke Bilder und ein klarer Einstieg wecken Lust aufs Essen, bevor jemand die Karte liest."
+      },
+      {
+        "title": "Karte, Lieferung, Abholung",
+        "description": "Gerichte, Liefergebiet, Öffnungszeiten und Kontakt stehen dort, wo man sie sucht, mit Anrufknopf fürs Handy."
+      },
+      {
+        "title": "Auffindbar in Münster",
+        "description": "Saubere Grundlagen für die lokale Suche, damit Suchmaschinen Lokal, Angebot und Standort richtig zuordnen können."
+      }
+    ]
+  },
+  "example": {
+    "kicker": "Konzeptprojekt",
+    "title": "Pizza & Döner: ein fiktiver Lieferservice als Beispiel.",
+    "description": "Pizza & Döner ist ein erfundener Lieferservice, den wir als Konzept umgesetzt haben, um zu zeigen, wie ein Gastronomie-Auftritt aussehen kann. Es ist kein Kundenprojekt.",
+    "facts": [
+      {
+        "title": "Kraftvoller Einstieg",
+        "description": "Ein schwarzer Hero mit riesiger Überschrift, fliegenden Belägen und Dampf über der Pizza."
+      },
+      {
+        "title": "Scroll-Szenen",
+        "description": "Eine Yufka rollt ins Bild, dazu eine Karton-Szene: Der Besuch wird zur kleinen Geschichte."
+      },
+      {
+        "title": "Direkter Kontakt",
+        "description": "Bereiche für Speisekarte, Lieferung und Abholung sowie ein Anrufknopf fürs Handy."
+      }
+    ],
+    "button": "Pizza & Döner ansehen",
+    "note": "Fiktiver Lieferservice. Alle Inhalte dienen ausschließlich der Konzeptdarstellung."
+  },
+  "offer": {
+    "kicker": "Was wir umsetzen",
+    "title": "Bausteine für eine Gastronomie-Website.",
+    "description": "Welche Bausteine Sie brauchen, hängt von Ihrem Betrieb ab. Das ist eine Auswahl, kein festes Paket.",
+    "items": [
+      {
+        "title": "Startseite mit Appetit-Effekt",
+        "description": "Ein Einstieg, der Gerichte in Szene setzt und sofort zur Karte führt."
+      },
+      {
+        "title": "Speisekarte",
+        "description": "Übersichtlich nach Kategorien, auf dem Handy gut lesbar und leicht zu pflegen."
+      },
+      {
+        "title": "Lieferung und Abholung",
+        "description": "Liefergebiet, Zeiten und Mindestbestellwert klar erklärt."
+      },
+      {
+        "title": "Anruf und Kontakt",
+        "description": "Ein Anrufknopf und eine Anfahrtsinfo, damit Bestellungen nicht an Umwegen scheitern."
+      },
+      {
+        "title": "Mehrsprachigkeit",
+        "description": "Ihre Seite in mehreren Sprachen, sauber für Suchmaschinen strukturiert."
+      },
+      {
+        "title": "Technik und Sichtbarkeit",
+        "description": "Schnelle Seiten, lokale Grundlagen für die Suche und verständliche Inhalte."
+      }
+    ]
+  },
+  "disclaimerStatement": {
+    "kicker": "Ehrlich gesagt",
+    "title": "Auftritt zuerst, Bestellsystem bei Bedarf.",
+    "description": "Diese Seite beschreibt den Webauftritt: Bilder, Karte, Lieferung, Kontakt. Für Online-Bestellung mit Warenkorb und Bezahlung ist oft ein Bestellsystem die bessere Basis. Preise und Allergenangaben müssen stets stimmen. Und: Platzierungen bei Google kann niemand seriös zusichern."
+  },
+  "disambiguation": {
+    "kicker": "Sie suchen etwas anderes?",
+    "title": "Vielleicht passt eine dieser Seiten besser.",
+    "items": [
+      {
+        "label": "Es geht nur um eine einzelne Aktion oder ein Angebot?",
+        "linkLabel": "Mehr zu Landingpage erstellen lassen",
+        "href": "/landingpage-erstellen-lassen"
+      },
+      {
+        "label": "Sie brauchen eine allgemeine Unternehmenswebsite?",
+        "linkLabel": "Mehr zu Website erstellen lassen",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Interessiert an Preisen und Paketen?",
+        "linkLabel": "Preise & Pakete ansehen",
+        "href": "/prices"
+      },
+      {
+        "label": "Sie möchten weitere Arbeiten sehen?",
+        "linkLabel": "Portfolio ansehen",
+        "href": "/portfolio"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Häufige Fragen",
+    "title": "Was Sie vorher wissen möchten.",
+    "items": [
+      {
+        "question": "Wie viel kostet eine Website für eine Pizzeria oder einen Lieferservice?",
+        "answer": "Das hängt vom Umfang ab: Anzahl der Seiten, Bildmaterial, Sprachen und gewünschte Funktionen. Eine Orientierung geben unsere Pakete und Preise. Ein konkretes Angebot erhalten Sie nach einem kurzen Gespräch, ohne Verpflichtung."
+      },
+      {
+        "question": "Erstellen Sie Websites für Gastronomie in Münster und Umgebung?",
+        "answer": "Ja. Wir erstellen Websites für Restaurants, Pizzerien und Lieferdienste in Münster, im Münsterland und in ganz Deutschland. Abstimmung und Umsetzung laufen bequem online."
+      },
+      {
+        "question": "Ist Pizza & Döner ein echtes Kundenprojekt?",
+        "answer": "Nein. Pizza & Döner ist ein fiktiver Lieferservice, den wir als Konzeptprojekt umgesetzt haben, um unsere Arbeit an einem Gastronomie-Thema zu zeigen. Konzeptprojekte sind im Portfolio entsprechend gekennzeichnet."
+      },
+      {
+        "question": "Kann man über die Website bestellen?",
+        "answer": "Im Konzept führen Anruf und Kontakt zur Bestellung. Eine Online-Bestellung mit Warenkorb ist als Erweiterung oder über ein Bestellsystem möglich; wir besprechen, was zu Ihrem Betrieb passt."
+      },
+      {
+        "question": "Welches Material brauche ich für den Start?",
+        "answer": "Idealerweise Fotos der Gerichte, die Speisekarte mit Preisen, Öffnungszeiten, Liefergebiet und Kontaktdaten. Ist noch nicht alles vorhanden, klären wir im Gespräch, wie wir vorgehen."
+      }
+    ]
+  },
+  "relatedArticles": {
+    "kicker": "Weiterlesen",
+    "title": "Mehr dazu im Blog.",
+    "items": [
+      {
+        "label": "Landingpage oder Website: Was brauche ich wirklich?",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/landingpage-oder-website"
+      },
+      {
+        "label": "Was kostet eine professionelle Website wirklich?",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Nächster Schritt",
+    "title": "Ihr Betrieb verdient einen starken Auftritt.",
+    "description": "Erzählen Sie uns kurz von Ihrem Betrieb und Ihrem Vorhaben. Wir melden uns mit einer ehrlichen Einschätzung.",
+    "primaryButton": "Projekt anfragen",
+    "secondaryButton": "Portfolio ansehen",
+    "backToServicesLabel": "Alle Leistungen ansehen"
+  }
+}

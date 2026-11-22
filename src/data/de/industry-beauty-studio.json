@@ -1,0 +1,170 @@
+{
+  "breadcrumbParentLabel": "Leistungen",
+  "meta": {
+    "title": "Website für Beauty- und Lash-Studio in Münster | Labrity",
+    "description": "Websites für Wimpernstudios und Beauty-Salons in Münster: starke Bildsprache, klare Leistungen, einfache Terminanfrage. Mit Konzeptbeispiel Lash Studio Demo."
+  },
+  "hero": {
+    "kicker": "Website für Beauty- und Lash-Studio in Münster",
+    "title": "Ein Studio-Auftritt in Münster, der Präzision und Ruhe zeigt.",
+    "description": "Für Wimpernstudios, Nagel- und Haarsalons: große Bilder, klare Leistungen und eine Terminanfrage, die in wenigen Schritten gelingt. Fürs Handy gebaut, wo die meisten Buchungen beginnen."
+  },
+  "imageAlt": "Konzeptprojekt Lash Studio Demo aus dem Labrity Portfolio: Website für ein Wimpernstudio mit Nahaufnahme von Wimpern auf schwarzem Hintergrund und riesiger Typografie",
+  "needs": {
+    "kicker": "Worauf es ankommt",
+    "title": "Was eine Beauty-Website leisten muss.",
+    "description": "Kundinnen wählen ein Studio nach dem ersten Eindruck. Sie wollen die Arbeit sehen, Ruhe spüren und schnell einen Termin bekommen.",
+    "items": [
+      {
+        "title": "Arbeit statt Versprechen",
+        "description": "Große, echte Bilder zeigen Stil und Handwerk besser als jede Beschreibung."
+      },
+      {
+        "title": "Leistungen auf einen Blick",
+        "description": "Wimpern, Nägel, Haare: eine klare Übersicht, damit mehrere Angebote nicht wie ein Durcheinander wirken."
+      },
+      {
+        "title": "Auffindbar in Münster",
+        "description": "Saubere Grundlagen für die lokale Suche, damit Suchmaschinen Studio, Leistungen und Standort richtig zuordnen können."
+      }
+    ]
+  },
+  "example": {
+    "kicker": "Konzeptprojekt",
+    "title": "Lash Studio Demo: ein fiktives Studio als Beispiel.",
+    "description": "Lash Studio Demo ist ein erfundenes Studio, das wir als Konzept umgesetzt haben, um zu zeigen, wie ein Beauty-Auftritt aussehen kann. Es ist kein Kundenprojekt.",
+    "facts": [
+      {
+        "title": "Eine eigene Linie",
+        "description": "Kontrastreiches Schwarz-Weiß, riesige Typografie und eine chromglänzende Form als Markenzeichen."
+      },
+      {
+        "title": "Termin in wenigen Schritten",
+        "description": "Eine kurze Anfrage mit fertiger WhatsApp-Nachricht, ohne Speicherung auf dem Server."
+      },
+      {
+        "title": "Mehrsprachig",
+        "description": "Die Konzeptseite gibt es auf Deutsch, Englisch und Ukrainisch."
+      }
+    ],
+    "button": "Lash Studio Demo ansehen",
+    "note": "Fiktives Studio. Alle Inhalte dienen ausschließlich der Konzeptdarstellung."
+  },
+  "offer": {
+    "kicker": "Was wir umsetzen",
+    "title": "Bausteine für einen Studio-Auftritt.",
+    "description": "Welche Bausteine Sie brauchen, hängt von Ihrem Studio ab. Das ist eine Auswahl, kein festes Paket.",
+    "items": [
+      {
+        "title": "Startseite mit starkem Einstieg",
+        "description": "Ein Hero, der Stil und Haltung Ihres Studios in Sekunden vermittelt."
+      },
+      {
+        "title": "Leistungen mit Vorschau",
+        "description": "Wimpern, Nägel, Haare oder Ihr Angebot, klar gegliedert, Preise nach Wunsch."
+      },
+      {
+        "title": "Galerie und Referenzbilder",
+        "description": "Ihre Arbeit im Mittelpunkt, mit schnellen Ladezeiten auf dem Handy."
+      },
+      {
+        "title": "Terminanfrage",
+        "description": "Ein kurzer Ablauf, etwa per WhatsApp, der Anfragen leicht macht."
+      },
+      {
+        "title": "Mehrsprachigkeit",
+        "description": "Ihr Studio in mehreren Sprachen, sauber für Suchmaschinen strukturiert."
+      },
+      {
+        "title": "Technik und Sichtbarkeit",
+        "description": "Schnelle Seiten, lokale Grundlagen für die Suche und verständliche Inhalte."
+      }
+    ]
+  },
+  "disclaimerStatement": {
+    "kicker": "Ehrlich gesagt",
+    "title": "Studio-Gefühl zuerst, Buchungssystem bei Bedarf.",
+    "description": "Diese Seite beschreibt Auftritte für Studios: Bilder, Leistungen, Terminweg. Für automatische Online-Buchung mit Kalender und Zahlung ist oft ein eigenes Buchungssystem die bessere Basis. Wir sagen Ihnen offen, was zu Ihrem Vorhaben passt. Und: Platzierungen bei Google kann niemand seriös zusichern."
+  },
+  "disambiguation": {
+    "kicker": "Sie suchen etwas anderes?",
+    "title": "Vielleicht passt eine dieser Seiten besser.",
+    "items": [
+      {
+        "label": "Es geht nur um eine einzelne Aktion oder ein Angebot?",
+        "linkLabel": "Mehr zu Landingpage erstellen lassen",
+        "href": "/landingpage-erstellen-lassen"
+      },
+      {
+        "label": "Sie brauchen eine allgemeine Unternehmenswebsite?",
+        "linkLabel": "Mehr zu Website erstellen lassen",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Interessiert an Preisen und Paketen?",
+        "linkLabel": "Preise & Pakete ansehen",
+        "href": "/prices"
+      },
+      {
+        "label": "Sie möchten weitere Arbeiten sehen?",
+        "linkLabel": "Portfolio ansehen",
+        "href": "/portfolio"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Häufige Fragen",
+    "title": "Was Sie vorher wissen möchten.",
+    "items": [
+      {
+        "question": "Wie viel kostet eine Website für ein Beauty- oder Lash-Studio?",
+        "answer": "Das hängt vom Umfang ab: Anzahl der Seiten, Bildmaterial, Sprachen und gewünschte Funktionen. Eine Orientierung geben unsere Pakete und Preise. Ein konkretes Angebot erhalten Sie nach einem kurzen Gespräch, ohne Verpflichtung."
+      },
+      {
+        "question": "Erstellen Sie Websites für Studios in Münster und Umgebung?",
+        "answer": "Ja. Wir erstellen Websites für Studios und Salons in Münster, im Münsterland und in ganz Deutschland. Abstimmung und Umsetzung laufen bequem online."
+      },
+      {
+        "question": "Ist Lash Studio Demo ein echtes Kundenprojekt?",
+        "answer": "Nein. Lash Studio Demo ist ein fiktives Studio, das wir als Konzeptprojekt umgesetzt haben, um unsere Arbeit an einem Beauty-Thema zu zeigen. Konzeptprojekte sind im Portfolio entsprechend gekennzeichnet."
+      },
+      {
+        "question": "Können Kundinnen online einen Termin buchen?",
+        "answer": "Im Konzept läuft die Anfrage über eine fertige WhatsApp-Nachricht. Ein Buchungssystem mit Kalender ist als Erweiterung möglich; wir besprechen, was zu Ihrem Studio passt."
+      },
+      {
+        "question": "Welches Material brauche ich für den Start?",
+        "answer": "Idealerweise Fotos Ihrer Arbeit und des Studios, ein Logo, die Leistungsliste und Kontaktdaten. Ist noch nicht alles vorhanden, klären wir im Gespräch, wie wir vorgehen."
+      }
+    ]
+  },
+  "relatedArticles": {
+    "kicker": "Weiterlesen",
+    "title": "Mehr dazu im Blog.",
+    "items": [
+      {
+        "label": "Webdesign für Beauty- und Wellness-Marken: Worauf es wirklich ankommt",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/webdesign-beauty-wellness"
+      },
+      {
+        "label": "Landingpage oder Website: Was brauche ich wirklich?",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/landingpage-oder-website"
+      },
+      {
+        "label": "Was kostet eine professionelle Website wirklich?",
+        "linkLabel": "Artikel lesen",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Nächster Schritt",
+    "title": "Ihr Betrieb verdient einen starken Auftritt.",
+    "description": "Erzählen Sie uns kurz von Ihrem Betrieb und Ihrem Vorhaben. Wir melden uns mit einer ehrlichen Einschätzung.",
+    "primaryButton": "Projekt anfragen",
+    "secondaryButton": "Portfolio ansehen",
+    "backToServicesLabel": "Alle Leistungen ansehen"
+  }
+}

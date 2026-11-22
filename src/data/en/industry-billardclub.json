@@ -1,0 +1,165 @@
+{
+  "breadcrumbParentLabel": "Services",
+  "meta": {
+    "title": "Website for a Billiards Club in Münster | Labrity",
+    "description": "Websites for billiards clubs and leisure lounges in Münster: atmosphere, offer and contact in one presence. Concept example: Billyard."
+  },
+  "hero": {
+    "kicker": "Website for a billiards club and leisure lounge in Münster",
+    "title": "A club website in Münster that lets people feel the evening in advance.",
+    "description": "For billiards clubs, darts bars and leisure lounges: a presence full of atmosphere that still shows quickly what is on offer, when it is open and how to reserve."
+  },
+  "imageAlt": "Billyard concept project from the Labrity portfolio: website of a fictional billiards club with a red surface, a large wordmark and a billiard table with a black eight ball",
+  "needs": {
+    "kicker": "What matters",
+    "title": "What a club website has to do.",
+    "description": "A club sells atmosphere. The page should make people want the evening and still show at a glance what is offered and how to join in.",
+    "items": [
+      {
+        "title": "Atmosphere before lists",
+        "description": "Colour, images and pace convey the evening better than a list of offers."
+      },
+      {
+        "title": "A clearly structured offer",
+        "description": "Billiards, darts, cards, table football: every area has its place without the page becoming cluttered."
+      },
+      {
+        "title": "Findable in Münster",
+        "description": "A clean foundation for local search, so search engines can match the club, its offer and its location correctly."
+      }
+    ]
+  },
+  "example": {
+    "kicker": "Concept project",
+    "title": "Billyard: a fictional billiards club as an example.",
+    "description": "Billyard is an invented billiards club that we built as a concept to show what a leisure presence can look like. It is not a client project.",
+    "facts": [
+      {
+        "title": "A scroll story",
+        "description": "Red, black and warm white, large typography and a three-dimensional eight ball as the eye-catcher."
+      },
+      {
+        "title": "Areas with their own scene",
+        "description": "Billiards, darts, cards, table football and contact, plus a gallery with full-size view and an FAQ."
+      },
+      {
+        "title": "Considerate of users",
+        "description": "Sound switch off by default, reduced motion and touch operation taken into account."
+      }
+    ],
+    "button": "View Billyard",
+    "note": "Fictional club. All content serves only to present the concept."
+  },
+  "offer": {
+    "kicker": "What we build",
+    "title": "Building blocks for a club presence.",
+    "description": "Which building blocks you need depends on your club. This is a selection, not a fixed package.",
+    "items": [
+      {
+        "title": "Home page with character",
+        "description": "An opening that conveys the style and mood of your club at once."
+      },
+      {
+        "title": "Offer and prices",
+        "description": "Tables, games and terms presented clearly."
+      },
+      {
+        "title": "Gallery",
+        "description": "Pictures of your club in full-size view, loading fast on mobile too."
+      },
+      {
+        "title": "Reservation and contact",
+        "description": "A simple way to enquire, call or find the way."
+      },
+      {
+        "title": "Multiple languages",
+        "description": "Your club in several languages, cleanly structured for search engines."
+      },
+      {
+        "title": "Technology and visibility",
+        "description": "Fast pages, local foundations for search and understandable content."
+      }
+    ]
+  },
+  "disclaimerStatement": {
+    "kicker": "To be honest",
+    "title": "Atmosphere with clear information.",
+    "description": "A strong presence does not replace clear details: opening hours, prices, reservations and age rules belong in plain view on the page. We tell you openly what suits your plan. And: nobody can seriously guarantee Google rankings."
+  },
+  "disambiguation": {
+    "kicker": "Looking for something else?",
+    "title": "Maybe one of these pages fits better.",
+    "items": [
+      {
+        "label": "Is it just about a single campaign or offer?",
+        "linkLabel": "More on Landing page creation",
+        "href": "/landingpage-erstellen-lassen"
+      },
+      {
+        "label": "Do you need a general company website?",
+        "linkLabel": "More on Website creation",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Interested in prices and packages?",
+        "linkLabel": "View prices & packages",
+        "href": "/prices"
+      },
+      {
+        "label": "Would you like to see more of our work?",
+        "linkLabel": "View portfolio",
+        "href": "/portfolio"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Common questions",
+    "title": "What you'd want to know beforehand.",
+    "items": [
+      {
+        "question": "How much does a website for a billiards club cost?",
+        "answer": "It depends on the scope: number of pages, image material, languages and the special features you want. Our packages and prices give you a guide. You receive a concrete quote after a short conversation, with no obligation."
+      },
+      {
+        "question": "Do you build websites for clubs and lounges in Münster and the surrounding area?",
+        "answer": "Yes. We build websites for clubs, bars and leisure venues in Münster, the Münsterland region and across Germany. Coordination and delivery work conveniently online."
+      },
+      {
+        "question": "Is Billyard a real client?",
+        "answer": "No. Billyard is a fictional billiards club that we built as a concept project to show our work on a leisure topic. Concept projects are labelled as such in the portfolio."
+      },
+      {
+        "question": "Can I reserve a table through the website?",
+        "answer": "In the concept, the contact area leads to an enquiry. Online reservation with a calendar is possible as an extension; we discuss what suits your club."
+      },
+      {
+        "question": "What material do I need to get started?",
+        "answer": "Ideally photos of the club, opening hours, the offer with prices and contact details. If something is missing, we clarify in a conversation how to proceed."
+      }
+    ]
+  },
+  "relatedArticles": {
+    "kicker": "Further reading",
+    "title": "More on this in our blog.",
+    "items": [
+      {
+        "label": "Landing page or website: what do you actually need?",
+        "linkLabel": "Read article",
+        "href": "/blog/landingpage-oder-website"
+      },
+      {
+        "label": "What does a professional website really cost?",
+        "linkLabel": "Read article",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Next step",
+    "title": "Your business deserves a strong presence.",
+    "description": "Tell us briefly about your business and your plans. We will get back to you with an honest assessment.",
+    "primaryButton": "Request a project",
+    "secondaryButton": "View portfolio",
+    "backToServicesLabel": "View all services"
+  }
+}

@@ -43,7 +43,38 @@
       "description": "Markenauftritt mit Kampagne, Lookbook und Kollektionsstart für Labels und Streetwear.",
       "href": "/website-fuer-modemarken",
       "linkLabel": "Mehr erfahren"
+    },
+    {
+      "title": "Website für Arztpraxis",
+      "description": "Ruhiger, verständlicher Auftritt mit Sprechzeiten, Leistungen und Weg zum Termin.",
+      "href": "/website-fuer-arztpraxis",
+      "linkLabel": "Mehr erfahren"
+    },
+    {
+      "title": "Website für Beauty- und Lash-Studio",
+      "description": "Studio-Auftritt mit starken Bildern, klaren Leistungen und einfacher Terminanfrage.",
+      "href": "/website-fuer-beauty-studio",
+      "linkLabel": "Mehr erfahren"
+    },
+    {
+      "title": "Website für Pizzeria und Lieferservice",
+      "description": "Appetitlicher Auftritt mit klarer Karte, Lieferung, Abholung und Anrufknopf.",
+      "href": "/website-fuer-pizzeria",
+      "linkLabel": "Mehr erfahren"
+    },
+    {
+      "title": "Website für Billardclub und Lounge",
+      "description": "Club-Auftritt mit Atmosphäre, Angebot, Galerie und Reservierungsweg.",
+      "href": "/website-fuer-billardclub",
+      "linkLabel": "Mehr erfahren"
+    },
+    {
+      "title": "Website für Apartments und Monteurunterkunft",
+      "description": "Unterkunfts-Auftritt mit Grundrissen, Lage, Ausstattung und einfacher Anfrage.",
+      "href": "/website-fuer-apartments",
+      "linkLabel": "Mehr erfahren"
     }
   ],
-  "description": "Wir arbeiten mit Unternehmen im gesamten Nordrhein-Westfalen und darüber hinaus zusammen."
+  "description": "Wir arbeiten mit Unternehmen im gesamten Nordrhein-Westfalen und darüber hinaus zusammen.",
+  "h1": "Webdesign, Webentwicklung & Relaunch in Münster"
 }

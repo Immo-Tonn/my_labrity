@@ -15,24 +15,24 @@ const PATH = '/landingpage-erstellen-lassen';
 
 const META: Record<Language, { title: string; description: string }> = {
   de: {
-    title: 'Landingpage erstellen lassen für Kampagne & Angebot | Labrity',
+    title: 'Landingpage erstellen lassen in Münster | Labrity',
     description:
-      'Eine Landingpage mit einem klaren Ziel – für Ihre Kampagne, Ihr Angebot oder einen schnellen Start. Struktur, Design und Umsetzung aus einer Hand.',
+      'Landingpage erstellen lassen in Münster: eine Seite mit klarem Ziel für Kampagne, Angebot oder schnellen Start. Struktur, Design und Umsetzung.',
   },
   en: {
-    title: 'Landing Page Design for Campaigns & Offers | Labrity',
+    title: 'Landing Page Design in Münster | Labrity',
     description:
-      'A landing page with one clear goal – for your campaign, your offer or a fast start. Structure, design and build from a single source.',
+      'Landing page design in Münster: one page with one clear goal for your campaign, your offer or a fast start. Structure, design and build.',
   },
   ru: {
-    title: 'Лендинг под кампанию или предложение | Labrity',
+    title: 'Создание лендинга в Мюнстере | Labrity',
     description:
-      'Лендинг с одной понятной целью — для вашей кампании, предложения или быстрого старта. Структура, дизайн и реализация в одних руках.',
+      'Создание лендинга в Мюнстере: страница с одной понятной целью для кампании, предложения или быстрого старта. Структура, дизайн, реализация.',
   },
   ua: {
-    title: 'Лендінг під кампанію чи пропозицію | Labrity',
+    title: 'Створення лендінгу в Мюнстері | Labrity',
     description:
-      'Лендінг з однією зрозумілою метою — для вашої кампанії, пропозиції чи швидкого старту. Структура, дизайн і реалізація в одних руках.',
+      'Створення лендінгу в Мюнстері: сторінка з однією зрозумілою метою для кампанії, пропозиції чи швидкого старту. Структура, дизайн, реалізація.',
   },
 };
 

@@ -98,6 +98,7 @@ export type PricesData = {
     steps: string[];
   };
   hero: {
+    h1?: string;
     kicker: string;
     title: string;
     description: string;
@@ -481,8 +482,15 @@ export default function PricesPageClient({
             {...reveal(-48, 0, 0.15)}
             className="2xl:text-[96px] max-w-[1100px] font-tenor text-[40px] leading-[1.02] tracking-[-0.04em] text-[#F7F7F5] md:text-[64px] xl:text-[80px]"
           >
-            {content.hero.title}
+            {content.hero.h1 ?? content.hero.title}
           </motion.h1>
+
+          <motion.p
+            {...reveal(48, 0, 0.22)}
+            className="mt-6 max-w-[900px] font-tenor text-[22px] leading-[1.15] tracking-[-0.02em] text-[#F7F7F5]/90 md:text-[32px]"
+          >
+            {content.hero.title}
+          </motion.p>
 
           <motion.p
             {...reveal(48, 0, 0.3)}

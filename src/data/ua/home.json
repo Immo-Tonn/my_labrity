@@ -181,7 +181,12 @@
       "Relax Massage Studio": "Wellness & Spa",
       "Premium Consulting": "Фінансовий консалтинг",
       "FN Detailing": "Детейлінг",
-      "Beauty Salon Landing": "Краса та Wellness"
+      "Beauty Salon Landing": "Краса та Wellness",
+      "Lash Studio Demo": "Вії та б’юті",
+      "Apartament Demo": "Апартаменти та житло",
+      "Billyard": "Дозвілля та більярд",
+      "Pizza & Döner": "Гастрономія",
+      "Hausarztpraxis Weber": "Здоров’я та практика"
     },
     "blackSection": {
       "kicker": "У розробці",
@@ -307,6 +312,56 @@
         "kind": "concept",
         "detailLabel": "Сайти для модних брендів",
         "detailHref": "/website-fuer-modemarken"
+      },
+      {
+        "title": "Lash Studio Demo",
+        "description": "Концептний проєкт: сайт студії нарощування вій з послугами для нігтів і волосся, із величезною типографікою, чорно-білим стилем, коротким запитом на запис через WhatsApp і трьома мовами.",
+        "imageVariant": "first",
+        "image": "/images/projects/lash-studio-demo.webp",
+        "href": "https://beauty-studio-demo-nine.vercel.app/uk",
+        "kind": "concept",
+        "detailLabel": "Сайти для б’юті-студій",
+        "detailHref": "/website-fuer-beauty-studio"
+      },
+      {
+        "title": "Apartament Demo",
+        "description": "Концепт: сайт мебльованих апартаментів, що перетворює слабкі фото на власну візуальну мову — з планами, калькулятором проживання та розділом для компаній.",
+        "imageVariant": "second",
+        "image": "/images/projects/apartament-demo.webp",
+        "href": "https://apartament-demo.vercel.app/de",
+        "kind": "concept",
+        "detailLabel": "Сайти для апартаментів",
+        "detailHref": "/website-fuer-apartments"
+      },
+      {
+        "title": "Billyard",
+        "description": "Концепт: потужний scroll-сайт вигаданого більярдного клубу з дартсом, кальяном, картами та настільним футболом — у червоному, чорному та білому, з великою типографікою та трьома мовами.",
+        "imageVariant": "first",
+        "image": "/images/projects/billyard.webp",
+        "href": "https://billyard-nu.vercel.app/de",
+        "kind": "concept",
+        "detailLabel": "Сайти для більярдних клубів",
+        "detailHref": "/website-fuer-billardclub"
+      },
+      {
+        "title": "Pizza & Döner",
+        "description": "Концепт: потужний scroll-сайт вигаданої служби доставки піци та донеру — з великим hero, літаючими інгредієнтами, сценою з юфкою та трьома мовами.",
+        "imageVariant": "second",
+        "image": "/images/projects/pizza-doner.webp",
+        "href": "https://pizza-doner-lieferservice.vercel.app/uk",
+        "kind": "concept",
+        "detailLabel": "Сайти для піцерій",
+        "detailHref": "/website-fuer-pizzeria"
+      },
+      {
+        "title": "Hausarztpraxis Weber",
+        "description": "Концепт: спокійний мінімалістичний сайт вигаданої сімейної практики — з годинами прийому, послугами, командою та першим візитом, чотирма мовами.",
+        "imageVariant": "first",
+        "image": "/images/projects/hausarztpraxis-weber.webp",
+        "href": "https://hausarzt-concept.vercel.app/uk",
+        "kind": "concept",
+        "detailLabel": "Сайти для лікарських практик",
+        "detailHref": "/website-fuer-arztpraxis"
       }
     ]
   },

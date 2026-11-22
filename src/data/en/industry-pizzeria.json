@@ -1,0 +1,165 @@
+{
+  "breadcrumbParentLabel": "Services",
+  "meta": {
+    "title": "Website for a Pizzeria or Delivery Service in Münster | Labrity",
+    "description": "Websites for pizzerias and delivery services in Münster: appetising opening, clear menu, delivery and pickup. Concept example: Pizza & Döner."
+  },
+  "hero": {
+    "kicker": "Website for a pizzeria and delivery service in Münster",
+    "title": "A restaurant website in Münster that whets the appetite and leads quickly to the call.",
+    "description": "For pizzerias, doner shops and delivery services: a presence that makes people hungry, shows the menu clearly and keeps the way to delivery or pickup short."
+  },
+  "imageAlt": "Pizza & Döner concept project from the Labrity portfolio: website of a fictional delivery service with a pizza and flying toppings on a black background",
+  "needs": {
+    "kicker": "What matters",
+    "title": "What a restaurant website has to do.",
+    "description": "Hungry people decide quickly. The page has to whet the appetite and show in seconds what is on offer, when it is open and how to order.",
+    "items": [
+      {
+        "title": "Appetite first",
+        "description": "Strong images and a clear opening awaken hunger before anyone reads the menu."
+      },
+      {
+        "title": "Menu, delivery, pickup",
+        "description": "Dishes, delivery area, opening hours and contact are where people look for them, with a call button on mobile."
+      },
+      {
+        "title": "Findable in Münster",
+        "description": "A clean foundation for local search, so search engines can match the restaurant, its offer and its location correctly."
+      }
+    ]
+  },
+  "example": {
+    "kicker": "Concept project",
+    "title": "Pizza & Döner: a fictional delivery service as an example.",
+    "description": "Pizza & Döner is an invented delivery service that we built as a concept to show what a restaurant presence can look like. It is not a client project.",
+    "facts": [
+      {
+        "title": "A powerful opening",
+        "description": "A black hero with a huge headline, flying toppings and steam above the pizza."
+      },
+      {
+        "title": "Scroll scenes",
+        "description": "A yufka rolls into view, followed by a box scene: the visit becomes a small story."
+      },
+      {
+        "title": "Direct contact",
+        "description": "Sections for the menu, delivery and pickup, plus a call button for mobile."
+      }
+    ],
+    "button": "View Pizza & Döner",
+    "note": "Fictional delivery service. All content serves only to present the concept."
+  },
+  "offer": {
+    "kicker": "What we build",
+    "title": "Building blocks for a restaurant website.",
+    "description": "Which building blocks you need depends on your business. This is a selection, not a fixed package.",
+    "items": [
+      {
+        "title": "Home page with an appetite effect",
+        "description": "An opening that stages the dishes and leads straight to the menu."
+      },
+      {
+        "title": "Menu",
+        "description": "Clearly organised by category, easy to read on mobile and easy to maintain."
+      },
+      {
+        "title": "Delivery and pickup",
+        "description": "Delivery area, times and minimum order value clearly explained."
+      },
+      {
+        "title": "Call and contact",
+        "description": "A call button and directions, so orders do not fail on detours."
+      },
+      {
+        "title": "Multiple languages",
+        "description": "Your page in several languages, cleanly structured for search engines."
+      },
+      {
+        "title": "Technology and visibility",
+        "description": "Fast pages, local foundations for search and understandable content."
+      }
+    ]
+  },
+  "disclaimerStatement": {
+    "kicker": "To be honest",
+    "title": "Presence first, ordering system if needed.",
+    "description": "This page describes the web presence: images, menu, delivery, contact. For online ordering with a basket and payment, an ordering system is often the better basis. Prices and allergen information must always be correct. And: nobody can seriously guarantee Google rankings."
+  },
+  "disambiguation": {
+    "kicker": "Looking for something else?",
+    "title": "Maybe one of these pages fits better.",
+    "items": [
+      {
+        "label": "Is it just about a single campaign or offer?",
+        "linkLabel": "More on Landing page creation",
+        "href": "/landingpage-erstellen-lassen"
+      },
+      {
+        "label": "Do you need a general company website?",
+        "linkLabel": "More on Website creation",
+        "href": "/website-erstellen-lassen"
+      },
+      {
+        "label": "Interested in prices and packages?",
+        "linkLabel": "View prices & packages",
+        "href": "/prices"
+      },
+      {
+        "label": "Would you like to see more of our work?",
+        "linkLabel": "View portfolio",
+        "href": "/portfolio"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Common questions",
+    "title": "What you'd want to know beforehand.",
+    "items": [
+      {
+        "question": "How much does a website for a pizzeria or delivery service cost?",
+        "answer": "It depends on the scope: number of pages, image material, languages and the features you want. Our packages and prices give you a guide. You receive a concrete quote after a short conversation, with no obligation."
+      },
+      {
+        "question": "Do you build websites for restaurants in Münster and the surrounding area?",
+        "answer": "Yes. We build websites for restaurants, pizzerias and delivery services in Münster, the Münsterland region and across Germany. Coordination and delivery work conveniently online."
+      },
+      {
+        "question": "Is Pizza & Döner a real client project?",
+        "answer": "No. Pizza & Döner is a fictional delivery service that we built as a concept project to show our work on a food topic. Concept projects are labelled as such in the portfolio."
+      },
+      {
+        "question": "Can people order through the website?",
+        "answer": "In the concept, a call or contact leads to the order. Online ordering with a basket is possible as an extension or through an ordering system; we discuss what suits your business."
+      },
+      {
+        "question": "What material do I need to get started?",
+        "answer": "Ideally photos of the dishes, the menu with prices, opening hours, delivery area and contact details. If something is missing, we clarify in a conversation how to proceed."
+      }
+    ]
+  },
+  "relatedArticles": {
+    "kicker": "Further reading",
+    "title": "More on this in our blog.",
+    "items": [
+      {
+        "label": "Landing page or website: what do you actually need?",
+        "linkLabel": "Read article",
+        "href": "/blog/landingpage-oder-website"
+      },
+      {
+        "label": "What does a professional website really cost?",
+        "linkLabel": "Read article",
+        "href": "/blog/website-erstellen-lassen-kosten"
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Next step",
+    "title": "Your business deserves a strong presence.",
+    "description": "Tell us briefly about your business and your plans. We will get back to you with an honest assessment.",
+    "primaryButton": "Request a project",
+    "secondaryButton": "View portfolio",
+    "backToServicesLabel": "View all services"
+  }
+}

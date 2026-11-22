@@ -43,7 +43,38 @@
       "description": "Brand presence with campaign, lookbook and collection launch for labels and streetwear.",
       "href": "/website-fuer-modemarken",
       "linkLabel": "Learn more"
+    },
+    {
+      "title": "Website for a medical practice",
+      "description": "A calm, clear presence with opening hours, services and the way to an appointment.",
+      "href": "/website-fuer-arztpraxis",
+      "linkLabel": "Learn more"
+    },
+    {
+      "title": "Website for a beauty or lash studio",
+      "description": "A studio presence with strong images, clear services and a simple booking request.",
+      "href": "/website-fuer-beauty-studio",
+      "linkLabel": "Learn more"
+    },
+    {
+      "title": "Website for a pizzeria or delivery service",
+      "description": "An appetising presence with a clear menu, delivery, pickup and a call button.",
+      "href": "/website-fuer-pizzeria",
+      "linkLabel": "Learn more"
+    },
+    {
+      "title": "Website for a billiards club or lounge",
+      "description": "A club presence with atmosphere, offer, gallery and a path to reservation.",
+      "href": "/website-fuer-billardclub",
+      "linkLabel": "Learn more"
+    },
+    {
+      "title": "Website for apartments and worker accommodation",
+      "description": "An accommodation presence with floor plans, location, equipment and a simple enquiry.",
+      "href": "/website-fuer-apartments",
+      "linkLabel": "Learn more"
     }
   ],
-  "description": "We work with businesses across North Rhine-Westphalia and beyond."
+  "description": "We work with businesses across North Rhine-Westphalia and beyond.",
+  "h1": "Web Design, Development & Relaunch in Münster"
 }

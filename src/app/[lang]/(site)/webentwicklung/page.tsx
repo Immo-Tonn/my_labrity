@@ -15,24 +15,24 @@ const PATH = '/webentwicklung';
 
 const META: Record<Language, { title: string; description: string }> = {
   de: {
-    title: 'Webentwicklung: schnelle, solide Websites | Labrity',
+    title: 'Webentwicklung in Münster: schnell und solide | Labrity',
     description:
-      'Individuelle Webentwicklung für Unternehmen: technisch solide, schnell ladend und so aufgebaut, dass Ihre Website mit Ihnen wachsen kann.',
+      'Individuelle Webentwicklung in Münster: technisch solide, schnell ladend und so aufgebaut, dass Ihre Website mit Ihrem Unternehmen wachsen kann.',
   },
   en: {
-    title: 'Web Development: Fast, Solid Websites | Labrity',
+    title: 'Web Development in Münster | Labrity',
     description:
-      'Custom web development for businesses: technically solid, fast-loading and built so that your website can grow along with you.',
+      'Custom web development in Münster: technically solid, fast-loading and built so that your website can grow along with your business.',
   },
   ru: {
-    title: 'Веб-разработка: быстрые и надёжные сайты | Labrity',
+    title: 'Веб-разработка в Мюнстере | Labrity',
     description:
-      'Индивидуальная веб-разработка для бизнеса: технически надёжная основа, быстрая загрузка и сайт, который может расти вместе с вами.',
+      'Индивидуальная веб-разработка в Мюнстере: технически надёжная основа, быстрая загрузка и сайт, который может расти вместе с вашим бизнесом.',
   },
   ua: {
-    title: 'Веб-розробка: швидкі та надійні сайти | Labrity',
+    title: 'Веб-розробка у Мюнстері | Labrity',
     description:
-      'Індивідуальна веб-розробка для бізнесу: технічно надійна основа, швидке завантаження і сайт, який може зростати разом з вами.',
+      'Індивідуальна веб-розробка у Мюнстері: технічно надійна основа, швидке завантаження і сайт, який може зростати разом з вашим бізнесом.',
   },
 };
 

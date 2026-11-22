@@ -15,24 +15,24 @@ const PATH = '/website-relaunch';
 
 const META: Record<Language, { title: string; description: string }> = {
   de: {
-    title: 'Website Relaunch: SEO und Weiterleitungen im Blick | Labrity',
+    title: 'Website Relaunch in Münster: SEO im Blick | Labrity',
     description:
-      'Website erneuern, ohne Sichtbarkeit unnötig zu riskieren: Analyse, saubere 301-Weiterleitungen und ein strukturiertes Vorgehen beim Relaunch.',
+      'Website Relaunch in Münster ohne unnötiges Risiko für Ihre Sichtbarkeit: Analyse, saubere 301-Weiterleitungen und ein strukturiertes Vorgehen.',
   },
   en: {
-    title: 'Website Relaunch with SEO and Redirects in Mind | Labrity',
+    title: 'Website Relaunch in Münster, SEO in Mind | Labrity',
     description:
-      'Renew your website without needless risk to your visibility: analysis, clean 301 redirects and a structured process for your relaunch.',
+      'Website relaunch in Münster without needless risk to your visibility: analysis, clean 301 redirects and a structured process.',
   },
   ru: {
-    title: 'Обновление сайта с учётом SEO и редиректов | Labrity',
+    title: 'Обновление сайта в Мюнстере с учётом SEO | Labrity',
     description:
-      'Обновите сайт без лишнего риска для видимости: анализ текущего сайта, аккуратные 301-редиректы и структурный процесс обновления.',
+      'Обновление сайта в Мюнстере без лишнего риска для видимости: анализ, аккуратные 301-редиректы и структурный процесс.',
   },
   ua: {
-    title: 'Оновлення сайту з урахуванням SEO та редиректів | Labrity',
+    title: 'Оновлення сайту в Мюнстері з урахуванням SEO | Labrity',
     description:
-      'Оновіть сайт без зайвого ризику для видимості: аналіз поточного сайту, акуратні 301-редиректи та структурований процес оновлення.',
+      'Оновлення сайту в Мюнстері без зайвого ризику для видимості: аналіз, акуратні 301-редиректи та структурований процес.',
   },
 };
 
