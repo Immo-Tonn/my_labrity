@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import {
   type MotionValue,
@@ -42,9 +42,11 @@ function useDrift(scrollY: MotionValue<string>, idle: MotionValue<number>) {
 function Card({
   project,
   hidden,
+  eager,
 }: {
   project: GalleryProject;
   hidden?: boolean;
+  eager?: boolean;
 }) {
   const dark = project.image.includes('immo-tonn');
 
@@ -63,6 +65,7 @@ function Card({
         src={project.image}
         alt={hidden ? '' : `${project.title} Website Projekt`}
         fill
+        loading={eager ? 'eager' : 'lazy'}
         sizes="(max-width: 768px) 50vw, 22vw"
         className={`transition duration-500 group-hover:scale-[1.03] ${
           dark ? 'object-contain' : 'object-cover object-top'
@@ -84,6 +87,26 @@ export default function ParallaxProjectsGallery({
 }: Props) {
   const containerRef = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
+  const [preload, setPreload] = useState(false);
+
+  // Native lazy loading fires too late for cards parked outside the 3D frame,
+  // so load them all once the section is about a screen away.
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setPreload(true);
+        observer.disconnect();
+      },
+      { rootMargin: '100% 0px' },
+    );
+    observer.observe(el);
+
+    return () => observer.disconnect();
+  }, [reduce]);
 
   const columns = useMemo(() => {
     // Every column gets the same number of cards (the last slots wrap around
@@ -223,6 +246,7 @@ export default function ParallaxProjectsGallery({
                     <Card
                       key={`${c}-${i}`}
                       project={project}
+                      eager={preload}
                       hidden={i >= col.length / 2}
                     />
                   ))}
