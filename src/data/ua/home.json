@@ -22,8 +22,8 @@
     "steps": ["Тип проєкту", "Обсяг", "Рекомендація"]
   },
   "featuredProjects": {
-    "kicker": "Обрані проєкти",
-    "title": "Сайти, які викликають довіру.",
+    "kicker": "Портфоліо та приклади робіт",
+    "title": "Портфоліо: створення сайтів",
     "scrollLabel": "Скрол",
     "button": "Дивитися портфоліо",
     "projectButton": "Дивитися портфоліо",
@@ -164,6 +164,8 @@
     "projectLabel": "Вебсайт проєкт",
     "conceptLabel": "Концептуальний проєкт",
     "projectButton": "Дивитися проєкт",
+    "catalogKicker": "Каталог",
+    "catalogTitle": "Усі проєкти докладно",
     "projectTags": ["SEO READY", "AI ОПТИМІЗОВАНО", "RESPONSIVE"],
     "categories": {
       "NØFORM": "Мода та streetwear",

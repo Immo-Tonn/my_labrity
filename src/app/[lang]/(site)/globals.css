@@ -762,3 +762,49 @@ select:focus-visible,
 .swiss .sw-ink [class*='text-black/20']:not(svg) {
   color: rgba(247, 247, 245, 0.5);
 }
+
+/* Header over a dark block: light type, dark glass; over a light block the
+   default (light bar, dark type) applies. Header.tsx sets data-tone. */
+header[data-tone] {
+  transition:
+    transform 0.3s ease,
+    background-color 0.35s ease,
+    border-color 0.35s ease;
+}
+
+header[data-tone='dark'] {
+  background-color: rgba(17, 17, 17, 0.82) !important;
+  border-color: rgba(247, 247, 245, 0.22) !important;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+header[data-tone='dark'] .hdr-nav a {
+  color: rgba(247, 247, 245, 0.78) !important;
+}
+
+header[data-tone='dark'] .hdr-nav a:is(:hover, :focus-visible, [aria-current]) {
+  color: #f7f7f5 !important;
+}
+
+header[data-tone='dark'] button[aria-label='Change language'],
+header[data-tone='dark'] button[aria-label='Change language'] span {
+  color: #f7f7f5 !important;
+  border-color: rgba(247, 247, 245, 0.4);
+}
+
+header[data-tone='dark'] button[aria-label='Change language'] span.h-3 {
+  background-color: rgba(247, 247, 245, 0.3) !important;
+}
+
+header[data-tone='dark'] button[aria-label='Change language']:hover {
+  background-color: #f7f7f5;
+}
+
+header[data-tone='dark'] button[aria-label='Change language']:hover span {
+  color: #111111 !important;
+}
+
+header[data-tone='dark'] button[aria-haspopup='dialog'] svg path {
+  fill: #f7f7f5;
+}

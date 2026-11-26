@@ -61,11 +61,13 @@ export default async function Home({ params }: { params: PageParams }) {
         (item: {
           title: string;
           image?: string;
+          href?: string;
           kind?: 'client' | 'concept';
         }) => ({
           title: item.title,
           category: homeData.portfolio.categories[item.title] ?? '',
           image: item.image ?? '',
+          href: item.href,
           kind: item.kind,
         }),
       ),

@@ -7,6 +7,7 @@ import { BackgroundVideo } from '@/components/common/BackgroundVideo';
 import { InnerPhoto } from '@/components/common/InnerPhoto';
 
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
+import ParallaxProjectsGallery from '@/components/ui/ParallaxProjectsGallery';
 
 import styles from './PortfolioPage.module.css';
 
@@ -46,6 +47,8 @@ export type PortfolioData = {
   projectLabel: string;
   conceptLabel: string;
   projectButton: string;
+  catalogKicker: string;
+  catalogTitle: string;
   projectTags: string[];
   categories: Record<string, string>;
   blackSection: BlackSection;
@@ -80,7 +83,7 @@ export default function PortfolioPageClient({
     // these transform/opacity animations for visitors with
     // prefers-reduced-motion enabled, and leaves everyone else unchanged.
     <MotionConfig reducedMotion="user">
-      <main className="swiss min-h-screen overflow-hidden bg-[#F7F7F5]/65 text-black">
+      <main className="swiss min-h-screen overflow-x-clip bg-[#F7F7F5]/65 text-black">
         {/* STAGE — one video stays fixed behind the compact intro and the
             project gallery, so the screenshots sit on the moving background
             right away. */}
@@ -96,7 +99,9 @@ export default function PortfolioPageClient({
               playLabel={video.playLabel}
               className="h-full w-full border-0"
               overlayClassName="bg-[#111111]/45 [background-image:linear-gradient(to_bottom,rgba(17,17,17,0.6),rgba(17,17,17,0.2)_40%,rgba(17,17,17,0.5))]"
-              controlClassName="right-5 top-24 md:right-8 md:top-28"
+              floatingControl
+              playbackRate={0.55}
+              controlClassName="right-5 top-24 !h-5 !w-5 md:right-8 md:top-28 [&_svg]:!h-[10px] [&_svg]:!w-[10px]"
             />
           </div>
 
@@ -154,104 +159,109 @@ export default function PortfolioPageClient({
             </div>
           </section>
 
-          {/* PROJECTS — gallery on the video */}
-          <section className="relative mx-auto max-w-[1700px] px-5 pb-20 pt-10 md:px-8 md:pb-28 md:pt-14">
-            <div className={styles.gallery}>
-              {content.items.map((item, index) => {
-                const delay = (index % 3) * 0.06;
+          {/* SHOWCASE — scroll-driven 3D gallery of the same projects */}
+          <ParallaxProjectsGallery
+            title={content.kicker}
+            showTitle={false}
+            scrollLabel="Scroll"
+            projects={content.items
+              .filter(item => item.image)
+              .map(item => ({
+                title: item.title,
+                category: content.categories[item.title] ?? '',
+                image: item.image as string,
+                href: item.href,
+              }))}
+          />
 
-                return (
-                  <motion.article
-                    key={`${item.title}-${index}`}
-                    {...reveal(0, 28, delay)}
-                    className={`group font-montserrat ${styles.gcard}`}
+          {/* CATALOG — compact list with descriptions (the gallery above is
+              the showcase, this is the reference) */}
+          <section className="relative mx-auto max-w-[1700px] px-5 pb-20 pt-16 md:px-8 md:pb-28 md:pt-24">
+            <motion.div {...reveal(0, 24)} className="mb-8 md:mb-12">
+              <p className="mb-4 font-montserrat text-[12px] font-semibold uppercase tracking-[0.34em] text-[#F7F7F5]/80">
+                {content.catalogKicker}
+              </p>
+              <h2 className="font-tenor text-[34px] leading-[1.02] tracking-[-0.035em] text-[#F7F7F5] md:text-[56px]">
+                {content.catalogTitle}
+              </h2>
+            </motion.div>
+
+            <div className={styles.catalog}>
+              {content.items.map((item, index) => (
+                <motion.article
+                  key={`${item.title}-${index}`}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false, amount: 0.35 }}
+                  transition={{ duration: 1.1, ease: EASE }}
+                  className={`group font-montserrat ${styles.crow}`}
+                >
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${content.projectButton}: ${item.title}`}
+                    className={styles.cthumb}
                   >
+                    {item.image ? (
+                      <Image
+                        src={item.image}
+                        alt={`${item.title} Premium Website Projekt`}
+                        fill
+                        sizes="(min-width: 768px) 200px, 96px"
+                        className={styles.cimg}
+                      />
+                    ) : (
+                      <span className="absolute inset-0 flex items-center justify-center text-[9px] uppercase tracking-[0.2em] text-neutral-500">
+                        Coming Soon
+                      </span>
+                    )}
+                  </a>
+
+                  <div className={styles.cmain}>
+                    <p className={styles.gmeta}>
+                      <span>{String(index + 1).padStart(2, '0')}</span>
+                      <span aria-hidden="true" className={styles.gdot} />
+                      <span>
+                        {content.categories[item.title] || content.projectLabel}
+                      </span>
+                      {item.kind === 'concept' && (
+                        <span className={styles.gconcept}>
+                          {content.conceptLabel}
+                        </span>
+                      )}
+                    </p>
+
+                    <h3 className="mt-2 font-tenor text-[24px] leading-[1.05] tracking-[-0.03em] md:text-[28px]">
+                      {item.title}
+                    </h3>
+
+                    <p className={styles.cdesc}>{item.description}</p>
+                  </div>
+
+                  <div className={styles.cactions}>
                     <a
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`${content.projectButton}: ${item.title}`}
-                      className={styles.gshot}
+                      className={styles.open}
                     >
-                      {item.image ? (
-                        <Image
-                          src={item.image}
-                          alt={`${item.title} Premium Website Projekt`}
-                          fill
-                          priority={index < 3}
-                          sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-                          className={styles.gimg}
-                        />
-                      ) : (
-                        <span className="absolute inset-0 flex items-center justify-center text-xs uppercase tracking-[0.32em] text-neutral-500">
-                          Coming Soon
-                        </span>
-                      )}
-                      <span aria-hidden="true" className={styles.garrow}>
-                        <svg
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="1.6"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M7 17L17 7M17 7H8M17 7V16"
-                          />
-                        </svg>
-                      </span>
+                      {content.projectButton}
+                      <span aria-hidden="true" className={styles.openLine} />
                     </a>
 
-                    <div className={styles.gbody}>
-                      <p className={styles.gmeta}>
-                        <span>{String(index + 1).padStart(2, '0')}</span>
-                        <span aria-hidden="true" className={styles.gdot} />
-                        <span>
-                          {content.categories[item.title] ||
-                            content.projectLabel}
-                        </span>
-                        {item.kind === 'concept' && (
-                          <span className={styles.gconcept}>
-                            {content.conceptLabel}
-                          </span>
-                        )}
-                      </p>
-
-                      <h2 className="mt-3 font-tenor text-[28px] leading-[1.02] tracking-[-0.035em] md:text-[32px]">
-                        {item.title}
-                      </h2>
-
-                      <p className={styles.gdesc}>{item.description}</p>
-
-                      <div className={styles.gfoot}>
-                        <a
-                          href={item.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={styles.open}
-                        >
-                          {content.projectButton}
-                          <span
-                            aria-hidden="true"
-                            className={styles.openLine}
-                          />
-                        </a>
-
-                        {item.detailHref && item.detailLabel && (
-                          <LocalizedLink
-                            href={item.detailHref}
-                            className={styles.detail}
-                          >
-                            {item.detailLabel}
-                            <span aria-hidden="true">→</span>
-                          </LocalizedLink>
-                        )}
-                      </div>
-                    </div>
-                  </motion.article>
-                );
-              })}
+                    {item.detailHref && item.detailLabel && (
+                      <LocalizedLink
+                        href={item.detailHref}
+                        className={styles.detail}
+                      >
+                        {item.detailLabel}
+                        <span aria-hidden="true">→</span>
+                      </LocalizedLink>
+                    )}
+                  </div>
+                </motion.article>
+              ))}
             </div>
           </section>
         </div>

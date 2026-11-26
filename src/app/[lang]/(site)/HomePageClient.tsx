@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import Image from 'next/image';
+import { CurvedLensCarousel } from '@/components/ui/CurvedLensCarousel';
 import { ArrowRight, ArrowUpRight, Plus } from 'lucide-react';
 
 import SeasonalSnow from '@/components/SeasonalSnow';
@@ -10,7 +11,7 @@ import { useQuiz } from '@/components/quiz';
 import { Preloader } from '@/components/ui';
 import { LocalizedLink } from '@/components/ui/LocalizedLink';
 import { Accordion } from '@/components/ui/Accordion';
-import HomeHero from './HomeHero';
+import HomeHelixHero from './HomeHelixHero';
 import s from './home.module.css';
 
 type StatItem = {
@@ -21,6 +22,7 @@ type StatItem = {
 
 type ProjectItem = {
   title: string;
+  image: string;
   description: string;
   imageVariant: 'first' | 'second';
   href: string;
@@ -31,6 +33,7 @@ type FeaturedProjectItem = {
   title: string;
   category: string;
   image: string;
+  href?: string;
   kind?: 'client' | 'concept';
 };
 
@@ -146,6 +149,7 @@ export type HomeData = {
     description: string;
     button: string;
     conceptLabel: string;
+    projectButton: string;
     items: ProjectItem[];
   };
   cta: {
@@ -333,6 +337,33 @@ function StatsCounters({ items }: { items: StatItem[] }) {
 }
 
 // Numbered section tag: red square + number + hairline + kicker.
+// Projects kept in the portfolio but not shown in the home hero/carousel.
+const HOME_HIDDEN = new Set(['/images/projects/privateD.webp']);
+
+const MOBILE_SHOTS = new Set([
+  'Granat.webp',
+  'apartament-demo.webp',
+  'auto-detailing.webp',
+  'beauty-salon-landing.webp',
+  'beautytime.webp',
+  'billyard.webp',
+  'hausarztpraxis-weber.webp',
+  'immo-tonn-hero.webp',
+  'lash-studio-demo.webp',
+  'logoped.webp',
+  'massage.webp',
+  'noform.webp',
+  'pizza-doner.webp',
+  'pizzeria.webp',
+  'privateD.webp',
+  'premium-consulting.webp',
+  'relax-massage.webp',
+  'seniorenbegleitung.webp',
+  'techfix.webp',
+  'tlsg.webp',
+  'werk.webp',
+]);
+
 function Tag({
   index,
   children,
@@ -522,13 +553,16 @@ export default function HomePageClient({
       >
         <div className="px-2 pb-2 pt-[77px] md:px-3 md:pb-3 md:pt-[83px] xl:pt-[73px]">
           {/* HERO */}
-          <HomeHero
+          <HomeHelixHero
             hero={content.hero}
-            projects={content.featuredProjects.items}
+            projects={content.portfolio.items.filter(
+              p => !HOME_HIDDEN.has(p.image),
+            )}
+            scrollLabel={content.featuredProjects.scrollLabel}
           />
 
           {/* 01 — FEATURED PROJECTS */}
-          <section className="-mt-px border border-[#111]">
+          <section className="relative z-10 -mt-px border border-[#111] bg-[#F7F7F5]">
             <div className="grid border-b border-[#111] lg:grid-cols-12">
               <div className="flex flex-col justify-between gap-8 border-b border-[#111] p-6 md:p-8 lg:col-span-3 lg:border-b-0 lg:border-r">
                 <div {...rv()} className={s.rv}>
@@ -552,107 +586,58 @@ export default function HomePageClient({
                 </div>
               </div>
 
-              <div className="p-6 md:p-10 lg:col-span-9 xl:p-14">
+              <div className="p-6 md:p-8 lg:col-span-9 xl:p-10">
                 <h2
                   {...rv(0.05)}
-                  className={`${s.rv} max-w-[920px] font-montserrat text-[34px] font-semibold leading-[1.02] tracking-[-0.035em] md:text-[56px] xl:text-[76px]`}
+                  className={`${s.rv} max-w-[920px] font-montserrat text-[28px] font-semibold leading-[1.02] tracking-[-0.035em] md:text-[40px] xl:text-[52px]`}
                 >
                   {content.featuredProjects.title}
                 </h2>
               </div>
             </div>
 
-            <div
-              role="region"
-              data-carousel
-              aria-label={content.featuredProjects.title}
-              tabIndex={0}
-              className="flex snap-x snap-mandatory divide-x divide-[#111] overflow-x-auto scroll-smooth"
-            >
-              {content.featuredProjects.items.map((project, index) => (
-                <LocalizedLink
-                  key={project.title}
-                  href="/portfolio"
-                  className="group flex w-[78vw] max-w-[360px] shrink-0 snap-start flex-col md:w-[380px] md:max-w-none xl:w-[420px]"
+            <CurvedLensCarousel
+              label={content.featuredProjects.kicker}
+              prevLabel="←"
+              nextLabel="→"
+              openLabel={title =>
+                `${content.portfolio.projectButton}: ${title}`
+              }
+              slides={content.featuredProjects.items
+                .filter(project => !HOME_HIDDEN.has(project.image))
+                .map((project, i) => {
+                  const base = project.image.split('/').pop() ?? '';
+                  return {
+                    title: project.title,
+                    kicker: `${String(i + 1).padStart(2, '0')}`,
+                    href: project.href,
+                    alt: `${project.title} Website Projekt`,
+                    image: MOBILE_SHOTS.has(base)
+                      ? `/images/projects/mobile/${base}`
+                      : project.image,
+                  };
+                })}
+              footer={
+                <button
+                  type="button"
+                  onClick={openQuiz}
+                  className="group flex w-full flex-col gap-4 border-t border-white/15 bg-[#1c1c1c] p-6 text-left text-white transition-colors duration-500 hover:bg-[#FF3830] hover:text-[#111] md:flex-row md:items-center md:justify-between md:px-10"
                 >
-                  <div
-                    data-rv
-                    className={`${s.mask} relative aspect-[4/3] overflow-hidden border-b border-[#111] ${
-                      project.image.includes('immo-tonn')
-                        ? 'bg-[#101326]'
-                        : 'bg-[#EEEEEB]'
-                    }`}
-                  >
-                    <div className={`${s.zoom} absolute inset-0`}>
-                      <Image
-                        src={project.image}
-                        alt={`${project.title} Website Projekt`}
-                        fill
-                        sizes="(max-width: 480px) 78vw, (max-width: 1280px) 380px, 420px"
-                        className={`transition duration-700 ease-out group-hover:scale-[1.05] ${
-                          project.image.includes('immo-tonn')
-                            ? 'object-contain object-center'
-                            : 'object-cover object-top'
-                        }`}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="flex flex-1 flex-col p-5 transition-colors duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:bg-[#111] group-hover:text-white group-focus-visible:bg-[#111] group-focus-visible:text-white md:p-6">
-                    <p className="flex items-center justify-between font-montserrat text-[11px] uppercase tracking-[0.16em] text-neutral-600 transition-colors duration-300 group-hover:text-white/70 group-focus-visible:text-white/70">
-                      <span>{String(index + 1).padStart(2, '0')}</span>
-                      <span>{project.category}</span>
-                    </p>
-
-                    <h3 className="mt-8 font-montserrat text-[24px] font-semibold leading-[1.1] tracking-[-0.025em] md:text-[28px]">
-                      {project.title}
-                    </h3>
-
-                    {project.kind === 'concept' && (
-                      <p className="mt-3 inline-block w-fit border border-[#111]/50 px-2 py-1 font-montserrat text-[9px] uppercase tracking-[0.2em] text-neutral-600 transition-colors duration-300 group-hover:border-white/50 group-hover:text-white/70">
-                        {content.portfolio.conceptLabel}
-                      </p>
-                    )}
-
-                    <span className="mt-auto flex items-center gap-3 pt-8 font-montserrat text-[12px] font-medium text-[#111] transition-colors duration-300 group-hover:text-[#FF3830] group-focus-visible:text-[#FF3830]">
-                      {content.featuredProjects.projectButton}
-                      <ArrowUpRight
-                        aria-hidden="true"
-                        size={15}
-                        strokeWidth={1.6}
-                        className={`${arrowCls} group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#FF3830]`}
-                      />
+                  <span className="flex items-center gap-4">
+                    <span
+                      aria-hidden="true"
+                      className="block h-4 w-4 shrink-0 bg-[#FF3830] transition-colors duration-500 group-hover:bg-[#111]"
+                    />
+                    <span>
+                      <span className="block font-montserrat text-[11px] uppercase tracking-[0.22em] opacity-70">
+                        {content.featuredProjects.ctaKicker}
+                      </span>
+                      <span className="mt-1 block font-montserrat text-[20px] font-semibold leading-[1.1] tracking-[-0.03em] md:text-[24px]">
+                        {content.featuredProjects.ctaTitle}
+                      </span>
                     </span>
-                  </div>
-                </LocalizedLink>
-              ))}
-
-              <button
-                type="button"
-                onClick={openQuiz}
-                className="group flex w-[78vw] max-w-[360px] shrink-0 snap-start flex-col justify-between bg-[#111] p-6 text-left text-white transition-colors duration-500 hover:bg-[#FF3830] hover:text-[#111] md:w-[380px] md:max-w-none md:p-8 xl:w-[420px]"
-              >
-                <div>
-                  <span
-                    aria-hidden="true"
-                    className="block h-4 w-4 bg-[#FF3830] transition-colors duration-500 group-hover:bg-[#111]"
-                  />
-
-                  <p className="mt-8 font-montserrat text-[11px] uppercase tracking-[0.22em] opacity-70">
-                    {content.featuredProjects.ctaKicker}
-                  </p>
-
-                  <h3 className="mt-5 max-w-[320px] font-montserrat text-[28px] font-semibold leading-[1.08] tracking-[-0.03em] md:text-[34px]">
-                    {content.featuredProjects.ctaTitle}
-                  </h3>
-                </div>
-
-                <div className="mt-10">
-                  <p className="max-w-[320px] font-montserrat text-[14px] leading-7 opacity-80">
-                    {content.featuredProjects.ctaDescription}
-                  </p>
-
-                  <span className="mt-8 flex items-center gap-3 font-montserrat text-[13px] font-medium">
+                  </span>
+                  <span className="flex items-center gap-3 font-montserrat text-[13px] font-medium">
                     {content.featuredProjects.ctaButton}
                     <ArrowUpRight
                       aria-hidden="true"
@@ -661,13 +646,13 @@ export default function HomePageClient({
                       className={arrowCls}
                     />
                   </span>
-                </div>
-              </button>
-            </div>
+                </button>
+              }
+            />
           </section>
 
           {/* 02 — AUDIENCE */}
-          <section className="-mt-px grid border border-[#111] lg:grid-cols-12">
+          <section className="mt-6 grid border border-[#111] md:mt-8 lg:grid-cols-12 xl:mt-10">
             <div className="border-b border-[#111] p-6 md:p-10 lg:col-span-5 lg:border-b-0 lg:border-r xl:p-14">
               <div {...rv()} className={`${s.rv} lg:sticky lg:top-28`}>
                 <Tag index="02">{content.audience.kicker}</Tag>
@@ -713,7 +698,7 @@ export default function HomePageClient({
           </section>
 
           {/* 03 — PROJECT CALCULATOR */}
-          <section className="-mt-px grid border border-[#111] lg:grid-cols-12">
+          <section className="mt-6 grid border border-[#111] md:mt-8 lg:grid-cols-12 xl:mt-10">
             <div className="relative flex flex-col justify-between bg-[#111] p-6 text-white md:p-10 lg:col-span-7 xl:p-14">
               <div {...rv()} className={s.rv}>
                 <p className="flex items-center justify-between font-montserrat text-[22px] font-semibold uppercase tracking-[-0.01em]">
@@ -788,7 +773,7 @@ export default function HomePageClient({
           </section>
 
           {/* 04 — DIFFERENCES */}
-          <section className="-mt-px border border-[#111]">
+          <section className="mt-6 border border-[#111] md:mt-8 xl:mt-10">
             <div className="grid border-b border-[#111] lg:grid-cols-12">
               <div className="border-b border-[#111] p-6 md:p-8 lg:col-span-3 lg:border-b-0 lg:border-r">
                 <div {...rv()} className={s.rv}>
@@ -861,7 +846,7 @@ export default function HomePageClient({
           </section>
 
           {/* 05 — STATS */}
-          <section className="-mt-px border border-[#111] bg-[#111] text-white">
+          <section className="mt-6 border border-[#111] bg-[#111] text-white md:mt-8 xl:mt-10">
             <div className="grid border-b border-white/25 lg:grid-cols-12">
               <div className="p-6 md:p-10 lg:col-span-8 xl:p-14">
                 <div {...rv()} className={s.rv}>
@@ -891,7 +876,7 @@ export default function HomePageClient({
           </section>
 
           {/* 06 — PROCESS PREVIEW */}
-          <section className="-mt-px border border-[#111]">
+          <section className="mt-6 border border-[#111] md:mt-8 xl:mt-10">
             <div className="grid border-b border-[#111] lg:grid-cols-12">
               <div className="p-6 md:p-10 lg:col-span-8 xl:p-14">
                 <div {...rv()} className={s.rv}>
@@ -957,7 +942,7 @@ export default function HomePageClient({
           </section>
 
           {/* 07 — WEB APPS / CUSTOM SOFTWARE SHOWCASE */}
-          <section className="-mt-px border border-[#111] bg-[#111] text-white">
+          <section className="mt-6 border border-[#111] bg-[#111] text-white md:mt-8 xl:mt-10">
             <div className="grid lg:grid-cols-12">
               <div className="p-6 md:p-10 lg:col-span-7 xl:p-14">
                 <div {...rv()} className={s.rv}>
@@ -1116,7 +1101,7 @@ export default function HomePageClient({
           </section>
 
           {/* 08 — CTA */}
-          <section className="-mt-px grid border border-[#111] lg:grid-cols-12">
+          <section className="mt-6 grid border border-[#111] md:mt-8 lg:grid-cols-12 xl:mt-10">
             <div className="flex flex-col justify-between p-6 md:p-10 lg:col-span-7 xl:p-14">
               <div {...rv()} className={s.rv}>
                 <Tag index="08">{content.cta.kicker}</Tag>

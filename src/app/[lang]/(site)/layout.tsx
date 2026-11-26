@@ -7,6 +7,7 @@ import { Montserrat, Tenor_Sans } from 'next/font/google';
 
 import CookieConsent from '@/components/common/CookieConsent';
 // import SiteBackground from '@/components/common/SiteBackground';
+import NavProgress from '@/components/common/NavProgress';
 import SwissMotion from '@/components/common/SwissMotion';
 import QuizProvider from '@/components/quiz/QuizProvider';
 import { classnames } from '@/utils/classnames';
@@ -235,6 +236,7 @@ export default async function RootLayout({
           <CookieConsent />
 
           <SwissMotion />
+          <NavProgress />
 
           {/* Framer-motion blocks start at opacity 0 in the server HTML. */}
           <noscript>

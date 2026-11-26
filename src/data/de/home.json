@@ -22,8 +22,8 @@
     "steps": ["Projektart", "Umfang", "Empfehlung"]
   },
   "featuredProjects": {
-    "kicker": "Ausgewählte Projekte",
-    "title": "Websites, die Vertrauen schaffen.",
+    "kicker": "Referenzen & Portfolio",
+    "title": "Webdesign-Portfolio",
     "scrollLabel": "Scroll",
     "button": "Portfolio ansehen",
     "projectButton": "Portfolio ansehen",
@@ -141,6 +141,8 @@
     "projectLabel": "Website Project",
     "conceptLabel": "Konzeptprojekt",
     "projectButton": "Projekt ansehen",
+    "catalogKicker": "Katalog",
+    "catalogTitle": "Alle Projekte im Detail",
     "projectTags": ["SEO READY", "AI OPTIMIERT", "RESPONSIVE"],
     "categories": {
       "NØFORM": "Mode & Streetwear",

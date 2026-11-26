@@ -22,8 +22,8 @@
     "steps": ["Project type", "Scope", "Recommendation"]
   },
   "featuredProjects": {
-    "kicker": "Selected Projects",
-    "title": "Websites that build trust.",
+    "kicker": "Portfolio & Case Studies",
+    "title": "Web design portfolio",
     "scrollLabel": "Scroll",
     "button": "View portfolio",
     "projectButton": "View portfolio",
@@ -164,6 +164,8 @@
     "projectLabel": "Website Project",
     "conceptLabel": "Concept project",
     "projectButton": "View Project",
+    "catalogKicker": "Catalog",
+    "catalogTitle": "All projects in detail",
     "projectTags": ["SEO READY", "AI OPTIMIZED", "RESPONSIVE"],
     "categories": {
       "NØFORM": "Fashion & Streetwear",

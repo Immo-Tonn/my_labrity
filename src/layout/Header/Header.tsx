@@ -13,6 +13,48 @@ import type { SocialLink } from '@/components/ui/Socials/types';
 import { useLanguage } from '@/utils/LanguageContext';
 import { stripLocale, withLocale, type Language } from '@/utils/localizedPath';
 
+// Colour of whatever sits behind the header: first element under the point
+// with a visible background decides (alpha < .5 is looked through).
+const parseRgb = (value: string) => {
+  const m = value.match(/rgba?\(([^)]+)\)/);
+
+  if (!m) return null;
+
+  const parts = m[1]
+    .split(/[ ,/]+/)
+    .filter(Boolean)
+    .map(Number);
+
+  if (parts.length < 3 || parts.some(Number.isNaN)) return null;
+
+  return { r: parts[0], g: parts[1], b: parts[2], a: parts[3] ?? 1 };
+};
+
+const isDarkBehind = (header: HTMLElement) => {
+  const y = Math.min(window.innerHeight - 1, header.offsetHeight / 2);
+  const votes = [0.2, 0.5, 0.8].map(fx => {
+    const stack = document.elementsFromPoint(window.innerWidth * fx, y);
+
+    for (const el of stack) {
+      if (header.contains(el)) continue;
+      if (el instanceof HTMLVideoElement || el instanceof HTMLCanvasElement)
+        return true;
+      if (el instanceof HTMLElement && el.dataset.headerTone)
+        return el.dataset.headerTone === 'dark';
+
+      const c = parseRgb(getComputedStyle(el).backgroundColor);
+
+      if (c && c.a >= 0.5) {
+        return (0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b) / 255 < 0.45;
+      }
+    }
+
+    return false;
+  });
+
+  return votes.filter(Boolean).length >= 2;
+};
+
 type HeaderProps = {
   navLinks: NavLinkItem[];
   socials: SocialLink[];
@@ -63,6 +105,8 @@ export function Header({
   const [hideHeader, setHideHeader] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [darkBehind, setDarkBehind] = useState(false);
+  const headerRef = useRef<HTMLElement | null>(null);
 
   const lastScroll = useRef(0);
   const languageRef = useRef<HTMLDivElement | null>(null);
@@ -97,6 +141,30 @@ export function Header({
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // Switch header colours to match the block currently under it.
+  useEffect(() => {
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      if (headerRef.current) setDarkBehind(isDarkBehind(headerRef.current));
+    };
+    const schedule = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+
+    schedule();
+    const settle = window.setTimeout(schedule, 400);
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+
+    return () => {
+      window.clearTimeout(settle);
+      cancelAnimationFrame(raf);
+      window.removeEventListener('scroll', schedule);
+      window.removeEventListener('resize', schedule);
+    };
+  }, [pathname]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -154,6 +222,8 @@ export function Header({
 
   return (
     <header
+      ref={headerRef}
+      data-tone={darkBehind ? 'dark' : 'light'}
       className={classnames(
         'fixed inset-x-0 top-0 z-[50] transition-transform duration-300',
         hideHeader ? '-translate-y-full' : 'translate-y-0',
@@ -170,6 +240,7 @@ export function Header({
       <div className="2xl:gap-10 container relative flex items-center justify-between gap-4 xl:gap-6">
         <Logo
           path="header"
+          tone={darkBehind ? 'light' : 'dark'}
           onClick={() => setIsOpen(false)}
           className={classnames(
             'shrink-0',
@@ -198,18 +269,20 @@ export function Header({
             aria-label="Change language"
             aria-expanded={isLanguageOpen}
             className={classnames(
-              'flex items-center gap-2 px-3 py-2 text-black transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111] xl:px-4',
-              'border border-[#111]/40 hover:bg-[#111] hover:text-white [&_span]:transition-colors hover:[&_span]:text-white',
+              'group flex items-center gap-2 px-3 py-2 text-black transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111] xl:px-4',
+              'border border-[#111]/40 hover:bg-[#111] hover:text-white',
             )}
           >
-            <span className="hidden text-neutral-500 xl:inline">LANG</span>
+            <span className="hidden text-neutral-500 transition-colors group-hover:text-white xl:inline">
+              LANG
+            </span>
             <span className="hidden h-3 w-px bg-black/20 xl:block" />
-            <span className="font-semibold text-black">
+            <span className="font-semibold text-black transition-colors group-hover:text-white">
               {currentLanguage.short}
             </span>
             <span
               className={classnames(
-                'text-[10px] text-neutral-500 transition-transform duration-300',
+                'text-[10px] text-neutral-500 transition duration-300 group-hover:text-white',
                 isLanguageOpen ? 'rotate-180' : 'rotate-0',
               )}
             >

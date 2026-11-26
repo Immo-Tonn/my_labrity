@@ -22,8 +22,8 @@
     "steps": ["Тип проекта", "Объём", "Рекомендация"]
   },
   "featuredProjects": {
-    "kicker": "Избранные проекты",
-    "title": "Сайты, которые вызывают доверие.",
+    "kicker": "Портфолио и примеры работ",
+    "title": "Портфолио: создание сайтов",
     "scrollLabel": "Скролл",
     "button": "Смотреть портфолио",
     "projectButton": "Смотреть портфолио",
@@ -164,6 +164,8 @@
     "projectLabel": "Website Project",
     "conceptLabel": "Концептуальный проект",
     "projectButton": "Смотреть проект",
+    "catalogKicker": "Каталог",
+    "catalogTitle": "Все проекты подробно",
     "projectTags": ["SEO READY", "AI ОПТИМИЗАЦИЯ", "RESPONSIVE"],
     "categories": {
       "NØFORM": "Мода и streetwear",

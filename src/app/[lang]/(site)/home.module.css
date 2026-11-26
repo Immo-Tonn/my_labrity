@@ -388,3 +388,60 @@
     transition: none;
   }
 }
+
+/* ───────────── Featured projects: endless straight-card marquee ───────────── */
+
+.projectMarquee {
+  --gap: 14px;
+  --pad: 36px;
+  overflow: hidden;
+  padding: var(--pad) 0;
+  background: #111111;
+}
+
+@media (min-width: 768px) {
+  .projectMarquee {
+    --gap: 20px;
+    --pad: 56px;
+  }
+}
+
+.projectTrack {
+  display: flex;
+  width: max-content;
+  animation: projectMarquee 150s linear infinite;
+}
+
+.projectSet {
+  display: flex;
+  gap: var(--gap);
+  /* Trailing gap keeps both halves equal, so the -50% loop has no jump. */
+  padding-right: var(--gap);
+}
+
+/* Hover or keyboard focus stops the belt so a card can be clicked. */
+.projectMarquee:hover .projectTrack,
+.projectMarquee:focus-within .projectTrack {
+  animation-play-state: paused;
+}
+
+@keyframes projectMarquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Reduced motion: no belt, a normal sideways-scrolling row of the real set. */
+@media (prefers-reduced-motion: reduce) {
+  .projectMarquee {
+    overflow-x: auto;
+  }
+
+  .projectTrack {
+    animation: none;
+  }
+
+  .projectCopy {
+    display: none;
+  }
+}
